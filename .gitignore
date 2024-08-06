@@ -1,0 +1,62 @@
+# Ignorar archivos y directorios específicos de Visual Studio
+.vs/
+/bin/
+/obj/
+
+# Archivos específicos de usuario
+*.suo
+*.user
+*.sln.docstates
+
+# Resultados de compilación
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+*.exe
+*.pdb
+*.dll
+*.log
+
+# Archivos auto-generados por Visual Studio Code
+.vscode/
+
+# Cachés de archivos de imagen de Windows
+Thumbs.db
+ehthumbs.db
+
+# ReSharper
+_ReSharper*/
+
+# Rider
+.idea/
+
+# Archivos de salida de DotCover
+*.dotCover
+
+# Archivos generados por NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+
+# Carpetas de salida de Installshield
+[Ee]xpress/
+
+# Archivos generados por DocProject (generador de documentación)
+DocProject/buildhelp/
+
+# Archivos generados por TeamCity (herramienta de build)
+_TeamCity*
+
+# Archivos específicos de Xamarin
+*.apk
+*.ap_
+*.aab
+
+# Archivos generados por Unity3D
+/[Oo]bj/
+/[Bb]uild/
+/[Ll]ibrary/
+
+# Archivos y carpetas específicos de Rider
+.idea/
+*.csproj.user

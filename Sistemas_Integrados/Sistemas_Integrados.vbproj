@@ -1,0 +1,2618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9CAA79D8-211E-484A-9316-6DF81BD32F09}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sistemas_Integrados.My.MyApplication</StartupObject>
+    <RootNamespace>Sistemas_Integrados</RootNamespace>
+    <AssemblyName>Sistemas_Integrados</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\192.9.200.10\Programas\programas\vb2010\Sistemas_Integrados\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>2</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Sistemas Integrados</ProductName>
+    <PublisherName>Jefatura de Datos - IT</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>7.0.0.2</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Sistemas_Integrados.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Sistemas_Integrados.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>673A83D180EF354FFBF7BDF5F5E46EEC45F773F3</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Sistemas_Integrados_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>jt.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.AcroPDFLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\AxInterop.AcroPDFLib.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.ONLINECOMLib, Version=1.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\AxInterop.ONLINECOMLib.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Excel.4">
+      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.C1Excel.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Pdf.4">
+      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.C1Pdf.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Report.4">
+      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.C1Report.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.4">
+      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Chart.4">
+      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1Chart.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Command.4">
+      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1Command.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1FlexGrid.4">
+      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1FlexGrid.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1FlexGrid.Classic.4">
+      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1FlexGrid.Classic.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1FlexGrid.ImportExport.4">
+      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1FlexGrid.ImportExport.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Input.4">
+      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1Input.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Report.4">
+      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1Report.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1SuperTooltip.4">
+      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1SuperTooltip.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1menus">
+      <HintPath>..\..\..\Desktop\repos\sistemas_integrados\lib\C1menus.dll</HintPath>
+    </Reference>
+    <Reference Include="cnv, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Sistemas_Integrados\lib\cnv.dll</HintPath>
+    </Reference>
+    <Reference Include="Lib_SI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Lib_SI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abre_DB.vb" />
+    <Compile Include="Ancho.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asigna_rollos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asigna_rollos_Det.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asigna_rollos_Det_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asigna_rollos_Stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auditoria_cpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Balance_Cpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Balance_Cpo_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Balance_Tela_bc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Balance_Tela_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Balance_Tela_c1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Balance_Tela_c2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bal_Tela_Det_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bal_Tela_Det_c1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bal_tela_prod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bal_tela_prod1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bal_tela_prod_d.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bal_tela_prod_dd1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bal_tela_prod_s.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bal_tela_prod_s1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bal_tela_prod_sp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barras.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Barras.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Batch_cpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bill_of_materials.vb" />
+    <Compile Include="BOM_A.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM_Consulta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM_M.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM_R.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas03.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas04.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas05.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas10_T.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas66.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas05_I.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas10.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas11.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas22.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas25_e.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cajas_esp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cajas_scan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calculo_tela_necesaria.vb" />
+    <Compile Include="Carga_open.designer.vb">
+      <DependentUpon>Carga_open.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Carga_open.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Carga_open_c.designer.vb">
+      <DependentUpon>Carga_open_c.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Carga_open_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compo_autoriza_telas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumo_tela_cpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compo_ad_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContribucionLavanderia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cortes_Detalle_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cortes_T.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cpo_con2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_seccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Combo_color.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entradas_d.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM001_PickingList.Designer.vb">
+      <DependentUpon>FRM001_PickingList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM001_PickingList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ingresos_d.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_Cpo_47.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inv_proceso_kfc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inv_PT.designer.vb">
+      <DependentUpon>Inv_PT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inv_PT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inv_PT_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plan_costura_c1.designer.vb">
+      <DependentUpon>Plan_costura_c1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plan_costura_c1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plan_costura_proc.designer.vb">
+      <DependentUpon>Plan_costura_proc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plan_costura_proc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_47b.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_47b1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Corte_blank.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Serigra_plan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas12.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas20.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas21.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas25.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas30.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas31.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cajas_esp_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cajas_s.vb" />
+    <Compile Include="Cambia_fecha_fpo.designer.vb">
+      <DependentUpon>Cambia_fecha_fpo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cambia_fecha_fpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Carga_space.designer.vb">
+      <DependentUpon>Carga_space.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Carga_space.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas.vb" />
+    <Compile Include="Carga_upc_tnf.designer.vb">
+      <DependentUpon>Carga_upc_tnf.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Carga_upc_tnf.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMT.designer.vb">
+      <DependentUpon>CMT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CMT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMT_d.designer.vb">
+      <DependentUpon>CMT_d.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CMT_d.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMT_g.designer.vb">
+      <DependentUpon>CMT_g.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CMT_g.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMT_g1.designer.vb">
+      <DependentUpon>CMT_g1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CMT_g1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Codigo_color.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colores_tela.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Combo_tela.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compara_space.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compara_space_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compomentes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compo_autoriza.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compo_consulta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compo_consumo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compo_estilo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compo_estilo_color.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compo_estilo_consumo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compo_estilo_consumo_1.Designer.vb">
+      <DependentUpon>Compo_estilo_consumo_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compo_estilo_consumo_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_batch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consulta_cli_est_col.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_Cli_est_col_n.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_codj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consulta_Cortes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_cortes_g.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consulta_Cortes_P.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consulta_fpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_ingresos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_materiales.Designer.vb">
+      <DependentUpon>Consulta_materiales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta_materiales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_Mov_stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_salidas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consulta_tela.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumo_Corte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumo_Est_col_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumo_tela.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumo_tela_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumo_tela_n.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consu_export.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contribucion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contribucion_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control_corte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cop_01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="corte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cortes_ad1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cortes_ad2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cortes_Detalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cortes_Diarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cortes_envios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cortes_no_e.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cortes_pro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cortes_proceso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cortes_split_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Corte_status.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Corte_status_m.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Corte_VIT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Costo_Cpo.Designer.vb">
+      <DependentUpon>Costo_Cpo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Costo_Cpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cpos_cliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cpo_con1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cpo_costo_t.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cpo_performance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cpo_performance_C.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cpo_performance_Cr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cpo_performance_P.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cpo_ver0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cpo_ver1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crea_fpo_01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crea_fpo_02.designer.vb">
+      <DependentUpon>Crea_fpo_02.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Crea_fpo_02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cumplimiento_5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Despacho.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Despacho_l.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Despach_Bod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detalle_cpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detalle_cpo1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dm_codigo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Embarques_costura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Embarque_corte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Embarque_cpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Embarque_resumen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empaque_d.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empaque_estilo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empaque_estilo_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empaque_s.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empaque_st.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entradas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estado_bi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estado_m.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estado_m1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estilos_Consulta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estilos_d_corte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estilos_d_corte_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estilos_plan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM_VIT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cambia_clave.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fpo_batch_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fpo_cat_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fpo_cierra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fpo_comparativo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fpo_confirmacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fpo_cpo.designer.vb">
+      <DependentUpon>Fpo_cpo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fpo_cpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HJ6300.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ht6300.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imprime_etiqueta_m.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingresa_foto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_manifiesto_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_Cli_est_col_n.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_manifiesto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_P_Cortadas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario_fis1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inv_telas01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inv_telas02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mae_tex.designer.vb">
+      <DependentUpon>Mae_tex.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mae_tex.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mae_tex_c.designer.vb">
+      <DependentUpon>Mae_tex_c.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mae_tex_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Matriz_tela0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prod_T01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prod_T02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prod_T03.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prod_T04.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prod_T05.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prod_T06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prod_T07.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt.vb" />
+    <Compile Include="Push01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Push02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Push03.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Push04.designer.vb">
+      <DependentUpon>Push04.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Push04.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Push05.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reimprime_etiqueta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Re_ubica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario_tela_res.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lb6300.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_51.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_5E.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_6.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_A.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_PR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_q.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_te.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lotes_cpo.designer.vb">
+      <DependentUpon>Lotes_cpo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Lotes_cpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestro_serigrafia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cortes_pendientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plan_costura_c3.designer.vb">
+      <DependentUpon>Plan_costura_c3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plan_costura_c3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plan_costura_c2.designer.vb">
+      <DependentUpon>Plan_costura_c2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plan_costura_c2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plan_serigra.designer.vb">
+      <DependentUpon>Plan_serigra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plan_serigra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plan_telas.designer.vb">
+      <DependentUpon>Plan_telas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plan_telas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prod_s_embarque.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prod_s_prendas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Req_Mater.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plan_telas_1.designer.vb">
+      <DependentUpon>Plan_telas_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plan_telas_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salidas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salidas_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones_vac2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sel_combo_Tela.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ship_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ship_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabla_cod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toma_inventar1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tonalidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Traslado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Traslado_tela_R.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario_cliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vales_n.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas01_d.Designer.vb">
+      <DependentUpon>Ventas01_d.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas01_d.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas02_d.designer.vb">
+      <DependentUpon>Ventas02_d.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas02_d.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas_g1.designer.vb">
+      <DependentUpon>Ventas_g1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas_g1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas_g2.designer.vb">
+      <DependentUpon>Ventas_g2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas_g2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas_p1.Designer.vb">
+      <DependentUpon>Ventas_p1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas_p1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fpo_batch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fpo_fecha.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPO_n.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hoja.Designer.vb">
+      <DependentUpon>hoja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="hoja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoja_resumen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_codj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_codjm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_codt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_Cpo_N2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_texpasa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario_fis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario_fis2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lapdip.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_2p.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mae_hil.designer.vb">
+      <DependentUpon>Mae_hil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mae_hil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mae_tel.Designer.vb">
+      <DependentUpon>Mae_tel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mae_tel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movtos_batch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="onlinecomlib.vb" />
+    <Compile Include="Pedidos_cpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plan_costura_con.designer.vb">
+      <DependentUpon>Plan_costura_con.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plan_costura_con.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producido_cob2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producido_cob3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prod_diaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prod_diaria_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prod_diaria_e.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pt6300.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recibe_Excel.Designer.vb">
+      <DependentUpon>Recibe_Excel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Recibe_Excel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Requsicion_Tela.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="spec.designer.vb">
+      <DependentUpon>spec.vb</DependentUpon>
+    </Compile>
+    <Compile Include="spec.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingresa_spec.designer.vb">
+      <DependentUpon>Ingresa_spec.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ingresa_spec.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fpo_cat01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fpo_cli01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPO_consul1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPO_consul2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPO_consul3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPO_consul5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estilos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoja_resumen2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingresos_stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_Cli_est_col.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_Cpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_Cpo_co.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_Cpo_N1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_Cpo_N2_o.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario_cuellos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario_cuellos_r.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario_Stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario_tela.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario_tela_H.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario_tela_r.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario_valor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inv_proceso_b.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inv_proceso_r.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado_ingresos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado_salidas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_h.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_pr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_s.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_T.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_empaque_t1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestro_asuetos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestro_metas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PA_SE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PA_SE1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PA_SE_0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PA_SE_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plan_costura_c.designer.vb">
+      <DependentUpon>Plan_costura_c.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plan_costura_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Por_Cortar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Precio_estilo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producido_cob5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prod_sec.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prod_sem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestro_secciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empresa.vb" />
+    <Compile Include="Estado_cpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterRow.vb" />
+    <Compile Include="FPO_consul0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fpo_consul4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Plan_costura.Designer.vb">
+      <DependentUpon>Plan_costura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plan_costura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prendas_costura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prendas_exportac.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prendas_proc_ad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prendas_x_Cortar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resumen_Tela.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rutas_c.Designer.vb">
+      <DependentUpon>Rutas_c.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rutas_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ruta_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salidas_stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secciones_vac.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sel_codigo_Tela.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tablas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabla_cod_c.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_asigna.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_c_oc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_diaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_necesa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_oc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_oc_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_pedida.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toma_inventar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toma_inventar0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toma_invr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vales_c1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vales_c2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vales_c3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vales_c4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vales_e.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas_p2.designer.vb">
+      <DependentUpon>Ventas_p2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas_p2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer_re.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Version.designer.vb">
+      <DependentUpon>Version.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Version.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wip0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wip1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wip2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wip3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZoomCell.vb">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Ancho.resx">
+      <DependentUpon>Ancho.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asigna_rollos.resx">
+      <DependentUpon>Asigna_rollos.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asigna_rollos_Det.resx">
+      <DependentUpon>Asigna_rollos_Det.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asigna_rollos_Det_c.resx">
+      <DependentUpon>Asigna_rollos_Det_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asigna_rollos_Stock.resx">
+      <DependentUpon>Asigna_rollos_Stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auditoria_cpo.resx">
+      <DependentUpon>Auditoria_cpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Balance_Cpo.resx">
+      <DependentUpon>Balance_Cpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Balance_Cpo_c.resx">
+      <DependentUpon>Balance_Cpo_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Balance_Tela_bc.resx">
+      <DependentUpon>Balance_Tela_bc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Balance_Tela_c.resx">
+      <DependentUpon>Balance_Tela_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Balance_Tela_c1.resx">
+      <DependentUpon>Balance_Tela_c1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Balance_Tela_c2.resx">
+      <DependentUpon>Balance_Tela_c2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bal_Tela_Det_c.resx">
+      <DependentUpon>Bal_Tela_Det_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bal_Tela_Det_c1.resx">
+      <DependentUpon>Bal_Tela_Det_c1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bal_tela_prod.resx">
+      <DependentUpon>Bal_tela_prod.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bal_tela_prod1.resx">
+      <DependentUpon>Bal_tela_prod1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bal_tela_prod_d.resx">
+      <DependentUpon>Bal_tela_prod_d.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bal_tela_prod_dd1.resx">
+      <DependentUpon>Bal_tela_prod_dd1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bal_tela_prod_s.resx">
+      <DependentUpon>Bal_tela_prod_s.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bal_tela_prod_s1.resx">
+      <DependentUpon>Bal_tela_prod_s1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bal_tela_prod_sp.resx">
+      <DependentUpon>Bal_tela_prod_sp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barras.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Barras.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Batch_cpo.resx">
+      <DependentUpon>Batch_cpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM_A.resx">
+      <DependentUpon>BOM_A.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM_c.resx">
+      <DependentUpon>BOM_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM_Consulta.resx">
+      <DependentUpon>BOM_Consulta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM_M.resx">
+      <DependentUpon>BOM_M.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM_R.resx">
+      <DependentUpon>BOM_R.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas01.resx">
+      <DependentUpon>Cajas01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas02.resx">
+      <DependentUpon>Cajas02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas03.resx">
+      <DependentUpon>Cajas03.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas04.resx">
+      <DependentUpon>Cajas04.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas05.resx">
+      <DependentUpon>Cajas05.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas10_T.resx">
+      <DependentUpon>Cajas10_T.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas66.resx">
+      <DependentUpon>Cajas66.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas05_I.resx">
+      <DependentUpon>Cajas05_I.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas10.resx">
+      <DependentUpon>Cajas10.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas11.resx">
+      <DependentUpon>Cajas11.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas22.resx">
+      <DependentUpon>Cajas22.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas25_e.resx">
+      <DependentUpon>Cajas25_e.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cajas_esp.resx">
+      <DependentUpon>cajas_esp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cajas_scan.resx">
+      <DependentUpon>cajas_scan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carga_open.resx">
+      <DependentUpon>Carga_open.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carga_open_c.resx">
+      <DependentUpon>Carga_open_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compo_autoriza_telas.resx">
+      <DependentUpon>Compo_autoriza_telas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumo_tela_cpo.resx">
+      <DependentUpon>Consumo_tela_cpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compo_ad_c.resx">
+      <DependentUpon>Compo_ad_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContribucionLavanderia.resx">
+      <DependentUpon>ContribucionLavanderia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cortes_Detalle_1.resx">
+      <DependentUpon>Cortes_Detalle_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cortes_T.resx">
+      <DependentUpon>Cortes_T.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cpo_con2.resx">
+      <DependentUpon>Cpo_con2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_seccion.resx">
+      <DependentUpon>C_seccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Combo_color.resx">
+      <DependentUpon>Combo_color.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entradas_d.resx">
+      <DependentUpon>Entradas_d.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM001_PickingList.resx">
+      <DependentUpon>FRM001_PickingList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ingresos_d.resx">
+      <DependentUpon>ingresos_d.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_Cpo_47.resx">
+      <DependentUpon>Ingreso_Cpo_47.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inv_proceso_kfc.resx">
+      <DependentUpon>Inv_proceso_kfc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inv_PT.resx">
+      <DependentUpon>Inv_PT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inv_PT_1.resx">
+      <DependentUpon>Inv_PT_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu.resx">
+      <DependentUpon>menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="Plan_costura_c1.resx">
+      <DependentUpon>Plan_costura_c1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plan_costura_proc.resx">
+      <DependentUpon>Plan_costura_proc.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_47b.resx">
+      <DependentUpon>Reporte_47b.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_47b1.resx">
+      <DependentUpon>Reporte_47b1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Corte_blank.resx">
+      <DependentUpon>Corte_blank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Serigra_plan.resx">
+      <DependentUpon>Serigra_plan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas12.resx">
+      <DependentUpon>Cajas12.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas20.resx">
+      <DependentUpon>Cajas20.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas21.resx">
+      <DependentUpon>Cajas21.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas25.resx">
+      <DependentUpon>Cajas25.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas30.resx">
+      <DependentUpon>Cajas30.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas31.resx">
+      <DependentUpon>Cajas31.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cajas_esp_c.resx">
+      <DependentUpon>cajas_esp_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cambia_fecha_fpo.resx">
+      <DependentUpon>Cambia_fecha_fpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carga_space.resx">
+      <DependentUpon>Carga_space.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carga_upc_tnf.resx">
+      <DependentUpon>Carga_upc_tnf.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes_c.resx">
+      <DependentUpon>Clientes_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMT.resx">
+      <DependentUpon>CMT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMT_d.resx">
+      <DependentUpon>CMT_d.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMT_g.resx">
+      <DependentUpon>CMT_g.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMT_g1.resx">
+      <DependentUpon>CMT_g1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Codigo_color.resx">
+      <DependentUpon>Codigo_color.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colores.resx">
+      <DependentUpon>Colores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colores_tela.resx">
+      <DependentUpon>Colores_tela.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Combo_tela.resx">
+      <DependentUpon>Combo_tela.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compara_space.resx">
+      <DependentUpon>Compara_space.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compara_space_1.resx">
+      <DependentUpon>Compara_space_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compomentes.resx">
+      <DependentUpon>Compomentes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compo_autoriza.resx">
+      <DependentUpon>Compo_autoriza.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compo_consulta.resx">
+      <DependentUpon>Compo_consulta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compo_consumo.resx">
+      <DependentUpon>Compo_consumo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compo_estilo.resx">
+      <DependentUpon>Compo_estilo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compo_estilo_color.resx">
+      <DependentUpon>Compo_estilo_color.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compo_estilo_consumo.resx">
+      <DependentUpon>Compo_estilo_consumo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compo_estilo_consumo_1.resx">
+      <DependentUpon>Compo_estilo_consumo_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_batch.resx">
+      <DependentUpon>Consulta_batch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consulta_cli_est_col.resx">
+      <DependentUpon>consulta_cli_est_col.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_Cli_est_col_n.resx">
+      <DependentUpon>Consulta_Cli_est_col_n.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_codj.resx">
+      <DependentUpon>Consulta_codj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consulta_Cortes.resx">
+      <DependentUpon>consulta_Cortes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_cortes_g.resx">
+      <DependentUpon>Consulta_cortes_g.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consulta_Cortes_P.resx">
+      <DependentUpon>consulta_Cortes_P.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consulta_fpo.resx">
+      <DependentUpon>consulta_fpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_ingresos.resx">
+      <DependentUpon>Consulta_ingresos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_materiales.resx">
+      <DependentUpon>Consulta_materiales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_Mov_stock.resx">
+      <DependentUpon>Consulta_Mov_stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_salidas.resx">
+      <DependentUpon>Consulta_salidas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consulta_tela.resx">
+      <DependentUpon>consulta_tela.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumo_Corte.resx">
+      <DependentUpon>Consumo_Corte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumo_Est_col_c.resx">
+      <DependentUpon>Consumo_Est_col_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumo_tela.resx">
+      <DependentUpon>Consumo_tela.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumo_tela_1.resx">
+      <DependentUpon>Consumo_tela_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumo_tela_n.resx">
+      <DependentUpon>Consumo_tela_n.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consu_export.resx">
+      <DependentUpon>Consu_export.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contribucion.resx">
+      <DependentUpon>Contribucion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contribucion_c.resx">
+      <DependentUpon>Contribucion_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control_corte.resx">
+      <DependentUpon>Control_corte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cop_01.resx">
+      <DependentUpon>Cop_01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="corte.resx">
+      <DependentUpon>corte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cortes_ad1.resx">
+      <DependentUpon>Cortes_ad1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cortes_ad2.resx">
+      <DependentUpon>Cortes_ad2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cortes_Detalle.resx">
+      <DependentUpon>Cortes_Detalle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cortes_Diarios.resx">
+      <DependentUpon>Cortes_Diarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cortes_envios.resx">
+      <DependentUpon>Cortes_envios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cortes_no_e.resx">
+      <DependentUpon>Cortes_no_e.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cortes_pro.resx">
+      <DependentUpon>Cortes_pro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cortes_proceso.resx">
+      <DependentUpon>Cortes_proceso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cortes_split_1.resx">
+      <DependentUpon>Cortes_split_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Corte_status.resx">
+      <DependentUpon>Corte_status.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Corte_status_m.resx">
+      <DependentUpon>Corte_status_m.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Corte_VIT.resx">
+      <DependentUpon>Corte_VIT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Costo_Cpo.resx">
+      <DependentUpon>Costo_Cpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cpos_cliente.resx">
+      <DependentUpon>Cpos_cliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cpo_con1.resx">
+      <DependentUpon>Cpo_con1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cpo_costo_t.resx">
+      <DependentUpon>Cpo_costo_t.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cpo_performance.resx">
+      <DependentUpon>Cpo_performance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cpo_performance_C.resx">
+      <DependentUpon>Cpo_performance_C.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cpo_performance_Cr.resx">
+      <DependentUpon>Cpo_performance_Cr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cpo_performance_P.resx">
+      <DependentUpon>Cpo_performance_P.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cpo_ver0.resx">
+      <DependentUpon>Cpo_ver0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cpo_ver1.resx">
+      <DependentUpon>Cpo_ver1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crea_fpo_01.resx">
+      <DependentUpon>Crea_fpo_01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crea_fpo_02.resx">
+      <DependentUpon>Crea_fpo_02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cumplimiento_5.resx">
+      <DependentUpon>Cumplimiento_5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Despacho.resx">
+      <DependentUpon>Despacho.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Despacho_l.resx">
+      <DependentUpon>Despacho_l.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Despach_Bod.resx">
+      <DependentUpon>Despach_Bod.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detalle_cpo.resx">
+      <DependentUpon>Detalle_cpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detalle_cpo1.resx">
+      <DependentUpon>Detalle_cpo1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DM.resx">
+      <DependentUpon>DM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dm_codigo.resx">
+      <DependentUpon>Dm_codigo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Embarques_costura.resx">
+      <DependentUpon>Embarques_costura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Embarque_corte.resx">
+      <DependentUpon>Embarque_corte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Embarque_cpo.resx">
+      <DependentUpon>Embarque_cpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Embarque_resumen.resx">
+      <DependentUpon>Embarque_resumen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empaque_d.resx">
+      <DependentUpon>Empaque_d.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empaque_estilo.resx">
+      <DependentUpon>Empaque_estilo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empaque_estilo_c.resx">
+      <DependentUpon>Empaque_estilo_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empaque_s.resx">
+      <DependentUpon>Empaque_s.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empaque_st.resx">
+      <DependentUpon>Empaque_st.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entradas.resx">
+      <DependentUpon>Entradas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estado.resx">
+      <DependentUpon>Estado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estado_bi.resx">
+      <DependentUpon>Estado_bi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estado_m.resx">
+      <DependentUpon>Estado_m.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estado_m1.resx">
+      <DependentUpon>Estado_m1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estilos_Consulta.resx">
+      <DependentUpon>Estilos_Consulta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estilos_d_corte.resx">
+      <DependentUpon>Estilos_d_corte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estilos_d_corte_c.resx">
+      <DependentUpon>Estilos_d_corte_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estilos_plan.resx">
+      <DependentUpon>Estilos_plan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM.resx">
+      <DependentUpon>BOM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM_VIT.resx">
+      <DependentUpon>BOM_VIT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cambia_clave.resx">
+      <DependentUpon>Cambia_clave.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPO.resx">
+      <DependentUpon>FPO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fpo_batch_1.resx">
+      <DependentUpon>Fpo_batch_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fpo_cat_1.resx">
+      <DependentUpon>fpo_cat_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fpo_cierra.resx">
+      <DependentUpon>Fpo_cierra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fpo_comparativo.resx">
+      <DependentUpon>Fpo_comparativo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fpo_confirmacion.resx">
+      <DependentUpon>Fpo_confirmacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fpo_cpo.resx">
+      <DependentUpon>Fpo_cpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HJ6300.resx">
+      <DependentUpon>HJ6300.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ht6300.resx">
+      <DependentUpon>ht6300.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imprime_etiqueta_m.resx">
+      <DependentUpon>Imprime_etiqueta_m.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingresa_foto.resx">
+      <DependentUpon>Ingresa_foto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_manifiesto_1.resx">
+      <DependentUpon>Ingreso_manifiesto_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_Cli_est_col_n.resx">
+      <DependentUpon>Ingreso_Cli_est_col_n.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_manifiesto.resx">
+      <DependentUpon>Ingreso_manifiesto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_P_Cortadas.resx">
+      <DependentUpon>Ingreso_P_Cortadas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario_fis1.resx">
+      <DependentUpon>Inventario_fis1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inv_telas01.resx">
+      <DependentUpon>Inv_telas01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inv_telas02.resx">
+      <DependentUpon>Inv_telas02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mae_tex.resx">
+      <DependentUpon>Mae_tex.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mae_tex_c.resx">
+      <DependentUpon>Mae_tex_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Matriz_tela0.resx">
+      <DependentUpon>Matriz_tela0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prod_T01.resx">
+      <DependentUpon>Prod_T01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prod_T02.resx">
+      <DependentUpon>Prod_T02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prod_T03.resx">
+      <DependentUpon>Prod_T03.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prod_T04.resx">
+      <DependentUpon>Prod_T04.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prod_T05.resx">
+      <DependentUpon>Prod_T05.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prod_T06.resx">
+      <DependentUpon>Prod_T06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prod_T07.resx">
+      <DependentUpon>Prod_T07.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Push01.resx">
+      <DependentUpon>Push01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Push02.resx">
+      <DependentUpon>Push02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Push03.resx">
+      <DependentUpon>Push03.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Push04.resx">
+      <DependentUpon>Push04.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Push05.resx">
+      <DependentUpon>Push05.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reimprime_etiqueta.resx">
+      <DependentUpon>Reimprime_etiqueta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Re_ubica.resx">
+      <DependentUpon>Re_ubica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario_tela_res.resx">
+      <DependentUpon>Inventario_tela_res.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lb6300.resx">
+      <DependentUpon>lb6300.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_3.resx">
+      <DependentUpon>Lista_empaque_3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_5.resx">
+      <DependentUpon>Lista_empaque_5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_51.resx">
+      <DependentUpon>Lista_empaque_51.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_5E.resx">
+      <DependentUpon>Lista_empaque_5E.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_6.resx">
+      <DependentUpon>Lista_empaque_6.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_A.resx">
+      <DependentUpon>Lista_empaque_A.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_PR1.resx">
+      <DependentUpon>Lista_empaque_PR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_q.resx">
+      <DependentUpon>Lista_empaque_q.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_te.resx">
+      <DependentUpon>Lista_empaque_te.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lotes_cpo.resx">
+      <DependentUpon>Lotes_cpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestro_serigrafia.resx">
+      <DependentUpon>Maestro_serigrafia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cortes_pendientes.resx">
+      <DependentUpon>Cortes_pendientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plan_costura_c3.resx">
+      <DependentUpon>Plan_costura_c3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plan_costura_c2.resx">
+      <DependentUpon>Plan_costura_c2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plan_serigra.resx">
+      <DependentUpon>Plan_serigra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plan_telas.resx">
+      <DependentUpon>Plan_telas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prod_s_embarque.resx">
+      <DependentUpon>Prod_s_embarque.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prod_s_prendas.resx">
+      <DependentUpon>Prod_s_prendas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Req_Mater.resx">
+      <DependentUpon>Req_Mater.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plan_telas_1.resx">
+      <DependentUpon>Plan_telas_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salidas.resx">
+      <DependentUpon>salidas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salidas_c.resx">
+      <DependentUpon>salidas_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones_vac2.resx">
+      <DependentUpon>Secciones_vac2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sel_combo_Tela.resx">
+      <DependentUpon>Sel_combo_Tela.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ship_1.resx">
+      <DependentUpon>Ship_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ship_2.resx">
+      <DependentUpon>Ship_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabla_cod.resx">
+      <DependentUpon>Tabla_cod.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toma_inventar1.resx">
+      <DependentUpon>Toma_inventar1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tonalidad.resx">
+      <DependentUpon>Tonalidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Traslado.resx">
+      <DependentUpon>Traslado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Traslado_tela_R.resx">
+      <DependentUpon>Traslado_tela_R.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario_cliente.resx">
+      <DependentUpon>Usuario_cliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vales_n.resx">
+      <DependentUpon>Vales_n.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas01_d.resx">
+      <DependentUpon>Ventas01_d.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas02_d.resx">
+      <DependentUpon>Ventas02_d.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas_g1.resx">
+      <DependentUpon>Ventas_g1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas_g2.resx">
+      <DependentUpon>Ventas_g2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas_p1.resx">
+      <DependentUpon>Ventas_p1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fpo_batch.resx">
+      <DependentUpon>Fpo_batch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fpo_fecha.resx">
+      <DependentUpon>Fpo_fecha.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPO_n.resx">
+      <DependentUpon>FPO_n.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hoja.resx">
+      <DependentUpon>hoja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoja_resumen1.resx">
+      <DependentUpon>Hoja_resumen1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso.resx">
+      <DependentUpon>Ingreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_codj.resx">
+      <DependentUpon>Ingreso_codj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_codjm.resx">
+      <DependentUpon>Ingreso_codjm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_codt.resx">
+      <DependentUpon>Ingreso_codt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_Cpo_N2.resx">
+      <DependentUpon>Ingreso_Cpo_N2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_texpasa.resx">
+      <DependentUpon>Ingreso_texpasa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario_fis.resx">
+      <DependentUpon>Inventario_fis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario_fis2.resx">
+      <DependentUpon>Inventario_fis2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lapdip.resx">
+      <DependentUpon>Lapdip.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_1.resx">
+      <DependentUpon>Lista_empaque_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_2p.resx">
+      <DependentUpon>Lista_empaque_2p.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mae_hil.resx">
+      <DependentUpon>Mae_hil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mae_tel.resx">
+      <DependentUpon>Mae_tel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movtos_batch.resx">
+      <DependentUpon>Movtos_batch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedidos_cpo.resx">
+      <DependentUpon>Pedidos_cpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plan_costura_con.resx">
+      <DependentUpon>Plan_costura_con.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producido_cob2.resx">
+      <DependentUpon>Producido_cob2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producido_cob3.resx">
+      <DependentUpon>Producido_cob3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prod_diaria.resx">
+      <DependentUpon>Prod_diaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prod_diaria_c.resx">
+      <DependentUpon>Prod_diaria_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prod_diaria_e.resx">
+      <DependentUpon>Prod_diaria_e.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pt6300.resx">
+      <DependentUpon>pt6300.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recibe_Excel.resx">
+      <DependentUpon>Recibe_Excel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Requsicion_Tela.resx">
+      <DependentUpon>Requsicion_Tela.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="spec.resx">
+      <DependentUpon>spec.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingresa_spec.resx">
+      <DependentUpon>Ingresa_spec.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fpo_cat01.resx">
+      <DependentUpon>Fpo_cat01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fpo_cli01.resx">
+      <DependentUpon>Fpo_cli01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPO_consul1.resx">
+      <DependentUpon>FPO_consul1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPO_consul2.resx">
+      <DependentUpon>FPO_consul2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPO_consul3.resx">
+      <DependentUpon>FPO_consul3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPO_consul5.resx">
+      <DependentUpon>FPO_consul5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estilos.resx">
+      <DependentUpon>Estilos.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoja_resumen2.resx">
+      <DependentUpon>Hoja_resumen2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingresos_stock.resx">
+      <DependentUpon>Ingresos_stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_Cli_est_col.resx">
+      <DependentUpon>Ingreso_Cli_est_col.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_Cpo.resx">
+      <DependentUpon>Ingreso_Cpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_Cpo_co.resx">
+      <DependentUpon>Ingreso_Cpo_co.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_Cpo_N1.resx">
+      <DependentUpon>Ingreso_Cpo_N1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_Cpo_N2_o.resx">
+      <DependentUpon>Ingreso_Cpo_N2_o.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario_cuellos.resx">
+      <DependentUpon>Inventario_cuellos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario_cuellos_r.resx">
+      <DependentUpon>Inventario_cuellos_r.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario_Stock.resx">
+      <DependentUpon>Inventario_Stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario_tela.resx">
+      <DependentUpon>Inventario_tela.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario_tela_H.resx">
+      <DependentUpon>Inventario_tela_H.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario_tela_r.resx">
+      <DependentUpon>Inventario_tela_r.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario_valor.resx">
+      <DependentUpon>Inventario_valor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inv_proceso_b.resx">
+      <DependentUpon>Inv_proceso_b.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inv_proceso_r.resx">
+      <DependentUpon>Inv_proceso_r.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado_ingresos.resx">
+      <DependentUpon>Listado_ingresos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado_salidas.resx">
+      <DependentUpon>Listado_salidas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_2.resx">
+      <DependentUpon>Lista_empaque_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_4.resx">
+      <DependentUpon>Lista_empaque_4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_h.resx">
+      <DependentUpon>Lista_empaque_h.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_pr.resx">
+      <DependentUpon>Lista_empaque_pr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_s.resx">
+      <DependentUpon>Lista_empaque_s.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_T.resx">
+      <DependentUpon>Lista_empaque_T.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_empaque_t1.resx">
+      <DependentUpon>Lista_empaque_t1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestro_asuetos.resx">
+      <DependentUpon>Maestro_asuetos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestro_metas.resx">
+      <DependentUpon>Maestro_metas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PA_SE.resx">
+      <DependentUpon>PA_SE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PA_SE1.resx">
+      <DependentUpon>PA_SE1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PA_SE_0.resx">
+      <DependentUpon>PA_SE_0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PA_SE_1.resx">
+      <DependentUpon>PA_SE_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plan_costura_c.resx">
+      <DependentUpon>Plan_costura_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Por_Cortar.resx">
+      <DependentUpon>Por_Cortar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Precio_estilo.resx">
+      <DependentUpon>Precio_estilo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producido_cob5.resx">
+      <DependentUpon>Producido_cob5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prod_sec.resx">
+      <DependentUpon>Prod_sec.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prod_sem.resx">
+      <DependentUpon>prod_sem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecciones.resx">
+      <DependentUpon>Proyecciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestro_secciones.resx">
+      <DependentUpon>Maestro_secciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estado_cpo.resx">
+      <DependentUpon>Estado_cpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPO_consul0.resx">
+      <DependentUpon>FPO_consul0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fpo_consul4.resx">
+      <DependentUpon>Fpo_consul4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plan_costura.resx">
+      <DependentUpon>Plan_costura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prendas_costura.resx">
+      <DependentUpon>Prendas_costura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prendas_exportac.resx">
+      <DependentUpon>Prendas_exportac.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prendas_proc_ad.resx">
+      <DependentUpon>Prendas_proc_ad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prendas_x_Cortar.resx">
+      <DependentUpon>Prendas_x_Cortar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resumen_Tela.resx">
+      <DependentUpon>Resumen_Tela.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rutas_c.resx">
+      <DependentUpon>Rutas_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ruta_c.resx">
+      <DependentUpon>Ruta_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salidas_stock.resx">
+      <DependentUpon>Salidas_stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secciones_vac.resx">
+      <DependentUpon>Secciones_vac.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sel_codigo_Tela.resx">
+      <DependentUpon>Sel_codigo_Tela.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tablas.resx">
+      <DependentUpon>Tablas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabla_cod_c.resx">
+      <DependentUpon>Tabla_cod_c.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_asigna.resx">
+      <DependentUpon>Tela_asigna.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_c_oc.resx">
+      <DependentUpon>Tela_c_oc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_diaria.resx">
+      <DependentUpon>Tela_diaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_necesa.resx">
+      <DependentUpon>Tela_necesa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_oc.resx">
+      <DependentUpon>Tela_oc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_oc_1.resx">
+      <DependentUpon>Tela_oc_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_pedida.resx">
+      <DependentUpon>Tela_pedida.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toma_inventar.resx">
+      <DependentUpon>Toma_inventar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toma_inventar0.resx">
+      <DependentUpon>Toma_inventar0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toma_invr.resx">
+      <DependentUpon>Toma_invr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vales.resx">
+      <DependentUpon>Vales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vales_c1.resx">
+      <DependentUpon>Vales_c1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vales_c2.resx">
+      <DependentUpon>Vales_c2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vales_c3.resx">
+      <DependentUpon>Vales_c3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vales_c4.resx">
+      <DependentUpon>Vales_c4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vales_e.resx">
+      <DependentUpon>Vales_e.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas_p2.resx">
+      <DependentUpon>Ventas_p2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer_re.resx">
+      <DependentUpon>Transfer_re.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Version.resx">
+      <DependentUpon>Version.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wip0.resx">
+      <DependentUpon>Wip0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wip1.resx">
+      <DependentUpon>Wip1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wip2.resx">
+      <DependentUpon>Wip2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wip3.resx">
+      <DependentUpon>Wip3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZoomCell.resx">
+      <DependentUpon>ZoomCell.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Sistemas_Integrados.gclicx" />
+    <None Include="Sistemas_Integrados_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bermudon.ico" />
+    <Content Include="ctas_x_cobrar.sln" />
+    <Content Include="jt.ico" />
+    <None Include="Resources\actualizar.png" />
+    <None Include="Resources\sewing-machine-icon2.png" />
+    <None Include="Resources\Cut-icon2.png" />
+    <None Include="Resources\inven.png" />
+    <None Include="Resources\cpo1.png" />
+    <None Include="Resources\cpo.png" />
+    <None Include="Resources\Cut-icon1.png" />
+    <None Include="Resources\sewing-machine-icon1.png" />
+    <None Include="Resources\order4.png" />
+    <None Include="Resources\order3.png" />
+    <None Include="Resources\order2.png" />
+    <None Include="Resources\order1.png" />
+    <None Include="Resources\Cut-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
