@@ -90,12 +90,10 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AxInterop.AcroPDFLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="AxInterop.AcroPDFLib">
       <HintPath>..\lib\AxInterop.AcroPDFLib.dll</HintPath>
     </Reference>
-    <Reference Include="AxInterop.ONLINECOMLib, Version=1.0.0.0, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="AxInterop.ONLINECOMLib">
       <HintPath>..\lib\AxInterop.ONLINECOMLib.dll</HintPath>
     </Reference>
     <Reference Include="C1.C1Excel.4">
@@ -135,14 +133,12 @@
       <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1SuperTooltip.4.dll</HintPath>
     </Reference>
     <Reference Include="C1menus">
-      <HintPath>..\..\..\Desktop\repos\sistemas_integrados\lib\C1menus.dll</HintPath>
+      <HintPath>..\lib\C1menus.dll</HintPath>
     </Reference>
-    <Reference Include="cnv, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Sistemas_Integrados\lib\cnv.dll</HintPath>
+    <Reference Include="cnv">
+      <HintPath>..\lib\cnv.dll</HintPath>
     </Reference>
-    <Reference Include="Lib_SI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Lib_SI">
       <HintPath>..\lib\Lib_SI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
