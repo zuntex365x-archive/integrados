@@ -289,6 +289,8 @@ Public Class menu
         End If
     End Sub
     Private Sub busca_clave()
+
+
         Dim obj As New empresas()
         Dim mn As New C1menus.men
         Dim existe As Boolean = True
@@ -309,6 +311,9 @@ Public Class menu
                 TextBox1.Text = ""
             Else
                 Label3.Text = usuario
+                ' En el lugar donde autenticas al usuario y asignas el valor a la variable usuario
+                GlobalVariables.usuarioglobal = usuario
+
                 nombre = usuario
                 obj.usuario = Label3.Text
                 obj.clave = TextBox1.Text

@@ -16,7 +16,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>\\192.9.200.10\Programas\programas\vb2010\Sistemas_Integrados\</PublishUrl>
+    <PublishUrl>\\192.9.200.10\Programas\programas\vb2010\Versiones_En_Prueba\Sistemas_Integrados\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -30,8 +30,8 @@
     <PublisherName>Jefatura de Datos - IT</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>2</ApplicationRevision>
-    <ApplicationVersion>7.0.0.2</ApplicationVersion>
+    <ApplicationRevision>19</ApplicationRevision>
+    <ApplicationVersion>7.0.0.19</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -105,15 +105,20 @@
     <Reference Include="C1.C1Report.4">
       <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.C1Report.4.dll</HintPath>
     </Reference>
+    <Reference Include="C1.C1Zip.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da" />
     <Reference Include="C1.Win.4">
       <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.4.dll</HintPath>
     </Reference>
+    <Reference Include="C1.Win.BarCode.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da" />
+    <Reference Include="C1.Win.Bitmap.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
     <Reference Include="C1.Win.C1Chart.4">
       <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1Chart.4.dll</HintPath>
     </Reference>
     <Reference Include="C1.Win.C1Command.4">
       <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1Command.4.dll</HintPath>
     </Reference>
+    <Reference Include="C1.Win.C1Document.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
+    <Reference Include="C1.Win.C1DX.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
     <Reference Include="C1.Win.C1FlexGrid.4">
       <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1FlexGrid.4.dll</HintPath>
     </Reference>
@@ -126,12 +131,17 @@
     <Reference Include="C1.Win.C1Input.4">
       <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1Input.4.dll</HintPath>
     </Reference>
+    <Reference Include="C1.Win.C1InputPanel.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da" />
     <Reference Include="C1.Win.C1Report.4">
       <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1Report.4.dll</HintPath>
     </Reference>
+    <Reference Include="C1.Win.C1Ribbon.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da" />
     <Reference Include="C1.Win.C1SuperTooltip.4">
       <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1SuperTooltip.4.dll</HintPath>
     </Reference>
+    <Reference Include="C1.Win.FlexChart.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=3aa2920c09e0aefd" />
+    <Reference Include="C1.Win.FlexViewer.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.ImportServices.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
     <Reference Include="C1menus">
       <HintPath>..\lib\C1menus.dll</HintPath>
     </Reference>
@@ -140,6 +150,10 @@
     </Reference>
     <Reference Include="Lib_SI">
       <HintPath>..\lib\Lib_SI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -294,6 +308,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Calculo_tela_necesaria.vb" />
+    <Compile Include="Carga_de_cpos_masiva.Designer.vb">
+      <DependentUpon>Carga_de_cpos_masiva.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Carga_de_cpos_masiva.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Carga_open.designer.vb">
       <DependentUpon>Carga_open.vb</DependentUpon>
     </Compile>
@@ -342,12 +362,19 @@
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormSeleccionColumnas.Designer.vb">
+      <DependentUpon>FormSeleccionColumnas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSeleccionColumnas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FRM001_PickingList.Designer.vb">
       <DependentUpon>FRM001_PickingList.vb</DependentUpon>
     </Compile>
     <Compile Include="FRM001_PickingList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GlobalVariables.vb" />
     <Compile Include="ingresos_d.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -1558,6 +1585,9 @@
     <EmbeddedResource Include="cajas_scan.resx">
       <DependentUpon>cajas_scan.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Carga_de_cpos_masiva.resx">
+      <DependentUpon>Carga_de_cpos_masiva.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Carga_open.resx">
       <DependentUpon>Carga_open.vb</DependentUpon>
     </EmbeddedResource>
@@ -1596,6 +1626,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSeleccionColumnas.resx">
+      <DependentUpon>FormSeleccionColumnas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM001_PickingList.resx">
       <DependentUpon>FRM001_PickingList.vb</DependentUpon>
@@ -2558,6 +2591,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <EmbeddedResource Include="Sistemas_Integrados.gclicx" />
+    <None Include="packages.config" />
     <None Include="Sistemas_Integrados_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

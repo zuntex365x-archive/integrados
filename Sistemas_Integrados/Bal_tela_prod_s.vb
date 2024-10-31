@@ -27,6 +27,7 @@ Public Class Bal_tela_prod_s
     Dim obj As New empresas()
     Dim path As String = "c:\reportes\balance.xls"
     Dim a As Integer = Screen.PrimaryScreen.Bounds.Height - 30
+    Friend WithEvents C1CheckBox1 As C1.Win.C1Input.C1CheckBox
     Dim l As Integer = Screen.PrimaryScreen.Bounds.Width - 5
 #Region " Windows Form Designer generated code "
 
@@ -79,9 +80,11 @@ Public Class Bal_tela_prod_s
         Me.Te = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.nc = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.fg = New C1.Win.C1FlexGrid.C1FlexGrid()
+        Me.C1CheckBox1 = New C1.Win.C1Input.C1CheckBox()
         CType(Me.Te, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.fg, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.C1CheckBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Cliente
@@ -232,12 +235,24 @@ Public Class Bal_tela_prod_s
         Me.fg.TabIndex = 23
         Me.fg.Visible = False
         '
+        'C1CheckBox1
+        '
+        Me.C1CheckBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.C1CheckBox1.Location = New System.Drawing.Point(553, 12)
+        Me.C1CheckBox1.Name = "C1CheckBox1"
+        Me.C1CheckBox1.Size = New System.Drawing.Size(104, 24)
+        Me.C1CheckBox1.TabIndex = 62
+        Me.C1CheckBox1.Text = "TODOS ?"
+        Me.C1CheckBox1.UseVisualStyleBackColor = False
+        Me.C1CheckBox1.Value = Nothing
+        '
         'Bal_tela_prod_s
         '
         Me.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(236, Byte), Integer), CType(CType(237, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(998, 692)
+        Me.Controls.Add(Me.C1CheckBox1)
         Me.Controls.Add(Me.Te)
         Me.Controls.Add(Me.Ex)
         Me.Controls.Add(Me.Impri)
@@ -259,6 +274,7 @@ Public Class Bal_tela_prod_s
         CType(Me.Te, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fg, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.C1CheckBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -282,12 +298,70 @@ Public Class Bal_tela_prod_s
         fpos = New DataTable()
         inv = New DataTable()
         con = New DataTable()
-        strsql = "SELECT CODIGO,COLOR,OFECHA,SUM((LIBRAS -RECIBIDAS)) AS PEDIDAS FROM FPO WHERE RECIBIDAS = 0 AND STATUS = 'ABIERTO' AND CLIENTE = '" & Cliente.Text & "' GROUP BY CODIGO,COLOR,OFECHA"
+
+        ' Agrega una columna adicional para el nombre del cliente al final del grid Te
+        If Not Te.Cols.Contains("CLIENTE") Then
+            Te.Cols.Count += 1
+            Te.Cols(Te.Cols.Count - 1).Name = "CLIENTE"
+            Te.Cols(Te.Cols.Count - 1).Caption = "CLIENTE"
+        End If
+
+        ' Verifica si el checkbox "TODOS" está marcado
+        If C1CheckBox1.Checked Then
+            ' Si está marcado, selecciona todos los clientes
+            strsql = "SELECT CODIGO, COLOR, OFECHA, SUM((LIBRAS - RECIBIDAS)) AS PEDIDAS " &
+                 "FROM FPO WHERE RECIBIDAS = 0 AND STATUS = 'ABIERTO' GROUP BY CODIGO, COLOR, OFECHA"
+        Else
+            ' Si no está marcado, selecciona solo el cliente del ComboBox
+            strsql = "SELECT CODIGO, COLOR, OFECHA, SUM((LIBRAS - RECIBIDAS)) AS PEDIDAS " &
+                 "FROM FPO WHERE RECIBIDAS = 0 AND STATUS = 'ABIERTO' AND CLIENTE = '" & Cliente.Text & "' " &
+                 "GROUP BY CODIGO, COLOR, OFECHA"
+        End If
+
+        ' Llena la tabla fpos
         llena_tablas(fpos, strsql, cnn)
-        strsql = "SELECT CODIGO, COLOR, SUM(LIBRAS) LIBRAS FROM (SELECT CODIGO,COLOR, (ROLLOS.PESO/ROLLOS.YARDAS_I) * ROLLOS.YARDAS AS LIBRAS FROM ROLLOS WHERE YARDAS > 0 AND CLIENTE = '" & Cliente.Text & "' AND ACTIVO IN ('S','0','5') UNION SELECT CODIGO,COLOR, (ROLLOS.PESO/ROLLOS.YARDAS_I) * ROLLOS.YARDAS * -1 AS LIBRAS FROM ROLLOS INNER JOIN REQ_D ON ROLLOS.BATCH = REQ_D.BATCH AND ROLLOS.ROLLO = REQ_D.ROLLO AND DESPACHADO = 'N' WHERE ACTIVO IN ('S','0','5') And ROLLOS.YARDAS > 0 AND TIPO = 'TELA' AND CLIENTE = '" & Cliente.Text & "') C GROUP BY CODIGO,COLOR"
-        'strsql = "SELECT CODIGO,COLOR ,SUM((ROLLOS.PESO/ROLLOS.YARDAS_I) * ROLLOS.YARDAS) AS LIBRAS FROM ROLLOS WHERE YARDAS > 0 AND CLIENTE = '" & Cliente.Text & "' AND ACTIVO IN ('S','0','5') GROUP BY CODIGO,COLOR"
+
+        ' Llena la tabla de inventario (inv)
+        strsql = "SELECT CODIGO, COLOR, SUM(LIBRAS) AS LIBRAS " &
+             "FROM (SELECT CODIGO, COLOR, (ROLLOS.PESO / ROLLOS.YARDAS_I) * ROLLOS.YARDAS AS LIBRAS " &
+             "FROM ROLLOS WHERE YARDAS > 0 " &
+             "AND ACTIVO IN ('S', '0', '5') " &
+             If(Not C1CheckBox1.Checked, "AND CLIENTE = '" & Cliente.Text & "' ", "") &
+             "UNION " &
+             "SELECT CODIGO, COLOR, (ROLLOS.PESO / ROLLOS.YARDAS_I) * ROLLOS.YARDAS * -1 AS LIBRAS " &
+             "FROM ROLLOS INNER JOIN REQ_D ON ROLLOS.BATCH = REQ_D.BATCH AND ROLLOS.ROLLO = REQ_D.ROLLO " &
+             "AND DESPACHADO = 'N' WHERE ACTIVO IN ('S', '0', '5') AND ROLLOS.YARDAS > 0 AND TIPO = 'TELA' " &
+             If(Not C1CheckBox1.Checked, "AND CLIENTE = '" & Cliente.Text & "' ", "") &
+             ") C GROUP BY CODIGO, COLOR"
+
         llena_tablas(inv, strsql, cnn)
+
+        ' Comprueba si no hay datos para el cliente actual, si no los hay, agregar una fila de "No contiene resultados"
+        If inv.Rows.Count = 0 Then
+            ' Agrega una fila indicando que no hay resultados para el cliente
+            Dim noDataRow As Integer = Te.Rows.Count
+            Te.Rows.Count += 1
+            Te(noDataRow, 1) = "No contiene resultados"
+            Te(noDataRow, 2) = "-"
+            Te(noDataRow, 3) = "-"
+            Te(noDataRow, Te.Cols.Count - 1) = Cliente.Text ' Cliente que no tiene datos
+        Else
+            ' Procesa los datos normalmente
+            ' ... Código existente para llenar los datos ...
+            For Each dr As DataRow In inv.Rows
+                Dim row As Integer = Te.Rows.Count
+                Te.Rows.Count += 1
+                Te(row, 1) = dr("CODIGO")
+                Te(row, 2) = dr("COLOR")
+                Te(row, 3) = dr("LIBRAS")
+                ' Agrega el cliente en la columna adicional
+                Te(row, Te.Cols.Count - 1) = Cliente.Text
+            Next
+        End If
     End Sub
+
+
+
 
     Private Sub setea_grids()
         Dim i As Integer
@@ -469,7 +543,7 @@ Public Class Bal_tela_prod_s
         End With
         Te.PrintParameters.HeaderFont = New Font("Arial Narrow", 14, FontStyle.Bold)
         Te.PrintParameters.FooterFont = New Font("Arial Narrow", 12, FontStyle.Italic)
-        Te.PrintGrid("Telas", PrintGridFlags.FitToPageWidth + PrintGridFlags.ShowPrintDialog, Trim(Cliente.Text) + "    Balance de tela Al : " + fecha + "    " + MAL + Chr(9) + Chr(9) + "Pagina {0}", "")
+        Te.PrintGrid("Telas", PrintGridFlags.FitToPageWidth + PrintGridFlags.ShowPrintDialog, Trim(Cliente.Text) + "    Balance de tela Al : " + fecha + "    " + mal + Chr(9) + Chr(9) + "Pagina {0}", "")
     End Sub
 
     Private Sub Ex_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Ex.Click
@@ -521,4 +595,18 @@ Public Class Bal_tela_prod_s
         forma.ss = dd
         forma.ShowDialog()
     End Sub
+
+    Private Sub C1CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles C1CheckBox1.CheckedChanged
+        If C1CheckBox1.Checked Then
+            ' Deshabilitar la selección de cliente cuando se marcan todos los clientes
+            Cliente.SelectedIndex = -1 ' Limpia la selección del ComboBox
+            Cliente.Enabled = False
+        Else
+            ' Habilitar la selección de cliente cuando no están marcados todos
+            Cliente.Enabled = True
+        End If
+    End Sub
+
+
+
 End Class

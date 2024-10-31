@@ -34,6 +34,9 @@ Public Class Ingreso_cpo
     Friend WithEvents destino As System.Windows.Forms.TextBox
     Friend WithEvents ta As C1.Win.C1FlexGrid.C1FlexGrid
     Friend WithEvents escala As System.Windows.Forms.ComboBox
+    Friend WithEvents C1Button1 As C1.Win.C1Input.C1Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents C1TextBox1 As C1.Win.C1Input.C1TextBox
     Dim dr As DataRow
 #Region " Windows Form Designer generated code "
 
@@ -119,11 +122,16 @@ Public Class Ingreso_cpo
         Me.estilos = New System.Windows.Forms.Label()
         Me.f_entrega = New System.Windows.Forms.Label()
         Me.destino = New System.Windows.Forms.TextBox()
+        Me.C1TextBox1 = New C1.Win.C1Input.C1TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.C1Button1 = New C1.Win.C1Input.C1Button()
         CType(Me.ct, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.fg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.C1TextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.C1Button1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -377,6 +385,9 @@ Public Class Ingreso_cpo
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.C1Button1)
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.C1TextBox1)
         Me.GroupBox2.Controls.Add(Me.G1)
         Me.GroupBox2.Controls.Add(Me.cpos)
         Me.GroupBox2.Controls.Add(Me.F_pedido)
@@ -481,6 +492,36 @@ Public Class Ingreso_cpo
         Me.destino.Size = New System.Drawing.Size(352, 21)
         Me.destino.TabIndex = 65
         '
+        'C1TextBox1
+        '
+        Me.C1TextBox1.Location = New System.Drawing.Point(652, 29)
+        Me.C1TextBox1.Name = "C1TextBox1"
+        Me.C1TextBox1.Size = New System.Drawing.Size(100, 18)
+        Me.C1TextBox1.TabIndex = 62
+        Me.C1TextBox1.Tag = Nothing
+        '
+        'Label3
+        '
+        Me.Label3.BackColor = System.Drawing.Color.Fuchsia
+        Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(642, 8)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(120, 16)
+        Me.Label3.TabIndex = 63
+        Me.Label3.Text = "MASIVO"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'C1Button1
+        '
+        Me.C1Button1.Location = New System.Drawing.Point(778, 28)
+        Me.C1Button1.Name = "C1Button1"
+        Me.C1Button1.Size = New System.Drawing.Size(70, 20)
+        Me.C1Button1.TabIndex = 64
+        Me.C1Button1.Text = "Subir"
+        Me.C1Button1.UseVisualStyleBackColor = True
+        '
         'Ingreso_cpo
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 13)
@@ -516,6 +557,8 @@ Public Class Ingreso_cpo
         CType(Me.ta, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
+        CType(Me.C1TextBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.C1Button1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -536,15 +579,15 @@ Public Class Ingreso_cpo
 
 
     Private Sub limpia_variables()
-        CPOS.Enabled = True
+        cpos.Enabled = True
         G1.Visible = True
         R1.Visible = True
         G2.Visible = False
         clientes.Text = ""
         ESTADO.SelectedIndex = 0
-        COLORES.Text = ""
+        colores.Text = ""
         estilos.Text = ""
-        COLORES.Text = ""
+        colores.Text = ""
         destino.Text = ""
         r = Split(b, "|")
         setea_grid()
@@ -556,7 +599,7 @@ Public Class Ingreso_cpo
     End Sub
 
     Private Sub re_habilita()
-        CPOS.Enabled = False
+        cpos.Enabled = False
         G1.Visible = True
         R1.Visible = True
     End Sub
@@ -731,7 +774,7 @@ Public Class Ingreso_cpo
     End Sub
 
     Private Sub mensaje(ByVal var As String)
-        MsgBox("Por favor revise " + var, MsgBoxStyle.OKOnly, var + " NO VALIDO !!!! ")
+        MsgBox("Por favor revise " + var, MsgBoxStyle.OkOnly, var + " NO VALIDO !!!! ")
     End Sub
 
     Private Sub revisa_cpos(ByRef ok As Boolean)
@@ -817,7 +860,7 @@ Public Class Ingreso_cpo
     End Sub
 
     Private Sub llena_lineas(ByVal lineas As Integer)
-         Try
+        Try
             fg(lineas, 0) = Trim(estilos.Text) + Trim(colores.Text)
             fg(lineas, 1) = cpos.Text
             fg(lineas, 2) = estilos.Text
@@ -915,38 +958,38 @@ Public Class Ingreso_cpo
 
         Try
             ' ================ DETALLE ====================
-            strsql = "UPDATE CPO_D SET ESTADO = " & "'" & ESTADO.Text & "', DESTINO =  '" & destino.Text & "' " & _
+            strsql = "UPDATE CPO_D SET ESTADO = " & "'" & ESTADO.Text & "', DESTINO =  '" & destino.Text & "' " &
                      "WHERE CPO = '" & cpos.Text & "' AND ESTILO = '" & estilos.Text & "' AND COLOR = '" & colores.Text & "'"
             comando.CommandText = strsql
             afectados = comando.ExecuteNonQuery()
 
             ' ============================== ACTUALIZA COSTOS =================================
-            strsql = "UPDATE CPO_COSTO SET C1 = " & "'" & ct(0, 0) & "'" & _
-                                 " , C2 = " & "'" & ct(0, 1) & "'" & _
-                                 " , C3 = " & "'" & ct(0, 2) & "'" & _
-                                 " , C4 = " & "'" & ct(0, 3) & "'" & _
-                                 " , C5 = " & "'" & ct(0, 4) & "'" & _
-                                 " , C6 = " & "'" & ct(0, 5) & "'" & _
-                                 " , C7 = " & "'" & ct(0, 6) & "'" & _
-                                 " , C8 = " & "'" & ct(0, 7) & "'" & _
-                                 " , C9 = " & "'" & ct(0, 8) & "'" & _
+            strsql = "UPDATE CPO_COSTO SET C1 = " & "'" & ct(0, 0) & "'" &
+                                 " , C2 = " & "'" & ct(0, 1) & "'" &
+                                 " , C3 = " & "'" & ct(0, 2) & "'" &
+                                 " , C4 = " & "'" & ct(0, 3) & "'" &
+                                 " , C5 = " & "'" & ct(0, 4) & "'" &
+                                 " , C6 = " & "'" & ct(0, 5) & "'" &
+                                 " , C7 = " & "'" & ct(0, 6) & "'" &
+                                 " , C8 = " & "'" & ct(0, 7) & "'" &
+                                 " , C9 = " & "'" & ct(0, 8) & "'" &
                                  " , C0 = " & "'" & ct(0, 9) & "' WHERE CPO = '" & cpos.Text & "' AND ESTILO = '" & estilos.Text & "' AND COLOR = '" & colores.Text & "'"
             comando.CommandText = strsql
             afectados = comando.ExecuteNonQuery()
             If afectados = 0 Then
-                strsql = "INSERT INTO CPO_COSTO (CPO,ESTILO,COLOR,C1,C2,C3,C4,C5,C6,C7,C8,C9,C0) " & _
-                                        "VALUES ( '" & cpos.Text & "','" & _
-                                           estilos.Text & "','" & _
-                                           colores.Text & "','" & _
-                                           ct(0, 0) & "','" & _
-                                           ct(0, 1) & "','" & _
-                                           ct(0, 2) & "','" & _
-                                           ct(0, 3) & "','" & _
-                                           ct(0, 4) & "','" & _
-                                           ct(0, 5) & "','" & _
-                                           ct(0, 6) & "','" & _
-                                           ct(0, 7) & "','" & _
-                                           ct(0, 8) & "','" & _
+                strsql = "INSERT INTO CPO_COSTO (CPO,ESTILO,COLOR,C1,C2,C3,C4,C5,C6,C7,C8,C9,C0) " &
+                                        "VALUES ( '" & cpos.Text & "','" &
+                                           estilos.Text & "','" &
+                                           colores.Text & "','" &
+                                           ct(0, 0) & "','" &
+                                           ct(0, 1) & "','" &
+                                           ct(0, 2) & "','" &
+                                           ct(0, 3) & "','" &
+                                           ct(0, 4) & "','" &
+                                           ct(0, 5) & "','" &
+                                           ct(0, 6) & "','" &
+                                           ct(0, 7) & "','" &
+                                           ct(0, 8) & "','" &
                                           ct(0, 9) & "')"
                 comando.CommandText = strsql
                 afectados = comando.ExecuteNonQuery()
@@ -959,7 +1002,7 @@ Public Class Ingreso_cpo
                 transaccion.Rollback()
             Catch ex As SqlClient.SqlException
                 If Not transaccion.Connection Is Nothing Then
-                    MsgBox("Ocurrió un error de tipo " & ex.GetType().ToString() & _
+                    MsgBox("Ocurrió un error de tipo " & ex.GetType().ToString() &
                                       " se generó cuando se trato de eliminar la transacción.", MsgBoxStyle.Critical, "Error")
                 End If
             End Try
@@ -993,7 +1036,7 @@ Public Class Ingreso_cpo
                 transaccion.Rollback()
             Catch ex As SqlClient.SqlException
                 If Not transaccion.Connection Is Nothing Then
-                    MsgBox("Ocurrió un error de tipo " & ex.GetType().ToString() & _
+                    MsgBox("Ocurrió un error de tipo " & ex.GetType().ToString() &
                                       " se generó cuando se trato de eliminar la transacción.", MsgBoxStyle.Critical, "Error")
                 End If
             End Try
@@ -1014,5 +1057,15 @@ Public Class Ingreso_cpo
         talla_setea(ta, escala.SelectedIndex)
     End Sub
 
-   
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub C1TextBox1_TextChanged(sender As Object, e As EventArgs) Handles C1TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub C1Button1_Click(sender As Object, e As EventArgs) Handles C1Button1.Click
+
+    End Sub
 End Class

@@ -1036,21 +1036,41 @@ Public Class Estilos
 
     Private Sub revisa_datos(ByRef ok As Boolean)
         Dim valor As Decimal = 0
+
+        ' Mensaje para verificar los valores actuales de los campos antes de la validación
+        MsgBox("Verificando los siguientes valores: " & vbCrLf &
+           "Corte: " & vcorte.Text & vbCrLf &
+           "Costura: " & vcostura.Text & vbCrLf &
+           "Hilo: " & vhilo.Text & vbCrLf &
+           "Empaque: " & vempaque.Text & vbCrLf &
+           "Otros: " & votros.Text)
+
         If Trim(estilo.Text) = "" Then
             mensaje("Debe de ingresar la No de Estilo")
             Exit Sub
         End If
+
         If Trim(descripcion.Text) = "" Then
             mensaje("Debe de ingresar la Descripción del Estilo")
             Exit Sub
         End If
-        valor = CDec(vcorte.Text) + CDec(vcostura.Text) + CDec(vhilo.Text) + CDec(vempaque.Text) + CDec(votros.Text)
+
+        ' Capturar posibles errores en la conversión de los valores numéricos
+        Try
+            valor = CDec(vcorte.Text) + CDec(vcostura.Text) + CDec(vhilo.Text) + CDec(vempaque.Text) + CDec(votros.Text)
+        Catch ex As Exception
+            mensaje("Error al convertir los valores numéricos: " & ex.Message)
+            Exit Sub
+        End Try
+
         If valor = 0 Then
             mensaje("Debe de ingresar el valor de Manufactura")
             Exit Sub
         End If
+
         ok = True
     End Sub
+
     Private Sub graba_registros()
         Dim afectados As Integer
         Dim strSQL As String

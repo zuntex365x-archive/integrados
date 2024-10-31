@@ -27,6 +27,7 @@ Public Class Bal_tela_prod1
     Dim obj As New empresas()
     Dim path As String = "c:\reportes\balance.xls"
     Dim a As Integer = Screen.PrimaryScreen.Bounds.Height - 30
+    Friend WithEvents C1CheckBox1 As C1.Win.C1Input.C1CheckBox
     Dim l As Integer = Screen.PrimaryScreen.Bounds.Width - 5
 #Region " Windows Form Designer generated code "
 
@@ -68,7 +69,7 @@ Public Class Bal_tela_prod1
     Friend WithEvents Te As C1.Win.C1FlexGrid.C1FlexGrid
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.Resources.ResourceManager = New System.Resources.ResourceManager(GetType(Bal_tela_prod1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Bal_tela_prod1))
         Me.Cliente = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.si = New System.Windows.Forms.Button()
@@ -79,9 +80,11 @@ Public Class Bal_tela_prod1
         Me.Te = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.nc = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.fg = New C1.Win.C1FlexGrid.C1FlexGrid()
+        Me.C1CheckBox1 = New C1.Win.C1Input.C1CheckBox()
         CType(Me.Te, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.fg, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.C1CheckBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Cliente
@@ -106,61 +109,65 @@ Public Class Bal_tela_prod1
         '
         'si
         '
-        Me.si.BackColor = System.Drawing.Color.FromArgb(CType(46, Byte), CType(196, Byte), CType(245, Byte))
+        Me.si.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.si.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.si.Font = New System.Drawing.Font("Comic Sans MS", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.si.ForeColor = System.Drawing.Color.Black
-        Me.si.Image = CType(resources.GetObject("si.Image"), System.Drawing.Bitmap)
+        Me.si.Image = CType(resources.GetObject("si.Image"), System.Drawing.Image)
         Me.si.Location = New System.Drawing.Point(400, 8)
         Me.si.Name = "si"
         Me.si.Size = New System.Drawing.Size(35, 35)
         Me.si.TabIndex = 53
         Me.si.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.ToolTip1.SetToolTip(Me.si, "Presione este icono para buscar efectuar el Balance de Tela")
+        Me.si.UseVisualStyleBackColor = False
         '
         'R1
         '
-        Me.R1.BackColor = System.Drawing.Color.FromArgb(CType(46, Byte), CType(196, Byte), CType(245, Byte))
+        Me.R1.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.R1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.R1.Font = New System.Drawing.Font("Comic Sans MS", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.R1.ForeColor = System.Drawing.Color.Black
-        Me.R1.Image = CType(resources.GetObject("R1.Image"), System.Drawing.Bitmap)
+        Me.R1.Image = CType(resources.GetObject("R1.Image"), System.Drawing.Image)
         Me.R1.Location = New System.Drawing.Point(400, 8)
         Me.R1.Name = "R1"
         Me.R1.Size = New System.Drawing.Size(35, 35)
         Me.R1.TabIndex = 55
         Me.R1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.ToolTip1.SetToolTip(Me.R1, "Presione este Boton para Refrescar la pantalla sin efectuar modificaciones.")
+        Me.R1.UseVisualStyleBackColor = False
         Me.R1.Visible = False
         '
         'Impri
         '
-        Me.Impri.BackColor = System.Drawing.Color.FromArgb(CType(46, Byte), CType(196, Byte), CType(245, Byte))
+        Me.Impri.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.Impri.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Impri.Font = New System.Drawing.Font("Comic Sans MS", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Impri.ForeColor = System.Drawing.Color.Black
-        Me.Impri.Image = CType(resources.GetObject("Impri.Image"), System.Drawing.Bitmap)
+        Me.Impri.Image = CType(resources.GetObject("Impri.Image"), System.Drawing.Image)
         Me.Impri.Location = New System.Drawing.Point(448, 8)
         Me.Impri.Name = "Impri"
         Me.Impri.Size = New System.Drawing.Size(35, 35)
         Me.Impri.TabIndex = 58
         Me.Impri.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.ToolTip1.SetToolTip(Me.Impri, "Presione este Boton si Desea Imprimir los Datos mostrados en la Pantalla.")
+        Me.Impri.UseVisualStyleBackColor = False
         Me.Impri.Visible = False
         '
         'Ex
         '
-        Me.Ex.BackColor = System.Drawing.Color.FromArgb(CType(46, Byte), CType(196, Byte), CType(245, Byte))
+        Me.Ex.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.Ex.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Ex.Font = New System.Drawing.Font("Comic Sans MS", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Ex.ForeColor = System.Drawing.Color.Black
-        Me.Ex.Image = CType(resources.GetObject("Ex.Image"), System.Drawing.Bitmap)
+        Me.Ex.Image = CType(resources.GetObject("Ex.Image"), System.Drawing.Image)
         Me.Ex.Location = New System.Drawing.Point(496, 8)
         Me.Ex.Name = "Ex"
         Me.Ex.Size = New System.Drawing.Size(35, 35)
         Me.Ex.TabIndex = 59
         Me.Ex.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.ToolTip1.SetToolTip(Me.Ex, "Presione este Boton si Desea  convertir a Excel los datos del  Inventario.")
+        Me.Ex.UseVisualStyleBackColor = False
         Me.Ex.Visible = False
         '
         'Te
@@ -168,34 +175,9 @@ Public Class Bal_tela_prod1
         Me.Te.AllowEditing = False
         Me.Te.AllowMerging = C1.Win.C1FlexGrid.AllowMergingEnum.Free
         Me.Te.BackColor = System.Drawing.Color.White
-        Me.Te.ColumnInfo = "18,1,0,0,0,85,Columns:0{Width:0;AllowEditing:False;DataType:System.String;TextAli" & _
-        "gn:LeftCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "1{Width:450;Caption:""DESCRIPCION DE LA" & _
-        " TELA"";DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "2" & _
-        "{Width:250;Caption:""COLOR DE LA TELA"";TextAlign:LeftCenter;TextAlignFixed:LeftCe" & _
-        "nter;}" & Microsoft.VisualBasic.ChrW(9) & "3{Width:90;Caption:""22-abr-2012"";AllowEditing:False;DataType:System.Decim" & _
-        "al;Format:""####,##0"";TextAlign:RightCenter;TextAlignFixed:CenterCenter;}" & Microsoft.VisualBasic.ChrW(9) & "4{Width" & _
-        ":90;Name:""1"";DataType:System.Decimal;Format:""####,##0"";TextAlign:RightCenter;Tex" & _
-        "tAlignFixed:CenterCenter;}" & Microsoft.VisualBasic.ChrW(9) & "5{Width:90;Name:""2"";DataType:System.Decimal;Format:""#" & _
-        "###,##0"";TextAlign:RightCenter;TextAlignFixed:CenterCenter;}" & Microsoft.VisualBasic.ChrW(9) & "6{Width:90;Name:""3""" & _
-        ";DataType:System.Decimal;Format:""####,##0"";TextAlign:RightCenter;TextAlignFixed:" & _
-        "CenterCenter;}" & Microsoft.VisualBasic.ChrW(9) & "7{Width:90;Name:""4"";DataType:System.Decimal;Format:""####,##0"";Tex" & _
-        "tAlign:RightCenter;TextAlignFixed:CenterCenter;}" & Microsoft.VisualBasic.ChrW(9) & "8{Width:90;Name:""5"";DataType:Sy" & _
-        "stem.Decimal;Format:""####,##0"";TextAlign:RightCenter;TextAlignFixed:CenterCenter" & _
-        ";}" & Microsoft.VisualBasic.ChrW(9) & "9{Width:90;Name:""6"";DataType:System.Decimal;Format:""####,##0"";TextAlign:Right" & _
-        "Center;TextAlignFixed:CenterCenter;}" & Microsoft.VisualBasic.ChrW(9) & "10{Width:90;Name:""7"";DataType:System.Decima" & _
-        "l;Format:""####,##0"";TextAlign:RightCenter;TextAlignFixed:CenterCenter;}" & Microsoft.VisualBasic.ChrW(9) & "11{Width" & _
-        ":90;Name:""8"";DataType:System.Decimal;Format:""####,##0"";TextAlign:RightCenter;Tex" & _
-        "tAlignFixed:CenterCenter;}" & Microsoft.VisualBasic.ChrW(9) & "12{Width:90;Name:""9"";DataType:System.Decimal;Format:""" & _
-        "####,##0"";TextAlign:RightCenter;TextAlignFixed:CenterCenter;}" & Microsoft.VisualBasic.ChrW(9) & "13{Width:90;Name:""" & _
-        "10"";DataType:System.Decimal;Format:""####,##0"";TextAlign:RightCenter;TextAlignFix" & _
-        "ed:CenterCenter;}" & Microsoft.VisualBasic.ChrW(9) & "14{Width:90;Name:""11"";DataType:System.Decimal;Format:""####,##0" & _
-        """;TextAlign:RightCenter;TextAlignFixed:CenterCenter;}" & Microsoft.VisualBasic.ChrW(9) & "15{Width:100;Name:""12"";Dat" & _
-        "aType:System.Decimal;Format:""####,##0"";TextAlign:RightCenter;TextAlignFixed:Cent" & _
-        "erCenter;}" & Microsoft.VisualBasic.ChrW(9) & "16{Width:90;Name:""13"";DataType:System.Decimal;Format:""####,##0"";TextA" & _
-        "lign:RightCenter;TextAlignFixed:CenterCenter;}" & Microsoft.VisualBasic.ChrW(9) & "17{Caption:""codigo"";Visible:False" & _
-        ";DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9)
+        Me.Te.ColumnInfo = resources.GetString("Te.ColumnInfo")
         Me.Te.FocusRect = C1.Win.C1FlexGrid.FocusRectEnum.None
-        Me.Te.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Te.Font = New System.Drawing.Font("Courier New", 8.25!)
         Me.Te.ForeColor = System.Drawing.Color.Black
         Me.Te.HighLight = C1.Win.C1FlexGrid.HighLightEnum.WithFocus
         Me.Te.Location = New System.Drawing.Point(8, 48)
@@ -203,19 +185,7 @@ Public Class Bal_tela_prod1
         Me.Te.Rows.DefaultSize = 17
         Me.Te.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row
         Me.Te.Size = New System.Drawing.Size(1424, 552)
-        Me.Te.StyleInfo = "Normal{Font:Courier New, 8.25pt;BackColor:White;ForeColor:Black;TextAlign:LeftCen" & _
-        "ter;}" & Microsoft.VisualBasic.ChrW(9) & "Alternate{BackColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Fixed{BackColor:8, 111, 171;ForeColor:White;Bo" & _
-        "rder:Flat,1,ControlDark,Both;}" & Microsoft.VisualBasic.ChrW(9) & "Highlight{BackColor:Black;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Focus" & _
-        "{}" & Microsoft.VisualBasic.ChrW(9) & "Editor{}" & Microsoft.VisualBasic.ChrW(9) & "Search{BackColor:Highlight;ForeColor:HighlightText;}" & Microsoft.VisualBasic.ChrW(9) & "Frozen{BackColo" & _
-        "r:Beige;}" & Microsoft.VisualBasic.ChrW(9) & "NewRow{}" & Microsoft.VisualBasic.ChrW(9) & "EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDar" & _
-        "k,Both;}" & Microsoft.VisualBasic.ChrW(9) & "GrandTotal{BackColor:Black;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal0{Font:Microsoft S" & _
-        "ans Serif, 8.25pt, style=Bold;BackColor:Black;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal1{Font:M" & _
-        "icrosoft Sans Serif, 8.25pt, style=Bold;BackColor:186, 196, 228;ForeColor:Black;" & _
-        "ImageAlign:RightTop;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Subt" & _
-        "otal3{BackColor:ControlDarkDark;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal4{BackColor:ControlDar" & _
-        "kDark;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "ro" & _
-        "jo{BackColor:Red;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "verde{BackColor:135, 214, 101;}" & Microsoft.VisualBasic.ChrW(9) & "amarillo{Back" & _
-        "Color:218, 232, 94;}" & Microsoft.VisualBasic.ChrW(9)
+        Me.Te.StyleInfo = resources.GetString("Te.StyleInfo")
         Me.Te.SubtotalPosition = C1.Win.C1FlexGrid.SubtotalPositionEnum.BelowData
         Me.Te.TabIndex = 60
         Me.ToolTip1.SetToolTip(Me.Te, "Celdas en Rojo muestran Faltante en tela.")
@@ -226,15 +196,9 @@ Public Class Bal_tela_prod1
         Me.nc.AllowMerging = C1.Win.C1FlexGrid.AllowMergingEnum.Free
         Me.nc.AllowResizing = C1.Win.C1FlexGrid.AllowResizingEnum.None
         Me.nc.BackColor = System.Drawing.Color.White
-        Me.nc.ColumnInfo = "10,1,0,0,0,95,Columns:0{TextAlign:LeftCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "1{TextAl" & _
-        "ign:LeftCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "2{TextAlign:LeftCenter;TextAlignFixed" & _
-        ":LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "3{TextAlign:LeftCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "4{TextAlign:Lef" & _
-        "tCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "5{TextAlign:LeftCenter;TextAlignFixed:LeftCe" & _
-        "nter;}" & Microsoft.VisualBasic.ChrW(9) & "6{TextAlign:LeftCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "7{TextAlign:LeftCenter" & _
-        ";TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "8{TextAlign:LeftCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & _
-        "9{TextAlign:LeftCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9)
+        Me.nc.ColumnInfo = resources.GetString("nc.ColumnInfo")
         Me.nc.FocusRect = C1.Win.C1FlexGrid.FocusRectEnum.None
-        Me.nc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.nc.ForeColor = System.Drawing.Color.Black
         Me.nc.HighLight = C1.Win.C1FlexGrid.HighLightEnum.Never
         Me.nc.Location = New System.Drawing.Point(8, 48)
@@ -244,17 +208,7 @@ Public Class Bal_tela_prod1
         Me.nc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.nc.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row
         Me.nc.Size = New System.Drawing.Size(664, 608)
-        Me.nc.StyleInfo = "Normal{Font:Microsoft Sans Serif, 9.75pt;BackColor:White;ForeColor:Black;TextAlig" & _
-        "n:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "Alternate{BackColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Fixed{BackColor:95, 156, 239;ForeColo" & _
-        "r:Black;Border:Flat,1,ControlDark,Both;}" & Microsoft.VisualBasic.ChrW(9) & "Highlight{BackColor:Black;ForeColor:Whi" & _
-        "te;}" & Microsoft.VisualBasic.ChrW(9) & "Focus{}" & Microsoft.VisualBasic.ChrW(9) & "Editor{}" & Microsoft.VisualBasic.ChrW(9) & "Search{BackColor:Highlight;ForeColor:HighlightText;}" & Microsoft.VisualBasic.ChrW(9) & "Froze" & _
-        "n{BackColor:Beige;}" & Microsoft.VisualBasic.ChrW(9) & "NewRow{}" & Microsoft.VisualBasic.ChrW(9) & "EmptyArea{BackColor:AppWorkspace;Border:Flat,1,Cont" & _
-        "rolDarkDark,Both;}" & Microsoft.VisualBasic.ChrW(9) & "GrandTotal{BackColor:Black;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal0{BackCo" & _
-        "lor:ControlDarkDark;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal1{Font:Microsoft Sans Serif, 9.75p" & _
-        "t, style=Bold;BackColor:MediumTurquoise;ForeColor:Black;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal2{BackColor:Co" & _
-        "ntrolDarkDark;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal3{BackColor:ControlDarkDark;ForeColor:Wh" & _
-        "ite;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal5{BackColor:" & _
-        "ControlDarkDark;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9)
+        Me.nc.StyleInfo = resources.GetString("nc.StyleInfo")
         Me.nc.SubtotalPosition = C1.Win.C1FlexGrid.SubtotalPositionEnum.BelowData
         Me.nc.TabIndex = 56
         '
@@ -264,15 +218,9 @@ Public Class Bal_tela_prod1
         Me.fg.AllowMerging = C1.Win.C1FlexGrid.AllowMergingEnum.Free
         Me.fg.AllowResizing = C1.Win.C1FlexGrid.AllowResizingEnum.None
         Me.fg.BackColor = System.Drawing.Color.White
-        Me.fg.ColumnInfo = "10,1,0,0,0,95,Columns:0{TextAlign:LeftCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "1{TextAl" & _
-        "ign:LeftCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "2{TextAlign:LeftCenter;TextAlignFixed" & _
-        ":LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "3{TextAlign:LeftCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "4{TextAlign:Lef" & _
-        "tCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "5{TextAlign:LeftCenter;TextAlignFixed:LeftCe" & _
-        "nter;}" & Microsoft.VisualBasic.ChrW(9) & "6{TextAlign:LeftCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "7{TextAlign:LeftCenter" & _
-        ";TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "8{TextAlign:LeftCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & _
-        "9{TextAlign:LeftCenter;TextAlignFixed:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9)
+        Me.fg.ColumnInfo = resources.GetString("fg.ColumnInfo")
         Me.fg.FocusRect = C1.Win.C1FlexGrid.FocusRectEnum.None
-        Me.fg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.fg.ForeColor = System.Drawing.Color.Black
         Me.fg.HighLight = C1.Win.C1FlexGrid.HighLightEnum.Never
         Me.fg.Location = New System.Drawing.Point(16, 48)
@@ -282,28 +230,38 @@ Public Class Bal_tela_prod1
         Me.fg.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.fg.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row
         Me.fg.Size = New System.Drawing.Size(944, 368)
-        Me.fg.StyleInfo = "Normal{Font:Microsoft Sans Serif, 9.75pt;BackColor:White;ForeColor:Black;TextAlig" & _
-        "n:LeftCenter;}" & Microsoft.VisualBasic.ChrW(9) & "Alternate{BackColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Fixed{BackColor:95, 156, 239;ForeColo" & _
-        "r:Black;Border:Flat,1,ControlDark,Both;}" & Microsoft.VisualBasic.ChrW(9) & "Highlight{BackColor:Black;ForeColor:Whi" & _
-        "te;}" & Microsoft.VisualBasic.ChrW(9) & "Focus{}" & Microsoft.VisualBasic.ChrW(9) & "Editor{}" & Microsoft.VisualBasic.ChrW(9) & "Search{BackColor:Highlight;ForeColor:HighlightText;}" & Microsoft.VisualBasic.ChrW(9) & "Froze" & _
-        "n{BackColor:Beige;}" & Microsoft.VisualBasic.ChrW(9) & "NewRow{}" & Microsoft.VisualBasic.ChrW(9) & "EmptyArea{BackColor:AppWorkspace;Border:Flat,1,Cont" & _
-        "rolDarkDark,Both;}" & Microsoft.VisualBasic.ChrW(9) & "GrandTotal{BackColor:Black;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal0{BackCo" & _
-        "lor:ControlDarkDark;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal1{Font:Microsoft Sans Serif, 9.75p" & _
-        "t, style=Bold;BackColor:MediumTurquoise;ForeColor:Black;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal2{BackColor:Co" & _
-        "ntrolDarkDark;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal3{BackColor:ControlDarkDark;ForeColor:Wh" & _
-        "ite;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9) & "Subtotal5{BackColor:" & _
-        "ControlDarkDark;ForeColor:White;}" & Microsoft.VisualBasic.ChrW(9)
+        Me.fg.StyleInfo = resources.GetString("fg.StyleInfo")
         Me.fg.SubtotalPosition = C1.Win.C1FlexGrid.SubtotalPositionEnum.BelowData
         Me.fg.TabIndex = 23
         Me.fg.Visible = False
+        '
+        'C1CheckBox1
+        '
+        Me.C1CheckBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.C1CheckBox1.Location = New System.Drawing.Point(568, 12)
+        Me.C1CheckBox1.Name = "C1CheckBox1"
+        Me.C1CheckBox1.Size = New System.Drawing.Size(104, 24)
+        Me.C1CheckBox1.TabIndex = 61
+        Me.C1CheckBox1.Text = "TODOS ?"
+        Me.C1CheckBox1.UseVisualStyleBackColor = False
+        Me.C1CheckBox1.Value = Nothing
         '
         'Bal_tela_prod1
         '
         Me.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(222, Byte), CType(236, Byte), CType(237, Byte))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(236, Byte), Integer), CType(CType(237, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(998, 692)
-        Me.Controls.AddRange(New System.Windows.Forms.Control() {Me.Te, Me.Ex, Me.Impri, Me.si, Me.Label4, Me.Cliente, Me.R1, Me.fg, Me.nc})
+        Me.Controls.Add(Me.C1CheckBox1)
+        Me.Controls.Add(Me.Te)
+        Me.Controls.Add(Me.Ex)
+        Me.Controls.Add(Me.Impri)
+        Me.Controls.Add(Me.si)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Cliente)
+        Me.Controls.Add(Me.R1)
+        Me.Controls.Add(Me.fg)
+        Me.Controls.Add(Me.nc)
         Me.ForeColor = System.Drawing.Color.Red
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -316,6 +274,7 @@ Public Class Bal_tela_prod1
         CType(Me.Te, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fg, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.C1CheckBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -388,7 +347,7 @@ Public Class Bal_tela_prod1
         Dim wj As DataRow
         For Each dr In dt.Rows
             estilo = dr("ESTILO")
-            COLORES = dr("COLOR")
+            colores = dr("COLOR")
             Try
                 proceso = dr("PROCESO")
             Catch
@@ -476,7 +435,7 @@ Public Class Bal_tela_prod1
         Next
     End Sub
 
-   
+
 
 
     Private Sub inventarios(ByVal l As Integer, ByVal codigo As String, ByVal colores As String, ByRef inve As Decimal)
@@ -595,7 +554,7 @@ Public Class Bal_tela_prod1
         End With
         Te.PrintParameters.HeaderFont = New Font("Arial Narrow", 14, FontStyle.Bold)
         Te.PrintParameters.FooterFont = New Font("Arial Narrow", 12, FontStyle.Italic)
-        Te.PrintGrid("Telas", PrintGridFlags.FitToPageWidth + PrintGridFlags.ShowPrintDialog, Trim(Cliente.Text) + "    Balance de tela Al : " + fecha + "    " + MAL + Chr(9) + Chr(9) + "Pagina {0}", "")
+        Te.PrintGrid("Telas", PrintGridFlags.FitToPageWidth + PrintGridFlags.ShowPrintDialog, Trim(Cliente.Text) + "    Balance de tela Al : " + fecha + "    " + mal + Chr(9) + Chr(9) + "Pagina {0}", "")
     End Sub
 
     Private Sub Ex_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Ex.Click
@@ -644,4 +603,24 @@ Public Class Bal_tela_prod1
         forma.cliente = Cliente.Text
         forma.ShowDialog()
     End Sub
+
+    Private Sub C1CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles C1CheckBox1.CheckedChanged
+        If C1CheckBox1.Checked Then
+            ' Itera sobre todos los items del ComboBox y selecciona cada cliente
+            Cliente.SelectedIndex = -1 ' Asegúrate de que no haya ningún cliente seleccionado
+            Dim allItems As New List(Of String)
+
+            ' Recorre todos los clientes y agrégales a la lista
+            For i As Integer = 0 To Cliente.Items.Count - 1
+                allItems.Add(Cliente.Items(i).ToString())
+            Next
+
+            ' Opcional: Mostrar un mensaje o indicar que todos los clientes están seleccionados
+            MessageBox.Show("Todos los clientes han sido seleccionados.")
+        Else
+            ' Si desmarcamos el checkbox, deseleccionamos todos los clientes
+            Cliente.SelectedIndex = -1
+        End If
+    End Sub
+
 End Class

@@ -13,6 +13,7 @@ Public Class Cajas11
     Dim path As String = "c:\reportes\empacadas.xls"
     Friend WithEvents seccion As System.Windows.Forms.ComboBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox1 As CheckBox
     Dim pr As New DataTable
 
 #Region " Windows Form Designer generated code "
@@ -68,6 +69,7 @@ Public Class Cajas11
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         CType(Me.fg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -226,11 +228,22 @@ Public Class Cajas11
         Me.Label3.Text = "Sección:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(314, 49)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(91, 20)
+        Me.CheckBox1.TabIndex = 97
+        Me.CheckBox1.Text = "TODAS ?"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'Cajas11
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(7, 15)
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(236, Byte), Integer), CType(CType(237, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1002, 696)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.seccion)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.S1)
@@ -255,6 +268,7 @@ Public Class Cajas11
         Me.ToolTip1.SetToolTip(Me, " ")
         CType(Me.fg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -276,7 +290,10 @@ Public Class Cajas11
     Private Sub setea_grid()
         fg.Rows.Count = 1
         fg.Rows(0).Height = 30
+        fg.Cols.Count = 21 ' Aumentamos el número de columnas para incluir la nueva de sección
+        fg(0, 20) = "Sección" ' Establecemos el encabezado de la nueva columna
     End Sub
+
 
     Private Sub llena_grid()
         Dim dr As DataRow
@@ -291,8 +308,27 @@ Public Class Cajas11
         Dim con(3) As String
         pr = New DataTable
         Dim busca As String
-        Dim sec As String = "('TEXSUN " + Mid(seccion.Text, 8, 1) + "','TEXFOR " + Mid(seccion.Text, 8, 1) + "','INNOTEX " + Mid(seccion.Text, 9, 1) + "' )"
-        Dim strSQL As String = "SELECT CONVERT (date,CAJAS04.FECHA) AS FECHA ,CAJAS04.CORTE,CAJAS04.TALLA,CAJAS04.TIPO,CPO,ESTILO,CORTES.CLIENTE,COLOR, ORDEN ,ESCALA, SUM(CAJAS01.UNIDADES) AS UNIDADES FROM CAJAS04 LEFT JOIN CORTES ON CAJAS04.CORTE = CORTES.CORTE LEFT JOIN CAJAS01 ON CAJAS04.CAJA = CAJAS01.CAJA AND CAJAS01.CORTE = CAJAS04.CORTE AND CAJAS01.TALLA = CAJAS04.TALLA AND CAJAS04.TIPO = CAJAS01.TIPO WHERE CAJAS01.SECCION IN " & sec & " AND CONVERT(date,CAJAS04.FECHA) BETWEEN '" & fecha & "' AND '" & fecha1 & "' AND TIPO_SEG NOT IN ('3','8','12') GROUP BY CONVERT (date,CAJAS04.FECHA)  ,CAJAS04.CORTE,CAJAS04.TALLA,CAJAS04.TIPO,CPO,ESTILO,CORTES.CLIENTE,COLOR,ORDEN,ESCALA"
+        Dim sec As String
+
+        If CheckBox1.Checked Then
+            sec = "(SELECT SECCION FROM SECCIONES)" ' Consulta todas las secciones
+        Else
+            sec = "('TEXSUN " + Mid(seccion.Text, 8, 1) + "', 'TEXFOR " + Mid(seccion.Text, 8, 1) + "', 'INNOTEX " + Mid(seccion.Text, 9, 1) + "')"
+        End If
+
+        Dim strSQL As String = "SELECT CONVERT(date, CAJAS04.FECHA) AS FECHA, CAJAS04.CORTE, CAJAS04.TALLA, " &
+                       "CAJAS04.TIPO, CPO, ESTILO, CORTES.CLIENTE, COLOR, ORDEN, ESCALA, " &
+                       "SUM(CAJAS01.UNIDADES) AS UNIDADES, CAJAS01.SECCION " & ' Incluimos la sección
+                       "FROM CAJAS04 " &
+                       "LEFT JOIN CORTES ON CAJAS04.CORTE = CORTES.CORTE " &
+                       "LEFT JOIN CAJAS01 ON CAJAS04.CAJA = CAJAS01.CAJA " &
+                       "AND CAJAS01.CORTE = CAJAS04.CORTE AND CAJAS01.TALLA = CAJAS04.TALLA " &
+                       "AND CAJAS04.TIPO = CAJAS01.TIPO " &
+                       "WHERE CAJAS01.SECCION IN " & sec & " " &
+                       "AND CONVERT(date, CAJAS04.FECHA) BETWEEN '" & fecha & "' AND '" & fecha1 & "' " &
+                       "AND TIPO_SEG NOT IN ('3', '8', '12') " &
+                       "GROUP BY CONVERT(date, CAJAS04.FECHA), CAJAS04.CORTE, CAJAS04.TALLA, " &
+                       "CAJAS04.TIPO, CPO, ESTILO, CORTES.CLIENTE, COLOR, ORDEN, ESCALA, CAJAS01.SECCION"
         conexiones(con)
         For i = 1 To 3
             Try
@@ -319,7 +355,7 @@ Public Class Cajas11
                 Next
                 fg(l, 0) = busca
             End If
-            fg(l, 1) = dr("fecha")
+            fg(l, 1) = dr("FECHA")
             fg(l, 2) = dr("CORTE")
             fg(l, 3) = dr("TIPO")
             fg(l, 4) = dr("CPO")
@@ -329,7 +365,9 @@ Public Class Cajas11
             fg(l, 17) = fg(l, 17) + unidades
             fg(l, 18) = dr("ESCALA")
             fg(l, 19) = dr("CLIENTE")
+            fg(l, 20) = dr("SECCION") ' Asignamos el valor de la sección a la nueva columna
         Next
+
         subtotales()
     End Sub
     Private Sub subtotales()
@@ -383,7 +421,7 @@ Public Class Cajas11
         Dim si As Boolean
         datos_excel(si)
         If si Then
-            MsgBox("Sus datos fueron trasladados a Excel en el directorio: " + path, MsgBoxStyle.OKOnly, "TRASLADO DE DATOS ")
+            MsgBox("Sus datos fueron trasladados a Excel en el directorio: " + path, MsgBoxStyle.OkOnly, "TRASLADO DE DATOS ")
             Close()
         End If
     End Sub
@@ -399,7 +437,7 @@ Public Class Cajas11
             System.Diagnostics.Process.Start(path)
             si = True
         Catch
-            MsgBox("Por favor cierre todas sus Hojas de Excel y vuelva a tratar. Gracias", MsgBoxStyle.OKOnly, "Atencion ")
+            MsgBox("Por favor cierre todas sus Hojas de Excel y vuelva a tratar. Gracias", MsgBoxStyle.OkOnly, "Atencion ")
             si = False
         End Try
     End Sub
@@ -442,6 +480,15 @@ Public Class Cajas11
         End If
 
     End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked Then
+            seccion.Enabled = False
+        Else
+            seccion.Enabled = True
+        End If
+    End Sub
+
 End Class
 
 
