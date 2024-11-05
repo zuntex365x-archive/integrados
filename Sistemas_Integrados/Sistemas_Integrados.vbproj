@@ -96,52 +96,94 @@
     <Reference Include="AxInterop.ONLINECOMLib">
       <HintPath>..\lib\AxInterop.ONLINECOMLib.dll</HintPath>
     </Reference>
-    <Reference Include="C1.C1Excel.4">
-      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.C1Excel.4.dll</HintPath>
+    <Reference Include="C1.C1Excel.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.C1Excel.4.dll</HintPath>
     </Reference>
-    <Reference Include="C1.C1Pdf.4">
-      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.C1Pdf.4.dll</HintPath>
+    <Reference Include="C1.C1Pdf.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.C1Pdf.4.dll</HintPath>
     </Reference>
-    <Reference Include="C1.C1Report.4">
-      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.C1Report.4.dll</HintPath>
+    <Reference Include="C1.C1Report.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=594a0605db190bb9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.C1Report.4.dll</HintPath>
     </Reference>
-    <Reference Include="C1.C1Zip.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da" />
-    <Reference Include="C1.Win.4">
-      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.4.dll</HintPath>
+    <Reference Include="C1.C1Zip.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.C1Zip.4.dll</HintPath>
     </Reference>
-    <Reference Include="C1.Win.BarCode.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da" />
-    <Reference Include="C1.Win.Bitmap.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
-    <Reference Include="C1.Win.C1Chart.4">
-      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1Chart.4.dll</HintPath>
+    <Reference Include="C1.Win.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.Win.4.dll</HintPath>
     </Reference>
-    <Reference Include="C1.Win.C1Command.4">
-      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1Command.4.dll</HintPath>
+    <Reference Include="C1.Win.BarCode.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.Win.BarCode.4.dll</HintPath>
     </Reference>
-    <Reference Include="C1.Win.C1Document.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
-    <Reference Include="C1.Win.C1DX.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
-    <Reference Include="C1.Win.C1FlexGrid.4">
-      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1FlexGrid.4.dll</HintPath>
+    <Reference Include="C1.Win.Bitmap.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.Win.Bitmap.4.dll</HintPath>
     </Reference>
-    <Reference Include="C1.Win.C1FlexGrid.Classic.4">
-      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1FlexGrid.Classic.4.dll</HintPath>
+    <Reference Include="C1.Win.C1Chart.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=a22e16972c085838, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WPF\bin\v4\C1.Win.C1Chart.4.dll</HintPath>
     </Reference>
-    <Reference Include="C1.Win.C1FlexGrid.ImportExport.4">
-      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1FlexGrid.ImportExport.4.dll</HintPath>
+    <Reference Include="C1.Win.C1Command.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=e808566f358766d8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.Win.C1Command.4.dll</HintPath>
     </Reference>
-    <Reference Include="C1.Win.C1Input.4">
-      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1Input.4.dll</HintPath>
+    <Reference Include="C1.Win.C1Document.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.Win.C1Document.4.dll</HintPath>
     </Reference>
-    <Reference Include="C1.Win.C1InputPanel.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da" />
-    <Reference Include="C1.Win.C1Report.4">
-      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1Report.4.dll</HintPath>
+    <Reference Include="C1.Win.C1DX.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.Win.C1DX.4.dll</HintPath>
     </Reference>
-    <Reference Include="C1.Win.C1Ribbon.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da" />
-    <Reference Include="C1.Win.C1SuperTooltip.4">
-      <HintPath>C:\Program Files (x86)\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1SuperTooltip.4.dll</HintPath>
+    <Reference Include="C1.Win.C1FlexGrid.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.Win.C1FlexGrid.4.dll</HintPath>
     </Reference>
-    <Reference Include="C1.Win.FlexChart.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=3aa2920c09e0aefd" />
-    <Reference Include="C1.Win.FlexViewer.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04, processorArchitecture=MSIL" />
-    <Reference Include="C1.Win.ImportServices.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
+    <Reference Include="C1.Win.C1FlexGrid.Classic.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.Win.C1FlexGrid.Classic.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1FlexGrid.ImportExport.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.Win.C1FlexGrid.ImportExport.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Input.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.Win.C1Input.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1InputPanel.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.Win.C1InputPanel.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Report.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=41780e2fc605e636, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.Win.C1Report.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Ribbon.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.Win.C1Ribbon.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1SuperTooltip.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WPF\bin\v4\C1.Win.C1SuperTooltip.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.FlexChart.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=3aa2920c09e0aefd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.Win.FlexChart.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.FlexViewer.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.Win.FlexViewer.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.ImportServices.4, Version=4.0.20202.438, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MESCIUS\ComponentOne\WinForms\bin\v4.0\C1.Win.ImportServices.4.dll</HintPath>
+    </Reference>
     <Reference Include="C1menus">
       <HintPath>..\lib\C1menus.dll</HintPath>
     </Reference>
