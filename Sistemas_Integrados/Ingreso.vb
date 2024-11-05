@@ -613,7 +613,7 @@ Public Class Ingreso
             mensaje("Dato de Lote No Numerico")
             bien = False
         Else
-            If CInt(lote.Text) = 0 Or CInt(lote.Text) > 999 Then
+            If CInt(lote.Text) = 0 Or CInt(lote.Text) > 9999 Then
                 mensaje("Error en No. Lote")
                 bien = False
             End If
@@ -622,7 +622,7 @@ Public Class Ingreso
             mensaje("Dato de Rollos No Numerico")
             bien = False
         Else
-            If CInt(TROLLOS.Text) = 0 Or CInt(TROLLOS.Text) > 100 Then
+            If CInt(TROLLOS.Text) = 0 Or CInt(TROLLOS.Text) > 1000 Then
                 mensaje("No de Rollos")
                 bien = False
             End If
@@ -631,7 +631,7 @@ Public Class Ingreso
             mensaje("Dato de Rollo Inicial No Numerico")
             bien = False
         Else
-            If CInt(Inicio.Text) = 0 Or CInt(Inicio.Text) > 9999 Then
+            If CInt(Inicio.Text) = 0 Or CInt(Inicio.Text) > 99999 Then
                 mensaje("Rollo Inicial")
                 bien = False
             End If
