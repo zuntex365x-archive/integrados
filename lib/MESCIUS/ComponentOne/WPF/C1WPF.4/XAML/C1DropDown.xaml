@@ -1,0 +1,272 @@
+﻿	  
+	   
+    
+		
+
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="clr-namespace:C1.WPF" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/C1.WPF.4;component/themes/Common.xaml" />
+		<ResourceDictionary Source="/C1.WPF.4;component/themes/C1Button.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+
+
+    <!--******************** ContentControlStyle *********************-->
+
+    <!--ContentControl -->
+    <Style x:Key="ContentControlStyle" TargetType="ContentControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContentControl">
+                    <ContentPresenter Cursor="{TemplateBinding Cursor}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--******************* C1DropDown *****************-->
+
+    <!-- Brush @ C1DropDown Arrow ToggleButton Thickness -->
+    <Thickness x:Key="DropDownArrowToggleThickness">1 0 0 0</Thickness>
+
+    <Style x:Key="C1.Silverlight.DropDownButton" TargetType="c1:C1DropDownButton">
+        
+        
+        <Setter Property="Background" Value="{StaticResource WpfInputBaseBrush}" />
+        <Setter Property="HeaderBackground" Value="{StaticResource WpfInputBaseBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource WpfInputBorderBrush}" />
+        <Setter Property="MouseOverBrush" Value="{StaticResource WpfInputMouseOverBrush}" />
+        <Setter Property="FocusBrush" Value="{StaticResource WpfInputFocusBrush}" />
+        <Setter Property="PressedBrush" Value="{StaticResource WpfInputSelectedBackground}" />
+        <Setter Property="BorderThickness" Value="{StaticResource GeneralThickness}" />
+        <Setter Property="Foreground" Value="{StaticResource ForegroundBrushColor}" />
+        <Setter Property="HeaderForeground" Value="{StaticResource ForegroundBrushColor}" />
+        <Setter Property="CornerRadius" Value="{StaticResource GeneralCornerRadius}" />
+        <Setter Property="VerticalHeaderAlignment" Value="Stretch" />
+        <Setter Property="HorizontalHeaderAlignment" Value="Stretch" />
+        <Setter Property="HeaderPadding" Value="2" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1:C1DropDownButton">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="DropDownOpenStates">
+                                <VisualState x:Name="Closed" />
+                                <VisualState x:Name="Opened" />
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Disabled" />
+                                <VisualState x:Name="MouseOver" />
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Unfocused" />
+                                <VisualState x:Name="Focused" />
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="ValidationStates">
+                                <VisualState x:Name="Valid" />
+                                <VisualState x:Name="InvalidUnfocused">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ValidationDecorator" Storyboard.TargetProperty="ValidationState">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <c1:ValidationState>InvalidUnfocused</c1:ValidationState>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="InvalidFocused">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ValidationDecorator" Storyboard.TargetProperty="ValidationState">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <c1:ValidationState>InvalidFocused</c1:ValidationState>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <ToggleButton x:Name="ArrowToggle" Style="{StaticResource ClearStyleButtonStyle}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" c1:ClearStyleExtensions.CornerRadius="{TemplateBinding CornerRadius}" Background="{TemplateBinding Background}" Foreground="{TemplateBinding HeaderForeground}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="0" IsTabStop="True" FontStyle="{TemplateBinding HeaderFontStyle}" FontWeight="{TemplateBinding HeaderFontWeight}" FontSize="{TemplateBinding HeaderFontSize}" FontFamily="{TemplateBinding HeaderFontFamily}">
+                            <Grid Margin="{TemplateBinding BorderThickness}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <ContentPresenter x:Name="HeaderPresenter" ContentTemplate="{TemplateBinding HeaderTemplate}" Margin="{TemplateBinding HeaderPadding}" VerticalAlignment="{TemplateBinding VerticalHeaderAlignment}" HorizontalAlignment="{TemplateBinding HorizontalHeaderAlignment}" />
+                                <Polygon x:Name="ArrowPolygon" Fill="{TemplateBinding Foreground}" Margin="4" Points="0,0 7,0 3.5,3.5" VerticalAlignment="Center" Grid.Column="1" />
+                            </Grid>
+                        </ToggleButton>
+                        <c1:C1ValidationDecorator x:Name="ValidationDecorator" Target="{Binding RelativeSource={RelativeSource TemplatedParent}}" Style="{TemplateBinding ValidationDecoratorStyle}" />
+                        <Popup x:Name="DropDownPopup" VerticalAlignment="Bottom">
+                            
+                            <Popup.AllowsTransparency>true</Popup.AllowsTransparency>
+                            <Grid Width="{Binding Path=DropDownWidth,RelativeSource={RelativeSource TemplatedParent}}" Height="{Binding Path=DropDownHeight,RelativeSource={RelativeSource TemplatedParent}}" MinWidth="{Binding Path=MinDropDownWidth,RelativeSource={RelativeSource TemplatedParent}}" MinHeight="{Binding Path=MinDropDownHeight,RelativeSource={RelativeSource TemplatedParent}}" MaxWidth="{Binding Path=MaxDropDownWidth,RelativeSource={RelativeSource TemplatedParent}}" MaxHeight="{Binding Path=MaxDropDownHeight,RelativeSource={RelativeSource TemplatedParent}}">
+                                <ContentPresenter Margin="{Binding Path=Padding,RelativeSource={RelativeSource TemplatedParent}}" />
+                            </Grid>
+                        </Popup>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="c1:C1DropDownButton" BasedOn="{StaticResource C1.Silverlight.DropDownButton}" />
+
+    <Style TargetType="c1:C1DropDown" BasedOn="{StaticResource C1.Silverlight.DropDownButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1:C1DropDown">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="DropDownOpenStates">
+                                <VisualState x:Name="Closed" />
+                                <VisualState x:Name="Opened" />
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledVisualElement" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                            <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Unfocused" />
+                                <VisualState x:Name="Focused">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="FocusedVisualElement" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                            <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <c1:C1BrushBuilder x:Name="HeaderBackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource GeneralGradientBrush}" DesignColor="{StaticResource BaseColor}" />
+                        <c1:C1BrushBuilder x:Name="MouseOverBrush" Input="{TemplateBinding MouseOverBrush}" DesignBrush="{StaticResource GeneralGradientOverBrush}" DesignColor="{StaticResource MouseOverColor}" />
+                        <c1:C1BrushBuilder x:Name="InnerBorderBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource InnerBorderBrush}" DesignColor="{StaticResource BaseColor}" />
+                        <c1:C1BrushBuilder x:Name="InnerBorderMouseOverBrush" Input="{TemplateBinding MouseOverBrush}" DesignBrush="{StaticResource InnerBorderMouseOverBrush}" DesignColor="{StaticResource MouseOverColor}" />
+                        <Border x:Name="BackgroundElement" Background="{Binding Output, ElementName=HeaderBackgroundBrush}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" />
+                        <Border x:Name="MouseOverElement" Background="{Binding Output, ElementName=MouseOverBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" Visibility="Collapsed" />
+                        <Grid Margin="{TemplateBinding BorderThickness}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <ToggleButton Grid.Column="2" Style="{StaticResource ClearStyleButtonStyle}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" c1:ClearStyleExtensions.CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource sideRadiusConverter}, ConverterParameter='topright bottomright'}" Background="{TemplateBinding Background}" Foreground="{TemplateBinding HeaderForeground}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{StaticResource DropDownArrowToggleThickness}" IsEnabled="{TemplateBinding IsEnabled}" IsTabStop="{TemplateBinding IsTabStop}" Padding="0" x:Name="ArrowToggle">
+                                <Polygon Fill="{TemplateBinding Foreground}" Margin="4" Points="0,0 7,0 3.5,3.5" x:Name="ArrowPolygon" />
+                            </ToggleButton>
+                            <ContentControl FontFamily="{TemplateBinding HeaderFontFamily}" FontSize="{TemplateBinding HeaderFontSize}" FontStretch="{TemplateBinding HeaderFontStretch}" FontStyle="{TemplateBinding HeaderFontStyle}" FontWeight="{TemplateBinding HeaderFontWeight}" Foreground="{TemplateBinding HeaderForeground}" IsTabStop="False" Padding="{TemplateBinding HeaderPadding}" HorizontalAlignment="{TemplateBinding HorizontalHeaderAlignment}" VerticalAlignment="{TemplateBinding VerticalHeaderAlignment}">
+                                <ContentControl.Template>
+                                    <ControlTemplate TargetType="ContentControl">
+                                        <ContentPresenter Cursor="{TemplateBinding Cursor}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Margin="{TemplateBinding Padding}" />
+                                    </ControlTemplate>
+                                </ContentControl.Template>
+                                <ContentPresenter x:Name="HeaderPresenter" ContentTemplate="{TemplateBinding HeaderTemplate}" />
+                            </ContentControl>
+                        </Grid>
+                        <Border x:Name="FocusedVisualElement" BorderBrush="{TemplateBinding FocusBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" Visibility="{TemplateBinding FocusCuesVisibility}" Opacity="0" />
+                        <Border x:Name="DisabledVisualElement" Background="{StaticResource DisabledBrush}" CornerRadius="{TemplateBinding CornerRadius}" IsHitTestVisible="False" Opacity="0" Visibility="{TemplateBinding DisabledCuesVisibility}" />
+                        <Popup x:Name="DropDownPopup" VerticalAlignment="Bottom">
+                            
+                            <Popup.AllowsTransparency>true</Popup.AllowsTransparency>
+                            <Grid Width="{Binding Path=DropDownWidth,RelativeSource={RelativeSource TemplatedParent}}" Height="{Binding Path=DropDownHeight,RelativeSource={RelativeSource TemplatedParent}}" MinWidth="{Binding Path=MinDropDownWidth,RelativeSource={RelativeSource TemplatedParent}}" MinHeight="{Binding Path=MinDropDownHeight,RelativeSource={RelativeSource TemplatedParent}}" MaxWidth="{Binding Path=MaxDropDownWidth,RelativeSource={RelativeSource TemplatedParent}}" MaxHeight="{Binding Path=MaxDropDownHeight,RelativeSource={RelativeSource TemplatedParent}}">
+                                <ContentPresenter Margin="{Binding Path=Padding,RelativeSource={RelativeSource TemplatedParent}}" />
+                            </Grid>
+                        </Popup>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="c1:C1SplitButton" BasedOn="{StaticResource C1.Silverlight.DropDownButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1:C1SplitButton">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="DropDownOpenStates">
+                                <VisualState x:Name="Closed" />
+                                <VisualState x:Name="Opened" />
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledVisualElement" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                            <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Unfocused" />
+                                <VisualState x:Name="Focused">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="FocusedVisualElement" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                            <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <c1:C1BrushBuilder x:Name="InnerBorderMouseOverBrush" Input="{TemplateBinding MouseOverBrush}" DesignBrush="{StaticResource InnerBorderMouseOverBrush}" DesignColor="{StaticResource MouseOverColor}" />
+                        <Grid Margin="{TemplateBinding BorderThickness}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="Button" Style="{StaticResource ClearStyleButtonStyle}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" c1:ClearStyleExtensions.CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource sideRadiusConverter}, ConverterParameter='topleft bottomleft'}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" FontFamily="{TemplateBinding HeaderFontFamily}" FontSize="{TemplateBinding HeaderFontSize}" FontStretch="{TemplateBinding HeaderFontStretch}" FontStyle="{TemplateBinding HeaderFontStyle}" FontWeight="{TemplateBinding HeaderFontWeight}" Foreground="{TemplateBinding HeaderForeground}" Padding="{TemplateBinding HeaderPadding}" IsTabStop="False" HorizontalContentAlignment="{TemplateBinding HorizontalHeaderAlignment}" VerticalContentAlignment="{TemplateBinding VerticalHeaderAlignment}">
+                                <ContentPresenter x:Name="HeaderPresenter" ContentTemplate="{TemplateBinding HeaderTemplate}" />
+                            </Button>
+                            <ToggleButton Grid.Column="2" Style="{StaticResource ClearStyleButtonStyle}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" c1:ClearStyleExtensions.CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource sideRadiusConverter}, ConverterParameter='topright bottomright'}" Background="{TemplateBinding Background}" Foreground="{TemplateBinding HeaderForeground}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1 0 0 0" IsEnabled="{TemplateBinding IsEnabled}" IsTabStop="{TemplateBinding IsTabStop}" Padding="0" x:Name="ArrowToggle">
+                                <Polygon Fill="{TemplateBinding Foreground}" Margin="4" Points="0,0 7,0 3.5,3.5" x:Name="ArrowPolygon" />
+                            </ToggleButton>
+                        </Grid>
+                        <Border x:Name="BackgroundElement" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" />
+                        <Border x:Name="MouseOverElement" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" Visibility="Collapsed">
+                            <Border BorderBrush="{Binding Output, ElementName=InnerBorderMouseOverBrush}" BorderThickness="{StaticResource InnerBorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" />
+                        </Border>
+                        <Border x:Name="FocusedVisualElement" BorderBrush="{TemplateBinding FocusBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" Visibility="{TemplateBinding FocusCuesVisibility}" Opacity="0" />
+                        <Border x:Name="DisabledVisualElement" Background="{StaticResource DisabledBrush}" CornerRadius="{TemplateBinding CornerRadius}" IsHitTestVisible="False" Opacity="0" Visibility="{TemplateBinding DisabledCuesVisibility}" />
+                        <Popup x:Name="DropDownPopup" VerticalAlignment="Bottom">
+                            
+                            <Popup.AllowsTransparency>true</Popup.AllowsTransparency>
+                            <Grid Width="{Binding Path=DropDownWidth,RelativeSource={RelativeSource TemplatedParent}}" Height="{Binding Path=DropDownHeight,RelativeSource={RelativeSource TemplatedParent}}" MinWidth="{Binding Path=MinDropDownWidth,RelativeSource={RelativeSource TemplatedParent}}" MinHeight="{Binding Path=MinDropDownHeight,RelativeSource={RelativeSource TemplatedParent}}" MaxWidth="{Binding Path=MaxDropDownWidth,RelativeSource={RelativeSource TemplatedParent}}" MaxHeight="{Binding Path=MaxDropDownHeight,RelativeSource={RelativeSource TemplatedParent}}">
+                                <ContentPresenter Margin="{Binding Path=Padding,RelativeSource={RelativeSource TemplatedParent}}" />
+                            </Grid>
+                        </Popup>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

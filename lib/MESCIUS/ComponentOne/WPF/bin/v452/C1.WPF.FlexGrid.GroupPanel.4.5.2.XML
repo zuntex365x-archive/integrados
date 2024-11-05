@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>C1.WPF.FlexGrid.GroupPanel.4.5.2</name>
+  </assembly>
+  <members>
+    <member name="T:C1.WPF.FlexGrid.C1FlexGridGroupPanel">
+      <summary>
+            Class that provides a UI for manipulating groups in a <see cref="T:C1.WPF.FlexGrid.C1FlexGrid" />
+            control that is bound to an <see cref="T:System.ComponentModel.ICollectionView" />.
+            </summary>
+      <remarks>
+        <para>The <see cref="T:C1.WPF.FlexGrid.C1FlexGridGroupPanel" /> is an independent element that is 
+            connected to a <see cref="T:C1.WPF.FlexGrid.C1FlexGrid" /> through the <see cref="P:C1.WPF.FlexGrid.C1FlexGridGroupPanel.FlexGrid" />
+            property.</para>
+        <para>The <see cref="T:C1.WPF.FlexGrid.C1FlexGridGroupPanel" /> shows a panel and allows users to
+            create groups by dragging column headers into the panel. Users can reorder the
+            groups by dragging the group markers, or sort and remove groups by clicking 
+            the group markers.</para>
+        <para>The appearance of the group markers is automatically determined by the grid 
+            that is connected to the <see cref="T:C1.WPF.FlexGrid.C1FlexGridGroupPanel" />. You don't have to
+            select any fonts or brushes.</para>
+        <para>The XAML below shows how you would create a <see cref="T:C1.WPF.FlexGrid.C1FlexGridGroupPanel" />
+            and connect it to a grid:</para>
+        <code>
+          <!-- Add grouping UI to the _flex control -->
+            &lt;c1:C1FlexGridGroupPanel 
+              x:Name="_groupPanel" Grid.Row="0" Background="WhiteSmoke"
+              FlexGrid="{Binding ElementName=_flex}"
+              WatermarkText="Drag column headers here to create groups."
+              MaxGroups="8"
+              HideGroupedColumns="True"
+              DragMarkerColor="#312DFF" /&gt;
+            </code>
+      </remarks>
+    </member>
+    <member name="M:C1.WPF.FlexGrid.C1FlexGridGroupPanel.#ctor">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.FlexGrid.C1FlexGridGroupPanel" />.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexGrid.C1FlexGridGroupPanel.WatermarkText">
+      <summary>
+            Gets or sets the message that appears in the empty group area.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexGrid.C1FlexGridGroupPanel.Watermark">
+      <summary>
+            Gets the <see cref="T:System.Windows.Controls.TextBlock" /> that shows the watermark in the empty group area.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexGrid.C1FlexGridGroupPanel.FlexGrid">
+      <summary>
+            Gets or sets the <see cref="T:C1.WPF.FlexGrid.C1FlexGrid" /> that is connected to this
+            <see cref="T:C1.WPF.FlexGrid.C1FlexGridGroupPanel" />.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexGrid.C1FlexGridGroupPanel.FlexGridProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexGrid.C1FlexGridGroupPanel.FlexGrid" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexGrid.C1FlexGridGroupPanel.HideGroupedColumns">
+      <summary>
+            Gets or sets whether the control should automatically hide grouped columns.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexGrid.C1FlexGridGroupPanel.HideGroupedColumnsProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexGrid.C1FlexGridGroupPanel.HideGroupedColumns" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexGrid.C1FlexGridGroupPanel.MaxGroups">
+      <summary>
+            Gets or sets the maximum number of groups allowed.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexGrid.C1FlexGridGroupPanel.MaxGroupsProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexGrid.C1FlexGridGroupPanel.MaxGroups" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexGrid.C1FlexGridGroupPanel.DragMarkerColor">
+      <summary>
+            Gets or sets the color used to show the drag and drop indicators.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexGrid.C1FlexGridGroupPanel.DragMarkerColorProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexGrid.C1FlexGridGroupPanel.DragMarkerColor" /> dependency property.
+            </summary>
+    </member>
+    <member name="E:C1.WPF.FlexGrid.C1FlexGridGroupPanel.PropertyGroupCreated">
+      <summary>
+            Event that occurs when a new <see cref="T:System.Windows.Data.PropertyGroupDescription" /> has been created.
+            </summary>
+      <remarks>
+            This event allows you to customize the new <see cref="T:System.Windows.Data.PropertyGroupDescription" />
+            by assigning it a custom <see cref="!:IConverter" />.
+            </remarks>
+    </member>
+    <member name="M:C1.WPF.FlexGrid.C1FlexGridGroupPanel.OnPropertyGroupCreated(C1.WPF.FlexGrid.PropertyGroupCreatedEventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.WPF.FlexGrid.C1FlexGridGroupPanel.PropertyGroupCreated" /> event.
+            </summary>
+      <param name="e">
+      </param>
+    </member>
+    <member name="T:C1.WPF.FlexGrid.PropertyGroupCreatedEventArgs">
+      <summary>
+            Arguments for the <see cref="!:PropertyGroupCreated" /> event.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexGrid.PropertyGroupCreatedEventArgs.PropertyGroupDescription">
+      <summary>
+            Gets or sets the <see cref="P:C1.WPF.FlexGrid.PropertyGroupCreatedEventArgs.PropertyGroupDescription" /> for the group being created.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexGrid.PropertyGroupCreatedEventArgs.DataType">
+      <summary>
+            Gets the data type for the group being created.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexGrid.PropertyGroupCreatedEventArgs.#ctor(System.String,System.Type)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.FlexGrid.PropertyGroupCreatedEventArgs" /></summary>
+      <param name="propName">Name of the property being grouped on.</param>
+      <param name="dataType">Type of the property being grouped on.</param>
+    </member>
+    <member name="T:C1.Silverlight.FlexGrid.Resources.C1_Silverlight_FlexGrid_GroupPanel">
+      <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.FlexGrid.Resources.C1_Silverlight_FlexGrid_GroupPanel.Culture">
+      <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.FlexGrid.Resources.C1_Silverlight_FlexGrid_GroupPanel.DefaultWatermarkText">
+      <summary>
+              Looks up a localized string similar to DefaultWatermarkText.
+            </summary>
+    </member>
+  </members>
+</doc>

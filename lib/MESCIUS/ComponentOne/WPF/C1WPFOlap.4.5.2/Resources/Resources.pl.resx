@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FilterTypes" xml:space="preserve">
+    <value>Filtr liczb|Filtr daty/godziny|Filtr tekstu</value>
+  </data>
+  <data name="Conditions" xml:space="preserve">
+    <value>Brak|Równa się|Nie równa się|Większe niż|Mniejsze niż|Większe niż lub równe|Mniejsze niż lub równe|Zawiera|Nie zawiera|Zaczyna się od|Kończy się na</value>
+  </data>
+  <data name="SubtotalFuncs" xml:space="preserve">
+    <value>Suma|Liczba|Średnia|Maksymalna|Minimalna|Pierwsza|Ostatnia|Wariancja|Odchylenie standardowe|Wariancja populacji|Odchylenie standardowe populacji</value>
+  </data>
+  <data name="ShowTotalsColumn" xml:space="preserve">
+    <value>Pokaż kolumnę sumy</value>
+  </data>
+  <data name="ShowTotalsRow" xml:space="preserve">
+    <value>Pokaż wiersz sumy</value>
+  </data>
+  <data name="ShowZeros" xml:space="preserve">
+    <value>Pokaż zera</value>
+  </data>
+  <data name="ShowDetailOnRightClick" xml:space="preserve">
+    <value>Pokaż szczegóły po kliknięciu prawym przyciskiem myszy</value>
+  </data>
+  <data name="ShowSelectionStatus" xml:space="preserve">
+    <value>Pokaż stan wyboru</value>
+  </data>
+  <data name="ChartOptions" xml:space="preserve">
+    <value>Opcje wykresu</value>
+  </data>
+  <data name="GridOptions" xml:space="preserve">
+    <value>Opcje siatki</value>
+  </data>
+  <data name="ChartType" xml:space="preserve">
+    <value>Typ wykresu</value>
+  </data>
+  <data name="Palette" xml:space="preserve">
+    <value>Paleta</value>
+  </data>
+  <data name="ShowGridLines" xml:space="preserve">
+    <value>Pokaż linie siatki</value>
+  </data>
+  <data name="ShowTitle" xml:space="preserve">
+    <value>Pokaż tytuł</value>
+  </data>
+  <data name="Stacked" xml:space="preserve">
+    <value>Skumulowany</value>
+  </data>
+  <data name="ShowLegend" xml:space="preserve">
+    <value>Pokaż legendę</value>
+  </data>
+  <data name="RawDataOptions" xml:space="preserve">
+    <value>Opcje danych pierwotnych</value>
+  </data>
+  <data name="ShowRawData" xml:space="preserve">
+    <value>Pokaż dane pierwotne</value>
+  </data>
+  <data name="DateFormats" xml:space="preserve">
+    <value>MMMM dd, yyyy|d|d/M/yy|dd/MM/yy|dd/MM/yyyy|MMM yyyy|MMMM yyyy|d-MMM-yy|d-MMM-yyyy|Niestandardowy</value>
+  </data>
+  <data name="NumberFormats" xml:space="preserve">
+    <value>Liczba|Waluta|Procent|Naukowy|Niestandardowy</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>Brak</value>
+  </data>
+  <data name="ChartTypes" xml:space="preserve">
+    <value>Słupkowy|Kolumnowy|Warstwowy|Liniowy|Punktowy|Pie</value>
+  </data>
+  <data name="DecimalPlaces" xml:space="preserve">
+    <value>Miejsca dziesiętne:</value>
+  </data>
+  <data name="InvalidFormat" xml:space="preserve">
+    <value>Niepoprawny format</value>
+  </data>
+  <data name="Sample" xml:space="preserve">
+    <value>Przykład:</value>
+  </data>
+  <data name="UseThousandSeparator" xml:space="preserve">
+    <value>Użyj separatora 1000</value>
+  </data>
+  <data name="CustomFormat" xml:space="preserve">
+    <value>Format niestandardowy:</value>
+  </data>
+  <data name="BeginsWith" xml:space="preserve">
+    <value>Zaczyna się od...</value>
+  </data>
+  <data name="Between" xml:space="preserve">
+    <value>Między...</value>
+  </data>
+  <data name="ClearFilter" xml:space="preserve">
+    <value>Wyczyść filtr</value>
+  </data>
+  <data name="Contains" xml:space="preserve">
+    <value>Zawiera...</value>
+  </data>
+  <data name="CustomFilter" xml:space="preserve">
+    <value>Filtr niestandardowy</value>
+  </data>
+  <data name="DoesNotContain" xml:space="preserve">
+    <value>Nie zawiera...</value>
+  </data>
+  <data name="DoesNotEqual" xml:space="preserve">
+    <value>Nie równa się...</value>
+  </data>
+  <data name="EndsWith" xml:space="preserve">
+    <value>Kończy się na...</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filtr</value>
+  </data>
+  <data name="GreaterThan" xml:space="preserve">
+    <value>Większe niż...</value>
+  </data>
+  <data name="GreaterThanOrEqualTo" xml:space="preserve">
+    <value>Większe niż lub równe...</value>
+  </data>
+  <data name="LessThan" xml:space="preserve">
+    <value>Mniejsze niż...</value>
+  </data>
+  <data name="LessThanOrEqualTo" xml:space="preserve">
+    <value>Mniejsze niż lub równe...</value>
+  </data>
+  <data name="MnuEquals" xml:space="preserve">
+    <value>Równa się...</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>(Wybierz wszystkie)</value>
+  </data>
+  <data name="ActualSize" xml:space="preserve">
+    <value>Rozmiar rzeczywisty</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>I</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>Na dole:</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Anuluj</value>
+  </data>
+  <data name="Display" xml:space="preserve">
+    <value>Wyświetl</value>
+  </data>
+  <data name="FitToOnePage" xml:space="preserve">
+    <value>Dopasuj do jednej strony</value>
+  </data>
+  <data name="FitToPageWidth" xml:space="preserve">
+    <value>Dopasuj do szerokości strony</value>
+  </data>
+  <data name="Format" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="HighValues" xml:space="preserve">
+    <value>Wartości maks.</value>
+  </data>
+  <data name="IncludeInReport" xml:space="preserve">
+    <value>Uwzględnij w raporcie</value>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>Z lewej:</value>
+  </data>
+  <data name="LowValues" xml:space="preserve">
+    <value>Wartości min.</value>
+  </data>
+  <data name="Margin" xml:space="preserve">
+    <value>Margines:</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OlapChart" xml:space="preserve">
+    <value>Wykres</value>
+  </data>
+  <data name="OlapGrid" xml:space="preserve">
+    <value>Siatka</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>Lub</value>
+  </data>
+  <data name="Padding" xml:space="preserve">
+    <value>Wypełnienie:</value>
+  </data>
+  <data name="RawData" xml:space="preserve">
+    <value>Dane pierwotne</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>Z prawej:</value>
+  </data>
+  <data name="Scaling" xml:space="preserve">
+    <value>Skalowanie:</value>
+  </data>
+  <data name="ShowItems" xml:space="preserve">
+    <value>Pokaż elementy, w których wartość wynosi:</value>
+  </data>
+  <data name="Subtotals" xml:space="preserve">
+    <value>Sumy częściowe</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>U góry:</value>
+  </data>
+  <data name="WeighBy" xml:space="preserve">
+    <value>Grubość według:</value>
+  </data>
+  <data name="ChooseFields" xml:space="preserve">
+    <value>Wybierz pola, które chcesz dodać do tabeli:</value>
+  </data>
+  <data name="ColumnFields" xml:space="preserve">
+    <value>Pola kolumn</value>
+  </data>
+  <data name="CurrentDate" xml:space="preserve">
+    <value>Bieżąca data</value>
+  </data>
+  <data name="CurrentTime" xml:space="preserve">
+    <value>Bieżąca godzina</value>
+  </data>
+  <data name="DeferUpdates" xml:space="preserve">
+    <value>Wstrzymaj aktualizacje</value>
+  </data>
+  <data name="DragFields" xml:space="preserve">
+    <value>Przeciągnij pola między obszarami poniżej:</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Stopka:</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Nagłówek:</value>
+  </data>
+  <data name="HeaderFooter" xml:space="preserve">
+    <value>Nagłówek/stopka</value>
+  </data>
+  <data name="MoveDown" xml:space="preserve">
+    <value>Przesuń w dół</value>
+  </data>
+  <data name="MoveToBeginning" xml:space="preserve">
+    <value>Przesuń do początku</value>
+  </data>
+  <data name="MoveToColumnFields" xml:space="preserve">
+    <value>Przesuń do pól kolumn</value>
+  </data>
+  <data name="MoveToEnd" xml:space="preserve">
+    <value>Przesuń na koniec</value>
+  </data>
+  <data name="MoveToFilterFields" xml:space="preserve">
+    <value>Przesuń do pól filtrów</value>
+  </data>
+  <data name="MoveToRowFields" xml:space="preserve">
+    <value>Przesuń do pól wierszy</value>
+  </data>
+  <data name="MoveToValueFields" xml:space="preserve">
+    <value>Przesuń do pól wartości</value>
+  </data>
+  <data name="MoveUp" xml:space="preserve">
+    <value>Przesuń w górę</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Strona</value>
+  </data>
+  <data name="PageNumber" xml:space="preserve">
+    <value>Numer strony</value>
+  </data>
+  <data name="RemoveField" xml:space="preserve">
+    <value>Usuń pole</value>
+  </data>
+  <data name="ReportContent" xml:space="preserve">
+    <value>Raportuj zawartość</value>
+  </data>
+  <data name="RowFields" xml:space="preserve">
+    <value>Pola wierszy</value>
+  </data>
+  <data name="Separator" xml:space="preserve">
+    <value>Separator</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Tytuł</value>
+  </data>
+  <data name="TotalPageCount" xml:space="preserve">
+    <value>Całkowita liczba stron</value>
+  </data>
+  <data name="Values" xml:space="preserve">
+    <value>Wartości</value>
+  </data>
+  <data name="FieldSettings" xml:space="preserve">
+    <value>Ustawienia pola...</value>
+  </data>
+  <data name="Chart" xml:space="preserve">
+    <value>Wykres</value>
+  </data>
+  <data name="CustomizeGridView" xml:space="preserve">
+    <value>Dostosuj widok siatki</value>
+  </data>
+  <data name="GrandTotals" xml:space="preserve">
+    <value>Sumy końcowe</value>
+  </data>
+  <data name="LoadViewFromFile" xml:space="preserve">
+    <value>Załaduj widok Olap z pliku</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Opcje...</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Drukuj</value>
+  </data>
+  <data name="Redo" xml:space="preserve">
+    <value>Wykonaj ponownie</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Zgłoś</value>
+  </data>
+  <data name="SaveViewToFile" xml:space="preserve">
+    <value>Zapisz widok Olap w pliku</value>
+  </data>
+  <data name="TotalColumns" xml:space="preserve">
+    <value>Całkowita liczba kolumn</value>
+  </data>
+  <data name="TotalRows" xml:space="preserve">
+    <value>Całkowita liczba wierszy</value>
+  </data>
+  <data name="TotalsOnly" xml:space="preserve">
+    <value>Tylko sumy</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Cofnij</value>
+  </data>
+  <data name="GenerateReports" xml:space="preserve">
+    <value>Generuj raporty na podstawie bieżącego widoku.</value>
+  </data>
+  <data name="Absolute" xml:space="preserve">
+    <value>Bezwzględny</value>
+  </data>
+  <data name="ApplyToValuesAbove" xml:space="preserve">
+    <value>Zastosuj do powyższych wartości</value>
+  </data>
+  <data name="Background" xml:space="preserve">
+    <value>Tło:</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>Pogrubione:</value>
+  </data>
+  <data name="Caption" xml:space="preserve">
+    <value>Podpis</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Wyczyść</value>
+  </data>
+  <data name="Foreground" xml:space="preserve">
+    <value>Pierwszy plan:</value>
+  </data>
+  <data name="NotSet" xml:space="preserve">
+    <value>Nie ustawiono</value>
+  </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>Procent</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Styl</value>
+  </data>
+  <data name="ApplyToValuesBelow" xml:space="preserve">
+    <value>Zastosuj do poniższych wartości</value>
+  </data>
+  <data name="DefaultExtension" xml:space="preserve">
+    <value>.olapx</value>
+  </data>
+  <data name="DocumentOptions" xml:space="preserve">
+    <value>Opcje dokumentu</value>
+  </data>
+  <data name="FieldSettingsParam" xml:space="preserve">
+    <value>Ustawienia pola: {0}</value>
+  </data>
+  <data name="FileDialogFilter" xml:space="preserve">
+    <value>Pliki (*.olapx)|*.olapx definicji widoku C1Olap</value>
+  </data>
+  <data name="StyleConditions" xml:space="preserve">
+    <value>Nie ustawiono|Bezwzględny|Procent</value>
+  </data>
+  <data name="Grid" xml:space="preserve">
+    <value>Siatka</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>według</value>
+  </data>
+  <data name="CustomizeChartView" xml:space="preserve">
+    <value>Customize chart view</value>
+  </data>
+  <data name="DetailView" xml:space="preserve">
+    <value>Detail View:</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>items</value>
+  </data>
+  <data name="Subtotal" xml:space="preserve">
+    <value>Subtotal</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Eksport</value>
+  </data>
+  <data name="GroupAnnotations" xml:space="preserve">
+    <value>Adnotacje grupy</value>
+  </data>
+  <data name="ExportDialogDefaultExt" xml:space="preserve">
+    <value>.csv</value>
+  </data>
+  <data name="ExportDialogFilter" xml:space="preserve">
+    <value>CSV (*.csv)|*.csv|Webpage(*.html)|*.html|Text (*.txt)|*.txt</value>
+  </data>
+</root>

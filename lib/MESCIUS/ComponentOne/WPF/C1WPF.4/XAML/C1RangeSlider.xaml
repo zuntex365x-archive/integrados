@@ -1,0 +1,362 @@
+﻿	  
+	   
+    
+		
+
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="clr-namespace:C1.WPF" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/C1.WPF.4;component/themes/Common.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+
+
+	<!--******************** C1RangeSlider ********************-->
+
+	<!-- Style (size) @ Horizontal RangeSlider Thumb -->
+	<Style x:Key="RangeSliderHorizontalThumbBorderStyle" TargetType="Grid">
+		<Setter Property="MinHeight" Value="18" />
+		<Setter Property="Width" Value="11" />
+	</Style>
+	<!-- Style (size) @ Vertical RangeSlider Thumb -->
+	<Style x:Key="RangeSliderVerticalThumbBorderStyle" TargetType="Grid">
+		<Setter Property="Height" Value="11" />
+		<Setter Property="MinWidth" Value="18" />
+	</Style>
+
+	<!-- CornerRadius @ RangeSlider Thumb -->
+	<CornerRadius x:Key="RangeSliderThumbCornerRadius">2</CornerRadius>
+
+	<!-- Brush @ RangeSlider Horizontal Bar Background -->
+	<SolidColorBrush x:Key="RangeSliderHorizontalBarBrush" Color="#FFEDEDED" />
+	<!-- Brush @ RangeSlider Vertical Bar Background -->
+	<SolidColorBrush x:Key="RangeSliderVerticalBarBrush" Color="#FFEDEDED" />
+
+	<!-- Style @ Horizontal RangeSlider Bar -->
+	<Style x:Key="RangeSliderHorizontalBarStyle" TargetType="Rectangle">
+		<Setter Property="StrokeThickness" Value="1" />
+		<Setter Property="RadiusX" Value="1" />
+		<Setter Property="RadiusY" Value="1" />
+		<Setter Property="Height" Value="3" />
+		<Setter Property="Margin" Value="5,0,5,0" />
+	</Style>
+	<!-- Style @ Vertical RangeSlider Bar-->
+	<Style x:Key="RangeSliderVerticalBarStyle" TargetType="Rectangle">
+		<Setter Property="StrokeThickness" Value="1" />
+		<Setter Property="RadiusX" Value="1" />
+		<Setter Property="RadiusY" Value="1" />
+		<Setter Property="Width" Value="3" />
+		<Setter Property="Margin" Value="0,5,0,5" />
+	</Style>
+
+	<!-- Brush @ Horizontal RangeSlider Thumb Background -->
+	<LinearGradientBrush x:Key="RangeSliderHorizontalThumbBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+		<GradientStop Color="#FFFAFBFC" Offset="0" />
+		<GradientStop Color="#FFD0DBE7" Offset="1" />
+	</LinearGradientBrush>
+	<!-- Brush @ Horizontal RangeSlider Thumb on MouseOver Background -->
+	<LinearGradientBrush x:Key="RangeSliderHorizontalThumbOverBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+		<GradientStop Color="#FFF1FBFF" Offset="0" />
+		<GradientStop Color="#FFC5E3ED" Offset="1" />
+	</LinearGradientBrush>
+	<!-- Brush @ Horizontal RangeSlider Thumb Selected Background -->
+	<LinearGradientBrush x:Key="RangeSliderHorizontalThumbSelectedBackground" StartPoint="0.5,0" EndPoint="0.5,1">
+		<GradientStop Color="#FFDEF3FA" Offset="0" />
+		<GradientStop Color="#FFA8D4E3" Offset="1" />
+	</LinearGradientBrush>
+	<!-- Brush @ Vertical RangeSlider Thumb Background-->
+	<LinearGradientBrush x:Key="RangeSliderVerticalThumbBrush" StartPoint="0,0.5" EndPoint="1,0.5">
+		<GradientStop Color="#FFFAFBFC" Offset="0" />
+		<GradientStop Color="#FFD0DBE7" Offset="1" />
+	</LinearGradientBrush>
+	<!-- Brush @ Vertical RangeSlider Thumb Background on MouseOver -->
+	<LinearGradientBrush x:Key="RangeSliderVerticalThumbOverBrush" StartPoint="0,0.5" EndPoint="1,0.5">
+		<GradientStop Color="#FFF1FBFF" Offset="0" />
+		<GradientStop Color="#FFC5E3ED" Offset="1" />
+	</LinearGradientBrush>
+	<!-- Brush @ Vertical RangeSlider Thumb Selected Background-->
+	<LinearGradientBrush x:Key="RangeSliderVerticalThumbSelectedBackground" StartPoint="0,0.5" EndPoint="1,0.5">
+		<GradientStop Color="#FFDEF3FA" Offset="0" />
+		<GradientStop Color="#FFA8D4E3" Offset="1" />
+	</LinearGradientBrush>
+
+	<!-- C1RangeSlider Thumb Style for Horizontal Orientation-->
+	<Style x:Key="RangeSliderHorizontalThumbStyle" TargetType="Thumb">
+		<Setter Property="IsTabStop" Value="True" />
+        
+        <Setter Property="Focusable" Value="True" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Thumb">
+					<Grid Style="{StaticResource RangeSliderHorizontalThumbBorderStyle}">
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualState x:Name="Normal" />
+								<VisualState x:Name="MouseOver">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Pressed">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundElement" Storyboard.TargetProperty="BorderBrush">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Null}" />
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Disabled">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledVisualElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="FocusStates">
+								<VisualState x:Name="Focused">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="FocusedVisualElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Unfocused" />
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<c1:C1BrushBuilder x:Name="BackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource RangeSliderHorizontalThumbBrush}" DesignColor="{StaticResource BaseColor}" />
+						<c1:C1BrushBuilder x:Name="MouseOverBrush" Input="{TemplateBinding c1:ClearStyleExtensions.MouseOverBrush}" DesignBrush="{StaticResource RangeSliderHorizontalThumbOverBrush}" DesignColor="{StaticResource MouseOverColor}" />
+						<c1:C1BrushBuilder x:Name="PressedBrush" Input="{TemplateBinding c1:ClearStyleExtensions.PressedBrush}" DesignBrush="{StaticResource RangeSliderHorizontalThumbSelectedBackground}" DesignColor="{StaticResource SelectedColor}" />
+						<c1:C1BrushBuilder x:Name="InnerBorderBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource InnerBorderBrush}" DesignColor="{StaticResource BaseColor}" />
+						<c1:C1BrushBuilder x:Name="InnerBorderMouseOverBrush" Input="{TemplateBinding c1:ClearStyleExtensions.MouseOverBrush}" DesignBrush="{StaticResource InnerBorderMouseOverBrush}" DesignColor="{StaticResource MouseOverColor}" />
+						<c1:C1BrushBuilder x:Name="InnerBorderPressedBrush" Input="{TemplateBinding c1:ClearStyleExtensions.PressedBrush}" DesignBrush="{StaticResource InnerBorderPressedBrush}" DesignColor="{StaticResource SelectedColor}" />
+						<Border x:Name="BackgroundElement" Background="{Binding Output, ElementName=BackgroundBrush}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{StaticResource RangeSliderThumbCornerRadius}">
+							<Border BorderBrush="{Binding Output, ElementName=InnerBorderBrush}" BorderThickness="{StaticResource InnerBorderThickness}" CornerRadius="{StaticResource InnerBorderCornerRadius}" />
+						</Border>
+						<Border x:Name="MouseOverElement" Background="{Binding Output, ElementName=MouseOverBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{StaticResource RangeSliderThumbCornerRadius}" Visibility="Collapsed">
+							<Border BorderBrush="{Binding Output, ElementName=InnerBorderMouseOverBrush}" BorderThickness="{StaticResource InnerBorderThickness}" CornerRadius="{StaticResource InnerBorderCornerRadius}" />
+						</Border>
+						<Border x:Name="FocusedVisualElement" BorderBrush="{TemplateBinding c1:ClearStyleExtensions.FocusBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{StaticResource RangeSliderThumbCornerRadius}" Visibility="Collapsed" />
+						<Border x:Name="PressedElement" Background="{Binding Output, ElementName=PressedBrush}" BorderBrush="{TemplateBinding c1:ClearStyleExtensions.PressedBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{StaticResource RangeSliderThumbCornerRadius}" Visibility="Collapsed">
+							<Border BorderBrush="{Binding Output, ElementName=InnerBorderPressedBrush}" BorderThickness="{StaticResource InnerBorderThickness}" CornerRadius="{StaticResource InnerBorderCornerRadius}" />
+						</Border>
+						<Border x:Name="DisabledVisualElement" Background="{StaticResource DisabledBrush}" CornerRadius="{StaticResource RangeSliderThumbCornerRadius}" Visibility="Collapsed" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<!-- C1RangeSlider Thumb Style for Vertical Orientation-->
+	<Style x:Key="RangeSliderVerticalThumbStyle" TargetType="Thumb">
+		<Setter Property="IsTabStop" Value="True" />
+        
+        <Setter Property="Focusable" Value="True" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Thumb">
+					<Grid Style="{StaticResource RangeSliderVerticalThumbBorderStyle}">
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualState x:Name="Normal" />
+								<VisualState x:Name="MouseOver">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Pressed">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Disabled">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledVisualElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="FocusStates">
+								<VisualState x:Name="Focused">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="FocusedVisualElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Unfocused" />
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<c1:C1BrushBuilder x:Name="BackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource RangeSliderVerticalThumbBrush}" DesignColor="{StaticResource BaseColor}" />
+						<c1:C1BrushBuilder x:Name="MouseOverBrush" Input="{TemplateBinding c1:ClearStyleExtensions.MouseOverBrush}" DesignBrush="{StaticResource RangeSliderVerticalThumbOverBrush}" DesignColor="{StaticResource MouseOverColor}" />
+						<c1:C1BrushBuilder x:Name="PressedBrush" Input="{TemplateBinding c1:ClearStyleExtensions.PressedBrush}" DesignBrush="{StaticResource RangeSliderVerticalThumbSelectedBackground}" DesignColor="{StaticResource SelectedColor}" />
+						<c1:C1BrushBuilder x:Name="InnerBorderBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource InnerBorderBrush}" DesignColor="{StaticResource BaseColor}" />
+						<c1:C1BrushBuilder x:Name="InnerBorderMouseOverBrush" Input="{TemplateBinding c1:ClearStyleExtensions.MouseOverBrush}" DesignBrush="{StaticResource InnerBorderMouseOverBrush}" DesignColor="{StaticResource MouseOverColor}" />
+						<c1:C1BrushBuilder x:Name="InnerBorderPressedBrush" Input="{TemplateBinding c1:ClearStyleExtensions.PressedBrush}" DesignBrush="{StaticResource InnerBorderPressedBrush}" DesignColor="{StaticResource SelectedColor}" />
+						<Border x:Name="BackgroundElement" Background="{Binding Output, ElementName=BackgroundBrush}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{StaticResource RangeSliderThumbCornerRadius}">
+							<Border BorderBrush="{Binding Output, ElementName=InnerBorderBrush}" BorderThickness="{StaticResource InnerBorderThickness}" CornerRadius="{StaticResource InnerBorderCornerRadius}" />
+						</Border>
+						<Border x:Name="MouseOverElement" Background="{Binding Output, ElementName=MouseOverBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{StaticResource RangeSliderThumbCornerRadius}" Visibility="Collapsed">
+							<Border BorderBrush="{StaticResource InnerBorderMouseOverBrush}" BorderThickness="{StaticResource InnerBorderThickness}" CornerRadius="{StaticResource InnerBorderCornerRadius}" />
+						</Border>
+						<Border x:Name="FocusedVisualElement" BorderBrush="{TemplateBinding c1:ClearStyleExtensions.FocusBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{StaticResource RangeSliderThumbCornerRadius}" Visibility="Collapsed" />
+						<Border x:Name="PressedElement" Background="{Binding Output, ElementName=PressedBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{StaticResource RangeSliderThumbCornerRadius}" Visibility="Collapsed">
+							<Border BorderBrush="{Binding Output, ElementName=InnerBorderPressedBrush}" BorderThickness="{StaticResource InnerBorderThickness}" CornerRadius="{StaticResource InnerBorderCornerRadius}" />
+						</Border>
+						<Border x:Name="DisabledVisualElement" Background="{StaticResource DisabledBrush}" CornerRadius="{StaticResource RangeSliderThumbCornerRadius}" Visibility="Collapsed" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+    <Style x:Key="MiddleThumbClearStyle" TargetType="Thumb">
+        <Setter Property="IsTabStop" Value="False" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Border Opacity="0" Background="Transparent" BorderThickness="0" Margin="0" Padding="0" CornerRadius="0">
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="c1:C1RangeSlider">
+        
+        
+        <Setter Property="Background" Value="{StaticResource WpfInputBaseBrush}" />
+		<Setter Property="MouseOverBrush" Value="{StaticResource WpfInputMouseOverBrush}" />
+		<Setter Property="PressedBrush" Value="{StaticResource WpfInputSelectedBackground}" />
+		<Setter Property="FocusBrush" Value="{StaticResource WpfInputFocusBrush}" />
+		<Setter Property="BorderBrush" Value="{StaticResource WpfInputBorderBrush}" />
+		<Setter Property="BorderThickness" Value="{StaticResource GeneralThickness}" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="c1:C1RangeSlider">
+					<Grid x:Name="Root" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualState x:Name="Normal" />
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledVisualElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="VDisabledVisualElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver" />
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="FocusStates">
+								<VisualState x:Name="Focused">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="FocusVisual" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Unfocused" />
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<!-- Horizontal Template -->
+                        <Grid x:Name="HorizontalTemplate" Margin="{TemplateBinding BorderThickness}">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="Auto" />
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="Auto" />
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions>
+							<c1:C1BrushBuilder x:Name="HBackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource RangeSliderHorizontalBarBrush}" DesignColor="{StaticResource BaseColor}" />
+							<Rectangle Grid.ColumnSpan="5" Stroke="{TemplateBinding BorderBrush}" Fill="{Binding Output, ElementName=HBackgroundBrush}" Style="{StaticResource RangeSliderHorizontalBarStyle}" Visibility="{TemplateBinding RangeSliderBarVisibility}" />
+							<Border x:Name="DisabledVisualElement" Grid.ColumnSpan="5" Background="{StaticResource DisabledBrush}" Visibility="Collapsed" />
+                            <!-- Repeat Buttons + Thumb -->
+							<RepeatButton x:Name="DecreaseRepeatButton" Background="Transparent" Opacity="0" IsTabStop="False" />
+							<Thumb x:Name="LowerThumb" Grid.Column="1" Background="{TemplateBinding Background}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Style="{StaticResource RangeSliderHorizontalThumbStyle}" />
+							<Thumb x:Name="MiddleThumb" Grid.Column="2" Style="{StaticResource MiddleThumbClearStyle}" />
+							<Thumb x:Name="UpperThumb" Grid.Column="3" Background="{TemplateBinding Background}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Style="{StaticResource RangeSliderHorizontalThumbStyle}" />
+							<RepeatButton x:Name="IncreaseRepeatButton" Grid.Column="4" Opacity="0" Background="Transparent" IsTabStop="False" />
+						</Grid>
+
+						<!-- Vertical Template -->
+						<Grid x:Name="VerticalTemplate" Margin="{TemplateBinding BorderThickness}">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*" />
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="*" />
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="*" />
+							</Grid.RowDefinitions>
+							<c1:C1BrushBuilder x:Name="VBackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource RangeSliderVerticalBarBrush}" DesignColor="{StaticResource BaseColor}" />
+							<Rectangle Grid.RowSpan="5" Stroke="{TemplateBinding BorderBrush}" Fill="{Binding Output, ElementName=VBackgroundBrush}" Style="{StaticResource RangeSliderVerticalBarStyle}" Visibility="{TemplateBinding RangeSliderBarVisibility}" />
+							<Border x:Name="VDisabledVisualElement" Grid.RowSpan="5" Background="{StaticResource DisabledBrush}" Visibility="Collapsed" />
+                            <!-- Repeat Buttons + Thumb -->
+							<RepeatButton x:Name="VerticalDecreaseRepeatButton" Grid.Row="4" Background="Transparent" Opacity="0" IsTabStop="False" />
+							<Thumb x:Name="VerticalLowerThumb" Grid.Row="3" Background="{TemplateBinding Background}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Style="{StaticResource RangeSliderVerticalThumbStyle}" />
+							<Thumb x:Name="VerticalMiddleThumb" Grid.Column="2" Style="{StaticResource MiddleThumbClearStyle}" />
+							<Thumb x:Name="VerticalUpperThumb" Grid.Row="1" Background="{TemplateBinding Background}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Style="{StaticResource RangeSliderVerticalThumbStyle}" />
+							<RepeatButton x:Name="VerticalIncreaseRepeatButton" Background="Transparent" Opacity="0" IsTabStop="False" />
+						</Grid>
+						<!-- Focus indicator -->
+						<Border x:Name="FocusVisual" BorderBrush="{TemplateBinding FocusBrush}" BorderThickness="1" IsHitTestVisible="False" Visibility="Collapsed" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

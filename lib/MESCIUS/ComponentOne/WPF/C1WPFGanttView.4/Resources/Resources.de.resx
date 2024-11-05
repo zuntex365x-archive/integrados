@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Common_Complete" xml:space="preserve">
+    <value>abgeschlossen:</value>
+  </data>
+  <data name="Common_CompleteThrough" xml:space="preserve">
+    <value>abgeschlossen durch:</value>
+  </data>
+  <data name="Common_Deadline" xml:space="preserve">
+    <value>Stichtag:</value>
+  </data>
+  <data name="Common_Duration" xml:space="preserve">
+    <value>Dauer:</value>
+  </data>
+  <data name="Common_Finish" xml:space="preserve">
+    <value>Ende:</value>
+  </data>
+  <data name="Common_Milestone" xml:space="preserve">
+    <value>Meilenstein</value>
+  </data>
+  <data name="Common_No" xml:space="preserve">
+    <value>Nr</value>
+  </data>
+  <data name="Common_Notes" xml:space="preserve">
+    <value>Notizen:</value>
+  </data>
+  <data name="Common_PercentComplete" xml:space="preserve">
+    <value>% erledigt:</value>
+  </data>
+  <data name="Common_Start" xml:space="preserve">
+    <value>Start:</value>
+  </data>
+  <data name="Common_SummaryTask" xml:space="preserve">
+    <value>Zusammenfassungsaufgabe:</value>
+  </data>
+  <data name="Common_Task" xml:space="preserve">
+    <value>Aufgabe:</value>
+  </data>
+  <data name="Common_UnnamedTaskBrief" xml:space="preserve">
+    <value>Unnamed</value>
+  </data>
+  <data name="Common_Yes" xml:space="preserve">
+    <value>ja</value>
+  </data>
+  <data name="CurrentCultureName" xml:space="preserve">
+    <value>(Aktuell)</value>
+  </data>
+  <data name="DayOffTimes" xml:space="preserve">
+    <value>(Freier Tag)</value>
+  </data>
+  <data name="DefaultCalendar" xml:space="preserve">
+    <value>(Standard)</value>
+  </data>
+  <data name="DefaultDateTime" xml:space="preserve">
+    <value>(NA)</value>
+  </data>
+  <data name="EmptyTimeInterval" xml:space="preserve">
+    <value>(leer)</value>
+  </data>
+  <data name="Error_BadXml" xml:space="preserve">
+    <value>Fehlerhaftes C1GanttView XML.</value>
+  </data>
+  <data name="Error_CannotDeleteProjectSummaryTask" xml:space="preserve">
+    <value>Projektzusammenfassung kann nicht gelöscht werden.</value>
+  </data>
+  <data name="Error_CannotInactivateTask" xml:space="preserve">
+    <value>Eine in Fortschritt befindliche Aufgabe kann nicht deaktiviert werden.</value>
+  </data>
+  <data name="Error_CannotInsertTask" xml:space="preserve">
+    <value>Vor einer Projektzusammenfassung können keine Aufgaben eingefügt werden.</value>
+  </data>
+  <data name="FileNameFilter" xml:space="preserve">
+    <value>XML files|*.xml|All files|*.*</value>
+  </data>
+  <data name="GanttViewNotFound" xml:space="preserve">
+    <value>Definition of a Gantt View is not found.</value>
+  </data>
+  <data name="GanttView_CircularReference" xml:space="preserve">
+    <value>Diese Aufgabe enthält eine zirkuläre Beziehung.</value>
+  </data>
+  <data name="GanttView_ConstraintLinkError" xml:space="preserve">
+    <value>Möglicher Terminkonflikt zwischen einer Einschränkung und einer verknüpften Aufgabe</value>
+  </data>
+  <data name="GanttView_CreateTask" xml:space="preserve">
+    <value>Aufgabe erstellen</value>
+  </data>
+  <data name="GanttView_DefaultDateFormat" xml:space="preserve">
+    <value>ddd {0}</value>
+  </data>
+  <data name="GanttView_LinkConflictError" xml:space="preserve">
+    <value>Möglicher Terminkonflikt zwischen einer Einschränkung und einer verknüpften Aufgabe</value>
+  </data>
+  <data name="GanttView_MarqueeMilestoneTitle" xml:space="preserve">
+    <value>Meilenstein: {0}</value>
+  </data>
+  <data name="GanttView_MarqueeTaskTitle" xml:space="preserve">
+    <value>Aufgabe: {0}</value>
+  </data>
+  <data name="GanttView_ScaleLabelRangeFormat" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="GanttView_TaskGoesPastDeadline" xml:space="preserve">
+    <value>Diese Aufgabe überschreitet den Stichtag am {0}</value>
+  </data>
+  <data name="GanttView_UnnamedTaskBrief" xml:space="preserve">
+    <value>Unbenannt</value>
+  </data>
+  <data name="Group_Complete" xml:space="preserve">
+    <value>Abgeschlossen</value>
+  </data>
+  <data name="Group_ConstraintTypeGroupName" xml:space="preserve">
+    <value>Einschränkungsart:</value>
+  </data>
+  <data name="Group_Day" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="Group_Days" xml:space="preserve">
+    <value>Tage</value>
+  </data>
+  <data name="Group_DurationGroupName" xml:space="preserve">
+    <value>Dauer:</value>
+  </data>
+  <data name="Group_FutureTask" xml:space="preserve">
+    <value>Zukünftige Aufgabe</value>
+  </data>
+  <data name="Group_Late" xml:space="preserve">
+    <value>Verspätet</value>
+  </data>
+  <data name="Group_MilestoneGroupName" xml:space="preserve">
+    <value>Meilenstein:</value>
+  </data>
+  <data name="Group_NoValue" xml:space="preserve">
+    <value>ohne Wert</value>
+  </data>
+  <data name="Group_OnSchedule" xml:space="preserve">
+    <value>Im Plan</value>
+  </data>
+  <data name="Group_PercentCompleteGroupName" xml:space="preserve">
+    <value>% erledigt:</value>
+  </data>
+  <data name="Group_ResourceGroupName" xml:space="preserve">
+    <value>Resource:</value>
+  </data>
+  <data name="Group_StatusGroupName" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="Group_TaskModeGroupName" xml:space="preserve">
+    <value>Aufgabenmodus:</value>
+  </data>
+  <data name="Hidden" xml:space="preserve">
+    <value>(Verborgen)</value>
+  </data>
+  <data name="InvariantCultureName" xml:space="preserve">
+    <value>(Fest)</value>
+  </data>
+  <data name="MenuItem_AdvancedFilter" xml:space="preserve">
+    <value>Erweiterter Filter...</value>
+  </data>
+  <data name="MenuItem_ByDuration" xml:space="preserve">
+    <value>Nach Dauer</value>
+  </data>
+  <data name="MenuItem_ByFinishDate" xml:space="preserve">
+    <value>Nach Fälligkeitsdatum</value>
+  </data>
+  <data name="MenuItem_ByName" xml:space="preserve">
+    <value>Nach Name</value>
+  </data>
+  <data name="MenuItem_ByStartDate" xml:space="preserve">
+    <value>Nach Startdatum</value>
+  </data>
+  <data name="MenuItem_CompletedTasks" xml:space="preserve">
+    <value>Erledigte Aufgaben</value>
+  </data>
+  <data name="MenuItem_DateRange" xml:space="preserve">
+    <value>Zeitspanne...</value>
+  </data>
+  <data name="MenuItem_GroupBy_ClearGroup" xml:space="preserve">
+    <value>Lösche Gruppe</value>
+  </data>
+  <data name="MenuItem_GroupBy_ConstraintType" xml:space="preserve">
+    <value>Einschränkungsart</value>
+  </data>
+  <data name="MenuItem_GroupBy_Duration" xml:space="preserve">
+    <value>Dauer</value>
+  </data>
+  <data name="MenuItem_GroupBy_MaintainHierarchy" xml:space="preserve">
+    <value>Beachte die Hierarchie</value>
+  </data>
+  <data name="MenuItem_GroupBy_Milestones" xml:space="preserve">
+    <value>Meilensteine</value>
+  </data>
+  <data name="MenuItem_GroupBy_NewGroupBy" xml:space="preserve">
+    <value>Neue Gruppe nach</value>
+  </data>
+  <data name="MenuItem_GroupBy_Resource" xml:space="preserve">
+    <value>Resource</value>
+  </data>
+  <data name="MenuItem_GroupBy_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="MenuItem_GroupBy_TaskCompleteVsTaskIncomplete" xml:space="preserve">
+    <value>Vollständige versus unvollständige Aufgaben</value>
+  </data>
+  <data name="MenuItem_GroupBy_TaskMode" xml:space="preserve">
+    <value>Aufgabenmodus</value>
+  </data>
+  <data name="MenuItem_IncompleteTasks" xml:space="preserve">
+    <value>Offene Aufgaben</value>
+  </data>
+  <data name="MenuItem_LateTasks" xml:space="preserve">
+    <value>Aufgaben mit Verspätung</value>
+  </data>
+  <data name="MenuItem_Milestones" xml:space="preserve">
+    <value>Meilensteine</value>
+  </data>
+  <data name="MenuItem_MoreFilters" xml:space="preserve">
+    <value>Mehr Filter...</value>
+  </data>
+  <data name="MenuItem_NoFilter" xml:space="preserve">
+    <value>kein Filter</value>
+  </data>
+  <data name="MenuItem_RemoveSort" xml:space="preserve">
+    <value>Sortierung entfernen</value>
+  </data>
+  <data name="MenuItem_ShowRelatedSummaryRows" xml:space="preserve">
+    <value>Verbundene Summen-Zeilen anzeigen</value>
+  </data>
+  <data name="MenuItem_SortBy" xml:space="preserve">
+    <value>Sortieren nach...</value>
+  </data>
+  <data name="MenuItem_SummaryTasks" xml:space="preserve">
+    <value>Summenaufgaben</value>
+  </data>
+  <data name="MenuItem_TaskWithDurationOnly" xml:space="preserve">
+    <value>Nur Aufgaben mit eingetragener Dauer</value>
+  </data>
+  <data name="MenuItem_UsingResource" xml:space="preserve">
+    <value>Verwendet Resource...</value>
+  </data>
+  <data name="MenuItem_ZoomDialog" xml:space="preserve">
+    <value>Ansicht...</value>
+  </data>
+  <data name="MenuItem_ZoomIn" xml:space="preserve">
+    <value>Ansicht vergößern</value>
+  </data>
+  <data name="MenuItem_ZoomOut" xml:space="preserve">
+    <value>Ansicht verkleinern</value>
+  </data>
+  <data name="Message_Confirmation" xml:space="preserve">
+    <value>Bestätigung</value>
+  </data>
+  <data name="Message_SureToDelete" xml:space="preserve">
+    <value>Wollen Sie die Aufgabe "{0}" wirklich löschen?</value>
+  </data>
+  <data name="Message_SureToDeleteTasks" xml:space="preserve">
+    <value>Wollen Sie wirklich {0} Aufgaben löschen?</value>
+  </data>
+  <data name="NewSummaryTaskName" xml:space="preserve">
+    <value>&lt;Neue Summen-Aufgabe&gt;</value>
+  </data>
+  <data name="NewTaskName" xml:space="preserve">
+    <value>&lt;Neue Aufgabe&gt;</value>
+  </data>
+  <data name="NoneListItem" xml:space="preserve">
+    <value>(keine)</value>
+  </data>
+  <data name="SpecificTimes" xml:space="preserve">
+    <value>(Abweichende)</value>
+  </data>
+  <data name="Task_LinkTooltip" xml:space="preserve">
+    <value>Von Aufgabe: {0}\nBis Aufgabe: {1}\nLink typ: {2}Verzug: {3}</value>
+  </data>
+  <data name="Text_Info" xml:space="preserve">
+    <value>Klicken teilt die Aufgabe hier.</value>
+  </data>
+  <data name="Text_ScheduleStart" xml:space="preserve">
+    <value>Geplanter Start: </value>
+  </data>
+  <data name="Text_SplitTask" xml:space="preserve">
+    <value>Teil-Aufgabe:</value>
+  </data>
+  <data name="TimeIntervalFormat" xml:space="preserve">
+    <value>{0:t} - {1:t}</value>
+  </data>
+  <data name="Title_Advanced" xml:space="preserve">
+    <value>Erweiterter Filter</value>
+  </data>
+  <data name="Title_BarStyle" xml:space="preserve">
+    <value>Balken</value>
+  </data>
+  <data name="Title_ConflictResolver" xml:space="preserve">
+    <value>Konfliktlöser</value>
+  </data>
+  <data name="Title_CreateNewCalendar" xml:space="preserve">
+    <value>Neuen Kalender erstellen</value>
+  </data>
+  <data name="Title_DateRange" xml:space="preserve">
+    <value>Datumsbereich filtern</value>
+  </data>
+  <data name="Title_FieldStyles" xml:space="preserve">
+    <value>Feldstile</value>
+  </data>
+  <data name="Title_GridColumns" xml:space="preserve">
+    <value>Spalten</value>
+  </data>
+  <data name="Title_Group" xml:space="preserve">
+    <value>Gruppe</value>
+  </data>
+  <data name="Title_Layout" xml:space="preserve">
+    <value>Anordnung</value>
+  </data>
+  <data name="Title_Link" xml:space="preserve">
+    <value>Link Information</value>
+  </data>
+  <data name="Title_LoadFromXml" xml:space="preserve">
+    <value>Aus XML-Datei laden</value>
+  </data>
+  <data name="Title_ManagerCalendar" xml:space="preserve">
+    <value>Verwalte eigene Kalender</value>
+  </data>
+  <data name="Title_MoreFilter" xml:space="preserve">
+    <value>Weitere Filter</value>
+  </data>
+  <data name="Title_Print" xml:space="preserve">
+    <value>Drucken</value>
+  </data>
+  <data name="Title_PrintPreview" xml:space="preserve">
+    <value>Druckvorschau</value>
+  </data>
+  <data name="Title_ProgressLine" xml:space="preserve">
+    <value>Fortschrittslinie</value>
+  </data>
+  <data name="Title_ProjectInfo" xml:space="preserve">
+    <value>Projektinformation</value>
+  </data>
+  <data name="Title_Recurrence" xml:space="preserve">
+    <value>'{0}' Wiederholungsmuster</value>
+  </data>
+  <data name="Title_Resources" xml:space="preserve">
+    <value>Resourcen</value>
+  </data>
+  <data name="Title_SaveAsXml" xml:space="preserve">
+    <value>Speichern in XML Datei</value>
+  </data>
+  <data name="Title_Sort" xml:space="preserve">
+    <value>Sortierung</value>
+  </data>
+  <data name="Title_TaskInfo" xml:space="preserve">
+    <value>Aufgabeninformation</value>
+  </data>
+  <data name="Title_TimeScale" xml:space="preserve">
+    <value>Zeitskala</value>
+  </data>
+  <data name="Title_UsingResource" xml:space="preserve">
+    <value>Verwendet Resource</value>
+  </data>
+  <data name="Title_WorkingTime" xml:space="preserve">
+    <value>Arbeitszeit ändern</value>
+  </data>
+  <data name="Title_Zoom" xml:space="preserve">
+    <value>Ansicht</value>
+  </data>
+  <data name="ToolTip_AddBlankRow" xml:space="preserve">
+    <value>Leere Zeile einfügen</value>
+  </data>
+  <data name="ToolTip_AddSummaryTask" xml:space="preserve">
+    <value>Summenaufgabe zufügen</value>
+  </data>
+  <data name="ToolTip_AddTask" xml:space="preserve">
+    <value>Aufgabe hinzufügen</value>
+  </data>
+  <data name="ToolTip_BarStyle" xml:space="preserve">
+    <value>Balken</value>
+  </data>
+  <data name="ToolTip_DeleteTask" xml:space="preserve">
+    <value>Aufgabe löschen</value>
+  </data>
+  <data name="ToolTip_FieldStyles" xml:space="preserve">
+    <value>Feldstile</value>
+  </data>
+  <data name="ToolTip_Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="ToolTip_GridColumns" xml:space="preserve">
+    <value>Spalten</value>
+  </data>
+  <data name="ToolTip_GroupBy" xml:space="preserve">
+    <value>Gruppiern nach</value>
+  </data>
+  <data name="ToolTip_Inactive" xml:space="preserve">
+    <value>Inaktiv</value>
+  </data>
+  <data name="ToolTip_IndentTask" xml:space="preserve">
+    <value>Aufgabe herunterstufen</value>
+  </data>
+  <data name="ToolTip_Load" xml:space="preserve">
+    <value>Aus XML-Datei laden</value>
+  </data>
+  <data name="ToolTip_OutdentTask" xml:space="preserve">
+    <value>Aufgabe heraufstufen</value>
+  </data>
+  <data name="ToolTip_Print" xml:space="preserve">
+    <value>Drucken</value>
+  </data>
+  <data name="ToolTip_ProgressLine" xml:space="preserve">
+    <value>Fortschrittslinie</value>
+  </data>
+  <data name="ToolTip_ProjectInfo" xml:space="preserve">
+    <value>Projektinformation</value>
+  </data>
+  <data name="ToolTip_Redo" xml:space="preserve">
+    <value>Erneut ausführen</value>
+  </data>
+  <data name="ToolTip_Resources" xml:space="preserve">
+    <value>Projektresourcen</value>
+  </data>
+  <data name="ToolTip_Save" xml:space="preserve">
+    <value>Speichern in XML Datei</value>
+  </data>
+  <data name="ToolTip_ScrollToTask" xml:space="preserve">
+    <value>Scrolle zur Aufgabe</value>
+  </data>
+  <data name="ToolTip_ShowProjectSummary" xml:space="preserve">
+    <value>Projektzusammenfassung anzeigen</value>
+  </data>
+  <data name="ToolTip_Sort" xml:space="preserve">
+    <value>Sortieren</value>
+  </data>
+  <data name="ToolTip_SplitTask" xml:space="preserve">
+    <value>Aufgabe teilen</value>
+  </data>
+  <data name="ToolTip_TaskDown" xml:space="preserve">
+    <value>Aufgabe nach unten schieben</value>
+  </data>
+  <data name="ToolTip_TaskInfo" xml:space="preserve">
+    <value>Aufgabeninformation</value>
+  </data>
+  <data name="ToolTip_TaskUp" xml:space="preserve">
+    <value>Aufgabe nach oben schieben</value>
+  </data>
+  <data name="ToolTip_TimeScale" xml:space="preserve">
+    <value>Zeitskala</value>
+  </data>
+  <data name="ToolTip_Undo" xml:space="preserve">
+    <value>Rückgängig</value>
+  </data>
+  <data name="ToolTip_WorkingTime" xml:space="preserve">
+    <value>Arbeitszeit ändern</value>
+  </data>
+  <data name="ToolTip_Zoom" xml:space="preserve">
+    <value>Ansicht</value>
+  </data>
+  <data name="ToolTip_ZoomEntireProject" xml:space="preserve">
+    <value>Ansicht auf gesamtes Projekt</value>
+  </data>
+  <data name="ToolTip_ZoomSelectedTask" xml:space="preserve">
+    <value>Ansicht auf gewählte Aufgabe</value>
+  </data>
+</root>

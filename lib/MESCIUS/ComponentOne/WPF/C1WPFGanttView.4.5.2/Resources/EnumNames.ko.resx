@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BarType_AutoTask" xml:space="preserve">
+    <value>자동 스케줄</value>
+  </data>
+  <data name="BarType_Deadline" xml:space="preserve">
+    <value>기한</value>
+  </data>
+  <data name="BarType_DurationOnly" xml:space="preserve">
+    <value>기간 만</value>
+  </data>
+  <data name="BarType_DurationOnlyMilestone" xml:space="preserve">
+    <value>기간 만 (이정표)</value>
+  </data>
+  <data name="BarType_FinishOnly" xml:space="preserve">
+    <value>완료 만</value>
+  </data>
+  <data name="BarType_GroupTask" xml:space="preserve">
+    <value>그룹 작업</value>
+  </data>
+  <data name="BarType_InactiveMilestone" xml:space="preserve">
+    <value>비활성 마일스톤(Milestone)</value>
+  </data>
+  <data name="BarType_InactiveSummary" xml:space="preserve">
+    <value>비활성 요약</value>
+  </data>
+  <data name="BarType_InactiveTask" xml:space="preserve">
+    <value>비활성 작업(Task)</value>
+  </data>
+  <data name="BarType_ManualTask" xml:space="preserve">
+    <value>수동 스케줄</value>
+  </data>
+  <data name="BarType_Milestone" xml:space="preserve">
+    <value>이정표</value>
+  </data>
+  <data name="BarType_Progress" xml:space="preserve">
+    <value>진행 표시줄</value>
+  </data>
+  <data name="BarType_ProjectSummary" xml:space="preserve">
+    <value>프로젝트 요약</value>
+  </data>
+  <data name="BarType_StartOnly" xml:space="preserve">
+    <value>시작 만</value>
+  </data>
+  <data name="BarType_SummaryProgress" xml:space="preserve">
+    <value>요약 진행률 표시줄</value>
+  </data>
+  <data name="BarType_SummaryTask" xml:space="preserve">
+    <value>요약</value>
+  </data>
+  <data name="Boolean_False" xml:space="preserve">
+    <value>아니요</value>
+  </data>
+  <data name="Boolean_True" xml:space="preserve">
+    <value>예</value>
+  </data>
+  <data name="CombinationOperator_And" xml:space="preserve">
+    <value>그리고</value>
+  </data>
+  <data name="CombinationOperator_Or" xml:space="preserve">
+    <value>또는</value>
+  </data>
+  <data name="ConstraintType_Default" xml:space="preserve">
+    <value>(기본값)</value>
+  </data>
+  <data name="ConstraintType_FinishNoEarlierThan" xml:space="preserve">
+    <value>이 후에 완료함</value>
+  </data>
+  <data name="ConstraintType_FinishNoLaterThan" xml:space="preserve">
+    <value>이 전에는 완료함</value>
+  </data>
+  <data name="ConstraintType_MustFinishOn" xml:space="preserve">
+    <value>완료해야 하는 시점</value>
+  </data>
+  <data name="ConstraintType_MustStartOn" xml:space="preserve">
+    <value>시작해야 하는 시점</value>
+  </data>
+  <data name="ConstraintType_StartNoEarlierThan" xml:space="preserve">
+    <value>이 후에 시작 함</value>
+  </data>
+  <data name="ConstraintType_StartNoLaterThan" xml:space="preserve">
+    <value>이 전에는 시작 함</value>
+  </data>
+  <data name="DurationUnits_Days" xml:space="preserve">
+    <value>일</value>
+  </data>
+  <data name="DurationUnits_Hours" xml:space="preserve">
+    <value>시간</value>
+  </data>
+  <data name="DurationUnits_Minutes" xml:space="preserve">
+    <value>분</value>
+  </data>
+  <data name="DurationUnits_Months" xml:space="preserve">
+    <value>달</value>
+  </data>
+  <data name="DurationUnits_Weeks" xml:space="preserve">
+    <value>주</value>
+  </data>
+  <data name="FilterField_ConstraintDate" xml:space="preserve">
+    <value>제약 일자</value>
+  </data>
+  <data name="FilterField_ConstraintType" xml:space="preserve">
+    <value>제약 조건 유형</value>
+  </data>
+  <data name="FilterField_Deadline" xml:space="preserve">
+    <value>기한</value>
+  </data>
+  <data name="FilterField_Duration" xml:space="preserve">
+    <value>기간</value>
+  </data>
+  <data name="FilterField_DurationOnly" xml:space="preserve">
+    <value>기간 만</value>
+  </data>
+  <data name="FilterField_DurationUnits" xml:space="preserve">
+    <value>단위</value>
+  </data>
+  <data name="FilterField_Finish" xml:space="preserve">
+    <value>종료</value>
+  </data>
+  <data name="FilterField_Milestones" xml:space="preserve">
+    <value>이정표</value>
+  </data>
+  <data name="FilterField_Mode" xml:space="preserve">
+    <value>스케줄 모드</value>
+  </data>
+  <data name="FilterField_Name" xml:space="preserve">
+    <value>작업 이름</value>
+  </data>
+  <data name="FilterField_None" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="FilterField_Notes" xml:space="preserve">
+    <value>참고 사항</value>
+  </data>
+  <data name="FilterField_OutlineLevel" xml:space="preserve">
+    <value>윤곽선 수준</value>
+  </data>
+  <data name="FilterField_PercentComplete" xml:space="preserve">
+    <value>% 완료</value>
+  </data>
+  <data name="FilterField_ResourceNames" xml:space="preserve">
+    <value>리소스 이름</value>
+  </data>
+  <data name="FilterField_Start" xml:space="preserve">
+    <value>시작</value>
+  </data>
+  <data name="FilterField_Summary" xml:space="preserve">
+    <value>요약</value>
+  </data>
+  <data name="FirstMonthOfFY_April" xml:space="preserve">
+    <value>4월</value>
+  </data>
+  <data name="FirstMonthOfFY_August" xml:space="preserve">
+    <value>8월</value>
+  </data>
+  <data name="FirstMonthOfFY_December" xml:space="preserve">
+    <value>12월</value>
+  </data>
+  <data name="FirstMonthOfFY_February" xml:space="preserve">
+    <value>2월</value>
+  </data>
+  <data name="FirstMonthOfFY_January" xml:space="preserve">
+    <value>1월</value>
+  </data>
+  <data name="FirstMonthOfFY_July" xml:space="preserve">
+    <value>7월</value>
+  </data>
+  <data name="FirstMonthOfFY_June" xml:space="preserve">
+    <value>6월</value>
+  </data>
+  <data name="FirstMonthOfFY_March" xml:space="preserve">
+    <value>3월</value>
+  </data>
+  <data name="FirstMonthOfFY_May" xml:space="preserve">
+    <value>5월</value>
+  </data>
+  <data name="FirstMonthOfFY_November" xml:space="preserve">
+    <value>11월</value>
+  </data>
+  <data name="FirstMonthOfFY_October" xml:space="preserve">
+    <value>10월</value>
+  </data>
+  <data name="FirstMonthOfFY_September" xml:space="preserve">
+    <value>9월</value>
+  </data>
+  <data name="GroupType_ConstraintType" xml:space="preserve">
+    <value>제약 조건 유형</value>
+  </data>
+  <data name="GroupType_CustomField" xml:space="preserve">
+    <value>사용자 정의 필드</value>
+  </data>
+  <data name="GroupType_Duration" xml:space="preserve">
+    <value>지속 시간</value>
+  </data>
+  <data name="GroupType_Milestones" xml:space="preserve">
+    <value>마일스톤</value>
+  </data>
+  <data name="GroupType_None" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="GroupType_Resource" xml:space="preserve">
+    <value>리소스</value>
+  </data>
+  <data name="GroupType_Status" xml:space="preserve">
+    <value>상태</value>
+  </data>
+  <data name="GroupType_TaskComplete" xml:space="preserve">
+    <value>작업 완료 및 작업 미완료</value>
+  </data>
+  <data name="GroupType_TaskMode" xml:space="preserve">
+    <value>작업 모드</value>
+  </data>
+  <data name="Operators_Contains" xml:space="preserve">
+    <value>포함</value>
+  </data>
+  <data name="Operators_ContainsExactly" xml:space="preserve">
+    <value>정확히 포함</value>
+  </data>
+  <data name="Operators_DoesNotContain" xml:space="preserve">
+    <value>포함 안 함</value>
+  </data>
+  <data name="Operators_DoesNotEqual" xml:space="preserve">
+    <value>같지 않음</value>
+  </data>
+  <data name="Operators_Equal" xml:space="preserve">
+    <value>과(와) 같음</value>
+  </data>
+  <data name="Operators_IsGreaterThan" xml:space="preserve">
+    <value>보다 큼</value>
+  </data>
+  <data name="Operators_IsGreaterThanOrEqualTo" xml:space="preserve">
+    <value>보다 크거나 같음</value>
+  </data>
+  <data name="Operators_IsLessThan" xml:space="preserve">
+    <value>보다 작음</value>
+  </data>
+  <data name="Operators_IsLessThanOrEqualTo" xml:space="preserve">
+    <value>보다 작거나 같음</value>
+  </data>
+  <data name="Operators_IsNotWithin" xml:space="preserve">
+    <value>다음 범위에 없음</value>
+  </data>
+  <data name="Operators_IsWithin" xml:space="preserve">
+    <value>다음 범위에 있음</value>
+  </data>
+  <data name="PredecessorType_FF" xml:space="preserve">
+    <value>종료에서 종료 (FF)</value>
+  </data>
+  <data name="PredecessorType_FS" xml:space="preserve">
+    <value>종료에서 시작 (FS)</value>
+  </data>
+  <data name="PredecessorType_SF" xml:space="preserve">
+    <value>시작에서 종료 (SF)</value>
+  </data>
+  <data name="PredecessorType_SS" xml:space="preserve">
+    <value>시작에서 시작 (SS)</value>
+  </data>
+  <data name="PrintType_Custom" xml:space="preserve">
+    <value>사용자 지정</value>
+  </data>
+  <data name="PrintType_General" xml:space="preserve">
+    <value>일반</value>
+  </data>
+  <data name="PrintType_LegendEveryPages" xml:space="preserve">
+    <value>모든 페이지의 범례</value>
+  </data>
+  <data name="PrintType_LegendLastPage" xml:space="preserve">
+    <value>마지막 페이지의 범례</value>
+  </data>
+  <data name="ResourceType_Cost" xml:space="preserve">
+    <value>비용</value>
+  </data>
+  <data name="ResourceType_Material" xml:space="preserve">
+    <value>재료</value>
+  </data>
+  <data name="ResourceType_Work" xml:space="preserve">
+    <value>작업</value>
+  </data>
+  <data name="ScaleLabelAlignment_Center" xml:space="preserve">
+    <value>중앙</value>
+  </data>
+  <data name="ScaleLabelAlignment_Left" xml:space="preserve">
+    <value>왼쪽</value>
+  </data>
+  <data name="ScaleLabelAlignment_Right" xml:space="preserve">
+    <value>오른쪽</value>
+  </data>
+  <data name="ScaleLabelInstant_End" xml:space="preserve">
+    <value>끝</value>
+  </data>
+  <data name="ScaleLabelInstant_Middle" xml:space="preserve">
+    <value>중간</value>
+  </data>
+  <data name="ScaleLabelInstant_Range" xml:space="preserve">
+    <value>겹치는 범위</value>
+  </data>
+  <data name="ScaleLabelInstant_RangeOverlapped" xml:space="preserve">
+    <value>범위</value>
+  </data>
+  <data name="ScaleLabelInstant_Start" xml:space="preserve">
+    <value>시작</value>
+  </data>
+  <data name="ScheduleFrom_ProjectFinishDate" xml:space="preserve">
+    <value>프로젝트 종료 일</value>
+  </data>
+  <data name="ScheduleFrom_ProjectStartDate" xml:space="preserve">
+    <value>프로젝트 시작 일</value>
+  </data>
+  <data name="TaskMode_Automatic" xml:space="preserve">
+    <value>자동</value>
+  </data>
+  <data name="TaskMode_Manual" xml:space="preserve">
+    <value>수동</value>
+  </data>
+  <data name="TaskProperty_All" xml:space="preserve">
+    <value>전부</value>
+  </data>
+  <data name="TaskProperty_Calendar" xml:space="preserve">
+    <value>달력</value>
+  </data>
+  <data name="TaskProperty_ConstraintDate" xml:space="preserve">
+    <value>제약 일자</value>
+  </data>
+  <data name="TaskProperty_ConstraintType" xml:space="preserve">
+    <value>제약 조건 유형</value>
+  </data>
+  <data name="TaskProperty_Deadline" xml:space="preserve">
+    <value>기한</value>
+  </data>
+  <data name="TaskProperty_Duration" xml:space="preserve">
+    <value>기간</value>
+  </data>
+  <data name="TaskProperty_DurationUnits" xml:space="preserve">
+    <value>단위</value>
+  </data>
+  <data name="TaskProperty_Finish" xml:space="preserve">
+    <value>종료</value>
+  </data>
+  <data name="TaskProperty_None" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="TaskProperty_Notes" xml:space="preserve">
+    <value>참고 사항</value>
+  </data>
+  <data name="TaskProperty_OutlineLevel" xml:space="preserve">
+    <value>윤곽선 수준</value>
+  </data>
+  <data name="TaskProperty_PercentComplete" xml:space="preserve">
+    <value>% 완료</value>
+  </data>
+  <data name="TaskProperty_Predecessors" xml:space="preserve">
+    <value>선행자</value>
+  </data>
+  <data name="TaskProperty_ResourceNames" xml:space="preserve">
+    <value>리소스 이름</value>
+  </data>
+  <data name="TaskProperty_Start" xml:space="preserve">
+    <value>시작</value>
+  </data>
+  <data name="TaskProperty_TaskMode" xml:space="preserve">
+    <value>스케줄 모드</value>
+  </data>
+  <data name="TaskProperty_TaskName" xml:space="preserve">
+    <value>작업 이름</value>
+  </data>
+  <data name="TimeScaleUnits_Days" xml:space="preserve">
+    <value>일</value>
+  </data>
+  <data name="TimeScaleUnits_HalfYears" xml:space="preserve">
+    <value>반년</value>
+  </data>
+  <data name="TimeScaleUnits_Hours" xml:space="preserve">
+    <value>시간</value>
+  </data>
+  <data name="TimeScaleUnits_Minutes" xml:space="preserve">
+    <value>분</value>
+  </data>
+  <data name="TimeScaleUnits_Months" xml:space="preserve">
+    <value>달</value>
+  </data>
+  <data name="TimeScaleUnits_Quarters" xml:space="preserve">
+    <value>분기</value>
+  </data>
+  <data name="TimeScaleUnits_ThirdsOfMonths" xml:space="preserve">
+    <value>달의 3분기</value>
+  </data>
+  <data name="TimeScaleUnits_Weeks" xml:space="preserve">
+    <value>주</value>
+  </data>
+  <data name="TimeScaleUnits_Years" xml:space="preserve">
+    <value>년</value>
+  </data>
+  <data name="WeekDays_Friday" xml:space="preserve">
+    <value>금요일</value>
+  </data>
+  <data name="WeekDays_Monday" xml:space="preserve">
+    <value>월요일</value>
+  </data>
+  <data name="WeekDays_Saturday" xml:space="preserve">
+    <value>토요일</value>
+  </data>
+  <data name="WeekDays_Sunday" xml:space="preserve">
+    <value>일요일</value>
+  </data>
+  <data name="WeekDays_Thursday" xml:space="preserve">
+    <value>목요일</value>
+  </data>
+  <data name="WeekDays_Tuesday" xml:space="preserve">
+    <value>화요일</value>
+  </data>
+  <data name="WeekDays_Wednesday" xml:space="preserve">
+    <value>수요일</value>
+  </data>
+  <data name="WeekOfMonth_First" xml:space="preserve">
+    <value>첫째</value>
+  </data>
+  <data name="WeekOfMonth_Fourth" xml:space="preserve">
+    <value>넷째</value>
+  </data>
+  <data name="WeekOfMonth_Last" xml:space="preserve">
+    <value>마지막</value>
+  </data>
+  <data name="WeekOfMonth_Second" xml:space="preserve">
+    <value>둘째</value>
+  </data>
+  <data name="WeekOfMonth_Third" xml:space="preserve">
+    <value>셋째</value>
+  </data>
+</root>

@@ -1,0 +1,268 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c1exp="clr-namespace:C1.WPF.ExpressionEditor"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/C1.WPF.4.5.2;component/themes/Common.xaml" />
+        <ResourceDictionary Source="/C1.WPF.4.5.2;component/themes/C1Button.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <c1:VisibilityConverter x:Key="VisibilityConverter"/>
+    <c1exp:ArgumentConverter x:Key="ArgumentConverter" />    
+
+    <Style x:Key="IntellisenseBoxStyle" TargetType="{x:Type ListBox}">
+        <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}"/>
+        <Setter Property="BorderThickness" Value="2" />
+    </Style>
+
+    <Style x:Key="listboxItemStyle" TargetType="{x:Type ListBoxItem}">
+        <Setter Property="MinWidth" Value="200" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" MaxWidth="16" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image HorizontalAlignment="Left" Width="Auto" MaxWidth="16" Source="{Binding Icon}" />
+                        <TextBlock x:Name="ItemName" Grid.Column="1" Text="{Binding Item.Name}" />
+                        <Popup x:Name="TipPopup" StaysOpen="False" Placement="Left" PlacementTarget="{Binding RelativeSource={RelativeSource AncestorLevel=1, Mode=FindAncestor, AncestorType=ListBox}}">
+                            <Border BorderBrush="LightGray" BorderThickness="2" CornerRadius="2">
+                                <TextBlock Background="WhiteSmoke" Foreground="Black" MaxWidth="300" TextWrapping="Wrap">
+                                    <Run Text="{Binding Item.Name}" FontWeight="Bold" Foreground="Green" />
+                                    <Run Text="{Binding ItemArguments, Mode=OneWay}" FontStyle="Italic" Foreground="Magenta" />
+                                    <LineBreak />
+                                    <Run Text="{Binding Item.Description}" />
+                                </TextBlock>
+                             </Border>
+                        </Popup>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="ItemName" Property="Background" Value="#FF3399FF"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter TargetName="TipPopup" Property="IsOpen" Value="True" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!-- Style C1ExpressionRichTextBox -->
+    <Style TargetType="{x:Type c1exp:C1ExpressionRichTextBox}">
+        <Setter Property="ExpressionRules" Value="{DynamicResource Rules}" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.IsDeferredScrollingEnabled" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type c1exp:C1ExpressionRichTextBox}">
+                    <Border Name="ExpressionRichTextBoxBorder" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <ScrollViewer x:Name="PART_ContentHost" />
+                            <Popup x:Name="IntellisensePopup" Placement="Relative" MaxHeight="200" StaysOpen="False">
+                                <ListBox Name="IntellisenseBox" ItemContainerStyle="{StaticResource listboxItemStyle}" Style="{StaticResource IntellisenseBoxStyle}" />
+                            </Popup>
+                        </Grid>
+                        <ToolTipService.ToolTip>
+                            <ToolTip x:Name="DescriptionToolTip" />
+                        </ToolTipService.ToolTip>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" TargetName="PART_ContentHost" Value="0.56"/>
+                            <Setter TargetName="ExpressionRichTextBoxBorder" Property="Background" Value="{StaticResource DisabledBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Resources>
+            <c1exp:RuleCollection x:Key="Rules">
+                <c1exp:NumberRule Foreground="Blue" />
+                <c1exp:StringRule Foreground="Red" />
+                <c1exp:FieldRule Foreground="Purple" />
+                <c1exp:FunctionsRule Foreground="Green" />
+            </c1exp:RuleCollection>
+
+            <Style TargetType="{x:Type Paragraph}">
+                <Setter Property="Margin" Value="0" />
+            </Style>
+        </Style.Resources>
+    </Style>
+
+    <!-- Style C1ExpressionEditor -->
+    <Style TargetType="{x:Type c1exp:C1ExpressionEditor}">
+        <Setter Property="BorderBrush" Value="{StaticResource WpfInputBorderBrush}"/>
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Height" Value="100"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type c1exp:C1ExpressionEditor}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <c1exp:C1ExpressionRichTextBox x:Name="ExpressionTextBox" Text="{Binding Expression, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" Background="{TemplateBinding Background}" UnderlineErrors="{TemplateBinding UnderlineErrors}" SyntaxHighlighting="{TemplateBinding SyntaxHighlighting}"/>
+                            <Border Grid.Row="1" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0,1,0,0" Visibility="{TemplateBinding ShowErrorBox, Converter={StaticResource VisibilityConverter}}">
+                                <TextBlock x:Name="ExpressionErrorText" Foreground="Red" />
+                            </Border>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Style C1ExpressionEditorPanel -->
+    <Style TargetType="{x:Type c1exp:C1ExpressionEditorPanel}">
+        <Setter Property="BorderBrush" Value="{StaticResource WpfInputBorderBrush}"/>
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="MouseOverBrush" Value="{StaticResource WpfInputMouseOverBrush}" />
+        <Setter Property="PressedBrush" Value="{StaticResource WpfInputSelectedBackground}" />
+        <Setter Property="ButtonBackground" Value="{StaticResource WpfInputBaseBrush}"/>
+        <Setter Property="ButtonForeground" Value="{StaticResource ForegroundBrushColor}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type c1exp:C1ExpressionEditorPanel}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0,1,0,0">
+                                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                    <Button CommandParameter=" + " Background="{TemplateBinding ButtonBackground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource ClearStyleButtonStyle}" 
+                                            Command="{Binding ExpressionEditor.InsertItem, RelativeSource={RelativeSource TemplatedParent}}" Margin="4" Width="22" Height="22">
+                                        <Path Data="F1M12.488,5.1L10.967,3.579 8,6.545 5.034,3.579 3.512,5.1 6.479,8.066 3.512,11.033 5.034,12.555 8,9.588 10.967,12.554 12.488,11.033 9.521,8.066z" Fill="{TemplateBinding ButtonForeground}" Height="8" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Width="8">
+                                            <Path.RenderTransform>
+                                                <TransformGroup>
+                                                    <RotateTransform Angle="-45"/>
+                                                </TransformGroup>
+                                            </Path.RenderTransform>
+                                        </Path>
+                                    </Button>
+                                    <Button CommandParameter=" - " Background="{TemplateBinding ButtonBackground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource ClearStyleButtonStyle}" 
+                                            Command="{Binding ExpressionEditor.InsertItem, RelativeSource={RelativeSource TemplatedParent}}" Margin="4" Width="22" Height="22">
+                                        <Path Data="F1M5.0339999,3.579L3.5120001,5.0999999 10.967,12.554 12.488,11.033z" Fill="{TemplateBinding ButtonForeground}" Height="8" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Width="8">
+                                            <Path.RenderTransform>
+                                                <TransformGroup>
+                                                    <RotateTransform Angle="-45"/>
+                                                </TransformGroup>
+                                            </Path.RenderTransform>
+                                        </Path>
+                                    </Button>
+                                    <Button CommandParameter=" * " Background="{TemplateBinding ButtonBackground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource ClearStyleButtonStyle}" 
+                                            Command="{Binding ExpressionEditor.InsertItem, RelativeSource={RelativeSource TemplatedParent}}" Margin="4" Width="22" Height="22">
+                                        <Path Data="F1M12.488,5.1L10.967,3.579 8,6.545 5.034,3.579 3.512,5.1 6.479,8.066 3.512,11.033 5.034,12.555 8,9.588 10.967,12.554 12.488,11.033 9.521,8.066z" Fill="{TemplateBinding ButtonForeground}" Height="8" Stretch="Fill" Width="8"/>
+                                    </Button>
+                                    <Button CommandParameter=" / " Background="{TemplateBinding ButtonBackground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource ClearStyleButtonStyle}" 
+                                            Command="{Binding ExpressionEditor.InsertItem, RelativeSource={RelativeSource TemplatedParent}}" Margin="4" Width="22" Height="22">
+                                        <Path Data="M6.4999404,5.0003071C7.3283672,5.0003071 7.9999404,5.6718798 7.9999404,6.5003071 7.9999404,7.3287339 7.3283672,8.0003071 6.4999404,8.0003071 5.6715131,8.0003071 4.9999404,7.3287339 4.9999404,6.5003071 4.9999404,5.6718798 5.6715131,5.0003071 6.4999404,5.0003071z M1.5,0.00036684913C2.3284271,0.0003668053 3,0.67193967 3,1.5003668 3,2.3287938 2.3284271,3.0003667 1.5,3.0003667 0.67157286,3.0003667 0,2.3287938 0,1.5003668 0,0.67193967 0.67157286,0.0003668053 1.5,0.00036684913z M6.6609359,0L8.016551,1.3556148 1.3730572,8 0.016551096,6.6434937z" Fill="{TemplateBinding ButtonForeground}" Height="8" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Width="8">
+                                            <Path.RenderTransform>
+                                                <TransformGroup>
+                                                    <RotateTransform Angle="-133.675"/>
+                                                </TransformGroup>
+                                            </Path.RenderTransform>
+                                        </Path>
+                                    </Button>
+                                    <Button CommandParameter=" Mod " Background="{TemplateBinding ButtonBackground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource ClearStyleButtonStyle}" 
+                                            Command="{Binding ExpressionEditor.InsertItem, RelativeSource={RelativeSource TemplatedParent}}" Margin="4" Width="22" Height="22">
+                                        <Path Data="M6.5,5C7.3284268,5 8,5.6715727 8,6.5 8,7.3284268 7.3284268,8 6.5,8 5.6715727,8 5,7.3284268 5,6.5 5,5.6715727 5.6715727,5 6.5,5z M6.6443858,0L8,1.355615 1.3565066,8.000001 3.5762793E-07,6.6434941z M1.5,0C2.3284271,0 3,0.67157286 3,1.4999999 3,2.3284271 2.3284271,2.9999998 1.5,2.9999998 0.67157286,2.9999998 6.412975E-08,2.3284271 0,1.4999999 6.412975E-08,0.67157286 0.67157286,0 1.5,0z" Fill="{TemplateBinding ButtonForeground}" Height="8" Stretch="Fill" Width="8"/>
+                                    </Button>
+                                    <Button CommandParameter=" = " Background="{TemplateBinding ButtonBackground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource ClearStyleButtonStyle}" 
+                                            Command="{Binding ExpressionEditor.InsertItem, RelativeSource={RelativeSource TemplatedParent}}" Margin="4" Width="22" Height="22">
+                                        <Path Data="M0,3L9,3 9,5 0,5z M2.682209E-07,0L9,0 9,2 2.682209E-07,2z" Fill="{TemplateBinding ButtonForeground}" Height="5" Stretch="Fill" Width="8"/>
+                                    </Button>
+                                    <Button CommandParameter=" &lt;&gt; " Background="{TemplateBinding ButtonBackground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource ClearStyleButtonStyle}" 
+                                            Command="{Binding ExpressionEditor.InsertItem, RelativeSource={RelativeSource TemplatedParent}}" Margin="4" Width="22" Height="22">
+                                        <Path Data="M6.8438272,0L6.0373545,2.0623121 8,2.0623121 8,4.0623121 5.2552485,4.0623121 4.8641958,5.0623121 8,5.0623121 8,7.0623121 4.0820904,7.0623121 3.2790608,9.115819 1.1248636,9.0938644 1.9289982,7.0623121 0,7.0623121 0,5.0623121 2.7206435,5.0623121 3.116466,4.0623121 2.7167258E-07,4.0623121 2.7167258E-07,2.0623121 3.9081113,2.0623121 4.7207074,0.0093827248z" Fill="{TemplateBinding ButtonForeground}" Height="9" Stretch="Fill" Width="8"/>
+                                    </Button>
+                                    <Button CommandParameter=" &lt; " Background="{TemplateBinding ButtonBackground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource ClearStyleButtonStyle}" 
+                                            Command="{Binding ExpressionEditor.InsertItem, RelativeSource={RelativeSource TemplatedParent}}" Margin="4" Width="22" Height="22">
+                                        <Path Data="F1M14.10388,3.5915833L10.967,3.579 6.4790001,8.066 10.967,12.554 14.128588,12.56459 9.5209999,8.066z" Fill="{TemplateBinding ButtonForeground}" Height="8" Stretch="Fill" Width="6"/>
+                                    </Button>
+                                    <Button CommandParameter=" &gt; " Background="{TemplateBinding ButtonBackground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource ClearStyleButtonStyle}" 
+                                            Command="{Binding ExpressionEditor.InsertItem, RelativeSource={RelativeSource TemplatedParent}}" Margin="4" Width="22" Height="22">
+                                        <Path Data="F1M14.10388,3.5915833L10.967,3.579 6.4790001,8.066 10.967,12.554 14.128588,12.56459 9.5209999,8.066z" Fill="{TemplateBinding ButtonForeground}" Height="8" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Width="6">
+                                            <Path.RenderTransform>
+                                                <TransformGroup>
+                                                    <RotateTransform Angle="-180"/>
+                                                </TransformGroup>
+                                            </Path.RenderTransform>
+                                        </Path>
+                                    </Button>
+                                    <Button CommandParameter=" &lt;= " Background="{TemplateBinding ButtonBackground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource ClearStyleButtonStyle}" 
+                                            Command="{Binding ExpressionEditor.InsertItem, RelativeSource={RelativeSource TemplatedParent}}" Margin="4" Width="22" Height="22">
+                                        <Path Data="M7.0000005,5L12.000001,5 12.000001,7 7.0000005,7z M7.0000005,1.9999996L12.000001,1.9999996 12.000001,3.9999998 7.0000005,3.9999998z M3.5201895,0L5.9806204,0.011203052 2.3860106,3.9948406 6,8.000001 3.5201895,7.9905715 0,3.9948406z" Fill="{TemplateBinding ButtonForeground}" Height="8" Stretch="Fill" Width="12"/>
+                                    </Button>
+                                    <Button CommandParameter=" &gt;= " Background="{TemplateBinding ButtonBackground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource ClearStyleButtonStyle}" 
+                                            Command="{Binding ExpressionEditor.InsertItem, RelativeSource={RelativeSource TemplatedParent}}" Margin="4" Width="22" Height="22">
+                                        <Path Data="M0,4L5,4 5,6 0,6z M0,0.99999988L5,0.99999988 5,3 0,3z M9.5201912,0L11.980621,0.011203052 8.3860121,3.9948406 12.000002,8.000001 9.5201912,7.9905715 6.0000014,3.9948406z" Fill="{TemplateBinding ButtonForeground}" Height="8" Margin="-1" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Width="12">
+                                            <Path.RenderTransform>
+                                                <TransformGroup>
+                                                    <RotateTransform Angle="-180"/>
+                                                </TransformGroup>
+                                            </Path.RenderTransform>
+                                        </Path>
+                                    </Button>
+                                    <Button Content="And" CommandParameter=" And " FontFamily="Segoe UI" FontSize="12" FontStyle="Normal" FontWeight="Normal" Background="{TemplateBinding ButtonBackground}" Foreground="{TemplateBinding ButtonForeground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource ClearStyleButtonStyle}" 
+                                            Command="{Binding ExpressionEditor.InsertItem, RelativeSource={RelativeSource TemplatedParent}}" Margin="4" Width="35" Height="22"/>
+                                    <Button Content="Or" CommandParameter=" Or " FontFamily="Segoe UI" FontSize="12" FontStyle="Normal" FontWeight="Normal" Background="{TemplateBinding ButtonBackground}" Foreground="{TemplateBinding ButtonForeground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource ClearStyleButtonStyle}" 
+                                            Command="{Binding ExpressionEditor.InsertItem, RelativeSource={RelativeSource TemplatedParent}}" Margin="4" Width="35" Height="22"/>
+                                    <Button Content="Not" CommandParameter=" Not " FontFamily="Segoe UI" FontSize="12" FontStyle="Normal" FontWeight="Normal" Background="{TemplateBinding ButtonBackground}" Foreground="{TemplateBinding ButtonForeground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource ClearStyleButtonStyle}" 
+                                            Command="{Binding ExpressionEditor.InsertItem, RelativeSource={RelativeSource TemplatedParent}}" Margin="4" Width="35" Height="22"/>
+                                    <Button Content="&#34;" CommandParameter="&#34;" FontFamily="Segoe UI" FontSize="12" FontStyle="Normal" 
+                                            FontWeight="Normal" Background="{TemplateBinding ButtonBackground}" Foreground="{TemplateBinding ButtonForeground}" 
+                                            c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" 
+                                            c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource ClearStyleButtonStyle}" 
+                                            Command="{Binding ExpressionEditor.InsertItem, RelativeSource={RelativeSource TemplatedParent}}" Margin="4" Width="22" Height="22"/>
+                                </StackPanel>
+                            </Border>
+                            <Grid Grid.Row="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="120"/>
+                                    <RowDefinition MinHeight="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <c1:C1TreeView x:Name="CategoriesTreeView" ItemsSource="{Binding Categories, RelativeSource={RelativeSource TemplatedParent}}"
+                                                KeyboardNavigation.TabNavigation="Once">
+                                    <c1:C1TreeView.ItemTemplate>                                        
+                                        <c1:C1HierarchicalDataTemplate ItemsSource="{Binding SubCategories}">
+                                            <TextBlock Text="{Binding Text}"/>
+                                        </c1:C1HierarchicalDataTemplate>
+                                    </c1:C1TreeView.ItemTemplate>
+                                </c1:C1TreeView>
+                                <ListBox x:Name="ItemsListBox" Grid.Column="1" 
+                                         ItemsSource="{Binding SelectedItem.DataContext.Items, ElementName=CategoriesTreeView}" 
+                                         DisplayMemberPath="Definition" HorizontalContentAlignment="Stretch"/>
+                                <Border  Grid.Row="1" Grid.ColumnSpan="2">
+                                    <Grid Margin="5">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition />
+                                            <RowDefinition />
+                                        </Grid.RowDefinitions>
+                                        <TextBlock FontWeight="Bold" Text="{Binding SelectedItem.Definition, ElementName=ItemsListBox}"/>
+                                        <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="{Binding SelectedItem.Description, ElementName=ItemsListBox}"/>
+                                        <TextBlock Grid.Row="2" TextWrapping="Wrap" Text="{Binding SelectedItem, ElementName=ItemsListBox, Converter={StaticResource ArgumentConverter}}"/>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

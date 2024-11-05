@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BarType_AutoTask" xml:space="preserve">
+    <value>自动计划</value>
+  </data>
+  <data name="BarType_Deadline" xml:space="preserve">
+    <value>截止日期</value>
+  </data>
+  <data name="BarType_DurationOnly" xml:space="preserve">
+    <value>仅持续时间</value>
+  </data>
+  <data name="BarType_DurationOnlyMilestone" xml:space="preserve">
+    <value>仅持续时间（里程碑）</value>
+  </data>
+  <data name="BarType_FinishOnly" xml:space="preserve">
+    <value>仅结束</value>
+  </data>
+  <data name="BarType_GroupTask" xml:space="preserve">
+    <value>组任务</value>
+  </data>
+  <data name="BarType_InactiveMilestone" xml:space="preserve">
+    <value>非活动状态的里程碑</value>
+  </data>
+  <data name="BarType_InactiveSummary" xml:space="preserve">
+    <value>非活动状态的主题</value>
+  </data>
+  <data name="BarType_InactiveTask" xml:space="preserve">
+    <value>非活动状态的任务</value>
+  </data>
+  <data name="BarType_ManualTask" xml:space="preserve">
+    <value>手动计划</value>
+  </data>
+  <data name="BarType_Milestone" xml:space="preserve">
+    <value>里程碑</value>
+  </data>
+  <data name="BarType_Progress" xml:space="preserve">
+    <value>进度条</value>
+  </data>
+  <data name="BarType_ProjectSummary" xml:space="preserve">
+    <value>项目摘要</value>
+  </data>
+  <data name="BarType_StartOnly" xml:space="preserve">
+    <value>仅开始</value>
+  </data>
+  <data name="BarType_SummaryProgress" xml:space="preserve">
+    <value>摘要进度条</value>
+  </data>
+  <data name="BarType_SummaryTask" xml:space="preserve">
+    <value>摘要进度条</value>
+  </data>
+  <data name="Boolean_False" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="Boolean_True" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="CombinationOperator_And" xml:space="preserve">
+    <value>与</value>
+  </data>
+  <data name="CombinationOperator_Or" xml:space="preserve">
+    <value>或</value>
+  </data>
+  <data name="ConstraintType_Default" xml:space="preserve">
+    <value>（默认）</value>
+  </data>
+  <data name="ConstraintType_FinishNoEarlierThan" xml:space="preserve">
+    <value>结束时间不早于</value>
+  </data>
+  <data name="ConstraintType_FinishNoLaterThan" xml:space="preserve">
+    <value>结束时间不迟于</value>
+  </data>
+  <data name="ConstraintType_MustFinishOn" xml:space="preserve">
+    <value>必须结束于</value>
+  </data>
+  <data name="ConstraintType_MustStartOn" xml:space="preserve">
+    <value>必须开始于</value>
+  </data>
+  <data name="ConstraintType_StartNoEarlierThan" xml:space="preserve">
+    <value>开始时间不早于</value>
+  </data>
+  <data name="ConstraintType_StartNoLaterThan" xml:space="preserve">
+    <value>开始时间不迟于</value>
+  </data>
+  <data name="DurationUnits_Days" xml:space="preserve">
+    <value>天</value>
+  </data>
+  <data name="DurationUnits_Hours" xml:space="preserve">
+    <value>小时</value>
+  </data>
+  <data name="DurationUnits_Minutes" xml:space="preserve">
+    <value>分钟</value>
+  </data>
+  <data name="DurationUnits_Months" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="DurationUnits_Weeks" xml:space="preserve">
+    <value>周</value>
+  </data>
+  <data name="FilterField_ConstraintDate" xml:space="preserve">
+    <value>约束日期</value>
+  </data>
+  <data name="FilterField_ConstraintType" xml:space="preserve">
+    <value>约束类型</value>
+  </data>
+  <data name="FilterField_Deadline" xml:space="preserve">
+    <value>截止日期</value>
+  </data>
+  <data name="FilterField_Duration" xml:space="preserve">
+    <value>持续时间</value>
+  </data>
+  <data name="FilterField_DurationOnly" xml:space="preserve">
+    <value>仅持续时间</value>
+  </data>
+  <data name="FilterField_DurationUnits" xml:space="preserve">
+    <value>间隔单位</value>
+  </data>
+  <data name="FilterField_Finish" xml:space="preserve">
+    <value>结束</value>
+  </data>
+  <data name="FilterField_Milestones" xml:space="preserve">
+    <value>里程碑</value>
+  </data>
+  <data name="FilterField_Mode" xml:space="preserve">
+    <value>计划模式</value>
+  </data>
+  <data name="FilterField_Name" xml:space="preserve">
+    <value>任务名称</value>
+  </data>
+  <data name="FilterField_None" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="FilterField_Notes" xml:space="preserve">
+    <value>标注</value>
+  </data>
+  <data name="FilterField_OutlineLevel" xml:space="preserve">
+    <value>大纲级别</value>
+  </data>
+  <data name="FilterField_PercentComplete" xml:space="preserve">
+    <value>完成率</value>
+  </data>
+  <data name="FilterField_ResourceNames" xml:space="preserve">
+    <value>资源名称</value>
+  </data>
+  <data name="FilterField_Start" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="FilterField_Summary" xml:space="preserve">
+    <value>摘要</value>
+  </data>
+  <data name="FirstMonthOfFY_April" xml:space="preserve">
+    <value>四月</value>
+  </data>
+  <data name="FirstMonthOfFY_August" xml:space="preserve">
+    <value>八月</value>
+  </data>
+  <data name="FirstMonthOfFY_December" xml:space="preserve">
+    <value>十二月</value>
+  </data>
+  <data name="FirstMonthOfFY_February" xml:space="preserve">
+    <value>二月</value>
+  </data>
+  <data name="FirstMonthOfFY_January" xml:space="preserve">
+    <value>一月</value>
+  </data>
+  <data name="FirstMonthOfFY_July" xml:space="preserve">
+    <value>七月</value>
+  </data>
+  <data name="FirstMonthOfFY_June" xml:space="preserve">
+    <value>六月</value>
+  </data>
+  <data name="FirstMonthOfFY_March" xml:space="preserve">
+    <value>三月</value>
+  </data>
+  <data name="FirstMonthOfFY_May" xml:space="preserve">
+    <value>五月</value>
+  </data>
+  <data name="FirstMonthOfFY_November" xml:space="preserve">
+    <value>十一月</value>
+  </data>
+  <data name="FirstMonthOfFY_October" xml:space="preserve">
+    <value>十月</value>
+  </data>
+  <data name="FirstMonthOfFY_September" xml:space="preserve">
+    <value>九月</value>
+  </data>
+  <data name="GroupType_ConstraintType" xml:space="preserve">
+    <value>约束类型</value>
+  </data>
+  <data name="GroupType_CustomField" xml:space="preserve">
+    <value>自定义域</value>
+  </data>
+  <data name="GroupType_Duration" xml:space="preserve">
+    <value>持续时间</value>
+  </data>
+  <data name="GroupType_Milestones" xml:space="preserve">
+    <value>里程碑</value>
+  </data>
+  <data name="GroupType_None" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="GroupType_Resource" xml:space="preserve">
+    <value>资源</value>
+  </data>
+  <data name="GroupType_Status" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="GroupType_TaskComplete" xml:space="preserve">
+    <value>任务完成与任务未完成</value>
+  </data>
+  <data name="GroupType_TaskMode" xml:space="preserve">
+    <value>任务模式</value>
+  </data>
+  <data name="Operators_Contains" xml:space="preserve">
+    <value>包含</value>
+  </data>
+  <data name="Operators_ContainsExactly" xml:space="preserve">
+    <value>精确包含</value>
+  </data>
+  <data name="Operators_DoesNotContain" xml:space="preserve">
+    <value>不包含</value>
+  </data>
+  <data name="Operators_DoesNotEqual" xml:space="preserve">
+    <value>不等于</value>
+  </data>
+  <data name="Operators_Equal" xml:space="preserve">
+    <value>等于</value>
+  </data>
+  <data name="Operators_IsGreaterThan" xml:space="preserve">
+    <value>大于</value>
+  </data>
+  <data name="Operators_IsGreaterThanOrEqualTo" xml:space="preserve">
+    <value>大于等于</value>
+  </data>
+  <data name="Operators_IsLessThan" xml:space="preserve">
+    <value>小于</value>
+  </data>
+  <data name="Operators_IsLessThanOrEqualTo" xml:space="preserve">
+    <value>小于等于</value>
+  </data>
+  <data name="Operators_IsNotWithin" xml:space="preserve">
+    <value>不包含于</value>
+  </data>
+  <data name="Operators_IsWithin" xml:space="preserve">
+    <value>包含于</value>
+  </data>
+  <data name="PredecessorType_FF" xml:space="preserve">
+    <value>完成 - 完成（FF）</value>
+  </data>
+  <data name="PredecessorType_FS" xml:space="preserve">
+    <value>完成 - 开始（FS）</value>
+  </data>
+  <data name="PredecessorType_SF" xml:space="preserve">
+    <value>开始 - 完成（SF）</value>
+  </data>
+  <data name="PredecessorType_SS" xml:space="preserve">
+    <value>开始 - 开始（SS）</value>
+  </data>
+  <data name="PrintType_Custom" xml:space="preserve">
+    <value>自定义</value>
+  </data>
+  <data name="PrintType_General" xml:space="preserve">
+    <value>通用</value>
+  </data>
+  <data name="PrintType_LegendEveryPages" xml:space="preserve">
+    <value>每页显示图例</value>
+  </data>
+  <data name="PrintType_LegendLastPage" xml:space="preserve">
+    <value>末页显示图例</value>
+  </data>
+  <data name="ResourceType_Cost" xml:space="preserve">
+    <value>开销</value>
+  </data>
+  <data name="ResourceType_Material" xml:space="preserve">
+    <value>资料</value>
+  </data>
+  <data name="ResourceType_Work" xml:space="preserve">
+    <value>工作</value>
+  </data>
+  <data name="ScaleLabelAlignment_Center" xml:space="preserve">
+    <value>中</value>
+  </data>
+  <data name="ScaleLabelAlignment_Left" xml:space="preserve">
+    <value>左</value>
+  </data>
+  <data name="ScaleLabelAlignment_Right" xml:space="preserve">
+    <value>右</value>
+  </data>
+  <data name="ScaleLabelInstant_End" xml:space="preserve">
+    <value>结束</value>
+  </data>
+  <data name="ScaleLabelInstant_Middle" xml:space="preserve">
+    <value>中间</value>
+  </data>
+  <data name="ScaleLabelInstant_Range" xml:space="preserve">
+    <value>重叠的范围</value>
+  </data>
+  <data name="ScaleLabelInstant_RangeOverlapped" xml:space="preserve">
+    <value>范围</value>
+  </data>
+  <data name="ScaleLabelInstant_Start" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="ScheduleFrom_ProjectFinishDate" xml:space="preserve">
+    <value>项目结束日期</value>
+  </data>
+  <data name="ScheduleFrom_ProjectStartDate" xml:space="preserve">
+    <value>项目起始日期</value>
+  </data>
+  <data name="TaskMode_Automatic" xml:space="preserve">
+    <value>自动</value>
+  </data>
+  <data name="TaskMode_Manual" xml:space="preserve">
+    <value>手动</value>
+  </data>
+  <data name="TaskProperty_All" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="TaskProperty_Calendar" xml:space="preserve">
+    <value>日历</value>
+  </data>
+  <data name="TaskProperty_ConstraintDate" xml:space="preserve">
+    <value>约束日期</value>
+  </data>
+  <data name="TaskProperty_ConstraintType" xml:space="preserve">
+    <value>约束类型</value>
+  </data>
+  <data name="TaskProperty_Deadline" xml:space="preserve">
+    <value>截止日期</value>
+  </data>
+  <data name="TaskProperty_Duration" xml:space="preserve">
+    <value>持续时间</value>
+  </data>
+  <data name="TaskProperty_DurationUnits" xml:space="preserve">
+    <value>单位</value>
+  </data>
+  <data name="TaskProperty_Finish" xml:space="preserve">
+    <value>结束</value>
+  </data>
+  <data name="TaskProperty_None" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="TaskProperty_Notes" xml:space="preserve">
+    <value>标注</value>
+  </data>
+  <data name="TaskProperty_OutlineLevel" xml:space="preserve">
+    <value>大纲级别</value>
+  </data>
+  <data name="TaskProperty_PercentComplete" xml:space="preserve">
+    <value>完成百分比</value>
+  </data>
+  <data name="TaskProperty_Predecessors" xml:space="preserve">
+    <value>前驱任务</value>
+  </data>
+  <data name="TaskProperty_ResourceNames" xml:space="preserve">
+    <value>资源名称</value>
+  </data>
+  <data name="TaskProperty_Start" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="TaskProperty_TaskMode" xml:space="preserve">
+    <value>计划模式</value>
+  </data>
+  <data name="TaskProperty_TaskName" xml:space="preserve">
+    <value>任务名称</value>
+  </data>
+  <data name="TimeScaleUnits_Days" xml:space="preserve">
+    <value>天</value>
+  </data>
+  <data name="TimeScaleUnits_HalfYears" xml:space="preserve">
+    <value>半年</value>
+  </data>
+  <data name="TimeScaleUnits_Hours" xml:space="preserve">
+    <value>小时</value>
+  </data>
+  <data name="TimeScaleUnits_Minutes" xml:space="preserve">
+    <value>分钟</value>
+  </data>
+  <data name="TimeScaleUnits_Months" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="TimeScaleUnits_Quarters" xml:space="preserve">
+    <value>季度</value>
+  </data>
+  <data name="TimeScaleUnits_ThirdsOfMonths" xml:space="preserve">
+    <value>三个月</value>
+  </data>
+  <data name="TimeScaleUnits_Weeks" xml:space="preserve">
+    <value>周</value>
+  </data>
+  <data name="TimeScaleUnits_Years" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="WeekDays_Friday" xml:space="preserve">
+    <value>星期五</value>
+  </data>
+  <data name="WeekDays_Monday" xml:space="preserve">
+    <value>星期一</value>
+  </data>
+  <data name="WeekDays_Saturday" xml:space="preserve">
+    <value>星期六</value>
+  </data>
+  <data name="WeekDays_Sunday" xml:space="preserve">
+    <value>星期日</value>
+  </data>
+  <data name="WeekDays_Thursday" xml:space="preserve">
+    <value>星期四</value>
+  </data>
+  <data name="WeekDays_Tuesday" xml:space="preserve">
+    <value>星期二</value>
+  </data>
+  <data name="WeekDays_Wednesday" xml:space="preserve">
+    <value>星期三</value>
+  </data>
+  <data name="WeekOfMonth_First" xml:space="preserve">
+    <value>第一</value>
+  </data>
+  <data name="WeekOfMonth_Fourth" xml:space="preserve">
+    <value>第四</value>
+  </data>
+  <data name="WeekOfMonth_Last" xml:space="preserve">
+    <value>最后</value>
+  </data>
+  <data name="WeekOfMonth_Second" xml:space="preserve">
+    <value>第二</value>
+  </data>
+  <data name="WeekOfMonth_Third" xml:space="preserve">
+    <value>第三</value>
+  </data>
+</root>

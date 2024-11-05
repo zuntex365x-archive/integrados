@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cell_Title" xml:space="preserve">
+    <value>Κελί</value>
+  </data>
+  <data name="FindTool_BtnFindNext" xml:space="preserve">
+    <value>Εύρεση επόμενου</value>
+  </data>
+  <data name="FindTool_BtnReplace" xml:space="preserve">
+    <value>Αντικατάσταση</value>
+  </data>
+  <data name="FindTool_BtnReplaceAll" xml:space="preserve">
+    <value>Αντικατάσταση όλων</value>
+  </data>
+  <data name="FindTool_LblFind" xml:space="preserve">
+    <value>Εύρεση:</value>
+  </data>
+  <data name="FindTool_LblReplace" xml:space="preserve">
+    <value>Αντικατάσταση:</value>
+  </data>
+  <data name="Font_Bold" xml:space="preserve">
+    <value>Έντονα</value>
+  </data>
+  <data name="Font_BoldInitial" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="Font_ChangeCase" xml:space="preserve">
+    <value>Αλλαγή πεζών - κεφαλαίων</value>
+  </data>
+  <data name="Font_ChangeCase_CapitalizeEachWord" xml:space="preserve">
+    <value>Το πρώτο γράμμα κάθε λέξης κεφαλαίο</value>
+  </data>
+  <data name="Font_ChangeCase_LowerCase" xml:space="preserve">
+    <value>πεζά</value>
+  </data>
+  <data name="Font_ChangeCase_ToggleCase" xml:space="preserve">
+    <value>εΝΑΛΛΑΓΗ πεζών-ΚΕΦΑΛΑΙΩΝ</value>
+  </data>
+  <data name="Font_ChangeCase_UpperCase" xml:space="preserve">
+    <value>ΚΕΦΑΛΑΙΑ</value>
+  </data>
+  <data name="Font_Font" xml:space="preserve">
+    <value>Γραμματοσειρά</value>
+  </data>
+  <data name="Font_FontColor" xml:space="preserve">
+    <value>Χρώμα γραμματοσειράς</value>
+  </data>
+  <data name="Font_FontSize" xml:space="preserve">
+    <value>Μέγεθος γραμματοσειράς</value>
+  </data>
+  <data name="Font_GrowFont" xml:space="preserve">
+    <value>Μεγέθυνση γραμματοσειράς</value>
+  </data>
+  <data name="Font_Italic" xml:space="preserve">
+    <value>Πλάγια</value>
+  </data>
+  <data name="Font_ItalicInitial" xml:space="preserve">
+    <value>I</value>
+  </data>
+  <data name="Font_ShrinkFont" xml:space="preserve">
+    <value>Σμίκρυνση γραμματοσειράς</value>
+  </data>
+  <data name="Font_Subscript" xml:space="preserve">
+    <value>Δείκτης</value>
+  </data>
+  <data name="Font_Superscript" xml:space="preserve">
+    <value>Εκθέτης</value>
+  </data>
+  <data name="Font_TextHighlightColor" xml:space="preserve">
+    <value>Χρώμα επισήμανσης κειμένου</value>
+  </data>
+  <data name="Font_Title" xml:space="preserve">
+    <value>Γραμματοσειρά</value>
+  </data>
+  <data name="Font_Underline" xml:space="preserve">
+    <value>Υπογράμμιση</value>
+  </data>
+  <data name="Font_UnderlineInitial" xml:space="preserve">
+    <value>U</value>
+  </data>
+  <data name="HomeTab_Header" xml:space="preserve">
+    <value>Κεντρική</value>
+  </data>
+  <data name="Insert_InsertHyperlink" xml:space="preserve">
+    <value>Εισαγωγή υπερ-σύνδεσης</value>
+  </data>
+  <data name="Insert_InsertHyperlink_InvalidURL" xml:space="preserve">
+    <value>Η διεύθυνση URL "{0}" δεν είναι έγκυρη</value>
+  </data>
+  <data name="Insert_InsertHyperlink_TextLabel" xml:space="preserve">
+    <value>Κείμενο:</value>
+  </data>
+  <data name="Insert_InsertHyperlink_URLLabel" xml:space="preserve">
+    <value>Διεύθυνση URL:</value>
+  </data>
+  <data name="Insert_InsertHyperlink_TargetLabel" xml:space="preserve">
+    <value>Προορισμός:</value>
+  </data>
+  <data name="Insert_InsertImage" xml:space="preserve">
+    <value>Εισαγωγή εικόνας</value>
+  </data>
+  <data name="Insert_InsertImage_InvalidURL" xml:space="preserve">
+    <value>Η διεύθυνση URL "{0}" δεν είναι έγκυρη</value>
+  </data>
+  <data name="Insert_InsertImage_UrlMessage" xml:space="preserve">
+    <value>Καταχωρήστε τη διεύθυνση URL στην οποία βρίσκεται η εικόνα:</value>
+  </data>
+  <data name="Insert_InsertImage_NotLoaded" xml:space="preserve">
+    <value>Δεν ήταν δυνατή η φόρτωση της εικόνας από "{0}".</value>
+  </data>
+  <data name="Insert_InsertSymbol" xml:space="preserve">
+    <value>Εισαγωγή συμβόλου</value>
+  </data>
+  <data name="Insert_RemoveHyperlink" xml:space="preserve">
+    <value>Κατάργηση υπερ-σύνδεσης</value>
+  </data>
+  <data name="Insert_Title" xml:space="preserve">
+    <value>Εισαγωγή</value>
+  </data>
+  <data name="Merge_Title" xml:space="preserve">
+    <value>Συγχώνευση</value>
+  </data>
+  <data name="Paragraph_AlignTextCenter" xml:space="preserve">
+    <value>Στοίχιση κειμένου στο κέντρο</value>
+  </data>
+  <data name="Paragraph_AlignTextLeft" xml:space="preserve">
+    <value>Στοίχιση κειμένου στα αριστερά</value>
+  </data>
+  <data name="Paragraph_AlignTextRight" xml:space="preserve">
+    <value>Στοίχιση κειμένου στα δεξιά</value>
+  </data>
+  <data name="Paragraph_BorderColor" xml:space="preserve">
+    <value>Χρώμα περιγράμματος</value>
+  </data>
+  <data name="Paragraph_BorderThickness" xml:space="preserve">
+    <value>Πάχος περιγράμματος</value>
+  </data>
+  <data name="Paragraph_Bullets" xml:space="preserve">
+    <value>Κουκκίδες</value>
+  </data>
+  <data name="Paragraph_Justify" xml:space="preserve">
+    <value>Πλήρης στοίχιση</value>
+  </data>
+  <data name="Paragraph_Margin" xml:space="preserve">
+    <value>Περιθώριο</value>
+  </data>
+  <data name="Paragraph_Numbering" xml:space="preserve">
+    <value>Αρίθμηση</value>
+  </data>
+  <data name="Paragraph_Padding" xml:space="preserve">
+    <value>Αναπλήρωση</value>
+  </data>
+  <data name="Paragraph_ParagraphColor" xml:space="preserve">
+    <value>Χρώμα παραγράφου</value>
+  </data>
+  <data name="Paragraph_TextWrapping" xml:space="preserve">
+    <value>Αναδίπλωση κειμένου</value>
+  </data>
+  <data name="Paragraph_Title" xml:space="preserve">
+    <value>Παράγραφος</value>
+  </data>
+  <data name="RowsAndColumns_Title" xml:space="preserve">
+    <value>Γραμμές και στήλες</value>
+  </data>
+  <data name="TablesTab_Header" xml:space="preserve">
+    <value>Πίνακες</value>
+  </data>
+  <data name="Table_Title" xml:space="preserve">
+    <value>Πίνακας</value>
+  </data>
+  <data name="ThicknessPicker_Bottom" xml:space="preserve">
+    <value>Κάτω:</value>
+  </data>
+  <data name="ThicknessPicker_Left" xml:space="preserve">
+    <value>Αριστερά:</value>
+  </data>
+  <data name="ThicknessPicker_Right" xml:space="preserve">
+    <value>Δεξιά:</value>
+  </data>
+  <data name="ThicknessPicker_Top" xml:space="preserve">
+    <value>Επάνω:</value>
+  </data>
+  <data name="Tools_BorderTool" xml:space="preserve">
+    <value>Περιγράμματα</value>
+  </data>
+  <data name="Tools_BorderTool_AllBorders" xml:space="preserve">
+    <value>Όλα τα περιγράμματα</value>
+  </data>
+  <data name="Tools_BorderTool_BottomBorder" xml:space="preserve">
+    <value>Κάτω περίγραμμα</value>
+  </data>
+  <data name="Tools_BorderTool_Color" xml:space="preserve">
+    <value>Χρώμα</value>
+  </data>
+  <data name="Tools_BorderTool_InsideBorders" xml:space="preserve">
+    <value>Εσωτερικά περιγράμματα</value>
+  </data>
+  <data name="Tools_BorderTool_InsideHorizontalBorders" xml:space="preserve">
+    <value>Εσωτερικό οριζόντιο περίγραμμα</value>
+  </data>
+  <data name="Tools_BorderTool_InsideVerticalBorders" xml:space="preserve">
+    <value>Εσωτερικό κατακόρυφο περίγραμμα</value>
+  </data>
+  <data name="Tools_BorderTool_LeftBorder" xml:space="preserve">
+    <value>Αριστερό περίγραμμα</value>
+  </data>
+  <data name="Tools_BorderTool_NoBorder" xml:space="preserve">
+    <value>Χωρίς περίγραμμα</value>
+  </data>
+  <data name="Tools_BorderTool_OutsideBorders" xml:space="preserve">
+    <value>Εξωτερικά περιγράμματα</value>
+  </data>
+  <data name="Tools_BorderTool_RightBorder" xml:space="preserve">
+    <value>Δεξιό περίγραμμα</value>
+  </data>
+  <data name="Tools_BorderTool_TopBorder" xml:space="preserve">
+    <value>Επάνω περίγραμμα</value>
+  </data>
+  <data name="Tools_BorderTool_Weight" xml:space="preserve">
+    <value>Πάχος</value>
+  </data>
+  <data name="Tools_BottomAlign" xml:space="preserve">
+    <value>Στοίχιση κάτω</value>
+  </data>
+  <data name="Tools_ColumnWidth_Header" xml:space="preserve">
+    <value>Πλάτος:</value>
+  </data>
+  <data name="Tools_Copy" xml:space="preserve">
+    <value>Αντιγραφή</value>
+  </data>
+  <data name="Tools_Cut" xml:space="preserve">
+    <value>Αποκοπή</value>
+  </data>
+  <data name="Tools_DeleteTable" xml:space="preserve">
+    <value>Διαγραφή πίνακα</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteCells" xml:space="preserve">
+    <value>Διαγραφή κελιών</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteColumns" xml:space="preserve">
+    <value>Διαγραφή στηλών</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteRows" xml:space="preserve">
+    <value>Διαγραφή γραμμών</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteTable" xml:space="preserve">
+    <value>Διαγραφή πίνακα</value>
+  </data>
+  <data name="Tools_FindAndReplace" xml:space="preserve">
+    <value>Εύρεση και αντικατάσταση</value>
+  </data>
+  <data name="Tools_FindAndReplace_NotFound" xml:space="preserve">
+    <value>Το παρακάτω καθορισμένο κείμενο δεν βρέθηκε:</value>
+  </data>
+  <data name="Tools_InsertColumnsLeft" xml:space="preserve">
+    <value>Εισαγωγή στηλών αριστερά</value>
+  </data>
+  <data name="Tools_InsertColumnsRight" xml:space="preserve">
+    <value>Εισαγωγή στηλών δεξιά</value>
+  </data>
+  <data name="Tools_InsertRowsAbove" xml:space="preserve">
+    <value>Εισαγωγή γραμμών επάνω</value>
+  </data>
+  <data name="Tools_InsertRowsBelow" xml:space="preserve">
+    <value>Εισαγωγή γραμμών κάτω</value>
+  </data>
+  <data name="Tools_InsertTable" xml:space="preserve">
+    <value>Εισαγωγή πίνακα</value>
+  </data>
+  <data name="Tools_InsertTable_ConvertText" xml:space="preserve">
+    <value>Μετατροπή κειμένου σε πίνακα</value>
+  </data>
+  <data name="Tools_MergeCells" xml:space="preserve">
+    <value>Συγχώνευση κελιών</value>
+  </data>
+  <data name="Tools_Paste" xml:space="preserve">
+    <value>Επικόλληση</value>
+  </data>
+  <data name="Tools_Redo" xml:space="preserve">
+    <value>Επανάληψη</value>
+  </data>
+  <data name="Tools_RowHeight_Header" xml:space="preserve">
+    <value>Ύψος:</value>
+  </data>
+  <data name="Tools_SelectTable" xml:space="preserve">
+    <value>Επιλογή πίνακα</value>
+  </data>
+  <data name="Tools_SelectTable_SelectCell" xml:space="preserve">
+    <value>Επιλογή κελιού</value>
+  </data>
+  <data name="Tools_SelectTable_SelectColumn" xml:space="preserve">
+    <value>Επιλογή στήλης</value>
+  </data>
+  <data name="Tools_SelectTable_SelectRow" xml:space="preserve">
+    <value>Επιλογή γραμμής</value>
+  </data>
+  <data name="Tools_SelectTable_SelectTable" xml:space="preserve">
+    <value>Επιλογή πίνακα</value>
+  </data>
+  <data name="Tools_ShowGridlines" xml:space="preserve">
+    <value>Εμφάνιση γραμμών πλέγματος</value>
+  </data>
+  <data name="Tools_SpellCheck" xml:space="preserve">
+    <value>Ορθογραφικός έλεγχος</value>
+  </data>
+  <data name="Tools_SpellCheck_NoErrors" xml:space="preserve">
+    <value>Δεν βρέθηκαν ορθογραφικά λάθη.</value>
+  </data>
+  <data name="Tools_SpellCheck_NotConfigured" xml:space="preserve">
+    <value>Ο ορθογραφικός έλεγχος δεν έχει ρυθμιστεί.</value>
+  </data>
+  <data name="Tools_SplitCell" xml:space="preserve">
+    <value>Διαίρεση κελιών</value>
+  </data>
+  <data name="Tools_TableWidth_Header" xml:space="preserve">
+    <value>Πλάτος:</value>
+  </data>
+  <data name="Tools_Title" xml:space="preserve">
+    <value>Εργαλεία</value>
+  </data>
+  <data name="Tools_TopAlign" xml:space="preserve">
+    <value>Στοίχιση επάνω</value>
+  </data>
+  <data name="Tools_Undo" xml:space="preserve">
+    <value>Αναίρεση</value>
+  </data>
+  <data name="Tools_UnmergeCell" xml:space="preserve">
+    <value>Κατάργηση συγχώνευσης κελιού</value>
+  </data>
+  <data name="Tools_VerticalCenterAlign" xml:space="preserve">
+    <value>Στοίχιση στο κέντρο</value>
+  </data>
+  <data name="View_Draft" xml:space="preserve">
+    <value>Πρόχειρο</value>
+  </data>
+  <data name="View_PrintLayout" xml:space="preserve">
+    <value>Διάταξη εκτύπωσης</value>
+  </data>
+  <data name="View_Zoom" xml:space="preserve">
+    <value>Μεγέθυνση</value>
+  </data>
+  <data name="Tools_FindAndReplace_ReachStart" xml:space="preserve">
+    <value>Η εύρεση έφτασε στο αρχικό σημείο της αναζήτησης.</value>
+  </data>
+  <data name="Insert_InsertImage_UploadMessage" xml:space="preserve">
+    <value>Επιλέξτε μια εικόνα για αποστολή:</value>
+  </data>
+  <data name="Insert_InsertImage_UploadTab" xml:space="preserve">
+    <value>Αποστολή</value>
+  </data>
+  <data name="Insert_InsertImage_UrlTab" xml:space="preserve">
+    <value>Διεύθυνση URL</value>
+  </data>
+  <data name="Insert_InsertImage_FileFilter" xml:space="preserve">
+    <value>Αρχεία εικόνων (*.PNG;*.JPG)|*.PNG;*.JPG|Όλα τα αρχεία (*.*)|*.*</value>
+  </data>
+  <data name="FormatPainter" xml:space="preserve">
+    <value>Πινέλο μορφοποίησης</value>
+  </data>
+  <data name="Tools_Delete" xml:space="preserve">
+    <value>Διαγραφή</value>
+  </data>
+  <data name="Tools_Gridlines" xml:space="preserve">
+    <value>Γραμμές πλέγματος</value>
+  </data>
+  <data name="Tools_InsertAbove" xml:space="preserve">
+    <value>Εισαγωγή επάνω</value>
+  </data>
+  <data name="Tools_InsertBelow" xml:space="preserve">
+    <value>Εισαγωγή κάτω</value>
+  </data>
+  <data name="Tools_InsertLeft" xml:space="preserve">
+    <value>Εισαγωγή αριστερά</value>
+  </data>
+  <data name="Tools_InsertRight" xml:space="preserve">
+    <value>Εισαγωγή δεξιά</value>
+  </data>
+  <data name="Tools_Picture" xml:space="preserve">
+    <value>Εικόνα</value>
+  </data>
+  <data name="Tools_Select" xml:space="preserve">
+    <value>Επιλογή</value>
+  </data>
+  <data name="Tools_Spelling" xml:space="preserve">
+    <value>Ορθογραφία</value>
+  </data>
+  <data name="Tools_Unmerge" xml:space="preserve">
+    <value>Κατάργηση συγχώνευσης</value>
+  </data>
+  <data name="Edit_Title" xml:space="preserve">
+    <value>Επεξεργασία</value>
+  </data>
+  <data name="Color_Aqua_ToolTip" xml:space="preserve">
+    <value>Θαλασσί</value>
+  </data>
+  <data name="Color_Black_ToolTip" xml:space="preserve">
+    <value>Μαύρο</value>
+  </data>
+  <data name="Color_Blue_ToolTip" xml:space="preserve">
+    <value>Μπλε</value>
+  </data>
+  <data name="Color_Brown_ToolTip" xml:space="preserve">
+    <value>Καφέ</value>
+  </data>
+  <data name="Color_DarkBlue_ToolTip" xml:space="preserve">
+    <value>Σκούρο μπλε</value>
+  </data>
+  <data name="Color_DarkGreen_ToolTip" xml:space="preserve">
+    <value>Σκούρο πράσινο</value>
+  </data>
+  <data name="Color_DarkPurple_ToolTip" xml:space="preserve">
+    <value>Σκούρο μοβ</value>
+  </data>
+  <data name="Color_DarkRed_ToolTip" xml:space="preserve">
+    <value>Σκούρο κόκκινο</value>
+  </data>
+  <data name="Color_EightyGray_ToolTip" xml:space="preserve">
+    <value>Γκρι-80%</value>
+  </data>
+  <data name="Color_FifteenGray_ToolTip" xml:space="preserve">
+    <value>Γκρι-15%</value>
+  </data>
+  <data name="Color_FiftyGray_ToolTip" xml:space="preserve">
+    <value>Γκρι-50%</value>
+  </data>
+  <data name="Color_FortyGray_ToolTip" xml:space="preserve">
+    <value>Γκρι-40%</value>
+  </data>
+  <data name="Color_Gold_ToolTip" xml:space="preserve">
+    <value>Χρυσό</value>
+  </data>
+  <data name="Color_Green_ToolTip" xml:space="preserve">
+    <value>Πράσινο</value>
+  </data>
+  <data name="Color_LightGreen_ToolTip" xml:space="preserve">
+    <value>Ανοιχτό πράσινο</value>
+  </data>
+  <data name="Color_LightYellow_ToolTip" xml:space="preserve">
+    <value>Ανοιχτό κίτρινο</value>
+  </data>
+  <data name="Color_Lime_ToolTip" xml:space="preserve">
+    <value>Λαχανί</value>
+  </data>
+  <data name="Color_Orange_ToolTip" xml:space="preserve">
+    <value>Πορτοκαλί</value>
+  </data>
+  <data name="Color_Pink_ToolTip" xml:space="preserve">
+    <value>Ροζ</value>
+  </data>
+  <data name="Color_Plum_ToolTip" xml:space="preserve">
+    <value>Δαμασκηνί</value>
+  </data>
+  <data name="Color_Purple_ToolTip" xml:space="preserve">
+    <value>Μοβ</value>
+  </data>
+  <data name="Color_Red_ToolTip" xml:space="preserve">
+    <value>Κόκκινο</value>
+  </data>
+  <data name="Color_Rose_ToolTip" xml:space="preserve">
+    <value>Τριανταφυλλί</value>
+  </data>
+  <data name="Color_SeventyFiveGray_ToolTip" xml:space="preserve">
+    <value>Γκρι-75%</value>
+  </data>
+  <data name="Color_SkyBlue_ToolTip" xml:space="preserve">
+    <value>Μπλε του ουρανού</value>
+  </data>
+  <data name="Color_SlateBlue_ToolTip" xml:space="preserve">
+    <value>Τεφροκύανο</value>
+  </data>
+  <data name="Color_Turquoise_ToolTip" xml:space="preserve">
+    <value>Τυρκουάζ</value>
+  </data>
+  <data name="Color_TwentyFiveGray_ToolTip" xml:space="preserve">
+    <value>Γκρι-25%</value>
+  </data>
+  <data name="Color_White_ToolTip" xml:space="preserve">
+    <value>Λευκό</value>
+  </data>
+  <data name="Color_Yellow_ToolTip" xml:space="preserve">
+    <value>Κίτρινο</value>
+  </data>
+  <data name="Insert_ImageDialog_File" xml:space="preserve">
+    <value>Επιλογή φωτογραφίας...</value>
+  </data>
+  <data name="Insert_ImageDialog_Url" xml:space="preserve">
+    <value>Εισαγωγή φωτογραφίας</value>
+  </data>
+  <data name="Insert_InsertHyperlink_Button" xml:space="preserve">
+    <value>Εισαγωγή υπερσύνδεσης</value>
+  </data>
+  <data name="Insert_InsertTable_Button" xml:space="preserve">
+    <value>Εισαγωγή πίνακα</value>
+  </data>
+  <data name="Insert_InsertTable_ColumnLabel" xml:space="preserve">
+    <value>Αριθμός στηλών:</value>
+  </data>
+  <data name="Insert_InsertTable_RowLabel" xml:space="preserve">
+    <value>Αριθμός γραμμών:</value>
+  </data>
+  <data name="List_Header" xml:space="preserve">
+    <value>Λίστα</value>
+  </data>
+  <data name="Tools_BottomAlignMenuTool_Header" xml:space="preserve">
+    <value>Κάτω</value>
+  </data>
+  <data name="Tools_CenterAlign_Header" xml:space="preserve">
+    <value>Κέντρο</value>
+  </data>
+  <data name="Tools_ClearFormatting_Header" xml:space="preserve">
+    <value>Απαλοιφή μορφοποίησης</value>
+  </data>
+  <data name="Tools_ClearFormatting_ToolTip" xml:space="preserve">
+    <value>Απαλοιφή μορφοποίησης κειμένου</value>
+  </data>
+  <data name="Tools_DecreaseFontSize_Header" xml:space="preserve">
+    <value>Μείωση</value>
+  </data>
+  <data name="Tools_DecreaseFontSize_ToolTip" xml:space="preserve">
+    <value>Σμίκρυνση γραμματοσειράς</value>
+  </data>
+  <data name="Tools_DeleteTable_Cells" xml:space="preserve">
+    <value>Διαγραφή κελιών πίνακα</value>
+  </data>
+  <data name="Tools_DeleteTable_Columns" xml:space="preserve">
+    <value>Διαγραφή στηλών πίνακα</value>
+  </data>
+  <data name="Tools_DeleteTable_Rows" xml:space="preserve">
+    <value>Διαγραφή γραμμών πίνακα</value>
+  </data>
+  <data name="Tools_DeleteTable_Table" xml:space="preserve">
+    <value>Διαγραφή αυτού του πίνακα</value>
+  </data>
+  <data name="Tools_Error" xml:space="preserve">
+    <value>Σφάλμα</value>
+  </data>
+  <data name="Tools_FillColor_Header" xml:space="preserve">
+    <value>Γέμισμα</value>
+  </data>
+  <data name="Tools_FillColor_ToolTip" xml:space="preserve">
+    <value>Χρώμα γεμίσματος</value>
+  </data>
+  <data name="Tools_IncreaseFontSize_Header" xml:space="preserve">
+    <value>Αύξηση</value>
+  </data>
+  <data name="Tools_IncreaseFontSize_ToolTip" xml:space="preserve">
+    <value>Μεγέθυνση γραμματοσειράς</value>
+  </data>
+  <data name="Tools_InsertHyperlink_Header" xml:space="preserve">
+    <value>Υπερσύνδεση</value>
+  </data>
+  <data name="Tools_InsertImage_Header" xml:space="preserve">
+    <value>Φωτογραφία</value>
+  </data>
+  <data name="Tools_InsertImage_ToolTip" xml:space="preserve">
+    <value>Εισαγωγή φωτογραφίας</value>
+  </data>
+  <data name="Tools_LeftAlign_Header" xml:space="preserve">
+    <value>Αριστερά</value>
+  </data>
+  <data name="Tools_LeftAlign_ToolTip" xml:space="preserve">
+    <value>Στοίχιση αριστερά</value>
+  </data>
+  <data name="Tools_Numbering_ToolTip" xml:space="preserve">
+    <value>Αριθμημένη λίστα</value>
+  </data>
+  <data name="Tools_Redo_Header" xml:space="preserve">
+    <value>Ακύρωση αναίρεσης</value>
+  </data>
+  <data name="Tools_RightAlign_Header" xml:space="preserve">
+    <value>Δεξιά</value>
+  </data>
+  <data name="Tools_RightAlign_ToolTip" xml:space="preserve">
+    <value>Στοίχιση δεξιά</value>
+  </data>
+  <data name="Tools_SelectAll_Header" xml:space="preserve">
+    <value>Επιλογή όλων</value>
+  </data>
+  <data name="Tools_SelectTable_Cells_Header" xml:space="preserve">
+    <value>Επιλογή κελιών</value>
+  </data>
+  <data name="Tools_SelectTable_Cells_ToolTip" xml:space="preserve">
+    <value>Επιλογή κελιών πίνακα</value>
+  </data>
+  <data name="Tools_SelectTable_Columns_Header" xml:space="preserve">
+    <value>Επιλογή στηλών</value>
+  </data>
+  <data name="Tools_SelectTable_Columns_ToolTip" xml:space="preserve">
+    <value>Επιλογή στηλών πίνακα</value>
+  </data>
+  <data name="Tools_SelectTable_Rows_Header" xml:space="preserve">
+    <value>Επιλογή γραμμών</value>
+  </data>
+  <data name="Tools_SelectTable_Rows_ToolTip" xml:space="preserve">
+    <value>Επιλογή γραμμών πίνακα</value>
+  </data>
+  <data name="Tools_SelectTable_Table_Header" xml:space="preserve">
+    <value>Επιλογή πίνακα</value>
+  </data>
+  <data name="Tools_SelectTable_Table_ToolTip" xml:space="preserve">
+    <value>Επιλογή αυτού του πίνακα</value>
+  </data>
+  <data name="Tools_Strikethrough_Header" xml:space="preserve">
+    <value>Διαγραφή</value>
+  </data>
+  <data name="Tools_Subscript_ToolTip" xml:space="preserve">
+    <value>Δείκτης</value>
+  </data>
+  <data name="Tools_Superscript_ToolTip" xml:space="preserve">
+    <value>Εκθέτης</value>
+  </data>
+  <data name="Tools_TextHighlight_Header" xml:space="preserve">
+    <value>Επισήμανση</value>
+  </data>
+  <data name="Tools_TextHighlight_ToolTip" xml:space="preserve">
+    <value>Χρώμα επισήμανσης κειμένου</value>
+  </data>
+  <data name="Tools_TopAlign_Header" xml:space="preserve">
+    <value>Επάνω</value>
+  </data>
+  <data name="ViewTab_Header" xml:space="preserve">
+    <value>Προβολή</value>
+  </data>
+  <data name="View_DocumentViews" xml:space="preserve">
+    <value>Προβολές</value>
+  </data>
+  <data name="View_FitWidth" xml:space="preserve">
+    <value>Προσαρμογή στο πλάτος</value>
+  </data>
+  <data name="View_OnePage" xml:space="preserve">
+    <value>Μία σελίδα</value>
+  </data>
+  <data name="View_TwoPages" xml:space="preserve">
+    <value>Δύο σελίδες</value>
+  </data>
+  <data name="Tools_ZoomIn" xml:space="preserve">
+    <value>Μεγέθυνση</value>
+  </data>
+  <data name="Tools_Zoom100PercentTool" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="Tools_ZoomOut" xml:space="preserve">
+    <value>Σμίκρυνση</value>
+  </data>
+  <data name="Font_Strikethrough" xml:space="preserve">
+    <value>Διακριτή διαγραφή</value>
+  </data>
+  <data name="Font_StrikethroughInitial" xml:space="preserve">
+    <value>αβγ</value>
+  </data>
+  <data name="Tools_RemoveHyperlink_Header" xml:space="preserve">
+    <value>Κατάργηση</value>
+  </data>
+  <data name="Selected_Document" xml:space="preserve">
+    <value>&lt;&lt;Επιλογή σε έγγραφο&gt;&gt;</value>
+  </data>
+  <data name="Line_Number" xml:space="preserve">
+    <value>Αρίθμηση γραμμών</value>
+  </data>
+  <data name="LineNumberMode_None" xml:space="preserve">
+    <value>Χωρίς επιλογή</value>
+  </data>
+  <data name="LineNumberMode_Continuous" xml:space="preserve">
+    <value>Συνεχής</value>
+  </data>
+  <data name="LineNumberMode_RestartEachPage" xml:space="preserve">
+    <value>Επανέναρξη ανά σελίδα</value>
+  </data>
+  <data name="LineSpacing" xml:space="preserve">
+    <value>Line Spacing</value>
+  </data>
+</root>

@@ -1,0 +1,125 @@
+﻿	  
+	   
+    
+		
+
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1DataGrid_Resources="clr-namespace:C1.Silverlight.DataGrid.Resources">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/C1.WPF.4;component/themes/Common.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+
+	<!--******************** C1DataGrid General Brushes ********************-->
+
+    <!-- Brush used to build brushes on MouseOver state -->
+	<SolidColorBrush x:Key="DataGridMouseOverBrush" Color="#99BFE5EA" />
+
+	<!-- Brush used to build brushes on Pressed, Checked and Focused states -->
+	<SolidColorBrush x:Key="DataGridSelectedBackground" Color="#CC8ED1E2" />
+
+	<!-- Brush @ C1DataGrid ColumnHeader Merging Background -->
+	<SolidColorBrush x:Key="DataGridColumnHeaderMergingBrush" Color="#FFE3EAF1" />
+	<!-- Brush @ C1DataGrid ColumnHeader Merging Background on MouseOver-->
+	<SolidColorBrush x:Key="DataGridColumnHeaderMergingOverBrush" Color="#FFC6EBF4" />
+	<!-- Brush @ C1DataGrid ColumnHeader Merging Selected Background-->
+	<SolidColorBrush x:Key="DataGridColumnHeaderMergingSelectedBrush" Color="#FFA4DEED" />
+
+	<!-- Brush @ C1DataGrid Main PanelBackground -->
+    <SolidColorBrush x:Key="DataGridMainPanelBrush" Color="White" />
+	<!-- Brush @ C1DataGrid BorderBrush -->
+	<SolidColorBrush x:Key="DataGridBorderBrush" Color="#FFB0BDCA" />
+	<!--Thickness @ C1DataGrid -->
+	<Thickness x:Key="DataGridBorderThickness">1</Thickness>
+	<!--CornerRadius @ C1DataGrid -->
+	<CornerRadius x:Key="DataGridCornerRadius">0 0 0 0</CornerRadius>
+	<!-- Brush @ C1DataGrid Horizontal & Vertical GridLines -->
+	<SolidColorBrush x:Key="DataGridLinesBrush" Color="#FFCDD5DC" />
+
+	<!-- Brush @ C1DataGrid Row -->
+    <SolidColorBrush x:Key="DataGridRowBrush" Color="White" />
+	<!-- Brush @ C1DataGrid Alternating Row -->
+    <SolidColorBrush x:Key="DataGridAlternatingRowBrush" Color="#FFF3F6F9" />
+
+	<!-- Brush @ C1DataGrid Foreground -->
+	<SolidColorBrush x:Key="DataGridForeground" Color="{StaticResource ForegroundColor}" />
+	<!-- Brush @ C1DataGrid Row Foreground -->
+	<SolidColorBrush x:Key="DataGridRowForeground" Color="{StaticResource ForegroundTextBoxColor}" />
+	<!-- Brush @ C1DataGrid Alternating Row Foreground -->
+	<SolidColorBrush x:Key="DataGridAlternatingRowForeground" Color="{StaticResource ForegroundTextBoxColor}" />
+
+	<!-- CornerRadius @ C1DataGrid -->
+	<CornerRadius x:Key="DataGridGeneralCornerRadius">0</CornerRadius>
+
+	<!-- Brush @ C1DataGrid bottom right corner -->
+    <LinearGradientBrush x:Key="DataGridBottomRightCornerBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        
+        
+        <GradientStop Color="#FFD1DCE8" Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- CornerRadius @ C1DataGrid bottom right corner -->
+	<CornerRadius x:Key="DataGridBottomRightCornerRadius">0 0 0 0</CornerRadius>
+
+	<!-- Brush @ C1DataGrid top left corner -->
+	<RadialGradientBrush x:Key="DataGridTopLeftCornerBrush">
+		<RadialGradientBrush.RelativeTransform>
+			<TransformGroup>
+				<ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.984" ScaleY="1.984" />
+				<SkewTransform CenterX="0.5" CenterY="0.5" />
+				<RotateTransform CenterX="0.5" CenterY="0.5" />
+				<TranslateTransform X="0.502" Y="0.508" />
+			</TransformGroup>
+		</RadialGradientBrush.RelativeTransform>
+        
+        
+        <GradientStop Color="#FFD1DCE8" Offset="1" />
+	</RadialGradientBrush>
+	<!-- Brush @ C1DataGrid top left corner on MouseOver -->
+	<RadialGradientBrush x:Key="DataGridTopLeftCornerOverBrush">
+		<RadialGradientBrush.RelativeTransform>
+			<TransformGroup>
+				<ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.984" ScaleY="1.984" />
+				<SkewTransform CenterX="0.5" CenterY="0.5" />
+				<RotateTransform CenterX="0.5" CenterY="0.5" />
+				<TranslateTransform X="0.502" Y="0.508" />
+			</TransformGroup>
+		</RadialGradientBrush.RelativeTransform>
+        
+        
+        <GradientStop Color="#FFBFE1EA" Offset="1" />
+	</RadialGradientBrush>
+	<!-- CornerRadius @ C1DataGrid top left corner-->
+	<CornerRadius x:Key="DataGridTopLeftCornerRadius">0 0 0 0</CornerRadius>
+	<!-- Thickness @ C1DataGrid top left corner-->
+	<Thickness x:Key="DataGridTopLeftBorderThickness">0 0 1 1</Thickness>
+
+    <!-- WPF Input Brushes -->
+    <SolidColorBrush x:Key="WpfInputDataGridBorderBrush" Color="#FF919191" />
+    <SolidColorBrush x:Key="WpfInputDataGridLinesBrush" Color="#FFD3D3D3" />
+    <SolidColorBrush x:Key="WpfInputDataGridMouseOverBrush" Color="#99BDE6FD" />
+    <SolidColorBrush x:Key="WpfInputDataGridSelectedBackground" Color="#CCA9DAF3" />
+
+    <!--******************** Row Presenter ********************-->
+
+	<!-- Brush @ C1DataGrid Row Presenter Background on MouseOver -->
+	<SolidColorBrush x:Key="DataGridRowOverBrush" Color="#FFBBDFE9" />
+	<!-- Brush @ C1DataGrid Row Presenter Selected Background -->
+	<SolidColorBrush x:Key="DataGridRowSelectedBackground" Color="#FFA4DEED" />
+
+    <!--******************** Filters ********************-->
+
+    <c1DataGrid_Resources:C1_Silverlight_DataGrid x:Key="DataGridResources" />
+    <!--Use x:Key instead of x:Name to avoid blend issues-->
+
+    <!-- Brush @ C1DataGrid Filter Background -->
+    <LinearGradientBrush x:Key="DataGridFilterBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFEEF2F6" Offset="0.8" />
+        <GradientStop Color="#FFD0DBE7" Offset="1" />
+    </LinearGradientBrush>
+    <!-- Brush @ C1DataGrid Filter Content Background -->
+    <LinearGradientBrush x:Key="DataGridFilterContentBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFC8C4E1" Offset="0.7" />
+    </LinearGradientBrush>
+    <!-- CornerRadius @ C1DataGrid Filter -->
+    <CornerRadius x:Key="DataGridFilterCornerRadius">0 0 2 2</CornerRadius>
+
+</ResourceDictionary>

@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Win.FlexChart.Designer.4.5.2</name>
+    </assembly>
+    <members>
+        <member name="F:C1.Util.Licensing.VersionConst.VerString">
+            <summary>
+            WinForms version string representation (4 dot-delimited numbers).
+            </summary>
+        </member>
+        <member name="F:C1.Util.Licensing.VersionConst.VersionStr">
+            <summary>
+            Same as <see cref="F:C1.Util.Licensing.VersionConst.VerString"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Util.Licensing.VersionConst.VerAsmName">
+            <summary>
+            For .NET 4.0 version only, used for designer assembly names.
+            </summary>
+        </member>
+        <member name="T:C1.Util.Licensing.AssemblyNames">
+            <summary>
+            Specifies assembly name parts, used by AssemblyCommonInfo to generate actual assembly names.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Chart.Designer.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Chart.Designer.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Chart.Designer.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Chart.Designer.Properties.Resources.ColumnChart">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Chart.Designer.Properties.Resources.Data">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Chart.Designer.Properties.Resources.Data_Label">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Chart.Designer.Properties.Resources.Footer">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Chart.Designer.Properties.Resources.Header">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Chart.Designer.Properties.Resources.Legend">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Chart.Designer.Properties.Resources.PieChart">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Chart.Designer.Properties.Resources.X_Axis">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:C1.Win.Chart.Designer.Properties.Resources.Y_Axis">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Chart.Designer.UI.BindingLabel.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Chart.Designer.UI.BindingLabel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:C1.Win.Chart.Designer.UI.BindingLabel.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Chart.Designer.UI.DataMap.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Chart.Designer.UI.DataMap.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:C1.Win.Chart.Designer.UI.DataMap.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Chart.Designer.UI.FieldLabel.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Chart.Designer.UI.FieldLabel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:C1.Win.Chart.Designer.UI.FieldLabel.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:C1.Win.Chart.Designer.UI.PropertiesPanel.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Chart.Designer.UI.PropertiesPanel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:C1.Win.Chart.Designer.UI.PropertiesPanel.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:C1.Win.Chart.Designer.ChartDesigner">
+            <summary>
+            Runtime chart designer.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Chart.Designer.ChartDesigner.#ctor(C1.Win.Chart.FlexChartBase)">
+            <summary>
+            Creates designer for the specified chart instance.
+            </summary>
+            <param name="chart"></param>
+        </member>
+        <member name="M:C1.Win.Chart.Designer.ChartDesigner.Detach">
+            <summary>
+            Detaches the designer from chart instance.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Chart.Designer.ChartDesigner.Close">
+            <summary>
+            Closes the designer window.
+            </summary>
+        </member>
+        <member name="M:C1.Win.Chart.Designer.ChartDesigner.GetDesigner(C1.Win.Chart.FlexChartBase)">
+            <summary>
+            Gets the designer for the specified chart.
+            </summary>
+            <param name="chart"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

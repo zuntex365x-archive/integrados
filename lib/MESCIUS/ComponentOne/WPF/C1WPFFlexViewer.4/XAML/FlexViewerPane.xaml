@@ -1,0 +1,53 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:resources="clr-namespace:C1.WPF.FlexViewer.Resources"
+    xmlns:fv="clr-namespace:C1.WPF.FlexViewer"
+    >
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Common.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <SolidColorBrush x:Key="PageAreaBackground" Color="LightGray" />
+    <SolidColorBrush x:Key="PageBackground" Color="White" />
+    <SolidColorBrush x:Key="LoadingPageForeground" Color="Black" />
+    <SolidColorBrush x:Key="FindMatchHighlightBrush" Color="#FFF4A721" />
+    <SolidColorBrush x:Key="ActiveFindMatchHighlightBrush" Color="Red" />
+    <SolidColorBrush x:Key="SelectionHighlightBrush" Color="#803399FF" />
+    <SolidColorBrush x:Key="TouchGripBackground" Color="White" />
+    <SolidColorBrush x:Key="TouchGripBorderBrush" Color="#FFD24726" />
+    <SolidColorBrush x:Key="ThumbAreaBackground" Color="LightGray" />
+    <SolidColorBrush x:Key="ThumbHotBackground" Color="#64FFFFFF" />
+    <SolidColorBrush x:Key="ThumbSelectedBackground" Color="#C8FFE4E1" />
+    <SolidColorBrush x:Key="ThumbPressedBackground" Color="Tomato" />
+    <SolidColorBrush x:Key="ThumbPageBackground" Color="White" />
+    <SolidColorBrush x:Key="ThumbPageNumBackground" Color="#FF005F87" />
+    <SolidColorBrush x:Key="ThumbPageNumForeground" Color="White" />
+
+    <Style TargetType="{x:Type fv:C1FlexViewerPane}">
+        <Setter Property="PageAreaBackground" Value="{StaticResource PageAreaBackground}"/>
+        <Setter Property="PageBackground" Value="{StaticResource PageBackground}"/>
+        <Setter Property="LoadingPageForeground" Value="{StaticResource LoadingPageForeground}"/>
+        <Setter Property="FindMatchHighlightBrush" Value="{StaticResource FindMatchHighlightBrush}"/>
+        <Setter Property="ActiveFindMatchHighlightBrush" Value="{StaticResource ActiveFindMatchHighlightBrush}"/>
+        <Setter Property="SelectionHighlightBrush" Value="{StaticResource SelectionHighlightBrush}"/>
+        <Setter Property="TouchGripBackground" Value="{StaticResource TouchGripBackground}"/>
+        <Setter Property="TouchGripBorderBrush" Value="{StaticResource TouchGripBorderBrush}"/>
+        <Setter Property="ThumbAreaBackground" Value="{StaticResource ThumbAreaBackground}"/>
+        <Setter Property="ThumbHotBackground" Value="{StaticResource ThumbHotBackground}"/>
+        <Setter Property="ThumbSelectedBackground" Value="{StaticResource ThumbSelectedBackground}"/>
+        <Setter Property="ThumbPressedBackground" Value="{StaticResource ThumbPressedBackground}"/>
+        <Setter Property="ThumbPageBackground" Value="{StaticResource ThumbPageBackground}"/>
+        <Setter Property="ThumbPageNumBackground" Value="{StaticResource ThumbPageNumBackground}"/>
+        <Setter Property="ThumbPageNumForeground" Value="{StaticResource ThumbPageNumForeground}"/>
+        <Setter Property="ToolTip">
+            <Setter.Value>
+                <ToolTip DataContext="{Binding Path=PlacementTarget, RelativeSource={x:Static RelativeSource.Self}}">
+                    <TextBlock Text="{Binding ToolTipText}"/>
+                </ToolTip>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

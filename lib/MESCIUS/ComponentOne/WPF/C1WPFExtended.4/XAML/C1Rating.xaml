@@ -1,0 +1,62 @@
+﻿	  
+	   
+    
+		
+
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1Ext="clr-namespace:C1.WPF.Extended">
+    <DataTemplate x:Key="IconTemplate">
+        <Path Width="32" Height="32" Fill="{Binding Background}" Stretch="Uniform" Stroke="{Binding BorderBrush}" StrokeThickness="2" StrokeLineJoin="Round" VerticalAlignment="Stretch" Data="M74,40 L76.5,35 L79,40 L85,41 L80.5,44.5 L81.291664,50 L76.5,47.583332 L71.645836,50 L72.5,44.5 L68,41 z" />
+    </DataTemplate>
+
+    <Style TargetType="c1Ext:C1RatingItem">
+        <Setter Property="BorderBrush" Value="Blue" />
+        <Setter Property="Padding" Value="2" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1Ext:C1RatingItem">
+                    <Border x:Name="Bd" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid x:Name="MainPresenter">
+                                <ToolTipService.ToolTip>
+                                    <ToolTip x:Name="ToolTip">
+                                    </ToolTip>
+                                </ToolTipService.ToolTip>
+                                <ContentControl x:Name="IconPresenter" Content="{Binding ., RelativeSource={RelativeSource Self}}" Background="{Binding UnratedBrush, RelativeSource={RelativeSource TemplatedParent}}" BorderBrush="{TemplateBinding BorderBrush}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalAlignment="Center" />
+                                <ContentControl x:Name="RatedIconPresenter" Content="{Binding ., RelativeSource={RelativeSource Self}}" Background="{Binding RatedBrush, RelativeSource={RelativeSource TemplatedParent}}" BorderBrush="{TemplateBinding BorderBrush}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalAlignment="Center" />
+                                <ContentControl x:Name="HoverIconPresenter" Content="{Binding ., RelativeSource={RelativeSource Self}}" Background="{Binding HoveredBrush, RelativeSource={RelativeSource TemplatedParent}}" BorderBrush="{TemplateBinding BorderBrush}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalAlignment="Center" />
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="c1Ext:C1Rating">
+        <Setter Property="Foreground" Value="Blue" />
+        <Setter Property="ItemTemplate" Value="{StaticResource IconTemplate}" />
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <StackPanel IsItemsHost="True" Orientation="{Binding Path=Orientation,RelativeSource={RelativeSource AncestorType=c1Ext:C1Rating}}" />
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1Ext:C1Rating">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}"> 
+                        <Grid x:Name="MainPanel">
+                            <ItemsPresenter />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>

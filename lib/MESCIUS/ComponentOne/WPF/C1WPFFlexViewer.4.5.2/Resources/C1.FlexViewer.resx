@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApplyParametersButtonText" xml:space="preserve">
+    <value>Apply Parameters</value>
+  </data>
+  <data name="ApplySettingsButtonText" xml:space="preserve">
+    <value>Apply Settings</value>
+  </data>
+  <data name="BottomMarginPrompt" xml:space="preserve">
+    <value>Bottom margin (in inches)</value>
+  </data>
+  <data name="CloseButtonTooltip" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CloseSearchTooltip" xml:space="preserve">
+    <value>Hide Search Toolbar</value>
+  </data>
+  <data name="ContextMenuCopy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="ContextMenuSelectTool" xml:space="preserve">
+    <value>Select Tool</value>
+  </data>
+  <data name="ContextMenuSelectAll" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="ContextMenuDeselect" xml:space="preserve">
+    <value>Deselect</value>
+  </data>
+  <data name="EmptyNotValid" xml:space="preserve">
+    <value>An empty string is not a valid value</value>
+  </data>
+  <data name="ErrorFmt" xml:space="preserve">
+    <value>[ERROR]: {0}</value>
+  </data>
+  <data name="ErrorParsingBool" xml:space="preserve">
+    <value>Can't convert '{0}' to a boolean value</value>
+  </data>
+  <data name="ErrorParsingDate" xml:space="preserve">
+    <value>Can't convert '{0}' to a date value</value>
+  </data>
+  <data name="ErrorParsingFloat" xml:space="preserve">
+    <value>Can't convert '{0}' to a float value</value>
+  </data>
+  <data name="ErrorParsingInt" xml:space="preserve">
+    <value>Can't convert '{0}' to an integer value</value>
+  </data>
+  <data name="ErrorParsingNumeric" xml:space="preserve">
+    <value>Can't convert '{0}' to a numeric value</value>
+  </data>
+  <data name="ErrorSpacing" xml:space="preserve">
+    <value>Value must be between 0 and 15</value>
+  </data>
+  <data name="ExportedFmt" xml:space="preserve">
+    <value>'{0}' saved to {1}</value>
+  </data>
+  <data name="ExportingFmt" xml:space="preserve">
+    <value>Exporting '{0}' to {1} ...</value>
+  </data>
+  <data name="ExportTitle" xml:space="preserve">
+    <value>Export Document to File</value>
+  </data>
+  <data name="ExportTooltip" xml:space="preserve">
+    <value>Export to File</value>
+  </data>
+  <data name="FacingPagesMenuHeader" xml:space="preserve">
+    <value>Facing Pages</value>
+  </data>
+  <data name="FindLabel" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="FindNextTooltip" xml:space="preserve">
+    <value>Find the next occurrence (F3)</value>
+  </data>
+  <data name="FindPreviousTooltip" xml:space="preserve">
+    <value>Find the previous occurrence</value>
+  </data>
+  <data name="FindTextTooltip" xml:space="preserve">
+    <value>Find Text (Ctrl+F)</value>
+  </data>
+  <data name="FirstPageTooltip" xml:space="preserve">
+    <value>First Page</value>
+  </data>
+  <data name="FourPagesMenuHeader" xml:space="preserve">
+    <value>Four Pages</value>
+  </data>
+  <data name="Landscape" xml:space="preserve">
+    <value>Landscape</value>
+  </data>
+  <data name="LastPageTooltip" xml:space="preserve">
+    <value>Last Page</value>
+  </data>
+  <data name="LayoutMenuHeader" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="LayoutMenuTooltip" xml:space="preserve">
+    <value>Layout Options</value>
+  </data>
+  <data name="LeftMarginPrompt" xml:space="preserve">
+    <value>Left margin (in inches)</value>
+  </data>
+  <data name="MatchCaseLabel" xml:space="preserve">
+    <value>Match Case</value>
+  </data>
+  <data name="MatchCaseTooltip" xml:space="preserve">
+    <value>Case-sensitive search</value>
+  </data>
+  <data name="NavigateBackwardTooltip" xml:space="preserve">
+    <value>Navigate Backward</value>
+  </data>
+  <data name="NavigateForwardTooltip" xml:space="preserve">
+    <value>Navigate Forward</value>
+  </data>
+  <data name="NextPageTooltip" xml:space="preserve">
+    <value>Next Page</value>
+  </data>
+  <data name="NoMatchesFound" xml:space="preserve">
+    <value>No matches found.</value>
+  </data>
+  <data name="NoneLabel" xml:space="preserve">
+    <value>(none)</value>
+  </data>
+  <data name="OnePageMenuHeader" xml:space="preserve">
+    <value>One Page</value>
+  </data>
+  <data name="OrientationPrompt" xml:space="preserve">
+    <value>Orientation</value>
+  </data>
+  <data name="OutlinesViewTitle" xml:space="preserve">
+    <value>Outlines</value>
+  </data>
+  <data name="OutlinesTooltip" xml:space="preserve">
+    <value>Document Outlines</value>
+  </data>
+  <data name="PageCountTooltip" xml:space="preserve">
+    <value>Page Count</value>
+  </data>
+  <data name="PageLabel" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="PageLoadingFmt" xml:space="preserve">
+    <value>Page {0} is loading...</value>
+  </data>
+  <data name="PageNumberTooltip" xml:space="preserve">
+    <value>Page Number</value>
+  </data>
+  <data name="PageSettingsViewTitle" xml:space="preserve">
+    <value>Page Settings</value>
+  </data>
+  <data name="PageSettingsTooltip" xml:space="preserve">
+    <value>Page Settings</value>
+  </data>
+  <data name="PaneIsBusy" xml:space="preserve">
+    <value>C1FlexViewerPane is busy.</value>
+  </data>
+  <data name="PaperSizePrompt" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="ParametersViewTitle" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="ParametersTooltip" xml:space="preserve">
+    <value>Report Parameters</value>
+  </data>
+  <data name="Portrait" xml:space="preserve">
+    <value>Portrait</value>
+  </data>
+  <data name="PreviousPageTooltip" xml:space="preserve">
+    <value>Previous Page</value>
+  </data>
+  <data name="PrintLayoutTooltip" xml:space="preserve">
+    <value>Print Layout</value>
+  </data>
+  <data name="PrintTooltip" xml:space="preserve">
+    <value>Print (Ctrl+P)</value>
+  </data>
+  <data name="RefreshTooltip" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="RightMarginPrompt" xml:space="preserve">
+    <value>Right margin (in inches)</value>
+  </data>
+  <data name="RotateCCWMenuHeader" xml:space="preserve">
+    <value>Rotate Counterclockwise</value>
+  </data>
+  <data name="RotateCWMenuHeader" xml:space="preserve">
+    <value>Rotate Clockwise</value>
+  </data>
+  <data name="Searching" xml:space="preserve">
+    <value>Searching...</value>
+  </data>
+  <data name="SearchTextTooltip" xml:space="preserve">
+    <value>Text to search</value>
+  </data>
+  <data name="SelectorComboSelectText" xml:space="preserve">
+    <value>&lt; Select a Value &gt;</value>
+  </data>
+  <data name="SelectToolTooltip" xml:space="preserve">
+    <value>Text Selection Tool</value>
+  </data>
+  <data name="Size10x11" xml:space="preserve">
+    <value>10"×11"</value>
+  </data>
+  <data name="Size10x14" xml:space="preserve">
+    <value>10"×14"</value>
+  </data>
+  <data name="Size11x17" xml:space="preserve">
+    <value>11"×17"</value>
+  </data>
+  <data name="Size9x11" xml:space="preserve">
+    <value>9"×11"</value>
+  </data>
+  <data name="SizeA2" xml:space="preserve">
+    <value>A2</value>
+  </data>
+  <data name="SizeA3" xml:space="preserve">
+    <value>A3</value>
+  </data>
+  <data name="SizeA3Extra" xml:space="preserve">
+    <value>A3 extra</value>
+  </data>
+  <data name="SizeA4" xml:space="preserve">
+    <value>A4</value>
+  </data>
+  <data name="SizeA4Extra" xml:space="preserve">
+    <value>A4 extra</value>
+  </data>
+  <data name="SizeA4Plus" xml:space="preserve">
+    <value>A4 plus</value>
+  </data>
+  <data name="SizeA5" xml:space="preserve">
+    <value>A5</value>
+  </data>
+  <data name="SizeA5Extra" xml:space="preserve">
+    <value>A5 extra</value>
+  </data>
+  <data name="SizeA6" xml:space="preserve">
+    <value>A6</value>
+  </data>
+  <data name="SizeB4" xml:space="preserve">
+    <value>B4</value>
+  </data>
+  <data name="SizeB4Envelope" xml:space="preserve">
+    <value>B4 envelope</value>
+  </data>
+  <data name="SizeB5Envelope" xml:space="preserve">
+    <value>B5 envelope</value>
+  </data>
+  <data name="SizeB5Extra" xml:space="preserve">
+    <value>B5 extra</value>
+  </data>
+  <data name="SizeC" xml:space="preserve">
+    <value>C size sheet</value>
+  </data>
+  <data name="SizeC3Envelope" xml:space="preserve">
+    <value>C3 envelope</value>
+  </data>
+  <data name="SizeC4Envelope" xml:space="preserve">
+    <value>C4 envelope</value>
+  </data>
+  <data name="SizeC5Envelope" xml:space="preserve">
+    <value>C5 envelope</value>
+  </data>
+  <data name="SizeC6Envelope" xml:space="preserve">
+    <value>C6 envelope</value>
+  </data>
+  <data name="SizeC6C5Envelope" xml:space="preserve">
+    <value>C6/C5 envelope</value>
+  </data>
+  <data name="SizeD" xml:space="preserve">
+    <value>D size sheet</value>
+  </data>
+  <data name="SizeDLEnvelope" xml:space="preserve">
+    <value>DL envelope</value>
+  </data>
+  <data name="SizeE" xml:space="preserve">
+    <value>E size sheet</value>
+  </data>
+  <data name="SizeEnvelope10" xml:space="preserve">
+    <value>Envelope #10</value>
+  </data>
+  <data name="SizeEnvelope11" xml:space="preserve">
+    <value>Envelope #11</value>
+  </data>
+  <data name="SizeEnvelope12" xml:space="preserve">
+    <value>Envelope #12</value>
+  </data>
+  <data name="SizeEnvelope14" xml:space="preserve">
+    <value>Envelope #14</value>
+  </data>
+  <data name="SizeEnvelope9" xml:space="preserve">
+    <value>Envelope #9</value>
+  </data>
+  <data name="SizeEnvelopeItalian" xml:space="preserve">
+    <value>Envelope Italian</value>
+  </data>
+  <data name="SizeEnvelopeInvite" xml:space="preserve">
+    <value>Envelope invite</value>
+  </data>
+  <data name="SizeEnvelopeMonarch" xml:space="preserve">
+    <value>Envelope monarch</value>
+  </data>
+  <data name="SizeEnvelopePersonal" xml:space="preserve">
+    <value>Envelope personal</value>
+  </data>
+  <data name="SizeExecutive" xml:space="preserve">
+    <value>Executive</value>
+  </data>
+  <data name="SizeFolio" xml:space="preserve">
+    <value>Folio</value>
+  </data>
+  <data name="SizeGermanLegalFanfold" xml:space="preserve">
+    <value>German legal fanfold</value>
+  </data>
+  <data name="SizeGermanStandardFanfold" xml:space="preserve">
+    <value>German standard fanfold</value>
+  </data>
+  <data name="SizeJISB4" xml:space="preserve">
+    <value>JIS B4</value>
+  </data>
+  <data name="SizeJISB5" xml:space="preserve">
+    <value>JIS B5</value>
+  </data>
+  <data name="SizeJISB6" xml:space="preserve">
+    <value>JIS B6</value>
+  </data>
+  <data name="SizeJapanChou3Envelope" xml:space="preserve">
+    <value>Japan Chou 3 envelope</value>
+  </data>
+  <data name="SizeJapanChou4Envelope" xml:space="preserve">
+    <value>Japan Chou 4 envelope</value>
+  </data>
+  <data name="SizeJapanHagakiPostcard" xml:space="preserve">
+    <value>Japan Hagaki postcard</value>
+  </data>
+  <data name="SizeJapanKaku2Envelope" xml:space="preserve">
+    <value>Japan Kaku 2 envelope</value>
+  </data>
+  <data name="SizeJapanKaku3Envelope" xml:space="preserve">
+    <value>Japan Kaku 3 envelope</value>
+  </data>
+  <data name="SizeJapanYou4Envelope" xml:space="preserve">
+    <value>Japan You 4 envelope</value>
+  </data>
+  <data name="SizeJapanDoubleHagakiPostcard" xml:space="preserve">
+    <value>Japan double Hagaki postcard</value>
+  </data>
+  <data name="SizeLegal" xml:space="preserve">
+    <value>Legal</value>
+  </data>
+  <data name="SizeLegalExtra" xml:space="preserve">
+    <value>Legal extra</value>
+  </data>
+  <data name="SizeLetter" xml:space="preserve">
+    <value>Letter</value>
+  </data>
+  <data name="SizeLetterExtra" xml:space="preserve">
+    <value>Letter extra</value>
+  </data>
+  <data name="SizeLetterPlus" xml:space="preserve">
+    <value>Letter plus</value>
+  </data>
+  <data name="SizeNote" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="SizePRCEnvelope1" xml:space="preserve">
+    <value>PRC envelope #1</value>
+  </data>
+  <data name="SizePRCEnvelope10" xml:space="preserve">
+    <value>PRC envelope #10</value>
+  </data>
+  <data name="SizePRCEnvelope3" xml:space="preserve">
+    <value>PRC envelope #3</value>
+  </data>
+  <data name="SizePRCEnvelope4" xml:space="preserve">
+    <value>PRC envelope #4</value>
+  </data>
+  <data name="SizePRCEnvelope5" xml:space="preserve">
+    <value>PRC envelope #5</value>
+  </data>
+  <data name="SizePRCEnvelope6" xml:space="preserve">
+    <value>PRC envelope #6</value>
+  </data>
+  <data name="SizePRCEnvelope7" xml:space="preserve">
+    <value>PRC envelope #7</value>
+  </data>
+  <data name="SizePRCEnvelope8" xml:space="preserve">
+    <value>PRC envelope #8</value>
+  </data>
+  <data name="SizePRCEnvelope9" xml:space="preserve">
+    <value>PRC envelope #9</value>
+  </data>
+  <data name="SizeQuarto" xml:space="preserve">
+    <value>Quarto</value>
+  </data>
+  <data name="SizeStatement" xml:space="preserve">
+    <value>Statement</value>
+  </data>
+  <data name="SizeSuperA" xml:space="preserve">
+    <value>Super A</value>
+  </data>
+  <data name="SizeSuperB" xml:space="preserve">
+    <value>Super B</value>
+  </data>
+  <data name="SizeTabloid" xml:space="preserve">
+    <value>Tabloid</value>
+  </data>
+  <data name="SizeUnknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="StopOperationTooltip" xml:space="preserve">
+    <value>Stop the Operation</value>
+  </data>
+  <data name="ThumbnailsTooltip" xml:space="preserve">
+    <value>Page Thumbnails (Ctrl+T)</value>
+  </data>
+  <data name="ToggleOffContent" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ToggleOnContent" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="TopMarginPrompt" xml:space="preserve">
+    <value>Top margin (in inches)</value>
+  </data>
+  <data name="TwoPagesMenuHeader" xml:space="preserve">
+    <value>Two Pages</value>
+  </data>
+  <data name="ValueIsNotSelected" xml:space="preserve">
+    <value>Value is not selected</value>
+  </data>
+  <data name="WholeWordsLabel" xml:space="preserve">
+    <value>Whole Words</value>
+  </data>
+  <data name="WholeWordsTooltip" xml:space="preserve">
+    <value>Find whole words only</value>
+  </data>
+  <data name="WideLayoutMenuHeader" xml:space="preserve">
+    <value>Wide Layout</value>
+  </data>
+  <data name="ZoomComboTooltip" xml:space="preserve">
+    <value>Zoom Options</value>
+  </data>
+  <data name="ZoomFormat" xml:space="preserve">
+    <value>Zoom {0}%</value>
+  </data>
+  <data name="ZoomToActualSize" xml:space="preserve">
+    <value>Actual Size</value>
+  </data>
+  <data name="ZoomToPageWidth" xml:space="preserve">
+    <value>Page Width</value>
+  </data>
+  <data name="ZoomToWholePage" xml:space="preserve">
+    <value>Whole Page</value>
+  </data>
+  <data name="OpenFileTooltip" xml:space="preserve">
+    <value>Open File (Ctrl+O)</value>
+  </data>
+  <data name="CloseFileTooltip" xml:space="preserve">
+    <value>Close File (Ctrl+F4)</value>
+  </data>
+
+  <data name="SearchOnCurrentPageLabel" xml:space="preserve">
+    <value>Current Page</value>
+  </data>
+  <data name="SearchOnCurrentPageTooltip" xml:space="preserve">
+    <value>Limit search to current page</value>
+  </data>
+</root>

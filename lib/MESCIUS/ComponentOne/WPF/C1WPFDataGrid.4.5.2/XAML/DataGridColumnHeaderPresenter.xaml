@@ -1,0 +1,444 @@
+﻿	  
+	   
+    
+		
+
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="clr-namespace:C1.WPF;assembly=C1.WPF.4.5.2" xmlns:c1DataGrid="clr-namespace:C1.WPF.DataGrid">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/C1.WPF.4.5.2;component/themes/Common.xaml" />
+        <ResourceDictionary Source="/C1.WPF.DataGrid.4.5.2;component/themes/Common.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--******************** ColumnHeader *********************-->
+
+    <!-- Brush @ C1DataGrid ColumnHeader Background -->
+    
+    
+    <LinearGradientBrush x:Key="DataGridColumnHeaderBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFEFF3F7" Offset="0" />
+        <GradientStop Color="#FFE6ECF3" Offset="0.5" />
+        <GradientStop Color="#FFD3DEEA" Offset="0.5" />
+        <GradientStop Color="#FFC4D2E2" Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DataGridColumnHeaderOverBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFEDF6F9" Offset="0" />
+        <GradientStop Color="#FFE4F2F6" Offset="0.5" />
+        <GradientStop Color="#FFD2E9F0" Offset="0.5" />
+        <GradientStop Color="#FFC0E0EA" Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DataGridColumnHeaderSelectedBackground" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFA6D9E7" Offset="0" />
+        <GradientStop Color="#FFA6D9E7" Offset="0.5" />
+        <GradientStop Color="#FF93D1E2" Offset="0.5" />
+        <GradientStop Color="#FF7BC7DC" Offset="1" />
+    </LinearGradientBrush>
+        
+
+    <!-- Brush @ C1DataGrid ColumnHeader Sort Icon Background-->
+    <SolidColorBrush x:Key="DataGridColumnHeaderSortBrush" Color="#FF5E5E5E" />
+
+    <!-- Style @ C1DataGrid ColumnHeader Sort Icon -->
+    <Style x:Key="DataGridColumnHeaderSortArrowStyle" TargetType="Path">
+        <Setter Property="Height" Value="4" />
+        <Setter Property="Width" Value="7" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="0,0.5,0,0" />
+        <Setter Property="Visibility" Value="Collapsed" />
+    </Style>
+
+    <!-- Sort ToggleButton @ C1DataGrid ColumnHeader -->
+    <Style x:Key="DataGridColumnHeaderSortTButtonStyle" TargetType="ToggleButton">
+        <Setter Property="Padding" Value="3" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="MouseOver" />
+                                <VisualState x:Name="Pressed" />
+                                <VisualState x:Name="Disabled" />
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualState x:Name="Indeterminate" />
+                                <VisualState x:Name="Checked">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SortbyElement" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="SortbyElement" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                                            <SplineDoubleKeyFrame KeyTime="00:00:00" Value="180" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SortbyElement" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused" />
+                                <VisualState x:Name="Unfocused" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <c1:C1BrushBuilder x:Name="SortbyElementBrush" Input="{TemplateBinding Foreground}" DesignBrush="{StaticResource DataGridColumnHeaderSortBrush}" DesignColor="{StaticResource ForegroundColor}" />
+                        <Path x:Name="SortbyElement" Data="M0,0 L7,0 L3.5,4 L3.5,4 z" Fill="{Binding Output, ElementName=SortbyElementBrush}" Style="{StaticResource DataGridColumnHeaderSortArrowStyle}" Stretch="None" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Opacity="0.6">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform />
+                                    <SkewTransform />
+                                    <RotateTransform />
+                                    <TranslateTransform />
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Brush @ C1DataGrid ColumnHeader Icon Background -->
+    <SolidColorBrush x:Key="DataGridColumnHeaderIconBrush" Color="#FF5E5E5E" />
+    <!-- Brush @ C1DataGrid ColumnHeader Icon Border -->
+    <LinearGradientBrush x:Key="DataGridColumnHeaderIconBorderBrush" EndPoint="1,0" StartPoint="0,0">
+        <GradientStop Color="#FF333333" Offset="0" />
+        <GradientStop Color="#FF222222" Offset="0.496" />
+        <GradientStop Color="#FF3B3B3B" Offset="0.5" />
+        <GradientStop Color="#FF3B3B3B" Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- Style @ C1DataGrid ColumnHeader Filter Icon -->
+    <Style x:Key="DataGridColumnHeaderFilterIconStyle" TargetType="Path">
+        <Setter Property="Stretch" Value="None" />
+        <Setter Property="Height" Value="8" />
+        <Setter Property="Width" Value="8" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="Opacity" Value="0.6" />
+    </Style>
+
+    <!-- Style @ C1DataGrid ColumnHeader Options Icon -->
+    <Style x:Key="DataGridColumnHeaderOptionsIconStyle" TargetType="Polygon">
+        <Setter Property="Width" Value="7" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="Opacity" Value="0.6" />
+    </Style>
+
+    <!-- Options ToggleButton @ C1DataGrid -->
+    <Style x:Key="DataGridColumnHeaderOptionsTButtonStyle" TargetType="ToggleButton">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Grid Background="{TemplateBinding Background}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MouseOverElement" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PressedElement" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled" />                                   
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualState x:Name="Unchecked" />
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused" />
+                                <VisualState x:Name="Unfocused" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <c1:C1BrushBuilder x:Name="BackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource DataGridColumnHeaderBrush}" DesignColor="{StaticResource BaseColor}" />
+                        <c1:C1BrushBuilder x:Name="MouseOverBrush" Input="{TemplateBinding c1:ClearStyleExtensions.MouseOverBrush}" DesignBrush="{StaticResource DataGridColumnHeaderOverBrush}" DesignColor="{StaticResource MouseOverColor}" />
+                        <c1:C1BrushBuilder x:Name="PressedBrush" Input="{TemplateBinding c1:ClearStyleExtensions.PressedBrush}" DesignBrush="{StaticResource DataGridColumnHeaderSelectedBackground}" DesignColor="{StaticResource SelectedColor}" />
+                        <Border x:Name="BackgroundElement" Background="{Binding ElementName=BackgroundBrush, Path=Output}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1 0 0 0" />
+                        <Border x:Name="PressedElement" Background="{Binding ElementName=PressedBrush, Path=Output}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1 0 0 0" Visibility="Collapsed" />
+                        <Border x:Name="MouseOverElement" Background="{Binding ElementName=MouseOverBrush, Path=Output}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1 0 0 0" Visibility="Collapsed" />
+                        <ContentPresenter Margin="{TemplateBinding Padding}" IsHitTestVisible="True" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- C1DropDown @ C1DataGrid Options -->
+    <ControlTemplate x:Key="DataGridColumnHeaderOptionsDDownStyle" TargetType="c1:C1DropDown">
+        <Grid>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="DropDownOpenStates">
+                    <VisualState x:Name="Closed">
+                        <Storyboard />
+                    </VisualState>
+                    <VisualState x:Name="Opened" />
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled" />
+                    <VisualState x:Name="MouseOver" />
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="FocusStates">
+                    <VisualState x:Name="Unfocused" />
+                    <VisualState x:Name="Focused">
+                        <Storyboard />
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <ToggleButton x:Name="ArrowToggle" Width="14" IsEnabled="{TemplateBinding IsEnabled}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Style="{StaticResource DataGridColumnHeaderOptionsTButtonStyle}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" IsTabStop="False" Content="{TemplateBinding Header}" />
+            <Popup x:Name="DropDownPopup" VerticalAlignment="Bottom">
+                <ContentPresenter />
+            </Popup>
+        </Grid>
+    </ControlTemplate>
+
+    <!-- DataGridColumnHeaderPresenter Style -->
+    <Style TargetType="c1DataGrid:DataGridColumnHeaderPresenter">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        <Setter Property="BorderThickness" Value="0 0 1 1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1DataGrid:DataGridColumnHeaderPresenter">
+                    <Grid x:Name="RootElement">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Disabled" />
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MouseOverElement" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="SelectionStates">
+                                <VisualState x:Name="Selected">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SelectedElement" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Editing">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SelectedElement" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unselected">
+                                    <Storyboard />
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="OptionsStates">
+                                <VisualState x:Name="Filtering">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="OptionsArrow" Storyboard.TargetProperty="(UIElement.Opacity)" Duration="0">
+                                            <DiscreteDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Filter" Storyboard.TargetProperty="(UIElement.Opacity)" Duration="0">
+                                            <DiscreteDoubleKeyFrame KeyTime="00:00:00" Value=".6" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                     </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Undefined">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="OptionsArrow" Storyboard.TargetProperty="(UIElement.Opacity)" Duration="0">
+                                            <DiscreteDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Filter" Storyboard.TargetProperty="(UIElement.Opacity)" Duration="0">
+                                            <DiscreteDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="MergingStates">
+                                <VisualState x:Name="Merging">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundBrush" Storyboard.TargetProperty="DesignBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource DataGridColumnHeaderMergingBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MouseOverBrush" Storyboard.TargetProperty="DesignBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource DataGridColumnHeaderMergingOverBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SelectedBackground" Storyboard.TargetProperty="DesignBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource DataGridColumnHeaderMergingSelectedBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="NotMerging">
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <c1:C1BrushBuilder x:Name="BackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource DataGridColumnHeaderBrush}" DesignColor="{StaticResource BaseColor}" />
+                        <c1:C1BrushBuilder x:Name="MouseOverBrush" Input="{TemplateBinding MouseOverBrush}" DesignBrush="{StaticResource DataGridColumnHeaderOverBrush}" DesignColor="{StaticResource MouseOverColor}" />
+                        <c1:C1BrushBuilder x:Name="SelectedBackground" Input="{TemplateBinding SelectedBackground}" DesignBrush="{StaticResource DataGridColumnHeaderSelectedBackground}" DesignColor="{StaticResource SelectedColor}" />
+                        <c1:C1BrushBuilder x:Name="IconBrush" Input="{TemplateBinding Foreground}" DesignBrush="{StaticResource DataGridColumnHeaderIconBrush}" DesignColor="{StaticResource ForegroundColor}" />
+                        <c1:C1BrushBuilder x:Name="IconBorderBrush" Input="{TemplateBinding Foreground}" DesignBrush="{StaticResource DataGridColumnHeaderIconBorderBrush}" DesignColor="{StaticResource ForegroundColor}" />
+                        <Border x:Name="BackgroundElement" Background="{Binding ElementName=BackgroundBrush, Path=Output}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Grid.RowSpan="2" Grid.ColumnSpan="4" />
+                        <Border x:Name="SelectedElement" Background="{Binding ElementName=SelectedBackground, Path=Output}" BorderBrush="{TemplateBinding SelectedBackground}" BorderThickness="{TemplateBinding BorderThickness}" Grid.RowSpan="2" Grid.ColumnSpan="4" Visibility="Collapsed" />
+                        <Border x:Name="MouseOverElement" Background="{Binding ElementName=MouseOverBrush, Path=Output}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Grid.RowSpan="2" Grid.ColumnSpan="4" Visibility="Collapsed" />
+                        <ToggleButton x:Name="Sort" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{StaticResource DataGridColumnHeaderSortTButtonStyle}" IsHitTestVisible="True" IsTabStop="False" Foreground="{TemplateBinding Foreground}" Margin="{StaticResource DataGridBorderThickness}" />
+                        <ContentPresenter x:Name="ContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="6,0,6,0" Visibility="Visible" />
+                        
+                        <c1:C1DropDown x:Name="Options" HorizontalAlignment="Right" Visibility="Collapsed" Template="{StaticResource DataGridColumnHeaderOptionsDDownStyle}" IsTabStop="False" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="0" Margin="{TemplateBinding BorderThickness}" AutoSizeMode="GrowHorizontally" MouseOverBrush="{TemplateBinding MouseOverBrush}" PressedBrush="{TemplateBinding PressedBrush}">
+                            <c1:C1DropDown.Header>
+                                <Grid>
+                                    <Path x:Name="Filter" Data="M3.5,0.5 L4.5,0.5 L4.5,0.5 L7.5,0.5 L7.5,1.5 L7.5,1.5 L4.5,4.3 L4.5,7.5 L3.5,7.5 L3.5,4.3 L0.5,1.5 L0.5,0.5 L3.5,0.5 z" Fill="{Binding Output, ElementName=IconBrush}" Stroke="{Binding Output, ElementName=IconBorderBrush}" Style="{StaticResource DataGridColumnHeaderFilterIconStyle}" />
+                                    <Polygon x:Name="OptionsArrow" Stretch="Uniform" Points="0,0 2,0 1,1" Fill="{Binding Output, ElementName=IconBrush}" Stroke="{Binding Output, ElementName=IconBorderBrush}" Style="{StaticResource DataGridColumnHeaderOptionsIconStyle}" />
+                                </Grid>
+                            </c1:C1DropDown.Header>
+                        </c1:C1DropDown>
+                        <Rectangle x:Name="Resize" Fill="White" Width="4" Grid.RowSpan="2" Grid.ColumnSpan="3" HorizontalAlignment="Right" Cursor="SizeWE" Opacity="0" Margin="0 0 -2 0" Visibility="Visible" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <!--****************** Group ColumnHeader *******************-->
+    
+    <!-- CornerRadius @ DataGridColumnHeaderPresenter -->
+    <CornerRadius x:Key="DataGridColumnHeaderPresenterCornerRadius">2</CornerRadius>
+    <!-- RemoveGroup Button @ C1DataGrid GroupColumnHeader -->
+    <Style x:Key="DataGridGroupColumnHeaderRemoveButtonStyle" TargetType="Button">
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="BorderThickness" Value="{StaticResource DataGridBorderThickness}" />
+        <Setter Property="Height" Value="14" />
+        <Setter Property="Width" Value="14" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MouseOverElement" Storyboard.TargetProperty="(UIElement.Opacity)" Duration="0">
+                                            <DiscreteDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="contentPresenter" Storyboard.TargetProperty="(UIElement.Opacity)" Duration="0">
+                                            <DiscreteDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed" />
+                                <VisualState x:Name="Disabled" />
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused" />
+                                <VisualState x:Name="Unfocused" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border x:Name="MouseOverElement" Background="{TemplateBinding Background}" BorderThickness="{StaticResource DataGridBorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="{StaticResource DataGridGeneralCornerRadius}" Opacity="0" />
+                        <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Opacity="0.5" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- DataGridGroupColumnHeaderPresenter Style -->
+    <Style TargetType="c1DataGrid:DataGridGroupColumnHeaderPresenter">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1DataGrid:DataGridGroupColumnHeaderPresenter">
+                    <Grid x:Name="RootElement" Height="24">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Disabled" />
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MouseOverElement" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="SelectedOptionsStates">
+                                <VisualState x:Name="Filtering" />
+                                <VisualState x:Name="NotAvailable" />
+                                <VisualState x:Name="Available" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid.ColumnDefinitions>
+                            <!-- Title -->
+                            <ColumnDefinition Width="*" />
+                            <!-- Separator -->
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <c1:C1BrushBuilder x:Name="BackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource DataGridColumnHeaderBrush}" DesignColor="{StaticResource BaseColor}" />
+                        <c1:C1BrushBuilder x:Name="MouseOverBrush" Input="{TemplateBinding MouseOverBrush}" DesignBrush="{StaticResource DataGridColumnHeaderOverBrush}" DesignColor="{StaticResource MouseOverColor}" />
+                        <Border x:Name="BackgroundElement" Background="{Binding Output, ElementName=BackgroundBrush}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{StaticResource DataGridBorderThickness}" CornerRadius="{StaticResource DataGridColumnHeaderPresenterCornerRadius}" Grid.ColumnSpan="2" />
+                        <Border x:Name="MouseOverElement" Background="{Binding Output, ElementName=MouseOverBrush}" BorderThickness="{StaticResource DataGridBorderThickness}" CornerRadius="{StaticResource DataGridGeneralCornerRadius}" Grid.RowSpan="2" Grid.ColumnSpan="4" Visibility="Collapsed" />
+                        <ToggleButton x:Name="Sort" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{StaticResource DataGridColumnHeaderSortTButtonStyle}" IsHitTestVisible="True" IsTabStop="False" Foreground="{TemplateBinding Foreground}" Margin="{StaticResource DataGridBorderThickness}" />
+                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="6,0" Visibility="Visible" />
+                        <Button x:Name="Remove" Grid.Column="1" Style="{StaticResource DataGridGroupColumnHeaderRemoveButtonStyle}" Background="{Binding Output, ElementName=MouseOverBrush}" Visibility="{TemplateBinding RemoveButtonVisibility}" BorderBrush="{TemplateBinding BorderBrush}" Margin="0,2,2,2">
+                            <Path Data="M0,0 L1.6,0 L3,1.56 L4.4,0 L6,0 L3.8,2.5 L6,5 L4.4,5 L3,3.49 L1.59,5 L-4.2E-09,5 L2.18,2.5 z" Width="6" Height="5" Stretch="Fill" Fill="{TemplateBinding Foreground}" />
+                        </Button>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

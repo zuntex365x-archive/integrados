@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cell_Title" xml:space="preserve">
+    <value>Cel</value>
+  </data>
+  <data name="FindTool_BtnFindNext" xml:space="preserve">
+    <value>Volgende zoeken</value>
+  </data>
+  <data name="FindTool_BtnReplace" xml:space="preserve">
+    <value>Vervangen</value>
+  </data>
+  <data name="FindTool_BtnReplaceAll" xml:space="preserve">
+    <value>Alles vervangen</value>
+  </data>
+  <data name="FindTool_LblFind" xml:space="preserve">
+    <value>Zoeken:</value>
+  </data>
+  <data name="FindTool_LblReplace" xml:space="preserve">
+    <value>Vervangen:</value>
+  </data>
+  <data name="Font_Bold" xml:space="preserve">
+    <value>Vet</value>
+  </data>
+  <data name="Font_BoldInitial" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="Font_ChangeCase" xml:space="preserve">
+    <value>Hoofdlettergebruik</value>
+  </data>
+  <data name="Font_ChangeCase_CapitalizeEachWord" xml:space="preserve">
+    <value>Alles met Beginhoofdletter</value>
+  </data>
+  <data name="Font_ChangeCase_LowerCase" xml:space="preserve">
+    <value>kleine letters</value>
+  </data>
+  <data name="Font_ChangeCase_ToggleCase" xml:space="preserve">
+    <value>oMKERING lETTERS</value>
+  </data>
+  <data name="Font_ChangeCase_UpperCase" xml:space="preserve">
+    <value>HOOFDLETTERS</value>
+  </data>
+  <data name="Font_Font" xml:space="preserve">
+    <value>Lettertype</value>
+  </data>
+  <data name="Font_FontColor" xml:space="preserve">
+    <value>Tekstkleur</value>
+  </data>
+  <data name="Font_FontSize" xml:space="preserve">
+    <value>Tekengrootte</value>
+  </data>
+  <data name="Font_GrowFont" xml:space="preserve">
+    <value>Lettertype vergroten</value>
+  </data>
+  <data name="Font_Italic" xml:space="preserve">
+    <value>Cursief</value>
+  </data>
+  <data name="Font_ItalicInitial" xml:space="preserve">
+    <value>I</value>
+  </data>
+  <data name="Font_ShrinkFont" xml:space="preserve">
+    <value>Lettertype verkleinen</value>
+  </data>
+  <data name="Font_Subscript" xml:space="preserve">
+    <value>Subscript</value>
+  </data>
+  <data name="Font_Superscript" xml:space="preserve">
+    <value>Superscript</value>
+  </data>
+  <data name="Font_TextHighlightColor" xml:space="preserve">
+    <value>Tekstmarkeringskleur</value>
+  </data>
+  <data name="Font_Title" xml:space="preserve">
+    <value>Lettertype</value>
+  </data>
+  <data name="Font_Underline" xml:space="preserve">
+    <value>Onderstrepen</value>
+  </data>
+  <data name="Font_UnderlineInitial" xml:space="preserve">
+    <value>U</value>
+  </data>
+  <data name="HomeTab_Header" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Insert_InsertHyperlink" xml:space="preserve">
+    <value>Hyperlink invoegen</value>
+  </data>
+  <data name="Insert_InsertHyperlink_InvalidURL" xml:space="preserve">
+    <value>De URL '{0}' is ongeldig</value>
+  </data>
+  <data name="Insert_InsertHyperlink_TextLabel" xml:space="preserve">
+    <value>Tekst:</value>
+  </data>
+  <data name="Insert_InsertHyperlink_URLLabel" xml:space="preserve">
+    <value>URL:</value>
+  </data>
+  <data name="Insert_InsertHyperlink_TargetLabel" xml:space="preserve">
+    <value>Doel:</value>
+  </data>
+  <data name="Insert_InsertImage" xml:space="preserve">
+    <value>Afbeelding invoegen</value>
+  </data>
+  <data name="Insert_InsertImage_InvalidURL" xml:space="preserve">
+    <value>De URL '{0}' is ongeldig</value>
+  </data>
+  <data name="Insert_InsertImage_UrlMessage" xml:space="preserve">
+    <value>Geef de URL op waar de afbeelding zich bevindt:</value>
+  </data>
+  <data name="Insert_InsertImage_NotLoaded" xml:space="preserve">
+    <value>Afbeelding van '{0}' kan niet worden geladen.</value>
+  </data>
+  <data name="Insert_InsertSymbol" xml:space="preserve">
+    <value>Symbool invoegen</value>
+  </data>
+  <data name="Insert_RemoveHyperlink" xml:space="preserve">
+    <value>Hyperlink verwijderen</value>
+  </data>
+  <data name="Insert_Title" xml:space="preserve">
+    <value>Invoegen</value>
+  </data>
+  <data name="Merge_Title" xml:space="preserve">
+    <value>Samenvoegen</value>
+  </data>
+  <data name="Paragraph_AlignTextCenter" xml:space="preserve">
+    <value>Tekst centreren</value>
+  </data>
+  <data name="Paragraph_AlignTextLeft" xml:space="preserve">
+    <value>Tekst links uitlijnen</value>
+  </data>
+  <data name="Paragraph_AlignTextRight" xml:space="preserve">
+    <value>Tekst rechts uitlijnen</value>
+  </data>
+  <data name="Paragraph_BorderColor" xml:space="preserve">
+    <value>Randkleur</value>
+  </data>
+  <data name="Paragraph_BorderThickness" xml:space="preserve">
+    <value>Randdikte</value>
+  </data>
+  <data name="Paragraph_Bullets" xml:space="preserve">
+    <value>Opsommingstekens</value>
+  </data>
+  <data name="Paragraph_Justify" xml:space="preserve">
+    <value>Uitvullen</value>
+  </data>
+  <data name="Paragraph_Margin" xml:space="preserve">
+    <value>Marge</value>
+  </data>
+  <data name="Paragraph_Numbering" xml:space="preserve">
+    <value>Nummering</value>
+  </data>
+  <data name="Paragraph_Padding" xml:space="preserve">
+    <value>Opvulling</value>
+  </data>
+  <data name="Paragraph_ParagraphColor" xml:space="preserve">
+    <value>Alineakleur</value>
+  </data>
+  <data name="Paragraph_TextWrapping" xml:space="preserve">
+    <value>Tekstterugloop</value>
+  </data>
+  <data name="Paragraph_Title" xml:space="preserve">
+    <value>Alinea</value>
+  </data>
+  <data name="RowsAndColumns_Title" xml:space="preserve">
+    <value>Rijen &amp; Kolommen</value>
+  </data>
+  <data name="TablesTab_Header" xml:space="preserve">
+    <value>Tabellen</value>
+  </data>
+  <data name="Table_Title" xml:space="preserve">
+    <value>Tabel</value>
+  </data>
+  <data name="ThicknessPicker_Bottom" xml:space="preserve">
+    <value>Onder:</value>
+  </data>
+  <data name="ThicknessPicker_Left" xml:space="preserve">
+    <value>Links:</value>
+  </data>
+  <data name="ThicknessPicker_Right" xml:space="preserve">
+    <value>Rechts:</value>
+  </data>
+  <data name="ThicknessPicker_Top" xml:space="preserve">
+    <value>Boven:</value>
+  </data>
+  <data name="Tools_BorderTool" xml:space="preserve">
+    <value>Randen</value>
+  </data>
+  <data name="Tools_BorderTool_AllBorders" xml:space="preserve">
+    <value>Alle randen</value>
+  </data>
+  <data name="Tools_BorderTool_BottomBorder" xml:space="preserve">
+    <value>Onderrand</value>
+  </data>
+  <data name="Tools_BorderTool_Color" xml:space="preserve">
+    <value>Kleur</value>
+  </data>
+  <data name="Tools_BorderTool_InsideBorders" xml:space="preserve">
+    <value>Binnenranden</value>
+  </data>
+  <data name="Tools_BorderTool_InsideHorizontalBorders" xml:space="preserve">
+    <value>Horizontale binnenranden</value>
+  </data>
+  <data name="Tools_BorderTool_InsideVerticalBorders" xml:space="preserve">
+    <value>Verticale binnenranden</value>
+  </data>
+  <data name="Tools_BorderTool_LeftBorder" xml:space="preserve">
+    <value>Linkerrand</value>
+  </data>
+  <data name="Tools_BorderTool_NoBorder" xml:space="preserve">
+    <value>Geen rand</value>
+  </data>
+  <data name="Tools_BorderTool_OutsideBorders" xml:space="preserve">
+    <value>Buitenranden</value>
+  </data>
+  <data name="Tools_BorderTool_RightBorder" xml:space="preserve">
+    <value>Rechterrand</value>
+  </data>
+  <data name="Tools_BorderTool_TopBorder" xml:space="preserve">
+    <value>Bovenrand</value>
+  </data>
+  <data name="Tools_BorderTool_Weight" xml:space="preserve">
+    <value>Gewicht</value>
+  </data>
+  <data name="Tools_BottomAlign" xml:space="preserve">
+    <value>Onder uitlijnen</value>
+  </data>
+  <data name="Tools_ColumnWidth_Header" xml:space="preserve">
+    <value>Breedte:</value>
+  </data>
+  <data name="Tools_Copy" xml:space="preserve">
+    <value>Kopiëren</value>
+  </data>
+  <data name="Tools_Cut" xml:space="preserve">
+    <value>Knippen</value>
+  </data>
+  <data name="Tools_DeleteTable" xml:space="preserve">
+    <value>Tabel verwijderen</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteCells" xml:space="preserve">
+    <value>Cellen verwijderen</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteColumns" xml:space="preserve">
+    <value>Kolommen verwijderen</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteRows" xml:space="preserve">
+    <value>Rijen verwijderen</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteTable" xml:space="preserve">
+    <value>Tabel verwijderen</value>
+  </data>
+  <data name="Tools_FindAndReplace" xml:space="preserve">
+    <value>Zoeken en vervangen</value>
+  </data>
+  <data name="Tools_FindAndReplace_NotFound" xml:space="preserve">
+    <value>Kan de volgende opgegeven tekst niet vinden:</value>
+  </data>
+  <data name="Tools_InsertColumnsLeft" xml:space="preserve">
+    <value>Kolommen links invoegen</value>
+  </data>
+  <data name="Tools_InsertColumnsRight" xml:space="preserve">
+    <value>Kolommen rechts invoegen</value>
+  </data>
+  <data name="Tools_InsertRowsAbove" xml:space="preserve">
+    <value>Rijen boven invoegen</value>
+  </data>
+  <data name="Tools_InsertRowsBelow" xml:space="preserve">
+    <value>Rijen onder invoegen</value>
+  </data>
+  <data name="Tools_InsertTable" xml:space="preserve">
+    <value>Tabel invoegen</value>
+  </data>
+  <data name="Tools_InsertTable_ConvertText" xml:space="preserve">
+    <value>Tekst converteren naar tabel</value>
+  </data>
+  <data name="Tools_MergeCells" xml:space="preserve">
+    <value>Cellen samenvoegen</value>
+  </data>
+  <data name="Tools_Paste" xml:space="preserve">
+    <value>Plakken</value>
+  </data>
+  <data name="Tools_Redo" xml:space="preserve">
+    <value>Opnieuw</value>
+  </data>
+  <data name="Tools_RowHeight_Header" xml:space="preserve">
+    <value>Hoogte:</value>
+  </data>
+  <data name="Tools_SelectTable" xml:space="preserve">
+    <value>Tabel selecteren</value>
+  </data>
+  <data name="Tools_SelectTable_SelectCell" xml:space="preserve">
+    <value>Cel selecteren</value>
+  </data>
+  <data name="Tools_SelectTable_SelectColumn" xml:space="preserve">
+    <value>Kolom selecteren</value>
+  </data>
+  <data name="Tools_SelectTable_SelectRow" xml:space="preserve">
+    <value>Rij selecteren</value>
+  </data>
+  <data name="Tools_SelectTable_SelectTable" xml:space="preserve">
+    <value>Tabel selecteren</value>
+  </data>
+  <data name="Tools_ShowGridlines" xml:space="preserve">
+    <value>Rasterlijnen weergeven</value>
+  </data>
+  <data name="Tools_SpellCheck" xml:space="preserve">
+    <value>Spellingcontrole</value>
+  </data>
+  <data name="Tools_SpellCheck_NoErrors" xml:space="preserve">
+    <value>Geen spelfouten gevonden.</value>
+  </data>
+  <data name="Tools_SpellCheck_NotConfigured" xml:space="preserve">
+    <value>Spellingcontrole is niet geconfigureerd.</value>
+  </data>
+  <data name="Tools_SplitCell" xml:space="preserve">
+    <value>Cel splitsen</value>
+  </data>
+  <data name="Tools_TableWidth_Header" xml:space="preserve">
+    <value>Breedte:</value>
+  </data>
+  <data name="Tools_Title" xml:space="preserve">
+    <value>Hulpprogramma's</value>
+  </data>
+  <data name="Tools_TopAlign" xml:space="preserve">
+    <value>Boven uitlijnen</value>
+  </data>
+  <data name="Tools_Undo" xml:space="preserve">
+    <value>Ongedaan maken</value>
+  </data>
+  <data name="Tools_UnmergeCell" xml:space="preserve">
+    <value>Cellen samenvoegen ongedaan maken</value>
+  </data>
+  <data name="Tools_VerticalCenterAlign" xml:space="preserve">
+    <value>Centreren</value>
+  </data>
+  <data name="View_Draft" xml:space="preserve">
+    <value>Ontwerpen</value>
+  </data>
+  <data name="View_PrintLayout" xml:space="preserve">
+    <value>Afdrukweergave</value>
+  </data>
+  <data name="View_Zoom" xml:space="preserve">
+    <value>In-/uitzoomen</value>
+  </data>
+  <data name="Tools_FindAndReplace_ReachStart" xml:space="preserve">
+    <value>Zoeken heeft het beginpunt van de zoekopdracht bereikt.</value>
+  </data>
+  <data name="Insert_InsertImage_UploadMessage" xml:space="preserve">
+    <value>Kies de afbeelding die u wilt uploaden:</value>
+  </data>
+  <data name="Insert_InsertImage_UploadTab" xml:space="preserve">
+    <value>Uploaden</value>
+  </data>
+  <data name="Insert_InsertImage_UrlTab" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="Insert_InsertImage_FileFilter" xml:space="preserve">
+    <value>Afbeeldingsbestanden (*.PNG;*.JPG)|*.PNG;*.JPG|Alle bestanden (*.*)|*.*</value>
+  </data>
+  <data name="FormatPainter" xml:space="preserve">
+    <value>Opmaak kopiëren/plakken</value>
+  </data>
+  <data name="Tools_Delete" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="Tools_Gridlines" xml:space="preserve">
+    <value>Rasterlijnen</value>
+  </data>
+  <data name="Tools_InsertAbove" xml:space="preserve">
+    <value>Boven invoegen</value>
+  </data>
+  <data name="Tools_InsertBelow" xml:space="preserve">
+    <value>Onder invoegen</value>
+  </data>
+  <data name="Tools_InsertLeft" xml:space="preserve">
+    <value>Links invoegen</value>
+  </data>
+  <data name="Tools_InsertRight" xml:space="preserve">
+    <value>Rechts invoegen</value>
+  </data>
+  <data name="Tools_Picture" xml:space="preserve">
+    <value>Afbeelding</value>
+  </data>
+  <data name="Tools_Select" xml:space="preserve">
+    <value>Selecteren</value>
+  </data>
+  <data name="Tools_Spelling" xml:space="preserve">
+    <value>Spelling</value>
+  </data>
+  <data name="Tools_Unmerge" xml:space="preserve">
+    <value>Splitsen</value>
+  </data>
+  <data name="Edit_Title" xml:space="preserve">
+    <value>Bewerken</value>
+  </data>
+  <data name="Color_Aqua_ToolTip" xml:space="preserve">
+    <value>Zeeblauw</value>
+  </data>
+  <data name="Color_Black_ToolTip" xml:space="preserve">
+    <value>Zwart</value>
+  </data>
+  <data name="Color_Blue_ToolTip" xml:space="preserve">
+    <value>Blauw</value>
+  </data>
+  <data name="Color_Brown_ToolTip" xml:space="preserve">
+    <value>Bruin</value>
+  </data>
+  <data name="Color_DarkBlue_ToolTip" xml:space="preserve">
+    <value>Donkerblauw</value>
+  </data>
+  <data name="Color_DarkGreen_ToolTip" xml:space="preserve">
+    <value>Donkergroen</value>
+  </data>
+  <data name="Color_DarkPurple_ToolTip" xml:space="preserve">
+    <value>Donkerpaars</value>
+  </data>
+  <data name="Color_DarkRed_ToolTip" xml:space="preserve">
+    <value>Donkerrood</value>
+  </data>
+  <data name="Color_EightyGray_ToolTip" xml:space="preserve">
+    <value>Grijs-80%</value>
+  </data>
+  <data name="Color_FifteenGray_ToolTip" xml:space="preserve">
+    <value>Grijs-15%</value>
+  </data>
+  <data name="Color_FiftyGray_ToolTip" xml:space="preserve">
+    <value>Grijs-50%</value>
+  </data>
+  <data name="Color_FortyGray_ToolTip" xml:space="preserve">
+    <value>Grijs-40%</value>
+  </data>
+  <data name="Color_Gold_ToolTip" xml:space="preserve">
+    <value>Goud</value>
+  </data>
+  <data name="Color_Green_ToolTip" xml:space="preserve">
+    <value>Groen</value>
+  </data>
+  <data name="Color_LightGreen_ToolTip" xml:space="preserve">
+    <value>Lichtgroen</value>
+  </data>
+  <data name="Color_LightYellow_ToolTip" xml:space="preserve">
+    <value>Lichtgeel</value>
+  </data>
+  <data name="Color_Lime_ToolTip" xml:space="preserve">
+    <value>Limoen</value>
+  </data>
+  <data name="Color_Orange_ToolTip" xml:space="preserve">
+    <value>Oranje</value>
+  </data>
+  <data name="Color_Pink_ToolTip" xml:space="preserve">
+    <value>Roze</value>
+  </data>
+  <data name="Color_Plum_ToolTip" xml:space="preserve">
+    <value>Roodpaars</value>
+  </data>
+  <data name="Color_Purple_ToolTip" xml:space="preserve">
+    <value>Paars</value>
+  </data>
+  <data name="Color_Red_ToolTip" xml:space="preserve">
+    <value>Rood</value>
+  </data>
+  <data name="Color_Rose_ToolTip" xml:space="preserve">
+    <value>Roze</value>
+  </data>
+  <data name="Color_SeventyFiveGray_ToolTip" xml:space="preserve">
+    <value>Grijs-75%</value>
+  </data>
+  <data name="Color_SkyBlue_ToolTip" xml:space="preserve">
+    <value>Hemelsblauw</value>
+  </data>
+  <data name="Color_SlateBlue_ToolTip" xml:space="preserve">
+    <value>Pastelblauw</value>
+  </data>
+  <data name="Color_Turquoise_ToolTip" xml:space="preserve">
+    <value>Turkoois</value>
+  </data>
+  <data name="Color_TwentyFiveGray_ToolTip" xml:space="preserve">
+    <value>Grijs-25%</value>
+  </data>
+  <data name="Color_White_ToolTip" xml:space="preserve">
+    <value>Wit</value>
+  </data>
+  <data name="Color_Yellow_ToolTip" xml:space="preserve">
+    <value>Geel</value>
+  </data>
+  <data name="Insert_ImageDialog_File" xml:space="preserve">
+    <value>Kies foto....</value>
+  </data>
+  <data name="Insert_ImageDialog_Url" xml:space="preserve">
+    <value>Foto invoegen</value>
+  </data>
+  <data name="Insert_InsertHyperlink_Button" xml:space="preserve">
+    <value>Hyperlink invoegen</value>
+  </data>
+  <data name="Insert_InsertTable_Button" xml:space="preserve">
+    <value>Tabel invoegen</value>
+  </data>
+  <data name="Insert_InsertTable_ColumnLabel" xml:space="preserve">
+    <value>Aantal kolommen:</value>
+  </data>
+  <data name="Insert_InsertTable_RowLabel" xml:space="preserve">
+    <value>Aantal rijen:</value>
+  </data>
+  <data name="List_Header" xml:space="preserve">
+    <value>Lijst</value>
+  </data>
+  <data name="Tools_BottomAlignMenuTool_Header" xml:space="preserve">
+    <value>Onder</value>
+  </data>
+  <data name="Tools_CenterAlign_Header" xml:space="preserve">
+    <value>Centreren</value>
+  </data>
+  <data name="Tools_ClearFormatting_Header" xml:space="preserve">
+    <value>Opmaak wissen</value>
+  </data>
+  <data name="Tools_ClearFormatting_ToolTip" xml:space="preserve">
+    <value>Tekstopmaak wissen</value>
+  </data>
+  <data name="Tools_DecreaseFontSize_Header" xml:space="preserve">
+    <value>Verkleinen</value>
+  </data>
+  <data name="Tools_DecreaseFontSize_ToolTip" xml:space="preserve">
+    <value>Lettertype verkleinen</value>
+  </data>
+  <data name="Tools_DeleteTable_Cells" xml:space="preserve">
+    <value>Tabelcellen verwijderen</value>
+  </data>
+  <data name="Tools_DeleteTable_Columns" xml:space="preserve">
+    <value>Tabelkolommen verwijderen</value>
+  </data>
+  <data name="Tools_DeleteTable_Rows" xml:space="preserve">
+    <value>Tabelrijen verwijderen</value>
+  </data>
+  <data name="Tools_DeleteTable_Table" xml:space="preserve">
+    <value>Deze tabel verwijderen</value>
+  </data>
+  <data name="Tools_Error" xml:space="preserve">
+    <value>Fout</value>
+  </data>
+  <data name="Tools_FillColor_Header" xml:space="preserve">
+    <value>Opvullen</value>
+  </data>
+  <data name="Tools_FillColor_ToolTip" xml:space="preserve">
+    <value>Opvulkleur</value>
+  </data>
+  <data name="Tools_IncreaseFontSize_Header" xml:space="preserve">
+    <value>Vergroten</value>
+  </data>
+  <data name="Tools_IncreaseFontSize_ToolTip" xml:space="preserve">
+    <value>Lettertype vergroten</value>
+  </data>
+  <data name="Tools_InsertHyperlink_Header" xml:space="preserve">
+    <value>Hyperlink</value>
+  </data>
+  <data name="Tools_InsertImage_Header" xml:space="preserve">
+    <value>Foto</value>
+  </data>
+  <data name="Tools_InsertImage_ToolTip" xml:space="preserve">
+    <value>Foto invoegen</value>
+  </data>
+  <data name="Tools_LeftAlign_Header" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="Tools_LeftAlign_ToolTip" xml:space="preserve">
+    <value>Links uitlijnen</value>
+  </data>
+  <data name="Tools_Numbering_ToolTip" xml:space="preserve">
+    <value>Genummerde lijst</value>
+  </data>
+  <data name="Tools_Redo_Header" xml:space="preserve">
+    <value>Opnieuw</value>
+  </data>
+  <data name="Tools_RightAlign_Header" xml:space="preserve">
+    <value>Rechts</value>
+  </data>
+  <data name="Tools_RightAlign_ToolTip" xml:space="preserve">
+    <value>Rechts uitlijnen</value>
+  </data>
+  <data name="Tools_SelectAll_Header" xml:space="preserve">
+    <value>Alles selecteren</value>
+  </data>
+  <data name="Tools_SelectTable_Cells_Header" xml:space="preserve">
+    <value>Cellen selecteren</value>
+  </data>
+  <data name="Tools_SelectTable_Cells_ToolTip" xml:space="preserve">
+    <value>Tabelcellen selecteren</value>
+  </data>
+  <data name="Tools_SelectTable_Columns_Header" xml:space="preserve">
+    <value>Kolommen selecteren</value>
+  </data>
+  <data name="Tools_SelectTable_Columns_ToolTip" xml:space="preserve">
+    <value>Tabelkolommen selecteren</value>
+  </data>
+  <data name="Tools_SelectTable_Rows_Header" xml:space="preserve">
+    <value>Rijen selecteren</value>
+  </data>
+  <data name="Tools_SelectTable_Rows_ToolTip" xml:space="preserve">
+    <value>Tabelrijen selecteren</value>
+  </data>
+  <data name="Tools_SelectTable_Table_Header" xml:space="preserve">
+    <value>Tabel selecteren</value>
+  </data>
+  <data name="Tools_SelectTable_Table_ToolTip" xml:space="preserve">
+    <value>Deze tabel selecteren</value>
+  </data>
+  <data name="Tools_Strikethrough_Header" xml:space="preserve">
+    <value>Doorstrepen</value>
+  </data>
+  <data name="Tools_Subscript_ToolTip" xml:space="preserve">
+    <value>Subscript</value>
+  </data>
+  <data name="Tools_Superscript_ToolTip" xml:space="preserve">
+    <value>Superscript</value>
+  </data>
+  <data name="Tools_TextHighlight_Header" xml:space="preserve">
+    <value>Markeren</value>
+  </data>
+  <data name="Tools_TextHighlight_ToolTip" xml:space="preserve">
+    <value>Tekstmarkeringskleur</value>
+  </data>
+  <data name="Tools_TopAlign_Header" xml:space="preserve">
+    <value>Boven</value>
+  </data>
+  <data name="ViewTab_Header" xml:space="preserve">
+    <value>Weergeven</value>
+  </data>
+  <data name="View_DocumentViews" xml:space="preserve">
+    <value>Weergaven</value>
+  </data>
+  <data name="View_FitWidth" xml:space="preserve">
+    <value>Passend in breedte</value>
+  </data>
+  <data name="View_OnePage" xml:space="preserve">
+    <value>Een pagina</value>
+  </data>
+  <data name="View_TwoPages" xml:space="preserve">
+    <value>Twee pagina's</value>
+  </data>
+  <data name="Tools_ZoomIn" xml:space="preserve">
+    <value>Inzoomen</value>
+  </data>
+  <data name="Tools_Zoom100PercentTool" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="Tools_ZoomOut" xml:space="preserve">
+    <value>Uitzoomen</value>
+  </data>
+  <data name="Font_Strikethrough" xml:space="preserve">
+    <value>Doorstrepen</value>
+  </data>
+  <data name="Font_StrikethroughInitial" xml:space="preserve">
+    <value>abc</value>
+  </data>
+  <data name="Tools_RemoveHyperlink_Header" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="Selected_Document" xml:space="preserve">
+    <value>&lt;&lt;Selectie in document&gt;&gt;</value>
+  </data>
+  <data name="Line_Number" xml:space="preserve">
+    <value>Regelnummers</value>
+  </data>
+  <data name="LineNumberMode_None" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="LineNumberMode_Continuous" xml:space="preserve">
+    <value>Doorlopend</value>
+  </data>
+  <data name="LineNumberMode_RestartEachPage" xml:space="preserve">
+    <value>Elke pagina opnieuw</value>
+  </data>
+</root>

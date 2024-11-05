@@ -1,0 +1,657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FilterTypes" xml:space="preserve">
+    <value>数値フィルター|日付/時刻フィルター|テキスト フィルター</value>
+    <comment>Numeric Filter|Date/Time Filter|Text Filter</comment>
+  </data>
+  <data name="Conditions" xml:space="preserve">
+    <value>なし|と等しい|と等しくない|より大きい|より小さい|以上|以下|を含む|を含まない|で始まる|で終わる</value>
+    <comment>None|Equals|Does Not Equal|Greater Than|Less Than|Greater Than Or Equal To|Less Than Or Equal To|Contains|Does Not Contain|Begins With|Ends With</comment>
+  </data>
+  <data name="SubtotalFuncs" xml:space="preserve">
+    <value>合計|個数|平均|最大|最小|先頭|末尾|分散|標準偏差|標本分散|標本標準偏差</value>
+    <comment>Sum|Count|Average|Maximum|Minimum|First|Last|Variance|Standard Deviation|Variance Population|Standard Deviation Population</comment>
+  </data>
+  <data name="ShowTotalsColumn" xml:space="preserve">
+    <value>集計列を表示</value>
+    <comment>Show Totals Column</comment>
+  </data>
+  <data name="ShowTotalsRow" xml:space="preserve">
+    <value>集計行を表示</value>
+    <comment>Show Totals Row</comment>
+  </data>
+  <data name="ShowZeros" xml:space="preserve">
+    <value>ゼロを表示</value>
+    <comment>Show Zeros</comment>
+  </data>
+  <data name="ShowDetailOnRightClick" xml:space="preserve">
+    <value>右クリックで詳細を表示</value>
+    <comment>Show Detail On Right Click</comment>
+  </data>
+  <data name="ShowSelectionStatus" xml:space="preserve">
+    <value>選択状態を表示</value>
+    <comment>Show Selection Status</comment>
+  </data>
+  <data name="ChartOptions" xml:space="preserve">
+    <value>チャート オプション</value>
+    <comment>Chart Options</comment>
+  </data>
+  <data name="GridOptions" xml:space="preserve">
+    <value>グリッド オプション</value>
+    <comment>Grid Options</comment>
+  </data>
+  <data name="ChartType" xml:space="preserve">
+    <value>チャート種</value>
+    <comment>Chart Type</comment>
+  </data>
+  <data name="Palette" xml:space="preserve">
+    <value>パレット</value>
+    <comment>Palette</comment>
+  </data>
+  <data name="ShowGridLines" xml:space="preserve">
+    <value>グリッド線を表示</value>
+    <comment>Show Gridlines</comment>
+  </data>
+  <data name="ShowTitle" xml:space="preserve">
+    <value>タイトルを表示</value>
+    <comment>Show Title</comment>
+  </data>
+  <data name="Stacked" xml:space="preserve">
+    <value>積み上げ</value>
+    <comment>Stacked</comment>
+  </data>
+  <data name="ShowLegend" xml:space="preserve">
+    <value>凡例を表示</value>
+    <comment>Show Legend</comment>
+  </data>
+  <data name="RawDataOptions" xml:space="preserve">
+    <value>生データのオプション</value>
+    <comment>Raw Data Options</comment>
+  </data>
+  <data name="ShowRawData" xml:space="preserve">
+    <value>生データを表示</value>
+    <comment>Show Raw Data</comment>
+  </data>
+  <data name="DateFormats" xml:space="preserve">
+    <value>yyyy 年 MMMM 月 dd 日|d|yy/M/d|yy/MM/dd|yyyy/MM/dd|MMM yyyy|MMMM yyyy|d-MMM-yy|d-MMM-yyyy|ユーザー定義</value>
+    <comment>MMMM dd, yyyy|d|d/M/yy|dd/MM/yy|dd/MM/yyyy|MMM yyyy|MMMM yyyy|d-MMM-yy|d-MMM-yyyy|Custom</comment>
+  </data>
+  <data name="NumberFormats" xml:space="preserve">
+    <value>数値|通貨|パーセンテージ|指数|ユーザー定義</value>
+    <comment>Number|Currency|Percentage|Scientific|Custom</comment>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>なし</value>
+    <comment>None</comment>
+  </data>
+  <data name="ChartTypes" xml:space="preserve">
+    <value>横棒|縦棒|面|折れ線|散布図|Pie</value>
+    <comment>Bar|Column|Area|Line|Scatter</comment>
+  </data>
+  <data name="DecimalPlaces" xml:space="preserve">
+    <value>小数点以下の桁数: </value>
+    <comment>Decimal Places:</comment>
+  </data>
+  <data name="InvalidFormat" xml:space="preserve">
+    <value>無効なフォーマット</value>
+    <comment>Invalid format</comment>
+  </data>
+  <data name="Sample" xml:space="preserve">
+    <value>サンプル: </value>
+    <comment>Sample:</comment>
+  </data>
+  <data name="UseThousandSeparator" xml:space="preserve">
+    <value>桁区切りを使用する</value>
+    <comment>Use 1000 separator</comment>
+  </data>
+  <data name="CustomFormat" xml:space="preserve">
+    <value>ユーザー設定の書式: </value>
+    <comment>Custom Format:</comment>
+  </data>
+  <data name="BeginsWith" xml:space="preserve">
+    <value>指定の値で始まる...</value>
+    <comment>Begins With...</comment>
+  </data>
+  <data name="Between" xml:space="preserve">
+    <value>指定の範囲内...</value>
+    <comment>Between...</comment>
+  </data>
+  <data name="ClearFilter" xml:space="preserve">
+    <value>フィルターのクリア</value>
+    <comment>Clear Filter</comment>
+  </data>
+  <data name="Contains" xml:space="preserve">
+    <value>指定の値を含む...</value>
+    <comment>Contains...</comment>
+  </data>
+  <data name="CustomFilter" xml:space="preserve">
+    <value>ユーザー設定フィルター</value>
+    <comment>Custom Filter</comment>
+  </data>
+  <data name="DoesNotContain" xml:space="preserve">
+    <value>指定の値を含まない...</value>
+    <comment>Does Not Contain...</comment>
+  </data>
+  <data name="DoesNotEqual" xml:space="preserve">
+    <value>指定の値に等しくない...</value>
+    <comment>Does Not Equal...</comment>
+  </data>
+  <data name="EndsWith" xml:space="preserve">
+    <value>指定の値で終わる...</value>
+    <comment>Ends With...</comment>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>フィルター</value>
+    <comment>Filter</comment>
+  </data>
+  <data name="GreaterThan" xml:space="preserve">
+    <value>指定の値より大きい...</value>
+    <comment>Greater Than...</comment>
+  </data>
+  <data name="GreaterThanOrEqualTo" xml:space="preserve">
+    <value>指定の値以上...</value>
+    <comment>Greater Than Or Equal To...</comment>
+  </data>
+  <data name="LessThan" xml:space="preserve">
+    <value>指定の値より小さい...</value>
+    <comment>Less Than...</comment>
+  </data>
+  <data name="LessThanOrEqualTo" xml:space="preserve">
+    <value>指定の値以下...</value>
+    <comment>Less Than Or Equal To...</comment>
+  </data>
+  <data name="MnuEquals" xml:space="preserve">
+    <value>指定の値に等しい...</value>
+    <comment>Equals...</comment>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>(すべて選択)</value>
+    <comment>(Select All)</comment>
+  </data>
+  <data name="ActualSize" xml:space="preserve">
+    <value>実際のサイズ</value>
+    <comment>Actual size</comment>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>And</value>
+    <comment>And</comment>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>下: </value>
+    <comment>Bottom:</comment>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="Display" xml:space="preserve">
+    <value>表示</value>
+    <comment>Display</comment>
+  </data>
+  <data name="FitToOnePage" xml:space="preserve">
+    <value>1 ページに収める</value>
+    <comment>Fit to one page</comment>
+  </data>
+  <data name="FitToPageWidth" xml:space="preserve">
+    <value>ページ幅に合わせる</value>
+    <comment>Fit to page width</comment>
+  </data>
+  <data name="Format" xml:space="preserve">
+    <value>書式</value>
+    <comment>Format</comment>
+  </data>
+  <data name="HighValues" xml:space="preserve">
+    <value>上位の値</value>
+    <comment>High Values</comment>
+  </data>
+  <data name="IncludeInReport" xml:space="preserve">
+    <value>レポートに含める</value>
+    <comment>Include in report</comment>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>左: </value>
+    <comment>Left:</comment>
+  </data>
+  <data name="LowValues" xml:space="preserve">
+    <value>下位の値</value>
+    <comment>Low Values</comment>
+  </data>
+  <data name="Margin" xml:space="preserve">
+    <value>外側の余白: </value>
+    <comment>Margin:</comment>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+    <comment>OK</comment>
+  </data>
+  <data name="OlapChart" xml:space="preserve">
+    <value>チャート</value>
+    <comment>Olap Chart</comment>
+  </data>
+  <data name="OlapGrid" xml:space="preserve">
+    <value>グリッド</value>
+    <comment>Olap Grid</comment>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>Or</value>
+    <comment>Or</comment>
+  </data>
+  <data name="Padding" xml:space="preserve">
+    <value>内側の余白: </value>
+    <comment>Padding:</comment>
+  </data>
+  <data name="RawData" xml:space="preserve">
+    <value>生データ</value>
+    <comment>Raw Data</comment>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>右: </value>
+    <comment>Right:</comment>
+  </data>
+  <data name="Scaling" xml:space="preserve">
+    <value>拡大縮小: </value>
+    <comment>Scaling:</comment>
+  </data>
+  <data name="ShowItems" xml:space="preserve">
+    <value>次の条件に一致する値を表示: </value>
+    <comment>Show items where the value:</comment>
+  </data>
+  <data name="Subtotals" xml:space="preserve">
+    <value>小計</value>
+    <comment>Subtotals</comment>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>上: </value>
+    <comment>Top:</comment>
+  </data>
+  <data name="WeighBy" xml:space="preserve">
+    <value>重み: </value>
+    <comment>Weigh by:</comment>
+  </data>
+  <data name="ChooseFields" xml:space="preserve">
+    <value>レポートに追加するフィールドを選択してください: </value>
+    <comment>Choose fields to add to table:</comment>
+  </data>
+  <data name="ColumnFields" xml:space="preserve">
+    <value>列フィールド</value>
+    <comment>Column Fields</comment>
+  </data>
+  <data name="CurrentDate" xml:space="preserve">
+    <value>現在の日付</value>
+    <comment>Current Date</comment>
+  </data>
+  <data name="CurrentTime" xml:space="preserve">
+    <value>現在の時刻</value>
+    <comment>Current Time</comment>
+  </data>
+  <data name="DeferUpdates" xml:space="preserve">
+    <value>更新を保留する</value>
+    <comment>Defer Updates</comment>
+  </data>
+  <data name="DragFields" xml:space="preserve">
+    <value>次のボックス間でフィールドをドラッグしてください: </value>
+    <comment>Drag fields between areas below:</comment>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>フッター: </value>
+    <comment>Footer:</comment>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>ヘッダー: </value>
+    <comment>Header:</comment>
+  </data>
+  <data name="HeaderFooter" xml:space="preserve">
+    <value>ヘッダー/フッター</value>
+    <comment>Header/Footer</comment>
+  </data>
+  <data name="MoveDown" xml:space="preserve">
+    <value>下へ移動</value>
+    <comment>Move Down</comment>
+  </data>
+  <data name="MoveToBeginning" xml:space="preserve">
+    <value>先頭へ移動</value>
+    <comment>Move to Beginning</comment>
+  </data>
+  <data name="MoveToColumnFields" xml:space="preserve">
+    <value>列フィールドに移動</value>
+    <comment>Move to Column Fields</comment>
+  </data>
+  <data name="MoveToEnd" xml:space="preserve">
+    <value>末尾へ移動</value>
+    <comment>Move to End</comment>
+  </data>
+  <data name="MoveToFilterFields" xml:space="preserve">
+    <value>レポート フィルタに移動</value>
+    <comment>Move to Filter Fields</comment>
+  </data>
+  <data name="MoveToRowFields" xml:space="preserve">
+    <value>行フィールドに移動</value>
+    <comment>Move to Row Fields</comment>
+  </data>
+  <data name="MoveToValueFields" xml:space="preserve">
+    <value>値フィールドに移動</value>
+    <comment>Move to Value Fields</comment>
+  </data>
+  <data name="MoveUp" xml:space="preserve">
+    <value>上へ移動</value>
+    <comment>Move Up</comment>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>ページ</value>
+    <comment>Page</comment>
+  </data>
+  <data name="PageNumber" xml:space="preserve">
+    <value>ページ番号</value>
+    <comment>Page Number</comment>
+  </data>
+  <data name="RemoveField" xml:space="preserve">
+    <value>フィールドの削除</value>
+    <comment>Remove Field</comment>
+  </data>
+  <data name="ReportContent" xml:space="preserve">
+    <value>レポートのコンテンツ</value>
+    <comment>Report Content</comment>
+  </data>
+  <data name="RowFields" xml:space="preserve">
+    <value>行フィールド</value>
+    <comment>Row Fields</comment>
+  </data>
+  <data name="Separator" xml:space="preserve">
+    <value>区切り文字</value>
+    <comment>Separator</comment>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>タイトル</value>
+    <comment>Title</comment>
+  </data>
+  <data name="TotalPageCount" xml:space="preserve">
+    <value>総ページ数</value>
+    <comment>Total Page Count</comment>
+  </data>
+  <data name="Values" xml:space="preserve">
+    <value>値</value>
+    <comment>Values</comment>
+  </data>
+  <data name="FieldSettings" xml:space="preserve">
+    <value>フィールドの設定...</value>
+    <comment>Field Settings...</comment>
+  </data>
+  <data name="Chart" xml:space="preserve">
+    <value>チャート</value>
+    <comment>Chart</comment>
+  </data>
+  <data name="CustomizeGridView" xml:space="preserve">
+    <value>グリッド ビューのカスタマイズ</value>
+    <comment>Customize grid view</comment>
+  </data>
+  <data name="GrandTotals" xml:space="preserve">
+    <value>総計</value>
+    <comment>Grand Totals</comment>
+  </data>
+  <data name="LoadViewFromFile" xml:space="preserve">
+    <value>Olap ビューをファイルから読み込む</value>
+    <comment>Load Olap view from a file</comment>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>オプション...</value>
+    <comment>Options...</comment>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>印刷</value>
+    <comment>Print</comment>
+  </data>
+  <data name="Redo" xml:space="preserve">
+    <value>やり直す</value>
+    <comment>Redo</comment>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>レポート</value>
+    <comment>Report</comment>
+  </data>
+  <data name="SaveViewToFile" xml:space="preserve">
+    <value>Olap ビューをファイルに保存する</value>
+    <comment>Save Olap view to a file</comment>
+  </data>
+  <data name="TotalColumns" xml:space="preserve">
+    <value>集計列</value>
+    <comment>Total Columns</comment>
+  </data>
+  <data name="TotalRows" xml:space="preserve">
+    <value>集計行</value>
+    <comment>Total Rows</comment>
+  </data>
+  <data name="TotalsOnly" xml:space="preserve">
+    <value>集計のみ表示</value>
+    <comment>Totals Only</comment>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>元に戻す</value>
+    <comment>Undo</comment>
+  </data>
+  <data name="GenerateReports" xml:space="preserve">
+    <value>現在のビューに基づくレポートを生成</value>
+    <comment>Generate reports based on the current view.</comment>
+  </data>
+  <data name="Absolute" xml:space="preserve">
+    <value>絶対値</value>
+    <comment>Absolute</comment>
+  </data>
+  <data name="ApplyToValuesAbove" xml:space="preserve">
+    <value>上位の値に適用</value>
+    <comment>Apply to Values Above</comment>
+  </data>
+  <data name="Background" xml:space="preserve">
+    <value>塗りつぶしの色: </value>
+    <comment>Background:</comment>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>太字: </value>
+    <comment>Bold:</comment>
+  </data>
+  <data name="Caption" xml:space="preserve">
+    <value>キャプション</value>
+    <comment>Caption</comment>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>クリア</value>
+    <comment>Clear</comment>
+  </data>
+  <data name="Foreground" xml:space="preserve">
+    <value>フォントの色:</value>
+    <comment>Foreground:</comment>
+  </data>
+  <data name="NotSet" xml:space="preserve">
+    <value>設定なし</value>
+    <comment>Not Set</comment>
+  </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>割合</value>
+    <comment>Percentage</comment>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>スタイル</value>
+    <comment>Style</comment>
+  </data>
+  <data name="ApplyToValuesBelow" xml:space="preserve">
+    <value>下位の値に適用</value>
+    <comment>Apply to Values Below</comment>
+  </data>
+  <data name="DefaultExtension" xml:space="preserve">
+    <value>.olapx</value>
+    <comment>.olapx</comment>
+  </data>
+  <data name="DocumentOptions" xml:space="preserve">
+    <value>ドキュメント オプション</value>
+    <comment>Document Options</comment>
+  </data>
+  <data name="FieldSettingsParam" xml:space="preserve">
+    <value>フィールドの設定: {0}</value>
+    <comment>Field Settings: {0}</comment>
+  </data>
+  <data name="FileDialogFilter" xml:space="preserve">
+    <value>C1Olap ビュー定義ファイル (*.olapx)|*.olapx</value>
+    <comment>C1Olap view definition files (*.olapx)|*.olapx</comment>
+  </data>
+  <data name="StyleConditions" xml:space="preserve">
+    <value>設定なし|絶対値|割合</value>
+    <comment>Not Set|Absolute|Percentage</comment>
+  </data>
+  <data name="Grid" xml:space="preserve">
+    <value>グリッド</value>
+    <comment>Grid</comment>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>by</value>
+    <comment>by</comment>
+  </data>
+  <data name="CustomizeChartView" xml:space="preserve">
+    <value>チャート ビューのカスタマイズ</value>
+    <comment>Customize chart view</comment>
+  </data>
+  <data name="DetailView" xml:space="preserve">
+    <value>詳細ビュー:</value>
+    <comment>Detail View:</comment>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>項目</value>
+    <comment>items</comment>
+  </data>
+  <data name="Subtotal" xml:space="preserve">
+    <value>小計</value>
+    <comment>Subtotal</comment>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>集計</value>
+    <comment>Total</comment>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>エクスポート</value>
+    <comment>Export</comment>
+  </data>
+  <data name="GroupAnnotations" xml:space="preserve">
+    <value>グループの注釈</value>
+  </data>
+  <data name="ExportDialogDefaultExt" xml:space="preserve">
+    <value>.csv</value>
+  </data>
+  <data name="ExportDialogFilter" xml:space="preserve">
+    <value>CSV (*.csv)|*.csv|Webpage(*.html)|*.html|Text (*.txt)|*.txt</value>
+  </data>
+</root>

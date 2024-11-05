@@ -1,0 +1,92 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c1c="clr-namespace:C1.WPF.C1Chart">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/C1.WPF.C1Chart.4.5.2;component/themes/Legend.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <Color x:Key="C1Chart_Foreground_Color">Black</Color>
+    <Color x:Key="C1Chart_Background_Color">White</Color>
+
+    <!-- Chart -->
+
+    <LinearGradientBrush x:Key="C1Chart_Background_Brush" EndPoint="0,1" StartPoint="0,0" >
+        <GradientStop Color="#FFddecfe" Offset="0"/>
+        <GradientStop Color="#FF4a7ac9" Offset="1"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="C1Chart_Foreground_Brush" Color="#FF003db2" />
+    <SolidColorBrush x:Key="C1Chart_Border_Brush" Color="#FF3b619c" />
+
+    <Thickness x:Key="C1Chart_Border_Thickness">1</Thickness>
+    <CornerRadius x:Key="C1Chart_CornerRadius">5,5,0,0</CornerRadius>
+    <Thickness x:Key="C1Chart_Padding">12</Thickness>
+    <Thickness x:Key="C1Chart_Margin">4</Thickness>
+
+    <!-- Legend -->
+
+    <LinearGradientBrush x:Key="C1Chart_LegendBackground_Brush" EndPoint="0,1" StartPoint="0,0" >
+        <GradientStop Color="#FF75a6f1" Offset="0"/>
+        <GradientStop Color="#FF4472c5" Offset="0.5"/>
+        <GradientStop Color="#FF4472c5" Offset="0.51"/>
+        <GradientStop Color="#FF003591" Offset="1"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="C1Chart_LegendForeground_Brush" 
+                   Color="#FFffffff" />
+    <SolidColorBrush x:Key="C1Chart_LegendBorder_Brush" Color="#FF3b619c" />
+
+    <Thickness x:Key="C1Chart_LegendBorder_Thickness">1</Thickness>
+    <CornerRadius x:Key="C1Chart_Legend_CornerRadius">2</CornerRadius>
+
+    <!-- Chart area -->
+
+    <SolidColorBrush x:Key="C1Chart_ChartAreaBackground_Brush" 
+                   Color="#FF9ebef5" />
+    <SolidColorBrush x:Key="C1Chart_ChartAreaForeground_Brush" Color="#FFffffff" />
+
+    <SolidColorBrush x:Key="C1Chart_ChartAreaBorder_Brush"
+                   Color="#FFFFFFFF" />
+
+
+    <Thickness x:Key="C1Chart_ChartAreaBorder_Thickness">1</Thickness>
+    <CornerRadius x:Key="C1Chart_ChartArea_CornerRadius">5,5,0,0</CornerRadius>
+    <Thickness x:Key="C1Chart_ChartArea_Padding">5</Thickness>
+
+    <!-- Plot area-->
+    <LinearGradientBrush x:Key="C1Chart_PlotAreaBackground_Brush" EndPoint="0,1" StartPoint="0,0" >
+        <GradientStop Color="#FFdcebfd" Offset="0"/>
+        <GradientStop Color="#FFb9d0f1" Offset="1"/>
+    </LinearGradientBrush>
+
+    <!-- Custom palette for plot elements-->
+    <x:Array x:Key="C1Chart_CustomPalette" Type="{x:Type Brush}">
+        <LinearGradientBrush>
+            <GradientStop Color="#FF296CBC" Offset="1"/>
+            <GradientStop Color="#FF3D89E4" Offset="0"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush>
+            <GradientStop Color="#F09CBA16" Offset="1"/>
+            <GradientStop Color="#F0AFCC2F" Offset="0"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush>
+            <GradientStop Color="#FFC8790A" Offset="1"/>
+            <GradientStop Color="#FFD69232" Offset="0"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush>
+            <GradientStop Color="#F0BC1C85" Offset="1"/>
+            <GradientStop Color="#70C74199" Offset="0"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush>
+            <GradientStop Color="#FF03A32B" Offset="1"/>
+            <GradientStop Color="#FF00CC33" Offset="0"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush>
+            <GradientStop Color="#F02703A9" Offset="1"/>
+            <GradientStop Color="#702C00CC" Offset="0"/>
+        </LinearGradientBrush>
+    </x:Array>
+
+    <SolidColorBrush x:Key="C1Chart_AxisMajorGridStroke_Brush"
+                   Color="DarkGray" />
+
+</ResourceDictionary>

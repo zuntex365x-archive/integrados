@@ -1,0 +1,645 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>C1.WPF.Sparkline.4.5.2</name>
+  </assembly>
+  <members>
+    <member name="T:C1.WPF.Sparkline.SparklineType">
+      <summary>
+            Represents the sparkline type.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.SparklineType.Line">
+      <summary>
+            Specifies the line sparkline.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.SparklineType.Column">
+      <summary>
+            Specifies the column sparkline.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.SparklineType.Winloss">
+      <summary>
+            Specifies the winloss sparkline.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Sparkline.EmptyValueStyle">
+      <summary>
+            Specifies how to show an empty value from a data series in the chart.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.EmptyValueStyle.Gaps">
+      <summary>
+            Leaves gaps for empty values in a data series, which results in a segmented line.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.EmptyValueStyle.Zero">
+      <summary>
+            Handles empty values in a data series as zero values, so that the line drops to zero for zero-value data points.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.EmptyValueStyle.Connect">
+      <summary>
+            Fills gaps with a connecting element instead of leaving gaps for empty values in a data series.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Sparkline.C1Sparkline">
+      <summary>
+            Represents the Sparkline object.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.DisplayDateAxis">
+      <summary>
+            Gets a value that indicates whether to display the date axis.
+            </summary>
+    </member>
+    <member name="E:C1.WPF.Sparkline.C1Sparkline.SparklineChanged">
+      <summary>
+            Occurs when the sparkline has changed.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.SparklineType">
+      <summary>
+            Gets or sets the type of the sparkline.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.SparklineTypeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.SparklineType" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.MaxAxisType">
+      <summary>
+            Gets or sets a value that specifies how the vertical axis maximum is calculated for the sparklines in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.MaxAxisTypeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.MaxAxisType" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.MinAxisType">
+      <summary>
+            Gets or sets a value that specifies how the vertical axis minimum is calculated for the sparklines in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.MinAxisTypeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.MinAxisType" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.LineWeight">
+      <summary>
+            Gets or sets a value that specifies the line weight for each sparkline in the sparkline group, where the line weight is measured in points. The weight must be greater than or equal to zero, and must be less than or equal to 3 (LineSeries only supports line weight values in the range of 0.0-&gt;3.0). 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.LineWeightProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.LineWeight" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.ManualMax">
+      <summary>
+            Gets or sets a value that specifies the maximum for the vertical axis that is shared across all sparklines in this sparkline group. The axis is zero if maxAxisType does not equal custom. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.ManualMaxProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.ManualMax" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.ManualMin">
+      <summary>
+            Gets or sets a value that specifies the minimum for the vertical axis that is shared across all sparklines in this sparkline group. The axis is zero if minAxisType does not equal custom. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.ManualMinProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.ManualMin" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.RightToLeft">
+      <summary>
+            Gets or sets a value that specifies whether each sparkline in the sparkline group is displayed in a right-to-left manner. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.RightToLeftProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.RightToLeft" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.ShowFirst">
+      <summary>
+            Gets or sets a value that indicates whether the first data point is formatted differently for each sparkline in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.ShowFirstProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.ShowFirst" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.ShowLast">
+      <summary>
+            Gets or sets a value that indicates whether the last data point is formatted differently for each sparkline in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.ShowLastProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.ShowLast" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.ShowLow">
+      <summary>
+            Gets or sets a value that specifies whether the data points with the lowest value are formatted differently for each sparkline in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.ShowLowProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.ShowLow" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.ShowNegative">
+      <summary>
+            Gets or sets a value that specifies whether the negative data points are formatted differently for each sparkline in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.ShowNegativeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.ShowNegative" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.ShowHigh">
+      <summary>
+            Gets or sets a value that specifies whether the data points with the highest value are formatted differently for each sparkline in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.ShowHighProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.ShowHigh" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.ShowMarkers">
+      <summary>
+            Gets or sets a value that specifies whether data markers are displayed for each sparkline in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.ShowMarkersProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.ShowMarkers" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.AxisColor">
+      <summary>
+            Gets or sets the color of the axis. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.AxisColorProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.AxisColor" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.HighMarkerColor">
+      <summary>
+            Gets or sets the color of the highest data point for each sparkline in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.HighMarkerColorProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.HighMarkerColor" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.MarkersColor">
+      <summary>
+            Gets or sets a value that specifies the color of the data markers for each sparkline in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.MarkersColorProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.MarkersColor" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.SeriesColor">
+      <summary>
+            Gets or sets a value that specifies the color for each sparkline in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.SeriesColorProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.SeriesColor" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.LowMarkerColor">
+      <summary>
+            Gets or sets the color of the lowest data point for each sparkline in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.LowMarkerColorProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.LowMarkerColor" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.FirstMarkerColor">
+      <summary>
+            Gets or sets the color of the first data point for each sparkline in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.FirstMarkerColorProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.FirstMarkerColor" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.LastMarkerColor">
+      <summary>
+            Gets or sets the color of the last data point for each sparkline in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.LastMarkerColorProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.LastMarkerColor" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.NegativeColor">
+      <summary>
+            Gets or sets a value that specifies the color of the negative data points for each sparkline in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.NegativeColorProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.NegativeColor" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.DisplayXAxis">
+      <summary>
+            Gets or sets a value that indicates whether the horizontal axis is displayed for each sparkline in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.DisplayXAxisProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.DisplayXAxis" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.DisplayEmptyCellsAs">
+      <summary>
+            Gets or sets how to display the empty cells. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.DisplayEmptyCellsAsProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.DisplayEmptyCellsAs" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.DisplayHidden">
+      <summary>
+            Gets or sets a value that indicates whether data in hidden cells is plotted for the sparklines in this sparkline group. 
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.DisplayHiddenProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.DisplayHidden" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.Data">
+      <summary>
+            Gets or sets the data object.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.DataProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.Data" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Sparkline.C1Sparkline.DateAxisData">
+      <summary>
+            Gets or sets the date axis data object.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.C1Sparkline.DateAxisDataProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.Sparkline.C1Sparkline.DateAxisData" /> dependency property. 
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Sparkline.C1Sparkline.#ctor">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Sparkline.C1Sparkline" />.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Sparkline.C1Sparkline.OnApplyTemplate">
+      <summary>
+            Builds the visual tree for the <see cref="T:C1.WPF.Sparkline.C1Sparkline" /> control when a new template is applied.
+            </summary>
+      <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate" /> method.
+            </remarks>
+    </member>
+    <member name="T:C1.WPF.Sparkline.SparklineAxisMinMax">
+      <summary>
+            An enumeration that specifies information about how the vertical axis minimum or maximum is computed for this sparkline group.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.SparklineAxisMinMax.Individual">
+      <summary>
+            Specifies that the vertical axis minimum or maximum for each sparkline in this sparkline group is calculated automatically such that the data point with the minimum or maximum value can be displayed in the plot area.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.SparklineAxisMinMax.Group">
+      <summary>
+            Specifies that the vertical axis minimum or maximum is shared across all sparklines in this sparkline group and is calculated automatically such that the data point with the minimum or maximum value can be displayed in the plot area.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.SparklineAxisMinMax.Custom">
+      <summary>
+            Specifies that the vertical axis minimum or maximum for each sparkline in this sparkline group is specified by the manualMin attribute or the manualMax attribute of the sparkline group.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Sparkline.Util.ThemeColor">
+      <summary>
+            Represents the theme color class.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Sparkline.Util.ThemeColor.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Sparkline.Util.ThemeColor" /> class.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Sparkline.Util.ThemeColor.#ctor(System.String,System.Windows.Media.Color,System.Windows.Media.Color,System.Windows.Media.Color,System.Windows.Media.Color,System.Windows.Media.Color,System.Windows.Media.Color,System.Windows.Media.Color,System.Windows.Media.Color,System.Windows.Media.Color,System.Windows.Media.Color,System.Windows.Media.Color,System.Windows.Media.Color)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Sparkline.Util.ThemeColor" /> class.
+            </summary>
+      <param name="name">The name of the theme color.</param>
+      <param name="text1">The text1 color.</param>
+      <param name="text2">The text2 color.</param>
+      <param name="background1">The background1.</param>
+      <param name="background2">The background2.</param>
+      <param name="accent1">The accent1.</param>
+      <param name="accent2">The accent2.</param>
+      <param name="accent3">The accent3.</param>
+      <param name="accent4">The accent4.</param>
+      <param name="accent5">The accent5.</param>
+      <param name="accent6">The accent6.</param>
+      <param name="link">The link.</param>
+      <param name="followedLink">The followed link.</param>
+    </member>
+    <member name="P:C1.WPF.Sparkline.Util.ThemeColor.Name">
+      <summary>
+            Gets or sets the name of the theme color.
+            </summary>
+      <value>
+            The name.
+            </value>
+    </member>
+    <member name="P:C1.WPF.Sparkline.Util.ThemeColor.BackgroundColor1">
+      <summary>
+            Gets or sets the background color1.
+            </summary>
+      <value>
+            The background color1.
+            </value>
+    </member>
+    <member name="P:C1.WPF.Sparkline.Util.ThemeColor.BackgroundColor2">
+      <summary>
+            Gets or sets the background color2.
+            </summary>
+      <value>
+            The background color2.
+            </value>
+    </member>
+    <member name="P:C1.WPF.Sparkline.Util.ThemeColor.TextColor1">
+      <summary>
+            Gets or sets the text color1.
+            </summary>
+      <value>
+            The text color1.
+            </value>
+    </member>
+    <member name="P:C1.WPF.Sparkline.Util.ThemeColor.TextColor2">
+      <summary>
+            Gets or sets the text color2.
+            </summary>
+      <value>
+            The text color2.
+            </value>
+    </member>
+    <member name="P:C1.WPF.Sparkline.Util.ThemeColor.Accent1">
+      <summary>
+            Gets or sets the accent1.
+            </summary>
+      <value>
+            The accent1.
+            </value>
+    </member>
+    <member name="P:C1.WPF.Sparkline.Util.ThemeColor.Accent2">
+      <summary>
+            Gets or sets the accent2.
+            </summary>
+      <value>
+            The accent2.
+            </value>
+    </member>
+    <member name="P:C1.WPF.Sparkline.Util.ThemeColor.Accent3">
+      <summary>
+            Gets or sets the accent3.
+            </summary>
+      <value>
+            The accent3.
+            </value>
+    </member>
+    <member name="P:C1.WPF.Sparkline.Util.ThemeColor.Accent4">
+      <summary>
+            Gets or sets the accent4.
+            </summary>
+      <value>
+            The accent4.
+            </value>
+    </member>
+    <member name="P:C1.WPF.Sparkline.Util.ThemeColor.Accent5">
+      <summary>
+            Gets or sets the accent5.
+            </summary>
+      <value>
+            The accent5.
+            </value>
+    </member>
+    <member name="P:C1.WPF.Sparkline.Util.ThemeColor.Accent6">
+      <summary>
+            Gets or sets the accent6.
+            </summary>
+      <value>
+            The accent6.
+            </value>
+    </member>
+    <member name="P:C1.WPF.Sparkline.Util.ThemeColor.Hyperlink">
+      <summary>
+            Gets or sets the hyperlink color.
+            </summary>
+      <value>
+            The color of the hyperlink.
+            </value>
+    </member>
+    <member name="P:C1.WPF.Sparkline.Util.ThemeColor.FollowedHyperlink">
+      <summary>
+            Gets or sets the color of the followed hyperlink.
+            </summary>
+      <value>
+            The color of the followed hyperlink.
+            </value>
+    </member>
+    <member name="M:C1.WPF.Sparkline.Util.ThemeColor.GetThemeColor(System.String)">
+      <summary>
+      </summary>
+      <param name="name">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:C1.WPF.Sparkline.Util.ThemeColor.Clone">
+      <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+      <returns>
+            A new object that is a copy of this instance.
+            </returns>
+    </member>
+    <member name="T:C1.WPF.Sparkline.Util.ThemeColors">
+      <summary>
+            Represents the theme color of built-in themes.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Office">
+      <summary>
+            The theme color of the Office theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Apex">
+      <summary>
+            The theme color of the Apex theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Aspect">
+      <summary>
+            The theme color of the Aspect theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Concourse">
+      <summary>
+            The theme color of the Concourse theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Civic">
+      <summary>
+            The theme color of the Civic theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Oriel">
+      <summary>
+            The theme color of the Oriel theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Origin">
+      <summary>
+            The theme color of the Origin theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Paper">
+      <summary>
+            The theme color of the Paper theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Solstice">
+      <summary>
+            The theme color of the Solstice theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Technic">
+      <summary>
+            The theme color of the Technic theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Trek">
+      <summary>
+            The theme color of the Trek theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Urban">
+      <summary>
+            The theme color of the Urban theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Verve">
+      <summary>
+            The theme color of the Verve theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Equity">
+      <summary>
+            The theme color of the Equity theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Flow">
+      <summary>
+            The theme color of the Flow theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Foundry">
+      <summary>
+            The theme color of the Foundry theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Median">
+      <summary>
+            The theme color of the Median theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Metro">
+      <summary>
+            The theme color of the Metro theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Module">
+      <summary>
+            The theme color of the Module theme.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Sparkline.Util.ThemeColors.Opulent">
+      <summary>
+            The theme color of the Opulent theme.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Sparkline.Util.IThemeSupport">
+      <summary>
+            Represents an interface for supporting a theme.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Sparkline.Util.IThemeSupport.GetThemeColor(System.String)">
+      <summary>
+            Gets the color with a specified theme name.
+            </summary>
+      <param name="themeName">Name of the theme.</param>
+      <returns>The color.</returns>
+    </member>
+    <member name="M:C1.WPF.Sparkline.Util.IThemeSupport.GetThemeFont(System.String)">
+      <summary>
+            Gets the font family with a specified theme name.
+            </summary>
+      <param name="themeName">Name of the theme.</param>
+      <returns>The Font family.</returns>
+    </member>
+    <member name="T:C1.WPF.Sparkline.Util.IThemeContextSupport">
+      <summary>
+            Represents an interface for supporting a theme context.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Sparkline.Util.IThemeContextSupport.SetContext(C1.WPF.Sparkline.Util.IThemeSupport)">
+      <summary>
+            Sets the theme context.
+            </summary>
+      <param name="context">The theme context object.</param>
+    </member>
+    <member name="M:C1.WPF.Sparkline.Util.IThemeContextSupport.GetContext">
+      <summary>
+            Gets the theme context.
+            </summary>
+      <returns>Returns the theme context.</returns>
+    </member>
+  </members>
+</doc>

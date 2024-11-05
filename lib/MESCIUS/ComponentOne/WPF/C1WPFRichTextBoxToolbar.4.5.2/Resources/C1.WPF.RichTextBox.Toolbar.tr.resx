@@ -1,0 +1,789 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cell_Title" xml:space="preserve">
+    <value>Hücre</value>
+  </data>
+  <data name="FindTool_BtnFindNext" xml:space="preserve">
+    <value>Sonrakini Bul</value>
+  </data>
+  <data name="FindTool_BtnReplace" xml:space="preserve">
+    <value>Değiştir</value>
+  </data>
+  <data name="FindTool_BtnReplaceAll" xml:space="preserve">
+    <value>Tümünü Değiştir</value>
+  </data>
+  <data name="FindTool_LblFind" xml:space="preserve">
+    <value>Bul:</value>
+  </data>
+  <data name="FindTool_LblReplace" xml:space="preserve">
+    <value>Değiştir:</value>
+  </data>
+  <data name="Font_Bold" xml:space="preserve">
+    <value>Kalın</value>
+  </data>
+  <data name="Font_BoldInitial" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="Font_ChangeCase" xml:space="preserve">
+    <value>Büyük/Küçük Harf Değiştir</value>
+  </data>
+  <data name="Font_ChangeCase_CapitalizeEachWord" xml:space="preserve">
+    <value>Her Bir Kelimeyi Büyük Harfe Çevir</value>
+  </data>
+  <data name="Font_ChangeCase_LowerCase" xml:space="preserve">
+    <value>küçük harf</value>
+  </data>
+  <data name="Font_ChangeCase_ToggleCase" xml:space="preserve">
+    <value>bÜYÜK kÜÇÜK dÖNÜŞTÜR</value>
+  </data>
+  <data name="Font_ChangeCase_UpperCase" xml:space="preserve">
+    <value>BÜYÜK HARF</value>
+  </data>
+  <data name="Font_Font" xml:space="preserve">
+    <value>Yazı Tipi</value>
+  </data>
+  <data name="Font_FontColor" xml:space="preserve">
+    <value>Yazı Tipi Rengi</value>
+  </data>
+  <data name="Font_FontSize" xml:space="preserve">
+    <value>Yazı Tipi Boyutu</value>
+  </data>
+  <data name="Font_GrowFont" xml:space="preserve">
+    <value>Yazı Tipini Büyüt</value>
+  </data>
+  <data name="Font_Italic" xml:space="preserve">
+    <value>İtalik</value>
+  </data>
+  <data name="Font_ItalicInitial" xml:space="preserve">
+    <value>I</value>
+  </data>
+  <data name="Font_ShrinkFont" xml:space="preserve">
+    <value>Yazı Tipini Küçült</value>
+  </data>
+  <data name="Font_Subscript" xml:space="preserve">
+    <value>Alt simge</value>
+  </data>
+  <data name="Font_Superscript" xml:space="preserve">
+    <value>Üst simge</value>
+  </data>
+  <data name="Font_TextHighlightColor" xml:space="preserve">
+    <value>Metin Vurgulama Rengi</value>
+  </data>
+  <data name="Font_Title" xml:space="preserve">
+    <value>Yazı Tipi</value>
+  </data>
+  <data name="Font_Underline" xml:space="preserve">
+    <value>Altı Çizili</value>
+  </data>
+  <data name="Font_UnderlineInitial" xml:space="preserve">
+    <value>U</value>
+  </data>
+  <data name="HomeTab_Header" xml:space="preserve">
+    <value>Ana Sayfa</value>
+  </data>
+  <data name="Insert_InsertHyperlink" xml:space="preserve">
+    <value>Köprü Ekle</value>
+  </data>
+  <data name="Insert_InsertHyperlink_InvalidURL" xml:space="preserve">
+    <value>URL "{0}" geçersiz</value>
+  </data>
+  <data name="Insert_InsertHyperlink_TextLabel" xml:space="preserve">
+    <value>Metin:</value>
+  </data>
+  <data name="Insert_InsertHyperlink_URLLabel" xml:space="preserve">
+    <value>URL:</value>
+  </data>
+  <data name="Insert_InsertHyperlink_TargetLabel" xml:space="preserve">
+    <value>Target:</value>
+  </data>
+  <data name="Insert_InsertImage" xml:space="preserve">
+    <value>Resim Ekle</value>
+  </data>
+  <data name="Insert_InsertImage_InvalidURL" xml:space="preserve">
+    <value>URL "{0}" geçersiz</value>
+  </data>
+  <data name="Insert_InsertImage_UrlMessage" xml:space="preserve">
+    <value>Resmin bulunduğu yere URL'yi girin:</value>
+  </data>
+  <data name="Insert_InsertImage_NotLoaded" xml:space="preserve">
+    <value>"{0}" öğesindeki resim yüklenemiyor.</value>
+  </data>
+  <data name="Insert_InsertSymbol" xml:space="preserve">
+    <value>Simge Ekle</value>
+  </data>
+  <data name="Insert_RemoveHyperlink" xml:space="preserve">
+    <value>Köprüyü Kaldır</value>
+  </data>
+  <data name="Insert_Title" xml:space="preserve">
+    <value>Ekle</value>
+  </data>
+  <data name="Merge_Title" xml:space="preserve">
+    <value>Birleştir</value>
+  </data>
+  <data name="Paragraph_AlignTextCenter" xml:space="preserve">
+    <value>Metni Ortala</value>
+  </data>
+  <data name="Paragraph_AlignTextLeft" xml:space="preserve">
+    <value>Metni Sola Hizala</value>
+  </data>
+  <data name="Paragraph_AlignTextRight" xml:space="preserve">
+    <value>Metni Sağa Hizala</value>
+  </data>
+  <data name="Paragraph_BorderColor" xml:space="preserve">
+    <value>Kenarlık Rengi</value>
+  </data>
+  <data name="Paragraph_BorderThickness" xml:space="preserve">
+    <value>Kenarlık Kalınlığı</value>
+  </data>
+  <data name="Paragraph_Bullets" xml:space="preserve">
+    <value>madde İşaretleri</value>
+  </data>
+  <data name="Paragraph_Justify" xml:space="preserve">
+    <value>Yasla</value>
+  </data>
+  <data name="Paragraph_Margin" xml:space="preserve">
+    <value>Kenar Boşluğu</value>
+  </data>
+  <data name="Paragraph_Numbering" xml:space="preserve">
+    <value>Numaralandırma</value>
+  </data>
+  <data name="Paragraph_Padding" xml:space="preserve">
+    <value>Doldurma</value>
+  </data>
+  <data name="Paragraph_ParagraphColor" xml:space="preserve">
+    <value>Paragraf Rengi</value>
+  </data>
+  <data name="Paragraph_TextWrapping" xml:space="preserve">
+    <value>Metin Kaydırma</value>
+  </data>
+  <data name="Paragraph_Title" xml:space="preserve">
+    <value>Paragraf</value>
+  </data>
+  <data name="RowsAndColumns_Title" xml:space="preserve">
+    <value>Satırlar &amp; Sütunlar</value>
+  </data>
+  <data name="TablesTab_Header" xml:space="preserve">
+    <value>Tablolar</value>
+  </data>
+  <data name="Table_Title" xml:space="preserve">
+    <value>Tablo</value>
+  </data>
+  <data name="ThicknessPicker_Bottom" xml:space="preserve">
+    <value>Alt:</value>
+  </data>
+  <data name="ThicknessPicker_Left" xml:space="preserve">
+    <value>Sol:</value>
+  </data>
+  <data name="ThicknessPicker_Right" xml:space="preserve">
+    <value>Sağ:</value>
+  </data>
+  <data name="ThicknessPicker_Top" xml:space="preserve">
+    <value>Üst:</value>
+  </data>
+  <data name="Tools_BorderTool" xml:space="preserve">
+    <value>Kenarlar</value>
+  </data>
+  <data name="Tools_BorderTool_AllBorders" xml:space="preserve">
+    <value>Tüm Kenarlar</value>
+  </data>
+  <data name="Tools_BorderTool_BottomBorder" xml:space="preserve">
+    <value>Alt Kenar</value>
+  </data>
+  <data name="Tools_BorderTool_Color" xml:space="preserve">
+    <value>Renk</value>
+  </data>
+  <data name="Tools_BorderTool_InsideBorders" xml:space="preserve">
+    <value>İç Kenarlar</value>
+  </data>
+  <data name="Tools_BorderTool_InsideHorizontalBorders" xml:space="preserve">
+    <value>İç Yatay Kenar</value>
+  </data>
+  <data name="Tools_BorderTool_InsideVerticalBorders" xml:space="preserve">
+    <value>İç Dikey Kenar</value>
+  </data>
+  <data name="Tools_BorderTool_LeftBorder" xml:space="preserve">
+    <value>Sol Kenar</value>
+  </data>
+  <data name="Tools_BorderTool_NoBorder" xml:space="preserve">
+    <value>Kenar Yok</value>
+  </data>
+  <data name="Tools_BorderTool_OutsideBorders" xml:space="preserve">
+    <value>Dış Kenarlar</value>
+  </data>
+  <data name="Tools_BorderTool_RightBorder" xml:space="preserve">
+    <value>Sağ Kenar</value>
+  </data>
+  <data name="Tools_BorderTool_TopBorder" xml:space="preserve">
+    <value>Üst Kenar</value>
+  </data>
+  <data name="Tools_BorderTool_Weight" xml:space="preserve">
+    <value>Ağırlık</value>
+  </data>
+  <data name="Tools_BottomAlign" xml:space="preserve">
+    <value>Alta Hizala</value>
+  </data>
+  <data name="Tools_ColumnWidth_Header" xml:space="preserve">
+    <value>Genişlik:</value>
+  </data>
+  <data name="Tools_Copy" xml:space="preserve">
+    <value>Kopyala</value>
+  </data>
+  <data name="Tools_Cut" xml:space="preserve">
+    <value>Kes</value>
+  </data>
+  <data name="Tools_DeleteTable" xml:space="preserve">
+    <value>Tabloyu Sil</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteCells" xml:space="preserve">
+    <value>Hücreleri Sil</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteColumns" xml:space="preserve">
+    <value>Sütunları Sil</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteRows" xml:space="preserve">
+    <value>Satırları Sil</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteTable" xml:space="preserve">
+    <value>Tabloyu Sil</value>
+  </data>
+  <data name="Tools_FindAndReplace" xml:space="preserve">
+    <value>Bul ve Değiştir</value>
+  </data>
+  <data name="Tools_FindAndReplace_NotFound" xml:space="preserve">
+    <value>Aşağıda belirtilen metin bulunamadı:</value>
+  </data>
+  <data name="Tools_InsertColumnsLeft" xml:space="preserve">
+    <value>Soluna Sütun Ekle</value>
+  </data>
+  <data name="Tools_InsertColumnsRight" xml:space="preserve">
+    <value>Sağına Sütun Ekle</value>
+  </data>
+  <data name="Tools_InsertRowsAbove" xml:space="preserve">
+    <value>Üstüne Satır Ekle</value>
+  </data>
+  <data name="Tools_InsertRowsBelow" xml:space="preserve">
+    <value>Altına Satır Ekle</value>
+  </data>
+  <data name="Tools_InsertTable" xml:space="preserve">
+    <value>Tablo Ekle</value>
+  </data>
+  <data name="Tools_InsertTable_ConvertText" xml:space="preserve">
+    <value>Metni Tabloya Dönüştür</value>
+  </data>
+  <data name="Tools_MergeCells" xml:space="preserve">
+    <value>Hücreleri Birleştir</value>
+  </data>
+  <data name="Tools_Paste" xml:space="preserve">
+    <value>Yapıştır</value>
+  </data>
+  <data name="Tools_Redo" xml:space="preserve">
+    <value>Yinele</value>
+  </data>
+  <data name="Tools_RowHeight_Header" xml:space="preserve">
+    <value>Yükseklik:</value>
+  </data>
+  <data name="Tools_SelectTable" xml:space="preserve">
+    <value>Tablo Seç</value>
+  </data>
+  <data name="Tools_SelectTable_SelectCell" xml:space="preserve">
+    <value>Hücre Seç</value>
+  </data>
+  <data name="Tools_SelectTable_SelectColumn" xml:space="preserve">
+    <value>Sütun Seç</value>
+  </data>
+  <data name="Tools_SelectTable_SelectRow" xml:space="preserve">
+    <value>Satır Seç</value>
+  </data>
+  <data name="Tools_SelectTable_SelectTable" xml:space="preserve">
+    <value>Tablo Seç</value>
+  </data>
+  <data name="Tools_ShowGridlines" xml:space="preserve">
+    <value>Kılavuz Çizgileri Göster</value>
+  </data>
+  <data name="Tools_SpellCheck" xml:space="preserve">
+    <value>Yazım Denetimi</value>
+  </data>
+  <data name="Tools_SpellCheck_NoErrors" xml:space="preserve">
+    <value>Yazım hatası bulunamadı.</value>
+  </data>
+  <data name="Tools_SpellCheck_NotConfigured" xml:space="preserve">
+    <value>Yazım denetimi yapılandırılmamış.</value>
+  </data>
+  <data name="Tools_SplitCell" xml:space="preserve">
+    <value>Hücreyi Böl</value>
+  </data>
+  <data name="Tools_TableWidth_Header" xml:space="preserve">
+    <value>Genişlik:</value>
+  </data>
+  <data name="Tools_Title" xml:space="preserve">
+    <value>Araçlar</value>
+  </data>
+  <data name="Tools_TopAlign" xml:space="preserve">
+    <value>Üste Hizala</value>
+  </data>
+  <data name="Tools_Undo" xml:space="preserve">
+    <value>Geri Al</value>
+  </data>
+  <data name="Tools_UnmergeCell" xml:space="preserve">
+    <value>Hücreleri Ayır</value>
+  </data>
+  <data name="Tools_VerticalCenterAlign" xml:space="preserve">
+    <value>Ortala</value>
+  </data>
+  <data name="View_Draft" xml:space="preserve">
+    <value>Taslak</value>
+  </data>
+  <data name="View_PrintLayout" xml:space="preserve">
+    <value>Yazdırma Düzeni</value>
+  </data>
+  <data name="View_Zoom" xml:space="preserve">
+    <value>Yakınlaştır/Uzaklaştır</value>
+  </data>
+  <data name="Tools_FindAndReplace_ReachStart" xml:space="preserve">
+    <value>Bulma işlemi aramanın başlangıç noktasına ulaştı.</value>
+  </data>
+  <data name="Insert_InsertImage_UploadMessage" xml:space="preserve">
+    <value>Yüklenecek bir resim seç:</value>
+  </data>
+  <data name="Insert_InsertImage_UploadTab" xml:space="preserve">
+    <value>Yükle</value>
+  </data>
+  <data name="Insert_InsertImage_UrlTab" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="Insert_InsertImage_FileFilter" xml:space="preserve">
+    <value>Resim Dosyaları (*.PNG;*.JPG)|*.PNG;*.JPG|Tüm dosyalar (*.*)|*.*</value>
+  </data>
+  <data name="FormatPainter" xml:space="preserve">
+    <value>Biçim Boyacısı</value>
+  </data>
+  <data name="Tools_Delete" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="Tools_Gridlines" xml:space="preserve">
+    <value>Kılavuz Çizgiler</value>
+  </data>
+  <data name="Tools_InsertAbove" xml:space="preserve">
+    <value>Üstüne Ekle</value>
+  </data>
+  <data name="Tools_InsertBelow" xml:space="preserve">
+    <value>Altına Ekle</value>
+  </data>
+  <data name="Tools_InsertLeft" xml:space="preserve">
+    <value>Soluna Ekle</value>
+  </data>
+  <data name="Tools_InsertRight" xml:space="preserve">
+    <value>Sağına Ekle</value>
+  </data>
+  <data name="Tools_Picture" xml:space="preserve">
+    <value>Resim</value>
+  </data>
+  <data name="Tools_Select" xml:space="preserve">
+    <value>Seç</value>
+  </data>
+  <data name="Tools_Spelling" xml:space="preserve">
+    <value>Yazım Denetimi</value>
+  </data>
+  <data name="Tools_Unmerge" xml:space="preserve">
+    <value>Ayır</value>
+  </data>
+  <data name="Edit_Title" xml:space="preserve">
+    <value>Düzenle</value>
+  </data>
+  <data name="Color_Aqua_ToolTip" xml:space="preserve">
+    <value>Açık Deniz Mavisi</value>
+  </data>
+  <data name="Color_Black_ToolTip" xml:space="preserve">
+    <value>Siyah</value>
+  </data>
+  <data name="Color_Blue_ToolTip" xml:space="preserve">
+    <value>Mavi</value>
+  </data>
+  <data name="Color_Brown_ToolTip" xml:space="preserve">
+    <value>Kahverengi</value>
+  </data>
+  <data name="Color_DarkBlue_ToolTip" xml:space="preserve">
+    <value>Koyu Mavi</value>
+  </data>
+  <data name="Color_DarkGreen_ToolTip" xml:space="preserve">
+    <value>Koyu Yeşil</value>
+  </data>
+  <data name="Color_DarkPurple_ToolTip" xml:space="preserve">
+    <value>Koyu Mor</value>
+  </data>
+  <data name="Color_DarkRed_ToolTip" xml:space="preserve">
+    <value>Koyu Kırmızı</value>
+  </data>
+  <data name="Color_EightyGray_ToolTip" xml:space="preserve">
+    <value>Gri %80</value>
+  </data>
+  <data name="Color_FifteenGray_ToolTip" xml:space="preserve">
+    <value>Gri %15</value>
+  </data>
+  <data name="Color_FiftyGray_ToolTip" xml:space="preserve">
+    <value>Gri %50</value>
+  </data>
+  <data name="Color_FortyGray_ToolTip" xml:space="preserve">
+    <value>Gri %40</value>
+  </data>
+  <data name="Color_Gold_ToolTip" xml:space="preserve">
+    <value>Altın Sarısı</value>
+  </data>
+  <data name="Color_Green_ToolTip" xml:space="preserve">
+    <value>Yeşil</value>
+  </data>
+  <data name="Color_LightGreen_ToolTip" xml:space="preserve">
+    <value>Açık Yeşil</value>
+  </data>
+  <data name="Color_LightYellow_ToolTip" xml:space="preserve">
+    <value>Açık Sarı</value>
+  </data>
+  <data name="Color_Lime_ToolTip" xml:space="preserve">
+    <value>Limon Sarısı</value>
+  </data>
+  <data name="Color_Orange_ToolTip" xml:space="preserve">
+    <value>Turuncu</value>
+  </data>
+  <data name="Color_Pink_ToolTip" xml:space="preserve">
+    <value>Pembe</value>
+  </data>
+  <data name="Color_Plum_ToolTip" xml:space="preserve">
+    <value>Erik Rengi</value>
+  </data>
+  <data name="Color_Purple_ToolTip" xml:space="preserve">
+    <value>Mor</value>
+  </data>
+  <data name="Color_Red_ToolTip" xml:space="preserve">
+    <value>Kırmızı</value>
+  </data>
+  <data name="Color_Rose_ToolTip" xml:space="preserve">
+    <value>Gül Rengi</value>
+  </data>
+  <data name="Color_SeventyFiveGray_ToolTip" xml:space="preserve">
+    <value>Gri %75</value>
+  </data>
+  <data name="Color_SkyBlue_ToolTip" xml:space="preserve">
+    <value>Gök Mavisi</value>
+  </data>
+  <data name="Color_SlateBlue_ToolTip" xml:space="preserve">
+    <value>Kurşun Mavisi</value>
+  </data>
+  <data name="Color_Turquoise_ToolTip" xml:space="preserve">
+    <value>Turkuaz</value>
+  </data>
+  <data name="Color_TwentyFiveGray_ToolTip" xml:space="preserve">
+    <value>Gri %25</value>
+  </data>
+  <data name="Color_White_ToolTip" xml:space="preserve">
+    <value>Beyaz</value>
+  </data>
+  <data name="Color_Yellow_ToolTip" xml:space="preserve">
+    <value>Sarı</value>
+  </data>
+  <data name="Insert_ImageDialog_File" xml:space="preserve">
+    <value>Resim Seç…</value>
+  </data>
+  <data name="Insert_ImageDialog_Url" xml:space="preserve">
+    <value>Resim Ekle</value>
+  </data>
+  <data name="Insert_InsertHyperlink_Button" xml:space="preserve">
+    <value>Köprü Ekle</value>
+  </data>
+  <data name="Insert_InsertTable_Button" xml:space="preserve">
+    <value>Tablo Ekle</value>
+  </data>
+  <data name="Insert_InsertTable_ColumnLabel" xml:space="preserve">
+    <value>Sütun sayısı:</value>
+  </data>
+  <data name="Insert_InsertTable_RowLabel" xml:space="preserve">
+    <value>Satır sayısı:</value>
+  </data>
+  <data name="List_Header" xml:space="preserve">
+    <value>Listele</value>
+  </data>
+  <data name="Tools_BottomAlignMenuTool_Header" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="Tools_CenterAlign_Header" xml:space="preserve">
+    <value>Ortala</value>
+  </data>
+  <data name="Tools_ClearFormatting_Header" xml:space="preserve">
+    <value>Biçimi Temizle</value>
+  </data>
+  <data name="Tools_ClearFormatting_ToolTip" xml:space="preserve">
+    <value>Metin Biçimlendirmesini Temizle</value>
+  </data>
+  <data name="Tools_DecreaseFontSize_Header" xml:space="preserve">
+    <value>Azalt</value>
+  </data>
+  <data name="Tools_DecreaseFontSize_ToolTip" xml:space="preserve">
+    <value>Yazı Tipi Boyutunu Azalt</value>
+  </data>
+  <data name="Tools_DeleteTable_Cells" xml:space="preserve">
+    <value>Tablo Hücrelerini Sil</value>
+  </data>
+  <data name="Tools_DeleteTable_Columns" xml:space="preserve">
+    <value>Tablo Sütunlarını Sil</value>
+  </data>
+  <data name="Tools_DeleteTable_Rows" xml:space="preserve">
+    <value>Tablo Satırlarını Sil</value>
+  </data>
+  <data name="Tools_DeleteTable_Table" xml:space="preserve">
+    <value>Bu Tabloyu Sil</value>
+  </data>
+  <data name="Tools_Error" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="Tools_FillColor_Header" xml:space="preserve">
+    <value>Doldur</value>
+  </data>
+  <data name="Tools_FillColor_ToolTip" xml:space="preserve">
+    <value>Dolgu Rengi</value>
+  </data>
+  <data name="Tools_IncreaseFontSize_Header" xml:space="preserve">
+    <value>Artır</value>
+  </data>
+  <data name="Tools_IncreaseFontSize_ToolTip" xml:space="preserve">
+    <value>Yazı Tipi Boyutunu Artır</value>
+  </data>
+  <data name="Tools_InsertHyperlink_Header" xml:space="preserve">
+    <value>Köprü</value>
+  </data>
+  <data name="Tools_InsertImage_Header" xml:space="preserve">
+    <value>Resim</value>
+  </data>
+  <data name="Tools_InsertImage_ToolTip" xml:space="preserve">
+    <value>Resim Ekle</value>
+  </data>
+  <data name="Tools_LeftAlign_Header" xml:space="preserve">
+    <value>Sol</value>
+  </data>
+  <data name="Tools_LeftAlign_ToolTip" xml:space="preserve">
+    <value>Sola Hizala</value>
+  </data>
+  <data name="Tools_Numbering_ToolTip" xml:space="preserve">
+    <value>Numaralandırılmış Liste</value>
+  </data>
+  <data name="Tools_Redo_Header" xml:space="preserve">
+    <value>Yinele</value>
+  </data>
+  <data name="Tools_RightAlign_Header" xml:space="preserve">
+    <value>Sağ</value>
+  </data>
+  <data name="Tools_RightAlign_ToolTip" xml:space="preserve">
+    <value>Sağa Hizala</value>
+  </data>
+  <data name="Tools_SelectAll_Header" xml:space="preserve">
+    <value>Tümünü Seç</value>
+  </data>
+  <data name="Tools_SelectTable_Cells_Header" xml:space="preserve">
+    <value>Hücreleri Seç</value>
+  </data>
+  <data name="Tools_SelectTable_Cells_ToolTip" xml:space="preserve">
+    <value>Tablo Hücrelerini Seç</value>
+  </data>
+  <data name="Tools_SelectTable_Columns_Header" xml:space="preserve">
+    <value>Sütunları Seç</value>
+  </data>
+  <data name="Tools_SelectTable_Columns_ToolTip" xml:space="preserve">
+    <value>Tablo Sütunlarını Seç</value>
+  </data>
+  <data name="Tools_SelectTable_Rows_Header" xml:space="preserve">
+    <value>Satırları Seç</value>
+  </data>
+  <data name="Tools_SelectTable_Rows_ToolTip" xml:space="preserve">
+    <value>Tablo Satırlarını Seç</value>
+  </data>
+  <data name="Tools_SelectTable_Table_Header" xml:space="preserve">
+    <value>Tablo Seç</value>
+  </data>
+  <data name="Tools_SelectTable_Table_ToolTip" xml:space="preserve">
+    <value>Bu Tabloyu Seç</value>
+  </data>
+  <data name="Tools_Strikethrough_Header" xml:space="preserve">
+    <value>Üstünü Çiz</value>
+  </data>
+  <data name="Tools_Subscript_ToolTip" xml:space="preserve">
+    <value>Alt Simge</value>
+  </data>
+  <data name="Tools_Superscript_ToolTip" xml:space="preserve">
+    <value>Üst Simge</value>
+  </data>
+  <data name="Tools_TextHighlight_Header" xml:space="preserve">
+    <value>Vurgula</value>
+  </data>
+  <data name="Tools_TextHighlight_ToolTip" xml:space="preserve">
+    <value>Metin Vurgu Rengi</value>
+  </data>
+  <data name="Tools_TopAlign_Header" xml:space="preserve">
+    <value>Üst</value>
+  </data>
+  <data name="ViewTab_Header" xml:space="preserve">
+    <value>Görünüm</value>
+  </data>
+  <data name="View_DocumentViews" xml:space="preserve">
+    <value>Görünümler</value>
+  </data>
+  <data name="View_FitWidth" xml:space="preserve">
+    <value>Genişliğe Sığdır</value>
+  </data>
+  <data name="View_OnePage" xml:space="preserve">
+    <value>Bir Sayfa</value>
+  </data>
+  <data name="View_TwoPages" xml:space="preserve">
+    <value>İki Sayfa</value>
+  </data>
+  <data name="Tools_ZoomIn" xml:space="preserve">
+    <value>Yakınlaştır</value>
+  </data>
+  <data name="Tools_Zoom100PercentTool" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="Tools_ZoomOut" xml:space="preserve">
+    <value>Uzaklaştır</value>
+  </data>
+  <data name="Font_Strikethrough" xml:space="preserve">
+    <value>Üstü Çizili</value>
+  </data>
+  <data name="Font_StrikethroughInitial" xml:space="preserve">
+    <value>abc</value>
+  </data>
+  <data name="Tools_RemoveHyperlink_Header" xml:space="preserve">
+    <value>Kaldır</value>
+  </data>
+  <data name="Selected_Document" xml:space="preserve">
+    <value>&lt;&lt;Belgedeki Seçim&gt;&gt;</value>
+  </data>
+  <data name="Line_Number" xml:space="preserve">
+    <value>Satır Numaraları</value>
+  </data>
+  <data name="LineNumberMode_None" xml:space="preserve">
+    <value>Hiçbiri</value>
+  </data>
+  <data name="LineNumberMode_Continuous" xml:space="preserve">
+    <value>Sürekli</value>
+  </data>
+  <data name="LineNumberMode_RestartEachPage" xml:space="preserve">
+    <value>Her sayfada yeniden başlat</value>
+  </data>
+  <data name="LineSpacing" xml:space="preserve">
+    <value>Line Spacing</value>
+  </data>
+</root>

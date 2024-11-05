@@ -1,0 +1,940 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Functions.Abs()" xml:space="preserve">
+    <value>Returns the absolute value of a number.</value>
+    <comment>Returns the absolute value of a number.</comment>
+  </data>
+  <data name="Functions.Acos()" xml:space="preserve">
+    <value>Returns the angle whose cosine is the specified number.</value>
+    <comment>Returns the angle whose cosine is the specified number.</comment>
+  </data>
+  <data name="Functions.Asc()" xml:space="preserve">
+    <value>Returns the ASCII code value of the leftmost character of a character expression.</value>
+    <comment>Returns the ASCII code value of the leftmost character of a character expression.</comment>
+  </data>
+  <data name="Functions.Asin()" xml:space="preserve">
+    <value>Returns the angle whose sine is the specified number.</value>
+    <comment>Returns the angle whose sine is the specified number.</comment>
+  </data>
+  <data name="Functions.Atan2(,)" xml:space="preserve">
+    <value>Returns the angle whose tangent is the quotient of two specified numbers.</value>
+    <comment>Returns the angle whose tangent is the quotient of two specified numbers.</comment>
+  </data>
+  <data name="Functions.Atan()" xml:space="preserve">
+    <value>Returns the angle whose tangent is the specified number.</value>
+    <comment>Returns the angle whose tangent is the specified number.</comment>
+  </data>
+  <data name="Functions.Chr()" xml:space="preserve">
+    <value>Converts an int ASCII code to a character.</value>
+    <comment>Converts an int ASCII code to a character.</comment>
+  </data>
+  <data name="Functions.Concat(,)" xml:space="preserve">
+    <value>Returns a string that is the result of concatenating two or more string values.</value>
+    <comment>Returns a string that is the result of concatenating two or more string values.</comment>
+  </data>
+  <data name="Functions.Contains(,)" xml:space="preserve">
+    <value>Returns a value indicating whether a specified substring occurs within this string.</value>
+    <comment>Returns a value indicating whether a specified substring occurs within this string.</comment>
+  </data>
+  <data name="Functions.EndsWith(,)" xml:space="preserve">
+    <value>Determines whether the end of this string instance matches a specified string.</value>
+    <comment>Determines whether the end of this string instance matches a specified string.</comment>
+  </data>
+  <data name="Functions.Insert(,,)" xml:space="preserve">
+    <value>Returns a new string in which a specified string is inserted at a specified index position in this instance.</value>
+    <comment>Returns a new string in which a specified string is inserted at a specified index position in this instance.</comment>
+  </data>
+  <data name="Functions.InStr(,)" xml:space="preserve">
+    <value>Searches an expression for another expression and returns its starting position if found.</value>
+    <comment>Searches an expression for another expression and returns its starting position if found.</comment>
+  </data>
+  <data name="Functions.IsNull()" xml:space="preserve">
+    <value>Returns True if the specified Value is NULL.</value>
+    <comment>Returns True if the specified Value is NULL.</comment>
+  </data>
+  <data name="Functions.LCase()" xml:space="preserve">
+    <value>Returns a character expression after converting uppercase character data to lowercase.</value>
+    <comment>Returns a character expression after converting uppercase character data to lowercase.</comment>
+  </data>
+  <data name="Functions.Len()" xml:space="preserve">
+    <value>Returns the number of characters of the specified string expression.</value>
+    <comment>Returns the number of characters of the specified string expression.</comment>
+  </data>
+  <data name="Functions.Log10()" xml:space="preserve">
+    <value>Returns the base 10 logarithm of a specified number.</value>
+    <comment>Returns the base 10 logarithm of a specified number.</comment>
+  </data>
+  <data name="Functions.Log()" xml:space="preserve">
+    <value>Returns the natural (base e) logarithm of a specified number.</value>
+    <comment>Returns the natural (base e) logarithm of a specified number.</comment>
+  </data>
+  <data name="Functions.LSet(,)" xml:space="preserve">
+    <value>Returns a new string of a specified length in which the beginning of the current string is padded with spaces.</value>
+    <comment>Returns a new string of a specified length in which the beginning of the current string is padded with spaces.</comment>
+  </data>
+  <data name="Functions.Mid(,,)" xml:space="preserve">
+    <value>Returns a string that contains a specified number of characters starting from a specified position in a string.</value>
+    <comment>Returns a string that contains a specified number of characters starting from a specified position in a string.</comment>
+  </data>
+  <data name="Functions.Mid(,)" xml:space="preserve">
+    <value>Returns a string that contains all the characters starting from a specified position in a string.</value>
+    <comment>Returns a string that contains all the characters starting from a specified position in a string.</comment>
+  </data>
+  <data name="Functions.Pow(,)" xml:space="preserve">
+    <value>Returns a specified number raised to the specified power.</value>
+    <comment>Returns a specified number raised to the specified power.</comment>
+  </data>
+  <data name="Functions.Remove(,)" xml:space="preserve">
+    <value>Deletes all specified characters specified string.</value>
+    <comment>Deletes all specified characters specified string.</comment>
+  </data>
+  <data name="Functions.Replace(,,)" xml:space="preserve">
+    <value>Replaces all occurrences of a specified string value with another string value.</value>
+    <comment>Replaces all occurrences of a specified string value with another string value.</comment>
+  </data>
+  <data name="Functions.RSet(,)" xml:space="preserve">
+    <value>Returns a new string of a specified length in which the end of the current string is padded with spaces.</value>
+    <comment>Returns a new string of a specified length in which the end of the current string is padded with spaces.</comment>
+  </data>
+  <data name="Functions.Sin()" xml:space="preserve">
+    <value>Returns the sine of the specified angle.</value>
+    <comment>Returns the sine of the specified angle.</comment>
+  </data>
+  <data name="Functions.Sinh()" xml:space="preserve">
+    <value>Returns the hyperbolic sine of the specified angle.</value>
+    <comment>Returns the hyperbolic sine of the specified angle.</comment>
+  </data>
+  <data name="Functions.Sign()" xml:space="preserve">
+    <value>Returns an integer value indicating the sign of a number.</value>
+    <comment>Returns an integer value indicating the sign of a number.</comment>
+  </data>
+  <data name="Functions.Sqrt()" xml:space="preserve">
+    <value>Returns the square root of a specified number.</value>
+    <comment>Returns the square root of a specified number.</comment>
+  </data>
+  <data name="Functions.StartsWith(,)" xml:space="preserve">
+    <value>Determines whether the beginning of this string instance matches a specified string.</value>
+    <comment>Determines whether the beginning of this string instance matches a specified string.</comment>
+  </data>
+  <data name="Functions.StrReverse()" xml:space="preserve">
+    <value>Returns the reverse order of a string value.</value>
+    <comment>Returns the reverse order of a string value.</comment>
+  </data>
+  <data name="Functions.Tan()" xml:space="preserve">
+    <value>Returns the tangent of the specified angle.</value>
+    <comment>Returns the tangent of the specified angle.</comment>
+  </data>
+  <data name="Functions.Tanh()" xml:space="preserve">
+    <value>Returns the hyperbolic tangent of the specified angle.</value>
+    <comment>Returns the hyperbolic tangent of the specified angle.</comment>
+  </data>
+  <data name="Functions.Trim()" xml:space="preserve">
+    <value>Removes the space character char(32) or other specified characters from the start or end of a string.</value>
+    <comment>Removes the space character char(32) or other specified characters from the start or end of a string.</comment>
+  </data>
+  <data name="Functions.UCase()" xml:space="preserve">
+    <value>Returns a character expression with lowercase character data converted to uppercase.</value>
+    <comment>Returns a character expression with lowercase character data converted to uppercase.</comment>
+  </data>
+  <data name="Functions.AddDays(,)" xml:space="preserve">
+    <value>Returns a new System.DateTime that adds the specified number of days to the specified System.DateTime value.</value>
+    <comment>Returns a new System.DateTime that adds the specified number of days to the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.AddHours(,)" xml:space="preserve">
+    <value>Returns a new System.DateTime that adds the specified number of hours to the  specified System.DateTime value.</value>
+    <comment>Returns a new System.DateTime that adds the specified number of hours to the  specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.AddMilliSeconds(,)" xml:space="preserve">
+    <value>Returns a new System.DateTime that adds the specified number of milliseconds to the specified System.DateTime value.</value>
+    <comment>Returns a new System.DateTime that adds the specified number of milliseconds to the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.AddMinutes(,)" xml:space="preserve">
+    <value>Returns a new System.DateTime that adds the specified number of minutes to the specified System.DateTime value.</value>
+    <comment>Returns a new System.DateTime that adds the specified number of minutes to the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.AddMonths(,)" xml:space="preserve">
+    <value>Returns a new System.DateTime that adds the specified number of months to the specified System.DateTime value.</value>
+    <comment>Returns a new System.DateTime that adds the specified number of months to the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.AddSeconds(,)" xml:space="preserve">
+    <value>Returns a new System.DateTime that adds the specified number of seconds to the specified System.DateTime value.</value>
+    <comment>Returns a new System.DateTime that adds the specified number of seconds to the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.AddTicks(,)" xml:space="preserve">
+    <value>Returns a new System.DateTime that adds the specified number of ticks to the specified System.DateTime value.</value>
+    <comment>Returns a new System.DateTime that adds the specified number of ticks to the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.AddTimeSpan(,)" xml:space="preserve">
+    <value>Returns a new System.DateTime that adds the specified number of System.TimeSpan to the specified System.DateTime value.</value>
+    <comment>Returns a new System.DateTime that adds the specified number of System.TimeSpan to the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.AddYears(,)" xml:space="preserve">
+    <value>Returns a new System.DateTime that adds the specified number of years to the specified System.DateTime value.</value>
+    <comment>Returns a new System.DateTime that adds the specified number of years to the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.Average()" xml:space="preserve">
+    <value>Computes the average of a specified sequence of numbers (or enumerable).</value>
+    <comment>Computes the average of a specified sequence of numbers (or enumerable).</comment>
+  </data>
+  <data name="Functions.Count()" xml:space="preserve">
+    <value>Gets the number of elements actually contained in a specified sequence</value>
+    <comment>Gets the number of elements actually contained in a specified sequence</comment>
+  </data>
+  <data name="Functions.DateDiffDay(,)" xml:space="preserve">
+    <value>Counts the number of day boundaries between two non-nullable dates.</value>
+    <comment>Counts the number of day boundaries between two non-nullable dates.</comment>
+  </data>
+  <data name="Functions.DateDiffHour(,)" xml:space="preserve">
+    <value>Counts the number of hour boundaries between two non-nullable dates.</value>
+    <comment>Counts the number of hour boundaries between two non-nullable dates.</comment>
+  </data>
+  <data name="Functions.DateDiffMilliSecond(,)" xml:space="preserve">
+    <value>Counts the number of milliseconds boundaries between two non-nullable dates.</value>
+    <comment>Counts the number of milliseconds boundaries between two non-nullable dates.</comment>
+  </data>
+  <data name="Functions.DateDiffMinute(,)" xml:space="preserve">
+    <value>Counts the number of minutes boundaries between two non-nullable dates.</value>
+    <comment>Counts the number of minutes boundaries between two non-nullable dates.</comment>
+  </data>
+  <data name="Functions.DateDiffSecond(,)" xml:space="preserve">
+    <value>Counts the number of seconds boundaries between two non-nullable dates.</value>
+    <comment>Counts the number of seconds boundaries between two non-nullable dates.</comment>
+  </data>
+  <data name="Functions.DateDiffTick(,)" xml:space="preserve">
+    <value>Counts the number of ticks boundaries between two non-nullable dates.</value>
+    <comment>Counts the number of ticks boundaries between two non-nullable dates.</comment>
+  </data>
+  <data name="Functions.GetDayOfYear()" xml:space="preserve">
+    <value>Gets the day of the year represented by the specified System.DateTime value.</value>
+    <comment>Gets the day of the year represented by the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.First()" xml:space="preserve">
+    <value>Returns the first element of a specified  sequence.</value>
+    <comment>Returns the first element of a specified  sequence.</comment>
+  </data>
+  <data name="Functions.GetDate()" xml:space="preserve">
+    <value>Gets the date component of specified System.DateTime value.</value>
+    <comment>Gets the date component of the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.GetDay()" xml:space="preserve">
+    <value>Gets the day of the month represented by specified System.DateTime value.</value>
+    <comment>Gets the day of the month represented by specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.GetDayOfWeek()" xml:space="preserve">
+    <value>Gets the day of the week represented by the specified System.DateTime value.</value>
+    <comment>Gets the day of the week represented by the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.GetHour()" xml:space="preserve">
+    <value>Gets the hour component of the specified System.DateTime value.</value>
+    <comment>Gets the hour component of the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.GetMilliSecond()" xml:space="preserve">
+    <value>Gets the milliSecond component of the specified System.DateTime value.</value>
+    <comment>Gets the milliSecond component of the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.GetMinute()" xml:space="preserve">
+    <value>Gets the minute component of the specified System.DateTime value.</value>
+    <comment>Gets the minute component of the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.GetMonth()" xml:space="preserve">
+    <value>Gets the month component of the specified System.DateTime value.</value>
+    <comment>Gets the month component of the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.GetSecond()" xml:space="preserve">
+    <value>Gets the seconds component of the specified System.DateTime value.</value>
+    <comment>Gets the seconds component of the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.GetTimeOfDay()" xml:space="preserve">
+    <value>Gets the time of day for the specified System.DateTime value.</value>
+    <comment>Gets the time of day for the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.GetYear()" xml:space="preserve">
+    <value>Gets the year component of the specified System.DateTime value.</value>
+    <comment>Gets the year component of the specified System.DateTime value.</comment>
+  </data>
+  <data name="Functions.Iif(,,)" xml:space="preserve">
+    <value>Returns the evaluation of one of two expressions, depending on the condition.</value>
+    <comment>Returns the evaluation of one of two expressions, depending on the condition.</comment>
+  </data>
+  <data name="Functions.Last()" xml:space="preserve">
+    <value>Returns the last element of a specified  sequence.</value>
+    <comment>Returns the last element of a specified  sequence.</comment>
+  </data>
+  <data name="Functions.Max()" xml:space="preserve">
+    <value>Returns the maximum value in a specified sequence of numbers (or enumerable).</value>
+    <comment>Returns the maximum value in a specified sequence of numbers (or enumerable).</comment>
+  </data>
+  <data name="Functions.Now()" xml:space="preserve">
+    <value>Gets a System.DateTime object that is set to the current date and time on this computer, expressed as the local time.</value>
+    <comment>Gets a System.DateTime object that is set to the current date and time on this computer, expressed as the local time.</comment>
+  </data>
+  <data name="Functions.RandBetween()" xml:space="preserve">
+    <value>Returns a random number within a specified range.</value>
+    <comment>Returns a random number within a specified range.</comment>
+  </data>
+  <data name="Functions.Rand()" xml:space="preserve">
+    <value>Returns a nonnegative random number.</value>
+    <comment>Returns a nonnegative random number.</comment>
+  </data>
+  <data name="Functions.Sum()" xml:space="preserve">
+    <value>Computes the sum of a specified  sequence of numbers  (or enumerable).</value>
+    <comment>Computes the sum of a specified  sequence of numbers  (or enumerable).</comment>
+  </data>
+  <data name="Functions.Today()" xml:space="preserve">
+    <value>Gets the current date.</value>
+    <comment>Gets the current date.</comment>
+  </data>
+  <data name="Functions.UtcNow()" xml:space="preserve">
+    <value>Gets a System.DateTime object that is set to the current date and time on this computer, expressed as the Coordinated Universal Time (UTC).</value>
+    <comment>Gets a System.DateTime object that is set to the current date and time on this computer, expressed as the Coordinated Universal Time (UTC).</comment>
+  </data>
+  <data name="Constants.False" xml:space="preserve">
+    <value>Returns False.</value>
+    <comment>Returns False.</comment>
+  </data>
+  <data name="Constants.Nothing" xml:space="preserve">
+    <value>Returns Null.</value>
+    <comment>Returns Null.</comment>
+  </data>
+  <data name="Constants.True" xml:space="preserve">
+    <value>Returns True.</value>
+    <comment>Returns True.</comment>
+  </data>
+  <data name="Operators.And" xml:space="preserve">
+    <value>Performs a logical conjunction on two expressions.</value>
+    <comment>Performs a logical conjunction on two expressions.</comment>
+  </data>
+  <data name="Operators.Concat" xml:space="preserve">
+    <value>Generates a string concatenation of two expressions.</value>
+    <comment>Generates a string concatenation of two expressions.</comment>
+  </data>
+  <data name="Operators.Divide" xml:space="preserve">
+    <value>Divides two numbers and returns a floating-point result.</value>
+    <comment>Divides two numbers and returns a floating-point result.</comment>
+  </data>
+  <data name="Operators.Equal" xml:space="preserve">
+    <value>Returns a Boolean value that indicates whether the left and right expressions are equal.</value>
+    <comment>Returns a Boolean value that indicates whether the left and right expressions are equal.</comment>
+  </data>
+  <data name="Operators.GreaterOrEqual" xml:space="preserve">
+    <value>Returns a Boolean value that indicates whether the left expression is greater than right expression or equal.</value>
+    <comment>Returns a Boolean value that indicates whether the left expression is greater than right expression or equal.</comment>
+  </data>
+  <data name="Operators.GreaterThan" xml:space="preserve">
+    <value>Returns a Boolean value that indicates whether the left expression is greater than right expression.</value>
+    <comment>Returns a Boolean value that indicates whether the left expression is greater than right expression.</comment>
+  </data>
+  <data name="Operators.LessOrEqual" xml:space="preserve">
+    <value>Returns a Boolean value that indicates whether the left expression is less than right expression or equal.</value>
+    <comment>Returns a Boolean value that indicates whether the left expression is less than right expression or equal.</comment>
+  </data>
+  <data name="Operators.LessThan" xml:space="preserve">
+    <value>Returns a Boolean value that indicates whether the left expression is less than right expression.</value>
+    <comment>Returns a Boolean value that indicates whether the left expression is less than right expression.</comment>
+  </data>
+  <data name="Operators.Minus" xml:space="preserve">
+    <value>Finds the difference between two numbers or indicates the negative value of a numeric expression.</value>
+    <comment>Finds the difference between two numbers or indicates the negative value of a numeric expression.</comment>
+  </data>
+  <data name="Operators.Modulus" xml:space="preserve">
+    <value>Divides two numbers and returns only the remainder.</value>
+    <comment>Divides two numbers and returns only the remainder.</comment>
+  </data>
+  <data name="Operators.Multiply" xml:space="preserve">
+    <value>Multiplies two numbers.</value>
+    <comment>Multiplies two numbers.</comment>
+  </data>
+  <data name="Operators.Not" xml:space="preserve">
+    <value>Performs logical negation on an expression.</value>
+    <comment>Performs logical negation on an expression.</comment>
+  </data>
+  <data name="Operators.NotEqual" xml:space="preserve">
+    <value>Returns a Boolean value that indicates whether the left and right expressions are not equal.</value>
+    <comment>Returns a Boolean value that indicates whether the left and right expressions are not equal.</comment>
+  </data>
+  <data name="Operators.Or" xml:space="preserve">
+    <value>Performs a logical disjunction on two expressions.</value>
+    <comment>Performs a logical disjunction on two expressions.</comment>
+  </data>
+  <data name="Operators.Plus" xml:space="preserve">
+    <value>Sums two numbers.</value>
+    <comment>Sums two numbers.</comment>
+  </data>
+  <data name="Functions.CBool()" xml:space="preserve">
+    <value>Converts the specified string representation of a logical value to its System.Boolean equivalent, or throws an exception if the string is not equivalent to the value of System.Boolean.TrueString or System.Boolean.FalseString.</value>
+    <comment>Converts the specified string representation of a logical value to its System.Boolean equivalent, or throws an exception if the string is not equivalent to the value of System.Boolean.TrueString or System.Boolean.FalseString.</comment>
+  </data>
+  <data name="Functions.CByte()" xml:space="preserve">
+    <value>Converts the string representation of a number to its System.Byte equivalent.</value>
+    <comment>Converts the string representation of a number to its System.Byte equivalent.</comment>
+  </data>
+  <data name="Functions.CChar()" xml:space="preserve">
+    <value>Converts the value of the specified string to its equivalent Unicode character.</value>
+    <comment>Converts the value of the specified string to its equivalent Unicode character.</comment>
+  </data>
+  <data name="Functions.CDate()" xml:space="preserve">
+    <value>Converts the specified string representation of a date and time to its System.DateTime equivalent.</value>
+    <comment>Converts the specified string representation of a date and time to its System.DateTime equivalent.</comment>
+  </data>
+  <data name="Functions.CDbl()" xml:space="preserve">
+    <value>Converts the string representation of a number to its double-precision floating-point number equivalent.</value>
+    <comment>Converts the string representation of a number to its double-precision floating-point number equivalent.</comment>
+  </data>
+  <data name="Functions.CDec()" xml:space="preserve">
+    <value>Converts the string representation of a number to its System.Decimal equivalent.</value>
+    <comment>Converts the string representation of a number to its System.Decimal equivalent.</comment>
+  </data>
+  <data name="Functions.Ceiling()" xml:space="preserve">
+    <value>Returns the smallest integral value that's greater than or equal to the specified decimal or double.</value>
+    <comment>Returns the smallest integral value that's greater than or equal to the specified decimal or double.</comment>
+  </data>
+  <data name="Functions.CInt()" xml:space="preserve">
+    <value>Converts the string representation of a number to its 32-bit signed integer equivalent.</value>
+    <comment>Converts the string representation of a number to its 32-bit signed integer equivalent.</comment>
+  </data>
+  <data name="Functions.CLng()" xml:space="preserve">
+    <value>Converts the string representation of a number to its 64-bit signed integer equivalent.</value>
+    <comment>Converts the string representation of a number to its 64-bit signed integer equivalent.</comment>
+  </data>
+  <data name="Functions.CObj()" xml:space="preserve">
+    <value>Returns the specified element as System.Object.</value>
+    <comment>Returns the specified element as System.Object.</comment>
+  </data>
+  <data name="Functions.Cos()" xml:space="preserve">
+    <value>Returns the cosine of the specified angle.</value>
+    <comment>Returns the cosine of the specified angle.</comment>
+  </data>
+  <data name="Functions.Cosh()" xml:space="preserve">
+    <value>Returns the hyperbolic cosine of the specified angle.</value>
+    <comment>Returns the hyperbolic cosine of the specified angle.</comment>
+  </data>
+  <data name="Functions.CSByte()" xml:space="preserve">
+    <value>Converts the string representation of a number to its 8-bit signed integer equivalent.</value>
+    <comment>Converts the string representation of a number to its 8-bit signed integer equivalent.</comment>
+  </data>
+  <data name="Functions.CSng()" xml:space="preserve">
+    <value>Converts the string representation of a number to its single-precision floating-point number equivalent.</value>
+    <comment>Converts the string representation of a number to its single-precision floating-point number equivalent.</comment>
+  </data>
+  <data name="Functions.CShort()" xml:space="preserve">
+    <value>Converts the string representation of a number to its 16-bit signed integer equivalent.</value>
+    <comment>Converts the string representation of a number to its 16-bit signed integer equivalent.</comment>
+  </data>
+  <data name="Functions.CStr()" xml:space="preserve">
+    <value>Tries to evaluate the specified expression and return result as a string.</value>
+    <comment>Tries to evaluate the specified expression and return result as a string.</comment>
+  </data>
+  <data name="Functions.CType(,)" xml:space="preserve">
+    <value>Returns an object of the specified type and whose value is equivalent to the specified object.</value>
+    <comment>Returns an object of the specified type and whose value is equivalent to the specified object.</comment>
+  </data>
+  <data name="Functions.CULong()" xml:space="preserve">
+    <value>Converts the string representation of a number to its 64-bit unsigned integer equivalent.</value>
+    <comment>Converts the string representation of a number to its 64-bit unsigned integer equivalent.</comment>
+  </data>
+  <data name="Functions.CUint()" xml:space="preserve">
+    <value>Converts the string representation of a number to its 32-bit unsigned integer equivalent.</value>
+    <comment>Converts the string representation of a number to its 32-bit unsigned integer equivalent.</comment>
+  </data>
+  <data name="Functions.CUShort()" xml:space="preserve">
+    <value>Converts the string representation of a number to its 16-bit unsigned integer equivalent.</value>
+    <comment>Converts the string representation of a number to its 16-bit unsigned integer equivalent.</comment>
+  </data>
+  <data name="Functions.Exp()" xml:space="preserve">
+    <value>Returns e (the base of natural logarithms) raised to the specified power.</value>
+    <comment>Returns e (the base of natural logarithms) raised to the specified power.</comment>
+  </data>
+  <data name="Functions.Floor()" xml:space="preserve">
+    <value>Returns the largest integer that's less than or equal to the specified decimal or double number.</value>
+    <comment>Returns the largest integer that's less than or equal to the specified decimal or double number.</comment>
+  </data>
+  <data name="Functions.InStr(,,)" xml:space="preserve">
+    <value>Searches an expression for another expression and returns its starting position if found, starting from the specified position.</value>
+    <comment>Searches an expression for another expression and returns its starting position if found, starting from the specified position.</comment>
+  </data>
+  <data name="Functions.Log(,)" xml:space="preserve">
+    <value>Returns the logarithm of a specified number in a specified base.</value>
+    <comment>Returns the logarithm of a specified number in a specified base.</comment>
+  </data>
+  <data name="Functions.LSet(,,)" xml:space="preserve">
+    <value>Returns a new string of a specified length in which the beginning of the current string is padded with a specified character.</value>
+    <comment>Returns a new string of a specified length in which the beginning of the current string is padded with a specified character.</comment>
+  </data>
+  <data name="Functions.Remove(,,)" xml:space="preserve">
+    <value>Deletes all specified characters specified string, beginning at a specified position.</value>
+    <comment>Deletes all specified characters specified string, beginning at a specified position.</comment>
+  </data>
+  <data name="Functions.RSet(,,)" xml:space="preserve">
+    <value>Returns a new string of a specified length in which the end of the current string is padded with a specified character.</value>
+    <comment>Returns a new string of a specified length in which the end of the current string is padded with a specified character.</comment>
+  </data>
+  <data name="Arguments.Acos.number" xml:space="preserve">
+    <value>a number representing a cosine, where it must be greater than or equal to -1, but less than or equal to 1.</value>
+    <comment>a number representing a cosine, where it must be greater than or equal to -1, but less than or equal to 1.</comment>
+  </data>
+  <data name="Arguments.AddDays.days" xml:space="preserve">
+    <value>a number of whole and fractional days. The value parameter can be negative or positive.</value>
+    <comment>a number of whole and fractional days. The value parameter can be negative or positive.</comment>
+  </data>
+  <data name="Arguments.AddHours.hours" xml:space="preserve">
+    <value>a number of whole and fractional hours. The value parameter can be negative or positive.</value>
+    <comment>a number of whole and fractional hours. The value parameter can be negative or positive.</comment>
+  </data>
+  <data name="Arguments.AddMilliSeconds.milliseconds" xml:space="preserve">
+    <value>a number of whole and fractional milliseconds. The value parameter can be negative or positive.</value>
+    <comment>a number of whole and fractional milliseconds. The value parameter can be negative or positive.</comment>
+  </data>
+  <data name="Arguments.AddMinutes.minutes" xml:space="preserve">
+    <value>a number of whole and fractional minutes. The value parameter can be negative or positive.</value>
+    <comment>a number of whole and fractional minutes. The value parameter can be negative or positive.</comment>
+  </data>
+  <data name="Arguments.AddMonths.months" xml:space="preserve">
+    <value>a number of whole and fractional months. The value parameter can be negative or positive.</value>
+    <comment>a number of whole and fractional months. The value parameter can be negative or positive.</comment>
+  </data>
+  <data name="Arguments.AddSeconds.seconds" xml:space="preserve">
+    <value>a number of whole and fractional seconds. The value parameter can be negative or positive.</value>
+    <comment>a number of whole and fractional seconds. The value parameter can be negative or positive.</comment>
+  </data>
+  <data name="Arguments.AddTicks.ticks" xml:space="preserve">
+    <value>a number of whole and fractional ticks. The value parameter can be negative or positive.</value>
+    <comment>a number of whole and fractional ticks. The value parameter can be negative or positive.</comment>
+  </data>
+  <data name="Arguments.AddTimeSpan.timespan" xml:space="preserve">
+    <value>a number of whole and fractional time span. The value parameter can be negative or positive.</value>
+    <comment>a number of whole and fractional time span. The value parameter can be negative or positive.</comment>
+  </data>
+  <data name="Arguments.AddYears.years" xml:space="preserve">
+    <value>a number of whole and fractional years. The value parameter can be negative or positive.</value>
+    <comment>a number of whole and fractional years. The value parameter can be negative or positive.</comment>
+  </data>
+  <data name="Arguments.Specified.angle" xml:space="preserve">
+    <value>an angle, measured in radians.</value>
+    <comment>an angle, measured in radians.</comment>
+  </data>
+  <data name="Arguments.Asin.number" xml:space="preserve">
+    <value>a number representing a sine, where it must be greater than or equal to -1, but less than or equal to 1.</value>
+    <comment>a number representing a sine, where it must be greater than or equal to -1, but less than or equal to 1.</comment>
+  </data>
+  <data name="Arguments.Atan.number" xml:space="preserve">
+    <value>a number representing a tangent.</value>
+    <comment>a number representing a tangent.</comment>
+  </data>
+  <data name="Arguments.Atan2.x" xml:space="preserve">
+    <value>the x coordinate of a point.</value>
+    <comment>the x coordinate of a point.</comment>
+  </data>
+  <data name="Arguments.Atan2.y" xml:space="preserve">
+    <value>the y coordinate of a point.</value>
+    <comment>the y coordinate of a point.</comment>
+  </data>
+  <data name="Arguments.Ceiling.number" xml:space="preserve">
+    <value>a specified decimal or double-precision floating-point number.</value>
+    <comment>a specified decimal or double-precision floating-point number.</comment>
+  </data>
+  <data name="Arguments.Concat.value" xml:space="preserve">
+    <value>the string to append.</value>
+    <comment>the string to append.</comment>
+  </data>
+  <data name="Arguments.CType.value" xml:space="preserve">
+    <value>the specified object for conversion.</value>
+    <comment>the specified object for conversion.</comment>
+  </data>
+  <data name="Arguments.CType.type" xml:space="preserve">
+    <value>the type name of object to return.</value>
+    <comment>the type name of object to return.</comment>
+  </data>
+  <data name="Arguments.EndsWith.value" xml:space="preserve">
+    <value>the string to compare to the substring at the end of this instance.</value>
+    <comment>the string to compare to the substring at the end of this instance.</comment>
+  </data>
+  <data name="Arguments.Exp.power" xml:space="preserve">
+    <value>a number specifying a power.</value>
+    <comment>a number specifying a power.</comment>
+  </data>
+  <data name="Arguments.Specified.date1" xml:space="preserve">
+    <value>the first date.</value>
+    <comment>the first date.</comment>
+  </data>
+  <data name="Arguments.Floor.number" xml:space="preserve">
+    <value>a specified decimal or double-precision floating-point number.</value>
+    <comment>a specified decimal or double-precision floating-point number.</comment>
+  </data>
+  <data name="Arguments.Iif.condition" xml:space="preserve">
+    <value>the specified condition.</value>
+    <comment>the specified condition.</comment>
+  </data>
+  <data name="Arguments.Iif.resultTrue" xml:space="preserve">
+    <value>the expression which will be executed if the result of the condition is True.</value>
+    <comment>the expression which will be executed if the result of the condition is True.</comment>
+  </data>
+  <data name="Arguments.Iif.resultFalse" xml:space="preserve">
+    <value>the expression which will be executed if the result of the condition is False.</value>
+    <comment>the expression which will be executed if the result of the condition is False.</comment>
+  </data>
+  <data name="Arguments.Insert.index" xml:space="preserve">
+    <value>the position in this instance where insertion begins.</value>
+    <comment>the position in this instance where insertion begins.</comment>
+  </data>
+  <data name="Arguments.Insert.value" xml:space="preserve">
+    <value>the string to insert.</value>
+    <comment>the string to insert.</comment>
+  </data>
+  <data name="Arguments.InStr.start" xml:space="preserve">
+    <value>the search starting position.</value>
+    <comment>the search starting position.</comment>
+  </data>
+  <data name="Arguments.Log.number" xml:space="preserve">
+    <value>a number whose logarithm is to be found.</value>
+    <comment>a number whose logarithm is to be found.</comment>
+  </data>
+  <data name="Arguments.Log.base" xml:space="preserve">
+    <value>the base of the logarithm.</value>
+    <comment>the base of the logarithm.</comment>
+  </data>
+  <data name="Arguments.LSet.length" xml:space="preserve">
+    <value>the number of characters in the resulting string, equal to the number of original characters plus any additional spaces.</value>
+    <comment>the number of characters in the resulting string, equal to the number of original characters plus any additional spaces.</comment>
+  </data>
+  <data name="Arguments.LSet.3.length" xml:space="preserve">
+    <value>the number of characters in the resulting string, equal to the number of original characters plus any additional padding characters.</value>
+    <comment>the number of characters in the resulting string, equal to the number of original characters plus any additional padding characters.</comment>
+  </data>
+  <data name="Arguments.LSet.char" xml:space="preserve">
+    <value>a Unicode padding character.</value>
+    <comment>a Unicode padding character.</comment>
+  </data>
+  <data name="Arguments.Mid.start" xml:space="preserve">
+    <value>the zero-based starting character position of a substring in the specified string.</value>
+    <comment>the zero-based starting character position of a substring in the specified string.</comment>
+  </data>
+  <data name="Arguments.Mid.length" xml:space="preserve">
+    <value>the number of characters in the substring.</value>
+    <comment>the number of characters in the substring.</comment>
+  </data>
+  <data name="Arguments.Pow.number" xml:space="preserve">
+    <value>a double-precision floating-point number to be raised to a power.</value>
+    <comment>a double-precision floating-point number to be raised to a power.</comment>
+  </data>
+  <data name="Arguments.Pow.power" xml:space="preserve">
+    <value>a double-precision floating-point number that specifies a power.</value>
+    <comment>a double-precision floating-point number that specifies a power.</comment>
+  </data>
+  <data name="Arguments.RandBetween.min" xml:space="preserve">
+    <value>the inclusive lower bound of the random number returned.</value>
+    <comment>the inclusive lower bound of the random number returned.</comment>
+  </data>
+  <data name="Arguments.RandBetween.max" xml:space="preserve">
+    <value>the exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.</value>
+    <comment>the exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.</comment>
+  </data>
+  <data name="Arguments.Remove.start" xml:space="preserve">
+    <value>the zero-based position to begin deleting characters.</value>
+    <comment>the zero-based position to begin deleting characters.</comment>
+  </data>
+  <data name="Arguments.Remove.count" xml:space="preserve">
+    <value>the number of characters to delete.</value>
+    <comment>the number of characters to delete.</comment>
+  </data>
+  <data name="Arguments.Replace.newValue" xml:space="preserve">
+    <value>the string that replaces oldValue, or null.</value>
+    <comment>the string that replaces oldValue, or null.</comment>
+  </data>
+  <data name="Arguments.Replace.oldValue" xml:space="preserve">
+    <value>the string to replace.</value>
+    <comment>the string to replace.</comment>
+  </data>
+  <data name="Arguments.RSet.length" xml:space="preserve">
+    <value>the number of characters in the resulting string, equal to the number of original characters plus any additional spaces.</value>
+    <comment>the number of characters in the resulting string, equal to the number of original characters plus any additional spaces.</comment>
+  </data>
+  <data name="Arguments.RSet.3.length" xml:space="preserve">
+    <value>the number of characters in the resulting string, equal to the number of original characters plus any additional padding characters.</value>
+    <comment>the number of characters in the resulting string, equal to the number of original characters plus any additional padding characters.</comment>
+  </data>
+  <data name="Arguments.RSet.char" xml:space="preserve">
+    <value>a Unicode padding character.</value>
+    <comment>a Unicode padding character.</comment>
+  </data>
+  <data name="Arguments.Specified.date2" xml:space="preserve">
+    <value>the second date.</value>
+    <comment>the second date.</comment>
+  </data>
+  <data name="Arguments.Sign.number" xml:space="preserve">
+    <value>a signed number.</value>
+    <comment>a signed number.</comment>
+  </data>
+  <data name="Arguments.Specified.date" xml:space="preserve">
+    <value>the specified Date-Time.</value>
+    <comment>the specified Date-Time.</comment>
+  </data>
+  <data name="Arguments.Specified.number" xml:space="preserve">
+    <value>the specified number.</value>
+    <comment>the specified number.</comment>
+  </data>
+  <data name="Arguments.Specified.value" xml:space="preserve">
+    <value>the specified object.</value>
+    <comment>the specified object.</comment>
+  </data>
+  <data name="Arguments.Specified.string" xml:space="preserve">
+    <value>the specified string.</value>
+    <comment>the specified string.</comment>
+  </data>
+  <data name="Arguments.StartsWith.value" xml:space="preserve">
+    <value>the string to compare.</value>
+    <comment>the string to compare.</comment>
+  </data>
+  <data name="Arguments.Convert.string" xml:space="preserve">
+    <value>a string containing the value to convert.</value>
+    <comment>a string containing the value to convert.</comment>
+  </data>
+  <data name="Arguments.Seek.value" xml:space="preserve">
+    <value>the string to seek.</value>
+    <comment>the string to seek.</comment>
+  </data>
+  <data name="Errors.CanNotFindFinalDateDelimiter" xml:space="preserve">
+    <value>Can't find final date delimiter ('#').</value>
+    <comment>Can't find final date delimiter ('#').</comment>
+  </data>
+  <data name="Errors.CanNotFindFinalQuote" xml:space="preserve">
+    <value>Can't find final quote.</value>
+    <comment>Can't find final quote.</comment>
+  </data>
+  <data name="Errors.CanNotFindFinalSquareBracket" xml:space="preserve">
+    <value>Can't find final square bracket.</value>
+    <comment>Can't find final square bracket.</comment>
+  </data>
+  <data name="Errors.ExpressionExpected" xml:space="preserve">
+    <value>Expression expected.</value>
+    <comment>Expression expected.</comment>
+  </data>
+  <data name="Errors.FieldOrVariableDidNotFound" xml:space="preserve">
+    <value>Field or variable did not found.</value>
+    <comment>Field or variable did not found.</comment>
+  </data>
+  <data name="Errors.IdentifierExpected" xml:space="preserve">
+    <value>Identifier expected.</value>
+    <comment>Identifier expected.</comment>
+  </data>
+  <data name="Errors.Message" xml:space="preserve">
+    <value>Col {0}: {1}</value>
+    <comment>Col {0}: {1}</comment>
+  </data>
+  <data name="Errors.SyntaxError" xml:space="preserve">
+    <value>Syntax error.</value>
+    <comment>Syntax error.</comment>
+  </data>
+  <data name="Errors.TooFewParameters" xml:space="preserve">
+    <value>Too few parameters.</value>
+    <comment>Too few parameters.</comment>
+  </data>
+  <data name="Errors.TooManyParameters" xml:space="preserve">
+    <value>Too many parameters.</value>
+    <comment>Too many parameters.</comment>
+  </data>
+  <data name="Errors.UnbalancedParenthesis" xml:space="preserve">
+    <value>Unbalanced parenthesis.</value>
+    <comment>Unbalanced parenthesis.</comment>
+  </data>
+  <data name="Errors.UnexpectedError" xml:space="preserve">
+    <value>Unexpected error.</value>
+    <comment>Unexpected error.</comment>
+  </data>
+  <data name="Errors.UnexpectedIdentifier" xml:space="preserve">
+    <value>Unexpected identifier.</value>
+    <comment>Unexpected identifier.</comment>
+  </data>
+  <data name="Functions.Min()" xml:space="preserve">
+    <value>Returns the minimum value in a specified sequence of numbers (or enumerable).</value>
+    <comment>Returns the minimum value in a specified sequence of numbers (or enumerable).</comment>
+  </data>
+  <data name="Errors.CanNotFindFinalBracket" xml:space="preserve">
+    <value>Can't find final bracket.</value>
+    <comment>Can't find final bracket.</comment>
+  </data>
+  <data name="Errors.ComparisonError" xml:space="preserve">
+    <value>An error occurred when comparing values.</value>
+    <comment>An error occurred when comparing values.</comment>
+  </data>
+  <data name="Errors.DuplicateAliasError" xml:space="preserve">
+    <value>An error occurred when added a duplicate of alias.</value>
+    <comment>An error occurred when added a duplicate of alias.</comment>
+  </data>
+  <data name="Errors.IncorrectAliasError" xml:space="preserve">
+    <value>An error occurred when the alias coincided with a field from DataSource.</value>
+    <comment>An error occurred when the alias coincided with a field from DataSource.</comment>
+  </data>
+  <data name="Errors.IncorrectDateFormat" xml:space="preserve">
+    <value>Incorrect date format.</value>
+    <comment>Incorrect date format.</comment>
+  </data>
+  <data name="Arguments.Round.digits" xml:space="preserve">
+    <value>The number of fractional digits in the return value.</value>
+    <comment>The number of fractional digits in the return value.</comment>
+  </data>
+  <data name="Arguments.Round.value" xml:space="preserve">
+    <value>A double-precision floating-point number to be rounded.</value>
+    <comment>A double-precision floating-point number to be rounded.</comment>
+  </data>
+  <data name="Functions.Round()" xml:space="preserve">
+    <value>Rounds a double-precision floating-point value to a specified number of fractional digits.</value>
+    <comment>Rounds a double-precision floating-point value to a specified number of fractional digits.</comment>
+  </data>
+  <data name="Categories.Aggregate" xml:space="preserve">
+    <value>Aggregate</value>
+    <comment>Aggregate</comment>
+  </data>
+  <data name="Categories.Constants" xml:space="preserve">
+    <value>Constants</value>
+    <comment>Constants</comment>
+  </data>
+  <data name="Categories.Convert" xml:space="preserve">
+    <value>Convert</value>
+    <comment>Convert</comment>
+  </data>
+  <data name="Categories.DateTime" xml:space="preserve">
+    <value>DateTime</value>
+    <comment>DateTime</comment>
+  </data>
+  <data name="Categories.Fields" xml:space="preserve">
+    <value>Fields</value>
+    <comment>Fields</comment>
+  </data>
+  <data name="Categories.Functions" xml:space="preserve">
+    <value>Functions</value>
+    <comment>Functions</comment>
+  </data>
+  <data name="Categories.Logical" xml:space="preserve">
+    <value>Logical</value>
+    <comment>Logical</comment>
+  </data>
+  <data name="Categories.Math" xml:space="preserve">
+    <value>Math</value>
+    <comment>Math</comment>
+  </data>
+  <data name="Categories.Operators" xml:space="preserve">
+    <value>Operators</value>
+    <comment>Operators</comment>
+  </data>
+  <data name="Categories.Text" xml:space="preserve">
+    <value>Text</value>
+    <comment>Text</comment>
+  </data>
+</root>

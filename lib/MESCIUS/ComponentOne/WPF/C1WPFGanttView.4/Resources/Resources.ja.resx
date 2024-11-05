@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Common_Complete" xml:space="preserve">
+    <value>達成率:</value>
+  </data>
+  <data name="Common_Deadline" xml:space="preserve">
+    <value>期限:</value>
+  </data>
+  <data name="Common_Duration" xml:space="preserve">
+    <value>期間:</value>
+  </data>
+  <data name="Common_Finish" xml:space="preserve">
+    <value>終了日:</value>
+  </data>
+  <data name="Common_Milestone" xml:space="preserve">
+    <value>マイルストーン:</value>
+  </data>
+  <data name="Common_No" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="Common_Notes" xml:space="preserve">
+    <value>メモ:</value>
+  </data>
+  <data name="Common_Start" xml:space="preserve">
+    <value>開始日:</value>
+  </data>
+  <data name="Common_SummaryTask" xml:space="preserve">
+    <value>サマリータスク:</value>
+  </data>
+  <data name="Common_Task" xml:space="preserve">
+    <value>タスク:</value>
+  </data>
+  <data name="Common_UnnamedTaskBrief" xml:space="preserve">
+    <value>名前なし</value>
+  </data>
+  <data name="Common_Yes" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="CurrentCultureName" xml:space="preserve">
+    <value>(現在のカルチャ)</value>
+  </data>
+  <data name="DayOffTimes" xml:space="preserve">
+    <value>(非稼働日)</value>
+  </data>
+  <data name="DefaultCalendar" xml:space="preserve">
+    <value>(Default)</value>
+  </data>
+  <data name="DefaultDateTime" xml:space="preserve">
+    <value>(N/A)</value>
+  </data>
+  <data name="EmptyTimeInterval" xml:space="preserve">
+    <value>(未設定)</value>
+  </data>
+  <data name="Error_CannotDeleteProjectSummaryTask" xml:space="preserve">
+    <value>You cannot delete a project summary task.</value>
+  </data>
+  <data name="Error_CannotInsertTask" xml:space="preserve">
+    <value>You cannot insert tasks before a project summary task.</value>
+  </data>
+  <data name="FileNameFilter" xml:space="preserve">
+    <value>XML ファイル|*.xml|すべてのファイル|*.*</value>
+  </data>
+  <data name="GanttViewNotFound" xml:space="preserve">
+    <value>ガントビューの定義が見つかりません。</value>
+  </data>
+  <data name="GanttView_CircularReference" xml:space="preserve">
+    <value>このタスクは循環的な依存関係を含みます。</value>
+  </data>
+  <data name="GanttView_ConstraintLinkError" xml:space="preserve">
+    <value>リンク付されたタスクと指定日との間に問題が発生している可能性があります。</value>
+  </data>
+  <data name="GanttView_DefaultDateFormat" xml:space="preserve">
+    <value>{0} (ddd)</value>
+  </data>
+  <data name="GanttView_LinkConflictError" xml:space="preserve">
+    <value>タスク間のリンク付に問題が発生している可能性があります。</value>
+  </data>
+  <data name="GanttView_TaskGoesPastDeadline" xml:space="preserve">
+    <value>このタスクは {0} の期限を過ぎています。</value>
+  </data>
+  <data name="Group_Complete" xml:space="preserve">
+    <value>完了</value>
+  </data>
+  <data name="Group_ConstraintTypeGroupName" xml:space="preserve">
+    <value>制約のタイプ: </value>
+  </data>
+  <data name="Group_Day" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="Group_Days" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="Group_DurationGroupName" xml:space="preserve">
+    <value>期間: </value>
+  </data>
+  <data name="Group_FutureTask" xml:space="preserve">
+    <value>今後のタスク</value>
+  </data>
+  <data name="Group_Late" xml:space="preserve">
+    <value>遅延</value>
+  </data>
+  <data name="Group_MilestoneGroupName" xml:space="preserve">
+    <value>マイルストーン: </value>
+  </data>
+  <data name="Group_NoValue" xml:space="preserve">
+    <value>値なし</value>
+  </data>
+  <data name="Group_OnSchedule" xml:space="preserve">
+    <value>予定どおり</value>
+  </data>
+  <data name="Group_PercentCompleteGroupName" xml:space="preserve">
+    <value>達成率: </value>
+  </data>
+  <data name="Group_ResourceGroupName" xml:space="preserve">
+    <value>リソース: </value>
+  </data>
+  <data name="Group_StatusGroupName" xml:space="preserve">
+    <value>ステータス: </value>
+  </data>
+  <data name="Group_TaskModeGroupName" xml:space="preserve">
+    <value>タスクモード: </value>
+  </data>
+  <data name="Hidden" xml:space="preserve">
+    <value>(非表示)</value>
+  </data>
+  <data name="InvariantCultureName" xml:space="preserve">
+    <value>(インバリアント)</value>
+  </data>
+  <data name="MenuItem_AdvancedFilter" xml:space="preserve">
+    <value>高度なフィルター...</value>
+  </data>
+  <data name="MenuItem_ByDuration" xml:space="preserve">
+    <value>期間順</value>
+  </data>
+  <data name="MenuItem_ByFinishDate" xml:space="preserve">
+    <value>終了日順</value>
+  </data>
+  <data name="MenuItem_ByName" xml:space="preserve">
+    <value>名前順</value>
+  </data>
+  <data name="MenuItem_ByStartDate" xml:space="preserve">
+    <value>開始日順</value>
+  </data>
+  <data name="MenuItem_CompletedTasks" xml:space="preserve">
+    <value>完了したタスク</value>
+  </data>
+  <data name="MenuItem_DateRange" xml:space="preserve">
+    <value>期間...</value>
+  </data>
+  <data name="MenuItem_IncompleteTasks" xml:space="preserve">
+    <value>未完了のタスク</value>
+  </data>
+  <data name="MenuItem_LateTasks" xml:space="preserve">
+    <value>遅れたタスク</value>
+  </data>
+  <data name="MenuItem_Milestones" xml:space="preserve">
+    <value>マイルストーン</value>
+  </data>
+  <data name="MenuItem_MoreFilters" xml:space="preserve">
+    <value>その他のフィルター...</value>
+  </data>
+  <data name="MenuItem_NoFilter" xml:space="preserve">
+    <value>フィルターなし</value>
+  </data>
+  <data name="MenuItem_RemoveSort" xml:space="preserve">
+    <value>並べ替えの削除</value>
+  </data>
+  <data name="MenuItem_ShowRelatedSummaryRows" xml:space="preserve">
+    <value>関連したサマリー行を表示する</value>
+  </data>
+  <data name="MenuItem_SortBy" xml:space="preserve">
+    <value>並べ替え...</value>
+  </data>
+  <data name="MenuItem_SummaryTasks" xml:space="preserve">
+    <value>サマリー タスク</value>
+  </data>
+  <data name="MenuItem_TaskWithDurationOnly" xml:space="preserve">
+    <value>期間のタスクのみ</value>
+  </data>
+  <data name="MenuItem_UsingResource" xml:space="preserve">
+    <value>リソースの使用...</value>
+  </data>
+  <data name="Message_Confirmation" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="Message_SureToDelete" xml:space="preserve">
+    <value>{0}のタスクは削除されます。続行しますか？</value>
+  </data>
+  <data name="Message_SureToDeleteTasks" xml:space="preserve">
+    <value>{0} 個のタスクを削除してもよろしいですか？</value>
+  </data>
+  <data name="NewTaskName" xml:space="preserve">
+    <value>&lt;新しいタスク&gt;</value>
+  </data>
+  <data name="NoneListItem" xml:space="preserve">
+    <value>(なし)</value>
+  </data>
+  <data name="SpecificTimes" xml:space="preserve">
+    <value>(指定の稼働時間)</value>
+  </data>
+  <data name="Task_LinkTooltip" xml:space="preserve">
+    <value>先行タスク: {0}\n後続タスク: {1}\nリンクタイプ: {2}\n間隔: {3}</value>
+  </data>
+  <data name="TimeIntervalFormat" xml:space="preserve">
+    <value>{0:t} - {1:t}</value>
+  </data>
+  <data name="Title_Advanced" xml:space="preserve">
+    <value>高度なフィルター</value>
+  </data>
+  <data name="Title_CreateNewCalendar" xml:space="preserve">
+    <value>新しいカレンダーの作成</value>
+  </data>
+  <data name="Title_DateRange" xml:space="preserve">
+    <value>期間</value>
+  </data>
+  <data name="Title_GridColumns" xml:space="preserve">
+    <value>グリッド列</value>
+  </data>
+  <data name="Title_LoadFromXml" xml:space="preserve">
+    <value>XMLファイルの読み込み</value>
+  </data>
+  <data name="Title_ManagerCalendar" xml:space="preserve">
+    <value>カスタムカレンダーの管理</value>
+  </data>
+  <data name="Title_MoreFilter" xml:space="preserve">
+    <value>その他のフィルター</value>
+  </data>
+  <data name="Title_Print" xml:space="preserve">
+    <value>印刷</value>
+  </data>
+  <data name="Title_ProjectInfo" xml:space="preserve">
+    <value>プロジェクト情報</value>
+  </data>
+  <data name="Title_Recurrence" xml:space="preserve">
+    <value>'{0}' 定期的パターン</value>
+  </data>
+  <data name="Title_SaveAsXml" xml:space="preserve">
+    <value>XMLファイルに保存</value>
+  </data>
+  <data name="Title_Sort" xml:space="preserve">
+    <value>並べ替え</value>
+  </data>
+  <data name="Title_TaskInfo" xml:space="preserve">
+    <value>タスク情報</value>
+  </data>
+  <data name="Title_TimeScale" xml:space="preserve">
+    <value>タイムスケール</value>
+  </data>
+  <data name="Title_UsingResource" xml:space="preserve">
+    <value>リソースの使用</value>
+  </data>
+  <data name="Title_WorkingTime" xml:space="preserve">
+    <value>稼働時間の変更</value>
+  </data>
+  <data name="ToolTip_AddBlankRow" xml:space="preserve">
+    <value>空の行の挿入</value>
+  </data>
+  <data name="ToolTip_AddTask" xml:space="preserve">
+    <value>タスクの挿入</value>
+  </data>
+  <data name="ToolTip_DeleteTask" xml:space="preserve">
+    <value>タスクの削除</value>
+  </data>
+  <data name="ToolTip_Filter" xml:space="preserve">
+    <value>フィルター</value>
+  </data>
+  <data name="ToolTip_GridColumns" xml:space="preserve">
+    <value>グリッド列</value>
+  </data>
+  <data name="ToolTip_Load" xml:space="preserve">
+    <value>XMLファイルの読み込み</value>
+  </data>
+  <data name="ToolTip_Print" xml:space="preserve">
+    <value>印刷</value>
+  </data>
+  <data name="ToolTip_ProjectInfo" xml:space="preserve">
+    <value>プロジェクト情報</value>
+  </data>
+  <data name="ToolTip_Redo" xml:space="preserve">
+    <value>やり直し</value>
+  </data>
+  <data name="ToolTip_Save" xml:space="preserve">
+    <value>XMLファイルに保存</value>
+  </data>
+  <data name="ToolTip_ScrollToTask" xml:space="preserve">
+    <value>タスクへスクロール</value>
+  </data>
+  <data name="ToolTip_Sort" xml:space="preserve">
+    <value>並べ替え</value>
+  </data>
+  <data name="ToolTip_TaskDown" xml:space="preserve">
+    <value>タスクを下へ移動</value>
+  </data>
+  <data name="ToolTip_TaskInfo" xml:space="preserve">
+    <value>タスク情報</value>
+  </data>
+  <data name="ToolTip_TaskUp" xml:space="preserve">
+    <value>タスクを上へ移動</value>
+  </data>
+  <data name="ToolTip_TimeScale" xml:space="preserve">
+    <value>タイムスケール</value>
+  </data>
+  <data name="ToolTip_Undo" xml:space="preserve">
+    <value>元に戻す</value>
+  </data>
+  <data name="ToolTip_WorkingTime" xml:space="preserve">
+    <value>稼働時間の変更</value>
+  </data>
+  <data name="Error_BadXml" xml:space="preserve">
+    <value>無効なC1GanttView XMLファイルです。</value>
+  </data>
+  <data name="ToolTip_Inactive" xml:space="preserve">
+    <value>無効化</value>
+  </data>
+  <data name="ToolTip_BarStyle" xml:space="preserve">
+    <value>バーの設定</value>
+  </data>
+  <data name="Title_BarStyle" xml:space="preserve">
+    <value>バーの設定</value>
+  </data>
+  <data name="Title_FieldStyles" xml:space="preserve">
+    <value>フィールド スタイル</value>
+  </data>
+  <data name="ToolTip_FieldStyles" xml:space="preserve">
+    <value>フィールド スタイル</value>
+  </data>
+  <data name="ToolTip_AddSummaryTask" xml:space="preserve">
+    <value>サマリー タスクを追加</value>
+  </data>
+  <data name="ToolTip_ShowProjectSummary" xml:space="preserve">
+    <value>プロジェクトのサマリーを表示</value>
+  </data>
+  <data name="NewSummaryTaskName" xml:space="preserve">
+    <value>&lt;新しいサマリー タスク&gt;</value>
+  </data>
+  <data name="MenuItem_ZoomDialog" xml:space="preserve">
+    <value>ズーム...</value>
+  </data>
+  <data name="MenuItem_ZoomIn" xml:space="preserve">
+    <value>ズームイン</value>
+  </data>
+  <data name="MenuItem_ZoomOut" xml:space="preserve">
+    <value>ズームアウト</value>
+  </data>
+  <data name="Title_Zoom" xml:space="preserve">
+    <value>ズーム</value>
+  </data>
+  <data name="ToolTip_Zoom" xml:space="preserve">
+    <value>ズーム</value>
+  </data>
+  <data name="ToolTip_ZoomEntireProject" xml:space="preserve">
+    <value>プロジェクト全体をズーム</value>
+  </data>
+  <data name="ToolTip_ZoomSelectedTask" xml:space="preserve">
+    <value>選択したタスクをズーム</value>
+  </data>
+  <data name="ToolTip_IndentTask" xml:space="preserve">
+    <value>タスクのインデント</value>
+  </data>
+  <data name="ToolTip_OutdentTask" xml:space="preserve">
+    <value>タスクのインデント解除</value>
+  </data>
+  <data name="MenuItem_GroupBy_ClearGroup" xml:space="preserve">
+    <value>グループのクリア</value>
+  </data>
+  <data name="MenuItem_GroupBy_ConstraintType" xml:space="preserve">
+    <value>制約のタイプ</value>
+  </data>
+  <data name="MenuItem_GroupBy_Duration" xml:space="preserve">
+    <value>期間</value>
+  </data>
+  <data name="MenuItem_GroupBy_MaintainHierarchy" xml:space="preserve">
+    <value>階層の維持</value>
+  </data>
+  <data name="MenuItem_GroupBy_Milestones" xml:space="preserve">
+    <value>マイルストーン</value>
+  </data>
+  <data name="MenuItem_GroupBy_NewGroupBy" xml:space="preserve">
+    <value>新しいグループ化</value>
+  </data>
+  <data name="MenuItem_GroupBy_Resource" xml:space="preserve">
+    <value>リソース</value>
+  </data>
+  <data name="MenuItem_GroupBy_Status" xml:space="preserve">
+    <value>ステータス</value>
+  </data>
+  <data name="MenuItem_GroupBy_TaskCompleteVsTaskIncomplete" xml:space="preserve">
+    <value>タスクの完了と未完了</value>
+  </data>
+  <data name="MenuItem_GroupBy_TaskMode" xml:space="preserve">
+    <value>タスクモード</value>
+  </data>
+  <data name="ToolTip_GroupBy" xml:space="preserve">
+    <value>グループ化</value>
+  </data>
+  <data name="ToolTip_SplitTask" xml:space="preserve">
+    <value>タスクの分割</value>
+  </data>
+  <data name="Title_Resources" xml:space="preserve">
+    <value>リソース情報</value>
+  </data>
+  <data name="ToolTip_Resources" xml:space="preserve">
+    <value>リソース</value>
+  </data>
+  <data name="Title_ProgressLine" xml:space="preserve">
+    <value>イナズマ線</value>
+  </data>
+  <data name="ToolTip_ProgressLine" xml:space="preserve">
+    <value>イナズマ線</value>
+  </data>
+  <data name="GanttView_ScaleLabelRangeFormat" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="Common_CompleteThrough" xml:space="preserve">
+    <value>達成点:</value>
+  </data>
+  <data name="Common_PercentComplete" xml:space="preserve">
+    <value>達成率:</value>
+  </data>
+  <data name="Title_ConflictResolver1" xml:space="preserve">
+    <value>矛盾の解決</value>
+  </data>
+  <data name="Title_Layout" xml:space="preserve">
+    <value>レイアウト</value>
+  </data>
+  <data name="Title_Link" xml:space="preserve">
+    <value>リンク情報</value>
+  </data>
+  <data name="Title_PrintPreview" xml:space="preserve">
+    <value>印刷プレビュー</value>
+  </data>
+  <data name="Text_Info" xml:space="preserve">
+    <value>タスクを分割するところでクリックしてください。</value>
+  </data>
+  <data name="Text_ScheduleStart" xml:space="preserve">
+    <value>スケジュールされた開始日: </value>
+  </data>
+  <data name="Text_SplitTask" xml:space="preserve">
+    <value>タスクの分割:</value>
+  </data>
+  <data name="Error_CannotInactivateTask" xml:space="preserve">
+    <value>進行中のタスクは無効化できません。</value>
+  </data>
+</root>

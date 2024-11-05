@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FindTool_BtnFindNext" xml:space="preserve">
+    <value>次を検索</value>
+    <comment>Find Next</comment>
+  </data>
+  <data name="FindTool_BtnReplace" xml:space="preserve">
+    <value>置換</value>
+    <comment>Replace</comment>
+  </data>
+  <data name="FindTool_BtnReplaceAll" xml:space="preserve">
+    <value>すべて置換</value>
+    <comment>Replace All</comment>
+  </data>
+  <data name="FindTool_LblFind" xml:space="preserve">
+    <value>検索する文字列:</value>
+    <comment>Find:</comment>
+  </data>
+  <data name="FindTool_LblReplace" xml:space="preserve">
+    <value>置換後の文字列:</value>
+    <comment>Replace:</comment>
+  </data>
+  <data name="Font_Bold" xml:space="preserve">
+    <value>太字</value>
+    <comment>Bold</comment>
+  </data>
+  <data name="Font_BoldInitial" xml:space="preserve">
+    <value>B</value>
+    <comment>B</comment>
+  </data>
+  <data name="Font_ChangeCase" xml:space="preserve">
+    <value>文字種の変換</value>
+    <comment>Change Case</comment>
+  </data>
+  <data name="Font_ChangeCase_CapitalizeEachWord" xml:space="preserve">
+    <value>各単語の先頭を大文字にする</value>
+    <comment>Capitalize Each Word</comment>
+  </data>
+  <data name="Font_ChangeCase_LowerCase" xml:space="preserve">
+    <value>すべて小文字にする</value>
+    <comment>lowercase</comment>
+  </data>
+  <data name="Font_ChangeCase_ToggleCase" xml:space="preserve">
+    <value>大文字と小文字を入れ替える</value>
+    <comment>tOGGLE cASE</comment>
+  </data>
+  <data name="Font_ChangeCase_UpperCase" xml:space="preserve">
+    <value>すべて大文字にする</value>
+    <comment>UPPERCASE</comment>
+  </data>
+  <data name="Font_Font" xml:space="preserve">
+    <value>フォント</value>
+    <comment>Font</comment>
+  </data>
+  <data name="Font_FontColor" xml:space="preserve">
+    <value>フォントの色</value>
+    <comment>Font Color</comment>
+  </data>
+  <data name="Font_FontSize" xml:space="preserve">
+    <value>フォント サイズ</value>
+    <comment>Font Size</comment>
+  </data>
+  <data name="Font_GrowFont" xml:space="preserve">
+    <value>フォントの拡大</value>
+    <comment>Grow Font</comment>
+  </data>
+  <data name="Font_Italic" xml:space="preserve">
+    <value>斜体</value>
+    <comment>Italic</comment>
+  </data>
+  <data name="Font_ItalicInitial" xml:space="preserve">
+    <value>I</value>
+    <comment>I</comment>
+  </data>
+  <data name="Font_ShrinkFont" xml:space="preserve">
+    <value>フォントの縮小</value>
+    <comment>Shrink Font</comment>
+  </data>
+  <data name="Font_Subscript" xml:space="preserve">
+    <value>下付き</value>
+    <comment>Subscript</comment>
+  </data>
+  <data name="Font_Superscript" xml:space="preserve">
+    <value>上付き</value>
+    <comment>Superscript</comment>
+  </data>
+  <data name="Font_TextHighlightColor" xml:space="preserve">
+    <value>蛍光ペンの色</value>
+    <comment>Text Highlight Color</comment>
+  </data>
+  <data name="Font_Title" xml:space="preserve">
+    <value>フォント</value>
+    <comment>Font</comment>
+  </data>
+  <data name="Font_Underline" xml:space="preserve">
+    <value>下線</value>
+    <comment>Underline</comment>
+  </data>
+  <data name="Font_UnderlineInitial" xml:space="preserve">
+    <value>U</value>
+    <comment>U</comment>
+  </data>
+  <data name="Insert_InsertHyperlink" xml:space="preserve">
+    <value>ハイパーリンクの挿入</value>
+    <comment>Insert Hyperlink</comment>
+  </data>
+  <data name="Insert_InsertHyperlink_InvalidURL" xml:space="preserve">
+    <value>{0} は無効な URL です</value>
+    <comment>The URL "{0}" is invalid</comment>
+  </data>
+  <data name="Insert_InsertImage" xml:space="preserve">
+    <value>画像の挿入</value>
+    <comment>Insert Image</comment>
+  </data>
+  <data name="Insert_InsertImage_InvalidURL" xml:space="preserve">
+    <value>{0} は無効な URL です。</value>
+    <comment>The URL "{0}" is invalid</comment>
+  </data>
+  <data name="Insert_InsertImage_NotLoaded" xml:space="preserve">
+    <value>{0} から画像を読み込むことができませんでした。</value>
+    <comment>Image from "{0}" could not be loaded.</comment>
+  </data>
+  <data name="Insert_InsertSymbol" xml:space="preserve">
+    <value>記号の挿入</value>
+    <comment>Insert Symbol</comment>
+  </data>
+  <data name="Insert_RemoveHyperlink" xml:space="preserve">
+    <value>ハイパーリンクの削除</value>
+    <comment>Remove Hyperlink</comment>
+  </data>
+  <data name="Insert_Title" xml:space="preserve">
+    <value>挿入</value>
+    <comment>Insert</comment>
+  </data>
+  <data name="Paragraph_AlignTextCenter" xml:space="preserve">
+    <value>中央揃え</value>
+    <comment>Align Text Center</comment>
+  </data>
+  <data name="Paragraph_AlignTextLeft" xml:space="preserve">
+    <value>左揃え</value>
+    <comment>Align Text Left</comment>
+  </data>
+  <data name="Paragraph_AlignTextRight" xml:space="preserve">
+    <value>右揃え</value>
+    <comment>Align Text Right</comment>
+  </data>
+  <data name="Paragraph_BorderColor" xml:space="preserve">
+    <value>罫線の色</value>
+    <comment>Border Color</comment>
+  </data>
+  <data name="Paragraph_BorderThickness" xml:space="preserve">
+    <value>罫線の太さ</value>
+    <comment>Border Thickness</comment>
+  </data>
+  <data name="Paragraph_Bullets" xml:space="preserve">
+    <value>箇条書き</value>
+    <comment>Bullets</comment>
+  </data>
+  <data name="Paragraph_Justify" xml:space="preserve">
+    <value>両端揃え</value>
+    <comment>Justify</comment>
+  </data>
+  <data name="Paragraph_Margin" xml:space="preserve">
+    <value>外側の余白</value>
+    <comment>Margin</comment>
+  </data>
+  <data name="Paragraph_Numbering" xml:space="preserve">
+    <value>段落番号</value>
+    <comment>Numbering</comment>
+  </data>
+  <data name="Paragraph_Padding" xml:space="preserve">
+    <value>内側の余白</value>
+    <comment>Padding</comment>
+  </data>
+  <data name="Paragraph_ParagraphColor" xml:space="preserve">
+    <value>段落の背景色</value>
+    <comment>Paragraph Color</comment>
+  </data>
+  <data name="Paragraph_TextWrapping" xml:space="preserve">
+    <value>文字列の折り返し</value>
+    <comment>Text Wrapping</comment>
+  </data>
+  <data name="Paragraph_Title" xml:space="preserve">
+    <value>段落</value>
+    <comment>Paragraph</comment>
+  </data>
+  <data name="ThicknessPicker_Bottom" xml:space="preserve">
+    <value>下:</value>
+    <comment>Bottom:</comment>
+  </data>
+  <data name="ThicknessPicker_Left" xml:space="preserve">
+    <value>左:</value>
+    <comment>Left:</comment>
+  </data>
+  <data name="ThicknessPicker_Right" xml:space="preserve">
+    <value>右:</value>
+    <comment>Right:</comment>
+  </data>
+  <data name="ThicknessPicker_Top" xml:space="preserve">
+    <value>上:</value>
+    <comment>Top:</comment>
+  </data>
+  <data name="Tools_Copy" xml:space="preserve">
+    <value>コピー</value>
+    <comment>Copy</comment>
+  </data>
+  <data name="Tools_Cut" xml:space="preserve">
+    <value>切り取り</value>
+    <comment>Cut</comment>
+  </data>
+  <data name="Tools_FindAndReplace" xml:space="preserve">
+    <value>検索と置換</value>
+    <comment>Find and Replace</comment>
+  </data>
+  <data name="Tools_FindAndReplace_NotFound" xml:space="preserve">
+    <value>指定した文字列が見つかりませんでした:</value>
+    <comment>The following specified text was not found:</comment>
+  </data>
+  <data name="Tools_Paste" xml:space="preserve">
+    <value>貼り付け</value>
+    <comment>Paste</comment>
+  </data>
+  <data name="Tools_Redo" xml:space="preserve">
+    <value>やり直す</value>
+    <comment>Redo</comment>
+  </data>
+  <data name="Tools_SpellCheck" xml:space="preserve">
+    <value>スペルチェック</value>
+    <comment>Spell Check</comment>
+  </data>
+  <data name="Tools_SpellCheck_NoErrors" xml:space="preserve">
+    <value>スペルエラーは見つかりませんでした。</value>
+    <comment>No spelling errors found.</comment>
+  </data>
+  <data name="Tools_SpellCheck_NotConfigured" xml:space="preserve">
+    <value>スペルチェックが設定されていません。</value>
+    <comment>Spell checking is not configured.</comment>
+  </data>
+  <data name="Tools_Title" xml:space="preserve">
+    <value>ツール</value>
+    <comment>Tools</comment>
+  </data>
+  <data name="Tools_Undo" xml:space="preserve">
+    <value>元に戻す</value>
+    <comment>Undo</comment>
+  </data>
+  <data name="View_Draft" xml:space="preserve">
+    <value>下書き</value>
+    <comment>Draft</comment>
+  </data>
+  <data name="View_PrintLayout" xml:space="preserve">
+    <value>印刷レイアウト</value>
+    <comment>Print Layout</comment>
+  </data>
+  <data name="View_Zoom" xml:space="preserve">
+    <value>ズーム</value>
+    <comment>Zoom</comment>
+  </data>
+  <data name="Tools_Delete" xml:space="preserve">
+    <value>削除</value>
+    <comment>Delete</comment>
+  </data>
+  <data name="Tools_Gridlines" xml:space="preserve">
+    <value>グリッド線</value>
+    <comment>Gridlines</comment>
+  </data>
+  <data name="Tools_InsertAbove" xml:space="preserve">
+    <value>上に挿入</value>
+    <comment>Insert Above</comment>
+  </data>
+  <data name="Tools_InsertBelow" xml:space="preserve">
+    <value>下に挿入</value>
+    <comment>Insert Below</comment>
+  </data>
+  <data name="Tools_InsertLeft" xml:space="preserve">
+    <value>左に挿入</value>
+    <comment>Insert Left</comment>
+  </data>
+  <data name="Tools_InsertRight" xml:space="preserve">
+    <value>右に挿入</value>
+    <comment>Insert Right</comment>
+  </data>
+  <data name="Tools_Picture" xml:space="preserve">
+    <value>画像</value>
+    <comment>Picture</comment>
+  </data>
+  <data name="Tools_Select" xml:space="preserve">
+    <value>選択</value>
+    <comment>Select</comment>
+  </data>
+  <data name="Tools_Spelling" xml:space="preserve">
+    <value>スペルチェック</value>
+    <comment>Spelling</comment>
+  </data>
+  <data name="Tools_Unmerge" xml:space="preserve">
+    <value>結合解除</value>
+    <comment>Unmerge</comment>
+  </data>
+  <data name="Edit_Title" xml:space="preserve">
+    <value>編集</value>
+    <comment>Edit</comment>
+  </data>
+  <data name="Cell_Title" xml:space="preserve">
+    <value>セル</value>
+    <comment>Cell</comment>
+  </data>
+  <data name="FormatPainter" xml:space="preserve">
+    <value>書式のコピー/貼り付け</value>
+    <comment>Format Painter</comment>
+  </data>
+  <data name="HomeTab_Header" xml:space="preserve">
+    <value>ホーム</value>
+    <comment>Home</comment>
+  </data>
+  <data name="Insert_InsertHyperlink_TextLabel" xml:space="preserve">
+    <value>テキスト:</value>
+    <comment>Text:</comment>
+  </data>
+  <data name="Insert_InsertHyperlink_URLLabel" xml:space="preserve">
+    <value>URL:</value>
+    <comment>URL:</comment>
+  </data>
+  <data name="Insert_InsertHyperlink_TargetLabel" xml:space="preserve">
+    <value>ターゲット:</value>
+  </data>
+  <data name="Insert_InsertImage_FileFilter" xml:space="preserve">
+    <value>画像 (*.PNG;*.JPG)|*.PNG;*.JPG|すべてのファイル (*.*)|*.*</value>
+    <comment>Image Files (*.PNG;*.JPG)|*.PNG;*.JPG|All files (*.*)|*.*</comment>
+  </data>
+  <data name="Insert_InsertImage_UploadMessage" xml:space="preserve">
+    <value>アップロードする画像を選択してください:</value>
+    <comment>Choose an image to upload:</comment>
+  </data>
+  <data name="Insert_InsertImage_UploadTab" xml:space="preserve">
+    <value>アップロード</value>
+    <comment>Upload</comment>
+  </data>
+  <data name="Insert_InsertImage_UrlMessage" xml:space="preserve">
+    <value>画像が配置されているURLを入力してください:</value>
+    <comment>Enter the URL where the image is located:</comment>
+  </data>
+  <data name="Insert_InsertImage_UrlTab" xml:space="preserve">
+    <value>URL</value>
+    <comment>URL</comment>
+  </data>
+  <data name="Merge_Title" xml:space="preserve">
+    <value>セル結合</value>
+    <comment>Merge</comment>
+  </data>
+  <data name="RowsAndColumns_Title" xml:space="preserve">
+    <value>行／列</value>
+    <comment>Rows &amp; Columns</comment>
+  </data>
+  <data name="TablesTab_Header" xml:space="preserve">
+    <value>表</value>
+    <comment>Tables</comment>
+  </data>
+  <data name="Table_Title" xml:space="preserve">
+    <value>表</value>
+    <comment>Table</comment>
+  </data>
+  <data name="Tools_BorderTool" xml:space="preserve">
+    <value>罫線</value>
+    <comment>Borders</comment>
+  </data>
+  <data name="Tools_BorderTool_AllBorders" xml:space="preserve">
+    <value>格子</value>
+    <comment>All Borders</comment>
+  </data>
+  <data name="Tools_BorderTool_BottomBorder" xml:space="preserve">
+    <value>下罫線</value>
+    <comment>Bottom Border</comment>
+  </data>
+  <data name="Tools_BorderTool_Color" xml:space="preserve">
+    <value>色</value>
+    <comment>Color</comment>
+  </data>
+  <data name="Tools_BorderTool_InsideBorders" xml:space="preserve">
+    <value>罫線(内側)</value>
+    <comment>Inside Borders</comment>
+  </data>
+  <data name="Tools_BorderTool_InsideHorizontalBorders" xml:space="preserve">
+    <value>横罫線(内側)</value>
+    <comment>Inside Horizontal Border</comment>
+  </data>
+  <data name="Tools_BorderTool_InsideVerticalBorders" xml:space="preserve">
+    <value>縦罫線(内側)</value>
+    <comment>Inside Vertical Border</comment>
+  </data>
+  <data name="Tools_BorderTool_LeftBorder" xml:space="preserve">
+    <value>左罫線</value>
+    <comment>Left Border</comment>
+  </data>
+  <data name="Tools_BorderTool_NoBorder" xml:space="preserve">
+    <value>枠なし</value>
+    <comment>No Border</comment>
+  </data>
+  <data name="Tools_BorderTool_OutsideBorders" xml:space="preserve">
+    <value>外枠</value>
+    <comment>Outside Borders</comment>
+  </data>
+  <data name="Tools_BorderTool_RightBorder" xml:space="preserve">
+    <value>右罫線</value>
+    <comment>Right Border</comment>
+  </data>
+  <data name="Tools_BorderTool_TopBorder" xml:space="preserve">
+    <value>上罫線</value>
+    <comment>Top Border</comment>
+  </data>
+  <data name="Tools_BorderTool_Weight" xml:space="preserve">
+    <value>線の太さ</value>
+    <comment>Weight</comment>
+  </data>
+  <data name="Tools_BottomAlign" xml:space="preserve">
+    <value>下揃え</value>
+    <comment>Align Bottom</comment>
+  </data>
+  <data name="Tools_ColumnWidth_Header" xml:space="preserve">
+    <value>幅:</value>
+    <comment>Width:</comment>
+  </data>
+  <data name="Tools_DeleteTable" xml:space="preserve">
+    <value>表の削除</value>
+    <comment>Delete Table</comment>
+  </data>
+  <data name="Tools_DeleteTable_DeleteCells" xml:space="preserve">
+    <value>セルの削除</value>
+    <comment>Delete Cells</comment>
+  </data>
+  <data name="Tools_DeleteTable_DeleteColumns" xml:space="preserve">
+    <value>列の削除</value>
+    <comment>Delete Columns</comment>
+  </data>
+  <data name="Tools_DeleteTable_DeleteRows" xml:space="preserve">
+    <value>行の削除</value>
+    <comment>Delete Rows</comment>
+  </data>
+  <data name="Tools_DeleteTable_DeleteTable" xml:space="preserve">
+    <value>表の削除</value>
+    <comment>Delete Table</comment>
+  </data>
+  <data name="Tools_FindAndReplace_ReachStart" xml:space="preserve">
+    <value>文章の検索が終了しました。</value>
+    <comment>Find reached the starting point of the search.</comment>
+  </data>
+  <data name="Tools_InsertColumnsLeft" xml:space="preserve">
+    <value>左に列を挿入</value>
+    <comment>Insert Columns to the Left</comment>
+  </data>
+  <data name="Tools_InsertColumnsRight" xml:space="preserve">
+    <value>右に列を挿入</value>
+    <comment>Insert Columns to the Right</comment>
+  </data>
+  <data name="Tools_InsertRowsAbove" xml:space="preserve">
+    <value>上に行を挿入</value>
+    <comment>Insert Rows Above</comment>
+  </data>
+  <data name="Tools_InsertRowsBelow" xml:space="preserve">
+    <value>下に行を挿入</value>
+    <comment>Insert Rows Below</comment>
+  </data>
+  <data name="Tools_InsertTable" xml:space="preserve">
+    <value>表の挿入</value>
+    <comment>Insert Table</comment>
+  </data>
+  <data name="Tools_InsertTable_ConvertText" xml:space="preserve">
+    <value>テキストを表に変更</value>
+    <comment>Convert Text to Table</comment>
+  </data>
+  <data name="Tools_MergeCells" xml:space="preserve">
+    <value>セルの結合</value>
+    <comment>Merge Cells</comment>
+  </data>
+  <data name="Tools_RowHeight_Header" xml:space="preserve">
+    <value>高さ:</value>
+    <comment>Height:</comment>
+  </data>
+  <data name="Tools_SelectTable" xml:space="preserve">
+    <value>表を選択</value>
+    <comment>Select Table</comment>
+  </data>
+  <data name="Tools_SelectTable_SelectCell" xml:space="preserve">
+    <value>セルを選択</value>
+    <comment>Select Cell</comment>
+  </data>
+  <data name="Tools_SelectTable_SelectColumn" xml:space="preserve">
+    <value>列を選択</value>
+    <comment>Select Column</comment>
+  </data>
+  <data name="Tools_SelectTable_SelectRow" xml:space="preserve">
+    <value>行を選択</value>
+    <comment>Select Row</comment>
+  </data>
+  <data name="Tools_SelectTable_SelectTable" xml:space="preserve">
+    <value>表を選択</value>
+    <comment>Select Table</comment>
+  </data>
+  <data name="Tools_ShowGridlines" xml:space="preserve">
+    <value>グリッド線の表示</value>
+    <comment>Show Gridlines</comment>
+  </data>
+  <data name="Tools_SplitCell" xml:space="preserve">
+    <value>セルの分割</value>
+    <comment>Split Cell</comment>
+  </data>
+  <data name="Tools_TableWidth_Header" xml:space="preserve">
+    <value>幅:</value>
+    <comment>Width:</comment>
+  </data>
+  <data name="Tools_TopAlign" xml:space="preserve">
+    <value>上揃え</value>
+    <comment>Align Top</comment>
+  </data>
+  <data name="Tools_UnmergeCell" xml:space="preserve">
+    <value>セル結合の解除</value>
+    <comment>Unmerge Cell</comment>
+  </data>
+  <data name="Tools_VerticalCenterAlign" xml:space="preserve">
+    <value>中央揃え</value>
+    <comment>Align Center</comment>
+  </data>
+  <data name="Color_Aqua_ToolTip" xml:space="preserve">
+    <value>アクア</value>
+  </data>
+  <data name="Color_Black_ToolTip" xml:space="preserve">
+    <value>黑</value>
+  </data>
+  <data name="Color_Blue_ToolTip" xml:space="preserve">
+    <value>青</value>
+  </data>
+  <data name="Color_Brown_ToolTip" xml:space="preserve">
+    <value>茶</value>
+  </data>
+  <data name="Color_DarkBlue_ToolTip" xml:space="preserve">
+    <value>濃い青</value>
+  </data>
+  <data name="Color_DarkGreen_ToolTip" xml:space="preserve">
+    <value>濃い緑</value>
+  </data>
+  <data name="Color_DarkPurple_ToolTip" xml:space="preserve">
+    <value>濃い紫</value>
+  </data>
+  <data name="Color_DarkRed_ToolTip" xml:space="preserve">
+    <value>濃い赤</value>
+  </data>
+  <data name="Color_EightyGray_ToolTip" xml:space="preserve">
+    <value>80％ 灰色</value>
+  </data>
+  <data name="Color_FifteenGray_ToolTip" xml:space="preserve">
+    <value>15％ 灰色</value>
+  </data>
+  <data name="Color_FiftyGray_ToolTip" xml:space="preserve">
+    <value>50％ 灰色</value>
+  </data>
+  <data name="Color_FortyGray_ToolTip" xml:space="preserve">
+    <value>40％ 灰色</value>
+  </data>
+  <data name="Color_Gold_ToolTip" xml:space="preserve">
+    <value>ゴールド</value>
+  </data>
+  <data name="Color_Green_ToolTip" xml:space="preserve">
+    <value>緑</value>
+  </data>
+  <data name="Color_LightGreen_ToolTip" xml:space="preserve">
+    <value>薄い緑</value>
+  </data>
+  <data name="Color_LightYellow_ToolTip" xml:space="preserve">
+    <value>薄い黄</value>
+  </data>
+  <data name="Color_Lime_ToolTip" xml:space="preserve">
+    <value>ライム</value>
+  </data>
+  <data name="Color_Orange_ToolTip" xml:space="preserve">
+    <value>オレンジ</value>
+  </data>
+  <data name="Color_Pink_ToolTip" xml:space="preserve">
+    <value>ピンク</value>
+  </data>
+  <data name="Color_Plum_ToolTip" xml:space="preserve">
+    <value>プラム</value>
+  </data>
+  <data name="Color_Purple_ToolTip" xml:space="preserve">
+    <value>紫</value>
+  </data>
+  <data name="Color_Red_ToolTip" xml:space="preserve">
+    <value>赤</value>
+  </data>
+  <data name="Color_Rose_ToolTip" xml:space="preserve">
+    <value>ローズ</value>
+  </data>
+  <data name="Color_SeventyFiveGray_ToolTip" xml:space="preserve">
+    <value>75％ 灰色</value>
+  </data>
+  <data name="Color_SkyBlue_ToolTip" xml:space="preserve">
+    <value>スカイブルー</value>
+  </data>
+  <data name="Color_SlateBlue_ToolTip" xml:space="preserve">
+    <value>スレートブルー</value>
+  </data>
+  <data name="Color_Turquoise_ToolTip" xml:space="preserve">
+    <value>ターコイズ</value>
+  </data>
+  <data name="Color_TwentyFiveGray_ToolTip" xml:space="preserve">
+    <value>25％ 灰色</value>
+  </data>
+  <data name="Color_White_ToolTip" xml:space="preserve">
+    <value>白</value>
+  </data>
+  <data name="Color_Yellow_ToolTip" xml:space="preserve">
+    <value>黄</value>
+  </data>
+  <data name="Insert_ImageDialog_File" xml:space="preserve">
+    <value>画像を選ぶ…</value>
+  </data>
+  <data name="Insert_ImageDialog_Url" xml:space="preserve">
+    <value>画像を挿入</value>
+  </data>
+  <data name="Insert_InsertHyperlink_Button" xml:space="preserve">
+    <value>ハイパーリンクを挿入</value>
+  </data>
+  <data name="Insert_InsertTable_Button" xml:space="preserve">
+    <value>表を挿入</value>
+  </data>
+  <data name="Insert_InsertTable_ColumnLabel" xml:space="preserve">
+    <value>列数:</value>
+  </data>
+  <data name="Insert_InsertTable_RowLabel" xml:space="preserve">
+    <value>行数:</value>
+  </data>
+  <data name="List_Header" xml:space="preserve">
+    <value>箇条書き</value>
+  </data>
+  <data name="Tools_BottomAlignMenuTool_Header" xml:space="preserve">
+    <value>下</value>
+  </data>
+  <data name="Tools_CenterAlign_Header" xml:space="preserve">
+    <value>中央揃え</value>
+  </data>
+  <data name="Tools_ClearFormatting_Header" xml:space="preserve">
+    <value>書式のクリア</value>
+  </data>
+  <data name="Tools_ClearFormatting_ToolTip" xml:space="preserve">
+    <value>テキストの書式設定をクリア</value>
+  </data>
+  <data name="Tools_DecreaseFontSize_Header" xml:space="preserve">
+    <value>縮小</value>
+  </data>
+  <data name="Tools_DecreaseFontSize_ToolTip" xml:space="preserve">
+    <value>フォントの縮小</value>
+  </data>
+  <data name="Tools_DeleteTable_Cells" xml:space="preserve">
+    <value>テーブルのセルを削除</value>
+  </data>
+  <data name="Tools_DeleteTable_Columns" xml:space="preserve">
+    <value>テーブルの列を削除</value>
+  </data>
+  <data name="Tools_DeleteTable_Rows" xml:space="preserve">
+    <value>テーブルの行を削除</value>
+  </data>
+  <data name="Tools_DeleteTable_Table" xml:space="preserve">
+    <value>この表を削除</value>
+  </data>
+  <data name="Tools_Error" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="Tools_FillColor_Header" xml:space="preserve">
+    <value>塗りつぶし</value>
+  </data>
+  <data name="Tools_FillColor_ToolTip" xml:space="preserve">
+    <value>塗りつぶしの色</value>
+  </data>
+  <data name="Tools_IncreaseFontSize_Header" xml:space="preserve">
+    <value>拡大</value>
+  </data>
+  <data name="Tools_IncreaseFontSize_ToolTip" xml:space="preserve">
+    <value>フォントの拡大</value>
+  </data>
+  <data name="Tools_InsertHyperlink_Header" xml:space="preserve">
+    <value>ハイパーリンク</value>
+  </data>
+  <data name="Tools_InsertImage_Header" xml:space="preserve">
+    <value>図</value>
+  </data>
+  <data name="Tools_InsertImage_ToolTip" xml:space="preserve">
+    <value>図の挿入</value>
+  </data>
+  <data name="Tools_LeftAlign_Header" xml:space="preserve">
+    <value>左揃え</value>
+  </data>
+  <data name="Tools_LeftAlign_ToolTip" xml:space="preserve">
+    <value>左揃え</value>
+  </data>
+  <data name="Tools_Numbering_ToolTip" xml:space="preserve">
+    <value>箇条書き</value>
+  </data>
+  <data name="Tools_Redo_Header" xml:space="preserve">
+    <value>やり直し</value>
+  </data>
+  <data name="Tools_RightAlign_Header" xml:space="preserve">
+    <value>右揃え</value>
+  </data>
+  <data name="Tools_RightAlign_ToolTip" xml:space="preserve">
+    <value>右揃え</value>
+  </data>
+  <data name="Tools_SelectAll_Header" xml:space="preserve">
+    <value>全て選択</value>
+  </data>
+  <data name="Tools_SelectTable_Cells_Header" xml:space="preserve">
+    <value>セルの選択</value>
+  </data>
+  <data name="Tools_SelectTable_Cells_ToolTip" xml:space="preserve">
+    <value>テーブルのセルを選択</value>
+  </data>
+  <data name="Tools_SelectTable_Columns_Header" xml:space="preserve">
+    <value>列の選択</value>
+  </data>
+  <data name="Tools_SelectTable_Columns_ToolTip" xml:space="preserve">
+    <value>テーブルの列を選択</value>
+  </data>
+  <data name="Tools_SelectTable_Rows_Header" xml:space="preserve">
+    <value>行の選択</value>
+  </data>
+  <data name="Tools_SelectTable_Rows_ToolTip" xml:space="preserve">
+    <value>テーブルの行を選択</value>
+  </data>
+  <data name="Tools_SelectTable_Table_Header" xml:space="preserve">
+    <value>表の選択</value>
+  </data>
+  <data name="Tools_SelectTable_Table_ToolTip" xml:space="preserve">
+    <value>この表を選択</value>
+  </data>
+  <data name="Tools_Strikethrough_Header" xml:space="preserve">
+    <value>取り消し線</value>
+  </data>
+  <data name="Tools_Subscript_ToolTip" xml:space="preserve">
+    <value>下付き文字</value>
+  </data>
+  <data name="Tools_Superscript_ToolTip" xml:space="preserve">
+    <value>上付き文字</value>
+  </data>
+  <data name="Tools_TextHighlight_Header" xml:space="preserve">
+    <value>蛍光パン</value>
+  </data>
+  <data name="Tools_TextHighlight_ToolTip" xml:space="preserve">
+    <value>蛍光パンの色</value>
+  </data>
+  <data name="Tools_TopAlign_Header" xml:space="preserve">
+    <value>上</value>
+  </data>
+  <data name="ViewTab_Header" xml:space="preserve">
+    <value>表示</value>
+  </data>
+  <data name="View_DocumentViews" xml:space="preserve">
+    <value>レイアウト</value>
+  </data>
+  <data name="View_FitWidth" xml:space="preserve">
+    <value>幅に合わせる</value>
+  </data>
+  <data name="View_OnePage" xml:space="preserve">
+    <value>１ページ</value>
+  </data>
+  <data name="View_TwoPages" xml:space="preserve">
+    <value>２ページ</value>
+  </data>
+  <data name="Tools_ZoomIn" xml:space="preserve">
+    <value>拡大</value>
+  </data>
+  <data name="Tools_Zoom100PercentTool" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="Tools_ZoomOut" xml:space="preserve">
+    <value>縮小</value>
+  </data>
+  <data name="Font_Strikethrough" xml:space="preserve">
+    <value>取り消し線</value>
+  </data>
+  <data name="Font_StrikethroughInitial" xml:space="preserve">
+    <value>abc</value>
+  </data>
+  <data name="Tools_RemoveHyperlink_Header" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="Selected_Document" xml:space="preserve">
+    <value>&lt;&lt;ドキュメント内の選択された要素&gt;&gt;</value>
+  </data>
+  <data name="Line_Number" xml:space="preserve">
+    <value>行番号</value>
+  </data>
+  <data name="LineNumberMode_None" xml:space="preserve">
+    <value>しない</value>
+  </data>
+  <data name="LineNumberMode_Continuous" xml:space="preserve">
+    <value>連続</value>
+  </data>
+  <data name="LineNumberMode_RestartEachPage" xml:space="preserve">
+    <value>ページごとに振り直し</value>
+  </data>
+</root>

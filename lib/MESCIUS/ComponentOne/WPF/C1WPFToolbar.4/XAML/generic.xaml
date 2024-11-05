@@ -1,0 +1,823 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c1tb="clr-namespace:C1.WPF.Toolbar"
+    xmlns:c1="clr-namespace:C1.WPF;assembly=C1.WPF.4"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+>
+	<ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/C1.WPF.4;component/themes/Common.xaml" />
+        <ResourceDictionary Source="/C1.WPF.Toolbar.4;component/themes/C1ToolbarButton.xaml" />
+        <ResourceDictionary Source="/C1.WPF.Toolbar.4;component/themes/C1ToolbarItem.xaml" />
+        <ResourceDictionary Source="/C1.WPF.Toolbar.4;component/themes/C1ToolbarDropdownItem.xaml" />
+        <ResourceDictionary Source="/C1.WPF.Toolbar.4;component/themes/C1ToolbarToggleItem.xaml" />
+        <ResourceDictionary Source="/C1.WPF.Toolbar.4;component/themes/C1ToolbarTab.xaml" />
+        <ResourceDictionary Source="/C1.WPF.Toolbar.4;component/themes/C1SimplifiedRibbon.xaml" />
+        <ResourceDictionary Source="/C1.WPF.Toolbar.4;component/themes/C1ToolbarSplitButton.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+
+	<c1:C1SideThicknessConverter x:Key="sideThicknessConverter" />
+
+    <!-- Brush @ ToolBar Background-->
+    <SolidColorBrush x:Key="ToolbarBackground" Color="#FFD3E1ED" />
+    <!-- Brush @ ToolBar BorderBrush-->
+	<SolidColorBrush x:Key="ToolbarBorderBrush" Color="{StaticResource BorderColor}" />
+	<!-- Brush @ ToolBar Foreground -->
+	<SolidColorBrush x:Key="ToolbarForegroundBrush" Color="{StaticResource ForegroundColor}" />
+	<!-- Padding @ ToolBar -->
+	<Thickness x:Key="ToolbarPadding">1</Thickness>
+	<!-- CornerRadius @ ToolBar  -->
+	<CornerRadius x:Key="ToolbarCornerRadius">0</CornerRadius>
+
+	<!-- Brush @ C1ToolbarStripItem Border -->
+	<SolidColorBrush x:Key="ToolstripItemBorderBrush" Color="#FF9FB4C7" />
+	<!-- CornerRadius @ C1ToolbarStripItem -->
+	<!-- SL XAML does not support setting properties for some structures(CornerRadius etc/) -->
+	<CornerRadius x:Key="ToolstripItemCornerRadius">2</CornerRadius>
+	<CornerRadius x:Key="ToolstripItemCornerRadiusFirstH">2,0,0,2</CornerRadius>
+	<CornerRadius x:Key="ToolstripItemCornerRadiusFirstV">2,2,0,0</CornerRadius>
+	<CornerRadius x:Key="ToolstripItemCornerRadiusLastH">0,2,2,0</CornerRadius>
+	<CornerRadius x:Key="ToolstripItemCornerRadiusLastV">0,0,2,2</CornerRadius>
+	<!-- CornerRadius @ C1ToolbarStripItem -->
+	<Thickness x:Key="ToolstripItemBorderThickness">1</Thickness>
+	<Thickness x:Key="ToolstripItemBorderThicknessFirstH">1 1 0 1</Thickness>
+	<Thickness x:Key="ToolstripItemBorderThicknessFirstV">1 1 1 0</Thickness>
+	<Thickness x:Key="ToolstripItemBorderThicknessLastH">0 1 1 1</Thickness>
+	<Thickness x:Key="ToolstripItemBorderThicknessLastV">1 0 1 1</Thickness>
+	<Thickness x:Key="ToolstripItemBorderThicknessMidH">0 1 0 1</Thickness>
+	<Thickness x:Key="ToolstripItemBorderThicknessMidV">1 0 1 0</Thickness>
+	<!-- Brush @ C1ToolbarStripItem Divider -->
+	<SolidColorBrush x:Key="ToolstripItemDividerBrush" Color="#FFDAE4ED" />
+	<!-- C1ToolbarStripItem Divider Size -->
+	<sys:Double x:Key="ToolstripItemDividerSize">1</sys:Double>
+
+	<!-- Padding @ C1ToolbarStrip -->
+	<Thickness x:Key="ToolbarStripPadding">1</Thickness>
+
+	<!-- Padding @ C1ToolbarGroup -->
+	<Thickness x:Key="ToolbarGroupPadding">1</Thickness>
+	<!-- Margin @ C1ToolbarGroup -->
+	<Thickness x:Key="ToolbarGroupMargin">1</Thickness>
+	<!-- CornerRadius @ C1ToolbarGroup -->
+	<CornerRadius x:Key="ToolbarGroupCornerRadius">3</CornerRadius>
+	<!-- CornerRadius @ C1ToolbarGroup InnerElement -->
+	<CornerRadius x:Key="ToolbarGroupInnerCornerRadius">2</CornerRadius>
+	<!-- CornerRadius @ C1ToolbarGroup Header -->
+	<CornerRadius x:Key="ToolbarGroupHeaderCornerRadius">0 0 2 2</CornerRadius>
+	<!-- Brush @ C1ToolbarGroup Background -->
+	<SolidColorBrush x:Key="ToolbarGroupBackground" Color="#FFF0F3F5" />
+	<!-- Brush @ C1ToolbarGroup Header Background -->
+	<LinearGradientBrush x:Key="ToolbarGroupHeaderBackground" StartPoint="0.5,0" EndPoint="0.5,1">
+		<GradientStop Color="#FFCBDAE9" Offset="1" />
+		<GradientStop Color="#FFBCD1E4" Offset="0" />
+	</LinearGradientBrush>
+
+	<!-- Brush @ C1ToolbarGroup Border -->
+	<SolidColorBrush x:Key="ToolbarGroupBorderBrush" Color="#FFADBBC7" />
+	<!-- Thickness @ C1ToolbarGroup Inner Border-->
+	<Thickness x:Key="ToolbarGroupInnerBorderThickness">1 1 0 0</Thickness>
+
+	<!--Brush @ C1ToolbarDropDown & groupDropDown Background-->
+	<SolidColorBrush x:Key="PopupBackgroundBrush" Color="#FFE6EEF5" />
+	<!--Brush @ C1ToolbarDropDown & groupDropDown Background-->
+	<CornerRadius x:Key="PopupCornerRadius">2</CornerRadius>
+
+	<!-- C1ToolbarStripItem -->
+	<Style TargetType="c1tb:C1ToolbarStripItem">
+		<Setter Property="IsTabStop" Value="False" />
+		<Setter Property="VerticalAlignment" Value="Center" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="ContentControl">
+					<Grid x:Name="root">
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="C1ToolbarStates">
+								<VisualState x:Name="Alone">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="hbdr" Storyboard.TargetProperty="Padding">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Thickness />
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="hbdr" Storyboard.TargetProperty="BorderThickness">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToolstripItemBorderThickness}" />
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="hbdr" Storyboard.TargetProperty="CornerRadius">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToolstripItemCornerRadius}" />
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="vbdr" Storyboard.TargetProperty="Padding">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Thickness />
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="vbdr" Storyboard.TargetProperty="BorderThickness">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToolstripItemBorderThickness}" />
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="vbdr" Storyboard.TargetProperty="CornerRadius">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToolstripItemCornerRadius}" />
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+
+								<VisualState x:Name="First">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="hbdr" Storyboard.TargetProperty="Padding">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Thickness />
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="hbdr" Storyboard.TargetProperty="BorderThickness">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToolstripItemBorderThicknessFirstH}" />
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="hbdr" Storyboard.TargetProperty="CornerRadius">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToolstripItemCornerRadiusFirstH}" />
+										</ObjectAnimationUsingKeyFrames>
+
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="vbdr" Storyboard.TargetProperty="Padding">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Thickness />
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="vbdr" Storyboard.TargetProperty="BorderThickness">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToolstripItemBorderThicknessFirstV}" />
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="vbdr" Storyboard.TargetProperty="CornerRadius">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToolstripItemCornerRadiusFirstV}" />
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+
+								<VisualState x:Name="Last">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="hbdr" Storyboard.TargetProperty="BorderThickness">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToolstripItemBorderThicknessLastH}" />
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="hbdr" Storyboard.TargetProperty="CornerRadius">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToolstripItemCornerRadiusLastH}" />
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="leftDiv" Storyboard.TargetProperty="Visibility">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="vbdr" Storyboard.TargetProperty="BorderThickness">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToolstripItemBorderThicknessLastV}" />
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="vbdr" Storyboard.TargetProperty="CornerRadius">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToolstripItemCornerRadiusLastV}" />
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="topDiv" Storyboard.TargetProperty="Visibility">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+
+								<VisualState x:Name="Middle">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="hbdr" Storyboard.TargetProperty="BorderThickness">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToolstripItemBorderThicknessMidH}" />
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="vbdr" Storyboard.TargetProperty="BorderThickness">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToolstripItemBorderThicknessMidV}" />
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="leftDiv" Storyboard.TargetProperty="Visibility">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="topDiv" Storyboard.TargetProperty="Visibility">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+
+								<VisualState x:Name="None">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="hbdr" Storyboard.TargetProperty="BorderThickness">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Thickness />
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="vbdr" Storyboard.TargetProperty="BorderThickness">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Thickness />
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<Grid x:Name="HorizontalRoot">
+							<Border x:Name="hbdr" BorderBrush="{TemplateBinding BorderBrush}">
+								<ContentPresenter x:Name="cp" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalAlignment}" />
+							</Border>
+							<Rectangle x:Name="rightDiv" Margin="{StaticResource ToolstripItemBorderThicknessMidH}" HorizontalAlignment="Right" Width="{StaticResource ToolstripItemDividerSize}" Fill="{TemplateBinding BorderBrush}" Opacity="0.4" Visibility="Collapsed" />
+							<Rectangle x:Name="leftDiv" Margin="{StaticResource ToolstripItemBorderThicknessMidH}" HorizontalAlignment="Left" Fill="{TemplateBinding BorderBrush}" Opacity="0.4" Width="{StaticResource ToolstripItemDividerSize}" Visibility="Collapsed" />
+						</Grid>
+						<Grid x:Name="VerticalRoot" Visibility="Collapsed">
+							<Border x:Name="vbdr" BorderBrush="{TemplateBinding BorderBrush}" />
+							<Rectangle x:Name="topDiv" Margin="{StaticResource ToolstripItemBorderThicknessMidV}" VerticalAlignment="Top" Fill="{TemplateBinding BorderBrush}" Opacity="0.4" Height="{StaticResource ToolstripItemDividerSize}" Visibility="Collapsed" />
+							<Rectangle x:Name="bottomDiv" Margin="{StaticResource ToolstripItemBorderThicknessMidV}" VerticalAlignment="Bottom" Fill="{TemplateBinding BorderBrush}" Opacity="0.4" Height="{StaticResource ToolstripItemDividerSize}" Visibility="Collapsed" />
+						</Grid>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<!-- C1ToolbarDropDown -->
+	<Style TargetType="c1tb:C1ToolbarDropDown" x:Key="C1.Silverlight.Toolbar.C1ToolbarDropDown">
+        <Setter Property="ContentBackground" Value="{StaticResource WpfInputBaseBrush}" />    
+        <Setter Property="AutoClose" Value="True" />
+        <Setter Property="Padding" Value="{StaticResource ToolbarButtonPadding}" />
+		<Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1tb:C1ToolbarDropDown">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="DropDownOpenStates">
+                                <VisualState x:Name="Closed" />
+                                <VisualState x:Name="Opened" />
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledVisualElement" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver" />
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="ToolbarStates">
+                                <VisualState x:Name="Medium" />
+                                <VisualState x:Name="Large">
+                                    <Storyboard>
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LargeView" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Visible</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MediumView" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Collapsed</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SmallView" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Collapsed</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="HorizontalTemplate" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Collapsed</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="VerticalTemplate" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Visible</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Small">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LargeView" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MediumView" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SmallView" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="HorizontalTemplate" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="VerticalTemplate" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+                        <Grid Margin="{TemplateBinding BorderThickness}">
+                            <c1tb:C1ToolbarToggleButton x:Name="ArrowToggle" IsEnabled="{TemplateBinding IsEnabled}" IsTabStop="{TemplateBinding IsTabStop}" BorderThickness="0" Background="{TemplateBinding Background}" Padding="0" Foreground="{TemplateBinding HeaderForeground}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" MouseOverBrush="{TemplateBinding MouseOverBrush}" PressedBrush="{TemplateBinding PressedBrush}" FontStyle="{TemplateBinding HeaderFontStyle}" FontWeight="{TemplateBinding HeaderFontWeight}" FontSize="{TemplateBinding HeaderFontSize}" FontFamily="{TemplateBinding HeaderFontFamily}" FontStretch="{TemplateBinding HeaderFontStretch}">
+                                <Grid Margin="{TemplateBinding Padding}" Background="{TemplateBinding HeaderBackground}">
+                                    <Grid x:Name="HorizontalTemplate">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition Width="10" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Border Background="Transparent" Grid.Column="1" />
+
+                                        <StackPanel x:Name="MediumView" DataContext="{Binding RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource commandConverter}}" Orientation="Horizontal">
+                                            <Image x:Name="img2" Stretch="None" Source="{Binding SmallImageSource}" />
+                                            <TextBlock x:Name="MediumText" TextWrapping="Wrap" Text="{Binding LabelTitle}" VerticalAlignment="Center" />
+                                        </StackPanel>
+                                        <StackPanel x:Name="SmallView" DataContext="{Binding RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource commandConverter}}" Orientation="Horizontal" Visibility="Collapsed">
+                                            <Image x:Name="img3" Stretch="None" Source="{Binding SmallImageSource}" />
+                                        </StackPanel>
+
+                                        <ContentPresenter x:Name="HeaderPresenter" ContentTemplate="{TemplateBinding HeaderTemplate}" Margin="{TemplateBinding HeaderPadding}" VerticalAlignment="{TemplateBinding VerticalHeaderAlignment}" HorizontalAlignment="{TemplateBinding HorizontalHeaderAlignment}" />
+
+                                        <Polygon x:Name="ArrowPolygon" Grid.Column="1" Stretch="Uniform" Points="0,0 2,0 1,1" Width="7" Margin="0 1 1 1" Fill="{TemplateBinding HeaderForeground}" StrokeThickness="1" />
+                                    </Grid>
+
+                                    <Grid x:Name="VerticalTemplate" Visibility="Collapsed">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition Height="10" />
+                                        </Grid.RowDefinitions>
+
+                                        <StackPanel x:Name="LargeView" DataContext="{Binding RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource commandConverter}}">
+                                            <Image x:Name="img1" Stretch="None" Source="{Binding LargeImageSource}" />
+                                            <TextBlock x:Name="LargeText" Text="{Binding LabelTitle}" TextWrapping="Wrap" TextAlignment="Center" />
+                                        </StackPanel>
+
+                                        <c1:C1PathIcon x:Name="ArrowPolygonV" Data="M0,0,12,0,6,6z" Margin="2" Width="7" Height="6" StrokeThickness="1" Foreground="{TemplateBinding Foreground}" Grid.Row="1" />
+
+                                    </Grid>
+                                </Grid>
+                            </c1tb:C1ToolbarToggleButton>
+                        </Grid>
+                        <Popup x:Name="DropDownPopup">
+                            <Border Background="{TemplateBinding ContentBackground}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{StaticResource GeneralThickness}" CornerRadius="{StaticResource PopupCornerRadius}" Height="{TemplateBinding DropDownHeight}" Width="{TemplateBinding DropDownWidth}">
+                                <ContentPresenter />
+                            </Border>
+                        </Popup>
+                        <Border x:Name="DisabledVisualElement" Background="{StaticResource DisabledBrush}" IsHitTestVisible="False" Opacity="0" Visibility="{TemplateBinding DisabledCuesVisibility}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="c1tb:C1ToolbarDropDown" BasedOn="{StaticResource C1.Silverlight.Toolbar.C1ToolbarDropDown}" />
+	
+	<!-- C1ToolbarDropDown @ C1ToolbarStrip overflow -->
+	<Style x:Key="overflowDropDown" TargetType="c1tb:C1ToolbarDropDown">
+		<Setter Property="MinHeight" Value="20" />
+		<Setter Property="MinWidth" Value="20" />
+		<Setter Property="AutoClose" Value="true" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="c1tb:C1ToolbarDropDown">
+					<Grid Width="13">
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="DropDownOpenStates">
+								<VisualState x:Name="Closed" />
+								<VisualState x:Name="Opened" />
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualState x:Name="Normal" />
+								<VisualState x:Name="Disabled">
+									<Storyboard>
+										<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledVisualElement" Storyboard.TargetProperty="(UIElement.Opacity)">
+											<SplineDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+										</DoubleAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="MouseOver" />
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<c1:C1BrushBuilder x:Name="BackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource GeneralGradientBrush}" DesignColor="{StaticResource BaseColor}" />
+						<c1:C1BrushBuilder x:Name="InnerBorderBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource InnerBorderBrush}" DesignColor="{StaticResource BaseColor}" />
+						<c1:C1BrushBuilder x:Name="PopupBackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource PopupBackgroundBrush}" DesignColor="{StaticResource BaseColor}" />
+						<c1:C1BrushBuilder x:Name="PopupBorderBrush" Input="{TemplateBinding BorderBrush}" DesignBrush="{StaticResource ToolbarGroupBorderBrush}" DesignColor="{StaticResource BorderColor}" />
+						<Border x:Name="Background" Background="{Binding ElementName=BackgroundBrush, Path=Output}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{StaticResource ToolstripItemBorderThickness}" />
+						<Grid Margin="{StaticResource ToolstripItemBorderThickness}">
+							<c1tb:C1ToolbarToggleButton x:Name="ArrowToggle" IsEnabled="{TemplateBinding IsEnabled}" IsTabStop="{TemplateBinding IsTabStop}" Padding="0" Foreground="{TemplateBinding Foreground}" MinWidth="11" Background="{TemplateBinding Background}" MouseOverBrush="{TemplateBinding MouseOverBrush}" PressedBrush="{TemplateBinding PressedBrush}" BorderBrush="{TemplateBinding BorderBrush}">
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition />
+										<ColumnDefinition Width="Auto" />
+									</Grid.ColumnDefinitions>
+
+                  <ContentPresenter x:Name="HeaderPresenter" ContentTemplate="{TemplateBinding HeaderTemplate}" Margin="{TemplateBinding HeaderPadding}" VerticalAlignment="{TemplateBinding VerticalHeaderAlignment}" HorizontalAlignment="{TemplateBinding HorizontalHeaderAlignment}" />
+
+                  <!--<ContentControl Content="{TemplateBinding Header}"
+										 ContentTemplate="{TemplateBinding HeaderTemplate}"
+										 FontFamily="{TemplateBinding HeaderFontFamily}"
+										 FontSize="{TemplateBinding HeaderFontSize}"
+										 FontStretch="{TemplateBinding HeaderFontStretch}"
+										 FontStyle="{TemplateBinding HeaderFontStyle}"
+										 FontWeight="{TemplateBinding HeaderFontWeight}"
+										 Foreground="{TemplateBinding HeaderForeground}"
+										 HorizontalContentAlignment="{TemplateBinding HorizontalHeaderAlignment}"
+										 Padding="{TemplateBinding Padding}"
+										 Margin="{TemplateBinding Margin}"
+										 VerticalContentAlignment="{TemplateBinding VerticalHeaderAlignment}"
+										 IsTabStop="False" >
+										<ContentControl.Template>
+											<ControlTemplate TargetType="ContentControl">
+												<ContentPresenter HorizontalAlignment="Stretch" Cursor="{TemplateBinding Cursor}" Margin="{TemplateBinding Padding}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" />
+											</ControlTemplate>
+										</ContentControl.Template>
+									</ContentControl>-->
+                  
+									<Grid Grid.Column="1" Width="7" Height="6" VerticalAlignment="Center">
+										<Polygon Points="0,2 3.5,5.5 7,2" Fill="{TemplateBinding Foreground}" HorizontalAlignment="Center" VerticalAlignment="Top" />
+										<Rectangle Fill="{TemplateBinding Foreground}" Height="1" VerticalAlignment="Top" />
+									</Grid>
+								</Grid>
+							</c1tb:C1ToolbarToggleButton>
+						</Grid>
+						<Popup x:Name="DropDownPopup">
+							<Border Padding="2" Background="{TemplateBinding Background}" BorderBrush="{Binding ElementName=PopupBorderBrush, Path=Output}" BorderThickness="{StaticResource GeneralThickness}" CornerRadius="{StaticResource PopupCornerRadius}" Height="{TemplateBinding DropDownHeight}" Width="{TemplateBinding DropDownWidth}">
+								<ContentPresenter VerticalAlignment="Top" />
+							</Border>
+						</Popup>
+						<Border x:Name="DisabledVisualElement" Background="{StaticResource DisabledBrush}" IsHitTestVisible="False" Opacity="0" Visibility="{TemplateBinding DisabledCuesVisibility}" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<!-- C1ToolbarStrip -->
+	<Style TargetType="c1tb:C1ToolbarStrip">
+        
+        
+        <Setter Property="Background" Value="{StaticResource WpfInputBaseBrush}" />
+        <Setter Property="ButtonBackground" Value="{StaticResource WpfInputBaseBrush}" />
+        <Setter Property="MouseOverBrush" Value="{StaticResource WpfInputMouseOverBrush}" />
+        <Setter Property="PressedBrush" Value="{StaticResource WpfInputSelectedBackground}" />
+        <Setter Property="BorderBrush" Value="{StaticResource WpfInputBorderBrush}" />        
+		<Setter Property="Foreground" Value="{StaticResource ToolbarForegroundBrush}" />		
+		<Setter Property="ButtonForeground" Value="{StaticResource ToolbarForegroundBrush}" />		
+		<Setter Property="HorizontalAlignment" Value="Stretch" />
+		<Setter Property="VerticalAlignment" Value="Top" />
+		<Setter Property="Padding" Value="{StaticResource ToolbarStripPadding}" />
+		<Setter Property="OverflowPanel">
+			<Setter.Value>
+				<DataTemplate>
+					<WrapPanel />
+				</DataTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="c1tb:C1ToolbarStrip">
+					<Border Padding="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+						<Grid x:Name="root" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition />
+								<ColumnDefinition Width="Auto" />
+							</Grid.ColumnDefinitions>
+							<ItemsPresenter x:Name="ip" />
+							<c1tb:C1ToolbarDropDown Grid.Column="1" x:Name="overflow" Background="{TemplateBinding ButtonBackground}" Foreground="{TemplateBinding ButtonForeground}" MouseOverBrush="{TemplateBinding MouseOverBrush}" PressedBrush="{TemplateBinding PressedBrush}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" Style="{StaticResource overflowDropDown}" HorizontalAlignment="Right" />
+							<Grid Visibility="Collapsed"><Grid.ContextMenu><ContextMenu x:Name="menu"/></Grid.ContextMenu></Grid>
+						</Grid>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="ItemsPanel">
+			<Setter.Value>
+				<ItemsPanelTemplate>
+					<StackPanel x:Name="panel" Orientation="Horizontal" VerticalAlignment="Top" />
+				</ItemsPanelTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<!-- C1DropDown @ C1ToolbarGroup-->
+	<Style x:Key="groupDropDown" TargetType="c1:C1DropDownButton">
+		<Setter Property="AutoClose" Value="true" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="c1:C1DropDownButton">
+					<Grid>
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="DropDownOpenStates">
+								<VisualState x:Name="Closed" />
+								<VisualState x:Name="Opened" />
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualState x:Name="Normal" />
+								<VisualState x:Name="Disabled" />
+								<VisualState x:Name="MouseOver" />
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="FocusStates">
+								<VisualState x:Name="Unfocused" />
+								<VisualState x:Name="Focused" />
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="ValidationStates">
+								<VisualState x:Name="Valid" />
+								<VisualState x:Name="InvalidUnfocused">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="ValidationDecorator" Storyboard.TargetProperty="ValidationState">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<c1:ValidationState>InvalidUnfocused</c1:ValidationState>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="InvalidFocused">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="ValidationDecorator" Storyboard.TargetProperty="ValidationState">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<c1:ValidationState>InvalidFocused</c1:ValidationState>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<ToggleButton x:Name="ArrowToggle" Style="{StaticResource ClearStyleButtonStyle}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" c1:ClearStyleExtensions.CornerRadius="{StaticResource GeneralCornerRadius}" Background="{TemplateBinding Background}" Foreground="{TemplateBinding Foreground}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" VerticalContentAlignment="{TemplateBinding VerticalHeaderAlignment}" HorizontalContentAlignment="{TemplateBinding HorizontalHeaderAlignment}" Padding="0" IsTabStop="True">
+							<Grid Margin="{TemplateBinding BorderThickness}">
+								<Grid.RowDefinitions>
+									<RowDefinition />
+									<RowDefinition Height="Auto" />
+								</Grid.RowDefinitions>
+								<ContentPresenter Content="{TemplateBinding Header}" Margin="{TemplateBinding HeaderPadding}" />
+                                <c1:C1PathIcon x:Name="ArrowPolygon" Data="M0,0,12,0,6,6z" Margin="2" Width="7" Height="6" StrokeThickness="1" Foreground="{TemplateBinding Foreground}" Grid.Row="1" />
+							</Grid>
+						</ToggleButton>
+						<c1:C1ValidationDecorator x:Name="ValidationDecorator" Target="{Binding RelativeSource={RelativeSource TemplatedParent}}" Style="{TemplateBinding ValidationDecoratorStyle}" />
+						<Popup x:Name="DropDownPopup" VerticalAlignment="Bottom">
+							<Grid Width="{Binding Path=DropDownWidth,RelativeSource={RelativeSource TemplatedParent}}" Height="{Binding Path=DropDownHeight,RelativeSource={RelativeSource TemplatedParent}}" MinWidth="{Binding Path=MinDropDownWidth,RelativeSource={RelativeSource TemplatedParent}}" MinHeight="{Binding Path=MinDropDownHeight,RelativeSource={RelativeSource TemplatedParent}}" MaxWidth="{Binding Path=MaxDropDownWidth,RelativeSource={RelativeSource TemplatedParent}}" MaxHeight="{Binding Path=MaxDropDownHeight,RelativeSource={RelativeSource TemplatedParent}}">
+								<ContentPresenter Margin="{Binding Path=Padding,RelativeSource={RelativeSource TemplatedParent}}" />
+							</Grid>
+						</Popup>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+    <!-- C1ToolbarDialogBoxLauncherButton @ C1ToolbarGroup-->
+    <Style x:Key="C1ToolbarDialogBoxLauncherButton" TargetType="Button">
+        <Setter Property="Width" Value="15" />
+        <Setter Property="Height" Value="15" />
+        <Setter Property="Foreground" Value="#FF000000" />
+        <Setter Property="Padding" Value="4" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="MouseOverElement">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed" />
+                                <VisualState x:Name="Disabled" />
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused" />
+                                <VisualState x:Name="Unfocused" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <c1:C1BrushBuilder x:Name="MouseOverBrush" Input="{TemplateBinding c1:ClearStyleExtensions.MouseOverBrush}" DesignBrush="{StaticResource GeneralGradientOverBrush}" DesignColor="{StaticResource MouseOverColor}" />
+                        <c1:C1BrushBuilder x:Name="InnerBorderMouseOverBrush" Input="{TemplateBinding c1:ClearStyleExtensions.MouseOverBrush}" DesignBrush="{StaticResource InnerBorderMouseOverBrush}" DesignColor="{StaticResource MouseOverColor}" />
+                        <Border x:Name="MouseOverElement" Background="{Binding Output, ElementName=MouseOverBrush}" BorderThickness="{TemplateBinding BorderThickness}" Visibility="Collapsed" CornerRadius="{TemplateBinding c1:ClearStyleExtensions.CornerRadius}">
+                            <Border BorderBrush="{Binding Output, ElementName=InnerBorderMouseOverBrush}" BorderThickness="{StaticResource InnerBorderThickness}" CornerRadius="{TemplateBinding c1:ClearStyleExtensions.CornerRadius}" />
+                        </Border>
+                        <ContentControl x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Margin="{TemplateBinding Padding}" Foreground="{TemplateBinding Foreground}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- C1ToolbarGroup -->
+	<Style TargetType="c1tb:C1ToolbarGroup">
+        
+        
+        <Setter Property="BorderBrush" Value="{StaticResource WpfInputBorderBrush}" />
+        <Setter Property="Background" Value="{StaticResource WpfInputBaseBrush}" />
+		<Setter Property="ItemsPanel">
+			<Setter.Value>
+				<ItemsPanelTemplate>
+					<c1tb:C1ToolbarGroupPanel />
+				</ItemsPanelTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Margin" Value="{StaticResource ToolbarGroupMargin}" />
+		<Setter Property="Padding" Value="{StaticResource ToolbarGroupPadding}" />
+		<Setter Property="MinWidth" Value="64" />		
+		<Setter Property="BorderThickness" Value="{StaticResource GeneralThickness}" />		
+    <Setter Property="HorizontalContentAlignment" Value="Left" />
+	<Setter Property="VerticalContentAlignment" Value="Top" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="c1tb:C1ToolbarGroup">
+					<Grid>
+						<c1:C1BrushBuilder x:Name="BackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource ToolbarGroupBackground}" DesignColor="{StaticResource BaseColor}" />
+						<c1:C1BrushBuilder x:Name="HeaderBackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource ToolbarGroupHeaderBackground}" DesignColor="{StaticResource BaseColor}" />
+						<c1:C1BrushBuilder x:Name="InnerBorderBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource InnerBorderBrush}" DesignColor="{StaticResource BaseColor}" />
+						<c1:C1BrushBuilder x:Name="PopupBackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource PopupBackgroundBrush}" DesignColor="{StaticResource BaseColor}" />
+						<c1:C1BrushBuilder x:Name="PopupBorderBrush" Input="{TemplateBinding BorderBrush}" DesignBrush="{StaticResource ToolbarGroupBorderBrush}" DesignColor="{StaticResource BorderColor}" />
+						<Grid x:Name="Normal">
+							<Border x:Name="BackgroundElement" Background="{Binding ElementName=BackgroundBrush, Path=Output}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{StaticResource ToolbarGroupCornerRadius}">
+								<Border x:Name="InnerBorderElement" BorderBrush="{Binding ElementName=InnerBorderBrush, Path=Output}" BorderThickness="{StaticResource ToolbarGroupInnerBorderThickness}" CornerRadius="{StaticResource ToolbarGroupInnerCornerRadius}">
+									<Grid x:Name="NormalGrid">
+										<Grid.RowDefinitions>
+											<RowDefinition Height="*" />
+											<RowDefinition Height="Auto" />
+										</Grid.RowDefinitions>
+                    <ItemsPresenter x:Name="Items" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Grid.Row="0" />
+										<Border x:Name="HeaderBackgroundElement" Grid.Row="1" Background="{TemplateBinding Background}" CornerRadius="{StaticResource ToolbarGroupHeaderCornerRadius}">
+				                     		<Grid>
+                        <Grid.ColumnDefinitions>
+                          <ColumnDefinition />
+                          <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+												<ContentPresenter HorizontalAlignment="Center" Content="{TemplateBinding Header}" />
+                        <Button x:Name="DialogLauncher" Visibility="Collapsed" Grid.Column="1" Style="{StaticResource C1ToolbarDialogBoxLauncherButton}">
+                            <c1:C1PathIcon Data="M6,3 L7,3 L7,4 L7,6 L7,7 L6,7 L4,7 L3,7 L3,6 L4,6 L4,4 L6,4 z M3,3 L4,3 L4,4 L3,4 z M0,0 L1,0 L6,0 L6,1 L1,1 L1,6 L0,6 z" Width="16" Height="16" StrokeThickness="1" Foreground="Black" />
+                        </Button>
+											</Grid>
+										</Border>
+									</Grid>
+								</Border>
+							</Border>
+						</Grid>
+						<Grid x:Name="Collapsed" Visibility="Collapsed">
+							<c1:C1DropDownButton x:Name="DropDown" Background="{TemplateBinding Background}" Foreground="{TemplateBinding Foreground}" BorderBrush="{TemplateBinding BorderBrush}" MouseOverBrush="{TemplateBinding MouseOverBrush}" PressedBrush="{TemplateBinding PressedBrush}" HeaderBackground="{TemplateBinding Background}" HeaderForeground="{TemplateBinding Foreground}" Style="{StaticResource groupDropDown}" VerticalHeaderAlignment="Center" HorizontalHeaderAlignment="Center">
+								<c1:C1DropDownButton.Header>
+                  				<Grid>
+									<TextBlock Grid.Row="1" Text="{TemplateBinding Header}" TextTrimming="WordEllipsis" TextAlignment="Center" VerticalAlignment="Center" />
+								</Grid>
+								</c1:C1DropDownButton.Header>
+								<c1:C1DropDownButton.Content>
+									<Border Background="{StaticResource PopupBackgroundBrush}" BorderBrush="{Binding ElementName=PopupBorderBrush, Path=Output}" BorderThickness="{StaticResource GeneralThickness}" CornerRadius="{StaticResource PopupCornerRadius}">
+										<Grid x:Name="CollapsedGrid" Background="{Binding ElementName=PopupBackgroundBrush, Path=Output}">
+											<Grid.RowDefinitions>
+												<RowDefinition />
+												<RowDefinition Height="Auto" />
+											</Grid.RowDefinitions>
+											<Border Grid.Row="1" Background="{Binding ElementName=HeaderBackgroundBrush, Path=Output}" CornerRadius="{StaticResource ToolbarGroupHeaderCornerRadius}">
+						                        <Grid>
+							                        <Grid.ColumnDefinitions>
+							                          <ColumnDefinition />
+							                          <ColumnDefinition Width="Auto" />
+							                        </Grid.ColumnDefinitions>
+
+													<TextBlock Text="{TemplateBinding Header}" TextTrimming="WordEllipsis" TextAlignment="Center" VerticalAlignment="Center" />
+								        		                <Button x:Name="DialogLauncherCollapsed" Visibility="Visible" Grid.Column="1" Style="{StaticResource C1ToolbarDialogBoxLauncherButton}">
+                                                                    <c1:C1PathIcon Data="M6,3 L7,3 L7,4 L7,6 L7,7 L6,7 L4,7 L3,7 L3,6 L4,6 L4,4 L6,4 z M3,3 L4,3 L4,4 L3,4 z M0,0 L1,0 L6,0 L6,1 L1,1 L1,6 L0,6 z" Width="16" Height="16" StrokeThickness="1" Foreground="Black" />
+											               	</Button>
+												</Grid>
+											</Border>
+										</Grid>
+									</Border>
+								</c1:C1DropDownButton.Content>
+							</c1:C1DropDownButton>
+						</Grid>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<!-- C1Toolbar -->
+	<Style TargetType="c1tb:C1Toolbar">
+        
+        
+        <Setter Property="Background" Value="{StaticResource WpfInputBaseBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource WpfInputBorderBrush}" />
+        <Setter Property="MouseOverBrush" Value="{StaticResource WpfInputMouseOverBrush}" />
+        <Setter Property="PressedBrush" Value="{StaticResource WpfInputSelectedBackground}" />
+        <Setter Property="FocusBrush" Value="{StaticResource WpfInputFocusBrush}" />
+        <Setter Property="Padding" Value="{StaticResource ToolbarPadding}" />
+		<Setter Property="BorderThickness" Value="{StaticResource GeneralThickness}" />
+		<Setter Property="Foreground" Value="{StaticResource ToolbarForegroundBrush}" />
+		<Setter Property="HorizontalAlignment" Value="Stretch" />
+		<Setter Property="ItemsPanel">
+			<Setter.Value>
+				<ItemsPanelTemplate>
+					<c1tb:C1ToolbarPanel />
+				</ItemsPanelTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="c1tb:C1Toolbar">
+					<Grid>
+						<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}" CornerRadius="{StaticResource ToolbarCornerRadius}">
+							<Grid Margin="{TemplateBinding Padding}">
+								<ItemsPresenter x:Name="itemsPresenter" />
+								<c1tb:C1ToolbarTabControl x:Name="tabControl" Visibility="Collapsed" />
+							</Grid>
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+    <!-- C1SimplifiedRibbon -->
+    <Style TargetType="c1tb:C1SimplifiedRibbon">
+        <Setter Property="Background" Value="{StaticResource SimplifiedToolbarBackground}" />
+        <Setter Property="BorderBrush" Value="{StaticResource WpfInputBorderBrush}" />
+        <Setter Property="Padding" Value="{StaticResource ToolbarPadding}" />
+        <Setter Property="BorderThickness" Value="{StaticResource GeneralThickness}" />
+        <Setter Property="Foreground" Value="{StaticResource ToolbarForegroundBrush}" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="MarqueeBrush" Value="{StaticResource SimplifiedRibbonMarqueeBrush}" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <c1tb:C1ToolbarPanel />
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1tb:C1SimplifiedRibbon">
+                    <Grid>
+                        <Border Background="{TemplateBinding Background}" >
+                            <Grid Margin="{TemplateBinding Padding}">
+                                <ItemsPresenter x:Name="SimplifiedItemsPresenter" Visibility="Collapsed"/>
+                                <c1tb:C1SimplifiedTabControl x:Name="SimplifiedTabControl" Visibility="Visible" />
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

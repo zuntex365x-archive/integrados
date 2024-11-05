@@ -1,0 +1,3599 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>C1.WPF.FlexViewer.4.5.2</name>
+  </assembly>
+  <members>
+    <member name="T:C1.WPF.FlexViewer.FlexViewerContentAlignment">
+      <summary>
+            Describes the content alignment for the non-paginated mode.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerContentAlignment.Near">
+      <summary>
+            The contents is aligned to the left.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerContentAlignment.Far">
+      <summary>
+            The contents is aligned to the right.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerContentAlignment.Center">
+      <summary>
+            The contents is centered.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.FlexViewerErrorOperation">
+      <summary>
+            Describes the operation being executed when the error occurred.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerErrorOperation.Generate">
+      <summary>
+            An exception occurred during the Generate operation.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerErrorOperation.Export">
+      <summary>
+            An exception occurred during the Export operation.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerErrorOperation.CustomAction">
+      <summary>
+            An exception occurred during the custom action execution.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerErrorOperation.FindAction">
+      <summary>
+            An exception occurred during the find action execution.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerErrorOperation.Print">
+      <summary>
+            An exception occurred during the Print operation.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerErrorOperation.Unexpected">
+      <summary>
+            An exception occurred at an unexpected moment.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.FlexViewerRotateView">
+      <summary>
+            Specifies the view rotation angle.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerRotateView.NoRotation">
+      <summary>
+            Rotation is not applied to the view.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerRotateView.Rotation90Clockwise">
+      <summary>
+            Rotates the view by 90 degrees clockwise.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerRotateView.Rotation90CounterClockwise">
+      <summary>
+            Rotates the view by 90 degrees counter-clockwise.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerRotateView.Rotation180">
+      <summary>
+            Rotates the view by 180 degrees.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.FlexViewerScrollBars">
+      <summary>
+            Specifies which scroll bars will be visible on a control.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerScrollBars.None">
+      <summary>
+            No scroll bars are shown.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerScrollBars.Horizontal">
+      <summary>
+            Only horizontal scroll bars are shown.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerScrollBars.Vertical">
+      <summary>
+            Only vertical scroll bars are shown.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerScrollBars.Both">
+      <summary>
+            Both horizontal and vertical scroll bars are shown.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.FlexViewerSearchAction">
+      <summary>
+            Indicates which action related to searching text has occurred.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerSearchAction.ActivateSearch">
+      <summary>
+            Occurs when the search toolbar should be activated.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerSearchAction.CancelSearch">
+      <summary>
+            Occurs when the current search should be cancelled.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerSearchAction.SearchNext">
+      <summary>
+            Occurs when searching for the next occurrence.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerSearchAction.SearchPrevious">
+      <summary>
+            Occurs when searching for the previous occurrence.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerSearchAction.SearchStarted">
+      <summary>
+            Occurs when search is just started.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerSearchAction.SearchCompleted">
+      <summary>
+            Occurs when search is completed.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.FlexViewerToolFrameContent">
+      <summary>
+            Indicates which content should be displayed in the tool frame.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerToolFrameContent.None">
+      <summary>
+            The tool frame is not displayed.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerToolFrameContent.Parameters">
+      <summary>
+            The Parameters panel is shown in the tool frame.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerToolFrameContent.Outlines">
+      <summary>
+            The Outlines panel is shown in the tool frame.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerToolFrameContent.PageSettings">
+      <summary>
+            The Page Settings panel is shown in the tool frame.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.FlexViewerSearchToolbarPosition">
+      <summary>
+            Specifies position of the Search toolbar.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerSearchToolbarPosition.AbovePreview">
+      <summary>
+            Search toolbar appears above the preview pane.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerSearchToolbarPosition.BelowPreview">
+      <summary>
+            Search toolbar appears below the preview pane.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.FlexViewerThumbScrollDirection">
+      <summary>
+            Specifies the direction of scrolling for the Thumbnails view.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerThumbScrollDirection.Vertical">
+      <summary>
+            Thumbnails can be scrolled vertically.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerThumbScrollDirection.Horizontal">
+      <summary>
+            Thumbnails can be scrolled horizontally.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.FlexViewerZoomMode">
+      <summary>
+            Describes the supported zoom modes of C1FlexViewerPane control.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerZoomMode.ActualSize">
+      <summary>
+            Pages are shown in actual size.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerZoomMode.PageWidth">
+      <summary>
+            Pages are zoomed in or out as necessary to fit the page width in the preview window.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerZoomMode.WholePage">
+      <summary>
+            Pages are zoomed in or out as necessary to fit the whole page in the preview window.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.FlexViewerZoomMode.Custom">
+      <summary>
+            Custom zoom mode. The actual zoom factor is determined by the value of the
+            <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ZoomFactor" />
+            property.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.ContextMenuPopupEventArgs">
+      <summary>
+            Provides data for the <see cref="E:C1.WPF.FlexViewer.C1FlexViewerPane.ContextMenuPopup" /> event.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.ContextMenuPopupEventArgs.#ctor">
+      <summary>
+            Initializes a new instance of a ContextMenuPopupEventArgs.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.ContextMenuPopupEventArgs.#ctor(System.Double,System.Double)">
+      <summary>
+            Initializes a new instance of a ContextMenuPopupEventArgs.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.ContextMenuPopupEventArgs.FromKeyboard">
+      <summary>
+            Gets a value indicating if the event came from the keyboard.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.ContextMenuPopupEventArgs.X">
+      <summary>
+            Gets the X screen coordinate, in DIPs.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.ContextMenuPopupEventArgs.Y">
+      <summary>
+            Gets the Y screen coordinate, in DIPs.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.OperationErrorEventArgs">
+      <summary>
+            Provides data for the <see cref="E:C1.WPF.FlexViewer.C1FlexViewerPane.OperationError" /> event.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.OperationErrorEventArgs.#ctor(C1.WPF.FlexViewer.C1FlexViewerPane,System.Exception,C1.WPF.FlexViewer.FlexViewerErrorOperation)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.FlexViewer.OperationErrorEventArgs" /> class.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.OperationErrorEventArgs.Exception">
+      <summary>
+            Gets the exception that represents the error.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.OperationErrorEventArgs.Operation">
+      <summary>
+            Gets the operation being executed when the error occurred.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.OperationErrorEventArgs.StatusText">
+      <summary>
+            Gets or sets a string displayed as StatusText.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.OperationErrorEventArgs.ThrowException">
+      <summary>
+            Gets or sets a value indicating whether to throw the exception.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.OperationErrorEventArgs.Handled">
+      <summary>
+            Gets or sets a value indicating if no additional actions are required.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.SearchActionEventArgs">
+      <summary>
+            Provides data for the <see cref="E:C1.WPF.FlexViewer.C1FlexViewerPane.SearchAction" /> event.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.SearchActionEventArgs.#ctor(C1.WPF.FlexViewer.FlexViewerSearchAction)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.FlexViewer.SearchActionEventArgs" /> class.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.SearchActionEventArgs.Action">
+      <summary>
+            Gets a value indicating which action has occurred.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.SearchActionEventArgs.Handled">
+      <summary>
+            Gets or sets whether the event has been processed.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.HyperlinkClickedEventArgs">
+      <summary>
+            Provides data for the <see cref="E:C1.WPF.FlexViewer.C1FlexViewerPane.HyperlinkClicked" /> event.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.HyperlinkClickedEventArgs.#ctor(C1.WPF.Document.C1Hyperlink)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.FlexViewer.HyperlinkClickedEventArgs" /> class.
+            </summary>
+      <param name="hyperlink">Hyperlink data.</param>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.HyperlinkClickedEventArgs.Hyperlink">
+      <summary>
+            Gets the hyperlink associated with the event.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.HyperlinkHoveredEventArgs">
+      <summary>
+            Provides data for the <see cref="E:C1.WPF.FlexViewer.C1FlexViewerPane.HyperlinkHovered" /> event.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.HyperlinkHoveredEventArgs.#ctor(C1.WPF.Document.C1Hyperlink)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.FlexViewer.HyperlinkHoveredEventArgs" /> class.
+            </summary>
+      <param name="hyperlink">Hyperlink data.</param>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.HyperlinkHoveredEventArgs.Hyperlink">
+      <summary>
+            Gets the hyperlink associated with the event.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.OutlineClickedEventArgs">
+      <summary>
+            Provides data for the <see cref="E:C1.WPF.FlexViewer.C1FlexViewerPane.OutlineClicked" /> event.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.OutlineClickedEventArgs.#ctor(C1.WPF.Document.C1LinkTargetBase)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.FlexViewer.OutlineClickedEventArgs" /> class.
+            </summary>
+      <param name="linkTarget">The outline target.</param>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.OutlineClickedEventArgs.LinkTarget">
+      <summary>
+            Gets or sets the target for the clicked outline.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.FlexViewerException">
+      <summary>
+            An exception that is fired when errors occur in C1FlexViewer.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.FlexViewerException.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of <see cref="T:C1.WPF.FlexViewer.FlexViewerException" /> control.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.C1FlexViewer">
+      <summary>
+            Represents a control showing the associated document with additional tools.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewer.#ctor">
+      <summary>
+            Initializes the new instance of the <see cref="T:C1.WPF.FlexViewer.C1FlexViewer" /> control.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.Pane">
+      <summary>
+            Gets the hosted <see cref="T:C1.WPF.FlexViewer.C1FlexViewerPane" /> control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewer.FocusPane">
+      <summary>
+            Moves input focus to the hosted <see cref="T:C1.WPF.FlexViewer.C1FlexViewerPane" /> control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewer.OnApplyTemplate">
+      <inheritdoc />
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewer.OnVisualParentChanged(System.Windows.DependencyObject)">
+      <summary>
+            Invoked when the Parent of this element is changed.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.DocumentListCombo">
+      <summary>
+            Gets a customizable instance of C1ComboBox which can be used, for example, for displaying the list of reports.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.DocumentListVisible">
+      <summary>
+            Specifies whether the Document List combobox is visible.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.DocumentListVisibleProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.DocumentListVisible" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.DocumentListWidth">
+      <summary>
+            The width of the Document List combobox.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.DocumentListWidthProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.DocumentListWidth" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.OpenButtonVisible">
+      <summary>
+            Specifies whether the Open button is visible.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.OpenButtonVisibleProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.OpenButtonVisible" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.OpenButtonToolTip">
+      <summary>
+            Specifies the tooltip for the Open button.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.OpenButtonToolTipProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.OpenButtonToolTip" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.CloseButtonVisible">
+      <summary>
+            Specifies whether the Close button is visible.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.CloseButtonVisibleProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.CloseButtonVisible" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.CloseButtonToolTip">
+      <summary>
+            Specifies the tooltip for the Close button.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.CloseButtonToolTipProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.CloseButtonToolTip" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.BackwardForwardVisible">
+      <summary>
+            Specifies whether the Backward and Forward navigation buttons are visible.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.BackwardForwardVisibleProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.BackwardForwardVisible" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.MinToolFrameWidth">
+      <summary>
+            The minimal width of the tool frame.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.MinToolFrameWidthProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.MinToolFrameWidth" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.MinViewerPaneWidth">
+      <summary>
+            The minimal width of the preview pane.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.MinViewerPaneWidthProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.MinViewerPaneWidth" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.SplitterWidth">
+      <summary>
+            The width of the splitter between the tool frame and the preview pane.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.SplitterWidthProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.SplitterWidth" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ToolFrameWidth">
+      <summary>
+            The width of the tool frame.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ToolFrameWidthProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ToolFrameWidth" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ToolFrameVisible">
+      <summary>
+            Indicates whether the Search toolbar is visible.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.OpenExportedFile">
+      <summary>
+            Indicates whether the exported document should be opened for preview.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.OpenExportedFileProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.OpenExportedFile" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.SelectMouseMode">
+      <summary>
+            Indicates whether clicking and dragging with the mouse selects text.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.SelectMouseModeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.SelectMouseMode" /> dependency property. 
+            </summary>
+    </member>
+    <member name="E:C1.WPF.FlexViewer.C1FlexViewer.OpenAction">
+      <summary>
+            Occurs when the user presses the Open button.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.OpenActionEnabled">
+      <summary>
+            Indicates whether the Open action can be executed.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.OpenActionEnabledProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.OpenActionEnabled" /> dependency property. 
+            </summary>
+    </member>
+    <member name="E:C1.WPF.FlexViewer.C1FlexViewer.CloseAction">
+      <summary>
+            Occurs when the user presses the Close button.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.CloseActionEnabled">
+      <summary>
+            Indicates whether the Close action can be executed.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.CloseActionEnabledProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.CloseActionEnabled" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.PageRefreshRate">
+      <summary>
+            The number of pages generated between the viewer refreshes its layout.
+            </summary>
+      <remarks>
+            The bigger this number, the less time it takes to load the whole report, at the loss of some interactivity.
+            </remarks>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.PageRefreshRateProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.PageRefreshRate" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.UseAsyncRendering">
+      <summary>
+            Indicates if the document should be generated asynchronously.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.UseAsyncRenderingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.UseAsyncRendering" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.DocumentSource">
+      <summary>
+            Gets or sets the document source which is used to generate a report.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.DocumentSourceProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.DocumentSource" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.Paginated">
+      <summary>
+            Indicates whether the content should be represented as a set of fixed sized pages.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.PaginatedProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.Paginated" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.RotateView">
+      <summary>
+            Specifies the view rotation angle.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.RotateViewProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.RotateView" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.NonPaginatedContentAlignment">
+      <summary>
+            The alignment of the non-paginated content.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.NonPaginatedContentAlignmentProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.NonPaginatedContentAlignment" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ScrollBars">
+      <summary>
+            Specifies which scroll bars should appear in a <see cref="T:C1.WPF.FlexViewer.C1FlexViewerPane" />.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ScrollBarsProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ScrollBars" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.Continuous">
+      <summary>
+            Indicates whether to show document pages continuously.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ContinuousProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.Continuous" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.WideLayout">
+      <summary>
+            Indicates whether a multi-column layout is applied to wide reports by default.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.WideLayoutProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.WideLayout" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.FacingPages">
+      <summary>
+            Indicates whether to show facing pages side by side, the first page on the right.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.FacingPagesProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.FacingPages" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.PageRows">
+      <summary>
+            The number of page rows shown in non-continuous mode.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.PageRowsProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.PageRows" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.PageColumns">
+      <summary>
+            The number of page columns shown.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.PageColumnsProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.PageColumns" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ZoomMode">
+      <summary>
+            Specifies the preview zoom mode.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ZoomModeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ZoomMode" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ZoomFactor">
+      <summary>
+            Specifies the zoom factor (1.0 is actual size).
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ZoomFactorProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ZoomFactor" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.MinZoomFactor">
+      <summary>
+            The minimum allowed zoom factor.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.MinZoomFactorProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.MinZoomFactor" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.MaxZoomFactor">
+      <summary>
+            The maximum allowed zoom factor.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.MaxZoomFactorProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.MaxZoomFactor" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.LinkOverpan">
+      <summary>
+            The size of margin when scrolling to a link or bookmark.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.LinkOverpanProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.LinkOverpan" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.PageOverpan">
+      <summary>
+            The size of the previous page that remains visible when the user navigates to the next page.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.PageOverpanProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.PageOverpan" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.PageSpacing">
+      <summary>
+            The amount of padding between pages in the preview.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.PageSpacingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.PageSpacing" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.PageAreaPadding">
+      <summary>
+            The amount of padding between pages and the preview window edges.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.PageAreaPaddingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.PageAreaPadding" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.LoadingPageSize">
+      <summary>
+            The size of a page which is not loaded yet.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.LoadingPageSizeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.LoadingPageSize" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.PageAreaBackground">
+      <summary>
+            The brush used to fill the area behind the document pages.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.PageAreaBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.PageAreaBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.PageBackground">
+      <summary>
+            The brush used to fill the document pages before drawing the content.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.PageBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.PageBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.LoadingPageForeground">
+      <summary>
+            The brush used to draw the message on a page which is not loaded yet.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.LoadingPageForegroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.LoadingPageForeground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.FindMatchHighlightBrush">
+      <summary>
+            The brush used to highlight each find match except the active one.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.FindMatchHighlightBrushProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.FindMatchHighlightBrush" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ActiveFindMatchHighlightBrush">
+      <summary>
+            The brush used to highlight the active find match.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ActiveFindMatchHighlightBrushProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ActiveFindMatchHighlightBrush" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.SelectionHighlightBrush">
+      <summary>
+            The brush used to highlight text selection.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.SelectionHighlightBrushProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.SelectionHighlightBrush" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.TouchGripBackground">
+      <summary>
+            The brush used for filling background of a grip handle for text selection with touch.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.TouchGripBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.TouchGripBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.TouchGripBorderBrush">
+      <summary>
+            The brush used for drawing border of a selection grip handle.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.TouchGripBorderBrushProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.TouchGripBorderBrush" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbAreaBackground">
+      <summary>
+            The brush used to fill the area behind the page thumbnails.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ThumbAreaBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbAreaBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbHotBackground">
+      <summary>
+            The background brush of a 'hot' thumbnail.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ThumbHotBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbHotBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbSelectedBackground">
+      <summary>
+            The background brush of a selected thumbnail.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ThumbSelectedBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbSelectedBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPressedBackground">
+      <summary>
+            The background brush of a pressed thumbnail.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ThumbPressedBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPressedBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageBackground">
+      <summary>
+            The brush used to fill the area of a thumbnail where the page is drawn.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageNumBackground">
+      <summary>
+            The brush used to fill the page number background on thumbnails.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageNumBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageNumBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageNumForeground">
+      <summary>
+            The brush used to draw the page number on thumbnails.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageNumForegroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageNumForeground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.AllowThumbView">
+      <summary>
+            Specifies whether the Thumbnails view can be activated.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.AllowThumbViewProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.AllowThumbView" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbViewMode">
+      <summary>
+            Indicates if the Thumbnails view should be activated whenever possible.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ThumbViewModeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbViewMode" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbScrollDirection">
+      <summary>
+            Specifies the direction of scrolling for the Thumbnails view.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ThumbScrollDirectionProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbScrollDirection" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPagePreviewSize">
+      <summary>
+            The amount of padding between pages in the preview.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ThumbPagePreviewSizeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPagePreviewSize" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbAreaPadding">
+      <summary>
+            The amount of padding between the thumbnails and the preview window edges.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ThumbAreaPaddingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbAreaPadding" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPadding">
+      <summary>
+            The amount of padding within a page thumbnail.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ThumbPaddingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPadding" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageNumSize">
+      <summary>
+            The size of the page number area within a thumbnail.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageNumSizeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageNumSize" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageNumFontSize">
+      <summary>
+            The size of the font used for drawing the page number in thumbnails.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageNumFontSizeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageNumFontSize" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageNumSpacing">
+      <summary>
+            The amount of spacing between the page number and page content in thumbnails.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageNumSpacingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ThumbPageNumSpacing" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.OpenCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that implements the Open action.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.CloseCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that implements the Close action.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.PrintCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that opens the Print dialog.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ExportCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that opens the Export dialog.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.RefreshCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that refreshes/reloads the report.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.StopOperationCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that tries to stop the current operation.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.SelectAllCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that selects all text in the document.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.DeselectAllCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that deselects all text in the document.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.CopyTextCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that copies the selected text to Clipboard.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.FirstPageCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that goes to the first page.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.PreviousPageCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that goes to the previous page.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.NextPageCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that goes to the next page.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.LastPageCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that goes to the last page.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.NavigateBackwardCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that navigates to the previous position.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.NavigateForwardCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that navigates to the next position.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ActualSizeCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that sets zoom to 100%.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.PageWidthCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that sets zoom to page width.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.WholePageCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that sets zoom to whole page.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ZoomInCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that performs the zoom-in operation.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ZoomOutCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that performs the zoom-out operation.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.RotateClockwiseCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that rotates pages by 90 degrees clockwise relative to the current orientation.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.RotateCounterClockwiseCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that rotates pages by 90 degrees counter-clockwise relative to the current orientation.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.OnePageViewCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that sets layout to one page column view.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.FacingPagesCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that shows facing pages side by side.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.TwoPagesViewCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that sets layout to two page columns view.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.FourPagesViewCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that sets layout to four page columns view.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.UseIncrementalSearch">
+      <summary>
+            Indicates if "search as you type" method of search should be used.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.UseIncrementalSearchProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.UseIncrementalSearch" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.SearchToolbarPosition">
+      <summary>
+            Specifies position of the Search toolbar.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.SearchToolbarPositionProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.SearchToolbarPosition" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.MatchCase">
+      <summary>
+            Indicating if search should match case.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.MatchCaseProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.MatchCase" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.MatchWholeWords">
+      <summary>
+            Indicates if search should match the whole words.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.MatchWholeWordsProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.MatchWholeWords" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.CurrentPageVisibleOnSearchToolbar">
+      <summary>
+            Indicates if the "Current Page" button is visible on the Search toolbar.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.CurrentPageVisibleOnSearchToolbarProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.CurrentPageVisibleOnSearchToolbar" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.LimitSearchToCurrentPage">
+      <summary>
+            Indicates whether the text search should be limited to current page.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.LimitSearchToCurrentPageProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.LimitSearchToCurrentPage" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.CanShowSearchToolbar">
+      <summary>
+            Indicates whether the Search toolbar can be shown.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.SearchToolbarVisible">
+      <summary>
+            Indicates whether the Search toolbar is visible.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewer.ShowSearchToolbar">
+      <summary>
+            Shows the Search toolbar, if possible.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewer.HideSearchToolbar">
+      <summary>
+            Hides the Search toolbar.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.InputFieldWidth">
+      <summary>
+            The width of numeric/string/enumeration input fields on the Parameters and Page Settings panels.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.InputFieldWidthProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.InputFieldWidth" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.MultiValueFieldHeight">
+      <summary>
+            Specifies the height of the multi-value input fields on the Parameters panel.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.MultiValueFieldHeightProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.MultiValueFieldHeight" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.ToolFrameContent">
+      <summary>
+            Specifies which content should be displayed in the tool frame.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewer.ToolFrameContentProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewer.ToolFrameContent" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.CanShowOutlines">
+      <summary>
+            Indicates whether the Outlines panel can be shown (if the document has outlines).
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.CanShowPageSettings">
+      <summary>
+            Indicates whether the Page Settings panel can be shown.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewer.CanShowParameters">
+      <summary>
+            Indicates whether the Parameters panel can be shown.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.C1FlexViewerPane">
+      <summary>
+            Represents a control showing the preview of the associated document.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.#ctor">
+      <summary>
+            Initializes a new instance of <see cref="T:C1.WPF.FlexViewer.C1FlexViewerPane" /> control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.Dispose(System.Boolean)">
+      <summary>
+            Clean up any resources being used.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.Busy">
+      <summary>
+            Indicates whether the viewer pane is currently busy.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.BusyProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.Busy" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.StatusText">
+      <summary>
+            The string that is displayed as the current status string.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.StatusTextProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.StatusText" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.OpenActionEnabled">
+      <summary>
+            Indicates whether the Open action can be executed.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.OpenActionEnabledProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.OpenActionEnabled" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.CloseActionEnabled">
+      <summary>
+            Indicates whether the Close action can be executed.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.CloseActionEnabledProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.CloseActionEnabled" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.OpenExportedFile">
+      <summary>
+            Indicates whether the exported document should be opened for preview.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.OpenExportedFileProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.OpenExportedFile" /> dependency property.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.Export">
+      <summary>
+            Saves the currently loaded document, allowing the user to select
+            the file name and the output format.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.FocusFirstElement(System.Boolean)">
+      <summary>
+            Moves focus to the first or the last element of the control in tab order.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.WindowClassName">
+      <summary>
+            Gets the name of the window class.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.OpenCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that implements the Open action.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.CloseCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that implements the Close action.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PrintCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that opens the Print dialog.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ExportCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that opens the Export dialog.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.RefreshCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that refreshes/reloads the report.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.StopOperationCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that tries to stop the current operation.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.SelectAllCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that selects all text in the document.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.DeselectAllCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that deselects all text in the document.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.CopyTextCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that copies the selected text to Clipboard.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.FirstPageCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that goes to the first page.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PreviousPageCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that goes to the previous page.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.NextPageCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that goes to the next page.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.LastPageCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that goes to the last page.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.NavigateBackwardCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that navigates to the previous position.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.NavigateForwardCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that navigates to the next position.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ActualSizeCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that sets zoom to 100%.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageWidthCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that sets zoom to page width.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.WholePageCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that sets zoom to whole page.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ZoomInCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that performs the zoom-in operation.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ZoomOutCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that performs the zoom-out operation.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.RotateClockwiseCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that rotates pages by 90 degrees clockwise relative to the current orientation.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.RotateCounterClockwiseCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that rotates pages by 90 degrees counter-clockwise relative to the current orientation.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.OnePageViewCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that sets layout to one page column view.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.FacingPagesCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that shows facing pages side by side.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.TwoPagesViewCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that sets layout to two page columns view.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.FourPagesViewCommand">
+      <summary>
+            The <see cref="T:System.Windows.Input.ICommand" /> that sets layout to four page columns view.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.UpdateAllCommands">
+      <summary>
+            Updates the state of the viewer commands.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.RotateView">
+      <summary>
+            Specifies the view rotation angle.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.RotateViewProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.RotateView" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.NonPaginatedContentAlignment">
+      <summary>
+            The alignment of the non-paginated content.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.NonPaginatedContentAlignmentProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.NonPaginatedContentAlignment" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ScrollBars">
+      <summary>
+            Specifies which scroll bars should appear in a <see cref="T:C1.WPF.FlexViewer.C1FlexViewerPane" />.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ScrollBarsProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ScrollBars" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.Padding">
+      <summary>
+            The amount of outer padding within the control.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.PaddingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.Padding" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.Continuous">
+      <summary>
+            Indicates whether to show document pages continuously.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ContinuousProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.Continuous" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.WideLayout">
+      <summary>
+            Indicates whether a multi-column layout is applied to wide reports by default.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.WideLayoutProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.WideLayout" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.FacingPages">
+      <summary>
+            Indicates whether to show facing pages side by side, the first page on the right.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.FacingPagesProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.FacingPages" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageRows">
+      <summary>
+            The number of page rows shown in non-continuous mode.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.PageRowsProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageRows" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageColumns">
+      <summary>
+            The number of page columns shown.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.PageColumnsProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageColumns" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ZoomMode">
+      <summary>
+            Specifies the preview zoom mode.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ZoomModeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ZoomMode" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ZoomFactor">
+      <summary>
+            Specifies the zoom factor (1.0 is actual size).
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ZoomFactorProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ZoomFactor" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.MinZoomFactor">
+      <summary>
+            The minimum allowed zoom factor.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.MinZoomFactorProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.MinZoomFactor" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.MaxZoomFactor">
+      <summary>
+            The maximum allowed zoom factor.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.MaxZoomFactorProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.MaxZoomFactor" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.LinkOverpan">
+      <summary>
+            The size of margin when scrolling to a link or bookmark.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.LinkOverpanProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.LinkOverpan" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageOverpan">
+      <summary>
+            The size of the previous page that remains visible when the user navigates to the next page.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.PageOverpanProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageOverpan" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageSpacing">
+      <summary>
+            The amount of padding between pages in the preview.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.PageSpacingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageSpacing" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageAreaPadding">
+      <summary>
+            The amount of padding between pages and the preview window edges.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.PageAreaPaddingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageAreaPadding" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.LoadingPageSize">
+      <summary>
+            The size of a page which is not loaded yet.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.LoadingPageSizeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.LoadingPageSize" /> dependency property.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.DoZoomIn">
+      <summary>
+            Zooms in.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.DoZoomOut">
+      <summary>
+            Zooms out.
+            </summary>
+    </member>
+    <member name="E:C1.WPF.FlexViewer.C1FlexViewerPane.PropertyChanged">
+      <summary>
+            Occurs when a property of the <see cref="T:C1.WPF.FlexViewer.C1FlexViewerPane" /> that is not inherited from the base class changes.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.OnPropertyChanged(System.String)">
+      <summary>
+            Raises the PropertyChanged event.
+            </summary>
+      <param name="propertyName">The name of the changed property.</param>
+    </member>
+    <member name="E:C1.WPF.FlexViewer.C1FlexViewerPane.OpenAction">
+      <summary>
+            Occurs when the user presses the Ctrl-O keys.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.OnOpenAction(System.EventArgs)">
+      <summary>
+            Raises the OpenAction event on the preview pane.
+            </summary>
+      <param name="e">A <see cref="T:System.EventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="E:C1.WPF.FlexViewer.C1FlexViewerPane.CloseAction">
+      <summary>
+            Occurs when the user presses the Ctrl-F4 keys.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.OnCloseAction(System.EventArgs)">
+      <summary>
+            Raises the CloseAction event on the preview pane.
+            </summary>
+      <param name="e">A <see cref="T:System.EventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="E:C1.WPF.FlexViewer.C1FlexViewerPane.ContextMenuPopup">
+      <summary>
+            Occurs when the user right-clicked <see cref="T:C1.WPF.FlexViewer.C1FlexViewerPane" /> to display the context menu.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.OnContextMenuPopup(System.Boolean,System.Int32,System.Int32)">
+      <summary>
+            Raises the ContextMenuPopup event.
+            </summary>
+    </member>
+    <member name="E:C1.WPF.FlexViewer.C1FlexViewerPane.LongOperation">
+      <summary>
+            Occurs periodically when a long operation is in progress.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.OnLongOperation(C1.WPF.Document.LongOperationEventArgs)">
+      <summary>
+            Raises the LongOperation event on the preview pane.
+            </summary>
+      <param name="e">A <see cref="T:C1.WPF.Document.LongOperationEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="E:C1.WPF.FlexViewer.C1FlexViewerPane.OperationError">
+      <summary>
+            Occurs in case of an exception thrown during a report operation, such as Generate or Export.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.OnOperationError(C1.WPF.FlexViewer.OperationErrorEventArgs)">
+      <summary>
+            Raises the OperationError event on the preview pane.
+            </summary>
+      <param name="e">A <see cref="T:C1.WPF.FlexViewer.OperationErrorEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="E:C1.WPF.FlexViewer.C1FlexViewerPane.SearchAction">
+      <summary>
+            Occurs when the user presses Ctrl-F, F3 or Shift-F3 keys.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.OnSearchAction(C1.WPF.FlexViewer.SearchActionEventArgs)">
+      <summary>
+            Raises the SearchAction event on the preview pane.
+            </summary>
+      <param name="e">A <see cref="T:C1.WPF.FlexViewer.SearchActionEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="E:C1.WPF.FlexViewer.C1FlexViewerPane.HyperlinkClicked">
+      <summary>
+            Occurs when the user clicked some active element, such as a hyperlink or expanding/collapsing icon.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.OnHyperlinkClicked(C1.WPF.FlexViewer.HyperlinkClickedEventArgs)">
+      <summary>
+            Raises the HyperlinkClicked event on the preview pane.
+            </summary>
+      <param name="e">A <see cref="T:C1.WPF.FlexViewer.HyperlinkClickedEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="E:C1.WPF.FlexViewer.C1FlexViewerPane.HyperlinkHovered">
+      <summary>
+            Occurs when the mouse pointer hovered some active element, such as a hyperlink or expanding/collapsing icon.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.OnHyperlinkHovered(C1.WPF.FlexViewer.HyperlinkHoveredEventArgs)">
+      <summary>
+            Raises the HyperlinkHovered event on the preview pane.
+            </summary>
+      <param name="e">A <see cref="T:C1.WPF.FlexViewer.HyperlinkHoveredEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="E:C1.WPF.FlexViewer.C1FlexViewerPane.OutlineClicked">
+      <summary>
+            Occurs when the user clicked an outline element.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.OnOutlineClicked(C1.WPF.FlexViewer.OutlineClickedEventArgs)">
+      <summary>
+            Raises the OutlineClicked event on the preview pane.
+            </summary>
+      <param name="e">A <see cref="T:C1.WPF.FlexViewer.OutlineClickedEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageAreaBackground">
+      <summary>
+            The brush used to fill the area behind the document pages.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.PageAreaBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageAreaBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageBackground">
+      <summary>
+            The brush used to fill the document pages before drawing the content.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.PageBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.LoadingPageForeground">
+      <summary>
+            The brush used to draw the message on a page which is not loaded yet.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.LoadingPageForegroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.LoadingPageForeground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.FindMatchHighlightBrush">
+      <summary>
+            The brush used to highlight each find match except the active one.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.FindMatchHighlightBrushProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.FindMatchHighlightBrush" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ActiveFindMatchHighlightBrush">
+      <summary>
+            The brush used to highlight the active find match.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ActiveFindMatchHighlightBrushProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ActiveFindMatchHighlightBrush" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.SelectionHighlightBrush">
+      <summary>
+            The brush used to highlight text selection.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.SelectionHighlightBrushProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.SelectionHighlightBrush" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.TouchGripBackground">
+      <summary>
+            The brush used for filling background of a grip handle for text selection with touch.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.TouchGripBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.TouchGripBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.TouchGripBorderBrush">
+      <summary>
+            The brush used for drawing border of a selection grip handle.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.TouchGripBorderBrushProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.TouchGripBorderBrush" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbAreaBackground">
+      <summary>
+            The brush used to fill the area behind the page thumbnails.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbAreaBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbAreaBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbHotBackground">
+      <summary>
+            The background brush of a 'hot' thumbnail.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbHotBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbHotBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbSelectedBackground">
+      <summary>
+            The background brush of a selected thumbnail.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbSelectedBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbSelectedBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPressedBackground">
+      <summary>
+            The background brush of a pressed thumbnail.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPressedBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPressedBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageBackground">
+      <summary>
+            The brush used to fill the area of a thumbnail where the page is drawn.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageNumBackground">
+      <summary>
+            The brush used to fill the page number background on thumbnails.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageNumBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageNumBackground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageNumForeground">
+      <summary>
+            The brush used to draw the page number on thumbnails.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageNumForegroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageNumForeground" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageRefreshRate">
+      <summary>
+            The number of pages generated between the viewer refreshes its layout.
+            </summary>
+      <remarks>
+            The bigger this number, the less time it takes to load the whole report, at the loss of some interactivity.
+            </remarks>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.PageRefreshRateProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageRefreshRate" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.UseAsyncRendering">
+      <summary>
+            Indicates if the document should be generated asynchronously.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.UseAsyncRenderingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.UseAsyncRendering" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.DocumentSource">
+      <summary>
+            Specifies the document shown by the viewer.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.DocumentSourceProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.DocumentSource" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.Paginated">
+      <summary>
+            Indicates whether the content should be represented as a set of fixed sized pages.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.PaginatedProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.Paginated" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.HasParameters">
+      <summary>
+            Indicates whether the document has visible parameters.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.HasParametersProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.HasParameters" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.HasPages">
+      <summary>
+            Indicates whether the document has some visible content.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.HasPagesProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.HasPages" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.HasWidePages">
+      <summary>
+            Indicates whether the document contains wide pages.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.HasWidePagesProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.HasWidePages" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.SsrsMode">
+      <summary>
+            Indicates whether the document source is SSRS.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.SsrsModeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.SsrsMode" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.Generating">
+      <summary>
+            Indicates whether the document is currently generated.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.GeneratingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.Generating" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageSetCount">
+      <summary>
+            The number of page sets displayed in non-continuous mode.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.PageSetCountProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageSetCount" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageSetNumber">
+      <summary>
+            The number of the current page set for non-continuous mode.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.PageSetNumberProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageSetNumber" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageCount">
+      <summary>
+            The number of pages displayed in the preview.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.PageCountProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageCount" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageNumber">
+      <summary>
+            The number of the currently visible page.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.PageNumberProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageNumber" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageHistoryTracking">
+      <summary>
+            Indicates whether the changes to the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageNumber" /> or <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageSetNumber" /> properties should be collected in history.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.PageHistoryTrackingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.PageHistoryTracking" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.HasBackwardHistory">
+      <summary>
+            Indicates if the user can navigate to the previous position.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.HasBackwardHistoryProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.HasBackwardHistory" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.HasForwardHistory">
+      <summary>
+            Indicates if the user can navigate to the next position.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.HasForwardHistoryProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.HasForwardHistory" /> dependency property.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.NavigateBackward">
+      <summary>
+            Navigates to the previous position.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.NavigateForward">
+      <summary>
+            Navigates to the next position.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.ClearHistory">
+      <summary>
+            Clears the navigation history.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.NavigateToOutlineNode(C1.WPF.Document.OutlineNode)">
+      <summary>
+            Navigates to the specified <see cref="T:C1.WPF.Document.OutlineNode" />.
+            </summary>
+      <param name="outlineNode">An outline node from <see cref="P:C1.WPF.Document.C1Document.Outlines" /> tree.</param>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.SetPageIndex(System.Int32,System.Boolean)">
+      <summary>
+            Sets the 0-based index of the currently visible page.
+            </summary>
+      <param name="pageIndex">The 0-based index of the page.</param>
+      <param name="updateHistory">Specifies whether the previous position should be added to the history.</param>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.SetPageSetIndex(System.Int32,System.Boolean)">
+      <summary>
+            Sets the 0-based index of the current page set in non-continuous mode.
+            </summary>
+      <param name="pageSetIndex">The 0-based index of the page set.</param>
+      <param name="updateHistory">Specifies whether the previous position should be added to the history.</param>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.AllowThumbView">
+      <summary>
+            Specifies whether the Thumbnails view can be activated.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.AllowThumbViewProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.AllowThumbView" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbViewMode">
+      <summary>
+            Indicates if the Thumbnails view should be activated whenever possible.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbViewModeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbViewMode" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbViewActive">
+      <summary>
+            Indicates if the Thumbnails view is currently active.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbViewActiveProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbViewActive" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbScrollDirection">
+      <summary>
+            Specifies the direction of scrolling for the Thumbnails view.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbScrollDirectionProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbScrollDirection" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPagePreviewSize">
+      <summary>
+            The size of a page preview in thumbnail.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPagePreviewSizeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPagePreviewSize" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbAreaPadding">
+      <summary>
+            The amount of padding between the thumbnails and the preview window edges.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbAreaPaddingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbAreaPadding" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPadding">
+      <summary>
+            The amount of padding within a page thumbnail.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPaddingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPadding" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageNumSize">
+      <summary>
+            The size of the page number area within a thumbnail.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageNumSizeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageNumSize" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageNumFontSize">
+      <summary>
+            The size of the font used for drawing the page number in thumbnails.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageNumFontSizeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageNumFontSize" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageNumSpacing">
+      <summary>
+            The amount of spacing between the page number and page content in thumbnails.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageNumSpacingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.ThumbPageNumSpacing" /> dependency property.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.OnDoWork">
+      <inheritdoc />
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.OnRunWorkerCompleted">
+      <inheritdoc />
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.CreateDeviceResources">
+      <summary>
+            Creates the GPU-dependent resources, such as SwapChain and DeviceContext.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.DiscardDeviceResources">
+      <summary>
+            Discards all GPU-dependent resources.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.OnContextMenuOpening(System.Windows.Controls.ContextMenuEventArgs)">
+      <summary>
+            Fires the ContextMenuPopup and ContextMenuOpening events.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.HasSelection">
+      <summary>
+            Indicates whether some text is currently selected.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.HasSelectionProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.HasSelection" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.SelectMouseMode">
+      <summary>
+            Indicates whether clicking and dragging with the mouse selects text.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.SelectMouseModeProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.SelectMouseMode" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.LimitSearchToCurrentPage">
+      <summary>
+            Indicates whether the text search should be limited to current page.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.FlexViewer.C1FlexViewerPane.LimitSearchToCurrentPageProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.FlexViewer.C1FlexViewerPane.LimitSearchToCurrentPage" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.SearchStarted">
+      <summary>
+            Gets a value indicating if search mode is started and you can call the SearchNext and SearchPrevious methods.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.SelectAll">
+      <summary>
+            Selects all text in the document or on the current page (for non-paginated mode).
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.GetSelectionAsText">
+      <summary>
+            Returns the currently selected text.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.CopySelectionToClipboard">
+      <summary>
+            Copies the selected text into the Clipboard.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.ClearSelection">
+      <summary>
+            Removes selection if any exists (not related to search results).
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.ResetSearch">
+      <summary>
+            Stops the search mode and removes highlighting from the found text fragments.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.SearchText(System.String,System.Boolean,System.Boolean,System.Boolean)">
+      <summary>
+            Starts searching text with the specified parameters.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.SearchNext">
+      <summary>
+            Searches for the next occurrence.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.SearchPrevious">
+      <summary>
+            Searches for the previous occurrence.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PrintJobName">
+      <summary>
+            Gets or sets the name for the print job.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PrintQueue">
+      <summary>
+            Gets or sets the <see cref="T:System.Printing.PrintQueue" /> object defining printer to use,
+            can be null to use default printer.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.C1FlexViewerPane.PrintTicket">
+      <summary>
+            Gets or sets the <see cref="T:System.Printing.PrintTicket" /> object defining the print parameters,
+            can be null to use <see cref="P:System.Printing.PrintQueue.DefaultPrintTicket" />.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.C1FlexViewerPane.Print">
+      <summary>
+            Shows the standard print dialog, allowing the user to print the currently loaded document.
+            </summary>
+      <returns>
+        <b>True</b> if the user pressed OK in the dialog,
+            <b>false</b> if the user cancelled the dialog.</returns>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.Resources.C1_FlexViewer">
+      <summary>
+            A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.Culture">
+      <summary>
+            Overrides the current thread's CurrentUICulture property for all
+            resource lookups using this strongly typed resource class.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ApplyParametersButtonText">
+      <summary>
+            Looks up a localized string similar to "Apply Parameters"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ApplySettingsButtonText">
+      <summary>
+            Looks up a localized string similar to "Apply Settings"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.BottomMarginPrompt">
+      <summary>
+            Looks up a localized string similar to "Bottom margin (in inches)".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.CloseButtonTooltip">
+      <summary>
+            Looks up a localized string similar to "Close"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.CloseFileTooltip">
+      <summary>
+            Looks up a localized string similar to "Close File (Ctrl+F4)"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.CloseSearchTooltip">
+      <summary>
+            Looks up a localized string similar to "Hide Search Toolbar"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ContextMenuCopy">
+      <summary>
+            Looks up a localized string similar to "Copy"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ContextMenuSelectTool">
+      <summary>
+            Looks up a localized string similar to "Select Tool"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ContextMenuSelectAll">
+      <summary>
+            Looks up a localized string similar to "Select All"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ContextMenuDeselect">
+      <summary>
+            Looks up a localized string similar to "Deselect"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.EmptyNotValid">
+      <summary>
+            Looks up a localized string similar to "An empty string is not a valid value".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ErrorFmt">
+      <summary>
+            Looks up a localized string similar to "[ERROR]: {0}"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ErrorParsingBool">
+      <summary>
+            Looks up a localized string similar to "Can't convert '{0}' to a boolean value".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ErrorParsingDate">
+      <summary>
+            Looks up a localized string similar to "Can't convert '{0}' to a date value".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ErrorParsingFloat">
+      <summary>
+            Looks up a localized string similar to "Can't convert '{0}' to a float value".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ErrorParsingInt">
+      <summary>
+            Looks up a localized string similar to "Can't convert '{0}' to an integer value".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ErrorParsingNumeric">
+      <summary>
+            Looks up a localized string similar to "Can't convert '{0}' to a numeric value".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ErrorSpacing">
+      <summary>
+            Looks up a localized string similar to "Value must be between 0 and 15".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ExportedFmt">
+      <summary>
+            Looks up a localized string similar to "'{0}' saved to {1}"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ExportingFmt">
+      <summary>
+            Looks up a localized string similar to "Exporting '{0}' to {1} ..."
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ExportTitle">
+      <summary>
+            Looks up a localized string similar to "Export Document to File"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ExportTooltip">
+      <summary>
+            Looks up a localized string similar to "Export to File"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.FacingPagesMenuHeader">
+      <summary>
+            Looks up a localized string similar to "Facing Pages"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.FindLabel">
+      <summary>
+            Looks up a localized string similar to "Find"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.FindNextTooltip">
+      <summary>
+            Looks up a localized string similar to "Find the next occurrence (F3)"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.FindPreviousTooltip">
+      <summary>
+            Looks up a localized string similar to "Find the previous occurrence"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.FindTextTooltip">
+      <summary>
+            Looks up a localized string similar to "Find Text (Ctrl+F)"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.FirstPageTooltip">
+      <summary>
+            Looks up a localized string similar to "First Page"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.FourPagesMenuHeader">
+      <summary>
+            Looks up a localized string similar to "Four Pages"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.Landscape">
+      <summary>
+            Looks up a localized string similar to "Landscape".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.LastPageTooltip">
+      <summary>
+            Looks up a localized string similar to "Last Page"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.LayoutMenuHeader">
+      <summary>
+            Looks up a localized string similar to "Layout"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.LayoutMenuTooltip">
+      <summary>
+            Looks up a localized string similar to "Layout Options"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.LeftMarginPrompt">
+      <summary>
+            Looks up a localized string similar to "Left margin (in inches)".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.MatchCaseLabel">
+      <summary>
+            Looks up a localized string similar to "Match Case"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.MatchCaseTooltip">
+      <summary>
+            Looks up a localized string similar to "Case-sensitive search"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.NavigateBackwardTooltip">
+      <summary>
+            Looks up a localized string similar to "Navigate Backward"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.NavigateForwardTooltip">
+      <summary>
+            Looks up a localized string similar to "Navigate Forward"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.NextPageTooltip">
+      <summary>
+            Looks up a localized string similar to "Next Page"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.NoMatchesFound">
+      <summary>
+            Looks up a localized string similar to "No matches found."
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.NoneLabel">
+      <summary>
+            Looks up a localized string similar to "(none)".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.OnePageMenuHeader">
+      <summary>
+            Looks up a localized string similar to "One Page"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.OpenFileTooltip">
+      <summary>
+            Looks up a localized string similar to "Open File (Ctrl+O)"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.OrientationPrompt">
+      <summary>
+            Looks up a localized string similar to "Orientation".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.OutlinesViewTitle">
+      <summary>
+            Looks up a localized string similar to "Outlines"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.OutlinesTooltip">
+      <summary>
+            Looks up a localized string similar to "Document Outlines"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.PageCountTooltip">
+      <summary>
+            Looks up a localized string similar to "Page Count"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.PageLabel">
+      <summary>
+            Looks up a localized string similar to "Page"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.PageLoadingFmt">
+      <summary>
+            Looks up a localized string similar to "Page {0} is loading..."
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.PageNumberTooltip">
+      <summary>
+            Looks up a localized string similar to "Page Number"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.PageSettingsViewTitle">
+      <summary>
+            Looks up a localized string similar to "Page Settings"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.PageSettingsTooltip">
+      <summary>
+            Looks up a localized string similar to "Page Settings"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.PaneIsBusy">
+      <summary>
+            Looks up a localized string similar to "C1FlexViewerPane is busy."
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.PaperSizePrompt">
+      <summary>
+            Looks up a localized string similar to "Size".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ParametersViewTitle">
+      <summary>
+            Looks up a localized string similar to "Parameters"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ParametersTooltip">
+      <summary>
+            Looks up a localized string similar to "Report Parameters"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.Portrait">
+      <summary>
+            Looks up a localized string similar to "Portrait".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.PreviousPageTooltip">
+      <summary>
+            Looks up a localized string similar to "Previous Page"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.PrintLayoutTooltip">
+      <summary>
+            Looks up a localized string similar to "Print Layout"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.PrintTooltip">
+      <summary>
+            Looks up a localized string similar to "Print (Ctrl+P)"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.RefreshTooltip">
+      <summary>
+            Looks up a localized string similar to "Refresh"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.RightMarginPrompt">
+      <summary>
+            Looks up a localized string similar to "Right margin (in inches)".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.RotateCCWMenuHeader">
+      <summary>
+            Looks up a localized string similar to "Rotate Counterclockwise"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.RotateCWMenuHeader">
+      <summary>
+            Looks up a localized string similar to "Rotate Clockwise"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.Searching">
+      <summary>
+            Looks up a localized string similar to "Searching..."
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SearchOnCurrentPageLabel">
+      <summary>
+            Looks up a localized string similar to "Current Page".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SearchOnCurrentPageTooltip">
+      <summary>
+            Looks up a localized string similar to "Limit search to current page".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SearchTextTooltip">
+      <summary>
+            Looks up a localized string similar to "Text to search"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SelectorComboSelectText">
+      <summary>
+            Looks up a localized string similar to "&lt; Select a Value &gt;".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SelectToolTooltip">
+      <summary>
+            Looks up a localized string similar to "Text Selection Tool"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.Size10x11">
+      <summary>
+            Looks up a localized string similar to "10"×11"".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.Size10x14">
+      <summary>
+            Looks up a localized string similar to "10"×14"".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.Size11x17">
+      <summary>
+            Looks up a localized string similar to "11"×17"".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.Size9x11">
+      <summary>
+            Looks up a localized string similar to "9"×11"".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeA2">
+      <summary>
+            Looks up a localized string similar to "A2".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeA3">
+      <summary>
+            Looks up a localized string similar to "A3".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeA3Extra">
+      <summary>
+            Looks up a localized string similar to "A3 extra".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeA4">
+      <summary>
+            Looks up a localized string similar to "A4".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeA4Extra">
+      <summary>
+            Looks up a localized string similar to "A4 extra".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeA4Plus">
+      <summary>
+              Looks up a localized string similar to "A4 plus".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeA5">
+      <summary>
+            Looks up a localized string similar to "A5".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeA5Extra">
+      <summary>
+            Looks up a localized string similar to "A5 extra".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeA6">
+      <summary>
+            Looks up a localized string similar to "A6".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeB4">
+      <summary>
+            Looks up a localized string similar to "B4".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeB4Envelope">
+      <summary>
+            Looks up a localized string similar to "B4 envelope".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeB5Envelope">
+      <summary>
+            Looks up a localized string similar to "B5 envelope".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeB5Extra">
+      <summary>
+            Looks up a localized string similar to "B5 extra".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeC">
+      <summary>
+            Looks up a localized string similar to "C size sheet".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeC3Envelope">
+      <summary>
+            Looks up a localized string similar to "C3 envelope".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeC4Envelope">
+      <summary>
+            Looks up a localized string similar to "C4 envelope".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeC5Envelope">
+      <summary>
+            Looks up a localized string similar to "C5 envelope".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeC6C5Envelope">
+      <summary>
+            Looks up a localized string similar to "C6/C5 envelope".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeC6Envelope">
+      <summary>
+            Looks up a localized string similar to "C6 envelope".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeD">
+      <summary>
+            Looks up a localized string similar to "D size sheet".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeDLEnvelope">
+      <summary>
+            Looks up a localized string similar to "DL envelope".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeE">
+      <summary>
+            Looks up a localized string similar to "E size sheet".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeEnvelope10">
+      <summary>
+            Looks up a localized string similar to "Envelope #10".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeEnvelope11">
+      <summary>
+            Looks up a localized string similar to "Envelope #11".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeEnvelope12">
+      <summary>
+            Looks up a localized string similar to "Envelope #12".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeEnvelope14">
+      <summary>
+            Looks up a localized string similar to "Envelope #14".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeEnvelope9">
+      <summary>
+            Looks up a localized string similar to "Envelope #9".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeEnvelopeInvite">
+      <summary>
+            Looks up a localized string similar to "Envelope invite".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeEnvelopeItalian">
+      <summary>
+            Looks up a localized string similar to "Envelope Italian".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeEnvelopeMonarch">
+      <summary>
+            Looks up a localized string similar to "Envelope monarch".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeEnvelopePersonal">
+      <summary>
+            Looks up a localized string similar to "Envelope personal".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeExecutive">
+      <summary>
+            Looks up a localized string similar to "Executive".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeFolio">
+      <summary>
+            Looks up a localized string similar to "Folio".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeGermanLegalFanfold">
+      <summary>
+            Looks up a localized string similar to "German legal fanfold".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeGermanStandardFanfold">
+      <summary>
+            Looks up a localized string similar to "German standard fanfold".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeJapanChou3Envelope">
+      <summary>
+            Looks up a localized string similar to "Japan Chou 3 envelope".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeJapanChou4Envelope">
+      <summary>
+            Looks up a localized string similar to "Japan Chou 4 envelope".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeJapanDoubleHagakiPostcard">
+      <summary>
+            Looks up a localized string similar to "Japan double Hagaki postcard".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeJapanHagakiPostcard">
+      <summary>
+            Looks up a localized string similar to "Japan Hagaki postcard".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeJapanKaku2Envelope">
+      <summary>
+            Looks up a localized string similar to "Japan Kaku 2 envelope".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeJapanKaku3Envelope">
+      <summary>
+            Looks up a localized string similar to "Japan Kaku 3 envelope".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeJapanYou4Envelope">
+      <summary>
+            Looks up a localized string similar to "Japan You 4 envelope".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeJISB4">
+      <summary>
+            Looks up a localized string similar to "JIS B4".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeJISB5">
+      <summary>
+            Looks up a localized string similar to "JIS B5".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeJISB6">
+      <summary>
+            Looks up a localized string similar to "JIS B6".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeLegal">
+      <summary>
+            Looks up a localized string similar to "Legal".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeLegalExtra">
+      <summary>
+            Looks up a localized string similar to "Legal extra".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeLetter">
+      <summary>
+            Looks up a localized string similar to "Letter".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeLetterExtra">
+      <summary>
+            Looks up a localized string similar to "Letter extra".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeLetterPlus">
+      <summary>
+            Looks up a localized string similar to "Letter plus".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeNote">
+      <summary>
+            Looks up a localized string similar to "Note".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizePRCEnvelope1">
+      <summary>
+            Looks up a localized string similar to "PRC envelope #1".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizePRCEnvelope10">
+      <summary>
+            Looks up a localized string similar to "PRC envelope #10".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizePRCEnvelope3">
+      <summary>
+            Looks up a localized string similar to "PRC envelope #3".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizePRCEnvelope4">
+      <summary>
+            Looks up a localized string similar to "PRC envelope #4".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizePRCEnvelope5">
+      <summary>
+            Looks up a localized string similar to "PRC envelope #5".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizePRCEnvelope6">
+      <summary>
+            Looks up a localized string similar to "PRC envelope #6".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizePRCEnvelope7">
+      <summary>
+            Looks up a localized string similar to "PRC envelope #7".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizePRCEnvelope8">
+      <summary>
+            Looks up a localized string similar to "PRC envelope #8".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizePRCEnvelope9">
+      <summary>
+            Looks up a localized string similar to "PRC envelope #9".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeQuarto">
+      <summary>
+            Looks up a localized string similar to "Quarto".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeStatement">
+      <summary>
+            Looks up a localized string similar to "Statement".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeSuperA">
+      <summary>
+            Looks up a localized string similar to "Super A".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeSuperB">
+      <summary>
+            Looks up a localized string similar to "Super B".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeTabloid">
+      <summary>
+            Looks up a localized string similar to "Tabloid".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.SizeUnknown">
+      <summary>
+            Looks up a localized string similar to "Unknown".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.StopOperationTooltip">
+      <summary>
+            Looks up a localized string similar to "Stop the Operation"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ThumbnailsTooltip">
+      <summary>
+            Looks up a localized string similar to "Page Thumbnails (Ctrl+T)"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ToggleOffContent">
+      <summary>
+            Looks up a localized string similar to "No".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ToggleOnContent">
+      <summary>
+            Looks up a localized string similar to "Yes".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.TopMarginPrompt">
+      <summary>
+            Looks up a localized string similar to "Top margin (in inches)".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.TwoPagesMenuHeader">
+      <summary>
+            Looks up a localized string similar to "Two Pages"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ValueIsNotSelected">
+      <summary>
+            Looks up a localized string similar to "Value is not selected".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.WholeWordsLabel">
+      <summary>
+            Looks up a localized string similar to "Whole Words"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.WholeWordsTooltip">
+      <summary>
+            Looks up a localized string similar to "Find whole words only"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.WideLayoutMenuHeader">
+      <summary>
+            Looks up a localized string similar to "Wide Layout".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ZoomComboTooltip">
+      <summary>
+            Looks up a localized string similar to "Zoom Options"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ZoomFormat">
+      <summary>
+            Looks up a localized string similar to "Zoom {0}%".
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ZoomToActualSize">
+      <summary>
+            Looks up a localized string similar to "Actual Size"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ZoomToPageWidth">
+      <summary>
+            Looks up a localized string similar to "Page Width"
+            </summary>
+    </member>
+    <member name="P:C1.WPF.FlexViewer.Resources.C1_FlexViewer.ZoomToWholePage">
+      <summary>
+            Looks up a localized string similar to "Whole Page"
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.MainToolbar">
+      <summary>
+            The main toolbar for the <see cref="T:C1.WPF.FlexViewer.C1FlexViewer" /> control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.MainToolbar.OnApplyTemplate">
+      <inheritdoc />
+    </member>
+    <member name="T:C1.WPF.FlexViewer.FlexViewerZoomTypeConverter">
+      <summary>
+            Converts ZoomFactor to/from a string.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.FlexViewerZoomTypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>
+            Converts the value to a string.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.FlexViewerZoomTypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>
+            Retrieves the value from a string.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.FlexViewerZoomConverter">
+      <summary>
+            Converts ZoomMode/ZoomFactor to/from a string.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.FlexViewerZoomConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+      <summary>
+            Converts the value to a string.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.FlexViewerZoomConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+      <summary>
+            This method is not used.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.SearchToolbar">
+      <summary>
+            The toolbar used for searching text in the <see cref="T:C1.WPF.FlexViewer.C1FlexViewer" /> control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.SearchToolbar.OnApplyTemplate">
+      <inheritdoc />
+    </member>
+    <member name="T:C1.WPF.FlexViewer.NotificationBar">
+      <summary>
+            The status bar panel that pops up when the StatusText of <see cref="T:C1.WPF.FlexViewer.C1FlexViewerPane" /> changes.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.NotificationBar.OnApplyTemplate">
+      <inheritdoc />
+    </member>
+    <member name="T:C1.WPF.FlexViewer.OutlinesView">
+      <summary>
+            Interaction logic for OutlinesView.xaml
+            </summary>
+      <summary>
+            OutlinesView
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.OutlinesView.#ctor">
+      <summary>
+            Initializes the new instance of the <see cref="T:C1.WPF.FlexViewer.OutlinesView" /> page.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.OutlinesView.InitializeComponent">
+      <summary>
+            InitializeComponent
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.PageSettingsView">
+      <summary>
+            Interaction logic for PageSettingsView.xaml
+            </summary>
+      <summary>
+            PageSettingsView
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.PageSettingsView.#ctor">
+      <summary>
+            Initializes the new instance of the <see cref="T:C1.WPF.FlexViewer.PageSettingsView" /> page.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.PageSettingsView.InitializeComponent">
+      <summary>
+            InitializeComponent
+            </summary>
+    </member>
+    <member name="T:C1.WPF.FlexViewer.ParametersView">
+      <summary>
+            Interaction logic for ParametersView.xaml
+            </summary>
+      <summary>
+            ParametersView
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.ParametersView.#ctor">
+      <summary>
+            Initializes the new instance of the <see cref="T:C1.WPF.FlexViewer.ParametersView" /> page.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.FlexViewer.ParametersView.InitializeComponent">
+      <summary>
+            InitializeComponent
+            </summary>
+    </member>
+    <member name="T:C1.WPF.DxToolkit.DxLayoutException">
+      <summary>
+            The exception that is thrown when the layout of DxControl is failed.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxLayoutException.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.DxToolkit.DxLayoutException" /> class.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.DxToolkit.DxHost">
+      <summary>
+            Base element rendering its content with Direct2D and DirectWrite.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.DxHost.WindowClassName">
+      <summary>
+            Gets the name of the window class.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.#ctor">
+      <summary>
+            Initializes a new instance of <see cref="T:C1.WPF.DxToolkit.DxHost" /> control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.Dispose(System.Boolean)">
+      <inheritdoc />
+    </member>
+    <member name="P:C1.WPF.DxToolkit.DxHost.BackgroundColor">
+      <summary>
+            Gets or sets the background color for <see cref="T:C1.WPF.DxToolkit.DxHost" />.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DxToolkit.DxHost.BackgroundColorProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DxToolkit.DxHost.BackgroundColor" /> dependency property.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.DxHost.ToolTipText">
+      <summary>
+            Gets the tooltip text for <see cref="T:C1.WPF.DxToolkit.DxHost" />.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DxToolkit.DxHost.ToolTipTextProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DxToolkit.DxHost.ToolTipText" /> dependency property.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.BuildWindowCore(System.Runtime.InteropServices.HandleRef)">
+      <summary>
+            Creates the window to be hosted.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.DestroyWindowCore(System.Runtime.InteropServices.HandleRef)">
+      <summary>
+            Destroys the hosted window.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.OnVisualParentChanged(System.Windows.DependencyObject)">
+      <summary>
+            Invoked when the Parent of this element is changed.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.WndProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.Boolean@)">
+      <inheritdoc />
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.CreateDeviceIndependentResources">
+      <summary>
+            Creates class factories and other device-independent resources.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.DiscardDeviceIndependentResources">
+      <summary>
+            Discards class factories and other device-independent resources.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.CreateDeviceResources">
+      <summary>
+            Creates the GPU-dependent resources, such as SwapChain and DeviceContext.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.DiscardDeviceResources">
+      <summary>
+            Discards all GPU-dependent resources.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.OnDoWork">
+      <summary>
+            Does some job in the background thread.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.OnRunWorkerCompleted">
+      <summary>
+            Executes when the background thread is about to finish.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.FocusFirstElement(System.Boolean)">
+      <summary>
+            Moves focus to the first or the last element of the control in tab order.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.FocusNextElement(System.Boolean)">
+      <summary>
+            Moves focus to the next or the previous element of the control in tab order.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.TabIntoCore(System.Windows.Input.TraversalRequest)">
+      <summary>
+            Sets focus on either the first tab stop or the last tab stop of the sink.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.TranslateAcceleratorCore(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)">
+      <summary>
+            Processes keyboard input at the keydown message level.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.TranslateCharCore(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)">
+      <summary>
+            Processes WM_CHAR input message.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+      <summary>
+            Processes WM_KEYDOWN message.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.DxHost.OnKeyUp(System.Windows.Input.KeyEventArgs)">
+      <summary>
+            Processes WM_KEYUP message.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.DxToolkit.ITouchDestination">
+      <summary>
+            Implemented by an area of the Control that needs to receive touch notifications.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.ITouchDestination.StartManipulation(C1.WPF.DxToolkit.TouchManipulation)">
+      <summary>
+            Executes before a new manipulation starts.
+            </summary>
+      <remarks>
+            You can update mp.Configuration from this method.
+            </remarks>
+    </member>
+    <member name="M:C1.WPF.DxToolkit.ITouchDestination.ProcessManipulation(C1.WPF.DxToolkit.TouchManipulation)">
+      <summary>
+            Executes when the next manipulation occurs, including the inertia.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.DxToolkit.Manipulations">
+      <summary>
+            Represents the possible affine two-dimensional (2-D) manipulations.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DxToolkit.Manipulations.None">
+      <summary>
+            No manipulations.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DxToolkit.Manipulations.TranslateX">
+      <summary>
+            A translation in the x-axis.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DxToolkit.Manipulations.TranslateY">
+      <summary>
+            A translation in the y-axis.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DxToolkit.Manipulations.Translate">
+      <summary>
+            A translation in the x and/or y axes.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DxToolkit.Manipulations.Scale">
+      <summary>
+            A scale in both directions.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DxToolkit.Manipulations.Rotate">
+      <summary>
+            A rotation.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DxToolkit.Manipulations.All">
+      <summary>
+            All available manipulations.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.DxToolkit.TouchManipulation">
+      <summary>
+            Represents a result of the touch manipulation.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchManipulation.Configuration">
+      <summary>
+            Gets the parameters of the touch interaction.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchManipulation.Transform">
+      <summary>
+            Gets the cumulative result of the manipulation.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchManipulation.OriginX">
+      <summary>
+            Gets the new x-coordinate of the composite position of the manipulation, in DIPs.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchManipulation.OriginY">
+      <summary>
+            Gets the new y-coordinate of the composite position of the manipulation, in DIPs.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchManipulation.Start">
+      <summary>
+            Indicates the start of an interaction.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchManipulation.Inertia">
+      <summary>
+            Indicates if the interaction has triggered inertia.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchManipulation.End">
+      <summary>
+            Indicates the end of an interaction (including inertia).
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchManipulation.HasOverpan">
+      <summary>
+            Indicates if the panning feedback offset is specified.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchManipulation.OverpanOffsetX">
+      <summary>
+            Gets or sets a value that indicates how far past the horizontal end of the
+            pannable region the pan has gone. This property should be updated by the
+            user if TouchProcessor.AllowPanningFeedback is set to true.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchManipulation.OverpanOffsetY">
+      <summary>
+            Gets or sets a value that indicates how far past the vertical end of the
+            pannable region the pan has gone. This property should be updated by the
+            user if TouchProcessor.AllowPanningFeedback is set to true.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.DxToolkit.TouchConfiguration">
+      <summary>
+            Specifies parameters for the manipulation and inertia processors.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchConfiguration.SupportedManipulations">
+      <summary>
+            Gets or sets the current set of supported manipulations.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchConfiguration.UseRails">
+      <summary>
+            Indicates that motions off the primary axis of motion are ignored.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchConfiguration.RailsDisplacement">
+      <summary>
+            Gets or sets the displacement before applying rails.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchConfiguration.PivotX">
+      <summary>
+            Gets or sets the X position of the pivot, in DIPs.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchConfiguration.PivotY">
+      <summary>
+            Gets or sets the Y position of the pivot, in DIPs.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchConfiguration.TranslationDeceleration">
+      <summary>
+            Gets or sets the translation deceleration of an inertia processor, in DIPs per millisecond squared.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchConfiguration.AngularDeceleration">
+      <summary>
+            Gets or sets the angular deceleration of an inertia processor, in radians per millisecond squared.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchConfiguration.MinimumScaleRotateRadius">
+      <summary>
+            Gets or sets the minimum radius, in DIPs, necessary for a manipulator to participate in scaling and rotation.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchConfiguration.AllowPanningFeedback">
+      <summary>
+            Gets or sets whether the control shows a visual cue when a user
+            reaches the end of a pannable area.
+            </summary>
+      <remarks>
+            To enable panning feedback you should update the OverpanOffsetX
+            and OverpanOffsetY properties of the TouchOutput object in the
+            ITouchDestination.ProceedInteraction() method.
+            </remarks>
+    </member>
+    <member name="P:C1.WPF.DxToolkit.TouchConfiguration.PanningAnimateBack">
+      <summary>
+            Indicates whether the control positioning reset should incorporate
+            a smooth animation after showing panning feedback. Set this
+            property to false if the original position of the control needs
+            to be restored immediately. 
+            </summary>
+    </member>
+    <member name="T:C1.WPF.DxToolkit.ManipulationTransform">
+      <summary>
+            Represents the cumulative result of the manipulation.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DxToolkit.ManipulationTransform.TranslationX">
+      <summary>
+            Gets the translation along the x-axis, in DIPs.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DxToolkit.ManipulationTransform.TranslationY">
+      <summary>
+            Gets the translation along the y-axis, in DIPs.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DxToolkit.ManipulationTransform.Scale">
+      <summary>
+            Gets the scale factor.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DxToolkit.ManipulationTransform.Expansion">
+      <summary>
+            Gets the amount of expansion, in DIPs.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DxToolkit.ManipulationTransform.Rotation">
+      <summary>
+            Gets the amount of rotation, in radians.
+            </summary>
+    </member>
+  </members>
+</doc>

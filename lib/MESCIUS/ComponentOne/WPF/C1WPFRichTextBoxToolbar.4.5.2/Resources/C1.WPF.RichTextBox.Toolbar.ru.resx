@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cell_Title" xml:space="preserve">
+    <value>Ячейка</value>
+  </data>
+  <data name="FindTool_BtnFindNext" xml:space="preserve">
+    <value>Найти далее</value>
+  </data>
+  <data name="FindTool_BtnReplace" xml:space="preserve">
+    <value>Заменить</value>
+  </data>
+  <data name="FindTool_BtnReplaceAll" xml:space="preserve">
+    <value>Заменить все</value>
+  </data>
+  <data name="FindTool_LblFind" xml:space="preserve">
+    <value>Найти:</value>
+  </data>
+  <data name="FindTool_LblReplace" xml:space="preserve">
+    <value>Заменить:</value>
+  </data>
+  <data name="Font_Bold" xml:space="preserve">
+    <value>Полужирный</value>
+  </data>
+  <data name="Font_BoldInitial" xml:space="preserve">
+    <value>Ж</value>
+  </data>
+  <data name="Font_ChangeCase" xml:space="preserve">
+    <value>Регистр</value>
+  </data>
+  <data name="Font_ChangeCase_CapitalizeEachWord" xml:space="preserve">
+    <value>Начинать С Прописных</value>
+  </data>
+  <data name="Font_ChangeCase_LowerCase" xml:space="preserve">
+    <value>все строчные</value>
+  </data>
+  <data name="Font_ChangeCase_ToggleCase" xml:space="preserve">
+    <value>иЗМЕНИТЬ РЕГИСТР</value>
+  </data>
+  <data name="Font_ChangeCase_UpperCase" xml:space="preserve">
+    <value>ВСЕ ПРОПИСНЫЕ</value>
+  </data>
+  <data name="Font_Font" xml:space="preserve">
+    <value>Шрифт</value>
+  </data>
+  <data name="Font_FontColor" xml:space="preserve">
+    <value>Цвет текста</value>
+  </data>
+  <data name="Font_FontSize" xml:space="preserve">
+    <value>Размер шрифта</value>
+  </data>
+  <data name="Font_GrowFont" xml:space="preserve">
+    <value>Увеличить шрифт</value>
+  </data>
+  <data name="Font_Italic" xml:space="preserve">
+    <value>Курсив</value>
+  </data>
+  <data name="Font_ItalicInitial" xml:space="preserve">
+    <value>К</value>
+  </data>
+  <data name="Font_ShrinkFont" xml:space="preserve">
+    <value>Уменьшить шрифт</value>
+  </data>
+  <data name="Font_Subscript" xml:space="preserve">
+    <value>Подстрочный знак</value>
+  </data>
+  <data name="Font_Superscript" xml:space="preserve">
+    <value>Надстрочный знак</value>
+  </data>
+  <data name="Font_TextHighlightColor" xml:space="preserve">
+    <value>Цвет выделения текста</value>
+  </data>
+  <data name="Font_Title" xml:space="preserve">
+    <value>Шрифт</value>
+  </data>
+  <data name="Font_Underline" xml:space="preserve">
+    <value>Подчеркнутый</value>
+  </data>
+  <data name="Font_UnderlineInitial" xml:space="preserve">
+    <value>П</value>
+  </data>
+  <data name="HomeTab_Header" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="Insert_InsertHyperlink" xml:space="preserve">
+    <value>Вставить гиперссылку</value>
+  </data>
+  <data name="Insert_InsertHyperlink_InvalidURL" xml:space="preserve">
+    <value>Недопустимый URL-адрес "{0}"</value>
+  </data>
+  <data name="Insert_InsertHyperlink_TextLabel" xml:space="preserve">
+    <value>Текст:</value>
+  </data>
+  <data name="Insert_InsertHyperlink_URLLabel" xml:space="preserve">
+    <value>URL-адрес:</value>
+  </data>
+  <data name="Insert_InsertHyperlink_TargetLabel" xml:space="preserve">
+    <value>Target:</value>
+  </data>
+  <data name="Insert_InsertImage" xml:space="preserve">
+    <value>Вставить изображение</value>
+  </data>
+  <data name="Insert_InsertImage_InvalidURL" xml:space="preserve">
+    <value>Недопустимый URL-адрес "{0}"</value>
+  </data>
+  <data name="Insert_InsertImage_UrlMessage" xml:space="preserve">
+    <value>Введите URL-адрес изображения:</value>
+  </data>
+  <data name="Insert_InsertImage_NotLoaded" xml:space="preserve">
+    <value>Не удалось загрузить изображение из "{0}".</value>
+  </data>
+  <data name="Insert_InsertSymbol" xml:space="preserve">
+    <value>Вставить символ</value>
+  </data>
+  <data name="Insert_RemoveHyperlink" xml:space="preserve">
+    <value>Удалить гиперссылку</value>
+  </data>
+  <data name="Insert_Title" xml:space="preserve">
+    <value>Вставить</value>
+  </data>
+  <data name="Merge_Title" xml:space="preserve">
+    <value>Объединить</value>
+  </data>
+  <data name="Paragraph_AlignTextCenter" xml:space="preserve">
+    <value>Выровнять текст по центру</value>
+  </data>
+  <data name="Paragraph_AlignTextLeft" xml:space="preserve">
+    <value>Выровнять текст по левому краю</value>
+  </data>
+  <data name="Paragraph_AlignTextRight" xml:space="preserve">
+    <value>Выровнять текст по правому краю</value>
+  </data>
+  <data name="Paragraph_BorderColor" xml:space="preserve">
+    <value>Цвет границы</value>
+  </data>
+  <data name="Paragraph_BorderThickness" xml:space="preserve">
+    <value>Толщина границы</value>
+  </data>
+  <data name="Paragraph_Bullets" xml:space="preserve">
+    <value>Маркеры</value>
+  </data>
+  <data name="Paragraph_Justify" xml:space="preserve">
+    <value>Выровнять</value>
+  </data>
+  <data name="Paragraph_Margin" xml:space="preserve">
+    <value>Поле</value>
+  </data>
+  <data name="Paragraph_Numbering" xml:space="preserve">
+    <value>Нумерация</value>
+  </data>
+  <data name="Paragraph_Padding" xml:space="preserve">
+    <value>Отступ</value>
+  </data>
+  <data name="Paragraph_ParagraphColor" xml:space="preserve">
+    <value>Цвет абзаца</value>
+  </data>
+  <data name="Paragraph_TextWrapping" xml:space="preserve">
+    <value>Обтекание текстом</value>
+  </data>
+  <data name="Paragraph_Title" xml:space="preserve">
+    <value>Абзац</value>
+  </data>
+  <data name="RowsAndColumns_Title" xml:space="preserve">
+    <value>Строки и столбцы</value>
+  </data>
+  <data name="TablesTab_Header" xml:space="preserve">
+    <value>Таблицы</value>
+  </data>
+  <data name="Table_Title" xml:space="preserve">
+    <value>Таблица</value>
+  </data>
+  <data name="ThicknessPicker_Bottom" xml:space="preserve">
+    <value>Снизу:</value>
+  </data>
+  <data name="ThicknessPicker_Left" xml:space="preserve">
+    <value>Слева:</value>
+  </data>
+  <data name="ThicknessPicker_Right" xml:space="preserve">
+    <value>Справа:</value>
+  </data>
+  <data name="ThicknessPicker_Top" xml:space="preserve">
+    <value>Сверху:</value>
+  </data>
+  <data name="Tools_BorderTool" xml:space="preserve">
+    <value>Границы</value>
+  </data>
+  <data name="Tools_BorderTool_AllBorders" xml:space="preserve">
+    <value>Все границы</value>
+  </data>
+  <data name="Tools_BorderTool_BottomBorder" xml:space="preserve">
+    <value>Нижняя граница</value>
+  </data>
+  <data name="Tools_BorderTool_Color" xml:space="preserve">
+    <value>Цвет</value>
+  </data>
+  <data name="Tools_BorderTool_InsideBorders" xml:space="preserve">
+    <value>Внутренние границы</value>
+  </data>
+  <data name="Tools_BorderTool_InsideHorizontalBorders" xml:space="preserve">
+    <value>Внутренняя горизонтальная граница</value>
+  </data>
+  <data name="Tools_BorderTool_InsideVerticalBorders" xml:space="preserve">
+    <value>Внутренняя вертикальная граница</value>
+  </data>
+  <data name="Tools_BorderTool_LeftBorder" xml:space="preserve">
+    <value>Левая граница</value>
+  </data>
+  <data name="Tools_BorderTool_NoBorder" xml:space="preserve">
+    <value>Без границ</value>
+  </data>
+  <data name="Tools_BorderTool_OutsideBorders" xml:space="preserve">
+    <value>Внешние границы</value>
+  </data>
+  <data name="Tools_BorderTool_RightBorder" xml:space="preserve">
+    <value>Правая граница</value>
+  </data>
+  <data name="Tools_BorderTool_TopBorder" xml:space="preserve">
+    <value>Верхняя граница</value>
+  </data>
+  <data name="Tools_BorderTool_Weight" xml:space="preserve">
+    <value>Толщина</value>
+  </data>
+  <data name="Tools_BottomAlign" xml:space="preserve">
+    <value>Выровнять по нижнему краю</value>
+  </data>
+  <data name="Tools_ColumnWidth_Header" xml:space="preserve">
+    <value>Ширина:</value>
+  </data>
+  <data name="Tools_Copy" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="Tools_Cut" xml:space="preserve">
+    <value>Вырезать</value>
+  </data>
+  <data name="Tools_DeleteTable" xml:space="preserve">
+    <value>Удалить таблицу</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteCells" xml:space="preserve">
+    <value>Удалить ячейки</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteColumns" xml:space="preserve">
+    <value>Удалить столбцы</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteRows" xml:space="preserve">
+    <value>Удалить строки</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteTable" xml:space="preserve">
+    <value>Удалить таблицу</value>
+  </data>
+  <data name="Tools_FindAndReplace" xml:space="preserve">
+    <value>Найти и заменить</value>
+  </data>
+  <data name="Tools_FindAndReplace_NotFound" xml:space="preserve">
+    <value>Не удалось обнаружить следующий указанный текст:</value>
+  </data>
+  <data name="Tools_InsertColumnsLeft" xml:space="preserve">
+    <value>Вставить столбцы слева</value>
+  </data>
+  <data name="Tools_InsertColumnsRight" xml:space="preserve">
+    <value>Вставить столбцы справа</value>
+  </data>
+  <data name="Tools_InsertRowsAbove" xml:space="preserve">
+    <value>Вставить строки сверху</value>
+  </data>
+  <data name="Tools_InsertRowsBelow" xml:space="preserve">
+    <value>Вставить строки снизу</value>
+  </data>
+  <data name="Tools_InsertTable" xml:space="preserve">
+    <value>Вставить таблицу</value>
+  </data>
+  <data name="Tools_InsertTable_ConvertText" xml:space="preserve">
+    <value>Преобразовать в таблицу</value>
+  </data>
+  <data name="Tools_MergeCells" xml:space="preserve">
+    <value>Объединить ячейки</value>
+  </data>
+  <data name="Tools_Paste" xml:space="preserve">
+    <value>Вставить</value>
+  </data>
+  <data name="Tools_Redo" xml:space="preserve">
+    <value>Вернуть</value>
+  </data>
+  <data name="Tools_RowHeight_Header" xml:space="preserve">
+    <value>Высота:</value>
+  </data>
+  <data name="Tools_SelectTable" xml:space="preserve">
+    <value>Выбрать таблицу</value>
+  </data>
+  <data name="Tools_SelectTable_SelectCell" xml:space="preserve">
+    <value>Выбрать ячейку</value>
+  </data>
+  <data name="Tools_SelectTable_SelectColumn" xml:space="preserve">
+    <value>Выбрать столбец</value>
+  </data>
+  <data name="Tools_SelectTable_SelectRow" xml:space="preserve">
+    <value>Выбрать строку</value>
+  </data>
+  <data name="Tools_SelectTable_SelectTable" xml:space="preserve">
+    <value>Выбрать таблицу</value>
+  </data>
+  <data name="Tools_ShowGridlines" xml:space="preserve">
+    <value>Показывать сетку</value>
+  </data>
+  <data name="Tools_SpellCheck" xml:space="preserve">
+    <value>Проверка правописания</value>
+  </data>
+  <data name="Tools_SpellCheck_NoErrors" xml:space="preserve">
+    <value>Орфографические ошибки не найдены.</value>
+  </data>
+  <data name="Tools_SpellCheck_NotConfigured" xml:space="preserve">
+    <value>Проверка правописания не настроена.</value>
+  </data>
+  <data name="Tools_SplitCell" xml:space="preserve">
+    <value>Разбить ячейки</value>
+  </data>
+  <data name="Tools_TableWidth_Header" xml:space="preserve">
+    <value>Ширина:</value>
+  </data>
+  <data name="Tools_Title" xml:space="preserve">
+    <value>Сервис</value>
+  </data>
+  <data name="Tools_TopAlign" xml:space="preserve">
+    <value>Выровнять по верхнему краю</value>
+  </data>
+  <data name="Tools_Undo" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="Tools_UnmergeCell" xml:space="preserve">
+    <value>Отменить объединение ячеек</value>
+  </data>
+  <data name="Tools_VerticalCenterAlign" xml:space="preserve">
+    <value>Выровнять по центру</value>
+  </data>
+  <data name="View_Draft" xml:space="preserve">
+    <value>Черновик</value>
+  </data>
+  <data name="View_PrintLayout" xml:space="preserve">
+    <value>Разметка страницы</value>
+  </data>
+  <data name="View_Zoom" xml:space="preserve">
+    <value>Масштаб</value>
+  </data>
+  <data name="Tools_FindAndReplace_ReachStart" xml:space="preserve">
+    <value>Поиск достиг отправной точки.</value>
+  </data>
+  <data name="Insert_InsertImage_UploadMessage" xml:space="preserve">
+    <value>Выберите изображение для передачи:</value>
+  </data>
+  <data name="Insert_InsertImage_UploadTab" xml:space="preserve">
+    <value>Передать</value>
+  </data>
+  <data name="Insert_InsertImage_UrlTab" xml:space="preserve">
+    <value>URL-адрес</value>
+  </data>
+  <data name="Insert_InsertImage_FileFilter" xml:space="preserve">
+    <value>Файлы изображений (*.PNG;*.JPG)|*.PNG;*.JPG|Все файлы (*.*)|*.*</value>
+  </data>
+  <data name="FormatPainter" xml:space="preserve">
+    <value>Форматирование по образцу</value>
+  </data>
+  <data name="Tools_Delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="Tools_Gridlines" xml:space="preserve">
+    <value>Линии сетки</value>
+  </data>
+  <data name="Tools_InsertAbove" xml:space="preserve">
+    <value>Вставить сверху</value>
+  </data>
+  <data name="Tools_InsertBelow" xml:space="preserve">
+    <value>Вставить снизу</value>
+  </data>
+  <data name="Tools_InsertLeft" xml:space="preserve">
+    <value>Вставить слева</value>
+  </data>
+  <data name="Tools_InsertRight" xml:space="preserve">
+    <value>Вставить справа</value>
+  </data>
+  <data name="Tools_Picture" xml:space="preserve">
+    <value>Изображение</value>
+  </data>
+  <data name="Tools_Select" xml:space="preserve">
+    <value>Выбрать</value>
+  </data>
+  <data name="Tools_Spelling" xml:space="preserve">
+    <value>Правописание</value>
+  </data>
+  <data name="Tools_Unmerge" xml:space="preserve">
+    <value>Разъединить</value>
+  </data>
+  <data name="Edit_Title" xml:space="preserve">
+    <value>Правка</value>
+  </data>
+  <data name="Color_Aqua_ToolTip" xml:space="preserve">
+    <value>Светло-голубой</value>
+  </data>
+  <data name="Color_Black_ToolTip" xml:space="preserve">
+    <value>Черный</value>
+  </data>
+  <data name="Color_Blue_ToolTip" xml:space="preserve">
+    <value>Синий</value>
+  </data>
+  <data name="Color_Brown_ToolTip" xml:space="preserve">
+    <value>Коричневый</value>
+  </data>
+  <data name="Color_DarkBlue_ToolTip" xml:space="preserve">
+    <value>Тёмно-синий</value>
+  </data>
+  <data name="Color_DarkGreen_ToolTip" xml:space="preserve">
+    <value>Тёмно-зеленый</value>
+  </data>
+  <data name="Color_DarkPurple_ToolTip" xml:space="preserve">
+    <value>Тёмно-фиолетовый</value>
+  </data>
+  <data name="Color_DarkRed_ToolTip" xml:space="preserve">
+    <value>Тёмно-красный</value>
+  </data>
+  <data name="Color_EightyGray_ToolTip" xml:space="preserve">
+    <value>Серый-80%</value>
+  </data>
+  <data name="Color_FifteenGray_ToolTip" xml:space="preserve">
+    <value>Серый-15%</value>
+  </data>
+  <data name="Color_FiftyGray_ToolTip" xml:space="preserve">
+    <value>Серый-50%</value>
+  </data>
+  <data name="Color_FortyGray_ToolTip" xml:space="preserve">
+    <value>Серый-40%</value>
+  </data>
+  <data name="Color_Gold_ToolTip" xml:space="preserve">
+    <value>Золотой</value>
+  </data>
+  <data name="Color_Green_ToolTip" xml:space="preserve">
+    <value>Зеленый</value>
+  </data>
+  <data name="Color_LightGreen_ToolTip" xml:space="preserve">
+    <value>Светло-зеленый</value>
+  </data>
+  <data name="Color_LightYellow_ToolTip" xml:space="preserve">
+    <value>Светло-жёлтый</value>
+  </data>
+  <data name="Color_Lime_ToolTip" xml:space="preserve">
+    <value>Цвет лайма</value>
+  </data>
+  <data name="Color_Orange_ToolTip" xml:space="preserve">
+    <value>Оранжевый</value>
+  </data>
+  <data name="Color_Pink_ToolTip" xml:space="preserve">
+    <value>Розовый</value>
+  </data>
+  <data name="Color_Plum_ToolTip" xml:space="preserve">
+    <value>Сливовый</value>
+  </data>
+  <data name="Color_Purple_ToolTip" xml:space="preserve">
+    <value>Фиолетовый</value>
+  </data>
+  <data name="Color_Red_ToolTip" xml:space="preserve">
+    <value>Красный</value>
+  </data>
+  <data name="Color_Rose_ToolTip" xml:space="preserve">
+    <value>Розовый</value>
+  </data>
+  <data name="Color_SeventyFiveGray_ToolTip" xml:space="preserve">
+    <value>Серый-75%</value>
+  </data>
+  <data name="Color_SkyBlue_ToolTip" xml:space="preserve">
+    <value>Голубой</value>
+  </data>
+  <data name="Color_SlateBlue_ToolTip" xml:space="preserve">
+    <value>Грифельно-синий</value>
+  </data>
+  <data name="Color_Turquoise_ToolTip" xml:space="preserve">
+    <value>Бирюзовый</value>
+  </data>
+  <data name="Color_TwentyFiveGray_ToolTip" xml:space="preserve">
+    <value>Серый-25%</value>
+  </data>
+  <data name="Color_White_ToolTip" xml:space="preserve">
+    <value>Белый</value>
+  </data>
+  <data name="Color_Yellow_ToolTip" xml:space="preserve">
+    <value>Жёлтый</value>
+  </data>
+  <data name="Insert_ImageDialog_File" xml:space="preserve">
+    <value>Изображение...</value>
+  </data>
+  <data name="Insert_ImageDialog_Url" xml:space="preserve">
+    <value>Вставить рисунок</value>
+  </data>
+  <data name="Insert_InsertHyperlink_Button" xml:space="preserve">
+    <value>Вставить ссылку</value>
+  </data>
+  <data name="Insert_InsertTable_Button" xml:space="preserve">
+    <value>Вставить таблицу</value>
+  </data>
+  <data name="Insert_InsertTable_ColumnLabel" xml:space="preserve">
+    <value>Количество столбцов:</value>
+  </data>
+  <data name="Insert_InsertTable_RowLabel" xml:space="preserve">
+    <value>Количество строк:</value>
+  </data>
+  <data name="List_Header" xml:space="preserve">
+    <value>Список</value>
+  </data>
+  <data name="Tools_BottomAlignMenuTool_Header" xml:space="preserve">
+    <value>По нижнему краю</value>
+  </data>
+  <data name="Tools_CenterAlign_Header" xml:space="preserve">
+    <value>По середине</value>
+  </data>
+  <data name="Tools_ClearFormatting_Header" xml:space="preserve">
+    <value>Очистить формат</value>
+  </data>
+  <data name="Tools_ClearFormatting_ToolTip" xml:space="preserve">
+    <value>Очистить форматирование</value>
+  </data>
+  <data name="Tools_DecreaseFontSize_Header" xml:space="preserve">
+    <value>Уменьшить</value>
+  </data>
+  <data name="Tools_DecreaseFontSize_ToolTip" xml:space="preserve">
+    <value>Уменьшить размер шрифта</value>
+  </data>
+  <data name="Tools_DeleteTable_Cells" xml:space="preserve">
+    <value>Удалить ячейки</value>
+  </data>
+  <data name="Tools_DeleteTable_Columns" xml:space="preserve">
+    <value>Удалить столбцы</value>
+  </data>
+  <data name="Tools_DeleteTable_Rows" xml:space="preserve">
+    <value>Удалить строки</value>
+  </data>
+  <data name="Tools_DeleteTable_Table" xml:space="preserve">
+    <value>Удалить таблицу</value>
+  </data>
+  <data name="Tools_Error" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="Tools_FillColor_Header" xml:space="preserve">
+    <value>Заливка</value>
+  </data>
+  <data name="Tools_FillColor_ToolTip" xml:space="preserve">
+    <value>Цвет заливки</value>
+  </data>
+  <data name="Tools_IncreaseFontSize_Header" xml:space="preserve">
+    <value>Увеличить</value>
+  </data>
+  <data name="Tools_IncreaseFontSize_ToolTip" xml:space="preserve">
+    <value>Увеличить размер шрифта</value>
+  </data>
+  <data name="Tools_InsertHyperlink_Header" xml:space="preserve">
+    <value>Ссылка</value>
+  </data>
+  <data name="Tools_InsertImage_Header" xml:space="preserve">
+    <value>Рисунок</value>
+  </data>
+  <data name="Tools_InsertImage_ToolTip" xml:space="preserve">
+    <value>Вставить изображение</value>
+  </data>
+  <data name="Tools_LeftAlign_Header" xml:space="preserve">
+    <value>Влево</value>
+  </data>
+  <data name="Tools_LeftAlign_ToolTip" xml:space="preserve">
+    <value>По левому краю</value>
+  </data>
+  <data name="Tools_Numbering_ToolTip" xml:space="preserve">
+    <value>Нумерованный список</value>
+  </data>
+  <data name="Tools_Redo_Header" xml:space="preserve">
+    <value>Повторить</value>
+  </data>
+  <data name="Tools_RightAlign_Header" xml:space="preserve">
+    <value>Вправо</value>
+  </data>
+  <data name="Tools_RightAlign_ToolTip" xml:space="preserve">
+    <value>По правому краю</value>
+  </data>
+  <data name="Tools_SelectAll_Header" xml:space="preserve">
+    <value>Выбрать всё</value>
+  </data>
+  <data name="Tools_SelectTable_Cells_Header" xml:space="preserve">
+    <value>Выбрать ячейки</value>
+  </data>
+  <data name="Tools_SelectTable_Cells_ToolTip" xml:space="preserve">
+    <value>Выбрать ячейки</value>
+  </data>
+  <data name="Tools_SelectTable_Columns_Header" xml:space="preserve">
+    <value>Выбрать столбцы</value>
+  </data>
+  <data name="Tools_SelectTable_Columns_ToolTip" xml:space="preserve">
+    <value>Выбрать столбцы</value>
+  </data>
+  <data name="Tools_SelectTable_Rows_Header" xml:space="preserve">
+    <value>Выбрать строки</value>
+  </data>
+  <data name="Tools_SelectTable_Rows_ToolTip" xml:space="preserve">
+    <value>Выбрать строки</value>
+  </data>
+  <data name="Tools_SelectTable_Table_Header" xml:space="preserve">
+    <value>Выбрать таблицу</value>
+  </data>
+  <data name="Tools_SelectTable_Table_ToolTip" xml:space="preserve">
+    <value>Выбрать таблицу</value>
+  </data>
+  <data name="Tools_Strikethrough_Header" xml:space="preserve">
+    <value>Зачёркнутый</value>
+  </data>
+  <data name="Tools_Subscript_ToolTip" xml:space="preserve">
+    <value>Нижний индекс</value>
+  </data>
+  <data name="Tools_Superscript_ToolTip" xml:space="preserve">
+    <value>Верхний индекс</value>
+  </data>
+  <data name="Tools_TextHighlight_Header" xml:space="preserve">
+    <value>Выделение</value>
+  </data>
+  <data name="Tools_TextHighlight_ToolTip" xml:space="preserve">
+    <value>Цвет выделенного текста</value>
+  </data>
+  <data name="Tools_TopAlign_Header" xml:space="preserve">
+    <value>По верхнему краю</value>
+  </data>
+  <data name="ViewTab_Header" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="View_DocumentViews" xml:space="preserve">
+    <value>Views</value>
+  </data>
+  <data name="View_FitWidth" xml:space="preserve">
+    <value>По ширине</value>
+  </data>
+  <data name="View_OnePage" xml:space="preserve">
+    <value>Одна страница</value>
+  </data>
+  <data name="View_TwoPages" xml:space="preserve">
+    <value>Две страницы</value>
+  </data>
+  <data name="Tools_ZoomIn" xml:space="preserve">
+    <value>Увеличение</value>
+  </data>
+  <data name="Tools_Zoom100PercentTool" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="Tools_ZoomOut" xml:space="preserve">
+    <value>Уменьшение</value>
+  </data>
+  <data name="Font_Strikethrough" xml:space="preserve">
+    <value>Зачёркнутый</value>
+  </data>
+  <data name="Font_StrikethroughInitial" xml:space="preserve">
+    <value>abc</value>
+  </data>
+  <data name="Tools_RemoveHyperlink_Header" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="Selected_Document" xml:space="preserve">
+    <value>&lt;&lt;Выделенный фрагмент&gt;&gt;</value>
+  </data>
+  <data name="Line_Number" xml:space="preserve">
+    <value>Номера строк</value>
+  </data>
+  <data name="LineNumberMode_None" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="LineNumberMode_Continuous" xml:space="preserve">
+    <value>Непрерывно</value>
+  </data>
+  <data name="LineNumberMode_RestartEachPage" xml:space="preserve">
+    <value>На каждой странице</value>
+  </data>
+  <data name="LineSpacing" xml:space="preserve">
+    <value>Line Spacing</value>
+  </data>
+</root>

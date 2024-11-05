@@ -1,0 +1,2053 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>C1.WPF.DataFilter.4.5.2</name>
+  </assembly>
+  <members>
+    <member name="T:C1.WPF.DataFilter.C1DataFilter">
+      <summary>
+            The <see cref="T:C1.WPF.DataFilter.C1DataFilter" /> lets users filter data based on criteria's. It can be bound to any data-aware control and multiple conditional filtering could be applied.
+            </summary>
+      <summary>
+            The <see cref="T:C1.WPF.DataFilter.C1DataFilter" /> lets users filter data based on criteria's. It can be bound to any data-aware control and multiple conditional filtering could be applied.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.View">
+      <summary>
+            Gets the result of filtering the <see cref="P:C1.WPF.DataFilter.C1DataFilter.ItemsSource" />.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.Filters">
+      <summary>
+            Gets the collection of filters.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.FiltersProperty">
+      <summary>
+            FiltersProperty 
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1DataFilter.GenerateFilters(System.Boolean)">
+      <summary>
+            Generates filters for the current items source.
+            </summary>
+      <param name="forced">Ignores the AutoGenerateFilters property.</param>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1DataFilter.ApplyFilter">
+      <summary>
+            Applies the filter to the items source.
+            </summary>
+      <exception cref="T:System.NotSupportedException">The <see cref="T:C1.DataFilter.PredicateExpression" /> can not be used with the <see cref="T:System.Data.DataTable" /> class.</exception>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1DataFilter.ApplyFilterAsync">
+      <summary>
+            Applies the filter to the items source asynchronously.
+            </summary>
+      <exception cref="T:System.NotSupportedException">The <see cref="T:C1.DataFilter.PredicateExpression" /> can not be used with the <see cref="T:System.Data.DataTable" /> class.</exception>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1DataFilter.SaveFilterExpression(System.String)">
+      <summary>
+            Saves expressions from the <see cref="P:C1.WPF.DataFilter.C1DataFilter.Filters" /> collection to a file.
+            </summary>
+      <param name="fileName">The file name for storing filter expressions.</param>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1DataFilter.LoadFilterExpression(System.String)">
+      <summary>
+            Loads expressions to the <see cref="P:C1.WPF.DataFilter.C1DataFilter.Filters" /> collection from a file.
+            </summary>
+      <param name="fileName">The file name that stores the filter expressions.</param>
+    </member>
+    <member name="E:C1.WPF.DataFilter.C1DataFilter.FilterValueChanged">
+      <summary>
+            Occurs when a value of the filter changes.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1DataFilter.OnFilterValueChanged(C1.DataFilter.FilterChangedEventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.WPF.DataFilter.C1DataFilter.FilterValueChanged" /> event.
+            </summary>
+      <param name="e">An <see cref="T:C1.DataFilter.FilterChangedEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="E:C1.WPF.DataFilter.C1DataFilter.FilterAutoGenerating">
+      <summary>
+            Occurs before the filter is added to the <see cref="P:C1.WPF.DataFilter.C1DataFilter.Filters" />. Allows to cancel the change.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1DataFilter.OnFilterAutoGenerating(C1.DataFilter.FilterAutoGeneratingEventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.WPF.DataFilter.C1DataFilter.FilterAutoGenerating" /> event.
+            </summary>
+      <param name="e">An <see cref="T:C1.DataFilter.FilterAutoGeneratingEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="E:C1.WPF.DataFilter.C1DataFilter.FilterChanging">
+      <summary>
+            Occurs before the filter is changed. Allows to cancel the change.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1DataFilter.OnFilterChanging(System.ComponentModel.CancelEventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.WPF.DataFilter.C1DataFilter.FilterChanging" /> event.
+            </summary>
+      <param name="e">An <see cref="T:System.ComponentModel.CancelEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="E:C1.WPF.DataFilter.C1DataFilter.FilterChanged">
+      <summary>
+            Occurs when the filter changes.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1DataFilter.OnFilterChanged(System.EventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.WPF.DataFilter.C1DataFilter.FilterChanged" /> event.
+            </summary>
+      <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="E:C1.WPF.DataFilter.C1DataFilter.BeforeTooltipShow">
+      <summary>
+            Occurs before a tooltip is shown.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1DataFilter.OnBeforeTooltipShow(C1.DataFilter.BeforeTooltipShowEventArgs)">
+      <summary>
+            Rises the <see cref="E:C1.WPF.DataFilter.C1DataFilter.BeforeTooltipShow" /> event.
+            </summary>
+      <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.AutoGenerateFilters">
+      <summary>
+            Gets or sets a value indicating whether to generate filters automatically.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.AutoGenerateFiltersProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1DataFilter.AutoGenerateFilters" /> dependency property. 
+            </summary>
+    </member>
+    <member name="E:C1.WPF.DataFilter.C1DataFilter.AutoGenerateFiltersChanged">
+      <summary> 
+            Event raised when the <see cref="P:AutoGenerateFilters" /> property has changed.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.HeaderContent">
+      <summary>
+            Header content for the Header of current <see cref="T:C1.WPF.DataFilter.C1DataFilter" /> control.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.HeaderContentProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1DataFilter.HeaderContent" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.HeaderTemplate">
+      <summary>
+            DataTemplate that uses in Header
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.HeaderTemplateProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1DataFilter.HeaderTemplate" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.ItemsSource">
+      <summary>
+            Gets or sets the object used as the data source for the current <see cref="T:C1.WPF.DataFilter.C1DataFilter" /> control.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.ItemsSourceProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1DataFilter.ItemsSource" /> dependency property. 
+            </summary>
+    </member>
+    <member name="E:C1.WPF.DataFilter.C1DataFilter.ItemsSourceChanged">
+      <summary> 
+            Event raised when the <see cref="P:ItemsSource" /> property has changed.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.ItemMargin">
+      <summary>
+            Margin for all Filter Presenter
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.ItemMarginProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1DataFilter.ItemMargin" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.ItemPadding">
+      <summary>
+            Padding for all FilterPresenter
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.ItemPaddingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1DataFilter.ItemPadding" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.ItemBackground">
+      <summary>
+            Background for all Filter Presenter
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.ItemBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1DataFilter.ItemBackground" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.ItemForeground">
+      <summary>
+            Foreground for Filter Presenter
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.ItemForegroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1DataFilter.ItemForeground" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.ItemBorderThickness">
+      <summary>
+            BorderThickness for all Filter Presenter
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.ItemBorderThicknessProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1DataFilter.ItemBorderThickness" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.ItemBorderBrush">
+      <summary>
+            BorderBrush for all Filter Presenter
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.ItemBorderBrushProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1DataFilter.ItemBorderBrush" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.ItemCornerRadius">
+      <summary>
+            Corner Radius of all Filter Presenters
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.ItemCornerRadiusProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1DataFilter.ItemCornerRadius" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.ExpandedBackground">
+      <summary>
+            Expanded background for expander
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.ExpandedBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1DataFilter.ExpandedBackground" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.ExpandedMouseOverBrush">
+      <summary>
+            MouseOverBrush for expander
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.ExpandedMouseOverBrushProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1DataFilter.ExpandedMouseOverBrush" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.NumericFormat">
+      <summary>
+            Numeric format for textbox in numeric filter
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.NumericFormatProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1DataFilter.NumericFormat" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.CollapsedBackground">
+      <summary>
+            Collapsed background for expander
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.CollapsedBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1DataFilter.CollapsedBackground" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1DataFilter.AutoApply">
+      <summary>
+            Gets or sets a value indicating whether the filter should be automatically applied to the DataSource after the filter value is changed or not.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1DataFilter.AutoApplyProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1DataFilter.AutoApply" /> dependency property. 
+            </summary>
+    </member>
+    <member name="E:C1.WPF.DataFilter.C1DataFilter.AutoApplyChanged">
+      <summary> 
+            Event raised when the <see cref="P:AutoApply" /> property has changed.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1DataFilter.#ctor">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.DataFilter.C1DataFilter" />.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1DataFilter.OnApplyTemplate">
+      <summary>
+            Builds the visual tree for the <see cref="T:C1.WPF.DataFilter.C1DataFilter" /> control when a new template is applied.
+            </summary>
+      <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate" /> method.
+            </remarks>
+    </member>
+    <member name="T:C1.WPF.DataFilter.View.BoolFilterPresenter">
+      <summary>
+            Filter control for model Filter has bool value
+            </summary>
+      <summary>
+            Represents a filter for bool Filter model
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.BoolFilterPresenter.HeaderContent">
+      <summary>
+            Header content for the Header of current <see cref="T:C1.WPF.DataFilter.BoolFilter" /> control.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.BoolFilterPresenter.HeaderContentProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.BoolFilterPresenter.HeaderContent" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.BoolFilterPresenter.HeaderTemplate">
+      <summary>
+            DataTemplate that uses in Header
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.BoolFilterPresenter.HeaderTemplateProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.BoolFilterPresenter.HeaderTemplate" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.BoolFilterPresenter.ConditionContent">
+      <summary>
+            Label content of condition checkbox
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.BoolFilterPresenter.ConditionContentProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.BoolFilterPresenter.ConditionContent" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.BoolFilterPresenter.ConditionContentTemplate">
+      <summary>
+            Content template for Label of condition checkbox
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.BoolFilterPresenter.ConditionContentTemplateProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.BoolFilterPresenter.ConditionContentTemplate" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.BoolFilterPresenter.ExpandedCornerRadius">
+      <summary>
+            Corner radius of the presenter
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.BoolFilterPresenter.ExpandedCornerRadiusProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.BoolFilterPresenter.ExpandedCornerRadius" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.BoolFilterPresenter.ExpandedBackground">
+      <summary>
+            Expanded background for expander
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.BoolFilterPresenter.ExpandedBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.BoolFilterPresenter.ExpandedBackground" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.BoolFilterPresenter.ExpandedMouseOverBrush">
+      <summary>
+            MouseOverBrush for expander
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.BoolFilterPresenter.ExpandedMouseOverBrushProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.BoolFilterPresenter.ExpandedMouseOverBrush" /> dependency property. 
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.View.BoolFilterPresenter.#ctor">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.DataFilter.View.BoolFilterPresenter" />.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.View.BoolFilterPresenter.OnApplyTemplate">
+      <summary>
+            Builds the visual tree for the <see cref="T:C1.WPF.DataFilter.View.BoolFilterPresenter" /> control when a new template is applied.
+            </summary>
+      <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate" /> method.
+            </remarks>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.BoolFilterPresenter.Filter">
+      <summary>
+            BoolFilter model
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.BoolFilterPresenter.FilterProperty">
+      <summary>
+            BoolFilter dependency property
+            </summary>
+    </member>
+    <member name="T:C1.WPF.DataFilter.View.CheckListFilterPresenter">
+      <summary>
+            CheckListFilter that represents UI for CheckList Filter type
+            </summary>
+      <summary>
+            CheckListFilter that represents UI for CheckList Filter type
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.HeaderContent">
+      <summary>
+            Header content for the Header of current <see cref="!:CheckListFilter" /> control.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.CheckListFilterPresenter.HeaderContentProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.HeaderContent" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.HeaderTemplate">
+      <summary>
+            DataTemplate that uses in Header
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.CheckListFilterPresenter.HeaderTemplateProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.HeaderTemplate" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.ItemPadding">
+      <summary>
+            Padding for Item element
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.CheckListFilterPresenter.ItemPaddingProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.ItemPadding" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.ItemMargin">
+      <summary>
+            Margin for Item element
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.CheckListFilterPresenter.ItemMarginProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.ItemMargin" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.ExpandedCornerRadius">
+      <summary>
+            Corner radius of the presenter
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.CheckListFilterPresenter.ExpandedCornerRadiusProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.ExpandedCornerRadius" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.ExpandedBackground">
+      <summary>
+            Expanded background for expander
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.CheckListFilterPresenter.ExpandedBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.ExpandedBackground" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.ExpandedMouseOverBrush">
+      <summary>
+            MouseOverBrush for expander
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.CheckListFilterPresenter.ExpandedMouseOverBrushProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.ExpandedMouseOverBrush" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.SelectAll">
+      <summary>
+            Label for CheckAll checkbox
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.CheckListFilterPresenter.SelectAllProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.SelectAll" /> dependency property. 
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.View.CheckListFilterPresenter.#ctor">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.DataFilter.View.CheckListFilterPresenter" />.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.View.CheckListFilterPresenter.OnApplyTemplate">
+      <summary>
+            Builds the visual tree for the <see cref="T:C1.WPF.DataFilter.View.CheckListFilterPresenter" /> control when a new template is applied.
+            </summary>
+      <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate" /> method.
+            </remarks>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.Filter">
+      <summary>
+            Filter model
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.CheckListFilterPresenter.FilterProperty">
+      <summary>
+            FilterProperty of the view
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.CheckListFilterPresenter.ItemWidth">
+      <summary>
+            Item Width
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.CheckListFilterPresenter.ItemWidthProperty">
+      <summary>
+            ItemWidthProperty of the view
+            </summary>
+    </member>
+    <member name="T:C1.WPF.DataFilter.View.CustomFilterPresenter">
+      <summary>
+            Filter control for CustomFilter model
+            </summary>
+      <summary>
+            CustomFilter that represent UI for CustomFilter model
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.CustomFilterPresenter.Content">
+      <summary>
+            Content of CustomFilter
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.CustomFilterPresenter.ContentProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.CustomFilterPresenter.Content" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.CustomFilterPresenter.ContentTemplate">
+      <summary>
+            DataTemplate for content
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.CustomFilterPresenter.ContentTemplateProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.CustomFilterPresenter.ContentTemplate" /> dependency property. 
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.View.CustomFilterPresenter.#ctor">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.DataFilter.View.CustomFilterPresenter" />.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.View.CustomFilterPresenter.OnApplyTemplate">
+      <summary>
+            Builds the visual tree for the <see cref="T:C1.WPF.DataFilter.View.CustomFilterPresenter" /> control when a new template is applied.
+            </summary>
+      <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate" /> method.
+            </remarks>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.CustomFilterPresenter.Filter">
+      <summary>
+            CustomFilter model
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.CustomFilterPresenter.FilterProperty">
+      <summary>
+            CustomFilter dependency property
+            </summary>
+    </member>
+    <member name="T:C1.WPF.DataFilter.View.RangeFilterPresenter">
+      <summary>
+            Filter control for model Filter has value in range
+            </summary>
+      <summary>
+            DateRangeFilter that represents for Date filter model
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.RangeFilterPresenter.HeaderContent">
+      <summary>
+            Header content for the Header of current <see cref="T:C1.WPF.DataFilter.RangeFilter" /> control.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.RangeFilterPresenter.HeaderContentProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.RangeFilterPresenter.HeaderContent" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.RangeFilterPresenter.HeaderTemplate">
+      <summary>
+            DataTemplate that uses in Header
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.RangeFilterPresenter.HeaderTemplateProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.RangeFilterPresenter.HeaderTemplate" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.RangeFilterPresenter.From">
+      <summary>
+            Label for Lower editor
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.RangeFilterPresenter.FromProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.RangeFilterPresenter.From" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.RangeFilterPresenter.To">
+      <summary>
+            Label for upper editor
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.RangeFilterPresenter.ToProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.RangeFilterPresenter.To" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.RangeFilterPresenter.LowerEditorContent">
+      <summary>
+            Content for Lower Editor
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.RangeFilterPresenter.LowerEditorContentProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.RangeFilterPresenter.LowerEditorContent" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.RangeFilterPresenter.UpperEditorContent">
+      <summary>
+            Content for Upper Editor
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.RangeFilterPresenter.UpperEditorContentProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.RangeFilterPresenter.UpperEditorContent" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.RangeFilterPresenter.LowerEditorTemplate">
+      <summary>
+            DataTemplate of LowerEditor
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.RangeFilterPresenter.LowerEditorTemplateProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.RangeFilterPresenter.LowerEditorTemplate" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.RangeFilterPresenter.UpperEditorTemplate">
+      <summary>
+            DataTemplate of UpperEditor
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.RangeFilterPresenter.UpperEditorTemplateProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.RangeFilterPresenter.UpperEditorTemplate" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.RangeFilterPresenter.ExpandedCornerRadius">
+      <summary>
+            Corner radius of the presenter
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.RangeFilterPresenter.ExpandedCornerRadiusProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.RangeFilterPresenter.ExpandedCornerRadius" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.RangeFilterPresenter.ExpandedBackground">
+      <summary>
+            Expanded background for expander
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.RangeFilterPresenter.ExpandedBackgroundProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.RangeFilterPresenter.ExpandedBackground" /> dependency property. 
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.RangeFilterPresenter.ExpandedMouseOverBrush">
+      <summary>
+            MouseOverBrush for expander
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.RangeFilterPresenter.ExpandedMouseOverBrushProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.RangeFilterPresenter.ExpandedMouseOverBrush" /> dependency property. 
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.View.RangeFilterPresenter.#ctor">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.DataFilter.View.RangeFilterPresenter" />.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.View.RangeFilterPresenter.OnApplyTemplate">
+      <summary>
+            Builds the visual tree for the <see cref="T:C1.WPF.DataFilter.View.RangeFilterPresenter" /> control when a new template is applied.
+            </summary>
+      <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate" /> method.
+            </remarks>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.RangeFilterPresenter._lowerEditor">
+      <summary>
+            Cached editors UI element
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.RangeFilterPresenter._upperEditor">
+      <summary>
+            Cached editors UI element
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.View.RangeFilterPresenter.BindAppearance(System.Windows.Controls.Control)">
+      <summary>
+            Binding appearance (foreground, background)
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.View.RangeFilterPresenter.UpdateEditorsType">
+      <summary>
+            Update EditorsType of editors
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.View.RangeFilterPresenter.LoadEditors(System.Type)">
+      <summary>
+            Load Editors from DataTemplate
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.RangeFilterPresenter.Filter">
+      <summary>
+            Filter model
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.RangeFilterPresenter.FilterProperty">
+      <summary>
+            FilterProperty
+            </summary>
+    </member>
+    <member name="T:C1.WPF.DataFilter.View.DateRangeFilterPresenter">
+      <summary>
+            DateRangeFilter that represents for Date filter model
+            </summary>
+    </member>
+    <member name="T:C1.WPF.DataFilter.View.NumericRangeFilterPresenter">
+      <summary>
+            Range filter for numeric range filter
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.View.NumericRangeFilterPresenter.Format">
+      <summary>
+            Numeric format for textbox in numeric filter
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.View.NumericRangeFilterPresenter.FormatProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.View.NumericRangeFilterPresenter.Format" /> dependency property. 
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.View.NumericRangeFilterPresenter.UpdateEditorsType">
+      <summary>
+            Show / hide the button in numeric text box
+            </summary>
+    </member>
+    <member name="T:C1.WPF.DataFilter.C1FilterEditor">
+      <summary>
+            The <see cref="T:C1.WPF.DataFilter.C1FilterEditor" /> represents a filter as a condition tree.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1FilterEditor.ItemMargin">
+      <summary>
+            Margin for all Filter Node items
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1FilterEditor.ItemMarginProperty">
+      <summary>
+            Identifies the <see cref="P:C1.WPF.DataFilter.C1FilterEditor.ItemMargin" /> dependency property. 
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1FilterEditor.#ctor">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.DataFilter.C1FilterEditor" />.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1FilterEditor.OnApplyTemplate">
+      <summary>
+            Builds the visual tree for the <see cref="T:C1.WPF.DataFilter.C1FilterEditor" /> control when a new template is applied.
+            </summary>
+      <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate" /> method.
+            </remarks>
+    </member>
+    <member name="E:C1.WPF.DataFilter.C1FilterEditor.FilterChanging">
+      <summary>
+            Occurs before the filter is changed. Allows to cancel the change.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1FilterEditor.OnFilterChanging(System.ComponentModel.CancelEventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.WPF.DataFilter.C1FilterEditor.FilterChanging" /> event.
+            </summary>
+      <param name="e">An <see cref="T:System.ComponentModel.CancelEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="E:C1.WPF.DataFilter.C1FilterEditor.FilterChanged">
+      <summary>
+            Occurs when the filter changes.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1FilterEditor.OnFilterChanged(System.EventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.WPF.DataFilter.C1FilterEditor.FilterChanged" /> event.
+            </summary>
+      <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1FilterEditor.AllowDragDrop">
+      <summary>
+            Gets or sets a value indicating whether a drag and drop should be enable or not.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1FilterEditor.AllowDragDropProperty">
+      <summary>
+            DependencyProperty for EnableDragDrop
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1FilterEditor.ItemsSource">
+      <summary>
+            Gets or sets the object used as the items source for the current <see cref="T:C1.WPF.DataFilter.C1FilterEditor" /> control.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1FilterEditor.View">
+      <summary>
+            Gets the result of filtering the <see cref="P:C1.WPF.DataFilter.C1FilterEditor.ItemsSource" />.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1FilterEditor.ApplyFilterAsync">
+      <summary>
+            Applies the filter to the data source asynchronously.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.C1FilterEditor.ClearFilter">
+      <summary>
+            Removes all expressions from filter.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.C1FilterEditor.Expression">
+      <summary>
+            Expression uses to built Filter Node
+            </summary>
+    </member>
+    <member name="F:C1.WPF.DataFilter.C1FilterEditor.ExpressionProperty">
+      <summary>
+            Expressions DependencyProperty
+            </summary>
+    </member>
+    <!-- Badly formed XML comment ignored for member "P:C1.WPF.DataFilter.FilterEditorDragDrop.Tree" -->
+    <member name="T:C1.WPF.DataFilter.CustomFilter">
+      <summary>
+            Represents a custom filter.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.CustomFilter.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.DataFilter.CustomFilter" />.
+            </summary>
+      <param name="propertyName">The name of the data item property.</param>
+    </member>
+    <member name="P:C1.WPF.DataFilter.CustomFilter.Control">
+      <summary>
+            Gets or sets the control that represents the custom filter.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.CustomFilter.Template">
+      <summary>
+            Gets or sets the control template that represents the custom filter.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.DataFilter.CustomFilter.Expression">
+      <summary>
+            Gets the expression of the current filter.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.CustomFilter.GetExpression">
+      <summary>
+            Gets the expression for the current filter.
+            </summary>
+      <returns>The expression of custom filter.</returns>
+    </member>
+    <member name="M:C1.WPF.DataFilter.CustomFilter.SetExpression(C1.DataFilter.Expression)">
+      <summary>
+            Sets the expression for the current filter.
+            </summary>
+      <param name="expression">The expression of custom filter.</param>
+    </member>
+    <member name="T:C1.WPF.DataFilter.DateRangeFilter">
+      <summary>
+            Represents a filter of dates with range slider or editors of range.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.DateRangeFilter.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.DataFilter.DateRangeFilter" />.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.DateRangeFilter.#ctor(System.String,System.Boolean)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.DataFilter.DateRangeFilter" /> with the name of the data item property.
+            </summary>
+      <param name="propertyName">The name of the data item property.</param>
+      <param name="isAutoGenerated">This filter is autogenerated.</param>
+    </member>
+    <member name="T:C1.WPF.DataFilter.BoolFilter">
+      <summary>
+            Represents a filter with checkbox.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.BoolFilter.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.DataFilter.BoolFilter" />.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.BoolFilter.#ctor(System.String,System.Boolean)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.DataFilter.BoolFilter" /> with the name of the data item property.
+            </summary>
+      <param name="propertyName">The name of the data item property.</param>
+      <param name="isAutoGenerated">This filter is autogenerated.</param>
+    </member>
+    <member name="T:C1.WPF.DataFilter.ChecklistFilter">
+      <summary>
+            Represents a filter with checklist.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.ChecklistFilter.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.DataFilter.ChecklistFilter" />.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.ChecklistFilter.#ctor(System.String,System.Boolean)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.DataFilter.ChecklistFilter" /> with the name of the data item property.
+            </summary>
+      <param name="propertyName">The name of the data item property.</param>
+      <param name="isAutoGenerated">This filter is autogenerated.</param>
+    </member>
+    <member name="M:C1.WPF.DataFilter.ChecklistFilter.SetItemsSource(System.Object)">
+      <summary>
+            Sets the object used as the items source for the checklist.
+            </summary>
+      <param name="itemsSource">The object used as the items source.</param>
+    </member>
+    <member name="M:C1.WPF.DataFilter.ChecklistFilter.UpdateItems(System.Object)">
+      <summary>
+            Updates the items collection.
+            </summary>
+      <param name="itemsSource">The object used as the items source.</param>
+    </member>
+    <member name="T:C1.WPF.DataFilter.RangeFilter">
+      <summary>
+            Represents a filter with range slider or editors of range.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.RangeFilter.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.DataFilter.RangeFilter" />.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.DataFilter.RangeFilter.#ctor(System.String,System.Boolean)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.DataFilter.RangeFilter" /> with the name of the data item property.
+            </summary>
+      <param name="propertyName">The name of the data item property.</param>
+      <param name="isAutoGenerated">This filter is autogenerated.</param>
+    </member>
+    <member name="T:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter">
+      <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.Culture">
+      <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.From">
+      <summary>
+            Looks up a localized string similar to From.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.To">
+      <summary>
+            Looks up a localized string similar to To.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.True">
+      <summary>
+            Looks up a localized string similar to True.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.False">
+      <summary>
+            Looks up a localized string similar to False.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.SelectAll">
+      <summary>
+            Looks up a localized string similar to SelectAll.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.ApplyFilter">
+      <summary>
+            Looks up a localized string similar to ApplyFilter.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.ResetFilter">
+      <summary>
+            Looks up a localized string similar to ResetFilter.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.And">
+      <summary>
+            Looks up a localized string similar to And.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.Or">
+      <summary>
+            Looks up a localized string similar to Or.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.AddCombination">
+      <summary>
+            Looks up a localized string similar to AddCombination.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.AddOperation">
+      <summary>
+            Looks up a localized string similar to AddOperation.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.AddMenu">
+      <summary>
+            Looks up a localized string similar to AddMenu.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.Equal">
+      <summary>
+            Looks up a localized string similar to Equal.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.NotEqual">
+      <summary>
+            Looks up a localized string similar to NotEqual.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.GreaterThan">
+      <summary>
+            Looks up a localized string similar to GreaterThan.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.GreaterThanOrEqual">
+      <summary>
+            Looks up a localized string similar to GreaterThanOrEqual.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.LessThan">
+      <summary>
+            Looks up a localized string similar to LessThan.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.LessThanOrEqual">
+      <summary>
+            Looks up a localized string similar to LessThanOrEqual.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.EqualText">
+      <summary>
+            Looks up a localized string similar to EqualText.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.NotEqualText">
+      <summary>
+            Looks up a localized string similar to NotEqualText.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.Contains">
+      <summary>
+            Looks up a localized string similar to Contains.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.StartsWith">
+      <summary>
+            Looks up a localized string similar to StartsWith.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.EndsWith">
+      <summary>
+            Looks up a localized string similar to EndsWith.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.DataFilter.Resources.C1_Silverlight_DataFilter.IsOneOf">
+      <summary>
+            Looks up a localized string similar to IsOneOf.
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.SelectionMode">
+      <summary>
+            Defines the selection behavior.
+            </summary>
+    </member>
+    <member name="F:C1.DataFilter.SelectionMode.Multiple">
+      <summary>
+            The user can select multiple items.
+            </summary>
+    </member>
+    <member name="F:C1.DataFilter.SelectionMode.Single">
+      <summary>
+            The user can select only one item at a time.
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.EditorsType">
+      <summary>
+            Defines the editors type.
+            </summary>
+    </member>
+    <member name="F:C1.DataFilter.EditorsType.TextBox">
+      <summary>
+            The editor like a textbox.
+            </summary>
+    </member>
+    <member name="F:C1.DataFilter.EditorsType.SpinEditor">
+      <summary>
+            The editor that contains a text editor and a pair of spin buttons that a user can click to adjust a value.
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.AggregateType">
+      <summary>
+            Defines the type of the aggregate function expression.
+            </summary>
+    </member>
+    <member name="F:C1.DataFilter.AggregateType.None">
+      <summary>
+            None.
+            </summary>
+    </member>
+    <member name="F:C1.DataFilter.AggregateType.Min">
+      <summary>
+            Minimum item in collection.
+            </summary>
+    </member>
+    <member name="F:C1.DataFilter.AggregateType.Max">
+      <summary>
+            Maximum item in collection.
+            </summary>
+    </member>
+    <member name="F:C1.DataFilter.AggregateType.Sum">
+      <summary>
+            Sum of items in the collection.
+            </summary>
+    </member>
+    <member name="F:C1.DataFilter.AggregateType.Count">
+      <summary>
+            Count of items in the collection.
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.AutoWidthMode">
+      <summary>
+            Defines the auto width mode behavior.
+            </summary>
+    </member>
+    <member name="F:C1.DataFilter.AutoWidthMode.None">
+      <summary>
+            None.
+            </summary>
+    </member>
+    <member name="F:C1.DataFilter.AutoWidthMode.Grow">
+      <summary>
+            The C1DataFilter grows as much as necessary to fit its contents.
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.FilterAutoGeneratingEventArgs">
+      <summary>
+            Provides data for the FilterAutoGenerating event of a C1DataFilter control.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.FilterAutoGeneratingEventArgs.#ctor(System.ComponentModel.PropertyDescriptor,C1.DataFilter.Filter)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.DataFilter.FilterAutoGeneratingEventArgs" />.
+            </summary>
+      <param name="property">The data source property to which the filter applies.</param>
+      <param name="filter">The filter.</param>
+    </member>
+    <member name="P:C1.DataFilter.FilterAutoGeneratingEventArgs.Property">
+      <summary>
+            Gets the data item property to which the filter applies.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.FilterAutoGeneratingEventArgs.Filter">
+      <summary>
+            Gets or sets the filter.
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.FilterChangedEventArgs">
+      <summary>
+            Provides data for the FilterChanged event of a C1DataFilter control.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.FilterChangedEventArgs.#ctor(C1.DataFilter.Filter)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.DataFilter.FilterChangedEventArgs" />.
+            </summary>
+      <param name="filter">The filter.</param>
+    </member>
+    <member name="P:C1.DataFilter.FilterChangedEventArgs.Filter">
+      <summary>
+            Gets the filter.
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.BeforeTooltipShowEventArgs">
+      <summary>
+            Provides data for the BeforeTooltipShow event of the C1DataFilter control. 
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.BeforeTooltipShowEventArgs.Value">
+      <summary>
+            Gets a value of C1DataFilter element.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.BeforeTooltipShowEventArgs.ToolTip">
+      <summary>
+            Gets or sets tooltip text.
+            </summary>
+      <remarks>Use html encoding to format the text.</remarks>
+    </member>
+    <member name="P:C1.DataFilter.BeforeTooltipShowEventArgs.Filter">
+      <summary>
+            Gets the <see cref="P:C1.DataFilter.BeforeTooltipShowEventArgs.Filter" /> for which tooltip is about to be shown.
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.ValueChangedEventArgs">
+      <summary>
+            Provides data for the <see cref="E:C1.DataFilter.Filter.ValueChanged" /> event of a <see cref="T:C1.DataFilter.Filter" /> class.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.ValueChangedEventArgs.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.DataFilter.ValueChangedEventArgs" />.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.ValueChangedEventArgs.ApplyFilter">
+      <summary>
+            Gets or sets a value indicating whether the filter should be automatically applied.
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.ItemPropertyChangedEventArgs">
+      <summary>
+            Provides data for the <see cref="E:C1.DataFilter.ChecklistItem.PropertyChanged" /> event of a <see cref="T:C1.DataFilter.ChecklistItem" /> class.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.ItemPropertyChangedEventArgs.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.DataFilter.ItemPropertyChangedEventArgs" />.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.ItemPropertyChangedEventArgs.ApplyFilter">
+      <summary>
+            Gets or sets a value indicating whether the filter should be automatically applied
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.OperationExpression">
+      <summary>
+            Represents the filter operation expression.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.OperationExpression.PropertyName">
+      <summary>
+            Gets or sets the name of the data item property to which the expression applies.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.OperationExpression.Value">
+      <summary>
+            Gets or sets the value of the current filter expression.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.OperationExpression.FilterOperation">
+      <summary>
+            Gets or sets the filter operation type.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.OperationExpression.GetFilterExpression">
+      <summary>
+            Converts the current <see cref="T:C1.DataFilter.OperationExpression" /> to the <see cref="T:C1.DataCollection.FilterOperationExpression" />.
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.CombinationExpression">
+      <summary>
+            Represents the logical combination of several <see cref="T:C1.DataFilter.OperationExpression" />.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.CombinationExpression.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.DataFilter.CombinationExpression" />.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.CombinationExpression.Expressions">
+      <summary>
+            Gets or sets the collection of <see cref="T:C1.DataFilter.Expression" />.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.CombinationExpression.FilterCombination">
+      <summary>
+            Gets or sets the logical operator applies between expressions of the current <see cref="T:C1.DataFilter.CombinationExpression" />.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.CombinationExpression.GetFilterExpression">
+      <summary>
+            Converts current the <see cref="T:C1.DataFilter.CombinationExpression" /> to the <see cref="T:C1.DataCollection.FilterExpression" />.
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.Expression">
+      <summary>
+            Base class for filter expression condition.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.Expression.Not">
+      <summary>
+            Gets or sets a value indicating the negation of the expression.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.Expression.GetFilterExpression">
+      <summary>
+            Converts current the <see cref="T:C1.DataFilter.Expression" /> to the <see cref="T:C1.DataCollection.FilterExpression" />.
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.PredicateExpression">
+      <summary>
+            Represents the expression which takes a predicate as the filtering function.
+            </summary>
+      <remarks>The <see cref="T:C1.DataFilter.PredicateExpression" /> can not be used with the <see cref="T:System.Data.DataTable" /> class.</remarks>
+    </member>
+    <member name="P:C1.DataFilter.PredicateExpression.Predicate">
+      <summary>
+            Gets the predicate which will filter the collection.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.PredicateExpression.GetFilterExpression">
+      <summary>
+            Converts current the <see cref="T:C1.DataFilter.PredicateExpression" /> to the <see cref="T:C1.DataCollection.FilterExpression" />.
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.FilterCollection">
+      <summary>
+            Represents a collection of the filters.
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.ObservableCollectionBase`1">
+      <summary>
+            Represents a collection with the <see cref="E:C1.DataFilter.ObservableCollectionBase`1.CollectionResetting" /> event.
+            </summary>
+    </member>
+    <member name="E:C1.DataFilter.ObservableCollectionBase`1.CollectionResetting">
+      <summary>
+            Occurs before all items are removed.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.ObservableCollectionBase`1.ClearItems">
+      <summary>
+            Removes all items from the collection.
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.FilterSummary">
+      <summary>
+            Represents the summary of <see cref="T:C1.DataFilter.Filter" />.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.FilterSummary.#ctor(C1.DataFilter.FilterWithSummary)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.DataFilter.FilterSummary" /> class.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.FilterSummary.Owner">
+      <summary>
+            Gets the filter owning this summary.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.FilterSummary.Label">
+      <summary>
+            Gets or sets a text on the left side of the summary.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.FilterSummary.AggregateType">
+      <summary>
+            Gets or sets a type of aggregate expression.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.FilterSummary.PropertyName">
+      <summary>
+            Gets or sets a name of the property for which the aggregate function is applied.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.FilterSummary.CustomFormat">
+      <summary>
+            Gets or sets a expression result format.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.FilterSummary.GetText(System.Object)">
+      <summary>
+            Returns the formatted string with summary.
+            </summary>
+      <param name="summaryValue">A value of summary</param>
+      <returns>A text of summary</returns>
+    </member>
+    <member name="E:C1.DataFilter.FilterSummary.PropertyChanged">
+      <summary>
+            Occurs when a property value changes.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.FilterSummary.OnPropertyChanged(System.String)">
+      <summary>
+            Raises the <see cref="E:C1.DataFilter.FilterSummary.PropertyChanged" /> event. 
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.BoolFilterBase">
+      <summary>
+            Base class represents a filter with checkbox.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.BoolFilterBase.#ctor(System.String,System.Boolean)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.DataFilter.BoolFilterBase" /> with the name of the data item property.
+            </summary>
+      <param name="propertyName">The name of the data item property.</param>
+      <param name="isAutoGenerated">This filter is autogenerated.</param>
+    </member>
+    <member name="P:C1.DataFilter.BoolFilterBase.Text">
+      <summary>
+            Gets or sets the text of label of checkbox.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.BoolFilterBase.Value">
+      <summary>
+            Gets or sets the value of the current filter.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.BoolFilterBase.DefaultValue">
+      <summary>
+            Gets or sets the default value of the current filter.       
+            </summary>
+      <remarks>
+            Uses with the <see cref="P:C1.DataFilter.BoolFilterBase.IgnoreDefault" /> property.
+            </remarks>
+    </member>
+    <member name="P:C1.DataFilter.BoolFilterBase.IgnoreDefault">
+      <summary>
+            Gets or sets a value indicating whether the current filter applies when the <see cref="P:C1.DataFilter.BoolFilterBase.Value" /> is equal to the <see cref="P:C1.DataFilter.BoolFilterBase.DefaultValue" /> or not.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.BoolFilterBase.IsApplied">
+      <summary>
+            Gets a value indicating the current filter is applied or not.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.BoolFilterBase.Expression">
+      <summary>
+            Gets the expression of the current filter.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.BoolFilterBase.Reset(System.Boolean)">
+      <summary>
+            Resets the filter value to the default value.
+            </summary>
+      <param name="applyFilter">The value indicating whether the filter should be automatically applied.</param>
+    </member>
+    <member name="M:C1.DataFilter.BoolFilterBase.SetValue(System.Boolean,System.Boolean)">
+      <summary>
+            Sets a value of <see cref="T:C1.DataFilter.BoolFilterBase" /> class.
+            </summary>
+      <param name="value">The filter value.</param>
+      <param name="applyFilter">The value indicating whether the filter should be automatically applied.</param>
+    </member>
+    <member name="T:C1.DataFilter.CalendarFilterBase">
+      <summary>
+            Base class represents a filter of dates with calendar.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.CalendarFilterBase.#ctor(System.String,System.Boolean)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.DataFilter.CalendarFilterBase" /> with the name of the data item property.
+            </summary>
+      <param name="propertyName">The name of the data item property.</param>
+      <param name="isAutoGenerated">This filter is autogenerated.</param>
+    </member>
+    <member name="P:C1.DataFilter.CalendarFilterBase.CalendarSettings">
+      <summary>
+            Gets the settings of calendar.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.CalendarFilterBase.SelectedDates">
+      <summary>
+            Gets or sets an <see cref="T:System.DateTime" /> array of selected dates.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.CalendarFilterBase.MaxSelectionCount">
+      <summary>
+            Gets or sets the maximum number of days that can be selected in the calendar.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.CalendarFilterBase.MaxDate">
+      <summary>
+            Gets or sets the maximum allowable date.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.CalendarFilterBase.MinDate">
+      <summary>
+            Gets or sets the minimum allowable date.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.CalendarFilterBase.IsApplied">
+      <summary>
+            Gets a value indicating the current filter is applied or not.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.CalendarFilterBase.Expression">
+      <summary>
+            Gets the expression of the current filter.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.CalendarFilterBase.SetValue(System.DateTime[],System.Boolean)">
+      <summary>
+             Sets a value of <see cref="T:C1.DataFilter.CalendarFilterBase" /> class.
+            </summary>
+      <param name="value">The filter value.</param>
+      <param name="applyFilter">The value indicating whether the filter should be automatically applied.</param>
+    </member>
+    <member name="M:C1.DataFilter.CalendarFilterBase.Reset(System.Boolean)">
+      <summary>
+            Resets the filter value to the default value.
+            </summary>
+      <param name="applyFilter">The value indicating whether the filter should be automatically applied.</param>
+    </member>
+    <member name="T:C1.DataFilter.CalendarSettings">
+      <summary>
+            Represents a settings of filter calendar.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.CalendarSettings.FirstDayOfWeek">
+      <summary>
+            Gets or sets the first day of the week as displayed in the month calendar.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.CalendarSettings.Calendar">
+      <summary>
+            Gets or set the <see cref="T:System.Globalization.Calendar" /> object that represents time in divisions of calendar.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.CalendarSettings.CurrentCulture">
+      <summary>
+            Get or sets current culture for the calendar.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.CalendarSettings.CalendarWeekRule">
+      <summary>
+            Get or sets current calendar week rule.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.CalendarSettings.ShowToday">
+      <summary>
+            Gets or sets a value that indicates whether to display today date.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.CalendarSettings.ShowArrowButtons">
+      <summary>
+            Gets or sets the <see cref="T:System.Boolean" /> value indicating whether calendar displays arrow buttons.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.CalendarSettings.ShowWeekNumbers">
+      <summary>
+            Gets or sets the <see cref="T:System.Boolean" /> value indicating whether calendar displays week numbers.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.CalendarSettings.VerticalOrientationLayout">
+      <summary>
+            Gets or sets the <see cref="T:System.Boolean" /> value indicating whether positioned vertically of the month.
+            </summary>
+    </member>
+    <member name="E:C1.DataFilter.CalendarSettings.PropertyChanged">
+      <summary>
+            Occurs when a property value changes.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.CalendarSettings.OnPropertyChanged(System.String)">
+      <summary>
+            Raises the <see cref="E:C1.DataFilter.CalendarSettings.PropertyChanged" /> event. 
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.ChecklistFilterBase">
+      <summary>
+            Base class represents a filter with checklist.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.ChecklistFilterBase.#ctor(System.String,System.Boolean)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.DataFilter.ChecklistFilterBase" /> with the name of the data item property.
+            </summary>
+      <param name="propertyName">The name of the data item property.</param>
+      <param name="isAutoGenerated">This filter is auto generated.</param>
+    </member>
+    <member name="P:C1.DataFilter.ChecklistFilterBase.MaxHeight">
+      <summary>
+            Gets or sets a maximum height of checklist.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.ChecklistFilterBase.ShowSelectAll">
+      <summary>
+            Gets or sets a value indicating whether show select all checkbox or not.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.ChecklistFilterBase.ShowSearchBox">
+      <summary>
+            Gets or sets a value indicating whether show search box or not.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.ChecklistFilterBase.ItemsSource">
+      <summary>
+            Gets or sets the object used as the items source for the checklist.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.ChecklistFilterBase.DisplayedItems">
+      <summary>
+            Gets or sets the count of items displayed in the checklist, the checklist shows the 'more' button, when the <see cref="P:C1.DataFilter.ChecklistFilterBase.ItemsSource" /> contains more items.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.ChecklistFilterBase.SelectionMode">
+      <summary>
+            Gets or sets a value indicating selection method for items of checklist.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.ChecklistFilterBase.DisplayMemberPath">
+      <summary>
+            Gets or sets a path to a value on the source object to serve as the visual representation of the object.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.ChecklistFilterBase.ValueMemberPath">
+      <summary>
+            Gets or sets a path to a value on the source object to serve as the value representation of the object.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.ChecklistFilterBase.Expression">
+      <summary>
+            Gets the expression of the current filter.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.ChecklistFilterBase.IsApplied">
+      <summary>
+            Gets a value indicating the current filter is applied or not.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.ChecklistFilterBase.Items">
+      <summary>
+            Gets the items collection of checklist.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.ChecklistFilterBase.SelectedItems">
+      <summary>
+            Gets the collection of selected items.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.ChecklistFilterBase.Reset(System.Boolean)">
+      <summary>
+            Resets the filter value to the default value.
+            </summary>
+      <param name="applyFilter">The value indicating whether the filter should be automatically applied.</param>
+    </member>
+    <member name="M:C1.DataFilter.ChecklistFilterBase.BeginItemsUpdate">
+      <summary>
+            Maintains performance while items are added to the filter one at a time.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.ChecklistFilterBase.EndItemsUpdate">
+      <summary>
+            Resumes events of the filter after items updating.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.ChecklistFilterBase.SelectAll(System.Boolean)">
+      <summary>
+            Selects all items in the checklist.
+            </summary>
+      <param name="applyFilter">
+      </param>
+    </member>
+    <member name="M:C1.DataFilter.ChecklistFilterBase.UnselectAll(System.Boolean)">
+      <summary>
+            Clears the SelectedItems collection in the checklist.
+            </summary>
+      <param name="applyFilter">
+      </param>
+    </member>
+    <member name="M:C1.DataFilter.ChecklistFilterBase.UpdateItems(System.Object)">
+      <summary>
+            Updates the items collection.
+            </summary>
+      <param name="itemsSource">The object used as the items source.</param>
+    </member>
+    <member name="M:C1.DataFilter.ChecklistFilterBase.SetItemsSource(System.Object)">
+      <summary>
+            Sets the object used as the items source for the checklist.
+            </summary>
+      <param name="itemsSource">The object used as the items source.</param>
+    </member>
+    <member name="T:C1.DataFilter.ChecklistItem">
+      <summary>
+            Represents a item of checklist.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.ChecklistItem.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.DataFilter.ChecklistItem" />.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.ChecklistItem.#ctor(System.Object,System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.DataFilter.ChecklistItem" /> with initial data.
+            </summary>
+      <param name="value">The value of the checklist item.</param>
+      <param name="displayValue">The text of label.</param>
+    </member>
+    <member name="P:C1.DataFilter.ChecklistItem.Value">
+      <summary>
+            Gets or sets the value of current <see cref="T:C1.DataFilter.ChecklistItem" />.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.ChecklistItem.DisplayValue">
+      <summary>
+            Gets or sets the text of label.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.ChecklistItem.Selected">
+      <summary>
+            Gets or sets the selected state of current <see cref="T:C1.DataFilter.ChecklistItem" />.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.ChecklistItem.SetSelected(System.Boolean,System.Boolean)">
+      <summary>
+      </summary>
+      <param name="selected">
+      </param>
+      <param name="applyFilter">
+      </param>
+    </member>
+    <member name="E:C1.DataFilter.ChecklistItem.PropertyChanged">
+      <summary>
+            Occurs when a property value changes.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.ChecklistItem.OnPropertyChanged(System.String)">
+      <summary>
+            Raises the <see cref="E:C1.DataFilter.ChecklistItem.PropertyChanged" /> event. 
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.ChecklistItemsCollection">
+      <summary>
+            Represents a collection of the <see cref="T:C1.DataFilter.ChecklistItem" />.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.ChecklistItemsCollection.Contains(System.Object)">
+      <summary>
+            Returns a value that indicates whether the specified value is in this view.
+            </summary>
+      <param name="value">The value to check.</param>
+      <returns>True if item is in the view; otherwise, False.</returns>
+    </member>
+    <member name="T:C1.DataFilter.DateRangeFilterBase">
+      <summary>
+            Base class represents a filter of dates with range slider or editors of range.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.DateRangeFilterBase.#ctor(System.String,System.Boolean)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.DataFilter.DateRangeFilterBase" /> with the name of the data item property.
+            </summary>
+      <param name="propertyName">The name of the data item property.</param>
+      <param name="isAutoGenerated">This filter is autogenerated.</param>
+    </member>
+    <member name="P:C1.DataFilter.DateRangeFilterBase.CustomFormat">
+      <summary>
+            Gets or sets a custom date format.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.DateRangeFilterBase.CalendarSettings">
+      <summary>
+            Gets the settings of calendar.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.DateRangeFilterBase.LowerValue">
+      <summary>
+            Gets or sets the current lower magnitude of the range.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.DateRangeFilterBase.UpperValue">
+      <summary>
+            Gets or sets the current upper magnitude of the range.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.DateRangeFilterBase.Maximum">
+      <summary>
+            Gets or sets the maximum value of the range.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.DateRangeFilterBase.Minimum">
+      <summary>
+            Gets or sets the minimum value of the range.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.DateRangeFilterBase.SliderVisible">
+      <summary>
+            Gets or sets a value indicating whether show the range slider or not.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.DateRangeFilterBase.EditorsVisible">
+      <summary>
+            Gets or sets a value indicating whether show the editors or not.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.DateRangeFilterBase.Expression">
+      <summary>
+            Gets the expression of the current filter.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.DateRangeFilterBase.SetLowerValue(System.DateTime,System.Boolean)">
+      <summary>
+            Sets a lower value of <see cref="T:C1.DataFilter.BoolFilterBase" /> class.
+            </summary>
+      <param name="value">The lower filter value.</param>
+      <param name="applyFilter">The value indicating whether the filter should be automatically applied.</param>
+    </member>
+    <member name="M:C1.DataFilter.DateRangeFilterBase.SetUpperValue(System.DateTime,System.Boolean)">
+      <summary>
+            Sets a upper value of <see cref="T:C1.DataFilter.BoolFilterBase" /> class.
+            </summary>
+      <param name="value">The upper filter value.</param>
+      <param name="applyFilter">The value indicating whether the filter should be automatically applied.</param>
+    </member>
+    <member name="M:C1.DataFilter.DateRangeFilterBase.Reset(System.Boolean)">
+      <summary>
+            Resets the filter value to the default value.
+            </summary>
+      <param name="applyFilter">The value indicating whether the filter should be automatically applied.</param>
+    </member>
+    <member name="T:C1.DataFilter.FilterWithSummary">
+      <summary>
+            Represents filter of the C1DataFilter control with summaries.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.FilterWithSummary.#ctor(System.String,System.Boolean)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.DataFilter.FilterWithSummary" /> with the name of the data item property.
+            </summary>
+      <param name="propertyName">The name of the data item property.</param>
+      <param name="isAutoGenerated">This filter is auto generated.</param>
+    </member>
+    <member name="P:C1.DataFilter.FilterWithSummary.FilterSummary">
+      <summary>
+            Gets the filter summary of the current filter.
+            </summary>
+    </member>
+    <member name="T:C1.DataFilter.RangeFilterBase">
+      <summary>
+            Base class represents a filter with range slider or editors of range.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.RangeFilterBase.#ctor(System.String,System.Boolean)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.DataFilter.RangeFilterBase" /> with the name of the data item property.
+            </summary>
+      <param name="propertyName">The name of the data item property.</param>
+      <param name="isAutoGenerated">This filter is autogenerated.</param>
+    </member>
+    <member name="P:C1.DataFilter.RangeFilterBase.Digits">
+      <summary>
+            Gets or sets the number of fractional digits.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.RangeFilterBase.Increment">
+      <summary>
+            Gets or set the the amount to increment/decrement when the user clicks up/down buttons.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.RangeFilterBase.LowerValue">
+      <summary>
+            Gets or sets the current lower magnitude of the range.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.RangeFilterBase.UpperValue">
+      <summary>
+            Gets or sets the current upper magnitude of the range.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.RangeFilterBase.Maximum">
+      <summary>
+            Gets or sets the maximum value of the range.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.RangeFilterBase.Minimum">
+      <summary>
+            Gets or sets the minimum value of the range.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.RangeFilterBase.SliderVisible">
+      <summary>
+            Gets or sets a value indicating whether show the range slider or not.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.RangeFilterBase.EditorsVisible">
+      <summary>
+            Gets or sets a value indicating whether show the editors or not.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.RangeFilterBase.EditorsType">
+      <summary>
+            Gets or sets a value indicating editors type.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.RangeFilterBase.Expression">
+      <summary>
+            Gets the expression of the current filter.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.RangeFilterBase.SetLowerValue(System.Double,System.Boolean)">
+      <summary>
+            Sets a lower value of <see cref="T:C1.DataFilter.BoolFilterBase" /> class.
+            </summary>
+      <param name="value">The lower filter value.</param>
+      <param name="applyFilter">The value indicating whether the filter should be automatically applied.</param>
+    </member>
+    <member name="M:C1.DataFilter.RangeFilterBase.SetUpperValue(System.Double,System.Boolean)">
+      <summary>
+            Sets a upper value of <see cref="T:C1.DataFilter.BoolFilterBase" /> class.
+            </summary>
+      <param name="value">The upper filter value.</param>
+      <param name="applyFilter">The value indicating whether the filter should be automatically applied.</param>
+    </member>
+    <member name="M:C1.DataFilter.RangeFilterBase.Reset(System.Boolean)">
+      <summary>
+            Resets the filter value to the default value.
+            </summary>
+      <param name="applyFilter">The value indicating whether the filter should be automatically applied.</param>
+    </member>
+    <member name="T:C1.DataFilter.Filter">
+      <summary>
+            Base class represents filter of the C1DataFilter control.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.Filter.#ctor(System.String,System.Boolean)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.DataFilter.Filter" /> with the name of the data item property.
+            </summary>
+      <param name="propertyName">The name of the data item property.</param>
+      <param name="isAutoGenerated">This filter is auto generated.</param>
+    </member>
+    <member name="P:C1.DataFilter.Filter.PropertyName">
+      <summary>
+            Gets or sets the name of the data item property to which the current <see cref="T:C1.DataFilter.Filter" /> applies.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.Filter.Expression">
+      <summary>
+            Gets or sets the expression of the current <see cref="T:C1.DataFilter.Filter" />.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.Filter.IsApplied">
+      <summary>
+            Gets a value indicating the current <see cref="T:C1.DataFilter.Filter" /> is applied or not.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.Filter.HeaderText">
+      <summary>
+            Gets or sets a value of header text of the current <see cref="T:C1.DataFilter.Filter" />.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.Filter.Expanded">
+      <summary>
+            Gets or set the expanded state of current <see cref="T:C1.DataFilter.Filter" />.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.Filter.ToolTip">
+      <summary>
+            Gets or sets the text that appears as a ToolTip for header of this filter.
+            </summary>
+    </member>
+    <member name="P:C1.DataFilter.Filter.IsAutoGenerated">
+      <summary>
+            Gets a value indicating whether this filter was generated automatically.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.Filter.Reset(System.Boolean)">
+      <summary>
+            Resets the filter value to the default value.
+            </summary>
+      <param name="applyFilter">The value indicating whether the filter should be automatically applied.</param>
+    </member>
+    <member name="E:C1.DataFilter.Filter.ValueChanged">
+      <summary>
+            Occurs when a value of current <see cref="T:C1.DataFilter.Filter" /> changes.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.Filter.OnValueChanged(C1.DataFilter.ValueChangedEventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.DataFilter.Filter.ValueChanged" /> event.
+            </summary>
+    </member>
+    <member name="E:C1.DataFilter.Filter.PropertyChanged">
+      <summary>
+            Occurs when a property value changes.
+            </summary>
+    </member>
+    <member name="M:C1.DataFilter.Filter.OnPropertyChanged(System.String)">
+      <summary>
+            Raises the <see cref="E:C1.DataFilter.Filter.PropertyChanged" /> event. 
+            </summary>
+    </member>
+    <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+      <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+    </member>
+    <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+      <summary>
+            CreateInstance
+            </summary>
+    </member>
+    <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+      <summary>
+            GetPropertyValue
+            </summary>
+    </member>
+    <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+      <summary>
+            SetPropertyValue
+            </summary>
+    </member>
+    <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+      <summary>
+            CreateDelegate
+            </summary>
+    </member>
+    <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+      <summary>
+            AddEventHandler
+            </summary>
+    </member>
+  </members>
+</doc>

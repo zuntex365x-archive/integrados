@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/C1.WPF.Schedule.4.5.2;component/themes/CalendarThemes/Office2010/Blue.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <SolidColorBrush x:Key="C1Calendar_Background" Color="#FFE0E4E9" />
+    <SolidColorBrush x:Key="C1Calendar_Foreground_Brush" Color="Black" />
+    <SolidColorBrush x:Key="C1Calendar_AdjucentDateText_Brush" Color="#FFCCCFD3" />
+    <SolidColorBrush x:Key="C1Calendar_Weekend_Brush" Color="#FF3F689C" />
+    <SolidColorBrush x:Key="C1Calendar_MonthHeader_Brush" Color="Transparent" />
+    <SolidColorBrush x:Key="C1Calendar_MonthHeaderText_Brush" Color="Black" />
+    <SolidColorBrush x:Key="C1Calendar_SelectedDate_Brush" Color="#FFCCD2D9" />
+    <Color x:Key="C1Calendar_Today_Color">#FFC95C05</Color>
+    <SolidColorBrush x:Key="C1Calendar_Today_Brush" Color="{StaticResource C1Calendar_Today_Color}" />
+    <SolidColorBrush x:Key="C1Calendar_Today_Background" Color="Transparent" />
+
+
+    <Thickness x:Key="C1Calendar_TodayBorder_Thickness">0.5 1</Thickness>
+    <SolidColorBrush x:Key="C1Calendar_NavArrow_Brush" Color="Black" />
+    <Thickness x:Key="C1Calendar_DaysOfWeekBorder_Thickness">0,0,0,1</Thickness>
+    <SolidColorBrush x:Key="C1Calendar_DaysOfWeekBorder_Brush" Color="#FFD8DCE1" />
+    <Thickness x:Key="C1Calendar_WeekNumbersBorder_Thickness">0,0,0,0</Thickness>
+    <FontWeight x:Key="C1Calendar_DayOfWeek_FontWeight">Normal</FontWeight>
+
+</ResourceDictionary>

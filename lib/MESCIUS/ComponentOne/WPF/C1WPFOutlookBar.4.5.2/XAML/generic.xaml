@@ -1,0 +1,358 @@
+﻿	  
+	   
+    
+		
+
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib" xmlns:c1="clr-namespace:C1.WPF;assembly=C1.WPF.4.5.2" xmlns:c1_Resources="clr-namespace:C1.Silverlight.Resources;assembly=C1.WPF.4.5.2" xmlns:c1OutlookBar="clr-namespace:C1.WPF.OutlookBar" xmlns:c1OutlookBar_resources="clr-namespace:C1.Silverlight.OutlookBar.Resources" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/C1.WPF.4.5.2;component/themes/C1Button.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <c1_Resources:C1_Silverlight x:Key="c1_Resources" />
+    <c1OutlookBar_resources:C1_Silverlight_OutlookBar x:Key="OutlookBarResources" />
+
+
+    <!-- Color & Brush used to build Base brushes -->
+
+    <Color x:Key="OutlookBarBaseColor">#FFD1DCE8</Color>
+    <SolidColorBrush x:Key="OutlookBarBaseBrush" Color="{StaticResource OutlookBarBaseColor}" />
+
+    <Color x:Key="OutlookBarOverBaseColor">#FFBFE1EA</Color>
+    <SolidColorBrush x:Key="OutlookBarOverBaseBrush" Color="{StaticResource OutlookBarOverBaseColor}" />
+
+    <Color x:Key="OutlookBarSelectedBaseColor">#FF8ED1E2</Color>
+    <SolidColorBrush x:Key="OutlookBarSelectedBaseBrush" Color="{StaticResource OutlookBarSelectedBaseColor}" />
+
+    <!-- Brush @ OutlookBar foreground -->
+    <SolidColorBrush x:Key="OutlookBarForegroundBrush" Color="Black" />
+    
+    <!-- Brush @ OutlookBar borders -->
+    <SolidColorBrush x:Key="OutlookBarBorderBrush" Color="#FFA4AFBA" />
+
+    <!-- Brush @ OutlookBar 3D effect -->    
+    <SolidColorBrush x:Key="OutlookBar3DBrush" Color="#FFFAFBFC" />
+    
+    <!-- Brushes @ OutlookBar item background -->
+    
+    
+    <LinearGradientBrush x:Key="OutlookBarItemBackgroundBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFEFF3F7" Offset="0" />
+        <GradientStop Color="#FFE6ECF3" Offset="0.5" />
+        <GradientStop Color="#FFD3DEEA" Offset="0.5" />
+        <GradientStop Color="#FFC4D2E2" Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="OutlookBarItemBackgroundOverBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFEDF6F9" Offset="0" />
+        <GradientStop Color="#FFE4F2F6" Offset="0.5" />
+        <GradientStop Color="#FFD2E9F0" Offset="0.5" />
+        <GradientStop Color="#FFC0E0EA" Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="OutlookBarItemBackgroundSelectedBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFA6D9E7" Offset="0" />
+        <GradientStop Color="#FFA6D9E7" Offset="0.5" />
+        <GradientStop Color="#FF93D1E2" Offset="0.5" />
+        <GradientStop Color="#FF7BC7DC" Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- Brush @ OutlookBar header -->
+    <LinearGradientBrush x:Key="OutlookHeaderBackgroundBrush" StartPoint="0,0" EndPoint="0,1">
+        
+        
+        <GradientStop Color="#FFEFF3F7" Offset="0" />
+        <GradientStop Color="#FFE6ECF3" Offset="0.5" />
+        <GradientStop Color="#FFD3DEEA" Offset="0.5" />
+        <GradientStop Color="#FFC4D2E2" Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- Brush @ OutlookBar splitters -->
+    
+    <LinearGradientBrush x:Key="OutlookBarSplitterBackgroundBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#FFFAFBFC" Offset="0" />
+        <GradientStop Color="#FFD1DCE8" Offset="1" />
+    </LinearGradientBrush>
+    
+    <SolidColorBrush x:Key="OutlookBarVSplitterBackgroundBrush" Color="{StaticResource OutlookBarBaseColor}" />
+    
+    <!-- Brush @ OutlookBar content -->
+    <SolidColorBrush x:Key="OutlookBarContentBackgroundBrush" Color="{StaticResource OutlookBarBaseColor}" />
+
+    <!-- Thickness @ OutlookBar item -->
+    <Thickness x:Key="OutlookBarItemBorderThickness">0 1 0 0</Thickness>
+    <!-- Thickness @ OutlookBar splitters -->
+    <Thickness x:Key="OutlookBarSplitterThickness">0 1 0 0</Thickness>
+    <Thickness x:Key="OutlookBarSplitter3DThickness">1 1 0 0</Thickness>
+    <Thickness x:Key="OutlookBarVSplitterThickness">1 0 0 0</Thickness>
+    <!-- Thickness @ OutlookBar overflow -->
+    <Thickness x:Key="OutlookBarOverflowThickness">0 1 0 0</Thickness>
+    <!-- Thickness @ OutlookBar header -->
+    <Thickness x:Key="OutlookBarHeaderThickness">0 0 0 1</Thickness>
+    <Thickness x:Key="OutlookBarHeader3DThickness">1 1 0 0 </Thickness>
+    <!-- Thickness @ OutlookBar content -->
+    <Thickness x:Key="OutlookBarContentThickness">1 1 0 0</Thickness>
+    
+    <!-- Menu Icon -->
+    <Style x:Key="MenuIcon" TargetType="Image">
+        <Setter Property="Height" Value="16" />
+        <Setter Property="Width" Value="16" />
+        <Setter Property="Margin" Value="4 3" />
+    </Style>
+    
+    <!-- C1Outlook item -->
+    <Style TargetType="c1OutlookBar:C1OutlookItem">
+        <Setter Property="Padding" Value="2" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1OutlookBar:C1OutlookItem">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="SelectionStates">
+                                <VisualState x:Name="Unselected" />
+                                <VisualState x:Name="Selected">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SelectedElement" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MouseOverElement" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="ExpansionStates">
+                                <VisualState x:Name="Expanded" />
+                                <VisualState x:Name="Collapsed" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <!-- ClearStyle :: Brush Builders -->
+                        <c1:C1BrushBuilder x:Name="BackgroundBrush" Input="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}" DesignBrush="{StaticResource OutlookBarItemBackgroundBrush}" DesignColor="{StaticResource OutlookBarBaseColor}" />
+                        <c1:C1BrushBuilder x:Name="MouseOverBrush" Input="{Binding MouseOverBrush, RelativeSource={RelativeSource TemplatedParent}}" DesignBrush="{StaticResource OutlookBarItemBackgroundOverBrush}" DesignColor="{StaticResource OutlookBarOverBaseColor}" />
+                        <c1:C1BrushBuilder x:Name="SelectedBrush" Input="{Binding SelectedBackground, RelativeSource={RelativeSource TemplatedParent}}" DesignBrush="{StaticResource OutlookBarItemBackgroundSelectedBrush}" DesignColor="{StaticResource OutlookBarSelectedBaseColor}" />
+
+                        <Border x:Name="BackgroundElement" Background="{Binding Output, ElementName=BackgroundBrush}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{StaticResource OutlookBarItemBorderThickness}" />
+                        <Border x:Name="SelectedElement" Background="{Binding Output, ElementName=SelectedBrush}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{StaticResource OutlookBarItemBorderThickness}" Visibility="Collapsed" />
+                        <Border x:Name="MouseOverElement" Background="{Binding Output, ElementName=MouseOverBrush}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{StaticResource OutlookBarItemBorderThickness}" Visibility="Collapsed" />
+                        <Grid Margin="{TemplateBinding BorderThickness}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <ContentPresenter Grid.Column="0" x:Name="IconPresenter" Margin="{TemplateBinding Padding}" />
+                            <ContentPresenter Grid.Column="1" x:Name="HeaderPresenter" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" />
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- C1OutlookBar -->
+    <Style TargetType="c1OutlookBar:C1OutlookBar">
+        
+        
+        <Setter Property="Background" Value="{StaticResource WpfInputBaseBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource WpfInputBorderBrush}" />
+        <Setter Property="ItemBackground" Value="{StaticResource WpfInputBaseBrush}" />
+        <Setter Property="MouseOverBrush" Value="{StaticResource WpfInputMouseOverBrush}" />
+        <Setter Property="SelectedBackground" Value="{StaticResource WpfInputSelectedBackground}" />
+        <Setter Property="Foreground" Value="{StaticResource OutlookBarForegroundBrush}" />
+        <Setter Property="ItemForeground" Value="{StaticResource OutlookBarForegroundBrush}" />
+        <Setter Property="BorderThickness" Value="1" />        
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <c1OutlookBar:C1OutlookPanel />
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1OutlookBar:C1OutlookBar">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="DockStates">
+                                <VisualState x:Name="Left">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ExpandButtonTransformer" Storyboard.TargetProperty="LayoutTransform">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <RotateTransform Angle="0" />
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ExpandButton" Storyboard.TargetProperty="(Grid.Column)">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <system:Int32>2</system:Int32>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="HorizontalResizer" Storyboard.TargetProperty="(Grid.Column)">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <system:Int32>2</system:Int32>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Right">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ExpandButtonTransformer" Storyboard.TargetProperty="LayoutTransform">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <RotateTransform Angle="180" />
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ExpandButton" Storyboard.TargetProperty="(Grid.Column)">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <system:Int32>0</system:Int32>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="HorizontalResizer" Storyboard.TargetProperty="(Grid.Column)">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <system:Int32>0</system:Int32>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="ExpansionStates">
+                                <VisualState x:Name="Expanded">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ExpandButtonTransformer2" Storyboard.TargetProperty="LayoutTransform">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <RotateTransform Angle="180" />
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Collapsed" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <!-- ClearStyle :: Brush Builders -->
+                        <c1:C1BrushBuilder x:Name="MouseOverBrush" Input="{Binding MouseOverBrush, RelativeSource={RelativeSource TemplatedParent}}" DesignBrush="{StaticResource OutlookBarItemBackgroundOverBrush}" DesignColor="{StaticResource OutlookBarOverBaseColor}" />
+                        <c1:C1BrushBuilder x:Name="SelectedBrush" Input="{Binding SelectedBackground, RelativeSource={RelativeSource TemplatedParent}}" DesignBrush="{StaticResource OutlookBarItemBackgroundSelectedBrush}" DesignColor="{StaticResource OutlookBarSelectedBaseColor}" />
+                        <c1:C1BrushBuilder x:Name="HeaderBackgroundBrush" Input="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}" DesignBrush="{StaticResource OutlookHeaderBackgroundBrush}" DesignColor="{StaticResource OutlookBarBaseColor}" />
+                        <c1:C1BrushBuilder x:Name="ContentBackgroundBrush" Input="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}" DesignBrush="{StaticResource OutlookBarContentBackgroundBrush}" DesignColor="{StaticResource OutlookBarBaseColor}" />
+                        <c1:C1BrushBuilder x:Name="SplitterBackgroundBrush" Input="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}" DesignBrush="{StaticResource OutlookBarSplitterBackgroundBrush}" DesignColor="{StaticResource OutlookBarBaseColor}" />
+                        <c1:C1BrushBuilder x:Name="VSplitterBackgroundBrush" Input="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}" DesignBrush="{StaticResource OutlookBarVSplitterBackgroundBrush}" DesignColor="{StaticResource OutlookBarBaseColor}" />
+                        <c1:C1BrushBuilder x:Name="ItemBackgroundBrush" Input="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}" DesignBrush="{StaticResource OutlookBarItemBackgroundBrush}" DesignColor="{StaticResource OutlookBarBaseColor}" />
+                        <c1:C1BrushBuilder x:Name="EffectBrush3D" Input="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}" DesignBrush="{StaticResource OutlookBar3DBrush}" DesignColor="{StaticResource OutlookBarBaseColor}" />
+
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <!-- Vertical Splitter -->
+                                <Border x:Name="HorizontalResizer" Background="{Binding Output, ElementName=VSplitterBackgroundBrush}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{StaticResource OutlookBarVSplitterThickness}" Width="4" Cursor="SizeWE" />
+                                <c1:C1DockPanel Grid.Column="1">
+                                    <!-- Header -->
+                                    <Border c1:C1DockPanel.Dock="Top" Background="{Binding Output, ElementName=HeaderBackgroundBrush}" BorderThickness="{StaticResource OutlookBarHeaderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                                        <Border BorderThickness="{StaticResource OutlookBarHeader3DThickness}" BorderBrush="{Binding Output, ElementName=EffectBrush3D}">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+                                                <ContentControl Grid.Column="1" Foreground="{TemplateBinding Foreground}" FontSize="15" FontWeight="Bold" Margin="8 3">
+                                                    <Grid Margin="{TemplateBinding BorderThickness}">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition />
+                                                        </Grid.ColumnDefinitions>
+                                                        <ContentPresenter Grid.Column="0" x:Name="IconPresenter" Margin="{TemplateBinding Padding}" />
+                                                        <ContentPresenter Grid.Column="1" x:Name="HeaderPresenter" VerticalAlignment="Center" />
+                                                    </Grid>
+                                                </ContentControl>
+                                                <Button x:Name="ExpandButton" Width="16" Height="16" Margin="2" Style="{StaticResource ClearStyleButtonStyle}" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding SelectedBackground}">
+                                                    <c1:C1LayoutTransformer x:Name="ExpandButtonTransformer">
+                                                        <c1:C1LayoutTransformer x:Name="ExpandButtonTransformer2">
+                                                            <Path Data="M4,0 L5,0 L5,1 L6,1 L6,2 L7,2 L7,3 L8,3 L8,4 L7,4 L7,5 L6,5 L6,6 L5,6 L5,7 L4,7 L4,6 L4,5 L5,5 L5,4 L6,4 L6,3 L5,3 L5,2 L4,2 L4,1 z M0,0 L1,0 L1,1 L2,1 L2,2 L3,2 L3,3 L4,3 L4,4 L3,4 L3,5 L2,5 L2,6 L1,6 L1,7 L0,7 L0,6 L0,5 L1,5 L1,4 L2,4 L2,3 L1,3 L1,2 L0,2 L0,1 z" Fill="{TemplateBinding Foreground}" Stretch="Fill" Width="8" Height="7" />
+                                                        </c1:C1LayoutTransformer>
+                                                    </c1:C1LayoutTransformer>
+                                                </Button>
+                                            </Grid>
+                                        </Border>
+                                    </Border>
+
+                                    <c1:C1DockPanel c1:C1DockPanel.Dock="Bottom">
+                                        <!-- Horizontal Splitter -->
+                                        <Border c1:C1DockPanel.Dock="Top" x:Name="ContentSplitter" Background="{Binding Output, ElementName=SplitterBackgroundBrush}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{StaticResource OutlookBarSplitterThickness}" Height="8" Cursor="SizeNS">
+                                            <Border BorderBrush="{Binding Output, ElementName=EffectBrush3D}" BorderThickness="{StaticResource OutlookBarSplitter3DThickness}">
+                                                <Grid Width="19" Height="3" Margin="2">
+                                                    <Path Data="M12,2E-07 L14,2E-07 L14,2 L12,2 z M8,2E-07 L10,2E-07 L10,2 L8,2 z M4,2E-07 L6,2E-07 L6,2 L4,2 z M0,2E-07 L2,2E-07 L2,2 L0,2 z M16,0 L18,0 L18,2 L16,2 z" Fill="{TemplateBinding Foreground}" Stretch="Fill" Margin="0,0,1,1" />
+                                                    <Path Data="M12,2E-07 L14,2E-07 L14,2 L12,2 z M8,2E-07 L10,2E-07 L10,2 L8,2 z M4,2E-07 L6,2E-07 L6,2 L4,2 z M0,2E-07 L2,2E-07 L2,2 L0,2 z M16,0 L18,0 L18,2 L16,2 z" Fill="{Binding Output, ElementName=EffectBrush3D}" Stretch="Fill" Margin="1,1,0,0" />
+                                                </Grid>
+                                            </Border>
+                                        </Border>
+                                        
+                                        <Border Background="{TemplateBinding Background}">
+                                            <Grid Margin="{TemplateBinding Padding}">
+                                                <!-- Items -->
+                                                <Border x:Name="OverflowBackground" Background="{Binding Output, ElementName=ItemBackgroundBrush}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{StaticResource OutlookBarOverflowThickness}" VerticalAlignment="Bottom" />
+                                                <ItemsPresenter Margin="0" />
+                                                <!-- Drop Button -->
+                                                <c1:C1DropDownButton x:Name="DropButton" MinHeight="31" Width="16" AutoClose="True" BorderBrush="Transparent" BorderThickness="0 1 0 0" c1:ClearStyleExtensions.CornerRadius="0" Background="Transparent" Foreground="{TemplateBinding Foreground}" MouseOverBrush="{Binding Output, ElementName=MouseOverBrush}" PressedBrush="{Binding Output, ElementName=SelectedBrush}" FocusBrush="Transparent" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                                                    <c1:C1MenuList Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Foreground="{TemplateBinding Foreground}" HighlightedBackground="{TemplateBinding MouseOverBrush}" OpenedBackground="{TemplateBinding SelectedBackground}">
+                                                        <c1:C1MenuItem Header="{Binding Path=ShowMoreButtonsContent, Source={StaticResource OutlookBarResources}}" Command="{TemplateBinding ShowMoreButtonsCommand}" Height="22">
+                                                            <c1:C1MenuItem.Icon>
+                                                                <Image Style="{StaticResource MenuIcon}" Source="/C1.WPF.OutlookBar.4.5.2;component/icon-more.png" Stretch="Fill" />
+                                                            </c1:C1MenuItem.Icon>
+                                                        </c1:C1MenuItem>
+                                                        <c1:C1MenuItem Header="{Binding Path=ShowFewerButtonsContent, Source={StaticResource OutlookBarResources}}" Command="{TemplateBinding ShowFewerButtonsCommand}" Height="22">
+                                                            <c1:C1MenuItem.Icon>
+                                                                <Image Style="{StaticResource MenuIcon}" Source="/C1.WPF.OutlookBar.4.5.2;component/icon-less.png" Stretch="Fill" />
+                                                            </c1:C1MenuItem.Icon>
+                                                        </c1:C1MenuItem>
+                                                        <c1:C1MenuItem x:Name="Menu" Header="{Binding Path=AddRemoveButtonsContent, Source={StaticResource OutlookBarResources}}" Height="22" />
+                                                    </c1:C1MenuList>
+                                                </c1:C1DropDownButton>
+                                            </Grid>
+                                        </Border>
+                                    </c1:C1DockPanel>
+                                    <!-- Content -->
+                                    <Border Background="{Binding Output, ElementName=ContentBackgroundBrush}">
+                                        <Border BorderThickness="{StaticResource OutlookBarContentThickness}" BorderBrush="{Binding Output, ElementName=EffectBrush3D}">
+                                            <ContentPresenter x:Name="ContentPresenter" Margin="{TemplateBinding Padding}" />
+                                        </Border>
+                                    </Border>
+                                </c1:C1DockPanel>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

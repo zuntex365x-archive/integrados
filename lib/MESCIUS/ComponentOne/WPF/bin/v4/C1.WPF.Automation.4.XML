@@ -1,0 +1,575 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>C1.WPF.Automation.4</name>
+  </assembly>
+  <members>
+    <member name="T:C1.WPF.Automation.C1AutomationPeer">
+      <summary>
+            Base Automation peer class.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Automation.C1TreeViewAutomationPeer">
+      <summary>
+            Automation peer for the C1TreeViewItem.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1TreeViewAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1TreeViewItemAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1TreeViewItemAutomationPeer">
+      <summary>
+            Automation peer for the C1TreeViewItem.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1TreeViewItemAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1TreeViewItemAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="M:C1.WPF.Automation.C1TreeViewItemAutomationPeer.#ctor(System.Windows.FrameworkElement,System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1TreeViewItemAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1TabControlAutomationPeer">
+      <summary>
+            Automation peer for the C1TabControl.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1TabControlAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1TabControlAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="M:C1.WPF.Automation.C1TabControlAutomationPeer.IsKeyboardFocusableCore">
+      <summary>
+            Gets whether the owner control can get the keyboard focus.
+            </summary>
+      <returns>True is the owner control can get the keyboard focus.</returns>
+    </member>
+    <member name="M:C1.WPF.Automation.C1TabControlAutomationPeer.GetClickablePointCore">
+      <summary>
+            Gets the clickable point
+            </summary>
+      <returns>Clickable point</returns>
+    </member>
+    <member name="T:C1.WPF.Automation.C1TabItemAutomationPeer">
+      <summary>
+            Automation peer for the C1TabItem.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1TabItemAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1TabItemAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="M:C1.WPF.Automation.C1TabItemAutomationPeer.#ctor(System.Windows.FrameworkElement,System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1TabItemAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+      <param name="control">The owning C1TabControl.</param>
+    </member>
+    <member name="M:C1.WPF.Automation.C1TabItemAutomationPeer.IsKeyboardFocusableCore">
+      <summary>
+            Gets whether can get the keyboard focus.
+            </summary>
+      <returns>Whether can get the keyboard focus</returns>
+    </member>
+    <member name="T:C1.WPF.Automation.C1DataGridAutomationPeer">
+      <summary>
+            Automation peer for the C1DataGrid control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1DataGridAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1DataGridAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.DataGridCellPresenterAutomationPeer">
+      <summary>
+            Automation peer for the DataGridCellPresenter control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.DataGridCellPresenterAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.DataGridCellPresenterAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.DataGridColumnHeaderPresenterAutomationPeer">
+      <summary>
+            Automation peer for the DataGridColumnHeaderPresenter control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.DataGridColumnHeaderPresenterAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.DataGridColumnHeaderPresenterAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.DataGridColumnsHeaderPanelAutomationPeer">
+      <summary>
+            Automation peer for the DataGridColumnsHeaderPanel control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.DataGridColumnsHeaderPanelAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.DataGridColumnsHeaderPanelAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.DataGridGroupingPresenterAutomationPeer">
+      <summary>
+            Automation peer for the DataGridGroupingPresenter control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.DataGridGroupingPresenterAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.DataGridGroupingPresenterAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.DataGridRowHeaderPresenterAutomationPeer">
+      <summary>
+            Automation peer for the DataGridRowHeaderPresenter control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.DataGridRowHeaderPresenterAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.DataGridRowHeaderPresenterAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.DataGridRowPresenterAutomationPeer">
+      <summary>
+            Automation peer for the DataGridRowPresenter control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.DataGridRowPresenterAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.DataGridRowPresenterAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.DataGridRowsHeaderPanelAutomationPeer">
+      <summary>
+            Automation peer for the DataGridRowsHeaderPanel control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.DataGridRowsHeaderPanelAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.DataGridRowsHeaderPanelAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.DataGridRowsPanelAutomationPeer">
+      <summary>
+            Automation peer for the DataGridRowsPanel control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.DataGridRowsPanelAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.DataGridRowsPanelAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1DatePickerAutomationPeer">
+      <summary>
+            Automation peer for the C1DatePicker.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1DatePickerAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1DatePickerAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1DateTimePickerAutomationPeer">
+      <summary>
+            Automation peer for the C1DateTimePicker.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1DateTimePickerAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1DateTimePickerAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1TimeEditorAutomationPeer">
+      <summary>
+            Automation peer for the C1TimeEditor.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1TimeEditorAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1TimeEditorAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1DockTabControlAutomationPeer">
+      <summary>
+            Automation peer for the C1DockTabControl.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1DockTabControlAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1DockTabControlAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1BookAutomationPeer">
+      <summary>
+            Automation peer for the C1Book control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1BookAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1BookAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1BookZoneAutomationPeer">
+      <summary>
+            Automation peer class for a BookZone.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Automation.C1ColorPickerAutomationPeer">
+      <summary>
+            Automation peer for the C1ColorPicker control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1ColorPickerAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1ColorPickerAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1CoverFlowAutomationPeer">
+      <summary>
+            Automation peer for the C1CoverFlow control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1CoverFlowAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1CoverFlowAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1CoverFlowItemAutomationPeer">
+      <summary>
+            Automation peer for the C1CoverFlowItem control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1CoverFlowItemAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1CoverFlowItemAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1ExpanderAutomationPeer">
+      <summary>
+            Automation peer for the C1Expander control.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Automation.C1ExpanderButtonAutomationPeer">
+      <summary>
+            Automation peer for the C1ExpanderButton control.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Automation.C1PropertyGridAutomationPeer">
+      <summary>
+            Automation peer for the C1PropertyGrid control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1PropertyGridAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1PropertyGridAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.MemberAutomationPeer">
+      <summary>
+            Automation peer for the MethodBox, PropertyBox.
+            </summary>
+      <remarks>
+            Invoke acts as ResetValue().
+            GetName() returns the property or method name.
+            </remarks>
+    </member>
+    <member name="M:C1.WPF.Automation.MemberAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.MemberAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.PropertyBoxAutomationPeer">
+      <summary>
+            Automation peer for PropertyBox.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.PropertyBoxAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.PropertyBoxAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.MethodBoxAutomationPeer">
+      <summary>
+            Automation peer for MethodBox.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.MethodBoxAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.MethodBoxAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1FlexComboBoxAutomationPeer">
+      <summary>
+            Automation peer for the C1FlexComboBox control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1FlexComboBoxAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1FlexGridAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1FlexGridAutomationPeer">
+      <summary>
+            Automation peer for the C1FlexGrid control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1FlexGridAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1FlexGridAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="P:C1.WPF.Automation.C1FlexGridAutomationPeer.HorizontallyScrollable">
+      <summary>
+            Gets a value that indicates whether the grid can scroll horizontally.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Automation.C1FlexGridAutomationPeer.HorizontalScrollPercent">
+      <summary>
+            Gets the current horizontal scroll position.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Automation.C1FlexGridAutomationPeer.HorizontalViewSize">
+      <summary>
+            Gets the current horizontal view size.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Automation.C1FlexGridAutomationPeer.VerticallyScrollable">
+      <summary>
+            Gets a value that indicates whether the control can scroll vertically.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Automation.C1FlexGridAutomationPeer.VerticalScrollPercent">
+      <summary>
+            Gets the current vertical scroll position.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Automation.C1FlexGridAutomationPeer.VerticalViewSize">
+      <summary>
+            Gets the vertical view size.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1FlexGridAutomationPeer.Scroll(System.Windows.Automation.ScrollAmount,System.Windows.Automation.ScrollAmount)">
+      <summary>
+            Scrolls the visible region of the content area horizontally, vertically, or both.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Automation.C1FlexGridCellAutomationPeer">
+      <summary>
+            Automation peer for a cell of the C1FlexGrid control.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Automation.C1FlexGridPanelAutomationPeer">
+      <summary>
+            Automation peer for the C1FlexGrid control.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1FlexGridPanelAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1FlexGridPanelAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1FlexGridPartAutomationPeer">
+      <summary>
+            Base Automation peer class for parts (rows and cells) of the C1FlexGrid control.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Automation.C1FlexGridRowAutomationPeer">
+      <summary>
+            Automation peer for a row of the C1FlexGrid control.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Automation.C1GaugeAutomationPeer">
+      <summary>
+            Automation peer for the C1Gauge.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1GaugeAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1GaugeAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1KnobAutomationPeer">
+      <summary>
+            Automation peer for the C1Gauge.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1KnobAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1KnobAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1LinearGaugeAutomationPeer">
+      <summary>
+            Automation peer for the C1Gauge.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1LinearGaugeAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1LinearGaugeAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1OutlookBarAutomationPeer">
+      <summary>
+            Automation peer for the C1OutlookBar.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1OutlookBarAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1OutlookBarAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1OutlookItemAutomationPeer">
+      <summary>
+            Automation peer for the C1OutlookBar.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1OutlookItemAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1OutlookItemAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1CalendarAutomationPeer">
+      <summary>
+            Automation peer for the C1Calendar.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1CalendarAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1CalendarAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1CalendarItemAutomationPeer">
+      <summary>
+            Automation peer for the C1CalendarItem.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1CalendarItemAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1CalendarItemAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1CalendarItemPresenterAutomationPeer">
+      <summary>
+            Automation peer for the C1CalendarItemPresenter.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1CalendarItemPresenterAutomationPeer.#ctor(System.Windows.Controls.ListBox)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1CalendarItemPresenterAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.DaySlotPresenterAutomationPeer">
+      <summary>
+            Automation peer for the DaySlotPresenter.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.DaySlotPresenterAutomationPeer.#ctor(System.Windows.FrameworkElement,System.Windows.Controls.Control)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.DaySlotPresenterAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+      <param name="calendar">The owning C1Calendar control.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1TileViewAutomationPeer">
+      <summary>
+            Automation peer for the C1TileView.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1TileViewAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1TileViewAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1TileViewItemAutomationPeer">
+      <summary>
+            Automation peer for the C1TileViewItem.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1TileViewItemAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1TileViewItemAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="M:C1.WPF.Automation.C1TileViewItemAutomationPeer.#ctor(System.Windows.FrameworkElement,System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1TileViewItemAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+      <param name="control">The owning C1TileViewControl.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.C1TileBaseAutomationPeer">
+      <summary>
+            Automation peer for the C1TileBase.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.C1TileBaseAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.WPF.Automation.C1TileBaseAutomationPeer" />.
+            </summary>
+      <param name="owner">The control associated with this peer.</param>
+    </member>
+    <member name="T:C1.WPF.Automation.Utils">
+      <summary>
+            Misc utilities methods
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Automation.Utils.GetVisualTreeChildren(System.Windows.DependencyObject)">
+      <summary>
+            Iterates through the visual children of the specified element.
+            </summary>
+      <param name="root">
+      </param>
+      <returns>
+      </returns>
+    </member>
+  </members>
+</doc>

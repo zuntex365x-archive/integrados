@@ -1,0 +1,289 @@
+﻿<!--// Copyright © GrapeCity, Inc..
+// This file is part of ComponentOne Studio WPF Edition
+// Please visit https://www.grapecity.com/en/componentone for details
+// All other rights reserved.
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="clr-namespace:C1.WPF;assembly=C1.WPF.4.5.2" xmlns:c1DataGrid="clr-namespace:C1.WPF.DataGrid;assembly=C1.WPF.DataGrid.4.5.2" xmlns:c1DataGridSum="clr-namespace:C1.WPF.DataGrid.Summaries">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/C1.WPF.4.5.2;component/themes/generic.xaml" />
+        <ResourceDictionary Source="/C1.WPF.DataGrid.4.5.2;component/themes/generic.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="ReadOnlyCell" TargetType="c1DataGrid:DataGridCellPresenter">
+        <Setter Property="IsHitTestVisible" Value="False" />
+        <Setter Property="Padding" Value="4" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1DataGrid:DataGridCellPresenter">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="SelectionStates">
+                                <VisualState x:Name="Unselected" />
+                                <VisualState x:Name="Editing" />
+                                <VisualState x:Name="Current">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Focus" Storyboard.TargetProperty="(UIElement.Opacity)" Duration="0">
+                                            <DiscreteDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="CurrentSelected">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Focus" Storyboard.TargetProperty="(UIElement.Opacity)" Duration="0">
+                                            <DiscreteDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SelectedBorder" Storyboard.TargetProperty="(UIElement.Opacity)" Duration="0">
+                                            <DiscreteDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Selected">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SelectedBorder" Storyboard.TargetProperty="(UIElement.Opacity)" Duration="0">
+                                            <DiscreteDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <c1:C1BrushBuilder x:Name="SelectedBackground" Input="{TemplateBinding SelectedBackground}" DesignBrush="{StaticResource DataGridRowSelectedBackground}" DesignColor="{StaticResource SelectedColor}" />
+                        <c1:C1BrushBuilder x:Name="MouseOverBrush" Input="{TemplateBinding MouseOverBrush}" DesignBrush="{StaticResource DataGridRowOverBrush}" DesignColor="{StaticResource MouseOverColor}" />
+                        <Rectangle x:Name="SelectedBorder" Fill="{Binding ElementName=SelectedBackground,Path=Output}" Opacity="0" StrokeThickness="0" IsHitTestVisible="False" />
+                        <c1DataGrid:DataGridFocusPresenter x:Name="Focus" Background="{TemplateBinding SelectedBackground}" BorderBrush="{TemplateBinding SelectedBackground}" Style="{TemplateBinding FocusStyle}" Opacity="0" />
+                        <Rectangle x:Name="MouseOverBorder" Fill="{Binding ElementName=MouseOverBrush,Path=Output}" StrokeThickness="0" Opacity="0" IsHitTestVisible="False" />
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" IsHitTestVisible="False" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" />
+                        <ContentPresenter Margin="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SummaryRow" TargetType="c1DataGrid:DataGridSelectableRowPresenter">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1DataGrid:DataGridSelectableRowPresenter">
+                    <Grid x:Name="Root" Margin="{TemplateBinding CellsAreaMargin}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Disabled" />
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MouseOverElement" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="SelectionStates">
+                                <VisualState x:Name="Editing">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SelectedElement" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Selected">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SelectedElement" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unselected" />
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="ValidationStates">
+                                <VisualState x:Name="Valid" />
+                                <VisualState x:Name="InvalidUnfocused">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Validation" Storyboard.TargetProperty="(UIElement.Opacity)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="1" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="InvalidFocused">
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <c1:C1BrushBuilder x:Name="SelectableBackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="#FFD6E2ED" DesignColor="#FFC5D2DE" />
+                        <c1:C1BrushBuilder x:Name="SelectedBackground" Input="{TemplateBinding SelectedBackground}" DesignBrush="#CC8DD6E8" DesignColor="#FF83CCDE" />
+                        <c1:C1BrushBuilder x:Name="MouseOverBorderBrush" Input="{TemplateBinding MouseOverBrush}" DesignBrush="#B2A1D4E1" DesignColor="#FF83CCDE" />
+                        <Border x:Name="Background" Background="{Binding ElementName=SelectableBackgroundBrush, Path=Output}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" />
+                        <Border x:Name="Validation" Background="#2BFF0000" Opacity="0" />
+                        <Border x:Name="SelectedElement" Background="{TemplateBinding SelectedBackground}" BorderThickness="{TemplateBinding BorderThickness}" Visibility="Collapsed" />
+                        <Border x:Name="MouseOverElement" Background="{Binding ElementName=MouseOverBorderBrush, Path=Output}" BorderThickness="{TemplateBinding BorderThickness}" Visibility="Collapsed" />
+                        <c1DataGrid:DataGridCellsPanel x:Name="Cells" />
+                        <Rectangle x:Name="HorizontalGridLine" Grid.Row="1" Height="1" Fill="{TemplateBinding HorizontalGridLineBrush}" Visibility="{TemplateBinding HorizontalGridLineVisibility}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--******************* Group Row Presenter ********************-->
+
+    <!-- Brush @ C1DataGrid GroupRow Background -->
+    <LinearGradientBrush x:Key="DataGridGroupRowBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFBBCBDA" Offset="0" />
+        <GradientStop Color="#FFD6DFE7" Offset="0.07" />
+        <GradientStop Color="#FFD6DFE7" Offset="0.3" />
+        <GradientStop Color="#FFBBCBDA" Offset="0.7" />
+    </LinearGradientBrush>
+    <!-- Brush @ C1DataGrid GroupRow Background on MouseOver -->
+    <SolidColorBrush x:Key="DataGridGroupRowOverBrush" Color="#FFAFD4E1" />
+    <!-- Brush @ C1DataGrid GroupRow Selected Background -->
+    <SolidColorBrush x:Key="DataGridGroupRowSelectedBackground" Color="#FFA4DEED" />
+
+    <!-- DataGridToggleGroupButton @ C1DataGrid Group -->
+    <Style x:Key="DataGridGroupTButtonStyle" TargetType="c1DataGrid:DataGridToggleGroupButton">
+        <Setter Property="Margin" Value="6 0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1DataGrid:DataGridToggleGroupButton">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="MouseOver" />
+                                <VisualState x:Name="Pressed" />
+                                <VisualState x:Name="Disabled" />
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualState x:Name="Checked">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="path" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="path" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="path1" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused" />
+                                <VisualState x:Name="Unfocused" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <c1:C1BrushBuilder x:Name="BackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource GeneralGradientBrush}" DesignColor="{StaticResource BaseColor}" />
+                        <Border x:Name="BackgroundElement" Background="{Binding Output, ElementName=BackgroundBrush}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{StaticResource DataGridBorderThickness}" CornerRadius="{StaticResource DataGridGeneralCornerRadius}" />
+                        <Grid>
+                            <Grid x:Name="icos">
+                                <Rectangle x:Name="path" Fill="{TemplateBinding Foreground}" VerticalAlignment="Center" HorizontalAlignment="Center" Height="1" Width="5" Visibility="Collapsed" />
+                                <Rectangle x:Name="path1" Fill="{TemplateBinding Foreground}" Height="5" Width="1" Visibility="Collapsed" />
+                            </Grid>
+                        </Grid>
+                        <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- DataGridGroupWithSummaryRowPresenter Style -->
+    <Style TargetType="c1DataGridSum:DataGridGroupWithSummaryRowPresenter">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1DataGridSum:DataGridGroupWithSummaryRowPresenter">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Disabled" />
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MouseOverElement" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="SelectionStates">
+                                <VisualState x:Name="Selected">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SelectedElement" Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unselected" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid Margin="{TemplateBinding RowAreaMargin}">
+                            <c1:C1BrushBuilder x:Name="BackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource DataGridGroupRowBrush}" DesignColor="{StaticResource BaseColor}" />
+                            <c1:C1BrushBuilder x:Name="SelectedBackground" Input="{TemplateBinding SelectedBackground}" DesignBrush="{StaticResource DataGridGroupRowSelectedBackground}" DesignColor="{StaticResource SelectedColor}" />
+                            <c1:C1BrushBuilder x:Name="MouseOverBrush" Input="{TemplateBinding MouseOverBrush}" DesignBrush="{StaticResource DataGridGroupRowOverBrush}" DesignColor="{StaticResource MouseOverColor}" />
+                            <Border x:Name="BackgroundElement" Background="{Binding ElementName=BackgroundBrush, Path=Output}" />
+                            <Border x:Name="SelectedElement" Background="{Binding ElementName=SelectedBackground, Path=Output}" Visibility="Collapsed" />
+                            <Border x:Name="MouseOverElement" Background="{Binding ElementName=MouseOverBrush, Path=Output}" Visibility="Collapsed" />
+                        </Grid>
+                        <Grid Margin="{TemplateBinding LeadingMargin}">
+                            <Grid VerticalAlignment="Center" HorizontalAlignment="Left" Margin="{TemplateBinding GroupContentMargin}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <c1DataGrid:DataGridToggleGroupButton x:Name="ToggleGroup" Width="11" Height="11" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{StaticResource DataGridBorderThickness}" Foreground="{TemplateBinding Foreground}" Style="{StaticResource DataGridGroupTButtonStyle}" />
+                                <ContentPresenter x:Name="GroupName" Grid.Column="1" />
+                            </Grid>
+                        </Grid>
+                        <c1DataGrid:DataGridCellsPanel x:Name="Cells" Margin="{TemplateBinding CellsAreaMargin}" />
+                        <Rectangle x:Name="HorizontalGridLine" Margin="{TemplateBinding RowAreaMargin}" Grid.Row="1" Height="1" Fill="{TemplateBinding HorizontalGridLineBrush}" Visibility="{TemplateBinding HorizontalGridLineVisibility}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

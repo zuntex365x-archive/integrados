@@ -1,0 +1,409 @@
+﻿	  
+	   
+    
+		
+
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib" xmlns:c1="clr-namespace:C1.WPF" xmlns:c1_Resources="clr-namespace:C1.Silverlight.Resources">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/C1.WPF.4.5.2;component/themes/Common.xaml" />
+		<ResourceDictionary Source="/C1.WPF.4.5.2;component/themes/C1Button.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+
+	<!--******************** C1Window ********************-->
+
+	<c1_Resources:C1_Silverlight x:Key="Resources" />
+	
+	<SolidColorBrush x:Key="BorderBrush" Color="#FF8A9EB2" />
+	<!-- Color & Brush @ C1Window  -->
+	<Color x:Key="WindowColor">#FFD1DCE8</Color>
+	<SolidColorBrush x:Key="WindowBrush" Color="{StaticResource BaseColor}" />
+	<!-- Color & Brush @ C1Window Header -->
+	<Color x:Key="WindowHeaderColor">#FFB1C8E0</Color>
+	<SolidColorBrush x:Key="WindowHeaderBrush" Color="{StaticResource WindowHeaderColor}" />
+
+	<!-- Brush @ C1Window Background -->
+	<LinearGradientBrush x:Key="WindowBackgroundBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#FFE2E8EE" />
+		<GradientStop Color="#FFF5F7F9" Offset="0.5" />
+		<GradientStop Color="#FFF5F7F9" Offset="1" />
+	</LinearGradientBrush>
+
+	<!-- CornerRadius @ C1Window -->
+	<CornerRadius x:Key="WindowCornerRadius">3</CornerRadius>
+	<!-- CornerRadius @ C1Window Header -->
+	<CornerRadius x:Key="WindowHeaderCornerRadius">3 3 0 0</CornerRadius>
+	<!-- CornerRadius @ C1Window Buttons -->
+	<CornerRadius x:Key="WindowButtonsCornerRadius">1</CornerRadius>
+
+	<!-- Brush @ C1Window Button Background -->
+	<LinearGradientBrush x:Key="WindowButtonBrush" EndPoint="0,1">
+		<GradientStop Color="#FFFAFBFC" />
+		<GradientStop Color="#FFFAFBFC" Offset="0.5" />
+		<GradientStop Color="#FFD1DCE8" Offset="0.5" />
+		<GradientStop Color="#FFA4B9D0" Offset="1" />
+	</LinearGradientBrush>
+	<!-- Brush @ C1Window Button Background on MouseOver-->
+	<LinearGradientBrush x:Key="WindowButtonMouseOverBrush" EndPoint="0,1">
+		<GradientStop Color="#FFDCEEF3" />
+		<GradientStop Color="#FFDCEEF3" Offset="0.5" />
+		<GradientStop Color="#FFBFE1EA" Offset="0.5" />
+		<GradientStop Color="#FF98CFDE" Offset="1" />
+	</LinearGradientBrush>
+	<!-- Brush @ C1Window Button Selected Background-->
+	<LinearGradientBrush x:Key="WindowButtonSelectedBackground" EndPoint="0,1">
+		<GradientStop Color="#FFD5EDF3" />
+		<GradientStop Color="#FFB8E1EB" Offset="0.5" />
+		<GradientStop Color="#FF8ED1E2" Offset="0.5" />
+		<GradientStop Color="#FF7CC2D4" Offset="1" />
+	</LinearGradientBrush>
+
+	<!-- Brush @ C1Window Button Icon Background -->
+	<SolidColorBrush x:Key="WindowIconBackgroundBrush" Color="White" />
+
+    <!-- WPF Input Brushes -->
+    <SolidColorBrush x:Key="WpfInputWindowHeaderBrush" Color="#FFDCDCDC" />
+
+    <!--C1Window Button -->
+	<Style TargetType="Button" x:Key="WindowButtonStyle">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Button">
+					<Grid>
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="FocusStates">
+								<VisualState x:Name="Unfocused" />
+								<VisualState x:Name="Focused" />
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualState x:Name="MouseOver">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Pressed">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Disabled">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledVisualElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Normal" />
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<c1:C1BrushBuilder x:Name="BackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource WindowButtonBrush}" DesignColor="{StaticResource BaseColor}" />
+						<c1:C1BrushBuilder x:Name="MouseOverBrush" Input="{TemplateBinding c1:ClearStyleExtensions.MouseOverBrush}" DesignBrush="{StaticResource WindowButtonMouseOverBrush}" DesignColor="{StaticResource MouseOverColor}" />
+						<c1:C1BrushBuilder x:Name="PressedBrush" Input="{TemplateBinding c1:ClearStyleExtensions.PressedBrush}" DesignBrush="{StaticResource WindowButtonSelectedBackground}" DesignColor="{StaticResource SelectedColor}" />
+						<c1:C1BrushBuilder x:Name="InnerBorderBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource InnerBorderBrush}" DesignColor="{StaticResource BaseColor}" />
+						<c1:C1BrushBuilder x:Name="InnerBorderMouseOverBrush" Input="{TemplateBinding c1:ClearStyleExtensions.MouseOverBrush}" DesignBrush="{StaticResource InnerBorderMouseOverBrush}" DesignColor="{StaticResource MouseOverColor}" />
+						<c1:C1BrushBuilder x:Name="InnerBorderPressedBrush" Input="{TemplateBinding c1:ClearStyleExtensions.PressedBrush}" DesignBrush="{StaticResource InnerBorderPressedBrush}" DesignColor="{StaticResource SelectedColor}" />
+						<Border x:Name="BackgroundElement" Background="{Binding ElementName=BackgroundBrush, Path=Output}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="{StaticResource WindowButtonsCornerRadius}">
+							<Border BorderBrush="{Binding ElementName=InnerBorderBrush, Path=Output}" BorderThickness="{StaticResource InnerBorderThickness}" CornerRadius="{StaticResource InnerBorderCornerRadius}" />
+						</Border>		
+						<Border x:Name="MouseOverElement" Background="{Binding ElementName=MouseOverBrush, Path=Output}" BorderThickness="1" CornerRadius="{StaticResource WindowButtonsCornerRadius}" Visibility="Collapsed">
+							<Border BorderBrush="{Binding ElementName=InnerBorderMouseOverBrush, Path=Output}" BorderThickness="{StaticResource InnerBorderThickness}" CornerRadius="{StaticResource InnerBorderCornerRadius}" />
+						</Border>
+						<Border x:Name="PressedElement" Background="{Binding ElementName=PressedBrush, Path=Output}" BorderThickness="1" CornerRadius="{StaticResource WindowButtonsCornerRadius}" Visibility="Collapsed">
+							<Border BorderBrush="{Binding ElementName=InnerBorderPressedBrush, Path=Output}" BorderThickness="{StaticResource InnerBorderThickness}" CornerRadius="{StaticResource InnerBorderCornerRadius}" />
+						</Border>
+						<ContentPresenter Margin="2" />
+						<Border x:Name="DisabledVisualElement" Background="{StaticResource DisabledBrush}" CornerRadius="{StaticResource WindowButtonsCornerRadius}" Visibility="Collapsed" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+
+	<!-- C1Window -->
+    <Style x:Key="DefaultC1WindowStyle" TargetType="c1:C1Window">
+        
+        
+        <Setter Property="BorderBrush" Value="{StaticResource WpfInputBorderBrush}" />
+        <Setter Property="Background" Value="{StaticResource WpfInputBaseBrush}" />
+        <Setter Property="HeaderBackground" Value="{StaticResource WpfInputWindowHeaderBrush}" />
+        <Setter Property="ButtonBackground" Value="{StaticResource WpfInputWindowHeaderBrush}" />
+        <Setter Property="MouseOverBrush" Value="{StaticResource WpfInputMouseOverBrush}" />
+        <Setter Property="PressedBrush" Value="{StaticResource WpfInputSelectedBackground}" />
+		<Setter Property="IsEnabled" Value="True" />
+		<Setter Property="Cursor" Value="Arrow" />
+		<Setter Property="ModalBackground" Value="#28000000" />
+		<Setter Property="BorderThickness" Value="{StaticResource GeneralThickness}" />
+		<Setter Property="ButtonForeground" Value="{StaticResource WindowIconBackgroundBrush}" />
+		<Setter Property="HorizontalContentAlignment" Value="Stretch" />
+		<Setter Property="VerticalContentAlignment" Value="Stretch" />
+		<Setter Property="Foreground" Value="{StaticResource ForegroundBrushColor}" />
+		<Setter Property="HeaderForeground" Value="{StaticResource ForegroundBrushColor}" />
+        <Setter Property="HorizontalHeaderAlignment" Value="Center" />
+		<Setter Property="VerticalHeaderAlignment" Value="Center" />
+		<Setter Property="Padding" Value="2" />
+		<Setter Property="HeaderPadding" Value="4 2 2 2" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="c1:C1Window">
+					<Grid x:Name="Root" MinWidth="70" MinHeight="26">
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="ActiveStates">
+								<VisualState x:Name="Inactive">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="InactiveShade" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Active" />
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="WindowStateStates">
+								<VisualState x:Name="Minimized">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="BackgroundElement" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Collapsed</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="HeaderBackground" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Collapsed</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="HeaderMinimized" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="ContentGrid" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Collapsed</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MaximizeGlyph" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MinRestoreGlyph" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="InactiveShade" Storyboard.TargetProperty="(Grid.RowSpan)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<system:Int32>1</system:Int32>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MinimGlyph" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Collapsed</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Maximized">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="RestoreGlyph" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MaximizeGlyph" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Collapsed</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Floating">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MaximizeGlyph" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+                            <VisualStateGroup x:Name="OpenStates">
+                                <VisualState x:Name="Open" />
+                                <VisualState x:Name="Closed" />
+                            </VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<c1:C1BrushBuilder x:Name="BackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource WindowBackgroundBrush}" DesignColor="{StaticResource WindowColor}" />
+						<c1:C1BrushBuilder x:Name="HeaderBackgroundBrush" Input="{TemplateBinding HeaderBackground}" DesignBrush="{StaticResource GeneralGradientBrush}" DesignColor="{StaticResource BaseColor}" />
+						<Border x:Name="BackgroundElement" Grid.RowSpan="2" Background="{Binding ElementName=BackgroundBrush, Path=Output}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="{StaticResource WindowCornerRadius}" />
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto" MinHeight="26" />
+								<RowDefinition />
+							</Grid.RowDefinitions>
+							<Border x:Name="HeaderBackground" Background="{Binding ElementName=HeaderBackgroundBrush, Path=Output}" CornerRadius="{StaticResource WindowHeaderCornerRadius}" Margin="{TemplateBinding BorderThickness}" />
+							<Border x:Name="HeaderMinimized" Background="{Binding ElementName=HeaderBackgroundBrush, Path=Output}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{StaticResource WindowCornerRadius}" Visibility="Collapsed" />
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition />
+									<ColumnDefinition Width="Auto" />
+								</Grid.ColumnDefinitions>
+								<Grid x:Name="Drag" Margin="{TemplateBinding BorderThickness}" Grid.ColumnSpan="2">
+									<Border Background="Transparent" />
+                                    <ContentControl FontFamily="{TemplateBinding HeaderFontFamily}" FontSize="{TemplateBinding HeaderFontSize}" FontStretch="{TemplateBinding HeaderFontStretch}" FontStyle="{TemplateBinding HeaderFontStyle}" FontWeight="{TemplateBinding HeaderFontWeight}" Foreground="{TemplateBinding HeaderForeground}" HorizontalContentAlignment="{TemplateBinding HorizontalHeaderAlignment}" VerticalContentAlignment="{TemplateBinding VerticalHeaderAlignment}" IsTabStop="False">
+                                        <ContentPresenter x:Name="HeaderPresenter" ContentTemplate="{TemplateBinding HeaderTemplate}" HorizontalAlignment="{TemplateBinding HorizontalHeaderAlignment}" VerticalAlignment="{TemplateBinding VerticalHeaderAlignment}" Margin="{TemplateBinding HeaderPadding}" />
+                                    </ContentControl>
+                                </Grid>
+								<StackPanel x:Name="Buttons" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="4">
+									<Button x:Name="Minimize" Background="{TemplateBinding ButtonBackground}" BorderBrush="{TemplateBinding BorderBrush}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource WindowButtonStyle}" Height="18" Width="24" Margin="0,0,1,0" IsTabStop="False">
+										<Grid>
+											<Border x:Name="MinimGlyph" Height="5" Width="12" Background="{TemplateBinding ButtonForeground}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" VerticalAlignment="Bottom" Margin="0,0,0,2" />
+											<Grid x:Name="MinRestoreGlyph" Height="12" Width="12" Visibility="Collapsed">
+												<Path Data="M3.5,3.5 L3.5,6.5 L6.5,6.5 L6.5,3.5 z M0.9,0.5 L9,0.5 C9,0.5 9.5,0.7 9.5,1 L9.5,9 C9.5,9.3 9.3,9.5 9,9.5 L0.9,9.5 C0.68,9.5 0.5,9.3 0.5,9 L0.5,1 C0.5,0.7 0.7,0.5 0.9,0.5 z" Fill="{TemplateBinding ButtonForeground}" Margin="0,2,2,0" Stretch="None" Stroke="{TemplateBinding BorderBrush}" />
+												<Path Data="M0.9,0.5 L9.0,0.5 C9.3,0.5 9.5,0.72 9.5,1 L9.5,9 C9.5,9.2 9.3,9.5 9.0,9.5 L7.5,9.5 L7.5,3 C7.5,2.7 7.3,2.5 7.09,2.5 L0.5,2.5 L0.5,1 C0.5,0.72 0.68,0.5 0.9,0.5 z" Height="10" Width="10" HorizontalAlignment="Right" VerticalAlignment="Top" Stretch="None" Fill="{TemplateBinding ButtonForeground}" Stroke="{TemplateBinding BorderBrush}" />
+											</Grid>
+										</Grid>
+									</Button>
+									<Button x:Name="Maximize" Background="{TemplateBinding ButtonBackground}" BorderBrush="{TemplateBinding BorderBrush}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource WindowButtonStyle}" Height="18" Width="24" Margin="0,0,1,0" IsTabStop="False">
+										<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+											<Path x:Name="MaximizeGlyph" Data="M3.4,3.6 L3.4,6.4 L8.6,6.4 L8.6,3.6 L3.4,3.6 z M1,0.5 L11,0.5 C11.27,0.5 11.5,0.72 11.5,1 L11.5,9 C11.5,9.27 11.27,9.5 11,9.5 L1,9.5 C0.72,9.5 0.5,9.27 0.5,9 L0.5,1 C0.5,0.72385764 0.72385764,0.5 1,0.5 z" Height="10" Width="12" Stretch="None" Fill="{TemplateBinding ButtonForeground}" Stroke="{TemplateBinding BorderBrush}" />
+											<Grid x:Name="RestoreGlyph" Height="12" Width="12" Visibility="Collapsed">
+												<Path Data="M3.5,3.5 L3.5,6.5 L6.5,6.5 L6.5,3.5 z M0.89999998,0.5 L9,0.5 C9,0.5 9.5,0.69999999 9.5,1 L9.5,9 C9.5,9.3000002 9.3000002,9.5 9,9.5 L0.89999998,9.5 C0.68000001,9.5 0.5,9.3000002 0.5,9 L0.5,1 C0.5,0.69999999 0.69999999,0.5 0.89999998,0.5 z" Margin="0,2,2,0" Fill="{TemplateBinding ButtonForeground}" Stroke="{TemplateBinding BorderBrush}" Width="10" Height="10" />
+												<Path Data="M0.89999998,0.5 L9,0.5 C9.3000002,0.5 9.5,0.72000003 9.5,1 L9.5,9 C9.5,9.1999998 9.3000002,9.5 9,9.5 L7.5,9.5 L7.5,3 C7.5,2.7 7.3000002,2.5 7.0900002,2.5 L0.5,2.5 L0.5,1 C0.5,0.72000003 0.68000001,0.5 0.89999998,0.5 z" Height="10" Width="10" HorizontalAlignment="Right" VerticalAlignment="Top" Fill="{TemplateBinding ButtonForeground}" Stroke="{TemplateBinding BorderBrush}" />
+											</Grid>
+										</Grid>
+									</Button>
+									<Button x:Name="Close" Height="18" Width="36" Background="{TemplateBinding ButtonBackground}" BorderBrush="{TemplateBinding BorderBrush}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" Style="{StaticResource WindowButtonStyle}" IsTabStop="False">
+										<Path Data="M0.50014544,0.44459119 C0.52417332,0.39831027 3.1665187,0.44459119 4.4997053,0.44459119 L6.0595336,2.6207652 L7.4993749,0.44459119 C8.8325615,0.44459119 11.441813,0.37690696 11.498935,0.44459119 C11.556055,0.5122754 9.4145031,3.5506475 8.3722878,5.1036758 C9.4145031,6.5903826 11.53893,9.5149841 11.498935,9.563796 C11.458901,9.6126089 8.8325615,9.563796 7.4993749,9.563796 L5.9995399,7.3834772 L4.5197029,9.563796 C3.1798506,9.563796 0.50891054,9.5864964 0.50014544,9.563796 C0.49138036,9.5410957 2.6179054,6.5903826 3.6767855,5.1036758 C2.6179054,3.5506475 0.47611755,0.49087214 0.50014544,0.44459119 z" Height="10" Width="12" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{TemplateBinding ButtonForeground}" Stroke="{TemplateBinding BorderBrush}" />
+									</Button>
+								</StackPanel>
+							</Grid>
+							<Border x:Name="InactiveShade" IsHitTestVisible="False" Background="{StaticResource DisabledBrush}" CornerRadius="{StaticResource WindowCornerRadius}" Grid.RowSpan="2" Visibility="Collapsed" />
+							<Grid x:Name="ContentGrid" Grid.Row="1" Margin="{TemplateBinding BorderThickness}" Canvas.ZIndex="-1">
+								<ContentPresenter x:Name="Content" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Cursor="{TemplateBinding Cursor}" Margin="{TemplateBinding Padding}" />
+							</Grid>
+							<Border x:Name="Resize" BorderThickness="7" BorderBrush="Transparent" Grid.RowSpan="2" />
+						</Grid>
+
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+    <Style TargetType="c1:C1Window" BasedOn="{StaticResource DefaultC1WindowStyle}" />
+
+	<!-- Brush @ C1MessageBoxContent and C1PromptBoxContent Background-->
+	<SolidColorBrush x:Key="MessageBoxContentBrush" Color="White" />
+	<!-- Brush @ C1MessageBoxContent and C1PromptBoxContent Button Area Background -->
+	<SolidColorBrush x:Key="MessageBoxButtonAreaBrush" Color="#FFE7E7E7" />
+
+	<!-- C1MessageBoxContent -->
+	<Style TargetType="c1:C1MessageBoxContent">
+        <Setter Property="IsTabStop" Value="False" />
+		<Setter Property="ButtonStyle">
+			<Setter.Value>
+				<Style TargetType="Button" BasedOn="{StaticResource ClearStyleButtonStyle}">
+                    
+                    
+                    <Setter Property="Background" Value="{StaticResource WpfInputBaseBrush}" />
+					<Setter Property="BorderBrush" Value="{StaticResource WpfInputBorderBrush}" />
+                    <Setter Property="Margin" Value="5,0,5,0" />
+					<Setter Property="MinWidth" Value="75" />
+					<Setter Property="Foreground" Value="{StaticResource ForegroundBrushColor}" />
+					<Setter Property="c1:ClearStyleExtensions.CornerRadius" Value="{StaticResource GeneralCornerRadius}" />
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="c1:C1MessageBoxContent">
+					<Grid Width="350" Background="{StaticResource MessageBoxContentBrush}">
+						<Grid.RowDefinitions>
+							<RowDefinition />
+							<RowDefinition MinHeight="40" />
+						</Grid.RowDefinitions>
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="IconStates">
+								<VisualState x:Name="Normal">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="Icon" Storyboard.TargetProperty="(UIElement.Visibility)">
+											<DiscreteObjectKeyFrame KeyTime="00:00:00">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Collapsed</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Information" />
+								<VisualState x:Name="Question" />
+								<VisualState x:Name="Warning" />
+								<VisualState x:Name="Error" />
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<Grid Margin="10">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto" />
+								<ColumnDefinition />
+							</Grid.ColumnDefinitions>
+							<Image Width="48" Height="48" Stretch="None" x:Name="Icon" Margin="0,0,20,0" />
+							<TextBlock Text="{TemplateBinding Message}" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" />
+						</Grid>
+						<Grid Background="{StaticResource MessageBoxButtonAreaBrush}" Grid.Row="1">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*" />
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="*" />
+							</Grid.RowDefinitions>
+							<StackPanel x:Name="Buttons" Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,5,0" />
+						</Grid>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	
+	
+</ResourceDictionary>

@@ -1,0 +1,83 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c1FlexGrid="clr-namespace:C1.WPF.FlexGrid" >
+
+    <!-- brushes -->
+  <SolidColorBrush x:Key="_RowBackground" Color="#C0E0E0E0" />
+  <SolidColorBrush x:Key="_AlternatingRowBackground" Color="#00FFFFFF" />
+  <SolidColorBrush x:Key="_HeaderGridLinesBrush" Color="#E0C8C8C8" />
+  <SolidColorBrush x:Key="_GridLinesBrush" Color="#FFF0F0F0"/>
+  <SolidColorBrush x:Key="_FrozenLinesBrush" Color="#E0000000"/>
+  <SolidColorBrush x:Key="_GroupRowBackground" Color="#E0E4E4E4"/>
+  <SolidColorBrush x:Key="_CursorBackground" Color="#FFBADDE9"/>
+  <SolidColorBrush x:Key="_SelectionBackground" Color="#A0BADDE9"/>
+  <SolidColorBrush x:Key="MarqueeColor" Color="Black"/>
+
+  <Color x:Key="_gradFrom">#F0FAFAFA</Color>
+  <Color x:Key="_gradTo">#F0DBDBDB</Color>
+  <LinearGradientBrush x:Key="_RowHeaderBackground" EndPoint="1.5,0">
+    <GradientStop Color="{StaticResource _gradFrom}" Offset="0" />
+    <GradientStop Color="{StaticResource _gradTo}" Offset="1" />
+  </LinearGradientBrush>
+  <LinearGradientBrush x:Key="_ColumnHeaderBackground" EndPoint="0,1">
+    <GradientStop Color="{StaticResource _gradFrom}" Offset="0" />
+    <GradientStop Color="{StaticResource _gradTo}" Offset="1" />
+  </LinearGradientBrush>
+  <LinearGradientBrush x:Key="_TopLeftCellBackground" EndPoint="1,1">
+    <GradientStop Color="{StaticResource _gradFrom}" Offset="0" />
+    <GradientStop Color="{StaticResource _gradTo}" Offset="1" />
+  </LinearGradientBrush>
+  <LinearGradientBrush x:Key="_BottomRightCellBackground" EndPoint="1,1">
+    <GradientStop Color="{StaticResource _gradTo}" Offset="0" />
+    <GradientStop Color="{StaticResource _gradFrom}" Offset="1" />
+  </LinearGradientBrush>
+
+  <!-- control definition -->
+    <Style TargetType="c1FlexGrid:C1FlexGrid">
+
+        <!-- properties -->
+        <Setter Property="Background" Value="White" />
+        <Setter Property="RowBackground" Value="{StaticResource _RowBackground}"/>
+        <Setter Property="AlternatingRowBackground" Value="{StaticResource _AlternatingRowBackground}"/>
+        <Setter Property="HeaderGridLinesBrush" Value="{StaticResource _HeaderGridLinesBrush}"/>
+        <Setter Property="GridLinesBrush" Value="{StaticResource _GridLinesBrush}"/>
+        <Setter Property="FrozenLinesBrush" Value="{StaticResource _FrozenLinesBrush}"/>
+        <Setter Property="GroupRowBackground" Value="{StaticResource _GroupRowBackground}"/>
+        <Setter Property="CursorBackground" Value="{StaticResource _CursorBackground}"/>
+        <Setter Property="SelectionBackground" Value="{StaticResource _SelectionBackground}"/>
+        <Setter Property="RowHeaderBackground" Value="{StaticResource _RowHeaderBackground}"/>
+        <Setter Property="ColumnHeaderBackground" Value="{StaticResource _ColumnHeaderBackground}"/>
+        <Setter Property="TopLeftCellBackground" Value="{StaticResource _TopLeftCellBackground}"/>
+        <Setter Property="BottomRightCellBackground" Value="{StaticResource _BottomRightCellBackground}"/>
+        <Setter Property="MarqueeColor" Value="{StaticResource MarqueeColor}"/>
+
+        <!-- template -->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1FlexGrid:C1FlexGrid">
+                    <Border Background="{TemplateBinding Background}"
+                  BorderBrush="{TemplateBinding BorderBrush}"
+                  BorderThickness="{TemplateBinding BorderThickness}" >
+                        <!--CornerRadius="2">-->
+                        <Grid x:Name="_root" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <ScrollBar x:Name="_sbV" Orientation="Vertical" Grid.Column="2" Grid.RowSpan="3" />
+                            <ScrollBar x:Name="_sbH" Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="2" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

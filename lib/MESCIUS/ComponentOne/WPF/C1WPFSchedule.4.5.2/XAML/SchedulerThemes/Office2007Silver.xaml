@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="clr-namespace:C1.WPF;assembly=C1.WPF.4.5.2">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/C1.WPF.Schedule.4.5.2;component/themes/SchedulerThemes/Office2007/Black.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <!-- only control area text differ comparing with the Black theme -->
+    <SolidColorBrush x:Key="C1Scheduler_ControlAreaText_Brush" Color="#FF6F7074" />
+	<!-- C1BrushBuilder style which is used for coloring month header. -->
+	<Style x:Key="C1Scheduler_MonthHeaderForeground_BrushStyle" TargetType="c1:C1BrushBuilder">
+		<Setter Property="DesignColor" Value="{StaticResource C1Scheduler_BaseBackgroundColor}" />
+		<Setter Property="DesignBrush" Value="{StaticResource C1Scheduler_ControlAreaText_Brush}" />
+	</Style>
+
+</ResourceDictionary>

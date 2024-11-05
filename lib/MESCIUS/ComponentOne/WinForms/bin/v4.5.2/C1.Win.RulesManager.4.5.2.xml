@@ -1,0 +1,1860 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>C1.Win.RulesManager.4.5.2</name>
+  </assembly>
+  <members>
+    <member name="T:C1.Win.RulesManager.C1RulesManager">
+      <summary>
+            The <see cref="T:C1.Win.RulesManager.C1RulesManager" /> control allows to create or edit conditional formatting rules.
+            Conditional formatting is used to highlight important information and make data interpretation easier. 
+            </summary>
+    </member>
+    <member name="E:C1.Win.RulesManager.C1RulesManager.RulesChanged">
+      <summary>
+            Occurs when the rules or an item in the rules changes.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.C1RulesManager.OnRulesChanged(System.ComponentModel.ListChangedEventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.Win.RulesManager.C1RulesManager.RulesChanged" /> event.
+            </summary>
+      <param name="e">An <see cref="T:System.ComponentModel.ListChangedEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.C1RulesManager.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.C1RulesManager" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.C1RulesManager.ShowAboutBox">
+      <summary>
+            Shows the About Box for an instance of <see cref="T:C1.Win.RulesManager.C1RulesManager" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.C1RulesManager.Rules">
+      <summary>
+            Gets or sets the conditional formatting rules.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.C1RulesManager.Styles">
+      <summary>
+            Gets or sets <see cref="T:C1.Win.RulesManager.Styles.RulesManagerStyles" /> C1RulesManager styles.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.C1RulesManager.Options">
+      <summary>
+            Gets or sets <see cref="T:C1.Win.RulesManager.IViewOptions" /> object that represents additional appearance parameters.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.C1RulesManager.DefaultSize">
+      <summary>
+            Gets the default size of the control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.C1RulesManager.BackColor">
+      <summary>
+            Gets or sets the background color for the control.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.C1RulesManager.OnFontChanged(System.EventArgs)">
+      <summary>
+             Raises <see cref="E:System.Windows.Forms.Control.FontChanged" /> event.
+            </summary>
+      <param name="e">An <see cref="E:System.Windows.Forms.Control.FontChanged" /> that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.C1RulesManager.OnRightToLeftChanged(System.EventArgs)">
+      <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.RightToLeftChanged" /> event. 
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.C1RulesManager.SaveRules(System.String)">
+      <summary>
+            Saves the <see cref="P:C1.Win.RulesManager.C1RulesManager.Rules" /> definition into an XML file.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.C1RulesManager.SaveRules(System.IO.Stream)">
+      <summary>
+            Saves the <see cref="P:C1.Win.RulesManager.C1RulesManager.Rules" /> definition into a <see cref="T:System.IO.Stream" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.C1RulesManager.SaveRules(System.Xml.XmlWriter)">
+      <summary>
+            Saves the <see cref="P:C1.Win.RulesManager.C1RulesManager.Rules" /> definition into an <see cref="T:System.Xml.XmlWriter" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.C1RulesManager.LoadRules(System.String)">
+      <summary>
+            Loads the <see cref="P:C1.Win.RulesManager.C1RulesManager.Rules" /> definition from an XML file.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.C1RulesManager.LoadRules(System.IO.Stream)">
+      <summary>
+            Loads the <see cref="P:C1.Win.RulesManager.C1RulesManager.Rules" /> definition from a <see cref="T:System.IO.Stream" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.C1RulesManager.LoadRules(System.Xml.XmlReader)">
+      <summary>
+            Loads the <see cref="P:C1.Win.RulesManager.C1RulesManager.Rules" /> definition from an <see cref="T:System.Xml.XmlReader" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.C1RulesManager.BeginUpdate">
+      <summary>
+            Maintains performance while updating the object by preventing all events until the EndUpdate method is called.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.C1RulesManager.EndUpdate">
+      <summary>
+            Resumes events after suspended by BeginUpdate method.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.C1RulesManager.GetC1RulesManager(System.Object)">
+      <summary>
+            Gets the <see cref="T:C1.Win.RulesManager.C1RulesManager" /> that will apply conditional formatting for this object.
+            </summary>
+      <param name="control">The object to get the C1RulesManager for.</param>
+      <returns>The C1RulesManager.</returns>
+    </member>
+    <member name="M:C1.Win.RulesManager.C1RulesManager.SetC1RulesManager(System.Object,C1.Win.RulesManager.C1RulesManager)">
+      <summary>
+            Sets the <see cref="T:C1.Win.RulesManager.C1RulesManager" /> that will apply conditional formatting for this object.
+            </summary>
+      <param name="control">The object on which to set the C1RulesManager.</param>
+      <param name="manager">The C1RulesManager.</param>
+      <exception cref="T:System.ArgumentException">
+      </exception>
+    </member>
+    <member name="M:C1.Win.RulesManager.C1RulesManager.Dispose(System.Boolean)">
+      <summary>
+            Releases the unmanaged resources used by the System.Windows.Forms.Control and
+            its child controls and optionally releases the managed resources.
+            </summary>
+      <param name="disposing">true to release both managed and unmanaged resources; 
+            false to release only unmanaged resources. </param>
+    </member>
+    <member name="T:C1.Win.RulesManager.Design.C1RulesManagerDesigner">
+      <summary>
+            Extends the design mode behavior of a <see cref="T:C1.Win.RulesManager.C1RulesManager" /> control.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Design.C1RulesManagerDesigner.Initialize(System.ComponentModel.IComponent)">
+      <summary>
+            Initializes the designer with the specified component.
+            </summary>
+      <param name="component">The System.ComponentModel.IComponent to associate the designer with. This component must always be an instance of <see cref="T:C1.Win.RulesManager.C1RulesManager" />.</param>
+    </member>
+    <member name="P:C1.Win.RulesManager.Design.C1RulesManagerDesigner.ActionLists">
+      <summary>
+            Gets the design-time action lists supported by the component associated with the designer.
+            </summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.Localization.Strings">
+      <summary>
+            The <see cref="T:C1.Win.RulesManager.Localization.Strings" /> class contains static properties used for localization.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Localization.Strings.ResourceManager">
+      <summary>
+            The <see cref="P:C1.Win.RulesManager.Localization.Strings.ResourceManager" /> object used for lookup resources.
+            </summary>
+      <remarks>Set this property to the valid value if 
+            you define resources in a Custom Control assembly.</remarks>
+    </member>
+    <member name="P:C1.Win.RulesManager.Localization.Strings.UICulture">
+      <summary>
+            Returns default <see cref="T:System.Globalization.CultureInfo" /> object used as fallback culture.
+            </summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.Model.BaseNotifyPropertyChanged">
+      <summary>
+            Represents base INotifyPropertyChanged class.
+            </summary>
+    </member>
+    <member name="E:C1.Win.RulesManager.Model.BaseNotifyPropertyChanged.PropertyChanged">
+      <summary>
+            Occurs when a property value changes.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Model.BaseNotifyPropertyChanged.SetProperty``1(``0@,``0,System.String)">
+      <summary>
+            Sets property.
+            </summary>
+      <typeparam name="T">Property type.</typeparam>
+      <param name="prop">Reference to the property.</param>
+      <param name="propertyName">The property name.</param>
+      <param name="value">
+      </param>
+    </member>
+    <member name="M:C1.Win.RulesManager.Model.BaseNotifyPropertyChanged.OnPropertyChanged(System.String)">
+      <summary>
+            Fires the <see cref="E:C1.Win.RulesManager.Model.BaseNotifyPropertyChanged.PropertyChanged" /> event.
+            </summary>
+      <param name="propertyName">Property name</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.Model.BaseNotifyPropertyChanged.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)">
+      <summary>
+            Fires the <see cref="E:C1.Win.RulesManager.Model.BaseNotifyPropertyChanged.PropertyChanged" /> event.
+            </summary>
+      <param name="args">Data for the PropertyChanged event.</param>
+    </member>
+    <member name="T:C1.Win.RulesManager.Model.IItemRangeCollection">
+      <summary>
+            Represents collection of item ranges.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Model.IItemRangeCollection.AddRange(System.Collections.Generic.IEnumerable{C1.Win.RulesManager.IItemRange})">
+      <summary>
+            Adds the IItemRange elements of the specified collection to the end of the collection.
+            </summary>
+      <param name="ranges">
+      </param>
+    </member>
+    <member name="M:C1.Win.RulesManager.Model.IItemRangeCollection.SetRange(System.String)">
+      <summary>
+            Tries to parse text into the IItemRange object or list of objects and fill out the collection.
+            </summary>
+      <param name="text">text to parse</param>
+      <returns>True of success.</returns>
+      <remarks>
+            The separator for the ranges is ';'.
+            </remarks>
+      <example> 
+            collection.SetRange("1:7;[Field1];5:6:[Field2]");
+            Fills collection with 3 ranges: 
+               <see cref="T:C1.Win.RulesManager.ItemRange" /> with FirstItem = 1 and LastItem = 7,
+               <see cref="T:C1.Win.RulesManager.FieldRange" /> with 1 field: Field1,
+               <see cref="T:C1.Win.RulesManager.CustomItemRange" /> with FirstItem = 5, LastItem = 6 and 1 field: Field2.
+            </example>
+    </member>
+    <member name="T:C1.Win.RulesManager.Model.IRuleCollection">
+      <summary>
+            Represents the collection of rules.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Model.IRuleCollection.AddRange(System.Collections.Generic.IEnumerable{C1.Win.RulesManager.IRule})">
+      <summary>
+            Adds the IRule elements of the specified collection to the end of the collection.
+            </summary>
+      <param name="rules">
+      </param>
+    </member>
+    <member name="M:C1.Win.RulesManager.Model.IRuleCollection.IncreasePriority(C1.Win.RulesManager.IRule)">
+      <summary>
+            Increases the priority of the specified rule in the collection. 
+            The priority is determined by the position in the collection.
+            </summary>
+      <param name="rule">Specified rule</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.Model.IRuleCollection.DecreasePriority(C1.Win.RulesManager.IRule)">
+      <summary>
+            Decrease the priority of the specified rule in the collection. 
+            The priority is determined by the position in the collection.
+            </summary>
+      <param name="rule">Specified rule</param>
+    </member>
+    <member name="T:C1.Win.RulesManager.Model.ItemRangeCollection">
+      <summary>
+            Represents collection of item ranges.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Model.ItemRangeCollection.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.Model.ItemRangeCollection" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Model.ItemRangeCollection.#ctor(C1.Win.RulesManager.Model.ItemRangeCollection)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.Model.ItemRangeCollection" />.
+            </summary>
+      <param name="prototype">Prototype.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.Model.ItemRangeCollection.AddRange(System.Collections.Generic.IEnumerable{C1.Win.RulesManager.IItemRange})">
+      <summary>
+            Adds the IItemRange elements of the specified collection to the end of the collection.
+            </summary>
+      <param name="ranges">
+      </param>
+    </member>
+    <member name="M:C1.Win.RulesManager.Model.ItemRangeCollection.SetRange(System.String)">
+      <summary>
+            Tries to parse text into the IItemRange object or list of objects and fill out the collection.
+            </summary>
+      <param name="text">text to parse</param>
+      <returns>True of success.</returns>
+      <remarks>
+            The separator for the ranges is ';'.
+            </remarks>
+      <example> 
+            collection.SetRange("1:7;[Field1];5:6:[Field2]");
+            Fills collection with 3 ranges: 
+               <see cref="T:C1.Win.RulesManager.ItemRange" /> with FirstItem = 1 and LastItem = 7,
+               <see cref="T:C1.Win.RulesManager.FieldRange" /> with 1 field: Field1,
+               <see cref="T:C1.Win.RulesManager.CustomItemRange" /> with FirstItem = 5, LastItem = 6 and 1 field: Field2.
+            </example>
+    </member>
+    <member name="M:C1.Win.RulesManager.Model.ItemRangeCollection.Clone">
+      <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+      <returns>A new object that is a copy of this instance.</returns>
+    </member>
+    <member name="T:C1.Win.RulesManager.Model.RuleCollection">
+      <summary>
+            Represents the collection of rules.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Model.RuleCollection.AddRange(System.Collections.Generic.IEnumerable{C1.Win.RulesManager.IRule})">
+      <summary>
+            Adds the IRule elements of the specified collection to the end of the collection.
+            </summary>
+      <param name="rules">
+      </param>
+    </member>
+    <member name="M:C1.Win.RulesManager.Model.RuleCollection.IncreasePriority(C1.Win.RulesManager.IRule)">
+      <summary>
+            Increases the priority of the specified rule in the collection. 
+            The priority is determined by the position in the collection.
+            </summary>
+      <param name="rule">Specified rule</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.Model.RuleCollection.DecreasePriority(C1.Win.RulesManager.IRule)">
+      <summary>
+            Decrease the priority of the specified rule in the collection. 
+            The priority is determined by the position in the collection.
+            </summary>
+      <param name="rule">Specified rule</param>
+    </member>
+    <member name="T:C1.Win.RulesManager.GradientSettings">
+      <summary>
+            Represents the gradient settings.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.GradientSettings.HistogramColor">
+      <summary>
+            Gets or sets  the color of the histogram.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.GradientSettings.IsGradientHistogram">
+      <summary>
+            Gets or sets a value indicating whether the background color of the histogram is gradient.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.GradientSettings.IconList">
+      <summary>
+            Gets or sets the key of the icon list.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.GradientSettings.HistogramPoints">
+      <summary>
+            Gets or sets an array of the histogram points.
+            </summary>
+      <remarks>The Color property is ignored.</remarks>
+    </member>
+    <member name="P:C1.Win.RulesManager.GradientSettings.IconPoints">
+      <summary>
+            Gets or sets an array of the icon points.
+            </summary>
+      <remarks>The Color property is ignored.</remarks>
+    </member>
+    <member name="P:C1.Win.RulesManager.GradientSettings.BackgroundPoints">
+      <summary>
+            Gets or sets an array of the background points.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.GradientSettings.ReadXml(System.Xml.XmlReader)">
+      <summary>
+            Generates an <see cref="T:C1.Win.RulesManager.GradientSettings" /> from its XML representation.
+            </summary>
+      <param name="reader">The <see cref="T:System.Xml.XmlReader" /> stream from which the object is deserialized.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.GradientSettings.WriteXml(System.Xml.XmlWriter)">
+      <summary>
+             Converts an <see cref="T:C1.Win.RulesManager.GradientSettings" /> into its XML representation.
+            </summary>
+      <param name="writer">The <see cref="T:System.Xml.XmlWriter" /> stream to which the object is serialized.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.GradientSettings.Clone">
+      <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+      <returns>A new object that is a copy of this instance.</returns>
+    </member>
+    <member name="T:C1.Win.RulesManager.IItemStyleEx">
+      <summary>
+            Represents extended item conditional formatting style.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IItemStyleEx.Gradient">
+      <summary>
+            Gets or sets the gradient settings.
+            </summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.IViewOptions">
+      <summary>
+            Represents additional appearance settings.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.AllowedRules">
+      <summary>
+            A value indicating which types of rules are supported by the <see cref="T:C1.Win.RulesManager.C1RulesManager" /> control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.CanEditName">
+      <summary>
+            A value indicating whether the end user can edit the rule name using the user interface.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.CanChangePriority">
+      <summary>
+            A value indicating whether the end user can change the priority of a rule using the user interface.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.IsExpressionButtonVisible">
+      <summary>
+            A value indicating whether the expression dialog button is enabled and visible.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.IsRuleNameVisible">
+      <summary>
+            A value indicating whether the rule name is visible in the rule editor.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.IsRuleCheckBoxVisible">
+      <summary>
+            A value indicating whether the Enable/Disable check box is visible in the rule item.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.IsStopIfTrueVisible">
+      <summary>
+            A value indicating whether the StopIfTrue check box is visible in the rule editor.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.IsHeaderVisible">
+      <summary>
+            A value indicating whether to show the <see cref="T:C1.Win.RulesManager.C1RulesManager" /> header.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.IsRangeSelectorVisible">
+      <summary>
+            Gets or sets a value indicating whether to show the <see cref="T:C1.Win.RulesManager.C1RulesManager" /> range selector element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.IsConditionVisible">
+      <summary>
+            Gets or sets a value indicating whether to show the <see cref="T:C1.Win.RulesManager.C1RulesManager" /> formatting condition element.
+            </summary>
+      <remarks>
+            If this property is set to no, it means that the button for adding a new rule or switching rule types will not be available too.
+            </remarks>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.IsAddButtonVisible">
+      <summary>
+            A value indicating whether the add new rule button is enabled and visible.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.IsRemoveButtonVisible">
+      <summary>
+            A value indicating whether the remove rule button is enabled and visible.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.IsFontStyleVisible">
+      <summary>
+            A value indicating whether to display font style buttons on the format toolbar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.IsTextAlignVisible">
+      <summary>
+            A value indicating whether to display text alignment button on the format toolbar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.IsTextColorVisible">
+      <summary>
+            A value indicating whether to display text color button on the format toolbar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.IsBackColorVisible">
+      <summary>
+            A value indicating whether to display background color button on the format toolbar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.IsBorderColorVisible">
+      <summary>
+            A value indicating whether to display border color button on the format toolbar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.IsHistogramVisible">
+      <summary>
+            A value indicating whether to display histogram buttons on the format toolbar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.IsIconsButtonVisible">
+      <summary>
+            A value indicating whether to display icons button on the format toolbar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IViewOptions.PopupPlacement">
+      <summary>
+            Get or sets a value determines the overall appearance of the pop-up list.
+            </summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.Styles.FormStyle">
+      <summary>
+        <see cref="T:C1.Win.RulesManager.Styles.FormStyle" /> contains display attributes that 
+            determine the general appearance of the drop down form on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.FormStyle.Padding">
+      <summary>
+            Gets or sets the thickness of the padding between the element edges and its content.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.FormStyle.BackColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the background.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.FormStyle.BorderColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to draw the border around the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.FormStyle.Line">
+      <summary>
+            Gets or sets the thickness of the lines and separators.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.FormStyle.LineColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to draw the lines and separators.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.FormStyle.ApplyToStyle(C1.Framework.Style)">
+      <summary>
+            Applies style to the specified <see cref="T:C1.Framework.Style" /> if it is possible.
+            </summary>
+      <param name="dst">
+      </param>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.FormStyle.DefaultStyle">
+      <summary>
+            Gets a style that contains the default values for current style.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.FormStyle.Clone">
+      <summary>
+            Creates an instance of the <see cref="T:C1.Win.C1Themes.BaseStyle" /> class that is identical to the current <see cref="T:C1.Win.C1Themes.BaseStyle" /></summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.Styles.ClickableElementStyle">
+      <summary>
+        <see cref="T:C1.Win.RulesManager.Styles.ClickableElementStyle" /> contains display attributes that 
+            determine the general appearance of the clickable element on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ClickableElementStyle.Default">
+      <summary>
+            Gets style containing display attributes that determine the general appearance of the element in the default state.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ClickableElementStyle.Hot">
+      <summary>
+            Gets style containing display attributes that determine the general appearance of element on the screen when the cursor is over it.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ClickableElementStyle.Pressed">
+      <summary>
+            Gets style containing display attributes that determine the general appearance of pressed element on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ClickableElementStyle.HotPressed">
+      <summary>
+            Gets style containing display attributes that determine the general appearance of the pressed element on the screen when the cursor is over it.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.ClickableElementStyle.ApplyToStyle(C1.Framework.Style)">
+      <summary>
+            Applies style to the specified <see cref="T:C1.Framework.Style" /> if it is possible.
+            </summary>
+      <param name="dst">
+      </param>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.ClickableElementStyle.BaseApplyToStyle(C1.Framework.Style)">
+      <summary>
+            Applies Style base properties to the specified <see cref="T:C1.Framework.Style" />.
+            </summary>
+      <param name="dst">
+      </param>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ClickableElementStyle.DefaultStyle">
+      <summary>
+            Gets a style that contains the default values for current style.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.ClickableElementStyle.Clone">
+      <summary>
+            Creates an instance of the <see cref="T:C1.Win.C1Themes.BaseStyle" /> class that is identical to the current <see cref="T:C1.Win.C1Themes.BaseStyle" /></summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.Styles.StateElementStyle">
+      <summary>
+        <see cref="T:C1.Win.RulesManager.Styles.StateElementStyle" /> contains display attributes that 
+            determine the general appearance of the element in some state on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.StateElementStyle.ForeColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the text.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.StateElementStyle.BackColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the background.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.StateElementStyle.BorderColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to draw the border around the element.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.StateElementStyle.ApplyToStyle(C1.Framework.Style)">
+      <summary>
+            Applies style to the specified <see cref="T:C1.Framework.Style" /> if it is possible.
+            </summary>
+      <param name="dst">
+      </param>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.StateElementStyle.DefaultStyle">
+      <summary>
+            Gets a style that contains the default values for current style.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.StateElementStyle.Clone">
+      <summary>
+            Creates an instance of the <see cref="T:C1.Win.C1Themes.BaseStyle" /> class that is identical to the current <see cref="T:C1.Win.C1Themes.BaseStyle" /></summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.Styles.ButtonsStyle">
+      <summary>
+        <see cref="T:C1.Win.RulesManager.Styles.ButtonsStyle" /> contains display attributes that 
+            determine the general appearance of all individual buttons on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ButtonsStyle.SplitButton">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.ButtonElementStyle" /> containing display attributes that determine the general appearance of the SplitButton elements on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ButtonsStyle.AcceptButton">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.ButtonElementStyle" /> containing display attributes that determine the general appearance of the AcceptButton elements on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ButtonsStyle.CancelButton">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.ButtonElementStyle" /> containing display attributes that determine the general appearance of the CancelButton elements on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ButtonsStyle.ImageButton">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.ClickableElementStyle" /> containing display attributes that determine the general appearance of the ImageButton elements on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ButtonsStyle.CheckBox">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.ClickableElementStyle" /> containing display attributes that determine the general appearance of the CheckBox elements on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ButtonsStyle.AddRuleButton">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.ButtonElementStyle" /> containing display attributes that determine the general appearance of the AddRuleButton elements on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ButtonsStyle.TabButton">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.ButtonElementStyle" /> containing display attributes that determine the general appearance of the tab button on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ButtonsStyle.DefaultStyle">
+      <summary>
+            Gets a style that contains the default values for current style.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.ButtonsStyle.Clone">
+      <summary>
+            Creates an instance of the <see cref="T:C1.Win.C1Themes.BaseStyle" /> class that is identical to the current <see cref="T:C1.Win.C1Themes.BaseStyle" /></summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.Styles.ButtonElementStyle">
+      <summary>
+        <see cref="T:C1.Win.RulesManager.Styles.ButtonElementStyle" /> contains display attributes that 
+            determine the general appearance of the button element on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ButtonElementStyle.Font">
+      <summary>
+            Gets or sets text font of element.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.ButtonElementStyle.BaseApplyToStyle(C1.Framework.Style)">
+      <summary>
+            Applies Style base properties to the specified <see cref="T:C1.Framework.Style" />.
+            </summary>
+      <param name="dst">
+      </param>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.ButtonElementStyle.Clone">
+      <summary>
+            Creates an instance of the <see cref="T:C1.Win.C1Themes.BaseStyle" /> class that is identical to the current <see cref="T:C1.Win.C1Themes.BaseStyle" /></summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.Styles.DropDownsStyle">
+      <summary>
+        <see cref="T:C1.Win.RulesManager.Styles.DropDownsStyle" /> contains display attributes that 
+            determine the general appearance of the drop down form on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.DropDownsStyle.Form">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.FormStyle" /> containing display attributes that determine the general appearance of the form dialogs on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.DropDownsStyle.List">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.ListStyle" /> containing display attributes that determine the general appearance of the popup lists on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.DropDownsStyle.DefaultStyle">
+      <summary>
+            Gets a style that contains the default values for current style.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.DropDownsStyle.Clone">
+      <summary>
+            Creates an instance of the <see cref="T:C1.Win.C1Themes.BaseStyle" /> class that is identical to the current <see cref="T:C1.Win.C1Themes.BaseStyle" /></summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.Styles.ListStyle">
+      <summary>
+        <see cref="T:C1.Win.RulesManager.Styles.ListStyle" /> contains display attributes that 
+            determine the general appearance of the list on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ListStyle.Font">
+      <summary>
+            Gets or sets text font of element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ListStyle.Items">
+      <summary>
+            Gets style containing display attributes that determine the general appearance of the list items.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.ListStyle.ApplyToStyle(C1.Framework.Style)">
+      <summary>
+            Applies style to the specified <see cref="T:C1.Framework.Style" /> if it is possible.
+            </summary>
+      <param name="dst">
+      </param>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.ListStyle.DefaultStyle">
+      <summary>
+            Gets a style that contains the default values for current style.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.ListStyle.Clone">
+      <summary>
+            Creates an instance of the <see cref="T:C1.Win.C1Themes.BaseStyle" /> class that is identical to the current <see cref="T:C1.Win.C1Themes.BaseStyle" /></summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.Styles.StringsStyle">
+      <summary>
+        <see cref="T:C1.Win.RulesManager.Styles.StringsStyle" /> contains display attributes that 
+            determine the general appearance of the captions and labels on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.StringsStyle.Header">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.TextStyle" /> containing display attributes that determine the general appearance of the control header on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.StringsStyle.Titles">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.TextStyle" /> containing display attributes that determine the general appearance of the titles on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.StringsStyle.Labels">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.TextStyle" /> containing display attributes that determine the general appearance of the label elements on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.StringsStyle.DefaultStyle">
+      <summary>
+            Gets a style that contains the default values for current style.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.StringsStyle.Clone">
+      <summary>
+            Creates an instance of the <see cref="T:C1.Win.C1Themes.BaseStyle" /> class that is identical to the current <see cref="T:C1.Win.C1Themes.BaseStyle" /></summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.Styles.TextStyle">
+      <summary>
+        <see cref="T:C1.Win.RulesManager.Styles.TextStyle" /> contains display attributes that 
+            determine the general appearance of the text element on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.TextStyle.Font">
+      <summary>
+            Gets or sets text font of element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.TextStyle.ForeColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the text.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.TextStyle.BackColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the background.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.TextStyle.BorderColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to draw the border around the element.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.TextStyle.ApplyToStyle(C1.Framework.Style)">
+      <summary>
+            Applies style to the specified <see cref="T:C1.Framework.Style" /> if it is possible.
+            </summary>
+      <param name="dst">
+      </param>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.TextStyle.DefaultStyle">
+      <summary>
+            Gets a style that contains the default values for current style.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.TextStyle.Clone">
+      <summary>
+            Creates an instance of the <see cref="T:C1.Win.C1Themes.BaseStyle" /> class that is identical to the current <see cref="T:C1.Win.C1Themes.BaseStyle" /></summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.Styles.BaseElementStyle">
+      <summary>
+            Base class for <see cref="T:C1.Win.RulesManager.C1RulesManager" /> style.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.BaseElementStyle.Padding">
+      <summary>
+            Gets or sets the thickness of the padding between the element edges and its content.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.BaseElementStyle.Margins">
+      <summary>
+            Gets or sets the thickness of the margins around the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.BaseElementStyle.Border">
+      <summary>
+            Gets or sets the thickness of the border around the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.BaseElementStyle.Corners">
+      <summary>
+            Gets or sets corners of the element.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.BaseElementStyle.ApplyToStyle(C1.Framework.Style)">
+      <summary>
+            Applies style to the specified <see cref="T:C1.Framework.Style" /> if it is possible.
+            </summary>
+      <param name="dst">
+      </param>
+    </member>
+    <member name="T:C1.Win.RulesManager.Styles.RulesManagerStyles">
+      <summary>
+            The <see cref="T:C1.Win.RulesManager.Styles.RulesManagerStyles" /> class represents the styles for the C1RulesManager control 
+            which contains display attributes that determine the appearance of control. 
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.RulesManagerStyles.Common">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.CommonStyle" /> containing display attributes that determine the general appearance of the control on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.RulesManagerStyles.TextBoxes">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.TextBoxStyle" /> containing display attributes that determine the general appearance of the TextBox elements on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.RulesManagerStyles.Buttons">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.ButtonsStyle" /> containing display attributes that determine the general appearance of all individual buttons on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.RulesManagerStyles.Rules">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.RuleItemStyle" /> containing display attributes that determine the general appearance of the rule item elements on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.RulesManagerStyles.Strings">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.StringsStyle" /> containing display attributes that determine the general appearance of the all text elements on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.RulesManagerStyles.DropDowns">
+      <summary>
+            Gets <see cref="T:C1.Win.RulesManager.Styles.DropDownsStyle" /> containing display attributes that determine the general appearance of the drop down forms on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.RulesManagerStyles.DefaultStyle">
+      <summary>
+            Gets a style that contains the default values for the current style.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.RulesManagerStyles.Clone">
+      <summary>
+            Creates an instance of the <see cref="T:C1.Win.C1Themes.BaseStyle" /> class that is identical to the current <see cref="T:C1.Win.C1Themes.BaseStyle" /></summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.Styles.CommonStyle">
+      <summary>
+        <see cref="T:C1.Win.RulesManager.Styles.CommonStyle" /> contains display attributes that 
+            determine the general appearance of the control on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.CommonStyle.ChildSpacingHorz">
+      <summary>
+            Gets or sets the amount of horizontal space between child elements.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.CommonStyle.ChildSpacingVert">
+      <summary>
+            Gets or sets the amount of vertical space between child elements.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.CommonStyle.Margins">
+      <summary>
+            Gets or sets the thickness of the margins around the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.CommonStyle.EmptyBackColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the empty space background.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.CommonStyle.ApplyToStyle(C1.Framework.Style)">
+      <summary>
+            Applies style to the specified <see cref="T:C1.Framework.Style" /> if it is possible.
+            </summary>
+      <param name="dst">
+      </param>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.CommonStyle.DefaultStyle">
+      <summary>
+            Gets a style that contains the default values for current style.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.CommonStyle.Clone">
+      <summary>
+            Creates an instance of the <see cref="T:C1.Win.C1Themes.BaseStyle" /> class that is identical to the current <see cref="T:C1.Win.C1Themes.BaseStyle" /></summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.Styles.RuleItemStyle">
+      <summary>
+        <see cref="T:C1.Win.RulesManager.Styles.RuleItemStyle" /> contains display attributes that 
+            determine the general appearance of the rule item element on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.RuleItemStyle.Font">
+      <summary>
+            Gets or sets text font of element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.RuleItemStyle.Font2">
+      <summary>
+            Gets or sets label font of the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.RuleItemStyle.Glyph">
+      <summary>
+            Gets style containing display attributes that determine the general appearance of the glyph button.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.RuleItemStyle.DefaultStyle">
+      <summary>
+            Gets a style that contains the default values for current style.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.RuleItemStyle.BaseApplyToStyle(C1.Framework.Style)">
+      <summary>
+            Applies Style base properties to the specified <see cref="T:C1.Framework.Style" />.
+            </summary>
+      <param name="dst">
+      </param>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.RuleItemStyle.Clone">
+      <summary>
+            Creates an instance of the <see cref="T:C1.Win.C1Themes.BaseStyle" /> class that is identical to the current <see cref="T:C1.Win.C1Themes.BaseStyle" /></summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.Styles.TextBoxStyle">
+      <summary>
+        <see cref="T:C1.Win.RulesManager.Styles.TextBoxStyle" /> contains display attributes that 
+            determine the general appearance of the text box element on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.TextBoxStyle.Font">
+      <summary>
+            Gets or sets text font of element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.TextBoxStyle.Default">
+      <summary>
+            Gets style containing display attributes that determine the general appearance of the element in the default state.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.TextBoxStyle.Hot">
+      <summary>
+            Gets style containing display attributes that determine the general appearance of element on the screen when the cursor is over it.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.TextBoxStyle.Selected">
+      <summary>
+            Gets style containing display attributes that determine the general appearance of the element when it is selected.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.TextBoxStyle.HotSelected">
+      <summary>
+            Gets style containing display attributes that determine the general appearance of the element when it is selected and the cursor is over it.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.TextBoxStyle.Disabled">
+      <summary>
+            Gets style containing display attributes that determine the general appearance of the element when it is disabled.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.TextBoxStyle.Invalid">
+      <summary>
+            Gets style containing display attributes that determine the general appearance of the element when it contains an invalid value.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.TextBoxStyle.Button">
+      <summary>
+            Gets style containing display attributes that determine the general appearance of the drop down button.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.TextBoxStyle.ApplyToStyle(C1.Framework.Style)">
+      <summary>
+            Applies style to the specified <see cref="T:C1.Framework.Style" /> if it is possible.
+            </summary>
+      <param name="dst">
+      </param>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.TextBoxStyle.BaseApplyToStyle(C1.Framework.Style)">
+      <summary>
+            Applies Style base properties to destination <see cref="T:C1.Framework.Style" />.
+            </summary>
+      <param name="dst">
+      </param>
+    </member>
+    <member name="P:C1.Win.RulesManager.Styles.TextBoxStyle.DefaultStyle">
+      <summary>
+            Gets a style that contains the default values for current style.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Styles.TextBoxStyle.Clone">
+      <summary>
+            Creates an instance of the <see cref="T:C1.Win.C1Themes.BaseStyle" /> class that is identical to the current <see cref="T:C1.Win.C1Themes.BaseStyle" /></summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.FieldRange">
+      <summary>
+            Represents a range of field names.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.FieldRange.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.FieldRange" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.FieldRange.#ctor(C1.Win.RulesManager.FieldRange)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.FieldRange" />.
+            </summary>
+      <param name="prototype">Prototype</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.FieldRange.#ctor(System.String[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.FieldRange" />.
+            </summary>
+      <param name="fields">Array of the fields name.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.FieldRange.#ctor(System.Collections.Generic.IEnumerable{System.String})">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.FieldRange" />.
+            </summary>
+      <param name="fields">Fields name collection.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.FieldRange.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.FieldRange" />.
+            </summary>
+      <param name="range">Range as a string.</param>
+      <remarks>
+            The string format should be: "[{0}],[{1}]...", where {0},{1}... is the field names.
+            </remarks>
+      <example>
+            FieldRange range = new FieldRange("[Field1],[Field2],[Field3]");
+            </example>
+    </member>
+    <member name="P:C1.Win.RulesManager.FieldRange.Fields">
+      <summary>
+            The array of the field names.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.FieldRange.SetRange(System.Int32,System.Int32,System.String[])">
+      <summary>
+            Set a range of items.
+            </summary>
+      <param name="firstItem">The first item index in the range.</param>
+      <param name="lastItem">The last item index in the range.</param>
+      <param name="fields">Fields array.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.FieldRange.IsInRange(System.Int32,System.String)">
+      <summary>
+            Returns a value indicating whether the specified cell is in the range.
+            </summary>
+      <param name="item">Specified the item index.</param>
+      <param name="field">Specified the field name.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:C1.Win.RulesManager.FieldRange.ToString">
+      <summary>
+            Returns a string that represents the current object.
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:C1.Win.RulesManager.FieldRange.Clone">
+      <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+      <returns>A new object that is a copy of this instance.</returns>
+    </member>
+    <member name="M:C1.Win.RulesManager.FieldRange.Equals(C1.Win.RulesManager.IItemRange)">
+      <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+      <param name="other">An object to compare with this object.</param>
+      <returns>true if the current object is equal to the other parameter; otherwise, false.</returns>
+    </member>
+    <member name="M:C1.Win.RulesManager.FieldRange.ReadXml(System.Xml.XmlReader)">
+      <summary>
+            Generates an <see cref="T:C1.Win.RulesManager.FieldRange" /> from its XML representation.
+            </summary>
+      <param name="reader">The <see cref="T:System.Xml.XmlReader" /> stream from which the object is deserialized.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.FieldRange.WriteXml(System.Xml.XmlWriter)">
+      <summary>
+             Converts an <see cref="T:C1.Win.RulesManager.FieldRange" /> into its XML representation.
+            </summary>
+      <param name="writer">The <see cref="T:System.Xml.XmlWriter" /> stream to which the object is serialized.</param>
+    </member>
+    <member name="T:C1.Win.RulesManager.CustomItemRange">
+      <summary>
+            Represents a custom range of items.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.CustomItemRange.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.CustomItemRange" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.CustomItemRange.#ctor(C1.Win.RulesManager.CustomItemRange)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.CustomItemRange" />.
+            </summary>
+      <param name="prototype">
+      </param>
+    </member>
+    <member name="M:C1.Win.RulesManager.CustomItemRange.#ctor(System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.String})">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.CustomItemRange" />.
+            </summary>
+      <param name="first">Fist item index.</param>
+      <param name="last">Last item index.</param>
+      <param name="fields">Fields name collection.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.CustomItemRange.#ctor(System.Int32,System.Int32,System.String[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.CustomItemRange" />.
+            </summary>
+      <param name="first">Fist item index.</param>
+      <param name="last">Last item index.</param>
+      <param name="fields">Array of the fields name.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.CustomItemRange.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.CustomItemRange" />.
+            </summary>
+      <param name="range">Range as a string.</param>
+      <remarks>
+            The string format should be: "{0}:{1}:[{1}],[{2}]...", where {0} is the FirstItem, 
+            {1} is the LastItem, and {1},{2}... is the field names.
+            </remarks>
+      <example>
+            CustomItemRange range = new CustomItemRange("1:100:[Field1],[Field2],[Field3]");
+            </example>
+    </member>
+    <member name="M:C1.Win.RulesManager.CustomItemRange.ToString">
+      <summary>
+            Returns a string that represents the current object.
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:C1.Win.RulesManager.CustomItemRange.FirstItem">
+      <summary>
+            The first item index in the range.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.CustomItemRange.LastItem">
+      <summary>
+            The last item index in the range.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.CustomItemRange.Fields">
+      <summary>
+            The array of the field names.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.CustomItemRange.SetRange(System.Int32,System.Int32,System.String[])">
+      <summary>
+            Set a range of items.
+            </summary>
+      <param name="firstItem">The first item index in the range.</param>
+      <param name="lastItem">The last item index in the range.</param>
+      <param name="fields">Fields array.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.CustomItemRange.IsInRange(System.Int32,System.String)">
+      <summary>
+            Returns a value indicating whether the specified cell is in the range.
+            </summary>
+      <param name="item">Specified the item index.</param>
+      <param name="field">Specified the field name.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:C1.Win.RulesManager.CustomItemRange.Clone">
+      <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+      <returns>A new object that is a copy of this instance.</returns>
+    </member>
+    <member name="M:C1.Win.RulesManager.CustomItemRange.Equals(C1.Win.RulesManager.IItemRange)">
+      <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+      <param name="other">An object to compare with this object.</param>
+      <returns>true if the current object is equal to the other parameter; otherwise, false.</returns>
+    </member>
+    <member name="M:C1.Win.RulesManager.CustomItemRange.ReadXml(System.Xml.XmlReader)">
+      <summary>
+            Generates an <see cref="T:C1.Win.RulesManager.CustomItemRange" /> from its XML representation.
+            </summary>
+      <param name="reader">The <see cref="T:System.Xml.XmlReader" /> stream from which the object is deserialized.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.CustomItemRange.WriteXml(System.Xml.XmlWriter)">
+      <summary>
+             Converts an <see cref="T:C1.Win.RulesManager.CustomItemRange" /> into its XML representation.
+            </summary>
+      <param name="writer">The <see cref="T:System.Xml.XmlWriter" /> stream to which the object is serialized.</param>
+    </member>
+    <member name="T:C1.Win.RulesManager.ItemRange">
+      <summary>
+            Represents a rang of rows.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.ItemRange.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.ItemRange" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.ItemRange.#ctor(C1.Win.RulesManager.ItemRange)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.ItemRange" />.
+            </summary>
+      <param name="prototype">Prototype</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.ItemRange.#ctor(System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.ItemRange" />.
+            </summary>
+      <param name="first">Fist item index.</param>
+      <param name="last">Last item index.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.ItemRange.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.ItemRange" />.
+            </summary>
+      <param name="range">Range as a string.</param>
+      <remarks>
+            The string format should be: "{0}:{1}", where {0} is the FirstItem and {1} is the LastItem.
+            </remarks>
+      <example>
+            ItemRange range = new ItemRange("1:100");        
+            </example>
+    </member>
+    <member name="P:C1.Win.RulesManager.ItemRange.FirstItem">
+      <summary>
+            The first item index in the range.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ItemRange.LastItem">
+      <summary>
+            The last item index in the range.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.ItemRange.SetRange(System.Int32,System.Int32,System.String[])">
+      <summary>
+            Set a range of items.
+            </summary>
+      <param name="firstItem">The first item index in the range.</param>
+      <param name="lastItem">The last item index in the range.</param>
+      <param name="fields">Fields array.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.ItemRange.IsInRange(System.Int32,System.String)">
+      <summary>
+            Returns a value indicating whether the specified cell is in the range.
+            </summary>
+      <param name="item">Specified the item index.</param>
+      <param name="field">Specified the field name.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:C1.Win.RulesManager.ItemRange.ToString">
+      <summary>
+            Returns a string that represents the current object.
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:C1.Win.RulesManager.ItemRange.Clone">
+      <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+      <returns>A new object that is a copy of this instance.</returns>
+    </member>
+    <member name="M:C1.Win.RulesManager.ItemRange.Equals(C1.Win.RulesManager.IItemRange)">
+      <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+      <param name="other">An object to compare with this object.</param>
+      <returns>true if the current object is equal to the other parameter; otherwise, false.</returns>
+    </member>
+    <member name="M:C1.Win.RulesManager.ItemRange.ReadXml(System.Xml.XmlReader)">
+      <summary>
+            Generates an <see cref="T:C1.Win.RulesManager.ItemRange" /> from its XML representation.
+            </summary>
+      <param name="reader">The <see cref="T:System.Xml.XmlReader" /> stream from which the object is deserialized.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.ItemRange.WriteXml(System.Xml.XmlWriter)">
+      <summary>
+             Converts an <see cref="T:C1.Win.RulesManager.ItemRange" /> into its XML representation.
+            </summary>
+      <param name="writer">The <see cref="T:System.Xml.XmlWriter" /> stream to which the object is serialized.</param>
+    </member>
+    <member name="T:C1.Win.RulesManager.Rule">
+      <summary>
+            Represents conditional formatting rule.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Rule.#ctor(C1.Win.RulesManager.Rule)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.Rule" />.
+            </summary>
+      <param name="prototype">
+      </param>
+    </member>
+    <member name="M:C1.Win.RulesManager.Rule.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.Rule" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Rule.Name">
+      <summary>
+            Gets or sets rule name.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Rule.AppliesTo">
+      <summary>
+            Gets a ItemRangeCollection collection of that specifies the range of items that the formatting rule applies to.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Rule.Style">
+      <summary>
+            Gets or sets the item style that will be used for conditional formatting or data validation.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Rule.Expression">
+      <summary>
+            Gets or sets the value or expression associated with the conditional format or validation of data.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Rule.StopIfTrue">
+      <summary>
+            Gets or sets a Boolean value that determines if additional formatting rules
+            for the item should be evaluated, if the current rule is set to True.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Rule.Enabled">
+      <summary>
+            Gets or sets whether this conditional formatting is enabled.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.Rule.IsValid">
+      <summary>
+            Gets whether this conditional formatting is properly customized.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.Rule.Clone">
+      <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+      <returns>A new object that is a copy of this instance.</returns>
+    </member>
+    <member name="M:C1.Win.RulesManager.Rule.ReadXml(System.Xml.XmlReader)">
+      <summary>
+            Generates an <see cref="T:C1.Win.RulesManager.Rule" /> from its XML representation.
+            </summary>
+      <param name="reader">The <see cref="T:System.Xml.XmlReader" /> stream from which the object is deserialized.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.Rule.WriteXml(System.Xml.XmlWriter)">
+      <summary>
+             Converts an <see cref="T:C1.Win.RulesManager.Rule" /> into its XML representation.
+            </summary>
+      <param name="writer">The <see cref="T:System.Xml.XmlWriter" /> stream to which the object is serialized.</param>
+    </member>
+    <member name="T:C1.Win.RulesManager.IItemRange">
+      <summary>
+            Represents a range of items.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.IItemRange.SetRange(System.Int32,System.Int32,System.String[])">
+      <summary>
+            Set a range of items.
+            </summary>
+      <param name="firstItem">The first item index in the range.</param>
+      <param name="lastItem">The last item index in the range.</param>
+      <param name="fields">Fields array.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.IItemRange.IsInRange(System.Int32,System.String)">
+      <summary>
+            Returns a value indicating whether the specified cell is in the range.
+            </summary>
+      <param name="item">Specified the item index.</param>
+      <param name="field">Specified the field name.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:C1.Win.RulesManager.IRule">
+      <summary>
+            Represents conditional formatting rule.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IRule.Name">
+      <summary>
+            Gets or sets rule name.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IRule.AppliesTo">
+      <summary>
+            Gets a ItemRangeCollection collection of that specifies the range of items that the formatting rule applies to.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IRule.Style">
+      <summary>
+            Gets or sets the item style that will be used for conditional formatting or data validation.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IRule.Expression">
+      <summary>
+            Gets or sets the value or expression associated with the conditional format or validation of data.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IRule.StopIfTrue">
+      <summary>
+            Gets or sets a Boolean value that determines if additional formatting rules
+            for the item should be evaluated, if the current rule is set to True.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IRule.Enabled">
+      <summary>
+            Gets or sets whether this conditional formatting is enabled.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.IRule.IsValid">
+      <summary>
+            Gets whether this conditional formatting is properly customized.
+            </summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.ItemStyle">
+      <summary>
+            Represents item conditional formatting style.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ItemStyle.FontStyle">
+      <summary>
+            Text font style.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ItemStyle.TextAlignment">
+      <summary>
+            Alignment of the text.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ItemStyle.Icon">
+      <summary>
+            Cell icon.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ItemStyle.ForeColor">
+      <summary>
+            Text color.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ItemStyle.BackColor">
+      <summary>
+            Item background color.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ItemStyle.BorderColor">
+      <summary>
+            Icon border color.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ItemStyle.Gradient">
+      <summary>
+            Settings for the gradient type rule.
+            </summary>
+      <remark>
+            For a solid rule, this property must be Null or be filled in with default values.
+            </remark>
+    </member>
+    <member name="M:C1.Win.RulesManager.ItemStyle.GetHistogramImage(System.Drawing.Rectangle)">
+      <summary>
+            Gets the histogram image with the specified size.
+            </summary>
+      <param name="rect">Specified size.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:C1.Win.RulesManager.ItemStyle.Clone">
+      <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+      <returns>A new object that is a copy of this instance.</returns>
+    </member>
+    <member name="M:C1.Win.RulesManager.ItemStyle.ReadXml(System.Xml.XmlReader)">
+      <summary>
+            Generates an <see cref="T:C1.Win.RulesManager.ItemStyle" /> from its XML representation.
+            </summary>
+      <param name="reader">The <see cref="T:System.Xml.XmlReader" /> stream from which the object is deserialized.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.ItemStyle.WriteXml(System.Xml.XmlWriter)">
+      <summary>
+             Converts an <see cref="T:C1.Win.RulesManager.ItemStyle" /> into its XML representation.
+            </summary>
+      <param name="writer">The <see cref="T:System.Xml.XmlWriter" /> stream to which the object is serialized.</param>
+    </member>
+    <member name="T:C1.Win.RulesManager.GradientPoint">
+      <summary>
+            Represents the gradient point for the gradient Rule.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.GradientPoint.#ctor(C1.Win.RulesManager.GradientPointType)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.RulesManager.GradientPoint" />.
+            </summary>
+      <param name="type">
+      </param>
+    </member>
+    <member name="P:C1.Win.RulesManager.GradientPoint.Type">
+      <summary>
+            Gets or sets the type of value for the gradient point.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.GradientPoint.Value">
+      <summary>
+            Gets or sets the value for the gradient point.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.GradientPoint.Color">
+      <summary>
+            Gets or sets the color for the gradient point.
+            </summary>
+    </member>
+    <member name="M:C1.Win.RulesManager.GradientPoint.ReadXml(System.Xml.XmlReader)">
+      <summary>
+            Generates an <see cref="T:C1.Win.RulesManager.GradientPoint" /> from its XML representation.
+            </summary>
+      <param name="reader">The <see cref="T:System.Xml.XmlReader" /> stream from which the object is deserialized.</param>
+    </member>
+    <member name="M:C1.Win.RulesManager.GradientPoint.WriteXml(System.Xml.XmlWriter)">
+      <summary>
+             Converts an <see cref="T:C1.Win.RulesManager.GradientPoint" /> into its XML representation.
+            </summary>
+      <param name="writer">The <see cref="T:System.Xml.XmlWriter" /> stream to which the object is serialized.</param>
+    </member>
+    <member name="T:C1.Win.RulesManager.RuleTypes">
+      <summary>
+            Represents the rule types.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.RuleTypes.None">
+      <summary>
+            No rule types.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.RuleTypes.Solid">
+      <summary>
+            Solid rule.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.RuleTypes.Gradient">
+      <summary>
+            Gradient rule.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.RuleTypes.All">
+      <summary>
+            All types of rules.
+            </summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.IconListKey">
+      <summary>
+            Represents the key for icons list.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.IconListKey.None">
+      <summary>
+            No icon.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.IconListKey.Triangle">
+      <summary>
+            List of 3 triangle icons.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.IconListKey.Arrow3">
+      <summary>
+            List of 3 colored arrow icons.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.IconListKey.Arrow4">
+      <summary>
+            List of 4 colored arrow icons.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.IconListKey.Arrow5">
+      <summary>
+            List of 5 colored arrow icons.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.IconListKey.TrafficLight">
+      <summary>
+            List of 3 traffic light icons.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.IconListKey.RimmedTrafficLight">
+      <summary>
+            List of 3 rimmed traffic light icons.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.IconListKey.Sign">
+      <summary>
+             List of 3 sign icons.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.IconListKey.Symbol">
+      <summary>
+            List of 3 symbol icons.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.IconListKey.UncircledSymbol">
+      <summary>
+            List of 3 uncircled symbol icons.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.IconListKey.Flag">
+      <summary>
+            List of 3 flag icons.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.IconListKey.Star">
+      <summary>
+            List of 3 star icons.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.IconListKey.Quarter">
+      <summary>
+            List of 5 quarter icons.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.IconListKey.Box">
+      <summary>
+            List of 5 box icons.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.IconListKey.Rating">
+      <summary>
+            List of 5 rating icons.
+            </summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.GradientPointType">
+      <summary>
+            Represents the gradient point type.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.GradientPointType.NotSelected">
+      <summary>
+            Type is not specified.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.GradientPointType.MinValue">
+      <summary>
+            Minimum value.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.GradientPointType.MaxValue">
+      <summary>
+            Maximum value.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.GradientPointType.Numeric">
+      <summary>
+            Numeric value.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.GradientPointType.Percent">
+      <summary>
+            Percent of the maximum value.
+            </summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.PopupPlacement">
+      <summary>
+            Determines placement of the pop-up list.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.PopupPlacement.Default">
+      <summary>
+            Default appearance.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.PopupPlacement.DropDown">
+      <summary>
+            Drop down list.
+            </summary>
+    </member>
+    <member name="F:C1.Win.RulesManager.PopupPlacement.Picker">
+      <summary>
+            Centered popup list, where the position of the selected element coincides 
+            with the position of the owner element.
+            </summary>
+    </member>
+    <member name="T:C1.Win.RulesManager.ViewOptions">
+      <summary>
+            Represents additional appearance settings.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.AllowedRules">
+      <summary>
+            Gets or sets a value indicating which types of rules are supported by the <see cref="T:C1.Win.RulesManager.C1RulesManager" /> control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.CanEditName">
+      <summary>
+            Gets or sets a value indicating whether the end user can edit the rule name using the user interface.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.IsRuleCheckBoxVisible">
+      <summary>
+            A value indicating whether the Enable/Disable check box is visible in the rule item.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.IsStopIfTrueVisible">
+      <summary>
+            A value indicating whether the StopIfTrue check box is visible in the rule editor.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.CanChangePriority">
+      <summary>
+            A value indicating whether the end user can change the priority of a rule using the user interface.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.IsRuleNameVisible">
+      <summary>
+            A value indicating whether the rule name is visible in the rule editor.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.IsAddButtonVisible">
+      <summary>
+            A value indicating whether the add new rule button is enabled and visible.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.IsRemoveButtonVisible">
+      <summary>
+            A value indicating whether the remove rule button is enabled and visible.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.IsExpressionButtonVisible">
+      <summary>
+            A value indicating whether the expression dialog button is enabled.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.IsHeaderVisible">
+      <summary>
+            Gets or sets a value indicating whether to show the <see cref="T:C1.Win.RulesManager.C1RulesManager" /> header.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.IsRangeSelectorVisible">
+      <summary>
+            Gets or sets a value indicating whether to show the <see cref="T:C1.Win.RulesManager.C1RulesManager" /> range selector element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.IsConditionVisible">
+      <summary>
+            Gets or sets a value indicating whether to show the <see cref="T:C1.Win.RulesManager.C1RulesManager" /> formatting condition element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.IsFontStyleVisible">
+      <summary>
+            Gets or sets a value indicating whether to display font style buttons on the format toolbar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.IsTextAlignVisible">
+      <summary>
+            A value indicating whether to display text alignment button on the format toolbar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.IsTextColorVisible">
+      <summary>
+            Gets or sets a value indicating whether to display text color button on the format toolbar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.IsBackColorVisible">
+      <summary>
+            Gets or sets a value indicating whether to display background color button on the format toolbar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.IsBorderColorVisible">
+      <summary>
+            Gets or sets a value indicating whether to display border color button on the format toolbar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.IsHistogramVisible">
+      <summary>
+            Gets or sets a value indicating whether to display histogram buttons on the format toolbar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.IsIconsButtonVisible">
+      <summary>
+            Gets or sets a value indicating whether to display icons button on the format toolbar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.RulesManager.ViewOptions.PopupPlacement">
+      <summary>
+            Get or sets a value determines the placement of the pop-up list.
+            </summary>
+    </member>
+  </members>
+</doc>

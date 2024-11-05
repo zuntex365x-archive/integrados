@@ -1,0 +1,196 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:c1sched="clr-namespace:C1.WPF.Schedule" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="clr-namespace:C1.WPF;assembly=C1.WPF.4">
+
+	<ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/C1.WPF.Schedule.4;component/themes/SchedulerThemes/Office2007/Default.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- @ MS Office 2007 Blue Color -->
+    <Color x:Key="C1Scheduler_BaseBackgroundColor">#FFA1BFDF</Color>
+
+    <!-- @ Base Colors used in Scheduler -->
+    <Color x:Key="C1Scheduler_BaseColor">#FF5D8CC9</Color>
+
+	<Style x:Key="C1Scheduler_ControlAreaDark_BrushStyle" TargetType="c1:C1BrushBuilder">
+		<Setter Property="DesignColor" Value="{StaticResource C1Scheduler_BaseBackgroundColor}" />
+		<Setter Property="DesignBrush" Value="#FFDBE8F4" />
+	</Style>
+
+	<!-- Background and border -->
+    <SolidColorBrush x:Key="C1Scheduler_Background" Color="#FFA1BFDF" />
+    <SolidColorBrush x:Key="C1Scheduler_Border_Brush" Color="#FF5D8CC9" />
+
+    <!-- Time slots -->
+    <SolidColorBrush x:Key="C1Scheduler_WorkHourBorder_Brush" Color="#FFa5bfe1" />
+    <SolidColorBrush x:Key="C1Scheduler_WorkHourLightBorder_Brush" Color="#FFe6edf7" />
+    <SolidColorBrush x:Key="C1Scheduler_FreeHour_Brush" Color="#FFe6edf7" />
+    <SolidColorBrush x:Key="C1Scheduler_FreeHourBorder_Brush" Color="#FFa5bfe1" />
+    <SolidColorBrush x:Key="C1Scheduler_FreeHourLightBorder_Brush" Color="#FFd5e1f1" />
+
+    <!-- Day header -->
+    <LinearGradientBrush x:Key="C1Scheduler_DayHeader_Brush" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#FFe7eff7" Offset="0" />
+        <GradientStop Color="#FFdbe8f4" Offset="0.5" />
+        <GradientStop Color="#FFbfd4ea" Offset="0.55" />
+        <GradientStop Color="#FFe5eef7" Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="C1Scheduler_DayHeader_HoverBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#FFe8eff7" Offset="0" />
+        <GradientStop Color="#FFe0e9f4" Offset="0.5" />
+        <GradientStop Color="#FFd5e2f1" Offset="0.55" />
+        <GradientStop Color="#FFdce7f3" Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- Week tabs in a month view -->
+    <LinearGradientBrush x:Key="C1Scheduler_WeekTab_Brush" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#FFe4ecf6" Offset="0" />
+        <GradientStop Color="#FFd5e1f1" Offset="0.5" />
+        <GradientStop Color="#FFc3d5ec" Offset="0.55" />
+        <GradientStop Color="#FFd0ddef" Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="C1Scheduler_WeekTab_HoverBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#FFe4ebf6" Offset="0" />
+        <GradientStop Color="#FFdce6f3" Offset="0.5" />
+        <GradientStop Color="#FFd2e0f0" Offset="0.55" />
+        <GradientStop Color="#FFd9e3f2" Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- Selected day background in a month view -->
+    <SolidColorBrush x:Key="C1Scheduler_Selected_Brush" Color="#FFe6edf7" />
+
+    <!-- Alternate month day background (used in a month view) -->
+    <SolidColorBrush x:Key="C1Scheduler_AlternateMonthDay_Brush" Color="#54a1bfdf" />
+
+    <!-- determines the style used for displaying time slots in a Day view.
+         Copy it into every theme, as using DynamicResource here affects performance -->
+    <c1sched:TimeSlotStyleSelector x:Key="TimeSlotStyleSelector">
+        <!-- Don't use selection states. With selection states multiple selection works incorrectly. -->
+        <c1sched:TimeSlotStyleSelector.Resources>
+            <ResourceDictionary>
+                <Style x:Key="C1Scheduler_WorkSlot_Style" TargetType="c1sched:VisualIntervalPresenter">
+                    <Setter Property="BorderBrush" Value="{StaticResource C1Scheduler_WorkHourLightBorder_Brush}" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="c1sched:VisualIntervalPresenter">
+                                <Grid>
+                                    <Border Background="{Binding Path=Scheduler.AlternatingBackground}" IsHitTestVisible="False" BorderThickness="0,1,0,0" BorderBrush="{TemplateBinding BorderBrush}">
+                                        <Rectangle Fill="{Binding Tag, RelativeSource={RelativeSource AncestorType={x:Type c1sched:VisualIntervalsPresenter}}}" Visibility="{Binding IsSelected, Converter={x:Static c1sched:BooleanToVisibilityConverter.Default}}" />
+                                    </Border>
+                                    <ContentPresenter Content="{TemplateBinding Content}" Margin="0,1,0,0" ContentTemplate="{TemplateBinding ContentTemplate}" />
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+
+                <Style x:Key="C1Scheduler_TopWorkSlot_Style" BasedOn="{StaticResource C1Scheduler_WorkSlot_Style}" TargetType="c1sched:VisualIntervalPresenter">
+                    <Setter Property="BorderBrush" Value="{StaticResource C1Scheduler_WorkHourBorder_Brush}" />
+                </Style>
+
+                <Style x:Key="C1Scheduler_FreeSlot_Style" TargetType="c1sched:VisualIntervalPresenter">
+                    <Setter Property="BorderBrush" Value="{StaticResource C1Scheduler_FreeHourLightBorder_Brush}" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="c1sched:VisualIntervalPresenter">
+                                <Grid>
+                                    <Border Background="{StaticResource C1Scheduler_FreeHour_Brush}" BorderThickness="0,1,0,0" IsHitTestVisible="False" BorderBrush="{TemplateBinding BorderBrush}">
+                                        <Rectangle Fill="{Binding Tag, RelativeSource={RelativeSource AncestorType={x:Type c1sched:VisualIntervalsPresenter}}}" Visibility="{Binding IsSelected, Converter={x:Static c1sched:BooleanToVisibilityConverter.Default}}" />
+                                    </Border>
+                                    <ContentPresenter Content="{TemplateBinding Content}" Margin="0,1,0,0" ContentTemplate="{TemplateBinding ContentTemplate}" />
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+
+                <Style x:Key="C1Scheduler_TopFreeSlot_Style" BasedOn="{StaticResource C1Scheduler_FreeSlot_Style}" TargetType="c1sched:VisualIntervalPresenter">
+                    <Setter Property="BorderBrush" Value="{StaticResource C1Scheduler_FreeHourBorder_Brush}" />
+                </Style>
+
+            </ResourceDictionary>
+        </c1sched:TimeSlotStyleSelector.Resources>
+    </c1sched:TimeSlotStyleSelector>
+
+    <!-- Determines the style used for displaying time slots in the TimeLine view availability status line.
+         Copy it into every theme, as using DynamicResource here affects performance -->
+    <c1sched:TimeSlotStyleSelector x:Key="AvailabilityStatusStyleSelector">
+        <c1sched:TimeSlotStyleSelector.Resources>
+            <ResourceDictionary>
+                <Style x:Key="C1Scheduler_WorkSlot_Style" TargetType="c1sched:VisualIntervalPresenter">
+                    <Setter Property="BorderBrush" Value="{StaticResource C1Scheduler_WorkHourLightBorder_Brush}" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="c1sched:VisualIntervalPresenter">
+                                <!-- Background="{Binding Path=Scheduler.AlternatingBackground}"-->
+                                <Border x:Name="IntervalBorder" IsHitTestVisible="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderThickness="1,0,0,0" BorderBrush="{TemplateBinding BorderBrush}">
+                                    <Rectangle Fill="{Binding Path=TotalStatusBrush}" Margin="-1,7,0,7" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+
+                <Style x:Key="C1Scheduler_TopWorkSlot_Style" BasedOn="{StaticResource C1Scheduler_WorkSlot_Style}" TargetType="c1sched:VisualIntervalPresenter">
+                    <Setter Property="BorderBrush" Value="{StaticResource C1Scheduler_WorkHourBorder_Brush}" />
+                </Style>
+
+                <Style x:Key="C1Scheduler_FreeSlot_Style" BasedOn="{StaticResource C1Scheduler_WorkSlot_Style}" TargetType="c1sched:VisualIntervalPresenter">
+                    <Setter Property="BorderBrush" Value="{StaticResource C1Scheduler_FreeHourLightBorder_Brush}" />
+                </Style>
+
+                <Style x:Key="C1Scheduler_TopFreeSlot_Style" BasedOn="{StaticResource C1Scheduler_WorkSlot_Style}" TargetType="c1sched:VisualIntervalPresenter">
+                    <Setter Property="BorderBrush" Value="{StaticResource C1Scheduler_FreeHourBorder_Brush}" />
+                </Style>
+            </ResourceDictionary>
+        </c1sched:TimeSlotStyleSelector.Resources>
+    </c1sched:TimeSlotStyleSelector>
+
+    <!-- Determines the style used for displaying time slots in the TimeLine view.
+         Copy it into every theme, as using DynamicResource here affects performance -->
+    <c1sched:TimeSlotStyleSelector x:Key="HorizontalTimeSlotStyleSelector">
+        <c1sched:TimeSlotStyleSelector.Resources>
+            <ResourceDictionary>
+                <Style x:Key="C1Scheduler_WorkSlot_Style" TargetType="c1sched:VisualIntervalPresenter">
+                    <Setter Property="BorderBrush" Value="{StaticResource C1Scheduler_WorkHourLightBorder_Brush}" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="c1sched:VisualIntervalPresenter">
+                                <Grid>
+                                    <Border x:Name="IntervalBorder" IsHitTestVisible="False" Background="{Binding Path=Scheduler.AlternatingBackground}" BorderThickness="1,0,0,0" BorderBrush="{TemplateBinding BorderBrush}">
+                                        <Rectangle Fill="{Binding Tag, RelativeSource={RelativeSource AncestorType={x:Type c1sched:VisualIntervalsPresenter}}}" Visibility="{Binding IsSelected, Converter={x:Static c1sched:BooleanToVisibilityConverter.Default}}" />
+                                    </Border>
+                                    <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Margin="1,0,0,0" />
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+
+                <Style x:Key="C1Scheduler_TopWorkSlot_Style" BasedOn="{StaticResource C1Scheduler_WorkSlot_Style}" TargetType="c1sched:VisualIntervalPresenter">
+                    <Setter Property="BorderBrush" Value="{StaticResource C1Scheduler_WorkHourBorder_Brush}" />
+                </Style>
+
+                <Style x:Key="C1Scheduler_FreeSlot_Style" TargetType="c1sched:VisualIntervalPresenter">
+                    <Setter Property="BorderBrush" Value="{StaticResource C1Scheduler_FreeHourLightBorder_Brush}" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="c1sched:VisualIntervalPresenter">
+                                <Grid>
+                                    <Border x:Name="IntervalBorder" IsHitTestVisible="False" Background="{StaticResource C1Scheduler_FreeHour_Brush}" BorderThickness="1,0,0,0" BorderBrush="{TemplateBinding BorderBrush}">
+                                        <Rectangle Fill="{Binding Tag, RelativeSource={RelativeSource AncestorType={x:Type c1sched:VisualIntervalsPresenter}}}" Visibility="{Binding IsSelected, Converter={x:Static c1sched:BooleanToVisibilityConverter.Default}}" />
+                                    </Border>
+                                    <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Margin="1,0,0,0" />
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+
+                <Style x:Key="C1Scheduler_TopFreeSlot_Style" BasedOn="{StaticResource C1Scheduler_FreeSlot_Style}" TargetType="c1sched:VisualIntervalPresenter">
+                    <Setter Property="BorderBrush" Value="{StaticResource C1Scheduler_FreeHourBorder_Brush}" />
+                </Style>
+            </ResourceDictionary>
+        </c1sched:TimeSlotStyleSelector.Resources>
+    </c1sched:TimeSlotStyleSelector>
+
+</ResourceDictionary>

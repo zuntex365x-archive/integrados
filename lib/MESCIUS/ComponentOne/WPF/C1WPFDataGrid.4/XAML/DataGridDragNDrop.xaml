@@ -1,0 +1,75 @@
+﻿	  
+	   
+    
+		
+
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c1="clr-namespace:C1.WPF;assembly=C1.WPF.4">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/C1.WPF.4;component/themes/Common.xaml" />
+        <ResourceDictionary Source="/C1.WPF.DataGrid.4;component/themes/Common.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--******************** Drag&Drop ********************-->
+
+    <!-- CornerRadius @ DataGridColumnHeaderPresenter -->
+    <CornerRadius x:Key="DataGridColumnHeaderPresenterCornerRadius">0</CornerRadius>
+    
+    <!-- Brush @ C1DataGrid DragNDropSelected Background -->
+    
+    
+    <LinearGradientBrush x:Key="DataGridDragNDropSelectedBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFA6D9E7" Offset="0" />
+        <GradientStop Color="#FFA6D9E7" Offset="0.5" />
+        <GradientStop Color="#FF93D1E2" Offset="0.5" />
+        <GradientStop Color="#FF7BC7DC" Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- ContentControl @ C1DataGrid HeaderColumn DragNDrop Selected -->
+    <Style x:Key="DataGridDragNDropSelectedHeaderStyle" TargetType="ContentControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContentControl">
+                    <Grid>
+                        <c1:C1BrushBuilder x:Name="BackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource DataGridDragNDropSelectedBackground}" DesignColor="{StaticResource SelectedColor}" />
+                        <Border Background="{Binding Output, ElementName=BackgroundBrush}" BorderBrush="{TemplateBinding Background}" BorderThickness="{StaticResource DataGridBorderThickness}" CornerRadius="{StaticResource DataGridColumnHeaderPresenterCornerRadius}" Opacity="0.7" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- ContentControl @ C1DataGrid HeaderColumn DragNDrop Moving -->
+    <Style x:Key="DataGridDragNDropMovingHeader" TargetType="ContentControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContentControl">
+                    <Grid>
+                        <c1:C1BrushBuilder x:Name="BackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource DataGridDragNDropSelectedBackground}" DesignColor="{StaticResource SelectedColor}" />
+                        <Border Background="{Binding Output, ElementName=BackgroundBrush}" BorderBrush="{TemplateBinding Background}" BorderThickness="{StaticResource DataGridBorderThickness}" CornerRadius="{StaticResource DataGridColumnHeaderPresenterCornerRadius}" Opacity="0.7" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Style @ C1DataGrid DragNDrop Indicator Element -->
+    <Style x:Key="DataGridDragNDropIndicatorBorderStyle" TargetType="Border">
+        <Setter Property="CornerRadius" Value="1" />
+        <Setter Property="Width" Value="2" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+    </Style>
+
+    <!-- DataGridDragNDropDropIndicator Style -->
+    <Style x:Key="DataGridDragNDropDropIndicator" TargetType="ContentControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContentControl">
+                    <Grid>
+                        <c1:C1BrushBuilder x:Name="BackgroundBrush" Input="{TemplateBinding Background}" DesignBrush="{StaticResource SelectedBackground}" DesignColor="{StaticResource SelectedColor}" />
+                        <Border Background="{Binding Output, ElementName=BackgroundBrush}" Style="{StaticResource DataGridDragNDropIndicatorBorderStyle}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

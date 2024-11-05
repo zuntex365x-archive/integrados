@@ -1,0 +1,1046 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+	xmlns:c1InputPanel="clr-namespace:C1.WPF.InputPanel" 
+    xmlns:system="clr-namespace:System;assembly=mscorlib"   
+    xmlns:c1InputPanel_Resources="clr-namespace:C1.Silverlight.InputPanel.Resources"
+    >
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/C1.WPF.4;component/themes/Common.xaml" />
+        <ResourceDictionary Source="/C1.WPF.4;component/themes/C1Button.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <c1InputPanel_Resources:C1_Silverlight_InputPanel x:Key="Resources" />
+
+    <SolidColorBrush x:Key="ValidationBorderBrush" Color="Transparent" />
+    <LinearGradientBrush x:Key="ValidationBackgroundBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#4C888888" Offset="0" />
+        <GradientStop Color="#FFB5B5B5" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ControlOuterBorder" Color="#B2000000" />
+    
+    <SolidColorBrush x:Key="HeaderForegroundBrush" Color="White" />
+    <SolidColorBrush x:Key="InputPanelBackgroundBrush" Color="White"/>
+    <LinearGradientBrush x:Key="HeaderBackgroundBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FF5B5B5B" Offset="1" />
+        <GradientStop Color="#FF868686" />
+        <GradientStop Color="#FF4F4F4F" Offset="0.45" />
+        <GradientStop Color="#FF0E0E0E" Offset="0.55" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="FooterBackgroundBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="White" Offset="0" />
+        <GradientStop Color="#FFCDCDCD" Offset="1" />
+        <GradientStop Color="#FFCECECE" Offset="0.45" />
+        <GradientStop Color="#FFAFAFAF" Offset="0.55" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="NavigationBackgroundBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="White" Offset="0" />
+        <GradientStop Color="#FFCDCDCD" Offset="1" />
+        <GradientStop Color="#FFCECECE" Offset="0.45" />
+        <GradientStop Color="#FFAFAFAF" Offset="0.55" />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="ReadOnlyBackground" Color="#FFF4F4F4" />
+    <SolidColorBrush x:Key="InputPanelLabelForegroundBrush" Color="{StaticResource ForegroundTextBoxColor}" />
+
+    <Style x:Key="BaseBorder" TargetType="Border">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+    </Style>
+
+    <Style x:Key="BodyBorder" TargetType="Border" BasedOn="{StaticResource BaseBorder}">
+    </Style>
+   
+    <Style x:Key="FooterBorder" TargetType="Border" BasedOn="{StaticResource BaseBorder}">
+        <Setter Property="Background" Value="{StaticResource WpfInputBaseBrush}" />
+    </Style>
+
+    <Style x:Key="IconEditor" TargetType="Path">
+        <Setter Property="Stretch" Value="Fill" />
+        <Setter Property="Width" Value="12"/>
+        <Setter Property="Height" Value="14"/>
+        <Setter Property="RenderTransformOrigin" Value="0.5,0.5" />
+    </Style>
+
+    <Style x:Key="NavigationPath" TargetType="Path">
+        <Setter Property="Stretch" Value="Fill"/>
+        <Setter Property="Width" Value="10"/>
+        <Setter Property="Height" Value="14"/>
+    </Style>
+
+    <!-- Style C1InputPanelValidationSummary -->
+    <Style TargetType="c1InputPanel:C1InputPanelValidationSummary">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1InputPanel:C1InputPanelValidationSummary">
+                    <Border BorderThickness="0 1 0 0" BorderBrush="{StaticResource ValidationBorderBrush}" Background="{TemplateBinding Background}" Height="{TemplateBinding FrameworkElement.Height}">
+                        <ItemsControl IsTabStop="False" ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Errors}">
+                            <ItemsControl.Style>
+                                <Style TargetType="{x:Type ItemsControl}">
+                                    <Setter Property="Control.Template">
+                                        <Setter.Value>
+                                            <ControlTemplate>
+                                                <ScrollViewer Name="ScrollViewer" IsTabStop="False" BorderBrush="{StaticResource ControlOuterBorder}" BorderThickness="0 0 0 1" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                                                    <ItemsPresenter />
+                                                </ScrollViewer>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="ItemsControl.ItemTemplate">
+                                        <Setter.Value>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Foreground="{Binding Path=ValidationHeaderForeground, RelativeSource={RelativeSource AncestorType={x:Type c1InputPanel:C1InputPanel}}}" Margin="5 5 0 5" TextBlock.FontWeight="Bold" Text="{Binding ErrorInputName}" />
+                                                    <TextBlock Foreground="{Binding Path=ValidationHeaderForeground, RelativeSource={RelativeSource AncestorType={x:Type c1InputPanel:C1InputPanel}}}" TextBlock.FontWeight="Bold" Text=":" Margin="0 5 0 0" />
+                                                    <TextBlock Foreground="{Binding Path=ValidationContentForeground, RelativeSource={RelativeSource AncestorType={x:Type c1InputPanel:C1InputPanel}}}" Margin="5 5 0 5" Text="{Binding ErrorContent}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="FrameworkElement.MaxHeight" Value="75" />
+                                </Style>
+                            </ItemsControl.Style>
+                        </ItemsControl>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate x:Key="InputPanelTemplate" TargetType="{x:Type c1InputPanel:C1InputPanel}">
+        <Border x:Name="Root" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled" />
+                    <VisualState x:Name="MouseOver" />
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="FocusStates">
+                    <VisualState x:Name="Unfocused" />
+                    <VisualState x:Name="Focused" />
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="ReadOnlyState">
+                    <VisualState x:Name="ActionButtonsHidden">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Add" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <Visibility>Collapsed</Visibility>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Delete" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <Visibility>Collapsed</Visibility>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Commit" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <Visibility>Collapsed</Visibility>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Cancel" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <Visibility>Collapsed</Visibility>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="ActionButtonsShown">
+                        <Storyboard/>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="NavigationVisibilityState">
+                    <VisualState x:Name="NavigationHidden">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Navigation" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <Visibility>Collapsed</Visibility>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="NavigationShown">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Navigation" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <Visibility>Visible</Visibility>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="AddButtonVisibilityState">
+                    <VisualState x:Name="AddButtonHidden">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Add" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <Visibility>Collapsed</Visibility>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="AddButtonShown">
+                        <Storyboard>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="DeleteButtonVisibilityState">
+                    <VisualState x:Name="DeleteButtonHidden">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Delete" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <Visibility>Collapsed</Visibility>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="DeleteButtonShown">
+                        <Storyboard>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="AddButtonEnableState">
+                    <VisualState x:Name="AddButtonNormal">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="Add" Storyboard.TargetProperty="Opacity" To="1.0" Duration="0:0:0.001"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="AddButtonDisable">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="Add" Storyboard.TargetProperty="Opacity" To="0.4" Duration="0:0:0.001"/>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="DeleteButtonEnableState">
+                    <VisualState x:Name="DeleteButtonNormal">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="Delete" Storyboard.TargetProperty="Opacity" To="1.0" Duration="0:0:0.001"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="DeleteButtonDisable">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="Delete" Storyboard.TargetProperty="Opacity" To="0.4" Duration="0:0:0.001"/>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Grid x:Name="InputPanelGrid" Background="{TemplateBinding Background}">
+                <Grid.RowDefinitions>
+                    <RowDefinition RowDefinition.Height="Auto" />
+                    <RowDefinition RowDefinition.Height="Auto" />
+                    <RowDefinition RowDefinition.Height="*" />
+                    <RowDefinition RowDefinition.Height="Auto" />
+                    <RowDefinition RowDefinition.Height="Auto" />
+                </Grid.RowDefinitions>
+                <!-- Header -->
+                <Border x:Name="Header" Background="{TemplateBinding HeaderBackground}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
+                                    CornerRadius="{StaticResource GeneralCornerRadius}" Grid.Row="0" Padding="{TemplateBinding HeaderPadding}">
+                    <ContentControl IsTabStop="False" Content="{TemplateBinding Header}" ContentTemplate="{TemplateBinding HeaderTemplate}"
+                                            Foreground="{TemplateBinding HeaderForeground}" 
+                                            HorizontalAlignment="{TemplateBinding HorizontalHeaderAlignment}" 
+                                            VerticalAlignment="{TemplateBinding VerticalHeaderAlignment}" 
+                                            FontFamily="{TemplateBinding HeaderFontFamily}" FontSize="{TemplateBinding HeaderFontSize}" 
+                                            FontStretch="{TemplateBinding HeaderFontStretch}" 
+                                            FontStyle="{TemplateBinding HeaderFontStyle}" FontWeight="{TemplateBinding HeaderFontWeight}"/>
+                </Border>
+                <!-- Navigation -->
+                <Border x:Name="Navigation" Grid.Row="1" Background="{TemplateBinding NavigationBackground}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <c1InputPanel:C1DataPager x:Name="DataPager" Background="{TemplateBinding NavigationBackground}" Foreground="{TemplateBinding Foreground}" LabelForeground="{TemplateBinding LabelForeground}" HorizontalAlignment="Left" Visibility="{TemplateBinding DataPagerVisibility}" 
+                                                              DisplayMode="{TemplateBinding DisplayMode}" NumericButtonStyle="{TemplateBinding NavigationButtonStyle}"
+                                                  MouseOverBrush="{TemplateBinding MouseOverBrush}" PressedBrush="{TemplateBinding PressedBrush}" FocusBrush="{TemplateBinding FocusBrush}"
+                                                  CornerRadius="{TemplateBinding CornerRadius}" ButtonBackground="{TemplateBinding ButtonBackground}" ButtonForeground="{TemplateBinding ButtonForeground}"></c1InputPanel:C1DataPager>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Button x:Name="Add" Width="20" Height="20" Padding="2" Margin="4" Background="{TemplateBinding ButtonBackground}" Foreground="{TemplateBinding ButtonForeground}" 
+                                    c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" 
+                                    c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" c1:ClearStyleExtensions.CornerRadius="{TemplateBinding CornerRadius}" 
+                                    Command="c1InputPanel:C1InputPanel.AddNewItemCommand" ToolTipService.ToolTip="{Binding Add, Source={StaticResource Resources}}" Style="{StaticResource ClearStyleButtonStyle}">
+                                <Button.Content>
+                                    <Path Style="{StaticResource IconEditor}" Fill="{Binding Foreground, ElementName=Add}" Data="M5.03406,4 C4.48177,4 4.03406,4.44771 4.03406,5 L4.03406,30 L22.0341,30 C23.691,30 25.0341,31.3431 25.0341,33 L25.0341,51 L40.0341,51 C40.5864,51 41.0341,50.5523 41.0341,50 L41.0341,5 C41.0341,4.44771 40.5864,4 40.0341,4 z M3.03405,0 L42.0341,0 C43.691,0 45.0341,1.34315 45.0341,3 L45.0341,52 C45.0341,53.6569 43.691,55 42.0341,55 L24.3462,55 L24.2756,55.0173 C23.6721,55.1342 23.0234,54.9591 22.5561,54.4919 L0.560514,32.4962 C0.140012,32.0757 -0.043883,31.5082 0.008798,30.959 L0.034053,30.7842 L0.034055,3 C0.034056,1.34315 1.3772,0 3.03405,0 z" />
+                                </Button.Content>
+                            </Button>
+                            <Button x:Name="Delete" Width="20" Height="20" Padding="2" Margin="4" Background="{TemplateBinding ButtonBackground}" Foreground="{TemplateBinding ButtonForeground}" 
+                                    c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" 
+                                    c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" c1:ClearStyleExtensions.CornerRadius="{TemplateBinding CornerRadius}" 
+                                    Command="c1InputPanel:C1InputPanel.DeleteCurrentItemCommand" ToolTipService.ToolTip="{Binding Delete, Source={StaticResource Resources}}" Style="{StaticResource ClearStyleButtonStyle}">
+                                <Button.Content>
+                                    <Path Style="{StaticResource IconEditor}" Fill="{Binding Foreground, ElementName=Delete}" Data="M4,15 L9,15 L9,46.1104 C9,46.6627 9.44771,47.1104 10,47.1104 L15,47.1104 L15,15 L20,15 L20,47.1104 L26,47.1104 L26,15 L31,15 L31,47.1104 L36,47.1104 C36.5523,47.1104 37,46.6627 37,46.1104 L37,15 L42,15 L42,49 C42,50.6569 40.6569,52 39,52 L7,52 C5.34315,52 4,50.6569 4,49 z M13,0 L33,0 C34.6569,0 36,1.34315 36,3 L36,5 L43,5 C44.6569,5 46,6.34315 46,8 C46,9.65685 44.6569,11 43,11 L3,11 C1.34315,11 0,9.65685 0,8 C0,6.34315 1.34315,5 3,5 L10,5 L10,3 C10,1.34315 11.3431,0 13,0 z"/>
+                                </Button.Content>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <!-- Body -->
+                <Border x:Name="Body" Grid.Row="2" Style="{StaticResource BodyBorder}">
+                    <ScrollViewer x:Name="itemsScrollViewer" IsTabStop="False" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                        <StackPanel Orientation="Vertical">
+                            <c1InputPanel:C1InputPanelPresenter x:Name="Presenter" LabelForeground="{TemplateBinding LabelForeground}" ItemsPanelTemplate="{TemplateBinding ItemsPanelTemplate}" c1InputPanel:C1InputPanelPresenter.AutoGenerate="{Binding AutoGenerate, RelativeSource={RelativeSource TemplatedParent}}" />
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+                <!-- Validation -->
+                <c1InputPanel:C1InputPanelValidationSummary x:Name="Validation" Grid.Row="3" Background="{TemplateBinding ValidationBackground}"></c1InputPanel:C1InputPanelValidationSummary>
+                <!-- Footer -->
+                <Border x:Name="Footer" Grid.Row="4" Style="{TemplateBinding FooterBorderStyle}">
+                    <StackPanel x:Name="FooterPanel" Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button x:Name="Commit" Margin="4" MinWidth="60" Background="{TemplateBinding ButtonBackground}" 
+                                            Foreground="{TemplateBinding ButtonForeground}" Style="{StaticResource ClearStyleButtonStyle}" 
+                                            c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" 
+                                            c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" 
+                                            c1:ClearStyleExtensions.CornerRadius="{TemplateBinding CornerRadius}" Content="{Binding OK, Source={StaticResource Resources}}" 
+                                            Command="c1InputPanel:C1InputPanel.CommitCommand" FontFamily="{TemplateBinding FontFamily}" 
+                                            FontSize="{TemplateBinding FontSize}" FontStretch="{TemplateBinding FontStretch}" 
+                                            FontWeight="{TemplateBinding FontWeight}"/>
+                        <Button x:Name="Cancel" Margin="4" MinWidth="60" Background="{TemplateBinding ButtonBackground}" 
+                                            Foreground="{TemplateBinding ButtonForeground}" Style="{StaticResource ClearStyleButtonStyle}"
+                                            c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" 
+                                            c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" 
+                                            c1:ClearStyleExtensions.CornerRadius="{TemplateBinding CornerRadius}" Content="{Binding Cancel, Source={StaticResource Resources}}" 
+                                            Command="c1InputPanel:C1InputPanel.CancelCommand" FontFamily="{TemplateBinding FontFamily}" 
+                                            FontSize="{TemplateBinding FontSize}" FontStretch="{TemplateBinding FontStretch}" 
+                                            FontWeight="{TemplateBinding FontWeight}"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Border>
+    </ControlTemplate>
+
+    <!-- Style C1InputPanel -->
+    <Style TargetType="{x:Type c1InputPanel:C1InputPanel}">       
+        <Setter Property="Background" Value="{StaticResource InputPanelBackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource ForegroundTextBoxBrushColor}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource WpfInputBorderBrush}"/>      
+        <Setter Property="HeaderBackground" Value="{StaticResource HeaderBackgroundBrush}" />
+        <Setter Property="HeaderForeground" Value="{StaticResource HeaderForegroundBrush}" />     
+        <Setter Property="NavigationBackground" Value="{StaticResource NavigationBackgroundBrush}" />
+        <Setter Property="ValidationHeaderForeground" Value="#FFFF0000"/>
+        <Setter Property="ValidationContentForeground" Value="{StaticResource ForegroundTextBoxBrushColor}"/>      
+        <Setter Property="ValidationBackground" Value="{StaticResource ValidationBackgroundBrush}"/>
+        <Setter Property="FooterBorderStyle" Value="{StaticResource FooterBorder}"/>      
+        <Setter Property="HeaderFontSize" Value="14" />
+        <Setter Property="HeaderFontWeight" Value="Bold" />
+        <Setter Property="LabelForeground" Value="{StaticResource InputPanelLabelForegroundBrush}" />
+        <Setter Property="MouseOverBrush" Value="{StaticResource WpfInputMouseOverBrush}" />
+        <Setter Property="PressedBrush" Value="{StaticResource WpfInputSelectedBackground}" />
+        <Setter Property="FocusBrush" Value="{StaticResource WpfInputFocusBrush}" />
+        <Setter Property="ButtonBackground" Value="{StaticResource WpfInputBaseBrush}"/>
+        <Setter Property="ButtonForeground" Value="{StaticResource ForegroundBrushColor}" />
+        <Setter Property="CornerRadius" Value="{StaticResource GeneralCornerRadius}"/>
+        <Setter Property="NavigationButtonStyle" Value="{StaticResource ClearStyleButtonStyle}"/>
+        <Setter Property="ItemsPanelTemplate">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel Orientation="Vertical" Grid.IsSharedSizeScope="True" />
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>       
+        <Setter Property="MinWidth" Value="300" />
+        <Setter Property="Template" Value="{StaticResource InputPanelTemplate}"/>
+    </Style>
+
+    <!-- Style C1InputPanelPresenter -->
+    <Style TargetType="{x:Type c1InputPanel:C1InputPanelPresenter}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type c1InputPanel:C1InputPanelPresenter}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="GenerateStates">
+                                <VisualState x:Name="Auto">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Items" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Customized">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Items" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid>
+                            <ItemsControl x:Name="Items" IsTabStop="False" ItemsPanel="{TemplateBinding ItemsPanelTemplate}" ItemsSource="{TemplateBinding c1InputPanel:C1InputPanelPresenter.InputControls}"/>
+                            <ContentPresenter x:Name="Content" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Style C1InputBase -->
+    <Style x:Key="C1InputBaseStyle" TargetType="{x:Type c1InputPanel:C1InputBase}">
+        <Setter Property="Padding" Value="4" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="LabelForeground" Value="{StaticResource ForegroundTextBoxBrushColor}"/>
+        <Setter Property="MouseOverBrush" Value="{StaticResource WpfInputMouseOverBrush}" />
+        <Setter Property="PressedBrush" Value="{StaticResource WpfInputSelectedBackground}" />
+        <Setter Property="FocusBrush" Value="{StaticResource WpfInputFocusBrush}" />
+        <Setter Property="CornerRadius" Value="{StaticResource GeneralCornerRadius}"/>
+        <Setter Property="ButtonBackground" Value="{StaticResource WpfInputBaseBrush}"/>
+        <Setter Property="ButtonForeground" Value="{StaticResource ForegroundBrushColor}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type c1InputPanel:C1InputBase}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="ReadOnlyStates">
+                                <VisualState x:Name="ReadOnlyState">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ReadOnlyBackground}">
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="EditableState">
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid Margin="{TemplateBinding Padding}" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition SharedSizeGroup="HeaderColumn" MinWidth="120" />
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="10" />
+                            </Grid.ColumnDefinitions>
+                            <ContentControl x:Name="Header" Grid.Column="0" IsTabStop="False" Content="{TemplateBinding Header}" Margin="5 0" VerticalAlignment="{TemplateBinding VerticalAlignment}" Foreground="{TemplateBinding LabelForeground}" />
+                            <Border x:Name="Content" Grid.Column="1" VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                                <ContentPresenter></ContentPresenter>
+                            </Border>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Style C1InputBase -->
+    <Style TargetType="{x:Type c1InputPanel:C1InputBase}" BasedOn="{StaticResource C1InputBaseStyle}">
+    </Style>
+
+    <!-- Style C1InputTextBox -->
+    <Style TargetType="{x:Type c1InputPanel:C1InputTextBox}" BasedOn="{StaticResource C1InputBaseStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type c1InputPanel:C1InputTextBox}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="ReadOnlyStates">
+                                <VisualState x:Name="ReadOnlyState">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ReadOnlyBackground}">
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="EditableState">
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid Margin="{TemplateBinding Padding}" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition SharedSizeGroup="HeaderColumn" MinWidth="120" />
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="10" />
+                            </Grid.ColumnDefinitions>
+                            <ContentControl x:Name="Header" Grid.Column="0" IsTabStop="False" Content="{TemplateBinding Header}" Margin="5 0" VerticalAlignment="{TemplateBinding VerticalAlignment}" Foreground="{TemplateBinding LabelForeground}" />
+                            <c1:C1TextBoxBase x:Name="Content" Grid.Column="1" VerticalAlignment="{TemplateBinding VerticalAlignment}" Validation.ErrorTemplate="{x:Null}" Foreground="{TemplateBinding Foreground}" 
+                                              MouseOverBrush="{TemplateBinding MouseOverBrush}" FocusBrush="{TemplateBinding FocusBrush}" CornerRadius="{TemplateBinding CornerRadius}"
+                                              TextWrapping="{TemplateBinding TextWrapping}"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Style C1InputComboBox -->
+    <Style TargetType="{x:Type c1InputPanel:C1InputComboBox}" BasedOn="{StaticResource C1InputBaseStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type c1InputPanel:C1InputComboBox}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="ReadOnlyStates">
+                                <VisualState x:Name="ReadOnlyState">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="C1Content" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ReadOnlyBackground}">
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="EditableState">
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid Margin="{TemplateBinding Padding}" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition SharedSizeGroup="HeaderColumn" MinWidth="120" />
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="10" />
+                            </Grid.ColumnDefinitions>
+                            <ContentControl x:Name="Header" Grid.Column="0" IsTabStop="False" Content="{TemplateBinding Header}" Margin="5 0" VerticalAlignment="{TemplateBinding VerticalAlignment}" Foreground="{TemplateBinding LabelForeground}" />
+                            <c1:C1ComboBox x:Name="C1Content" Grid.Column="1" VerticalAlignment="{TemplateBinding VerticalAlignment}" Foreground="{TemplateBinding Foreground}" 
+                                           MouseOverBrush="{TemplateBinding MouseOverBrush}" PressedBrush="{TemplateBinding PressedBrush}" FocusBrush="{TemplateBinding FocusBrush}"
+                                           CornerRadius="{TemplateBinding CornerRadius}" ButtonBackground="{TemplateBinding ButtonBackground}" ButtonForeground="{TemplateBinding ButtonForeground}"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Style C1InputNumericBox -->
+    <Style TargetType="{x:Type c1InputPanel:C1InputNumericBox}" BasedOn="{StaticResource C1InputBaseStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type c1InputPanel:C1InputNumericBox}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="ReadOnlyStates">
+                                <VisualState x:Name="ReadOnlyState">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ReadOnlyBackground}">
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="EditableState">
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid Margin="{TemplateBinding Padding}" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition SharedSizeGroup="HeaderColumn" MinWidth="120" />
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="10" />
+                            </Grid.ColumnDefinitions>
+                            <ContentControl x:Name="Header" Grid.Column="0" IsTabStop="False" Content="{TemplateBinding Header}" Margin="5 0" VerticalAlignment="{TemplateBinding VerticalAlignment}" Foreground="{TemplateBinding LabelForeground}" />
+                            <c1:C1NumericBox x:Name="Content" Grid.Column="1" VerticalAlignment="{TemplateBinding VerticalAlignment}" Foreground="{TemplateBinding Foreground}"
+                                             MouseOverBrush="{TemplateBinding MouseOverBrush}" PressedBrush="{TemplateBinding PressedBrush}" FocusBrush="{TemplateBinding FocusBrush}"
+                                             CornerRadius="{TemplateBinding CornerRadius}" ButtonBackground="{TemplateBinding ButtonBackground}" ButtonForeground="{TemplateBinding ButtonForeground}"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Style C1InputMaskedTextBox -->
+    <Style TargetType="{x:Type c1InputPanel:C1InputMaskedTextBox}" BasedOn="{StaticResource C1InputBaseStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type c1InputPanel:C1InputMaskedTextBox}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="ReadOnlyStates">
+                                <VisualState x:Name="ReadOnlyState">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ReadOnlyBackground}">
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="EditableState">
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid Margin="{TemplateBinding Padding}" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition SharedSizeGroup="HeaderColumn" MinWidth="120" />
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="10" />
+                            </Grid.ColumnDefinitions>
+                            <ContentControl x:Name="Header" Grid.Column="0" IsTabStop="False" Content="{TemplateBinding Header}" Margin="5 0" VerticalAlignment="{TemplateBinding VerticalAlignment}" Foreground="{TemplateBinding LabelForeground}" />
+                            <c1:C1MaskedTextBox x:Name="Content" Grid.Column="1" VerticalAlignment="{TemplateBinding VerticalAlignment}" Validation.ErrorTemplate="{x:Null}" Foreground="{TemplateBinding Foreground}"
+                                                MouseOverBrush="{TemplateBinding MouseOverBrush}" FocusBrush="{TemplateBinding FocusBrush}" CornerRadius="{TemplateBinding CornerRadius}"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Style C1InputCheckBox -->
+    <Style TargetType="{x:Type c1InputPanel:C1InputCheckBox}" BasedOn="{StaticResource C1InputBaseStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type c1InputPanel:C1InputCheckBox}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="ReadOnlyStates">
+                                <VisualState x:Name="ReadOnlyState">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ReadOnlyBackground}">
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="EditableState">
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid Margin="{TemplateBinding Padding}" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition SharedSizeGroup="HeaderColumn" MinWidth="120" />
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="10" />
+                            </Grid.ColumnDefinitions>
+                            <ContentControl x:Name="Header" Grid.Column="0" IsTabStop="False" Content="{TemplateBinding Header}" Margin="5 0" VerticalAlignment="{TemplateBinding VerticalAlignment}" Foreground="{TemplateBinding LabelForeground}" />
+                            <CheckBox x:Name="Content" Grid.Column="1" VerticalAlignment="{TemplateBinding VerticalAlignment}" Validation.ErrorTemplate="{x:Null}" Foreground="{TemplateBinding Foreground}"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Style C1InputDateTimePicker -->
+    <Style TargetType="{x:Type c1InputPanel:C1InputDateTimePicker}" BasedOn="{StaticResource C1InputBaseStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type c1InputPanel:C1InputDateTimePicker}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="ReadOnlyStates">
+                                <VisualState x:Name="ReadOnlyState">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ReadOnlyBackground}">
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="EditableState">
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid Margin="{TemplateBinding Padding}" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition SharedSizeGroup="HeaderColumn" MinWidth="120" />
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="10" />
+                            </Grid.ColumnDefinitions>
+                            <ContentControl x:Name="Header" Grid.Column="0" IsTabStop="False" Content="{TemplateBinding Header}" Margin="5 0" VerticalAlignment="{TemplateBinding VerticalAlignment}" Foreground="{TemplateBinding LabelForeground}" />
+                            <c1:C1DateTimePicker x:Name="Content" Grid.Column="1" VerticalAlignment="{TemplateBinding VerticalAlignment}" Validation.ErrorTemplate="{x:Null}" Foreground="{TemplateBinding Foreground}"
+                                                 MouseOverBrush="{TemplateBinding MouseOverBrush}" PressedBrush="{TemplateBinding PressedBrush}" FocusBrush="{TemplateBinding FocusBrush}"
+                                                 CornerRadius="{TemplateBinding CornerRadius}" ButtonBackground="{TemplateBinding ButtonBackground}" ButtonForeground="{TemplateBinding ButtonForeground}"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="c1InputPanel:C1DataPager">
+        <Setter Property="Background" Value="{StaticResource NavigationBackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource WpfInputBorderBrush}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Right" />
+        <Setter Property="LabelForeground" Value="{StaticResource InputPanelLabelForegroundBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource ForegroundTextBoxBrushColor}" />
+        <Setter Property="MouseOverBrush" Value="{StaticResource WpfInputMouseOverBrush}" />
+        <Setter Property="ButtonBackground" Value="{StaticResource WpfInputBaseBrush}"/>
+        <Setter Property="ButtonForeground" Value="{StaticResource ForegroundBrushColor}" />
+        <Setter Property="Foreground" Value="{StaticResource ForegroundTextBoxBrushColor}" />
+        <Setter Property="NumericButtonStyle" Value="{StaticResource ClearStyleButtonStyle}"/>
+        <Setter Property="CornerRadius" Value="{StaticResource GeneralCornerRadius}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1InputPanel:C1DataPager">
+                    <Grid x:Name="Root" Background="Transparent">
+                        <VisualStateManager.VisualStateGroups>
+                            <!-- CommonStates -->
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="Prefix" Storyboard.TargetProperty="Opacity" To="0.5" Duration="0"/>
+                                        <DoubleAnimation Storyboard.TargetName="Suffix" Storyboard.TargetProperty="Opacity" To="0.5" Duration="0"/>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+
+                            <!-- CanItemStates -->
+                            <VisualStateGroup x:Name="MoveStates">
+                                <VisualState x:Name="MoveEnabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CurrentPage" Storyboard.TargetProperty="IsEnabled" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <system:Boolean>True</system:Boolean>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                            <!--<DiscreteObjectKeyFrame KeyTime="0" Value=""/>-->
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+
+                                <VisualState x:Name="MoveDisabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CurrentPage" Storyboard.TargetProperty="IsEnabled" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <system:Boolean>False</system:Boolean>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+
+                            <!-- CanPageFirstStates -->
+                            <VisualStateGroup x:Name="MoveFirstStates">
+                                <VisualState x:Name="MoveFirstEnabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="FirstItemButton" Storyboard.TargetProperty="IsEnabled" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <system:Boolean>True</system:Boolean>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimation Storyboard.TargetName="FirstItemButton" Storyboard.TargetProperty="Opacity" Duration="0" To="1"/>
+                                    </Storyboard>
+                                </VisualState>
+
+                                <VisualState x:Name="MoveFirstDisabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="FirstItemButton" Storyboard.TargetProperty="IsEnabled" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <system:Boolean>False</system:Boolean>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimation Storyboard.TargetName="FirstItemButton" Storyboard.TargetProperty="Opacity" Duration="0" To="0.4"/>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+
+                            <!-- CanPagePreviousStates -->
+                            <VisualStateGroup x:Name="MovePreviousStates">
+                                <VisualState x:Name="MovePreviousEnabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PreviousItemButton" Storyboard.TargetProperty="IsEnabled" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <system:Boolean>True</system:Boolean>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimation Storyboard.TargetName="PreviousItemButton" Storyboard.TargetProperty="Opacity" Duration="0" To="1"/>
+                                    </Storyboard>
+                                </VisualState>
+
+                                <VisualState x:Name="MovePreviousDisabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PreviousItemButton" Storyboard.TargetProperty="IsEnabled" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <system:Boolean>False</system:Boolean>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimation Storyboard.TargetName="PreviousItemButton" Storyboard.TargetProperty="Opacity" Duration="0" To="0.4"/>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+
+                            <!-- CanPageNextStates -->
+                            <VisualStateGroup x:Name="MoveNextStates">
+                                <VisualState x:Name="MoveNextEnabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="NextItemButton" Storyboard.TargetProperty="IsEnabled" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <system:Boolean>True</system:Boolean>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimation Storyboard.TargetName="NextItemButton" Storyboard.TargetProperty="Opacity" Duration="0" To="1"/>
+                                    </Storyboard>
+                                </VisualState>
+
+                                <VisualState x:Name="MoveNextDisabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="NextItemButton" Storyboard.TargetProperty="IsEnabled" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <system:Boolean>False</system:Boolean>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimation Storyboard.TargetName="NextItemButton" Storyboard.TargetProperty="Opacity" Duration="0" To="0.4"/>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+
+                            <!-- CanPageLastStates -->
+                            <VisualStateGroup x:Name="MoveLastStates">
+                                <VisualState x:Name="MoveLastEnabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LastItemButton" Storyboard.TargetProperty="IsEnabled" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <system:Boolean>True</system:Boolean>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimation Storyboard.TargetName="LastItemButton" Storyboard.TargetProperty="Opacity" Duration="0:0:0.001" To="1"/>
+                                    </Storyboard>
+                                </VisualState>
+
+                                <VisualState x:Name="MoveLastDisabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LastItemButton" Storyboard.TargetProperty="IsEnabled" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <system:Boolean>False</system:Boolean>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimation Storyboard.TargetName="LastItemButton" Storyboard.TargetProperty="Opacity" Duration="0:0:0.001" To="0.4"/>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+
+                            <!-- PagerDisplayModeStates -->
+                            <VisualStateGroup x:Name="DisplayModeStates">
+                                <VisualState x:Name="FirstLastNumeric">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="NextItemButton" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PreviousItemButton" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+
+                                <VisualState x:Name="FirstLastPreviousNext">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ItemDisplay" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+
+                                <VisualState x:Name="FirstLastPreviousNextNumeric">
+                                    <Storyboard>
+                                    </Storyboard>
+                                </VisualState>
+
+                                <VisualState x:Name="Numeric">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="FirstItemButton" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LastItemButton" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="NextItemButton" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PreviousItemButton" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+
+                                <VisualState x:Name="PreviousNext">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="FirstItemButton" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LastItemButton" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ItemDisplay" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+
+                                <VisualState x:Name="PreviousNextNumeric">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="FirstItemButton" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LastItemButton" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+
+                        </VisualStateManager.VisualStateGroups>
+                        <!-- DataPager Control Parts -->
+                        <Border SnapsToDevicePixels="True" MinHeight="24" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="Stretch">
+                                <!--FirstPage Button-->
+                                <Button x:Name="FirstItemButton" Width="20" Height="20" Padding="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="4" Background="{TemplateBinding ButtonBackground}" 
+                                            Foreground="{TemplateBinding ButtonForeground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" 
+                                            c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" 
+                                            c1:ClearStyleExtensions.CornerRadius="{TemplateBinding CornerRadius}" Command="c1InputPanel:C1DataPager.MoveToFirstCommand" 
+                                            ToolTipService.ToolTip="{Binding First, Source={StaticResource Resources}}" Style="{TemplateBinding NumericButtonStyle}">
+                                    <Button.Content>
+                                        <Grid Height="14" Width="14">
+                                            <Rectangle Width="3" HorizontalAlignment="Left" Fill="{Binding Foreground, ElementName=FirstItemButton}"/>
+                                            <Path Data="M0,1 L1,0 L1,2 Z" Style="{StaticResource NavigationPath}" HorizontalAlignment="Right" Fill="{Binding Foreground, ElementName=FirstItemButton}"/>
+                                        </Grid>
+                                    </Button.Content>
+                                </Button>
+
+                                <!--PreviousPage Button-->
+                                <Button x:Name="PreviousItemButton" Width="20" Height="20" Padding="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="4" Background="{TemplateBinding ButtonBackground}" 
+                                            Foreground="{TemplateBinding ButtonForeground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" 
+                                            c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" 
+                                            c1:ClearStyleExtensions.CornerRadius="{TemplateBinding CornerRadius}" Command="c1InputPanel:C1DataPager.MoveToPreviousCommand" 
+                                            ToolTipService.ToolTip="{Binding Previous, Source={StaticResource Resources}}" Style="{TemplateBinding NumericButtonStyle}">
+                                    <Button.Content>
+                                        <Path Data="M0,1 L1,0 L1,2 Z" Style="{StaticResource NavigationPath}" HorizontalAlignment="Center" Fill="{Binding Foreground, ElementName=PreviousItemButton}"/>
+                                    </Button.Content>
+                                </Button>
+
+                                <!--Page Display-->
+                                <StackPanel x:Name="ItemDisplay" Orientation="Horizontal" Margin="3 0 3 0">
+                                    <TextBlock x:Name="Prefix" Width="Auto" VerticalAlignment="Center" Margin="4,0,0,0" Foreground="{TemplateBinding LabelForeground}" Text="{Binding PagerPrefix, Source={StaticResource Resources}}"/>
+                                    <TextBox x:Name="CurrentPage" Width="40" MinHeight="20" Padding="2 2 2 0" Margin="4,2,4,2" VerticalAlignment="Center" Foreground="{TemplateBinding Foreground}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding c1:ClearStyleExtensions.MouseOverBrush}" c1:ClearStyleExtensions.FocusBrush="{TemplateBinding c1:ClearStyleExtensions.FocusBrush}"/>
+                                    <TextBlock x:Name="Suffix" Width="Auto" VerticalAlignment="Center" Margin="0,0,4,0" Foreground="{TemplateBinding LabelForeground}"/>
+                                </StackPanel>
+
+                                <!--NextPage Button-->
+                                <Button x:Name="NextItemButton" Width="20" Height="20" Padding="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="4" Background="{TemplateBinding ButtonBackground}" 
+                                            Foreground="{TemplateBinding ButtonForeground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" 
+                                            c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" 
+                                            c1:ClearStyleExtensions.CornerRadius="{TemplateBinding CornerRadius}" Command="c1InputPanel:C1DataPager.MoveToNextCommand" 
+                                            ToolTipService.ToolTip="{Binding Next, Source={StaticResource Resources}}" Style="{TemplateBinding NumericButtonStyle}">
+                                    <Button.Content>
+                                        <Path Data="M0,0 L1,1 L0,2 Z" Style="{StaticResource NavigationPath}" HorizontalAlignment="Center" Fill="{Binding Foreground, ElementName=NextItemButton}"/>
+                                    </Button.Content>
+                                </Button>
+
+                                <!--LastPage Button-->
+                                <Button x:Name="LastItemButton" Width="20" Height="20" Padding="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="4" Background="{TemplateBinding ButtonBackground}" 
+                                            Foreground="{TemplateBinding ButtonForeground}" c1:ClearStyleExtensions.MouseOverBrush="{TemplateBinding MouseOverBrush}" 
+                                            c1:ClearStyleExtensions.PressedBrush="{TemplateBinding PressedBrush}" c1:ClearStyleExtensions.FocusBrush="{TemplateBinding FocusBrush}" 
+                                            c1:ClearStyleExtensions.CornerRadius="{TemplateBinding CornerRadius}" Command="c1InputPanel:C1DataPager.MoveToLastCommand" 
+                                            ToolTipService.ToolTip="{Binding Last, Source={StaticResource Resources}}" Style="{TemplateBinding NumericButtonStyle}">
+                                    <Button.Content>
+                                        <Grid Height="14" Width="14">
+                                            <Path Data="M0,0 L1,1 L0,2 Z" Style="{StaticResource NavigationPath}" HorizontalAlignment="Left" Fill="{Binding Foreground, ElementName=LastItemButton}"/>
+                                            <Rectangle Width="3" HorizontalAlignment="Right" Fill="{Binding Foreground, ElementName=LastItemButton}"/>
+                                        </Grid>
+                                    </Button.Content>
+                                </Button>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

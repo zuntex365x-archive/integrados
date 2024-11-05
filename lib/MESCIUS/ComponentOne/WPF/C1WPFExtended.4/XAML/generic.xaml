@@ -1,0 +1,18 @@
+﻿<!--// Copyright © GrapeCity, Inc..
+// This file is part of ComponentOne Studio WPF Edition
+// Please visit https://www.grapecity.com/en/componentone for details
+// All other rights reserved.
+-->
+
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/C1.WPF.Extended.4;component/themes/C1Accordion.xaml" />
+		<ResourceDictionary Source="/C1.WPF.Extended.4;component/themes/C1Book.xaml" />
+		<ResourceDictionary Source="/C1.WPF.Extended.4;component/themes/C1ColorPicker.xaml" />
+		<ResourceDictionary Source="/C1.WPF.Extended.4;component/themes/C1CoverFlow.xaml" />
+		<ResourceDictionary Source="/C1.WPF.Extended.4;component/themes/C1Expander.xaml" />
+		<ResourceDictionary Source="/C1.WPF.Extended.4;component/themes/C1PropertyGrid.xaml" />
+		<ResourceDictionary Source="/C1.WPF.Extended.4;component/themes/C1Reflector.xaml" />
+		<ResourceDictionary Source="/C1.WPF.Extended.4;component/themes/C1Rating.xaml" />		
+	</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

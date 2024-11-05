@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cell_Title" xml:space="preserve">
+    <value>Bunka</value>
+  </data>
+  <data name="FindTool_BtnFindNext" xml:space="preserve">
+    <value>Hľadať ďalej</value>
+  </data>
+  <data name="FindTool_BtnReplace" xml:space="preserve">
+    <value>Nahradiť</value>
+  </data>
+  <data name="FindTool_BtnReplaceAll" xml:space="preserve">
+    <value>Nahradiť všetky</value>
+  </data>
+  <data name="FindTool_LblFind" xml:space="preserve">
+    <value>Hľadať:</value>
+  </data>
+  <data name="FindTool_LblReplace" xml:space="preserve">
+    <value>Nahradiť:</value>
+  </data>
+  <data name="Font_Bold" xml:space="preserve">
+    <value>Tučné</value>
+  </data>
+  <data name="Font_BoldInitial" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="Font_ChangeCase" xml:space="preserve">
+    <value>Zmeniť veľkosť písmen</value>
+  </data>
+  <data name="Font_ChangeCase_CapitalizeEachWord" xml:space="preserve">
+    <value>Všetky Prvé Písmená Veľké</value>
+  </data>
+  <data name="Font_ChangeCase_LowerCase" xml:space="preserve">
+    <value>malé písmená</value>
+  </data>
+  <data name="Font_ChangeCase_ToggleCase" xml:space="preserve">
+    <value>zAMENIŤ mALÉ a vEĽKÉ pÍSMENÁ</value>
+  </data>
+  <data name="Font_ChangeCase_UpperCase" xml:space="preserve">
+    <value>VEĽKÉ PÍSMENÁ</value>
+  </data>
+  <data name="Font_Font" xml:space="preserve">
+    <value>Písmo</value>
+  </data>
+  <data name="Font_FontColor" xml:space="preserve">
+    <value>Farba písma</value>
+  </data>
+  <data name="Font_FontSize" xml:space="preserve">
+    <value>Veľkosť písma</value>
+  </data>
+  <data name="Font_GrowFont" xml:space="preserve">
+    <value>Zväčšiť písmo</value>
+  </data>
+  <data name="Font_Italic" xml:space="preserve">
+    <value>Kurzíva</value>
+  </data>
+  <data name="Font_ItalicInitial" xml:space="preserve">
+    <value>I</value>
+  </data>
+  <data name="Font_ShrinkFont" xml:space="preserve">
+    <value>Zmenšiť písmo</value>
+  </data>
+  <data name="Font_Subscript" xml:space="preserve">
+    <value>Dolný index</value>
+  </data>
+  <data name="Font_Superscript" xml:space="preserve">
+    <value>Horný index</value>
+  </data>
+  <data name="Font_TextHighlightColor" xml:space="preserve">
+    <value>Farba zvýraznenia textu</value>
+  </data>
+  <data name="Font_Title" xml:space="preserve">
+    <value>Písmo</value>
+  </data>
+  <data name="Font_Underline" xml:space="preserve">
+    <value>Podčiarknuté</value>
+  </data>
+  <data name="Font_UnderlineInitial" xml:space="preserve">
+    <value>U</value>
+  </data>
+  <data name="HomeTab_Header" xml:space="preserve">
+    <value>Domov</value>
+  </data>
+  <data name="Insert_InsertHyperlink" xml:space="preserve">
+    <value>Vložiť hypertextové prepojenie</value>
+  </data>
+  <data name="Insert_InsertHyperlink_InvalidURL" xml:space="preserve">
+    <value>Adresa URL „{0}“ je neplatná</value>
+  </data>
+  <data name="Insert_InsertHyperlink_TextLabel" xml:space="preserve">
+    <value>Text:</value>
+  </data>
+  <data name="Insert_InsertHyperlink_URLLabel" xml:space="preserve">
+    <value>Adresa URL:</value>
+  </data>
+  <data name="Insert_InsertHyperlink_TargetLabel" xml:space="preserve">
+    <value>Cieľ:</value>
+  </data>
+  <data name="Insert_InsertImage" xml:space="preserve">
+    <value>Vložiť obrázok</value>
+  </data>
+  <data name="Insert_InsertImage_InvalidURL" xml:space="preserve">
+    <value>Adresa URL „{0}“ je neplatná</value>
+  </data>
+  <data name="Insert_InsertImage_UrlMessage" xml:space="preserve">
+    <value>Zadajte adresu URL, na ktorej sa nachádza príslušný obrázok:</value>
+  </data>
+  <data name="Insert_InsertImage_NotLoaded" xml:space="preserve">
+    <value>Obrázok zo stránky „{0}“ sa nepodarilo načítať.</value>
+  </data>
+  <data name="Insert_InsertSymbol" xml:space="preserve">
+    <value>Vložiť symbol</value>
+  </data>
+  <data name="Insert_RemoveHyperlink" xml:space="preserve">
+    <value>Odstrániť hypertextové prepojenie</value>
+  </data>
+  <data name="Insert_Title" xml:space="preserve">
+    <value>Vložiť</value>
+  </data>
+  <data name="Merge_Title" xml:space="preserve">
+    <value>Zlúčiť</value>
+  </data>
+  <data name="Paragraph_AlignTextCenter" xml:space="preserve">
+    <value>Zarovnať text na stred</value>
+  </data>
+  <data name="Paragraph_AlignTextLeft" xml:space="preserve">
+    <value>Zarovnať text doľava</value>
+  </data>
+  <data name="Paragraph_AlignTextRight" xml:space="preserve">
+    <value>Zarovnať text doprava</value>
+  </data>
+  <data name="Paragraph_BorderColor" xml:space="preserve">
+    <value>Farba orámovania</value>
+  </data>
+  <data name="Paragraph_BorderThickness" xml:space="preserve">
+    <value>Hrúbka orámovania</value>
+  </data>
+  <data name="Paragraph_Bullets" xml:space="preserve">
+    <value>Odrážky</value>
+  </data>
+  <data name="Paragraph_Justify" xml:space="preserve">
+    <value>Zarovnať</value>
+  </data>
+  <data name="Paragraph_Margin" xml:space="preserve">
+    <value>Okraj</value>
+  </data>
+  <data name="Paragraph_Numbering" xml:space="preserve">
+    <value>Číslovanie</value>
+  </data>
+  <data name="Paragraph_Padding" xml:space="preserve">
+    <value>Odsadenie</value>
+  </data>
+  <data name="Paragraph_ParagraphColor" xml:space="preserve">
+    <value>Farba odseku</value>
+  </data>
+  <data name="Paragraph_TextWrapping" xml:space="preserve">
+    <value>Zalamovanie textu</value>
+  </data>
+  <data name="Paragraph_Title" xml:space="preserve">
+    <value>Odsek</value>
+  </data>
+  <data name="RowsAndColumns_Title" xml:space="preserve">
+    <value>Riadky a stĺpce</value>
+  </data>
+  <data name="TablesTab_Header" xml:space="preserve">
+    <value>Tabuľky</value>
+  </data>
+  <data name="Table_Title" xml:space="preserve">
+    <value>Tabuľka</value>
+  </data>
+  <data name="ThicknessPicker_Bottom" xml:space="preserve">
+    <value>Zdola:</value>
+  </data>
+  <data name="ThicknessPicker_Left" xml:space="preserve">
+    <value>Zľava:</value>
+  </data>
+  <data name="ThicknessPicker_Right" xml:space="preserve">
+    <value>Sprava:</value>
+  </data>
+  <data name="ThicknessPicker_Top" xml:space="preserve">
+    <value>Zhora:</value>
+  </data>
+  <data name="Tools_BorderTool" xml:space="preserve">
+    <value>Orámovanie</value>
+  </data>
+  <data name="Tools_BorderTool_AllBorders" xml:space="preserve">
+    <value>Celé orámovanie</value>
+  </data>
+  <data name="Tools_BorderTool_BottomBorder" xml:space="preserve">
+    <value>Spodné orámovanie</value>
+  </data>
+  <data name="Tools_BorderTool_Color" xml:space="preserve">
+    <value>Farba</value>
+  </data>
+  <data name="Tools_BorderTool_InsideBorders" xml:space="preserve">
+    <value>Vnútorné orámovanie</value>
+  </data>
+  <data name="Tools_BorderTool_InsideHorizontalBorders" xml:space="preserve">
+    <value>Vnútorné vodorovné orámovanie</value>
+  </data>
+  <data name="Tools_BorderTool_InsideVerticalBorders" xml:space="preserve">
+    <value>Vnútorné zvislé orámovanie</value>
+  </data>
+  <data name="Tools_BorderTool_LeftBorder" xml:space="preserve">
+    <value>Ľavé orámovanie</value>
+  </data>
+  <data name="Tools_BorderTool_NoBorder" xml:space="preserve">
+    <value>Žiadne orámovanie</value>
+  </data>
+  <data name="Tools_BorderTool_OutsideBorders" xml:space="preserve">
+    <value>Vonkajšie orámovanie</value>
+  </data>
+  <data name="Tools_BorderTool_RightBorder" xml:space="preserve">
+    <value>Pravé orámovanie</value>
+  </data>
+  <data name="Tools_BorderTool_TopBorder" xml:space="preserve">
+    <value>Horné orámovanie</value>
+  </data>
+  <data name="Tools_BorderTool_Weight" xml:space="preserve">
+    <value>Váha</value>
+  </data>
+  <data name="Tools_BottomAlign" xml:space="preserve">
+    <value>Zarovnať nadol</value>
+  </data>
+  <data name="Tools_ColumnWidth_Header" xml:space="preserve">
+    <value>Šírka:</value>
+  </data>
+  <data name="Tools_Copy" xml:space="preserve">
+    <value>Kopírovať</value>
+  </data>
+  <data name="Tools_Cut" xml:space="preserve">
+    <value>Vystrihnúť</value>
+  </data>
+  <data name="Tools_DeleteTable" xml:space="preserve">
+    <value>Odstrániť tabuľku</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteCells" xml:space="preserve">
+    <value>Odstrániť bunky</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteColumns" xml:space="preserve">
+    <value>Odstrániť stĺpce</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteRows" xml:space="preserve">
+    <value>Odstrániť riadky</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteTable" xml:space="preserve">
+    <value>Odstrániť tabuľku</value>
+  </data>
+  <data name="Tools_FindAndReplace" xml:space="preserve">
+    <value>Hľadať a nahradiť</value>
+  </data>
+  <data name="Tools_FindAndReplace_NotFound" xml:space="preserve">
+    <value>Nasledujúci zadaný text sa nenašiel:</value>
+  </data>
+  <data name="Tools_InsertColumnsLeft" xml:space="preserve">
+    <value>Vložiť stĺpce vľavo</value>
+  </data>
+  <data name="Tools_InsertColumnsRight" xml:space="preserve">
+    <value>Vložiť stĺpce vpravo</value>
+  </data>
+  <data name="Tools_InsertRowsAbove" xml:space="preserve">
+    <value>Vložiť riadky hore</value>
+  </data>
+  <data name="Tools_InsertRowsBelow" xml:space="preserve">
+    <value>Vložiť riadky dole</value>
+  </data>
+  <data name="Tools_InsertTable" xml:space="preserve">
+    <value>Vložiť tabuľku</value>
+  </data>
+  <data name="Tools_InsertTable_ConvertText" xml:space="preserve">
+    <value>Konvertovať text na tabuľku</value>
+  </data>
+  <data name="Tools_MergeCells" xml:space="preserve">
+    <value>Zlúčiť bunky</value>
+  </data>
+  <data name="Tools_Paste" xml:space="preserve">
+    <value>Prilepiť</value>
+  </data>
+  <data name="Tools_Redo" xml:space="preserve">
+    <value>Znova</value>
+  </data>
+  <data name="Tools_RowHeight_Header" xml:space="preserve">
+    <value>Výška:</value>
+  </data>
+  <data name="Tools_SelectTable" xml:space="preserve">
+    <value>Vybrať tabuľku</value>
+  </data>
+  <data name="Tools_SelectTable_SelectCell" xml:space="preserve">
+    <value>Vybrať bunku</value>
+  </data>
+  <data name="Tools_SelectTable_SelectColumn" xml:space="preserve">
+    <value>Vybrať stĺpec</value>
+  </data>
+  <data name="Tools_SelectTable_SelectRow" xml:space="preserve">
+    <value>Vybrať riadok</value>
+  </data>
+  <data name="Tools_SelectTable_SelectTable" xml:space="preserve">
+    <value>Vybrať tabuľku</value>
+  </data>
+  <data name="Tools_ShowGridlines" xml:space="preserve">
+    <value>Zobraziť mriežky</value>
+  </data>
+  <data name="Tools_SpellCheck" xml:space="preserve">
+    <value>Kontrola pravopisu</value>
+  </data>
+  <data name="Tools_SpellCheck_NoErrors" xml:space="preserve">
+    <value>Nenašli sa žiadne pravopisné chyby.</value>
+  </data>
+  <data name="Tools_SpellCheck_NotConfigured" xml:space="preserve">
+    <value>Kontrola pravopisu nie je nakonfigurovaná.</value>
+  </data>
+  <data name="Tools_SplitCell" xml:space="preserve">
+    <value>Rozdeliť bunku</value>
+  </data>
+  <data name="Tools_TableWidth_Header" xml:space="preserve">
+    <value>Šírka:</value>
+  </data>
+  <data name="Tools_Title" xml:space="preserve">
+    <value>Nástroje</value>
+  </data>
+  <data name="Tools_TopAlign" xml:space="preserve">
+    <value>Zarovnať nahor</value>
+  </data>
+  <data name="Tools_Undo" xml:space="preserve">
+    <value>Späť</value>
+  </data>
+  <data name="Tools_UnmergeCell" xml:space="preserve">
+    <value>Oddeliť bunky</value>
+  </data>
+  <data name="Tools_VerticalCenterAlign" xml:space="preserve">
+    <value>Zarovnať na stred</value>
+  </data>
+  <data name="View_Draft" xml:space="preserve">
+    <value>Koncept</value>
+  </data>
+  <data name="View_PrintLayout" xml:space="preserve">
+    <value>Rozloženie pri tlači</value>
+  </data>
+  <data name="View_Zoom" xml:space="preserve">
+    <value>Priblížiť</value>
+  </data>
+  <data name="Tools_FindAndReplace_ReachStart" xml:space="preserve">
+    <value>Hľadanie dosiahlo začiatočný bod vyhľadávania.</value>
+  </data>
+  <data name="Insert_InsertImage_UploadMessage" xml:space="preserve">
+    <value>Vyberte obrázok, ktorý chcete odovzdať:</value>
+  </data>
+  <data name="Insert_InsertImage_UploadTab" xml:space="preserve">
+    <value>Odovzdať</value>
+  </data>
+  <data name="Insert_InsertImage_UrlTab" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="Insert_InsertImage_FileFilter" xml:space="preserve">
+    <value>Súbory s obrázkami (*.PNG;*.JPG)|*.PNG;*.JPG|Všetky súbory (*.*)|*.*</value>
+  </data>
+  <data name="FormatPainter" xml:space="preserve">
+    <value>Kopírovať formát</value>
+  </data>
+  <data name="Tools_Delete" xml:space="preserve">
+    <value>Odstrániť</value>
+  </data>
+  <data name="Tools_Gridlines" xml:space="preserve">
+    <value>Mriežky</value>
+  </data>
+  <data name="Tools_InsertAbove" xml:space="preserve">
+    <value>Vložiť nad</value>
+  </data>
+  <data name="Tools_InsertBelow" xml:space="preserve">
+    <value>Vložiť pod</value>
+  </data>
+  <data name="Tools_InsertLeft" xml:space="preserve">
+    <value>Vložiť naľavo</value>
+  </data>
+  <data name="Tools_InsertRight" xml:space="preserve">
+    <value>Vložiť napravo</value>
+  </data>
+  <data name="Tools_Picture" xml:space="preserve">
+    <value>Obrázok</value>
+  </data>
+  <data name="Tools_Select" xml:space="preserve">
+    <value>Vybrať</value>
+  </data>
+  <data name="Tools_Spelling" xml:space="preserve">
+    <value>Pravopis</value>
+  </data>
+  <data name="Tools_Unmerge" xml:space="preserve">
+    <value>Oddeliť</value>
+  </data>
+  <data name="Edit_Title" xml:space="preserve">
+    <value>Upraviť</value>
+  </data>
+  <data name="Color_Aqua_ToolTip" xml:space="preserve">
+    <value>Akvamarínová</value>
+  </data>
+  <data name="Color_Black_ToolTip" xml:space="preserve">
+    <value>Čierna</value>
+  </data>
+  <data name="Color_Blue_ToolTip" xml:space="preserve">
+    <value>Modrá</value>
+  </data>
+  <data name="Color_Brown_ToolTip" xml:space="preserve">
+    <value>Hnedá</value>
+  </data>
+  <data name="Color_DarkBlue_ToolTip" xml:space="preserve">
+    <value>Tmavomodrá</value>
+  </data>
+  <data name="Color_DarkGreen_ToolTip" xml:space="preserve">
+    <value>Tmavozelená</value>
+  </data>
+  <data name="Color_DarkPurple_ToolTip" xml:space="preserve">
+    <value>Tmavofialová</value>
+  </data>
+  <data name="Color_DarkRed_ToolTip" xml:space="preserve">
+    <value>Tmavočervená</value>
+  </data>
+  <data name="Color_EightyGray_ToolTip" xml:space="preserve">
+    <value>Sivé – 80 %</value>
+  </data>
+  <data name="Color_FifteenGray_ToolTip" xml:space="preserve">
+    <value>Sivé – 15 %</value>
+  </data>
+  <data name="Color_FiftyGray_ToolTip" xml:space="preserve">
+    <value>Sivé – 50 %</value>
+  </data>
+  <data name="Color_FortyGray_ToolTip" xml:space="preserve">
+    <value>Sivé – 40 %</value>
+  </data>
+  <data name="Color_Gold_ToolTip" xml:space="preserve">
+    <value>Zlatá</value>
+  </data>
+  <data name="Color_Green_ToolTip" xml:space="preserve">
+    <value>Zelená</value>
+  </data>
+  <data name="Color_LightGreen_ToolTip" xml:space="preserve">
+    <value>Svetlozelená</value>
+  </data>
+  <data name="Color_LightYellow_ToolTip" xml:space="preserve">
+    <value>Svetložltá</value>
+  </data>
+  <data name="Color_Lime_ToolTip" xml:space="preserve">
+    <value>Žltozelená</value>
+  </data>
+  <data name="Color_Orange_ToolTip" xml:space="preserve">
+    <value>Oranžová</value>
+  </data>
+  <data name="Color_Pink_ToolTip" xml:space="preserve">
+    <value>Ružová</value>
+  </data>
+  <data name="Color_Plum_ToolTip" xml:space="preserve">
+    <value>Slivková</value>
+  </data>
+  <data name="Color_Purple_ToolTip" xml:space="preserve">
+    <value>Fialová</value>
+  </data>
+  <data name="Color_Red_ToolTip" xml:space="preserve">
+    <value>Červená</value>
+  </data>
+  <data name="Color_Rose_ToolTip" xml:space="preserve">
+    <value>Svetloružová</value>
+  </data>
+  <data name="Color_SeventyFiveGray_ToolTip" xml:space="preserve">
+    <value>Sivé – 75 %</value>
+  </data>
+  <data name="Color_SkyBlue_ToolTip" xml:space="preserve">
+    <value>Nebeská modrá</value>
+  </data>
+  <data name="Color_SlateBlue_ToolTip" xml:space="preserve">
+    <value>Bridlicovomodrá</value>
+  </data>
+  <data name="Color_Turquoise_ToolTip" xml:space="preserve">
+    <value>Tyrkysová</value>
+  </data>
+  <data name="Color_TwentyFiveGray_ToolTip" xml:space="preserve">
+    <value>Sivé – 25 %</value>
+  </data>
+  <data name="Color_White_ToolTip" xml:space="preserve">
+    <value>Biela</value>
+  </data>
+  <data name="Color_Yellow_ToolTip" xml:space="preserve">
+    <value>Žltá</value>
+  </data>
+  <data name="Insert_ImageDialog_File" xml:space="preserve">
+    <value>Zvoliť obrázok...</value>
+  </data>
+  <data name="Insert_ImageDialog_Url" xml:space="preserve">
+    <value>Vložiť obrázok</value>
+  </data>
+  <data name="Insert_InsertHyperlink_Button" xml:space="preserve">
+    <value>Vložiť hypertextové prepojenie</value>
+  </data>
+  <data name="Insert_InsertTable_Button" xml:space="preserve">
+    <value>Vložiť tabuľku</value>
+  </data>
+  <data name="Insert_InsertTable_ColumnLabel" xml:space="preserve">
+    <value>Počet stĺpcov:</value>
+  </data>
+  <data name="Insert_InsertTable_RowLabel" xml:space="preserve">
+    <value>Počet riadkov:</value>
+  </data>
+  <data name="List_Header" xml:space="preserve">
+    <value>Zoznam</value>
+  </data>
+  <data name="Tools_BottomAlignMenuTool_Header" xml:space="preserve">
+    <value>Dole</value>
+  </data>
+  <data name="Tools_CenterAlign_Header" xml:space="preserve">
+    <value>Stred</value>
+  </data>
+  <data name="Tools_ClearFormatting_Header" xml:space="preserve">
+    <value>Vymazať formát</value>
+  </data>
+  <data name="Tools_ClearFormatting_ToolTip" xml:space="preserve">
+    <value>Vymazať formátovanie textu</value>
+  </data>
+  <data name="Tools_DecreaseFontSize_Header" xml:space="preserve">
+    <value>Zmenšiť</value>
+  </data>
+  <data name="Tools_DecreaseFontSize_ToolTip" xml:space="preserve">
+    <value>Zmenšiť písmo</value>
+  </data>
+  <data name="Tools_DeleteTable_Cells" xml:space="preserve">
+    <value>Vymazať bunky tabuľky</value>
+  </data>
+  <data name="Tools_DeleteTable_Columns" xml:space="preserve">
+    <value>Vymazať stĺpce tabuľky</value>
+  </data>
+  <data name="Tools_DeleteTable_Rows" xml:space="preserve">
+    <value>Vymazať riadky tabuľky</value>
+  </data>
+  <data name="Tools_DeleteTable_Table" xml:space="preserve">
+    <value>Vymazať túto tabuľku</value>
+  </data>
+  <data name="Tools_Error" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="Tools_FillColor_Header" xml:space="preserve">
+    <value>Výplň</value>
+  </data>
+  <data name="Tools_FillColor_ToolTip" xml:space="preserve">
+    <value>Farba výplne</value>
+  </data>
+  <data name="Tools_IncreaseFontSize_Header" xml:space="preserve">
+    <value>Zväčšiť</value>
+  </data>
+  <data name="Tools_IncreaseFontSize_ToolTip" xml:space="preserve">
+    <value>Zväčšiť písmo</value>
+  </data>
+  <data name="Tools_InsertHyperlink_Header" xml:space="preserve">
+    <value>Hypertextové prepojenie</value>
+  </data>
+  <data name="Tools_InsertImage_Header" xml:space="preserve">
+    <value>Obrázok</value>
+  </data>
+  <data name="Tools_InsertImage_ToolTip" xml:space="preserve">
+    <value>Vložiť obrázok</value>
+  </data>
+  <data name="Tools_LeftAlign_Header" xml:space="preserve">
+    <value>Vľavo</value>
+  </data>
+  <data name="Tools_LeftAlign_ToolTip" xml:space="preserve">
+    <value>Zarovnať doľava</value>
+  </data>
+  <data name="Tools_Numbering_ToolTip" xml:space="preserve">
+    <value>Číslovaný zoznam</value>
+  </data>
+  <data name="Tools_Redo_Header" xml:space="preserve">
+    <value>Znova</value>
+  </data>
+  <data name="Tools_RightAlign_Header" xml:space="preserve">
+    <value>Vpravo</value>
+  </data>
+  <data name="Tools_RightAlign_ToolTip" xml:space="preserve">
+    <value>Zarovnať doprava</value>
+  </data>
+  <data name="Tools_SelectAll_Header" xml:space="preserve">
+    <value>Vybrať všetko</value>
+  </data>
+  <data name="Tools_SelectTable_Cells_Header" xml:space="preserve">
+    <value>Vybrať bunky</value>
+  </data>
+  <data name="Tools_SelectTable_Cells_ToolTip" xml:space="preserve">
+    <value>Vybrať bunky tabuľky</value>
+  </data>
+  <data name="Tools_SelectTable_Columns_Header" xml:space="preserve">
+    <value>Vybrať stĺpce</value>
+  </data>
+  <data name="Tools_SelectTable_Columns_ToolTip" xml:space="preserve">
+    <value>Vybrať stĺpce tabuľky</value>
+  </data>
+  <data name="Tools_SelectTable_Rows_Header" xml:space="preserve">
+    <value>Vybrať riadky</value>
+  </data>
+  <data name="Tools_SelectTable_Rows_ToolTip" xml:space="preserve">
+    <value>Vybrať riadky tabuľky</value>
+  </data>
+  <data name="Tools_SelectTable_Table_Header" xml:space="preserve">
+    <value>Vybrať tabuľku</value>
+  </data>
+  <data name="Tools_SelectTable_Table_ToolTip" xml:space="preserve">
+    <value>Vybrať túto tabuľku</value>
+  </data>
+  <data name="Tools_Strikethrough_Header" xml:space="preserve">
+    <value>Prečiarknutie</value>
+  </data>
+  <data name="Tools_Subscript_ToolTip" xml:space="preserve">
+    <value>Dolný index</value>
+  </data>
+  <data name="Tools_Superscript_ToolTip" xml:space="preserve">
+    <value>Horný index</value>
+  </data>
+  <data name="Tools_TextHighlight_Header" xml:space="preserve">
+    <value>Zvýrazniť</value>
+  </data>
+  <data name="Tools_TextHighlight_ToolTip" xml:space="preserve">
+    <value>Farba zvýraznenia textu</value>
+  </data>
+  <data name="Tools_TopAlign_Header" xml:space="preserve">
+    <value>Hore</value>
+  </data>
+  <data name="ViewTab_Header" xml:space="preserve">
+    <value>Zobrazenie</value>
+  </data>
+  <data name="View_DocumentViews" xml:space="preserve">
+    <value>Zobrazenia</value>
+  </data>
+  <data name="View_FitWidth" xml:space="preserve">
+    <value>Prispôsobiť šírku</value>
+  </data>
+  <data name="View_OnePage" xml:space="preserve">
+    <value>Jedna strana</value>
+  </data>
+  <data name="View_TwoPages" xml:space="preserve">
+    <value>Dve strany</value>
+  </data>
+  <data name="Tools_ZoomIn" xml:space="preserve">
+    <value>Priblížiť</value>
+  </data>
+  <data name="Tools_Zoom100PercentTool" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="Tools_ZoomOut" xml:space="preserve">
+    <value>Oddialiť</value>
+  </data>
+  <data name="Font_Strikethrough" xml:space="preserve">
+    <value>Prečiarknuté</value>
+  </data>
+  <data name="Font_StrikethroughInitial" xml:space="preserve">
+    <value>abc</value>
+  </data>
+  <data name="Tools_RemoveHyperlink_Header" xml:space="preserve">
+    <value>Odstrániť</value>
+  </data>
+  <data name="Selected_Document" xml:space="preserve">
+    <value>&lt;&lt;Výber v dokumente&gt;&gt;</value>
+  </data>
+  <data name="Line_Number" xml:space="preserve">
+    <value>Čísla riadkov</value>
+  </data>
+  <data name="LineNumberMode_None" xml:space="preserve">
+    <value>Žiadny</value>
+  </data>
+  <data name="LineNumberMode_Continuous" xml:space="preserve">
+    <value>Priebežne</value>
+  </data>
+  <data name="LineNumberMode_RestartEachPage" xml:space="preserve">
+    <value>Každú stranu zvlášť</value>
+  </data>
+</root>

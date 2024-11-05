@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cell_Title" xml:space="preserve">
+    <value>Komórka</value>
+  </data>
+  <data name="FindTool_BtnFindNext" xml:space="preserve">
+    <value>Znajdź następny</value>
+  </data>
+  <data name="FindTool_BtnReplace" xml:space="preserve">
+    <value>Zamień</value>
+  </data>
+  <data name="FindTool_BtnReplaceAll" xml:space="preserve">
+    <value>Zamień wszystkie</value>
+  </data>
+  <data name="FindTool_LblFind" xml:space="preserve">
+    <value>Znajdź:</value>
+  </data>
+  <data name="FindTool_LblReplace" xml:space="preserve">
+    <value>Zamień:</value>
+  </data>
+  <data name="Font_Bold" xml:space="preserve">
+    <value>Pogrubione</value>
+  </data>
+  <data name="Font_BoldInitial" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="Font_ChangeCase" xml:space="preserve">
+    <value>Zmień wielkość liter</value>
+  </data>
+  <data name="Font_ChangeCase_CapitalizeEachWord" xml:space="preserve">
+    <value>Jak Nazwy Własne</value>
+  </data>
+  <data name="Font_ChangeCase_LowerCase" xml:space="preserve">
+    <value>małe litery</value>
+  </data>
+  <data name="Font_ChangeCase_ToggleCase" xml:space="preserve">
+    <value>zAMIANA nA mAŁE/wIELKIE</value>
+  </data>
+  <data name="Font_ChangeCase_UpperCase" xml:space="preserve">
+    <value>WIELKIE LITERY</value>
+  </data>
+  <data name="Font_Font" xml:space="preserve">
+    <value>Czcionka</value>
+  </data>
+  <data name="Font_FontColor" xml:space="preserve">
+    <value>Kolor czcionki</value>
+  </data>
+  <data name="Font_FontSize" xml:space="preserve">
+    <value>Rozmiar czcionki</value>
+  </data>
+  <data name="Font_GrowFont" xml:space="preserve">
+    <value>Zwiększ czcionkę</value>
+  </data>
+  <data name="Font_Italic" xml:space="preserve">
+    <value>Kursywa</value>
+  </data>
+  <data name="Font_ItalicInitial" xml:space="preserve">
+    <value>I</value>
+  </data>
+  <data name="Font_ShrinkFont" xml:space="preserve">
+    <value>Zmniejsz czcionkę</value>
+  </data>
+  <data name="Font_Subscript" xml:space="preserve">
+    <value>Indeks dolny</value>
+  </data>
+  <data name="Font_Superscript" xml:space="preserve">
+    <value>Indeks górny</value>
+  </data>
+  <data name="Font_TextHighlightColor" xml:space="preserve">
+    <value>Kolor wyróżnienia tekstu</value>
+  </data>
+  <data name="Font_Title" xml:space="preserve">
+    <value>Czcionka</value>
+  </data>
+  <data name="Font_Underline" xml:space="preserve">
+    <value>Podkreślenie</value>
+  </data>
+  <data name="Font_UnderlineInitial" xml:space="preserve">
+    <value>U</value>
+  </data>
+  <data name="HomeTab_Header" xml:space="preserve">
+    <value>Strona główna</value>
+  </data>
+  <data name="Insert_InsertHyperlink" xml:space="preserve">
+    <value>Wstaw hiperłącze</value>
+  </data>
+  <data name="Insert_InsertHyperlink_InvalidURL" xml:space="preserve">
+    <value>Adres URL „{0}” jest nieprawidłowy</value>
+  </data>
+  <data name="Insert_InsertHyperlink_TextLabel" xml:space="preserve">
+    <value>Tekst:</value>
+  </data>
+  <data name="Insert_InsertHyperlink_URLLabel" xml:space="preserve">
+    <value>Adres URL:</value>
+  </data>
+  <data name="Insert_InsertHyperlink_TargetLabel" xml:space="preserve">
+    <value>Element docelowy:</value>
+  </data>
+  <data name="Insert_InsertImage" xml:space="preserve">
+    <value>Wstaw obraz</value>
+  </data>
+  <data name="Insert_InsertImage_InvalidURL" xml:space="preserve">
+    <value>Adres URL „{0}” jest nieprawidłowy</value>
+  </data>
+  <data name="Insert_InsertImage_UrlMessage" xml:space="preserve">
+    <value>Wstaw adres URL obrazu:</value>
+  </data>
+  <data name="Insert_InsertImage_NotLoaded" xml:space="preserve">
+    <value>Obraz z „{0}” nie może zostać załadowany.</value>
+  </data>
+  <data name="Insert_InsertSymbol" xml:space="preserve">
+    <value>Wstaw symbol</value>
+  </data>
+  <data name="Insert_RemoveHyperlink" xml:space="preserve">
+    <value>Usuń hiperłącze</value>
+  </data>
+  <data name="Insert_Title" xml:space="preserve">
+    <value>Wstaw</value>
+  </data>
+  <data name="Merge_Title" xml:space="preserve">
+    <value>Scal</value>
+  </data>
+  <data name="Paragraph_AlignTextCenter" xml:space="preserve">
+    <value>Wyrównaj tekst do środka</value>
+  </data>
+  <data name="Paragraph_AlignTextLeft" xml:space="preserve">
+    <value>Wyrównaj tekst do lewej</value>
+  </data>
+  <data name="Paragraph_AlignTextRight" xml:space="preserve">
+    <value>Wyrównaj tekst do prawej</value>
+  </data>
+  <data name="Paragraph_BorderColor" xml:space="preserve">
+    <value>Kolor krawędzi</value>
+  </data>
+  <data name="Paragraph_BorderThickness" xml:space="preserve">
+    <value>Grubość krawędzi</value>
+  </data>
+  <data name="Paragraph_Bullets" xml:space="preserve">
+    <value>Punktory</value>
+  </data>
+  <data name="Paragraph_Justify" xml:space="preserve">
+    <value>Wyjustowanie</value>
+  </data>
+  <data name="Paragraph_Margin" xml:space="preserve">
+    <value>Margines</value>
+  </data>
+  <data name="Paragraph_Numbering" xml:space="preserve">
+    <value>Numerowanie</value>
+  </data>
+  <data name="Paragraph_Padding" xml:space="preserve">
+    <value>Wypełnienie</value>
+  </data>
+  <data name="Paragraph_ParagraphColor" xml:space="preserve">
+    <value>Kolor akapitu</value>
+  </data>
+  <data name="Paragraph_TextWrapping" xml:space="preserve">
+    <value>Zawijanie tekstu</value>
+  </data>
+  <data name="Paragraph_Title" xml:space="preserve">
+    <value>Akapit</value>
+  </data>
+  <data name="RowsAndColumns_Title" xml:space="preserve">
+    <value>Wiersze i kolumny</value>
+  </data>
+  <data name="TablesTab_Header" xml:space="preserve">
+    <value>Tabele</value>
+  </data>
+  <data name="Table_Title" xml:space="preserve">
+    <value>Tabela</value>
+  </data>
+  <data name="ThicknessPicker_Bottom" xml:space="preserve">
+    <value>Na dole:</value>
+  </data>
+  <data name="ThicknessPicker_Left" xml:space="preserve">
+    <value>Z lewej:</value>
+  </data>
+  <data name="ThicknessPicker_Right" xml:space="preserve">
+    <value>Z prawej:</value>
+  </data>
+  <data name="ThicknessPicker_Top" xml:space="preserve">
+    <value>U góry:</value>
+  </data>
+  <data name="Tools_BorderTool" xml:space="preserve">
+    <value>Krawędzie</value>
+  </data>
+  <data name="Tools_BorderTool_AllBorders" xml:space="preserve">
+    <value>Wszystkie krawędzie</value>
+  </data>
+  <data name="Tools_BorderTool_BottomBorder" xml:space="preserve">
+    <value>Krawędź dolna</value>
+  </data>
+  <data name="Tools_BorderTool_Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="Tools_BorderTool_InsideBorders" xml:space="preserve">
+    <value>Krawędzie wewnętrzne</value>
+  </data>
+  <data name="Tools_BorderTool_InsideHorizontalBorders" xml:space="preserve">
+    <value>Wewnętrzna krawędź pozioma</value>
+  </data>
+  <data name="Tools_BorderTool_InsideVerticalBorders" xml:space="preserve">
+    <value>Wewnętrzna krawędź pionowa</value>
+  </data>
+  <data name="Tools_BorderTool_LeftBorder" xml:space="preserve">
+    <value>Krawędź lewa</value>
+  </data>
+  <data name="Tools_BorderTool_NoBorder" xml:space="preserve">
+    <value>Brak krawędzi</value>
+  </data>
+  <data name="Tools_BorderTool_OutsideBorders" xml:space="preserve">
+    <value>Krawędzie zewnętrzne</value>
+  </data>
+  <data name="Tools_BorderTool_RightBorder" xml:space="preserve">
+    <value>Krawędź prawa</value>
+  </data>
+  <data name="Tools_BorderTool_TopBorder" xml:space="preserve">
+    <value>Krawędź górna</value>
+  </data>
+  <data name="Tools_BorderTool_Weight" xml:space="preserve">
+    <value>Grubość</value>
+  </data>
+  <data name="Tools_BottomAlign" xml:space="preserve">
+    <value>Wyrównaj do dołu</value>
+  </data>
+  <data name="Tools_ColumnWidth_Header" xml:space="preserve">
+    <value>Szerokość:</value>
+  </data>
+  <data name="Tools_Copy" xml:space="preserve">
+    <value>Kopiuj</value>
+  </data>
+  <data name="Tools_Cut" xml:space="preserve">
+    <value>Wytnij</value>
+  </data>
+  <data name="Tools_DeleteTable" xml:space="preserve">
+    <value>Usuń tabelę</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteCells" xml:space="preserve">
+    <value>Usuń komórki</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteColumns" xml:space="preserve">
+    <value>Usuń kolumny</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteRows" xml:space="preserve">
+    <value>Usuń wiersze</value>
+  </data>
+  <data name="Tools_DeleteTable_DeleteTable" xml:space="preserve">
+    <value>Usuń tabelę</value>
+  </data>
+  <data name="Tools_FindAndReplace" xml:space="preserve">
+    <value>Znajdź i zamień</value>
+  </data>
+  <data name="Tools_FindAndReplace_NotFound" xml:space="preserve">
+    <value>Nie można odnaleźć następującego tekstu:</value>
+  </data>
+  <data name="Tools_InsertColumnsLeft" xml:space="preserve">
+    <value>Wstaw kolumny do lewej</value>
+  </data>
+  <data name="Tools_InsertColumnsRight" xml:space="preserve">
+    <value>Wstaw kolumny do prawej</value>
+  </data>
+  <data name="Tools_InsertRowsAbove" xml:space="preserve">
+    <value>Wstaw wiersze powyżej</value>
+  </data>
+  <data name="Tools_InsertRowsBelow" xml:space="preserve">
+    <value>Wstaw wiersze poniżej</value>
+  </data>
+  <data name="Tools_InsertTable" xml:space="preserve">
+    <value>Wstaw tabelę</value>
+  </data>
+  <data name="Tools_InsertTable_ConvertText" xml:space="preserve">
+    <value>Konwertuj tekst na tabelę</value>
+  </data>
+  <data name="Tools_MergeCells" xml:space="preserve">
+    <value>Scal komórki</value>
+  </data>
+  <data name="Tools_Paste" xml:space="preserve">
+    <value>Wklej</value>
+  </data>
+  <data name="Tools_Redo" xml:space="preserve">
+    <value>Wykonaj ponownie</value>
+  </data>
+  <data name="Tools_RowHeight_Header" xml:space="preserve">
+    <value>Wysokość:</value>
+  </data>
+  <data name="Tools_SelectTable" xml:space="preserve">
+    <value>Zaznacz tabelę</value>
+  </data>
+  <data name="Tools_SelectTable_SelectCell" xml:space="preserve">
+    <value>Zaznacz komórkę</value>
+  </data>
+  <data name="Tools_SelectTable_SelectColumn" xml:space="preserve">
+    <value>Zaznacz kolumnę</value>
+  </data>
+  <data name="Tools_SelectTable_SelectRow" xml:space="preserve">
+    <value>Zaznacz wiersz</value>
+  </data>
+  <data name="Tools_SelectTable_SelectTable" xml:space="preserve">
+    <value>Zaznacz tabelę</value>
+  </data>
+  <data name="Tools_ShowGridlines" xml:space="preserve">
+    <value>Pokaż linie siatki</value>
+  </data>
+  <data name="Tools_SpellCheck" xml:space="preserve">
+    <value>Sprawdź pisownię</value>
+  </data>
+  <data name="Tools_SpellCheck_NoErrors" xml:space="preserve">
+    <value>Nie wykryto błędów pisowni.</value>
+  </data>
+  <data name="Tools_SpellCheck_NotConfigured" xml:space="preserve">
+    <value>Funkcja sprawdzania pisowni nie została skonfigurowana.</value>
+  </data>
+  <data name="Tools_SplitCell" xml:space="preserve">
+    <value>Podziel komórkę</value>
+  </data>
+  <data name="Tools_TableWidth_Header" xml:space="preserve">
+    <value>Szerokość:</value>
+  </data>
+  <data name="Tools_Title" xml:space="preserve">
+    <value>Narzędzia</value>
+  </data>
+  <data name="Tools_TopAlign" xml:space="preserve">
+    <value>Wyrównaj do góry</value>
+  </data>
+  <data name="Tools_Undo" xml:space="preserve">
+    <value>Cofnij</value>
+  </data>
+  <data name="Tools_UnmergeCell" xml:space="preserve">
+    <value>Rozdziel komórkę</value>
+  </data>
+  <data name="Tools_VerticalCenterAlign" xml:space="preserve">
+    <value>Wyrównaj do środka</value>
+  </data>
+  <data name="View_Draft" xml:space="preserve">
+    <value>Widok roboczy</value>
+  </data>
+  <data name="View_PrintLayout" xml:space="preserve">
+    <value>Widok układu wydruku</value>
+  </data>
+  <data name="View_Zoom" xml:space="preserve">
+    <value>Powiększenie</value>
+  </data>
+  <data name="Tools_FindAndReplace_ReachStart" xml:space="preserve">
+    <value>Wyszukiwanie doszło do punktu, w którym się rozpoczęło.</value>
+  </data>
+  <data name="Insert_InsertImage_UploadMessage" xml:space="preserve">
+    <value>Wybierz obraz do przesłania:</value>
+  </data>
+  <data name="Insert_InsertImage_UploadTab" xml:space="preserve">
+    <value>Przekaż</value>
+  </data>
+  <data name="Insert_InsertImage_UrlTab" xml:space="preserve">
+    <value>Adres URL</value>
+  </data>
+  <data name="Insert_InsertImage_FileFilter" xml:space="preserve">
+    <value>Pliki obrazów (*.PNG;*.JPG)|*.PNG;*.JPG|Wszystkie pliki (*.*)|*.*</value>
+  </data>
+  <data name="FormatPainter" xml:space="preserve">
+    <value>Malarz formatów</value>
+  </data>
+  <data name="Tools_Delete" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="Tools_Gridlines" xml:space="preserve">
+    <value>Linie siatki</value>
+  </data>
+  <data name="Tools_InsertAbove" xml:space="preserve">
+    <value>Wstaw powyżej</value>
+  </data>
+  <data name="Tools_InsertBelow" xml:space="preserve">
+    <value>Wstaw poniżej</value>
+  </data>
+  <data name="Tools_InsertLeft" xml:space="preserve">
+    <value>Wstaw z lewej</value>
+  </data>
+  <data name="Tools_InsertRight" xml:space="preserve">
+    <value>Wstaw z prawej</value>
+  </data>
+  <data name="Tools_Picture" xml:space="preserve">
+    <value>Obraz</value>
+  </data>
+  <data name="Tools_Select" xml:space="preserve">
+    <value>Zaznacz</value>
+  </data>
+  <data name="Tools_Spelling" xml:space="preserve">
+    <value>Pisownia</value>
+  </data>
+  <data name="Tools_Unmerge" xml:space="preserve">
+    <value>Rozdziel</value>
+  </data>
+  <data name="Edit_Title" xml:space="preserve">
+    <value>Edytuj</value>
+  </data>
+  <data name="Color_Aqua_ToolTip" xml:space="preserve">
+    <value>Akwamaryna</value>
+  </data>
+  <data name="Color_Black_ToolTip" xml:space="preserve">
+    <value>Czarny</value>
+  </data>
+  <data name="Color_Blue_ToolTip" xml:space="preserve">
+    <value>Niebieski</value>
+  </data>
+  <data name="Color_Brown_ToolTip" xml:space="preserve">
+    <value>Brązowy</value>
+  </data>
+  <data name="Color_DarkBlue_ToolTip" xml:space="preserve">
+    <value>Ciemnoniebieski</value>
+  </data>
+  <data name="Color_DarkGreen_ToolTip" xml:space="preserve">
+    <value>Ciemnozielony</value>
+  </data>
+  <data name="Color_DarkPurple_ToolTip" xml:space="preserve">
+    <value>Ciemnopurpurowy</value>
+  </data>
+  <data name="Color_DarkRed_ToolTip" xml:space="preserve">
+    <value>Ciemnoczerwony</value>
+  </data>
+  <data name="Color_EightyGray_ToolTip" xml:space="preserve">
+    <value>Szary-80%</value>
+  </data>
+  <data name="Color_FifteenGray_ToolTip" xml:space="preserve">
+    <value>Szary-15%</value>
+  </data>
+  <data name="Color_FiftyGray_ToolTip" xml:space="preserve">
+    <value>Szary-50%</value>
+  </data>
+  <data name="Color_FortyGray_ToolTip" xml:space="preserve">
+    <value>Szary-40%</value>
+  </data>
+  <data name="Color_Gold_ToolTip" xml:space="preserve">
+    <value>Złoty</value>
+  </data>
+  <data name="Color_Green_ToolTip" xml:space="preserve">
+    <value>Zielony</value>
+  </data>
+  <data name="Color_LightGreen_ToolTip" xml:space="preserve">
+    <value>Jasnozielony</value>
+  </data>
+  <data name="Color_LightYellow_ToolTip" xml:space="preserve">
+    <value>Jasnożółty</value>
+  </data>
+  <data name="Color_Lime_ToolTip" xml:space="preserve">
+    <value>Limonowy</value>
+  </data>
+  <data name="Color_Orange_ToolTip" xml:space="preserve">
+    <value>Pomarańczowy</value>
+  </data>
+  <data name="Color_Pink_ToolTip" xml:space="preserve">
+    <value>Różowy</value>
+  </data>
+  <data name="Color_Plum_ToolTip" xml:space="preserve">
+    <value>Śliwkowy</value>
+  </data>
+  <data name="Color_Purple_ToolTip" xml:space="preserve">
+    <value>Purpurowy</value>
+  </data>
+  <data name="Color_Red_ToolTip" xml:space="preserve">
+    <value>Czerwony</value>
+  </data>
+  <data name="Color_Rose_ToolTip" xml:space="preserve">
+    <value>Różany</value>
+  </data>
+  <data name="Color_SeventyFiveGray_ToolTip" xml:space="preserve">
+    <value>Szary-75%</value>
+  </data>
+  <data name="Color_SkyBlue_ToolTip" xml:space="preserve">
+    <value>Lazurowy</value>
+  </data>
+  <data name="Color_SlateBlue_ToolTip" xml:space="preserve">
+    <value>Łupkowoniebieski</value>
+  </data>
+  <data name="Color_Turquoise_ToolTip" xml:space="preserve">
+    <value>Turkusowy</value>
+  </data>
+  <data name="Color_TwentyFiveGray_ToolTip" xml:space="preserve">
+    <value>Szary-25%</value>
+  </data>
+  <data name="Color_White_ToolTip" xml:space="preserve">
+    <value>Biały</value>
+  </data>
+  <data name="Color_Yellow_ToolTip" xml:space="preserve">
+    <value>Żółty</value>
+  </data>
+  <data name="Insert_ImageDialog_File" xml:space="preserve">
+    <value>Wybierz obraz...</value>
+  </data>
+  <data name="Insert_ImageDialog_Url" xml:space="preserve">
+    <value>Wstaw obraz</value>
+  </data>
+  <data name="Insert_InsertHyperlink_Button" xml:space="preserve">
+    <value>Wstaw hiperlink</value>
+  </data>
+  <data name="Insert_InsertTable_Button" xml:space="preserve">
+    <value>Wstaw tabelę</value>
+  </data>
+  <data name="Insert_InsertTable_ColumnLabel" xml:space="preserve">
+    <value>Liczba kolumn:</value>
+  </data>
+  <data name="Insert_InsertTable_RowLabel" xml:space="preserve">
+    <value>Liczba wierszy:</value>
+  </data>
+  <data name="List_Header" xml:space="preserve">
+    <value>Lista</value>
+  </data>
+  <data name="Tools_BottomAlignMenuTool_Header" xml:space="preserve">
+    <value>Dół</value>
+  </data>
+  <data name="Tools_CenterAlign_Header" xml:space="preserve">
+    <value>Środek</value>
+  </data>
+  <data name="Tools_ClearFormatting_Header" xml:space="preserve">
+    <value>Wyczyść formatowanie</value>
+  </data>
+  <data name="Tools_ClearFormatting_ToolTip" xml:space="preserve">
+    <value>Wyczyść formatowanie tekstu</value>
+  </data>
+  <data name="Tools_DecreaseFontSize_Header" xml:space="preserve">
+    <value>Zmniejsz</value>
+  </data>
+  <data name="Tools_DecreaseFontSize_ToolTip" xml:space="preserve">
+    <value>Zmniejsz rozmiar czcionki</value>
+  </data>
+  <data name="Tools_DeleteTable_Cells" xml:space="preserve">
+    <value>Usuń komórki tabeli</value>
+  </data>
+  <data name="Tools_DeleteTable_Columns" xml:space="preserve">
+    <value>Usuń kolumny tabeli</value>
+  </data>
+  <data name="Tools_DeleteTable_Rows" xml:space="preserve">
+    <value>Usuń wiersze tabeli</value>
+  </data>
+  <data name="Tools_DeleteTable_Table" xml:space="preserve">
+    <value>Usuń tę tabelę</value>
+  </data>
+  <data name="Tools_Error" xml:space="preserve">
+    <value>Błąd</value>
+  </data>
+  <data name="Tools_FillColor_Header" xml:space="preserve">
+    <value>Wypełnienie</value>
+  </data>
+  <data name="Tools_FillColor_ToolTip" xml:space="preserve">
+    <value>Kolor wypełnienia</value>
+  </data>
+  <data name="Tools_IncreaseFontSize_Header" xml:space="preserve">
+    <value>Zwiększ</value>
+  </data>
+  <data name="Tools_IncreaseFontSize_ToolTip" xml:space="preserve">
+    <value>Zwiększ rozmiar czcionki</value>
+  </data>
+  <data name="Tools_InsertHyperlink_Header" xml:space="preserve">
+    <value>Hiperlink</value>
+  </data>
+  <data name="Tools_InsertImage_Header" xml:space="preserve">
+    <value>Obraz</value>
+  </data>
+  <data name="Tools_InsertImage_ToolTip" xml:space="preserve">
+    <value>Wstaw obraz</value>
+  </data>
+  <data name="Tools_LeftAlign_Header" xml:space="preserve">
+    <value>Lewa</value>
+  </data>
+  <data name="Tools_LeftAlign_ToolTip" xml:space="preserve">
+    <value>Wyrównaj do lewej</value>
+  </data>
+  <data name="Tools_Numbering_ToolTip" xml:space="preserve">
+    <value>Lista numerowana</value>
+  </data>
+  <data name="Tools_Redo_Header" xml:space="preserve">
+    <value>Ponów</value>
+  </data>
+  <data name="Tools_RightAlign_Header" xml:space="preserve">
+    <value>Prawa</value>
+  </data>
+  <data name="Tools_RightAlign_ToolTip" xml:space="preserve">
+    <value>Wyrównaj do prawej</value>
+  </data>
+  <data name="Tools_SelectAll_Header" xml:space="preserve">
+    <value>Zaznacz wszystko</value>
+  </data>
+  <data name="Tools_SelectTable_Cells_Header" xml:space="preserve">
+    <value>Zaznacz komórki</value>
+  </data>
+  <data name="Tools_SelectTable_Cells_ToolTip" xml:space="preserve">
+    <value>Zaznacz komórki tabeli</value>
+  </data>
+  <data name="Tools_SelectTable_Columns_Header" xml:space="preserve">
+    <value>Zaznacz kolumny</value>
+  </data>
+  <data name="Tools_SelectTable_Columns_ToolTip" xml:space="preserve">
+    <value>Zaznacz kolumny tabeli</value>
+  </data>
+  <data name="Tools_SelectTable_Rows_Header" xml:space="preserve">
+    <value>Zaznacz wiersze</value>
+  </data>
+  <data name="Tools_SelectTable_Rows_ToolTip" xml:space="preserve">
+    <value>Zaznacz wiersze tabeli</value>
+  </data>
+  <data name="Tools_SelectTable_Table_Header" xml:space="preserve">
+    <value>Zaznacz tabelę</value>
+  </data>
+  <data name="Tools_SelectTable_Table_ToolTip" xml:space="preserve">
+    <value>Zaznacz tę tabelę</value>
+  </data>
+  <data name="Tools_Strikethrough_Header" xml:space="preserve">
+    <value>Przekreślenie</value>
+  </data>
+  <data name="Tools_Subscript_ToolTip" xml:space="preserve">
+    <value>Indeks dolny</value>
+  </data>
+  <data name="Tools_Superscript_ToolTip" xml:space="preserve">
+    <value>Indeks górny</value>
+  </data>
+  <data name="Tools_TextHighlight_Header" xml:space="preserve">
+    <value>Wyróżnienie</value>
+  </data>
+  <data name="Tools_TextHighlight_ToolTip" xml:space="preserve">
+    <value>Kolor wyróżnienia tekstu</value>
+  </data>
+  <data name="Tools_TopAlign_Header" xml:space="preserve">
+    <value>Góra</value>
+  </data>
+  <data name="ViewTab_Header" xml:space="preserve">
+    <value>Widok</value>
+  </data>
+  <data name="View_DocumentViews" xml:space="preserve">
+    <value>Widoki</value>
+  </data>
+  <data name="View_FitWidth" xml:space="preserve">
+    <value>Dopasuj do szerokości</value>
+  </data>
+  <data name="View_OnePage" xml:space="preserve">
+    <value>Jedna strona</value>
+  </data>
+  <data name="View_TwoPages" xml:space="preserve">
+    <value>Dwie strony</value>
+  </data>
+  <data name="Tools_ZoomIn" xml:space="preserve">
+    <value>Powiększ</value>
+  </data>
+  <data name="Tools_Zoom100PercentTool" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="Tools_ZoomOut" xml:space="preserve">
+    <value>Pomniejsz</value>
+  </data>
+  <data name="Font_Strikethrough" xml:space="preserve">
+    <value>Przekreślenie</value>
+  </data>
+  <data name="Font_StrikethroughInitial" xml:space="preserve">
+    <value>abc</value>
+  </data>
+  <data name="Tools_RemoveHyperlink_Header" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="Selected_Document" xml:space="preserve">
+    <value>&lt;&lt;Zaznaczenie w dokumencie&gt;&gt;</value>
+  </data>
+  <data name="Line_Number" xml:space="preserve">
+    <value>Numery wierszy</value>
+  </data>
+  <data name="LineNumberMode_None" xml:space="preserve">
+    <value>Brak</value>
+  </data>
+  <data name="LineNumberMode_Continuous" xml:space="preserve">
+    <value>Ciągły</value>
+  </data>
+  <data name="LineNumberMode_RestartEachPage" xml:space="preserve">
+    <value>Rozpocznij nową stronę</value>
+  </data>
+  <data name="LineSpacing" xml:space="preserve">
+    <value>Line Spacing</value>
+  </data>
+</root>

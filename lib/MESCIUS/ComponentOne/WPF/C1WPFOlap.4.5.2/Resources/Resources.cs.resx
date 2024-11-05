@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FilterTypes" xml:space="preserve">
+    <value>Číselný filtr | Filtr data a času | Textový filtr</value>
+  </data>
+  <data name="Conditions" xml:space="preserve">
+    <value>Žádný | Rovná se | Nerovná se | Větší než | Menší než | Větší nebo rovno | Menší nebo rovno | Obsahuje | Neobsahuje | Začíná | Končí</value>
+  </data>
+  <data name="SubtotalFuncs" xml:space="preserve">
+    <value>Součet | Počet | Průměr | Maximum | Minimum | První | Poslední | Rozptyl | Směrodatná odchylka | Populace pro rozptyl | Populace pro směrodatnou odchylku</value>
+  </data>
+  <data name="ShowTotalsColumn" xml:space="preserve">
+    <value>Zobrazit součet sloupců</value>
+  </data>
+  <data name="ShowTotalsRow" xml:space="preserve">
+    <value>Zobrazit součet řádků</value>
+  </data>
+  <data name="ShowZeros" xml:space="preserve">
+    <value>Zobrazit nuly</value>
+  </data>
+  <data name="ShowDetailOnRightClick" xml:space="preserve">
+    <value>Po klepnutí na pravé tlačítko zobrazit podrobnosti</value>
+  </data>
+  <data name="ShowSelectionStatus" xml:space="preserve">
+    <value>Zobrazit stav výběru</value>
+  </data>
+  <data name="ChartOptions" xml:space="preserve">
+    <value>Možnosti grafu</value>
+  </data>
+  <data name="GridOptions" xml:space="preserve">
+    <value>Možnosti mřížky</value>
+  </data>
+  <data name="ChartType" xml:space="preserve">
+    <value>Typ grafu</value>
+  </data>
+  <data name="Palette" xml:space="preserve">
+    <value>Paleta</value>
+  </data>
+  <data name="ShowGridLines" xml:space="preserve">
+    <value>Zobrazit mřížku</value>
+  </data>
+  <data name="ShowTitle" xml:space="preserve">
+    <value>Zobrazit název</value>
+  </data>
+  <data name="Stacked" xml:space="preserve">
+    <value>Vrstvový</value>
+  </data>
+  <data name="ShowLegend" xml:space="preserve">
+    <value>Zobrazit legendu</value>
+  </data>
+  <data name="RawDataOptions" xml:space="preserve">
+    <value>Možnosti nezpracovaných dat</value>
+  </data>
+  <data name="ShowRawData" xml:space="preserve">
+    <value>Zobrazit nezpracovaná data</value>
+  </data>
+  <data name="DateFormats" xml:space="preserve">
+    <value>MMMM dd, yyyy|d|d/M/yy|dd/MM/yy|dd/MM/yyyy|MMM yyyy|MMMM yyyy|d-MMM-yy|d-MMM-yyyy|Vlastní</value>
+  </data>
+  <data name="NumberFormats" xml:space="preserve">
+    <value>Číselná | Měna | Procenta | Vědecká | Vlastní</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>Žádný</value>
+  </data>
+  <data name="ChartTypes" xml:space="preserve">
+    <value>Řádkový | Sloupcový| Plošný | Spojnicový | Bodový | Pie</value>
+  </data>
+  <data name="DecimalPlaces" xml:space="preserve">
+    <value>Desetinná místa:</value>
+  </data>
+  <data name="InvalidFormat" xml:space="preserve">
+    <value>Neplatný formát</value>
+  </data>
+  <data name="Sample" xml:space="preserve">
+    <value>Vzorek:</value>
+  </data>
+  <data name="UseThousandSeparator" xml:space="preserve">
+    <value>Použít oddělovač tisíců</value>
+  </data>
+  <data name="CustomFormat" xml:space="preserve">
+    <value>Vlastní formát:</value>
+  </data>
+  <data name="BeginsWith" xml:space="preserve">
+    <value>Začíná…</value>
+  </data>
+  <data name="Between" xml:space="preserve">
+    <value>Mezi…</value>
+  </data>
+  <data name="ClearFilter" xml:space="preserve">
+    <value>Zrušit filtr</value>
+  </data>
+  <data name="Contains" xml:space="preserve">
+    <value>Obsahuje…</value>
+  </data>
+  <data name="CustomFilter" xml:space="preserve">
+    <value>Vlastní filtr</value>
+  </data>
+  <data name="DoesNotContain" xml:space="preserve">
+    <value>Neobsahuje…</value>
+  </data>
+  <data name="DoesNotEqual" xml:space="preserve">
+    <value>Nerovná se…</value>
+  </data>
+  <data name="EndsWith" xml:space="preserve">
+    <value>Končí…</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filtr</value>
+  </data>
+  <data name="GreaterThan" xml:space="preserve">
+    <value>Větší než…</value>
+  </data>
+  <data name="GreaterThanOrEqualTo" xml:space="preserve">
+    <value>Větší nebo rovno…</value>
+  </data>
+  <data name="LessThan" xml:space="preserve">
+    <value>Menší než…</value>
+  </data>
+  <data name="LessThanOrEqualTo" xml:space="preserve">
+    <value>Menší nebo rovno…</value>
+  </data>
+  <data name="MnuEquals" xml:space="preserve">
+    <value>Rovná se…</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>(vybrat vše)</value>
+  </data>
+  <data name="ActualSize" xml:space="preserve">
+    <value>Skutečná velikost</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>Dolní:</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Storno</value>
+  </data>
+  <data name="Display" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="FitToOnePage" xml:space="preserve">
+    <value>Jedna stránka</value>
+  </data>
+  <data name="FitToPageWidth" xml:space="preserve">
+    <value>Podle šířky stránky</value>
+  </data>
+  <data name="Format" xml:space="preserve">
+    <value>Formát</value>
+  </data>
+  <data name="HighValues" xml:space="preserve">
+    <value>Vysoké hodnoty</value>
+  </data>
+  <data name="IncludeInReport" xml:space="preserve">
+    <value>Zahrnout do zprávy</value>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>Levý:</value>
+  </data>
+  <data name="LowValues" xml:space="preserve">
+    <value>Nízké hodnoty</value>
+  </data>
+  <data name="Margin" xml:space="preserve">
+    <value>Okraj:</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OlapChart" xml:space="preserve">
+    <value>Graf</value>
+  </data>
+  <data name="OlapGrid" xml:space="preserve">
+    <value>Mřížka</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>Nebo</value>
+  </data>
+  <data name="Padding" xml:space="preserve">
+    <value>Odsazení:</value>
+  </data>
+  <data name="RawData" xml:space="preserve">
+    <value>Nezpracovaná data</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>Pravý:</value>
+  </data>
+  <data name="Scaling" xml:space="preserve">
+    <value>Měřítko:</value>
+  </data>
+  <data name="ShowItems" xml:space="preserve">
+    <value>Zobrazit položky s hodnotou:</value>
+  </data>
+  <data name="Subtotals" xml:space="preserve">
+    <value>Mezisoučet</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Horní:</value>
+  </data>
+  <data name="WeighBy" xml:space="preserve">
+    <value>Porovnat podle:</value>
+  </data>
+  <data name="ChooseFields" xml:space="preserve">
+    <value>Vyberte pole, která mají být přidána do tabulky:</value>
+  </data>
+  <data name="ColumnFields" xml:space="preserve">
+    <value>Pole ve sloupci</value>
+  </data>
+  <data name="CurrentDate" xml:space="preserve">
+    <value>Aktuální datum</value>
+  </data>
+  <data name="CurrentTime" xml:space="preserve">
+    <value>Aktuální čas</value>
+  </data>
+  <data name="DeferUpdates" xml:space="preserve">
+    <value>Odložit aktualizace</value>
+  </data>
+  <data name="DragFields" xml:space="preserve">
+    <value>Přetáhnout pole mezi níže uvedenými oblasti:</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Zápatí:</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Hlavička:</value>
+  </data>
+  <data name="HeaderFooter" xml:space="preserve">
+    <value>Hlavička/zápatí</value>
+  </data>
+  <data name="MoveDown" xml:space="preserve">
+    <value>Přesunout dolů</value>
+  </data>
+  <data name="MoveToBeginning" xml:space="preserve">
+    <value>Přesunout na začátek</value>
+  </data>
+  <data name="MoveToColumnFields" xml:space="preserve">
+    <value>Přesunout do polí ve sloupci</value>
+  </data>
+  <data name="MoveToEnd" xml:space="preserve">
+    <value>Přesunout na konec</value>
+  </data>
+  <data name="MoveToFilterFields" xml:space="preserve">
+    <value>Přesunout do polí filtru</value>
+  </data>
+  <data name="MoveToRowFields" xml:space="preserve">
+    <value>Přesunout do polí v řádku</value>
+  </data>
+  <data name="MoveToValueFields" xml:space="preserve">
+    <value>Přesunout do polí s hodnotami</value>
+  </data>
+  <data name="MoveUp" xml:space="preserve">
+    <value>Přesunout nahoru</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Strana</value>
+  </data>
+  <data name="PageNumber" xml:space="preserve">
+    <value>Číslo stránky</value>
+  </data>
+  <data name="RemoveField" xml:space="preserve">
+    <value>Odebrat pole</value>
+  </data>
+  <data name="ReportContent" xml:space="preserve">
+    <value>Obsah zprávy</value>
+  </data>
+  <data name="RowFields" xml:space="preserve">
+    <value>Pole řádku</value>
+  </data>
+  <data name="Separator" xml:space="preserve">
+    <value>Oddělovač</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Název</value>
+  </data>
+  <data name="TotalPageCount" xml:space="preserve">
+    <value>Celkový počet stran</value>
+  </data>
+  <data name="Values" xml:space="preserve">
+    <value>Hodnoty</value>
+  </data>
+  <data name="FieldSettings" xml:space="preserve">
+    <value>Nastavení pole…</value>
+  </data>
+  <data name="Chart" xml:space="preserve">
+    <value>Graf</value>
+  </data>
+  <data name="CustomizeGridView" xml:space="preserve">
+    <value>Přizpůsobit zobrazení mřížky</value>
+  </data>
+  <data name="GrandTotals" xml:space="preserve">
+    <value>Celkový součet</value>
+  </data>
+  <data name="LoadViewFromFile" xml:space="preserve">
+    <value>Načíst pohled Olap ze souboru</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Možnosti…</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Tisk</value>
+  </data>
+  <data name="Redo" xml:space="preserve">
+    <value>Opakovat</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Zpráva</value>
+  </data>
+  <data name="SaveViewToFile" xml:space="preserve">
+    <value>Uložit pohled Olap do souboru</value>
+  </data>
+  <data name="TotalColumns" xml:space="preserve">
+    <value>Celkový počet sloupců</value>
+  </data>
+  <data name="TotalRows" xml:space="preserve">
+    <value>Celkový počet řádků</value>
+  </data>
+  <data name="TotalsOnly" xml:space="preserve">
+    <value>Pouze součty</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Vrátit zpět</value>
+  </data>
+  <data name="GenerateReports" xml:space="preserve">
+    <value>Vygenerovat zprávy na základě aktuálního pohledu</value>
+  </data>
+  <data name="Absolute" xml:space="preserve">
+    <value>Absolutní</value>
+  </data>
+  <data name="ApplyToValuesAbove" xml:space="preserve">
+    <value>Použít na hodnoty větší než</value>
+  </data>
+  <data name="Background" xml:space="preserve">
+    <value>Pozadí:</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>Tučné:</value>
+  </data>
+  <data name="Caption" xml:space="preserve">
+    <value>Popisek</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Vymazat</value>
+  </data>
+  <data name="Foreground" xml:space="preserve">
+    <value>Popředí:</value>
+  </data>
+  <data name="NotSet" xml:space="preserve">
+    <value>Nenastaveno</value>
+  </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>Procentní</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Styl</value>
+  </data>
+  <data name="ApplyToValuesBelow" xml:space="preserve">
+    <value>Použít na hodnoty nižší než</value>
+  </data>
+  <data name="DefaultExtension" xml:space="preserve">
+    <value>.olapx</value>
+  </data>
+  <data name="DocumentOptions" xml:space="preserve">
+    <value>Možnosti dokumentu</value>
+  </data>
+  <data name="FieldSettingsParam" xml:space="preserve">
+    <value>Nastavení pole: {0}</value>
+  </data>
+  <data name="FileDialogFilter" xml:space="preserve">
+    <value>Soubory definice pohledu C1Olap (*.olapx)|*.olapx</value>
+  </data>
+  <data name="StyleConditions" xml:space="preserve">
+    <value>Nenastaveno | Absolutní | Procentní</value>
+  </data>
+  <data name="Grid" xml:space="preserve">
+    <value>Mřížka</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>podle</value>
+  </data>
+  <data name="CustomizeChartView" xml:space="preserve">
+    <value>Customize chart view</value>
+  </data>
+  <data name="DetailView" xml:space="preserve">
+    <value>Detail View:</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>items</value>
+  </data>
+  <data name="Subtotal" xml:space="preserve">
+    <value>Subtotal</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="GroupAnnotations" xml:space="preserve">
+    <value>Skupina anotace</value>
+  </data>
+  <data name="ExportDialogDefaultExt" xml:space="preserve">
+    <value>.csv</value>
+  </data>
+  <data name="ExportDialogFilter" xml:space="preserve">
+    <value>CSV (*.csv)|*.csv|Webpage(*.html)|*.html|Text (*.txt)|*.txt</value>
+  </data>
+</root>

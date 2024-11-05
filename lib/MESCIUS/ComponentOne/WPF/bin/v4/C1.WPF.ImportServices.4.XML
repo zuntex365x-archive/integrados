@@ -1,0 +1,2224 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>C1.WPF.ImportServices.4</name>
+  </assembly>
+  <members>
+    <member name="T:C1.WPF.Ssrs.SecurityException">
+      <summary>
+            Exception caused by invalid user credentials during connection.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.SecurityException.#ctor(System.String,System.Exception)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Ssrs.SecurityException" /> class.
+            </summary>
+      <param name="path">Path accessing which leads to exception.</param>
+      <param name="ex">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+    </member>
+    <member name="P:C1.WPF.Ssrs.SecurityException.Path">
+      <summary>
+            Gets a path accessing which leads to exception.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Ssrs.ConnectionBase">
+      <summary>
+            Base class representing connection to the SSRS server.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ConnectionBase.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Ssrs.ConnectionBase" /> class.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ConnectionBase.Finalize">
+      <summary>
+            Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ConnectionBase.ParameterValueToString(System.Object)">
+      <summary>
+            Converts value to the string which can be used as parameter value in the <see cref="M:C1.WPF.Ssrs.ReportSession.RefreshParameters(System.Collections.Generic.IList{C1.WPF.ImportServices.ReportExecutionWPF.ParameterValue},System.Threading.CancellationToken)" /> etc.
+            </summary>
+      <param name="value">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ConnectionBase.TryParameterValueFromString(System.String,C1.WPF.ImportServices.ReportExecutionWPF.ParameterTypeEnum,System.Object@)">
+      <summary>
+            Converts string representing parameter value to object,
+            returns <b>true</b> if conversion successfull, false otherwise.
+            </summary>
+      <param name="str">
+      </param>
+      <param name="parameterType">
+      </param>
+      <param name="v">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ConnectionBase.Dispose">
+      <summary>
+            Releases all resources used by the <see cref="T:C1.WPF.Ssrs.ConnectionBase" /> object.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ConnectionBase.SetConnectionOptions(System.String,C1.WPF.Ssrs.ConnectionOptions)">
+      <summary>
+            Sets the current connection options.
+            </summary>
+      <param name="reportServer">Address of SSRS server, like http://www.site.com/ReportServer. </param>
+      <param name="connectionOptions">
+        <see cref="P:C1.WPF.Ssrs.ConnectionBase.ConnectionOptions" /> object defines type of authentication, credential etc.</param>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ConnectionBase.Language">
+      <summary>
+            Gets or sets the language used in the SSRS session.
+            The culture specified by this property affects User!Language report identifier.
+            By default this property is null, which means that CultureInfo.CurrentUICulture will be used.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ConnectionBase.ReportServer">
+      <summary>
+            Gets the address of SSRS server used in connection.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ConnectionBase.ConnectionOptions">
+      <summary>
+            Gets the <see cref="P:C1.WPF.Ssrs.ConnectionBase.ConnectionOptions" /> class specifies type of authentication, credential etc.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ConnectionBase.Combine(System.String,System.String)">
+      <summary>
+            Combines two strings into a path.
+            </summary>
+      <param name="addr1">The first path to combine.</param>
+      <param name="addr2">The second path to combine.</param>
+      <returns>The combined paths. If one of the specified paths is a zero-length string, this method returns the other path.</returns>
+    </member>
+    <member name="T:C1.WPF.Ssrs.AuthenticationType">
+      <summary>
+            Defines SSRS authentication types.
+            These values correspond to <b>Authentication</b> section in
+            <b>rsreportserver.config</b> file.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Ssrs.AuthenticationType.Negotiate">
+      <summary>
+            Use this setting if SSRS supports following autentication types:
+            <b>RSWindowsNegotiate</b>, <b>RSWindowsKerberos</b>.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Ssrs.AuthenticationType.NTLM">
+      <summary>
+            Use this setting if SSRS supports: <b>RSWindowsNTLM</b>.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Ssrs.AuthenticationType.Basic">
+      <summary>
+            Use this setting if SSRS supports: <b>RSWindowsBasic</b>.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Ssrs.ConnectionOptions">
+      <summary>
+            Defines options used when connecting to SSRS.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ConnectionOptions.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Ssrs.ConnectionOptions" /> class.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ConnectionOptions.#ctor(System.Net.NetworkCredential)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Ssrs.ConnectionOptions" /> class.
+            </summary>
+      <param name="credential">Value of <see cref="P:C1.WPF.Ssrs.ConnectionOptions.Credential" /> property.s</param>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ConnectionOptions.AuthenticationType">
+      <summary>
+            Gets or sets the type of authentication used in SSRS connection.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ConnectionOptions.Timeout">
+      <summary>
+            Gets or sets the number of milliseconds to wait for server communications.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ConnectionOptions.Credential">
+      <summary>
+            Gets or sets credential used is SSRS connection.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Ssrs.ConnectionOptions.NetworkCredentialTypeConverter">
+      <summary>
+            Provides <see cref="T:System.ComponentModel.TypeConverter" /> for the <see cref="T:C1.WPF.Ssrs.ConnectionOptions.NetworkCredentialTypeConverter" /> class.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ConnectionOptions.NetworkCredentialTypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>
+            Tests whether an object of the specified type can be converted to the type of this converter.
+            </summary>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+      <param name="type">A <see cref="T:System.Type" /> that represents the type to convert from.</param>
+      <returns>True if this converter can perform the conversion, false otherwise.</returns>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ConnectionOptions.NetworkCredentialTypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>
+            Converts the given value object to the specified type.
+            </summary>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+      <param name="culture">A <see cref="T:System.Globalization.CultureInfo" />. If a null reference (Nothing in Visual Basic) is passed, the current culture is assumed.</param>
+      <param name="value">The object to convert.</param>
+      <param name="type">The <see cref="T:System.Type" /> to convert the <i>value</i> parameter to.</param>
+      <returns>An <b>Object</b> that represents the converted value.</returns>
+    </member>
+    <member name="T:C1.WPF.Ssrs.IReaderLog">
+      <summary>
+            Allows a <see cref="T:C1.WPF.Ssrs.ReaderBase" /> to build a log while parsing an SSRS stream (RPL or RGDI).
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.IReaderLog.Log(System.String)">
+      <summary>
+            Logs a message.
+            </summary>
+      <param name="message">The logged message.</param>
+    </member>
+    <member name="M:C1.WPF.Ssrs.IReaderLog.Log(System.String,System.Object[])">
+      <summary>
+            Logs a formatted message.
+            </summary>
+      <param name="format">The message formatting string.</param>
+      <param name="args">The list of parameters supplied to the formatting string.</param>
+    </member>
+    <member name="P:C1.WPF.Ssrs.IReaderLog.Indent">
+      <summary>
+            Gets or sets the indent for the log.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Ssrs.ReaderException">
+      <summary>
+            Represents an exception that occurred while parsing an SSRS stream (RPL or RGDI).
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReaderException.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Ssrs.ReaderException" /> class with common
+            error message "Invalid stream".
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReaderException.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Ssrs.ReaderException" /> class 
+            with a specified error message.
+            </summary>
+      <param name="message">The exception error message.</param>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReaderException.#ctor(System.String,System.Object[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Ssrs.ReaderException" /> class 
+            with a formatted error message.
+            </summary>
+      <param name="message">The exception message formatting string.</param>
+      <param name="args">The list of parameters supplied to the formatting string.</param>
+    </member>
+    <member name="T:C1.WPF.Ssrs.ReaderBase">
+      <summary>
+            Abstract base class for classes used to read SSRS streams (RPL or RGDI).
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Ssrs.ReaderBase.m_Br">
+      <summary>
+            For internal use only.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReaderBase.#ctor(System.IO.Stream,C1.WPF.Ssrs.IReaderLog)">
+      <summary>
+            Initializes a new instance of the ReaderBase class.
+            </summary>
+      <param name="stream">The input stream.</param>
+      <param name="log">The object to use for building the input parsing log.</param>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReaderBase.Init">
+      <summary>
+            For internal use.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReaderBase.Dispose">
+      <summary>
+            Disposes the current instance.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ReaderBase.Eof">
+      <summary>
+            Gets a value indicating whether the end of the underlying stream has been reached.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ReaderBase.Stream">
+      <summary>
+            Gets the underlying stream.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ReaderBase.Log">
+      <summary>
+            Gets the <see cref="T:C1.WPF.Ssrs.IReaderLog" /> object used to build the parsing log.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ReaderBase.Offset">
+      <summary>
+            Gets the current offset in the underlying stream.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Ssrs.PageLayout">
+      <summary>
+            Defines the page layout used then report generated.
+            Values specified via <see cref="T:C1.WPF.Ssrs.PageLayout" /> overrides the report original settings.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.PageLayout.Columns">
+      <summary>
+            Gets or sets the number of columns.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.PageLayout.ColumnSpacing">
+      <summary>
+            Gets or sets the column spacing in millimeters.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.PageLayout.MarginLeft">
+      <summary>
+            Gets or sets the left margin in millimeters.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.PageLayout.MarginTop">
+      <summary>
+            Gets or sets the top margin in millimeters.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.PageLayout.MarginRight">
+      <summary>
+            Gets or sets the right margin in millimeters.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.PageLayout.MarginBottom">
+      <summary>
+            Gets or sets the bottom margin in millimeters.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.PageLayout.PageWidth">
+      <summary>
+            Gets or sets the page width in millimeters.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.PageLayout.PageHeight">
+      <summary>
+            Gets or sets the page height in millimeters.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Ssrs.ReportAddressBase">
+      <summary>
+            Base class represents address of the report.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Ssrs.ReportAddress">
+      <summary>
+            Defines address of the report via full path of the report on the server.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportAddress.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Ssrs.ReportAddress" /> class.
+            </summary>
+      <param name="reportPath">Full path of the report.</param>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportAddress.ToString">
+      <summary>
+            Converts the value of the current <see cref="T:C1.WPF.Ssrs.ReportAddress" /> object to its equivalent string representation.
+            </summary>
+      <returns>A string representation of the value of the current <see cref="T:C1.WPF.Ssrs.ReportAddress" /> object.</returns>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ReportAddress.ReportPath">
+      <summary>
+            Gets the full address of the report.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Ssrs.DrillthroughReportAddress">
+      <summary>
+            Defines address of the drillthrough report.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.DrillthroughReportAddress.#ctor(System.String,System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Ssrs.DrillthroughReportAddress" /> class.
+            </summary>
+      <param name="executionID">Execution ID of the master report.</param>
+      <param name="drillthroughID">Drillthrough ID specifies the drillthrough report.</param>
+    </member>
+    <member name="M:C1.WPF.Ssrs.DrillthroughReportAddress.ToString">
+      <summary>
+            Converts the value of the current <see cref="T:C1.WPF.Ssrs.DrillthroughReportAddress" /> object to its equivalent string representation.
+            </summary>
+      <returns>A string representation of the value of the current <see cref="T:C1.WPF.Ssrs.DrillthroughReportAddress" /> object.</returns>
+    </member>
+    <member name="P:C1.WPF.Ssrs.DrillthroughReportAddress.ExecutionID">
+      <summary>
+            Gets the execution ID of the master report.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.DrillthroughReportAddress.DrillthroughID">
+      <summary>
+            Gets the ID of drillthrough report.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Ssrs.SessionReportAddress">
+      <summary>
+            Defines address of the report session.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.SessionReportAddress.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Ssrs.SessionReportAddress" /> class.
+            </summary>
+      <param name="sessionID">Session ID of the report.</param>
+    </member>
+    <member name="M:C1.WPF.Ssrs.SessionReportAddress.ToString">
+      <summary>
+            Converts the value of the current <see cref="T:C1.WPF.Ssrs.SessionReportAddress" /> object to its equivalent string representation.
+            </summary>
+      <returns>A string representation of the value of the current <see cref="T:C1.WPF.Ssrs.SessionReportAddress" /> object.</returns>
+    </member>
+    <member name="P:C1.WPF.Ssrs.SessionReportAddress.SessionID">
+      <summary>
+            Gets the session ID of the report.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Ssrs.ReportPosition">
+      <summary>
+            Defines position within report.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportPosition.#ctor(System.String,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Ssrs.ReportPosition" /> class.
+            </summary>
+      <param name="reportItemID">The ID of the report item.</param>
+      <param name="pageIndex">The index of the page.</param>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ReportPosition.ReportItemID">
+      <summary>
+            Gets the ID of the report item.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ReportPosition.PageIndex">
+      <summary>
+            The page index.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Ssrs.ReportSession">
+      <summary>
+            Represents a connection to the report on the SSRS server.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportSession.Dispose">
+      <summary>
+            Releases all resources used by the <see cref="T:C1.WPF.Ssrs.ReportSession" /> object.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportSession.SetConnectionOptions(System.String,C1.WPF.Ssrs.ConnectionOptions)">
+      <summary>
+            Sets the current connection options.
+            </summary>
+      <param name="reportServer">Address of SSRS server, like http://www.site.com/ReportServer. </param>
+      <param name="connectionOptions">
+        <see cref="T:C1.WPF.Ssrs.ConnectionOptions" /> object defines type of authentication, credential etc.</param>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportSession.Open(C1.WPF.Ssrs.ReportAddressBase,System.Threading.CancellationToken)">
+      <summary>
+            Loads a report, this report should be called before calling any other methods of the <see cref="T:C1.WPF.Ssrs.ReportSession" />.
+            </summary>
+      <param name="reportAddress">
+        <see cref="P:C1.WPF.Ssrs.ReportSession.ReportAddress" /> object specifies location of the report on the server.</param>
+      <param name="cancellationToken">
+        <see cref="T:System.Threading.CancellationToken" /> that can be used to cancel an action.</param>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportSession.RefreshParameters(System.Collections.Generic.IList{C1.WPF.ImportServices.ReportExecutionWPF.ParameterValue},System.Threading.CancellationToken)">
+      <summary>
+            Refreshes list of parameters.
+            </summary>
+      <param name="values">Values of the parameters.</param>
+      <param name="cancellationToken">
+        <see cref="T:System.Threading.CancellationToken" /> that can be used to cancel an action.</param>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportSession.ApplyParameterValues(C1.WPF.ImportServices.ReportExecutionWPF.ParameterValue[],System.Threading.CancellationToken)">
+      <summary>
+            Sets and validates parameter values associated with the loaded report.
+            </summary>
+      <param name="values">Values of parameters.</param>
+      <param name="cancellationToken">
+        <see cref="T:System.Threading.CancellationToken" /> that can be used to cancel an action.</param>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportSession.GetContent(System.Int32,System.Int32,C1.WPF.Ssrs.ReportSession.ReportFormat,C1.WPF.Ssrs.PageLayout,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+      <summary>
+            Generates report in specific format.
+            <paramref name="startPageIndex" /> and <paramref name="pageCount" /> specify
+            range of pages, set <paramref name="pageCount" /> to 0 to request all pages of the report.
+            </summary>
+      <param name="startPageIndex">The first page of the report to render.</param>
+      <param name="pageCount">Count of pages to load, set this parameter to 0 to request all pages of the report, <paramref name="startPageIndex" /> ignored in this case.</param>
+      <param name="format">
+        <see cref="T:C1.WPF.Ssrs.ReportSession.ReportFormat" /> object specifies the report format.</param>
+      <param name="pageLayout">
+        <see cref="T:C1.WPF.Ssrs.PageLayout" /> object specifies the page settings, this parameter used only for PDF and IMAGE formats.</param>
+      <param name="dpiX">Specifies print horizontal dpi, used only for EMF format, see PrintDpiX in SSRS help.</param>
+      <param name="dpiY">Specifies print vertical dpi, used only for EMF format, see PrintDpiY in SSRS help.</param>
+      <param name="cancellationToken">
+        <see cref="T:System.Threading.CancellationToken" /> that can be used to cancel an action.</param>
+      <returns>Array of bytes contains generated content, <b>null</b> if action was cancelled.</returns>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportSession.GetContent(System.String,System.String,System.Threading.CancellationToken)">
+      <summary>
+            Gets report content in specific format.
+            </summary>
+      <param name="format">Strings specifies report format "PDF", "IMAGE" etc.</param>
+      <param name="deviceInfo">DeviceInfo string specifies additional parameters.</param>
+      <param name="cancellationToken">
+        <see cref="T:System.Threading.CancellationToken" /> that can be used to cancel an action.</param>
+      <returns>Array of bytes contains generated content.</returns>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportSession.GetPageCount(C1.WPF.Ssrs.ReportSession.ReportFormat,C1.WPF.Ssrs.PageLayout,System.Threading.CancellationToken)">
+      <summary>
+            Returns count of pages in the report.
+            </summary>
+      <param name="format">
+        <see cref="T:C1.WPF.Ssrs.ReportSession.ReportFormat" /> object specifies the report format.</param>
+      <param name="pageLayout">
+        <see cref="T:C1.WPF.Ssrs.PageLayout" /> object specifies the page settings, this parameter used only for PDF and IMAGE formats.</param>
+      <param name="cancellationToken">
+        <see cref="T:System.Threading.CancellationToken" /> that can be used to cancel an action.</param>
+      <returns>Count of pages or -1 if actions was cancelled.</returns>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportSession.GetDocumentMap(System.Threading.CancellationToken)">
+      <summary>
+            Returns the report document map (report outlines),
+            can be called only after <see cref="M:C1.WPF.Ssrs.ReportSession.GetContent(System.Int32,System.Int32,C1.WPF.Ssrs.ReportSession.ReportFormat,C1.WPF.Ssrs.PageLayout,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)" /> method.
+            </summary>
+      <param name="cancellationToken">
+        <see cref="T:System.Threading.CancellationToken" /> that can be used to cancel an action.</param>
+      <returns>
+        <see cref="T:C1.WPF.ImportServices.ReportExecutionWPF.DocumentMapNode" /> representing report outlines, <b>null</b> if method was cancelled.</returns>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportSession.ToggleItem(System.String,System.Threading.CancellationToken)">
+      <summary>
+            Toggles the show/hide item in a report.
+            </summary>
+      <param name="toggleID">The ID of the item to toggle.</param>
+      <param name="cancellationToken">
+        <see cref="T:System.Threading.CancellationToken" /> that can be used to cancel an action.</param>
+      <returns>
+        <b>true</b> if item was successfully toggled, <b>false</b> otherwise.</returns>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportSession.Sort(System.String,C1.WPF.ImportServices.ReportExecutionWPF.SortDirectionEnum,System.Boolean,System.Threading.CancellationToken)">
+      <summary>
+            Applies or removes a sort for the report based on a user sort action.
+            </summary>
+      <param name="sortID">The ID of the report item on which to sort.</param>
+      <param name="direction">A SortDirectionEnum value containing the direction for the sort.</param>
+      <param name="clear">Indicates whether all other existing sorts should be cleared.</param>
+      <param name="cancellationToken">
+        <see cref="T:System.Threading.CancellationToken" /> that can be used to cancel an action.</param>
+      <returns>
+        <see cref="T:C1.WPF.Ssrs.ReportPosition" /> object specifies position in the report where viewer should be focused after sorting.</returns>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportSession.NavigateBookmark(System.String,System.Threading.CancellationToken)">
+      <summary>
+            Navigates to a specific bookmark in the report.
+            </summary>
+      <param name="bookmarkID">The ID of the bookmark.</param>
+      <param name="cancellationToken">
+        <see cref="T:System.Threading.CancellationToken" /> that can be used to cancel an action.</param>
+      <returns>
+        <see cref="T:C1.WPF.Ssrs.ReportPosition" /> object specifies position of the bookmark in the report, <b>null</b> if method was cancelled.</returns>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportSession.NavigateDocumentMap(System.String,System.Threading.CancellationToken)">
+      <summary>
+            Navigates to a specific section of the report.
+            </summary>
+      <param name="docMapID">The DocumentMapNode ID of the section.</param>
+      <param name="cancellationToken">
+        <see cref="T:System.Threading.CancellationToken" /> that can be used to cancel an action.</param>
+      <returns>
+        <see cref="T:C1.WPF.Ssrs.ReportPosition" /> object specifies position in the report.</returns>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ReportSession.CheckReportPath(System.String)">
+      <summary>
+            For internal use only.
+            </summary>
+      <param name="reportPath">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ReportSession.ReportAddress">
+      <summary>
+            Gets the <see cref="T:C1.WPF.Ssrs.ReportAddressBase" /> object defines report address currently opened.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ReportSession.ReportPath">
+      <summary>
+            Gets the report path currently opened.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ReportSession.ExecutionID">
+      <summary>
+            Gets the ID of SSRS session.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ReportSession.Parameters">
+      <summary>
+            Gets the list of parameters of the currently loaded report.
+            </summary>
+    </member>
+    <member name="P:C1.WPF.Ssrs.ReportSession.DefaultPageLayout">
+      <summary>
+            Gets the <see cref="T:C1.WPF.Ssrs.PageLayout" /> object specifies the default report page settings.
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Ssrs.RplReader.RplParsingException">
+      <summary>
+            Represents an exception that occurred during parsing the RPL stream.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.RplReader.RplParsingException.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Ssrs.RplReader.RplParsingException" /> class with common
+            error message "Invalid RPL stream".
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Ssrs.RplReader.RplReader">
+      <summary>
+            Implements parsing of RPL stream.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.RplReader.RplReader.ReadPage">
+      <summary>
+            Reads next page from RPL stream, returns <b>null</b> if stream has no more pages.
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:C1.WPF.Ssrs.RplReader.RplReader.GetPage(System.Int32)">
+      <summary>
+            Gets page with specified index from stream,
+            before calling of this method all pages should be read via ReadPage() method.
+            </summary>
+      <param name="pageIndex">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:C1.WPF.Ssrs.RplReader.RplReader.ReportItems">
+      <summary>
+            Gets collection of all report item loaded during RPL parsing.
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Ssrs.RplReader.Recs.NumeralVariantType.Dig01234567890">
+      <summary>
+            01234567890
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Ssrs.RplReader.Recs.NumeralVariantType.Traditional">
+      <summary>
+            Traditional digits for the script as defined in GDI+.
+            Applicable only to numeral languages that have the following cultures: ar, bn, bo, fa, gu, hi, kn, kok, lo, mr, ms, or, pa, sa, ta, te, th, ur
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Ssrs.RplReader.Recs.NumeralVariantType.SimplifiedNumberFormat">
+      <summary>
+            Applicable only to numeral languages with the following cultures: ko, ja, zh-CHS, zh-CHT
+            [Simplified number format]
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Ssrs.RplReader.Recs.NumeralVariantType.TraditionalNumberFormat">
+      <summary>
+            Applicable only to numeral languages with the following cultures: ko, ja, zh-CHS, zh-CHT
+            [Traditional number format]
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Ssrs.RplReader.Recs.NumeralVariantType.WideVersionsOfRegularDigits">
+      <summary>
+            Applicable only to numeral languages with the following cultures: ko, ja, zh-CHS, zh-CHT
+            [Wide versions of regular digits]
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Ssrs.RplReader.Recs.NumeralVariantType.KoNumeralLanguages">
+      <summary>
+            Applicable only to numeral languages with the following cultures: ko
+            </summary>
+    </member>
+    <member name="F:C1.WPF.Ssrs.RplReader.Recs.TypeCode.String2">
+      <summary>
+            This value is not described in the MS-RPL.pdf (RPL specification from MS) but I receive it from SSRS...
+            </summary>
+    </member>
+    <member name="T:C1.WPF.Ssrs.ServerConnection">
+      <summary>
+            Represents a connection to the SSRS server can be used to execute methods available
+            via ReportingService.asmx service.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ServerConnection.Dispose">
+      <summary>
+            Releases all resources used by the <see cref="T:C1.WPF.Ssrs.ServerConnection" /> object.
+            </summary>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ServerConnection.SetConnectionOptions(System.String,C1.WPF.Ssrs.ConnectionOptions)">
+      <summary>
+            Sets the current connection options.
+            </summary>
+      <param name="reportServer">Address of SSRS server, like http://www.site.com/ReportServer. </param>
+      <param name="connectionOptions">
+        <see cref="T:C1.WPF.Ssrs.ConnectionOptions" /> object defines type of authentication, credential etc.</param>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ServerConnection.ListChildrenAsync(System.String,System.Boolean,System.Threading.CancellationToken)">
+      <summary>
+            Async version of <see cref="M:C1.WPF.Ssrs.ServerConnection.ListChildren(System.String,System.Boolean,System.Threading.CancellationToken)" /> method.
+            </summary>
+      <param name="path">The full path name of the parent folder.</param>
+      <param name="recursive">A Boolean value that indicates whether to return the entire tree of child items below the specified item.</param>
+      <param name="cancellationToken">
+        <see cref="T:System.Threading.CancellationToken" /> that can be used to cancel a request.</param>
+      <returns>
+        <see cref="T:Task{RS.CatalogItem[]}" /> returning an array of CatalogItem objects. If no children exist, this method returns an empty CatalogItem object.</returns>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ServerConnection.ListChildren(System.String,System.Boolean,System.Threading.CancellationToken)">
+      <summary>
+            Gets a list of children of a specified folder.
+            </summary>
+      <param name="path">The full path name of the parent folder.</param>
+      <param name="recursive">A Boolean value that indicates whether to return the entire tree of child items below the specified item.</param>
+      <param name="cancellationToken">
+        <see cref="T:System.Threading.CancellationToken" /> that can be used to cancel a request.</param>
+      <returns>An array of CatalogItem objects. If no children exist, this method returns an empty CatalogItem object.</returns>
+    </member>
+    <member name="M:C1.WPF.Ssrs.ServerConnection.GetItemType(System.String,System.Threading.CancellationToken)">
+      <summary>
+            Retrieves the type of an item in the report server database, if the item exists.
+            </summary>
+      <param name="path">The full path name of the item.</param>
+      <param name="cancellationToken">
+        <see cref="T:System.Threading.CancellationToken" /> that can be used to cancel a request.</param>
+      <returns>A type of the item.</returns>
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.TrustedUserHeader">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.TrustedUserHeader.UserName">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.TrustedUserHeader.UserToken">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.TrustedUserHeader.AnyAttr">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.Extension">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.Extension.ExtensionType">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.Extension.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.Extension.LocalizedName">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.Extension.Visible">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.Extension.IsModelGenerationSupported">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.ExtensionTypeEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.ExtensionTypeEnum.Delivery">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.ExtensionTypeEnum.Render">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.ExtensionTypeEnum.Data">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.ExtensionTypeEnum.All">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.DocumentMapNode">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.DocumentMapNode.Label">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.DocumentMapNode.UniqueName">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.DocumentMapNode.Children">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.ParameterValueOrFieldReference">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.ParameterValue">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ParameterValue.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ParameterValue.Value">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ParameterValue.Label">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.DataSourceCredentials">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.DataSourceCredentials.DataSourceName">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.DataSourceCredentials.UserName">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.DataSourceCredentials.Password">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.Warning">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.Warning.Code">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.Warning.Severity">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.Warning.ObjectName">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.Warning.ObjectType">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.Warning.Message">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionHeader">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionHeader.ExecutionID">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionHeader.AnyAttr">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.ReportMargins">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportMargins.Top">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportMargins.Bottom">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportMargins.Left">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportMargins.Right">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.ReportPaperSize">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportPaperSize.Height">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportPaperSize.Width">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.PageSettings">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.PageSettings.PaperSize">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.PageSettings.Margins">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.DataSourcePrompt">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.DataSourcePrompt.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.DataSourcePrompt.DataSourceID">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.DataSourcePrompt.Prompt">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.ValidValue">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ValidValue.Label">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ValidValue.Value">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.Type">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.TypeSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.Nullable">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.NullableSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.AllowBlank">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.AllowBlankSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.MultiValue">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.MultiValueSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.QueryParameter">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.QueryParameterSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.Prompt">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.PromptUser">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.PromptUserSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.Dependencies">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.ValidValuesQueryBased">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.ValidValuesQueryBasedSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.ValidValues">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.DefaultValuesQueryBased">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.DefaultValuesQueryBasedSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.DefaultValues">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.State">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.StateSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ReportParameter.ErrorMessage">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.ParameterTypeEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.ParameterTypeEnum.Boolean">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.ParameterTypeEnum.DateTime">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.ParameterTypeEnum.Integer">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.ParameterTypeEnum.Float">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.ParameterTypeEnum.String">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.ParameterStateEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.ParameterStateEnum.HasValidValue">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.ParameterStateEnum.MissingValidValue">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.ParameterStateEnum.HasOutstandingDependencies">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.ParameterStateEnum.DynamicValuesUnavailable">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo.HasSnapshot">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo.NeedsProcessing">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo.AllowQueryExecution">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo.CredentialsRequired">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo.ParametersRequired">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo.ExpirationDateTime">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo.ExecutionDateTime">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo.NumPages">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo.Parameters">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo.DataSourcePrompts">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo.HasDocumentMap">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo.ExecutionID">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo.ReportPath">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo.HistoryID">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo.ReportPageSettings">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo.AutoRefreshInterval">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo2">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ExecutionInfo2.PageCountMode">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.PageCountMode">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.PageCountMode.Actual">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.PageCountMode.Estimate">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.ServerInfoHeader">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ServerInfoHeader.ReportServerVersionNumber">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ServerInfoHeader.ReportServerEdition">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ServerInfoHeader.ReportServerVersion">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ServerInfoHeader.ReportServerDateTime">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportExecutionWPF.ServerInfoHeader.AnyAttr">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportExecutionWPF.SortDirectionEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.SortDirectionEnum.None">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.SortDirectionEnum.Ascending">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportExecutionWPF.SortDirectionEnum.Descending">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ServerInfoHeader">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ServerInfoHeader.ReportServerVersionNumber">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ServerInfoHeader.ReportServerEdition">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ServerInfoHeader.ReportServerVersion">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ServerInfoHeader.ReportServerDateTime">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ServerInfoHeader.AnyAttr">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ModelDrillthroughReport">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ModelDrillthroughReport.Path">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ModelDrillthroughReport.Type">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.DrillthroughType">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.DrillthroughType.Detail">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.DrillthroughType.List">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ModelItem">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ModelItem.ID">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ModelItem.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ModelItem.Type">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ModelItem.Description">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ModelItem.ModelItems">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ModelItemTypeEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ModelItemTypeEnum.Model">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ModelItemTypeEnum.EntityFolder">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ModelItemTypeEnum.FieldFolder">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ModelItemTypeEnum.Entity">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ModelItemTypeEnum.Attribute">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ModelItemTypeEnum.Role">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ModelPerspective">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ModelPerspective.ID">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ModelPerspective.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ModelPerspective.Description">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ModelCatalogItem">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ModelCatalogItem.Model">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ModelCatalogItem.Description">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ModelCatalogItem.Perspectives">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.Policy">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Policy.GroupUserName">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Policy.Roles">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.Role">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Role.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Role.Description">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.Task">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Task.TaskID">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Task.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Task.Description">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.Event">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Event.Type">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.Extension">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Extension.ExtensionType">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Extension.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Extension.LocalizedName">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Extension.Visible">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Extension.IsModelGenerationSupported">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionTypeEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionTypeEnum.Delivery">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionTypeEnum.Render">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionTypeEnum.Data">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionTypeEnum.All">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.Subscription">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Subscription.SubscriptionID">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Subscription.Owner">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Subscription.Path">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Subscription.VirtualPath">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Subscription.Report">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Subscription.DeliverySettings">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Subscription.Description">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Subscription.Status">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Subscription.Active">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Subscription.LastExecuted">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Subscription.LastExecutedSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Subscription.ModifiedBy">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Subscription.ModifiedDate">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Subscription.EventType">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Subscription.IsDataDriven">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionSettings">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionSettings.Extension">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionSettings.ParameterValues">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ParameterFieldReference">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ParameterFieldReference.ParameterName">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ParameterFieldReference.FieldAlias">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ParameterValueOrFieldReference">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ParameterValue">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ParameterValue.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ParameterValue.Value">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ParameterValue.Label">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ActiveState">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ActiveState.DeliveryExtensionRemoved">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ActiveState.DeliveryExtensionRemovedSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ActiveState.SharedDataSourceRemoved">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ActiveState.SharedDataSourceRemovedSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ActiveState.MissingParameterValue">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ActiveState.MissingParameterValueSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ActiveState.InvalidParameterValue">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ActiveState.InvalidParameterValueSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ActiveState.UnknownReportParameter">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ActiveState.UnknownReportParameterSpecified">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionParameter">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionParameter.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionParameter.DisplayName">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionParameter.Required">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionParameter.RequiredSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionParameter.ReadOnly">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionParameter.Value">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionParameter.Error">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionParameter.Encrypted">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionParameter.IsPassword">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ExtensionParameter.ValidValues">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ValidValue">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ValidValue.Label">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ValidValue.Value">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.QueryDefinition">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.QueryDefinition.CommandType">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.QueryDefinition.CommandText">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.QueryDefinition.Timeout">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.QueryDefinition.TimeoutSpecified">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.Field">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Field.Alias">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Field.Name">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.DataSetDefinition">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSetDefinition.Fields">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSetDefinition.Query">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSetDefinition.CaseSensitivity">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSetDefinition.CaseSensitivitySpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSetDefinition.Collation">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSetDefinition.AccentSensitivity">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSetDefinition.AccentSensitivitySpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSetDefinition.KanatypeSensitivity">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSetDefinition.KanatypeSensitivitySpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSetDefinition.WidthSensitivity">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSetDefinition.WidthSensitivitySpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSetDefinition.Name">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.SensitivityEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.SensitivityEnum.True">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.SensitivityEnum.False">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.SensitivityEnum.Auto">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.DataRetrievalPlan">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataRetrievalPlan.Item">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataRetrievalPlan.DataSet">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceDefinition">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceDefinition.Extension">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceDefinition.ConnectString">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceDefinition.UseOriginalConnectString">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceDefinition.OriginalConnectStringExpressionBased">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceDefinition.CredentialRetrieval">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceDefinition.WindowsCredentials">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceDefinition.ImpersonateUser">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceDefinition.ImpersonateUserSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceDefinition.Prompt">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceDefinition.UserName">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceDefinition.Password">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceDefinition.Enabled">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceDefinition.EnabledSpecified">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.CredentialRetrievalEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.CredentialRetrievalEnum.Prompt">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.CredentialRetrievalEnum.Store">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.CredentialRetrievalEnum.Integrated">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.CredentialRetrievalEnum.None">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceDefinitionOrReference">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceReference">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceReference.Reference">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.InvalidDataSourceReference">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.Schedule">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Schedule.ScheduleID">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Schedule.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Schedule.Definition">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Schedule.Description">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Schedule.Creator">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Schedule.NextRunTime">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Schedule.NextRunTimeSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Schedule.LastRunTime">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Schedule.LastRunTimeSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Schedule.ReferencesPresent">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Schedule.State">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleDefinition">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleDefinition.StartDateTime">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleDefinition.EndDate">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleDefinition.EndDateSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleDefinition.Item">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.DailyRecurrence">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DailyRecurrence.DaysInterval">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.RecurrencePattern">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.WeeklyRecurrence">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.WeeklyRecurrence.WeeksInterval">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.WeeklyRecurrence.WeeksIntervalSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.WeeklyRecurrence.DaysOfWeek">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.DaysOfWeekSelector">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DaysOfWeekSelector.Sunday">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DaysOfWeekSelector.Monday">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DaysOfWeekSelector.Tuesday">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DaysOfWeekSelector.Wednesday">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DaysOfWeekSelector.Thursday">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DaysOfWeekSelector.Friday">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DaysOfWeekSelector.Saturday">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.MinuteRecurrence">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MinuteRecurrence.MinutesInterval">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.MonthlyDOWRecurrence">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthlyDOWRecurrence.WhichWeek">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthlyDOWRecurrence.WhichWeekSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthlyDOWRecurrence.DaysOfWeek">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthlyDOWRecurrence.MonthsOfYear">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.WeekNumberEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.WeekNumberEnum.FirstWeek">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.WeekNumberEnum.SecondWeek">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.WeekNumberEnum.ThirdWeek">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.WeekNumberEnum.FourthWeek">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.WeekNumberEnum.LastWeek">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.MonthsOfYearSelector">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthsOfYearSelector.January">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthsOfYearSelector.February">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthsOfYearSelector.March">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthsOfYearSelector.April">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthsOfYearSelector.May">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthsOfYearSelector.June">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthsOfYearSelector.July">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthsOfYearSelector.August">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthsOfYearSelector.September">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthsOfYearSelector.October">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthsOfYearSelector.November">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthsOfYearSelector.December">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.MonthlyRecurrence">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthlyRecurrence.Days">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.MonthlyRecurrence.MonthsOfYear">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleDefinitionOrReference">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.NoSchedule">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleReference">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleReference.ScheduleID">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleReference.Definition">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleStateEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleStateEnum.Ready">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleStateEnum.Running">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleStateEnum.Paused">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleStateEnum.Expired">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleStateEnum.Failing">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ReportHistorySnapshot">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportHistorySnapshot.HistoryID">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportHistorySnapshot.CreationDate">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportHistorySnapshot.Size">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.DataSourcePrompt">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourcePrompt.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourcePrompt.DataSourceID">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourcePrompt.Prompt">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.DataSource">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSource.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSource.Item">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.Job">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Job.JobID">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Job.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Job.Path">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Job.Description">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Job.Machine">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Job.User">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Job.StartDateTime">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Job.Action">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Job.Type">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Job.Status">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.JobActionEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.JobActionEnum.Render">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.JobActionEnum.SnapshotCreation">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.JobActionEnum.ReportHistoryCreation">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.JobActionEnum.ExecuteQuery">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.JobTypeEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.JobTypeEnum.User">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.JobTypeEnum.System">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.JobStatusEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.JobStatusEnum.New">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.JobStatusEnum.Running">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.JobStatusEnum.CancelRequested">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ExpirationDefinition">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.TimeExpiration">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.TimeExpiration.Minutes">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleExpiration">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ScheduleExpiration.Item">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.Type">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.TypeSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.Nullable">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.NullableSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.AllowBlank">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.AllowBlankSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.MultiValue">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.MultiValueSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.QueryParameter">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.QueryParameterSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.Prompt">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.PromptUser">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.PromptUserSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.Dependencies">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.ValidValuesQueryBased">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.ValidValuesQueryBasedSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.ValidValues">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.DefaultValuesQueryBased">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.DefaultValuesQueryBasedSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.DefaultValues">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.State">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.StateSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ReportParameter.ErrorMessage">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ParameterTypeEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ParameterTypeEnum.Boolean">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ParameterTypeEnum.DateTime">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ParameterTypeEnum.Integer">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ParameterTypeEnum.Float">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ParameterTypeEnum.String">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ParameterStateEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ParameterStateEnum.HasValidValue">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ParameterStateEnum.MissingValidValue">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ParameterStateEnum.HasOutstandingDependencies">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ParameterStateEnum.DynamicValuesUnavailable">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceCredentials">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceCredentials.DataSourceName">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceCredentials.UserName">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.DataSourceCredentials.Password">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.Warning">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Warning.Code">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Warning.Severity">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Warning.ObjectName">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Warning.ObjectType">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Warning.Message">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ItemNamespaceHeader">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ItemNamespaceHeader.ItemNamespace">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.ItemNamespaceHeader.AnyAttr">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ItemNamespaceEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ItemNamespaceEnum.PathBased">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ItemNamespaceEnum.GUIDBased">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.ID">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.Path">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.VirtualPath">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.Type">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.Size">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.SizeSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.Description">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.Hidden">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.HiddenSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.CreationDate">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.CreationDateSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.ModifiedDate">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.ModifiedDateSpecified">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.CreatedBy">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.ModifiedBy">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.MimeType">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.ExecutionDate">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.CatalogItem.ExecutionDateSpecified">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ItemTypeEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ItemTypeEnum.Unknown">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ItemTypeEnum.Folder">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ItemTypeEnum.Report">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ItemTypeEnum.Resource">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ItemTypeEnum.LinkedReport">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ItemTypeEnum.DataSource">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ItemTypeEnum.Model">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.Property">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Property.Name">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.Property.Value">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.SearchCondition">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.SearchCondition.Condition">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.SearchCondition.ConditionSpecified">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ConditionEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ConditionEnum.Contains">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ConditionEnum.Equals">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.BatchHeader">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.BatchHeader.BatchID">
+      <remarks />
+    </member>
+    <member name="P:C1.WPF.ImportServices.ReportingServiceWPF.BatchHeader.AnyAttr">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.ExecutionSettingEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ExecutionSettingEnum.Live">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.ExecutionSettingEnum.Snapshot">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.BooleanOperatorEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.BooleanOperatorEnum.And">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.BooleanOperatorEnum.Or">
+      <remarks />
+    </member>
+    <member name="T:C1.WPF.ImportServices.ReportingServiceWPF.SecurityScopeEnum">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.SecurityScopeEnum.System">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.SecurityScopeEnum.Catalog">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.SecurityScopeEnum.Model">
+      <remarks />
+    </member>
+    <member name="F:C1.WPF.ImportServices.ReportingServiceWPF.SecurityScopeEnum.All">
+      <remarks />
+    </member>
+    <member name="T:C1.Silverlight.ImportServices.Resources.C1_ImportServices_DevStrings">
+      <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.ImportServices.Resources.C1_ImportServices_DevStrings.Culture">
+      <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+    </member>
+    <member name="T:C1.Silverlight.ImportServices.Resources.C1_ImportServices_Strings">
+      <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+    </member>
+    <member name="P:C1.Silverlight.ImportServices.Resources.C1_ImportServices_Strings.Culture">
+      <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+    </member>
+  </members>
+</doc>
